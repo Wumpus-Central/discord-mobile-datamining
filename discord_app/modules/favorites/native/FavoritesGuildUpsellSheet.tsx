@@ -15,7 +15,7 @@ let result = require("ME").fileFinishedImporting("modules/favorites/native/Favor
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(9712).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(9717).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -29,7 +29,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
   let importDefault;
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpened(str).analyticsLocations;
   importDefault = React.useCallback(() => {
-    callback(4271).hideActionSheet(analyticsLocations(9714).FAVORITES_UPSELL_SHEET_KEY);
+    callback(4271).hideActionSheet(analyticsLocations(9719).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1236).intl;
   const tmp8 = messagesProxy;
@@ -39,12 +39,12 @@ export default function FavoritesGuildUpsellSheet(limit) {
     obj = { count: null, maxCount: null };
     obj[0] = FREE_FAVORITE_LIMIT;
     obj[1] = MAX_FAVORITE_CHANNELS;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(3030).D7S0Zo, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(3049).D7S0Zo, obj);
   } else {
-    formatToPlainStringResult = intl2.string(tmp3(3030)["WaP/lz"]);
+    formatToPlainStringResult = intl2.string(tmp3(3049)["WaP/lz"]);
   }
   obj[1] = formatToPlainStringResult;
-  obj[2] = closure_6(analyticsLocations(6274).FavoritesSpotIllustration, {});
+  obj[2] = closure_6(analyticsLocations(6276).FavoritesSpotIllustration, {});
   obj = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp7(1236).intl;
   obj[2] = intl3.string(analyticsLocations(1236).t.pj0XBN);
@@ -69,5 +69,5 @@ export default function FavoritesGuildUpsellSheet(limit) {
   });
   obj1[0] = items;
   obj[3] = closure_7(analyticsLocations(5150).ButtonGroup, obj1);
-  return closure_6(analyticsLocations(7733).PromoSheet, obj);
+  return closure_6(analyticsLocations(7735).PromoSheet, obj);
 };

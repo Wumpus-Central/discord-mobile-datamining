@@ -3,7 +3,7 @@ import importAllResult from "openChannelLongPressActionSheet";
 import { View } from "module_4313";
 import sortActivity from "sortActivity";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -95,7 +95,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = _undefined.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "Array", activities: "ct" };
+      obj = { status: "Array", activities: "HermesInternal" };
     }
     return obj;
   });
@@ -121,7 +121,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   const stateFromStoresObject2 = obj4.useStateFromStoresObject(items5, () => ({ resolvedUnreadSetting: outer1_9.resolveUnreadSetting(channel), muted: outer1_9.isChannelMuted(channel.getGuildId(), channel.id), favorite: outer1_9.isMessagesFavorite(channel.id) }));
   ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
   let obj5 = channel(isPressed[12]);
-  const items6 = [upsertRelationship];
+  const items6 = [markAllUserIdListsStale];
   const stateFromStoresObject3 = obj5.useStateFromStoresObject(items6, () => {
     let obj = channel;
     let isIgnoredResult = channel.isDM();

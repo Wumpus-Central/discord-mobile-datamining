@@ -60,10 +60,10 @@ function handleDeviceOrientationChange(LANDSCAPE) {
           }
         }
         obj13 = set;
-        require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
-        const obj9 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
-        const result = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
-        const obj10 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
+        require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
+        const obj9 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
+        const result = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
+        const obj10 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
         batchUpdates.batchUpdates(() => {
           state.setState({ orientationLock: null });
         });
@@ -81,10 +81,10 @@ function handleDeviceOrientationChange(LANDSCAPE) {
           }
         }
         obj12 = set;
-        require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
-        const obj4 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
-        const result1 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
-        const obj5 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
+        require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
+        const obj4 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
+        const result1 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
+        const obj5 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
         batchUpdates.batchUpdates(() => {
           state.setState({ orientationLock: null });
         });
@@ -105,24 +105,24 @@ function lockOrientationForiOS(PORTRAIT) {
     isAndroidResult = isIpadOSResult;
   }
   if (!isAndroidResult) {
-    require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
+    require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
     let c8 = false;
     if ("LANDSCAPE" === PORTRAIT) {
-      let tmp6Result = tmp6(8896);
+      let tmp6Result = tmp6(8902);
       tmp6Result.lockToLandscapeLeft();
       tmpResult = tmp(705);
       tmpResult.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
     } else {
-      tmp6Result = tmp6(8896);
+      tmp6Result = tmp6(8902);
       tmp6Result.lockToPortrait();
       tmp(705).batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
       });
       const tmpResult1 = tmp(705);
     }
-    const obj3 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
+    const obj3 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
   }
 }
 let obj = { PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
@@ -184,18 +184,18 @@ const listener = AppState.addEventListener("change", function applyLockStateOnAp
     tmp = null != orientationLock;
   }
   if (tmp) {
-    obj = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
+    obj = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
     obj.ignoreAutoRotate(true);
     let c8 = false;
     if ("LANDSCAPE" === orientationLock) {
-      let tmp3Result = tmp3(8896);
+      let tmp3Result = tmp3(8902);
       tmp3Result.lockToLandscapeLeft();
       batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
       const obj5 = batchUpdates;
     } else {
-      tmp3Result = tmp3(8896);
+      tmp3Result = tmp3(8902);
       tmp3Result.lockToPortrait();
       batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
@@ -223,10 +223,10 @@ export const unlockOrientation = function unlockOrientation(unlockAfterRotatingT
       tmpResult = tmp(4283);
     }
   }
-  require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
-  const obj4 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
-  const result = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
-  const obj5 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
+  require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
+  const obj4 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
+  const result = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
+  const obj5 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
   batchUpdates.batchUpdates(() => {
     state.setState({ orientationLock: null });
   });
@@ -235,17 +235,17 @@ export const lockOrientation = function lockOrientation(PORTRAIT, flag) {
   if (flag == null) {
     flag = false;
   }
-  require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(flag);
+  require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(flag);
   let c8 = false;
   if ("LANDSCAPE" === PORTRAIT) {
-    let tmpResult = tmp(8896);
+    let tmpResult = tmp(8902);
     tmpResult.lockToLandscapeLeft();
     batchUpdates.batchUpdates(() => {
       store.setState({ orientationLock: "LANDSCAPE" });
     });
     const obj5 = batchUpdates;
   } else {
-    tmpResult = tmp(8896);
+    tmpResult = tmp(8902);
     tmpResult.lockToPortrait();
     batchUpdates.batchUpdates(() => {
       store.setState({ orientationLock: "PORTRAIT" });
@@ -282,10 +282,10 @@ export const restoreDefaultOrientation = function restoreDefaultOrientation() {
     }
     tmpResult1 = tmp(500);
   }
-  require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
-  const obj6 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
-  const result = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
-  const obj7 = require("../../../../_runtime/08896_get_ActivityIndicator.js") /* get ActivityIndicator */;
+  require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.ignoreAutoRotate(false);
+  const obj6 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
+  const result = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */.unlockAllOrientations();
+  const obj7 = require("../../../../_runtime/08902_get_ActivityIndicator.js") /* get ActivityIndicator */;
   batchUpdates.batchUpdates(() => {
     state.setState({ orientationLock: null });
   });

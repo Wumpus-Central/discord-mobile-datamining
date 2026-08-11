@@ -43,12 +43,12 @@ function _sendWave() {
           } else {
             constants = 2;
             if (null != dMFromUserId2) {
-              let obj7 = callback(11636);
+              let obj7 = callback(11639);
               const obj3 = { channelId: null, source: null };
               obj3[0] = dMFromUserId2;
               obj3[1] = dependencyMap;
               obj7.trackWaveCtaClicked(obj3);
-              const obj9 = flag(6917);
+              const obj9 = flag(6920);
               let obj4 = { location: null };
               obj4[0] = constants.SEND_WAVE;
               c7 = 5;
@@ -65,7 +65,7 @@ function _sendWave() {
         if (2 !== tmp8) {
           if (3 === tmp8) {
             constants = 0;
-            obj4 = callback(4001);
+            obj4 = callback(4020);
             const intl = callback(1236).intl;
             obj4.presentError(intl.string(callback(1236).t.iufib1));
             c8 = 3;
@@ -96,7 +96,7 @@ function _sendWave() {
           }
         }
         constants = 0;
-        obj5 = callback(4001);
+        obj5 = callback(4020);
         const intl2 = callback(1236).intl;
         obj5.presentError(intl2.string(callback(1236).t.iufib1));
         c8 = 3;

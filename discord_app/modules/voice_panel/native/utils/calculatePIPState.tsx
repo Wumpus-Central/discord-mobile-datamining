@@ -62,7 +62,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   }
   let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
-    SquarePIPReferenceDimensions = tmp13(16162).SquarePIPReferenceDimensions;
+    SquarePIPReferenceDimensions = tmp13(16179).SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;

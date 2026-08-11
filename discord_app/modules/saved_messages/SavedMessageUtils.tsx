@@ -4,7 +4,7 @@ import noop from "noop";
 import { UnknownChannelRecord } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 

@@ -36,11 +36,11 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   if (isAtLimit) {
     obj = { color: "text-feedback-warning", style: null };
     obj[1] = tmp.icon;
-    let tmp7Result = tmp7(isReminder(7962).WarningIcon, obj);
+    let tmp7Result = tmp7(isReminder(7964).WarningIcon, obj);
     let tmp10 = tmp7;
   } else {
     obj = { source: null, style: null };
-    obj[0] = tmp2(8730);
+    obj[0] = tmp2(8736);
     obj[1] = tmp.icon;
     tmp7Result = tmp7(closure_4, obj);
     tmp10 = tmp7;
@@ -51,7 +51,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   const intl = isReminder(1236).intl;
   obj2[2] = intl.string(isReminder(1236).t.oW0eUd).toUpperCase();
   const items2 = [tmp10(isReminder(4299).Text, obj2), " \u00B7 ", ];
-  let obj5 = isReminder(3947);
+  let obj5 = isReminder(3966);
   const premiumTypeDisplayName = obj5.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl2 = isReminder(1236).intl;
   const formatToPlainString = intl2.formatToPlainString;
@@ -68,7 +68,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     obj1[3] = items2;
     items1[1] = tmp5(isReminder(4299).Text, obj1);
     if (isAtLimit) {
-      let Button = tmp2(9512);
+      let Button = tmp2(9518);
     } else {
       Button = tmp12(4714).Button;
     }

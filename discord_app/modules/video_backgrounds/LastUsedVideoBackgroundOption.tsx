@@ -22,7 +22,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
       let tmp7 = videoBackgroundOptionFromProto;
     } else {
       tmp7 = null;
-      const tmp2Result = tmp2(9162);
+      const tmp2Result = tmp2(9168);
     }
     let tmp6 = tmp7;
   } else {

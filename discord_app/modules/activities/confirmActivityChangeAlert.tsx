@@ -1,5 +1,5 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { set } from "../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -12,7 +12,7 @@ export default function confirmActivityChangeModal(name, channel) {
   let str = "";
   if (null != channel) {
     let obj = computeChannelName;
-    str = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    str = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   }
   obj = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
   const intl = getSystemLocale.intl;

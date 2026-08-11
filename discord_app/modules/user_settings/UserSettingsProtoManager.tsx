@@ -12,10 +12,10 @@ const require = arg1;
 function handleConnectionOpen() {
   fullState = fullState.getFullState();
   if (fullState[UserSettingsTypes.PRELOADED_USER_SETTINGS].editInfo.triggeredMigrations) {
-    const PreloadedUserSettingsActionCreators = fullState(1355).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = fullState(1374).PreloadedUserSettingsActionCreators;
     let result = PreloadedUserSettingsActionCreators.markDirtyFromMigration(tmp2.proto, tmp2.editInfo.cleanupFuncs);
   }
-  const item = apply.forEach(fullState(1355).UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit) => {
+  const item = apply.forEach(fullState(1374).UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit) => {
     const tmp = fullState[Number(undefined, arg1)];
     if (tmp2) {
       const result = scheduleSaveFromOfflineEdit.scheduleSaveFromOfflineEdit();

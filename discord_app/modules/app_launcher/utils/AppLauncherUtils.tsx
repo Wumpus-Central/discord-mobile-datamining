@@ -118,7 +118,7 @@ export const getShelfBadgeNameIfActive = function getShelfBadgeNameIfActive(appl
   const tmp = getShelfBadgeTypeIfActive(application);
   if (PermissionOverwriteType.EmbeddedActivityLabelTypes.NEW === tmp) {
     return "New";
-  } else if (tmp2(1935).EmbeddedActivityLabelTypes.UPDATED === tmp) {
+  } else if (tmp2(1954).EmbeddedActivityLabelTypes.UPDATED === tmp) {
     return "Updated";
   } else {
     return "";

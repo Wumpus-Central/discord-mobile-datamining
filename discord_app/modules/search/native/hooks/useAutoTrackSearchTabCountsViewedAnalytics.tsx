@@ -2,7 +2,7 @@
 import noop from "noop";
 import { SearchTabs } from "MessageEmbedTypes";
 
-let result = require("module_11732").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
+let result = require("module_11735").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 
 export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackSearchTabCountsViewedAnalytics(searchContext) {
   searchContext = searchContext.searchContext;

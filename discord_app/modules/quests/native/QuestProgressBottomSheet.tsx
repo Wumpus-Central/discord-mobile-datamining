@@ -9,7 +9,7 @@ import { ActivityPanelModes } from "ActivityPanelModes";
 import jsxProd from "_getQuestsInstructionsToWinReward";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08605_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08611_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -38,19 +38,19 @@ function QuestProgressBottomSheet(quest) {
   const isScreenLandscape = obj.useIsScreenLandscape();
   const tmp4 = callback3(isScreenLandscape);
   let obj1 = quest(5734);
-  let obj2 = quest(7183);
+  let obj2 = quest(7184);
   const getOrFetchApplication = obj1.useGetOrFetchApplication(obj2.getActivityApplicationId(quest));
   let id;
   if (getOrFetchApplication != null) {
     id = getOrFetchApplication.id;
   }
-  const url = claim(10750)({ applicationId: id, size: 600, names: ["embedded_cover"] }).url;
-  let tmpResult = tmp(10460);
+  const url = claim(10755)({ applicationId: id, size: 600, names: ["embedded_cover"] }).url;
+  let tmpResult = tmp(10465);
   const questTaskDetails = tmpResult.useQuestTaskDetails(quest);
   const intl = tmp(1236).intl;
   obj = { questName: quest.config.messages.questName };
-  const tmp7 = claim(10750);
-  tmpResult = tmp(11173);
+  const tmp7 = claim(10755);
+  tmpResult = tmp(11178);
   obj = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: tmp(5164).QuestContent.RUNNING_ACTIVITY };
   const userStatus = quest.userStatus;
   let completedAt;
@@ -69,10 +69,10 @@ function QuestProgressBottomSheet(quest) {
   }
   const formatToPlainStringResult = intl.formatToPlainString(quest(1236).t.EAYZAr, obj);
   const tmp11 = QuestsExperimentLocations;
-  const isQuestAccessSuspended = quest(10460).useIsQuestAccessSuspended();
-  const tmpResult1 = quest(10460);
+  const isQuestAccessSuspended = quest(10465).useIsQuestAccessSuspended();
+  const tmpResult1 = quest(10465);
   obj1 = { quest, questContent: tmp(5164).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: tmp(5164).QuestContent.RUNNING_ACTIVITY };
-  const questRewardClaimHandler = quest(14364).useQuestRewardClaimHandler(obj1);
+  const questRewardClaimHandler = quest(14372).useQuestRewardClaimHandler(obj1);
   ({ isClaiming, claim } = questRewardClaimHandler);
   const items = [claim];
   const items1 = [quest.id];
@@ -182,7 +182,7 @@ function QuestProgressBottomSheet(quest) {
   const obj7 = { quest, height: null, width: null };
   let num = 80;
   let num2 = 80;
-  tmp6Result = tmp6(11169);
+  tmp6Result = tmp6(11174);
   if (isScreenLandscape) {
     num2 = 56;
   }
@@ -195,16 +195,16 @@ function QuestProgressBottomSheet(quest) {
   items3[2] = callback2(closure_5, obj6);
   const obj8 = { style: tmp4.contextMenuContainer, children: null };
   const obj9 = { icon: null, onPress: null, variant: "secondary-overlay", size: "sm", accessibilityLabel: null };
-  obj9[0] = claim(9093);
+  obj9[0] = claim(9099);
   obj9[1] = callback2;
   const intl2 = tmp(1236).intl;
   obj9[4] = intl2.string(quest(1236).t.RDE0Sc);
-  const items5 = [callback2(quest(7751).IconButton, obj9), ];
+  const items5 = [callback2(quest(7753).IconButton, obj9), ];
   const obj10 = { quest, showShareLink: true, location: tmp11.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
-  const tmpResult2 = quest(14364);
+  const tmpResult2 = quest(14372);
   obj10[3] = quest(5164).QuestContent.RUNNING_ACTIVITY;
   obj10[4] = contextMenuButton;
-  items5[1] = callback2(claim(14394), obj10);
+  items5[1] = callback2(claim(14402), obj10);
   obj8[1] = items5;
   items3[3] = closure_12(closure_5, obj8);
   obj2[1] = items3;
@@ -250,7 +250,7 @@ function QuestProgressBottomSheet(quest) {
   let tmp6Result2;
   if (isQuestAccessSuspended) {
     if (tmp14) {
-      tmp6Result2 = tmp6(14360);
+      tmp6Result2 = tmp6(14368);
     }
   }
   const obj16 = { handleDisabled: true, startExpanded: true, children: null };
@@ -333,7 +333,7 @@ export default function QuestProgressBottomSheetConnected(questId) {
     obj[4] = function children() {
       return outer1_11(outer1_16, { quest: stateFromStores });
     };
-    tmp4 = callback2(tmp(11176).QuestContentImpressionTrackerNative, obj);
+    tmp4 = callback2(tmp(11181).QuestContentImpressionTrackerNative, obj);
   }
   return tmp4;
 };

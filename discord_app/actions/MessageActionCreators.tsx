@@ -80,7 +80,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7195);
+    let tmp3Result = tmp3(7196);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -91,7 +91,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7153);
+    tmp3Result = tmp3(7154);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -132,14 +132,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7198).getStreamerApplication(lastActiveStream, sortActivity);
+              const streamerApplication = tmp3(7199).getStreamerApplication(lastActiveStream, sortActivity);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7198);
+              const tmp3Result1 = tmp3(7199);
             }
           }
         }
@@ -888,7 +888,7 @@ let obj14 = {
               basicChannel = outer1_17.getBasicChannel(outer1_0);
               const orCreate = outer1_1(4989).getOrCreate(outer1_0);
               const obj13 = outer1_1(4989);
-              const databaseResult = outer1_1(1936).database();
+              const databaseResult = outer1_1(1955).database();
               c1 = databaseResult;
               if (null != databaseResult) {
                 if (null != basicChannel) {
@@ -903,14 +903,14 @@ let obj14 = {
                       closure_2 = 1;
                       dependencyMap = 1;
                       let obj1 = { value: null, done: false };
-                      obj1[0] = outer1_0(1955).tryLoadAsync(() => outer2_1(table[60]).load(c1, basicChannel, outer1_4));
+                      obj1[0] = outer1_0(1974).tryLoadAsync(() => outer2_1(table[60]).load(c1, basicChannel, outer1_4));
                       return obj1;
                     }
                     dependencyMap = 3;
                   }
                 }
               }
-              const obj14 = outer1_1(1936);
+              const obj14 = outer1_1(1955);
               outer1_1(9).addLocalMessages(outer1_0, -1);
               const obj7 = outer1_1(9);
             }
@@ -940,7 +940,7 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === outer1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = outer1_1(6947);
+              obj2 = outer1_1(6950);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, ClickArea, closure_2.messages);
               let obj3 = outer1_1(709);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
@@ -1010,7 +1010,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(6936).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(6939).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -2581,7 +2581,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(outer1_1, outer1_0);
-              let obj1 = outer1_1(7224);
+              let obj1 = outer1_1(7225);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2630,18 +2630,18 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = outer1_0(7293).MessageDataType.EDIT;
+            obj3[0] = outer1_0(7294).MessageDataType.EDIT;
             obj3[1] = obj2;
-            outer1_1(7293).enqueue(obj3, (hasErr) => {
+            outer1_1(7294).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = outer2_0(7323).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = outer2_0(7324).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = outer2_0(7293).MessageDataType.EDIT;
+                obj[0] = outer2_0(7294).MessageDataType.EDIT;
                 obj[1] = obj2;
                 let obj1 = outer2_1(709);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
@@ -2652,7 +2652,7 @@ let obj14 = {
                 obj[2] = obj;
                 obj1.dispatch(obj);
               }
-              const AccessibilityAnnouncer = outer2_0(4153).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = outer2_0(1363).AccessibilityAnnouncer;
               const announce = AccessibilityAnnouncer.announce;
               const intl = outer2_0(1236).intl;
               const string = intl.string;
@@ -2715,7 +2715,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(7224);
+              let obj1 = outer1_1(7225);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2737,9 +2737,9 @@ let obj14 = {
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = outer1_28.MESSAGE(flags, closure_1);
               const obj3 = { flags: null };
-              obj3[0] = outer1_0(1384).setFlag(flags.flags, outer1_33.SUPPRESS_EMBEDS, true);
+              obj3[0] = outer1_0(1403).setFlag(flags.flags, outer1_33.SUPPRESS_EMBEDS, true);
               obj2[1] = obj3;
-              const obj8 = outer1_0(1384);
+              const obj8 = outer1_0(1403);
               obj2[3] = outer1_0(530).rejectWithMigratedError();
               HTTP.patch(obj2);
               const obj9 = outer1_0(530);
@@ -2788,7 +2788,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(7224);
+              let obj1 = outer1_1(7225);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2810,9 +2810,9 @@ let obj14 = {
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = outer1_28.MESSAGE(flags, closure_1);
               const obj3 = { flags: null };
-              obj3[0] = outer1_0(1384).setFlag(flags.flags, outer1_33.IS_GUILD_OFFICIAL, c2);
+              obj3[0] = outer1_0(1403).setFlag(flags.flags, outer1_33.IS_GUILD_OFFICIAL, c2);
               obj2[1] = obj3;
-              const obj8 = outer1_0(1384);
+              const obj8 = outer1_0(1403);
               obj2[3] = outer1_0(530).rejectWithMigratedError();
               HTTP.patch(obj2);
               const obj9 = outer1_0(530);
@@ -2934,14 +2934,14 @@ let obj14 = {
                   let obj = tmp4(709);
                   obj = { type: "MESSAGE_DELETE", id: tmp4, channelId: closure_0 };
                   obj.dispatch(obj).then(() => {
-                    const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
                     const intl = callback(1236).intl;
                     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.RYMs7s));
                   });
                 })();
                 dependencyMap = 3;
               } else {
-                let obj1 = outer1_1(7224);
+                let obj1 = outer1_1(7225);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -2962,7 +2962,7 @@ let obj14 = {
               let obj = tmp4(709);
               obj = { type: "MESSAGE_DELETE", id: tmp4, channelId: closure_0 };
               obj.dispatch(obj).then(() => {
-                const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
                 const intl = callback(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(callback(1236).t.RYMs7s));
               });

@@ -58,7 +58,7 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
   } else {
     num = 0;
     if (tmp4) {
-      num = tmp(9712).FREE_FAVORITE_LIMIT;
+      num = tmp(9717).FREE_FAVORITE_LIMIT;
     }
   }
 }

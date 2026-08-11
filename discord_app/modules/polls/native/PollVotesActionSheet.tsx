@@ -190,27 +190,28 @@ function PollVotesHeader(message) {
       }
     }), 0);
   }, items1);
-  let tmp6 = null;
+  message(setSelectedAnswerId[19]);
+  let tmp9 = null;
   if (null != message.poll) {
     let obj = { children: null };
     obj = { style: null, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     obj[0] = tmp.headerText;
     obj[4] = message.poll.question.text;
-    const items2 = [callback(message(setSelectedAnswerId[17]).Text, obj), , ];
+    const items2 = [callback(tmp5(tmp6[17]).Text, obj), , ];
     obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj[0] = tmp.subheaderText;
-    const intl = message(setSelectedAnswerId[15]).intl;
+    const intl = tmp5(tmp6[15]).intl;
     let obj1 = { count: null };
     obj1[0] = memo;
-    obj[3] = intl.format(message(setSelectedAnswerId[15]).t.XRkuof, obj1);
-    items2[1] = callback(message(setSelectedAnswerId[17]).Text, obj);
+    obj[3] = intl.format(tmp5(tmp6[15]).t.XRkuof, obj1);
+    items2[1] = callback(tmp5(tmp6[17]).Text, obj);
     let obj2 = { gesture: null, children: null };
-    obj2[0] = tmp5;
+    obj2[0] = tmp8;
     let obj3 = { ref: null, style: null, contentContainerStyle: null, horizontal: true, showsHorizontalScrollIndicator: false, accessibilityRole: "tablist", accessibilityLabel: null, children: null };
     obj3[0] = ref;
     ({ answerScroll: obj6[1], answerScrollContainer: obj6[2] } = tmp);
-    const intl2 = message(setSelectedAnswerId[15]).intl;
-    obj3[6] = intl2.string(message(setSelectedAnswerId[15]).t["qbir+4"]);
+    const intl2 = tmp5(tmp6[15]).intl;
+    obj3[6] = intl2.string(tmp5(tmp6[15]).t["qbir+4"]);
     const answers = message.poll.answers;
     obj3[7] = answers.map((answer) => {
       const tmp = selectedAnswerId === String(answer.answer_id);
@@ -224,11 +225,11 @@ function PollVotesHeader(message) {
       return outer1_14(outer1_18, obj, answer.answer_id);
     });
     obj2[1] = callback(closure_8, obj3);
-    items2[2] = callback(message(setSelectedAnswerId[19]).GestureDetector, obj2);
+    items2[2] = callback(tmp5(tmp6[19]).GestureDetector, obj2);
     obj[0] = items2;
-    tmp6 = callback2(closure_7, obj);
+    tmp9 = callback2(closure_7, obj);
   }
-  return tmp6;
+  return tmp9;
 }
 function VotersList(channelId) {
   channelId = channelId.channelId;
@@ -338,9 +339,9 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(10287);
+    let tmp2Result = tmp2(10292);
   } else {
-    tmp2Result = tmp2(10288);
+    tmp2Result = tmp2(10293);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), , ];

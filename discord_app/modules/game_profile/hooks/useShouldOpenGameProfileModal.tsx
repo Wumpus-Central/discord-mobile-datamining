@@ -101,7 +101,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
     if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(closure_7.Disabled);
     }
-    obj2 = importAll(1384);
+    obj2 = importAll(1403);
     const tmp8 = require;
     arr = items1;
     if (tmp8Result.isAgeRestrictedContentClassification(gameFlags.contentClassification)) {
@@ -122,7 +122,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(closure_0) {
     if (obj2.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(closure_7.Disabled);
     }
-    obj2 = importAll(1384);
+    obj2 = importAll(1403);
     const tmp9 = require;
     arr = items1;
     if (tmp9Result.isAgeRestrictedContentClassification(game.contentClassification)) {

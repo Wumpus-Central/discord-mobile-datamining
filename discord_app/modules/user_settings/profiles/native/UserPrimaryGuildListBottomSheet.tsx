@@ -124,7 +124,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj[3] = intl.string(availableGuilds(1236).t.Fo0g9x);
   obj[1] = callback(availableGuilds(4299).Text, obj);
   obj[2] = callback(memo, obj);
-  obj[3] = callback(availableGuilds(7745).BottomSheetFlashList, {
+  obj[3] = callback(availableGuilds(7747).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return outer1_6(availableGuilds(outer1_2[18]).FormDivider, { iconPush: true, style: _undefined.divider });
     },

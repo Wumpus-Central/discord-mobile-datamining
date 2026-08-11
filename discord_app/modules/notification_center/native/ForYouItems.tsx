@@ -76,7 +76,7 @@ function ForYouMessagePreviewV2(item) {
   const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(callback4(), closure_28, roleStyle);
   const intl = item(1236).intl;
   const stringResult = intl.string(item(1236).t.BOi07B);
-  let obj1 = item(1384);
+  let obj1 = item(1403);
   let message = item.message;
   let num;
   if (message != null) {
@@ -127,10 +127,10 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8149)(first);
+    const tmp15 = guild_id(8151)(first);
     let result = stringResult;
     if (null != tmp15) {
-      let tmp2Result = tmp2(7220);
+      let tmp2Result = tmp2(7221);
       result = tmp2Result.formatPollResultNotificationCenterText(tmp15);
     }
   } else if (stickers.length > 0) {
@@ -145,7 +145,7 @@ function ForYouMessagePreviewV2(item) {
     result = intl4.string(tmp2(1236).t["6bhHrc"]);
     ATTACHMENT = constants3.VOICE_MESSAGE;
   } else {
-    tmp2Result = tmp2(1384);
+    tmp2Result = tmp2(1403);
     const message7 = item.message;
     let num2;
     if (message7 != null) {
@@ -238,7 +238,7 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8201).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
+  const items5 = [item(8205).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1[3] = items5;
@@ -249,7 +249,7 @@ function ForYouMessagePreviewV2(item) {
     const obj3 = { style: null, children: null };
     obj3[0] = messagePreviewIconV2.messagePreviewIconV2Container;
     if (constants3.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(10187);
+      let tmp29 = guild_id(10192);
       const obj4 = { source: null, size: null, style: null };
       obj4[0] = tmp29;
       SMALL = tmp2(1297).IconSizes.SMALL;
@@ -261,10 +261,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (tmp28.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (tmp28.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8006);
+        tmp29 = guild_id(8008);
       }
     }
-    tmp29 = guild_id(9990);
+    tmp29 = guild_id(9995);
   }
 }
 function ApplicationName(applicationId) {
@@ -304,7 +304,7 @@ function ScrollToTopRef(scrollRef) {
       return scrollToTopResult;
     }
   });
-  const scrollToTop = scrollRef(1481).useScrollToTop(ref);
+  const scrollToTop = scrollRef(1500).useScrollToTop(ref);
   return null;
 }
 function extractKey(id) {

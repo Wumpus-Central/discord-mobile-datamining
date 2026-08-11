@@ -1,10 +1,10 @@
 // discord_app/modules/oauth2/native/WebhookGuildChannelSelector.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "Button";
 import { createChannelRecord } from "createChannelRecord";
-import closure_8 from "upsertRelationship";
+import closure_8 from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

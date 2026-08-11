@@ -22,7 +22,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       let DESKTOP = constants2.IOS;
       let tmp9 = constants2;
     } else {
-      let tmp6Result = tmp6(1605);
+      let tmp6Result = tmp6(1624);
       if (tmp6Result.isMetaQuest()) {
         DESKTOP = constants2.META_QUEST;
         tmp9 = constants2;
@@ -66,7 +66,7 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
   if (obj.isIOS()) {
     let META_QUEST = constants2.IOS;
   } else {
-    let tmpResult = tmp(1605);
+    let tmpResult = tmp(1624);
     if (tmpResult.isMetaQuest()) {
       META_QUEST = constants2.META_QUEST;
     } else {

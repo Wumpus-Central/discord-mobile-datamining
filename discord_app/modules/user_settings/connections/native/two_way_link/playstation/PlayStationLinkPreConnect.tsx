@@ -10,7 +10,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/c
 
 export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(platformType) {
   let navigation;
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -26,5 +26,5 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   obj[5] = intl.string(navigation(1236).t["6n+UPR"]);
   const intl2 = navigation(1236).intl;
   obj[6] = intl2.string(navigation(1236).t.JaaqIf);
-  return jsx(navigation(10503).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
+  return jsx(navigation(10508).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
 };

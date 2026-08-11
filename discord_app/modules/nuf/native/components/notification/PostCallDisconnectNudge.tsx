@@ -34,10 +34,10 @@ export default function PostCallDisconnectNudge(arg0) {
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(14667);
+  let obj = stateFromStores1(14677);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(11780).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(11780);
+  const canSeePushNotificationNudge = stateFromStores(11783).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(11783);
   const items = [updateVoiceState];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
   const obj3 = stateFromStores(589);
@@ -68,11 +68,11 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (!obj.useConfig({ location: "usePostCallDisconnectNudge" }).inHoldout) {
       prop = null;
       if (canSeePushNotificationNudge) {
-        prop = tmp2(1358).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
+        prop = tmp2(1377).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
       }
     }
   }
-  const tmp6Result = tmp6(stateFromStores(6022).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  const tmp6Result = tmp6(stateFromStores(6024).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
   first = tmp6Result[0];
   handleConnectionOpen = tmp12;
   const items3 = [first, tmp6Result[1]];

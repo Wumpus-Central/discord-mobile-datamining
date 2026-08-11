@@ -7,9 +7,10 @@ const require = arg1;
 let c3 = 86400000;
 let c4 = null;
 let c5 = null;
-let c6 = false;
+let c6 = null;
+let c7 = false;
 let unchecked = "unchecked";
-let c8 = null;
+let c9 = null;
 class AgeVerificationStore extends Store {
 }
 const prototype = AgeVerificationStore.prototype;
@@ -18,7 +19,7 @@ prototype["initialize"] = function initialize() {
 };
 Object.defineProperty(prototype, "loading", {
   get: function loading() {
-    return c6;
+    return c7;
   },
   set: undefined
 });
@@ -34,17 +35,23 @@ Object.defineProperty(prototype, "methodsV2", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "methodsV2FooterMessage", {
+  get: function methodsV2FooterMessage() {
+    return c6;
+  },
+  set: undefined
+});
 prototype["getReactiveCheckStatus"] = function getReactiveCheckStatus() {
   return unchecked;
 };
 prototype["getReactiveCheckMiss"] = function getReactiveCheckMiss() {
   let tmp = "miss" === unchecked;
   if (tmp) {
-    tmp = null != c8;
+    tmp = null != c9;
   }
   if (tmp) {
     const _Date = Date;
-    tmp = Date.now() - c8 < c3;
+    tmp = Date.now() - c9 < c3;
   }
   return tmp;
 };
@@ -58,11 +65,11 @@ prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
     if (tmp3) {
       let tmp4 = "miss" === tmp;
       if (tmp4) {
-        tmp4 = null != c8;
+        tmp4 = null != c9;
       }
       if (tmp4) {
         const _Date = Date;
-        tmp4 = Date.now() - c8 < c3;
+        tmp4 = Date.now() - c9 < c3;
       }
       tmp3 = !tmp4;
     }
@@ -73,20 +80,23 @@ prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
 AgeVerificationStore.displayName = "AgeVerificationStore";
 const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
   AGE_VERIFICATION_METHODS_LOAD_START: function handleAgeVerificationMethodsLoadStart() {
-    let c6 = true;
+    let c7 = true;
   },
   AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function handleAgeVerificationMethodsLoadSuccess(methods) {
     methods = methods.methods;
-    let c6 = false;
+    let c7 = false;
   },
   AGE_VERIFICATION_METHODS_LOAD_FAILURE: function handleAgeVerificationMethodsLoadFailure() {
-    let c6 = false;
+    let c7 = false;
   },
-  AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS: function handleAgeVerificationMethodsV2LoadSuccess(methods) {
-    methods = methods.methods;
+  AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS: function handleAgeVerificationMethodsV2LoadSuccess(arg0) {
+    let c5;
+    let c6;
+    ({ methods: c5, footerMessage: c6 } = arg0);
   },
   INITIATE_AGE_VERIFICATION: function invalidateAgeVerificationMethodsV2() {
     let c5 = null;
+    let c6 = null;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
     const currentUser = authStore.getCurrentUser();
@@ -119,20 +129,21 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
           }
           if (tmp9) {
             let unchecked = "unchecked";
-            let c8 = null;
+            let c9 = null;
           } else {
             unchecked = str4;
-            c8 = reactiveCheckMissAt;
+            c9 = reactiveCheckMissAt;
           }
         }
       }
       unchecked = "unchecked";
-      c8 = null;
+      c9 = null;
     } else {
       unchecked = "unchecked";
-      c8 = null;
+      c9 = null;
     }
     let c5 = null;
+    let c6 = null;
   },
   AGE_VERIFICATION_CHECK_RESULT_SET: function handleReactiveCheckResultSet(status) {
     status = status.status;
@@ -161,7 +172,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
   },
   AGE_VERIFICATION_RESET: function handleAgeVerificationReset() {
     const suppress = "suppress";
-    let c8 = null;
+    let c9 = null;
     const currentUser = authStore.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -176,10 +187,11 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       const Storage = Storage.Storage;
       const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
       obj[0] = suppress;
-      obj[1] = c8;
+      obj[1] = c9;
       const result = Storage.set(combined, obj);
     }
     let c5 = null;
+    let c6 = null;
   }
 });
 let result = require("initialize").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");

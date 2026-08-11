@@ -72,7 +72,7 @@ function _openInviteModal() {
               return obj;
             } else {
               let obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "call", invite_instance_id: 1112605751 };
+              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessibilityRole", invite_instance_id: "y" };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -341,7 +341,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "ct" };
+            result = { applicationId: "Array", skuId: "HermesInternal" };
           }
           const tmp3Result = tmp3(tmp4[26]);
         }
@@ -358,7 +358,7 @@ export default function getOnClick(url) {
         outer1_1(tmp4[27])(url);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -664,7 +664,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4292).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(10461);
+      let tmp2Result = tmp2(10466);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -739,14 +739,14 @@ export default function getOnClick(url) {
   }
   ({ host, hostname, pathname } = toURLSafeResult);
   ({ search, hash } = toURLSafeResult);
-  let tmp5Result = tmp5(1467);
+  let tmp5Result = tmp5(1486);
   let tmp6 = hostname;
   if (hostname == null) {
     tmp6 = null;
   }
   let isDiscordHostnameResult = tmp5Result.isDiscordHostname(tmp6);
   if (!isDiscordHostnameResult) {
-    tmp5Result = tmp5(1467);
+    tmp5Result = tmp5(1486);
     if (host == null) {
       host = null;
     }
@@ -786,7 +786,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp5Result1 = tmp5(1467);
+      tmp5Result1 = tmp5(1486);
     }
   }
   if (null != findCodedLinkResult) {
@@ -816,6 +816,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8231);
+    tmp2Result1 = tmp2(8235);
   }
 };

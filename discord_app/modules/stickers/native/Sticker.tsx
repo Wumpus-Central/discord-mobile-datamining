@@ -60,7 +60,7 @@ export default function Sticker(opaque) {
     obj2[2] = size;
     obj2[3] = size;
     obj2[4] = num;
-    const NativeLottieRenderMode = tmp(8106).NativeLottieRenderMode;
+    const NativeLottieRenderMode = tmp(8108).NativeLottieRenderMode;
     obj2[5] = animated ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     obj2[6] = formatToPlainStringResult;
     return jsx(NativeLottieView, { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });

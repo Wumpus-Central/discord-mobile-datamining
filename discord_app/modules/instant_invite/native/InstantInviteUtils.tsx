@@ -87,7 +87,7 @@ function showInstantInviteActionSheet(channel, source) {
     tmp17 = null == code;
   }
   if (tmp17) {
-    tmpResult = tmp(9072);
+    tmpResult = tmp(9078);
     tmpResult.init(channel.getGuildId(), channel.id, obj);
   }
   const obj1 = { channel, source: null, guildScheduledEventId: null, targetApplicationId: null, code: null, vanityURLCode: null, stackingBehavior: null };
@@ -272,8 +272,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
         const obj = callback(table[19]);
       }
     };
-    tmp21(8923).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
-    const tmp21Result = tmp21(8923);
+    tmp21(8929).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
+    const tmp21Result = tmp21(8929);
   }
 };
 export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
@@ -328,8 +328,8 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
       trackOptionClicked(code, channel, constants2.COPY);
     }
     const obj6 = expandEventProperties;
-    tmp13(4001).presentLinkCopied();
-    const tmp13Result = tmp13(4001);
+    tmp13(4020).presentLinkCopied();
+    const tmp13Result = tmp13(4020);
   }
 };
 export const handlePressSettings = function handlePressSettings(channel, closure_1, handleGuildTemplateResolveSuccess) {
@@ -377,7 +377,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
       obj = { type: "Vanity URL Invite", source: null };
       obj[1] = GUILD_HEADER;
       tmp4Result.track(constants.OPEN_POPOUT, obj);
-      tmp4Result = tmp4(9072);
+      tmp4Result = tmp4(9078);
       tmp4Result.init(guild.id, channel.id, { skipCreateInvite: true });
       obj = { vanityURLCode: null, channel: null, source: null, guildScheduledEventId: null, stackingBehavior: null };
       obj[0] = guild.vanityURLCode;
@@ -385,7 +385,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
       obj[2] = GUILD_HEADER;
       obj[3] = undefined;
       obj[4] = undefined;
-      tmp4(9073)(obj);
+      tmp4(9079)(obj);
     }
   }
   let obj1 = require("../../../utils/native/InstantInviteUtils.tsx") /* get label */ /* get label */;

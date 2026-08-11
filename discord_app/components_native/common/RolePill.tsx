@@ -31,7 +31,7 @@ export default function RolePill(role) {
   role = role.role;
   ({ guildId, color } = role);
   let combined;
-  const DeveloperMode = role(3974).DeveloperMode;
+  const DeveloperMode = role(3993).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   let obj = role(5752);
   obj = { guildId, roleId: role.id, size: 12 };

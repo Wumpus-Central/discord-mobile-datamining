@@ -4,7 +4,7 @@ import importAllResult from "TableRowInner";
 import { View } from "AccessibilityAnnouncer";
 import { isGuildReadableType } from "createChannelRecord";
 import setIndex from "setIndex";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "getChannelIcon";

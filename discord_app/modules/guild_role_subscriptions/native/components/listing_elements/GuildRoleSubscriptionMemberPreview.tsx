@@ -42,13 +42,13 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   if (null == role) {
     return null;
   } else {
-    let tmp6Result = tmp6(1416);
+    let tmp6Result = tmp6(1435);
     let avatarURL;
     if (stateFromStores != null) {
       avatarURL = stateFromStores.getAvatarURL(guildId, 40);
     }
     if (avatarURL == null) {
-      tmp6Result = tmp6(1416);
+      tmp6Result = tmp6(1435);
       avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
     }
     const source = tmp6Result.makeSource(avatarURL);

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_invite/native/AdvancedInstantInvite.tsx
 import Themes from "Themes";
 import { View } from "TableRowIcon";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "TableRowInner";
 import createCacheKey from "createCacheKey";
@@ -11,7 +11,7 @@ let metroImportAll;
 const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flexGrow: 1 } });
-const result = require("upsertRelationship").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
 
 export default function AdvancedInstantInvite(maxAge) {
   let canCreateApplicationBypassInvites;

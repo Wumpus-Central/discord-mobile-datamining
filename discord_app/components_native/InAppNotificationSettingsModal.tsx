@@ -2,7 +2,7 @@
 import importAllResult from "noop";
 import { isMultiUserDM } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -71,7 +71,7 @@ prototype["renderGroupDMNotificationSettings"] = function renderGroupDMNotificat
     return null;
   } else {
     let obj = computeChannelName;
-    const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const channelName = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     obj = { children: null };
     obj = { label: null, value: null, onValueChange: null };
     const intl = getSystemLocale.intl;

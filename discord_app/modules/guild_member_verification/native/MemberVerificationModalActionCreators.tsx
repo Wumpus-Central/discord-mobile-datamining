@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
 import items from "items";
 import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { _fetchVerificationForm } from "../MemberVerificationActionCreators.tsx";
@@ -19,7 +19,7 @@ export default {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, obj);
     const obj2 = expandEventProperties;
     obj = { guildId, onClose: connect };
-    ModalActionCreators.pushLazy(asyncRequireImpl(8414, dependencyMap.paths), obj, closure_4);
+    ModalActionCreators.pushLazy(asyncRequireImpl(8420, dependencyMap.paths), obj, closure_4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

@@ -141,9 +141,9 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
         } else if (callback2(callback, { bypassNewUserCheck: true })) {
           c5 = 3;
         } else {
-          obj2 = callback(1360);
+          obj2 = callback(1379);
           const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-          let obj3 = callback(1355);
+          let obj3 = callback(1374);
           let c4 = 2;
           c5 = 1;
           obj3 = { value: null, done: false };
@@ -154,7 +154,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = callback(1360);
+        const obj = callback(1379);
         const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
       }
       return arg1;
@@ -305,14 +305,14 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
               let handleConnectionClosedOrResumed = tmp5;
               let isSingleUseDismissibleContent = tmp2;
               let closure_1 = dependencyMap;
-              const guildNextNumTimesDismissed = callback(1360).getGuildNextNumTimesDismissed(callback, closure_1);
-              const obj6 = callback(1360);
-              const result = callback(1360).markDismissibleContentAsDismissedPreProcessing(callback, dependencyMap);
-              const obj7 = callback(1360);
+              const guildNextNumTimesDismissed = callback(1379).getGuildNextNumTimesDismissed(callback, closure_1);
+              const obj6 = callback(1379);
+              const result = callback(1379).markDismissibleContentAsDismissedPreProcessing(callback, dependencyMap);
+              const obj7 = callback(1379);
               c5 = 1;
               c6 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback(1360).UNSAFE_addTimeRecurringGuildDismissedContent(callback, closure_1, guildNextNumTimesDismissed);
+              obj1[0] = callback(1379).UNSAFE_addTimeRecurringGuildDismissedContent(callback, closure_1, guildNextNumTimesDismissed);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -324,7 +324,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback(1360);
+            obj = callback(1379);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -384,13 +384,13 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
               let handleConnectionOpen = tmp5;
               let handleConnectionClosedOrResumed = tmp2;
               let closure_1 = isSingleUseDismissibleContent;
-              const guildNextNumTimesDismissed = callback(1360).getGuildNextNumTimesDismissed(callback, dependencyMap);
-              const obj6 = callback(1360);
+              const guildNextNumTimesDismissed = callback(1379).getGuildNextNumTimesDismissed(callback, dependencyMap);
+              const obj6 = callback(1379);
               const obj1 = {};
               const merged = Object.assign(isSingleUseDismissibleContent);
               obj1.snowflakeId = closure_1;
-              const result = callback(1360).markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-              const obj9 = callback(1360);
+              const result = callback(1379).markDismissibleContentAsDismissedPreProcessing(callback, obj1);
+              const obj9 = callback(1379);
               c6 = 1;
               c7 = 1;
               const obj2 = { value: null, done: false };
@@ -406,7 +406,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            obj = callback(1360);
+            obj = callback(1379);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c7 = 3;
             return { value: "HermesInternal", done: null };

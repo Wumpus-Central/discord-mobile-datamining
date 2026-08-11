@@ -35,10 +35,14 @@ function renderCategoryItem(longPressAction) {
   }
   ({ onPress, onLongPress, styles, isRefreshEnabled, trailingAction } = longPressAction);
   longPressAction = longPressAction.longPressAction;
+  let tmp = null != onPress;
+  ({ withMarginTop, accessibilityState } = longPressAction);
+  if (!tmp) {
+    tmp = null != onLongPress;
+  }
   const items = [styles.categoryWrapper, ];
   let num = 16;
   let num2 = 16;
-  ({ withMarginTop, accessibilityState } = longPressAction);
   if (!isRefreshEnabled) {
     if (null != icon) {
       num = 3;
@@ -53,7 +57,7 @@ function renderCategoryItem(longPressAction) {
   obj[1] = num3;
   obj[2] = closure_8;
   items[1] = obj;
-  let tmp32Result = name;
+  let tmp35Result = name;
   if (typeof name === "string") {
     let str = "text-subtle";
     if (muted) {
@@ -63,8 +67,8 @@ function renderCategoryItem(longPressAction) {
     obj[2] = str;
     obj[4] = styles.categoryText;
     obj[5] = name;
-    tmp32Result = callback(trailingAction(4299).Text, obj);
-    const tmp32 = callback;
+    tmp35Result = callback(trailingAction(4299).Text, obj);
+    const tmp35 = callback;
   }
   let tmp3 = null;
   if (null != icon) {
@@ -73,32 +77,39 @@ function renderCategoryItem(longPressAction) {
     obj[1] = icon;
     tmp3 = callback(View, obj);
   }
+  let Icon;
+  if (trailingAction != null) {
+    Icon = trailingAction.Icon;
+  }
+  if (Icon == null) {
+    Icon = trailingAction(12111).PlusMediumIcon;
+  }
   if (null == trailingAction) {
     const obj1 = { children: null };
     const items1 = [, , , ];
     if (isRefreshEnabled) {
-      items1[0] = tmp32Result;
-      let tmp17 = null;
+      items1[0] = tmp35Result;
+      let tmp21 = null;
       if (null != note) {
         let obj2 = { style: null, children: null };
         obj2[0] = styles.noteWrapper;
         obj2[1] = note;
-        tmp17 = callback(View, obj2);
+        tmp21 = callback(View, obj2);
       }
-      items1[1] = tmp17;
+      items1[1] = tmp21;
       items1[2] = tmp3;
       items1[3] = null;
       obj1[0] = items1;
-      let tmp16 = obj1;
+      let tmp20 = obj1;
     } else {
       items1[0] = tmp3;
-      items1[1] = tmp32Result;
+      items1[1] = tmp35Result;
       items1[2] = note;
       items1[3] = null;
       obj1[0] = items1;
-      tmp16 = obj1;
+      tmp20 = obj1;
     }
-    const tmp14Result = closure_13(closure_12, tmp16);
+    const tmp18Result = closure_13(closure_12, tmp20);
     const items2 = [];
     if (null != trailingAction) {
       const obj3 = { name: null, label: null };
@@ -112,64 +123,67 @@ function renderCategoryItem(longPressAction) {
       obj4[1] = longPressAction.label;
       items2.push(obj4);
     }
-    if (null == onPress) {
-      if (null == onLongPress) {
-        const obj5 = { accessibilityRole: "header", style: null, children: null };
-        obj5[1] = items;
-        obj5[2] = tmp14Result;
-        let tmp28Result = callback(View, obj5);
+    if (tmp) {
+      const obj5 = { accessibilityRole: "header", accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onLongPress: null, style: null, children: null };
+      obj5[1] = accessibilityState;
+      let tmp34;
+      if (items2.length > 0) {
+        tmp34 = items2;
       }
-      return tmp28Result;
-    }
-    const obj6 = { accessibilityRole: "header", accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onLongPress: null, style: null, children: null };
-    obj6[1] = accessibilityState;
-    let tmp31;
-    if (items2.length > 0) {
-      tmp31 = items2;
-    }
-    obj6[2] = tmp31;
-    let handleAccessibilityAction;
-    if (items2.length > 0) {
-      handleAccessibilityAction = function handleAccessibilityAction(nativeEvent) {
-        const actionName = nativeEvent.nativeEvent.actionName;
-        if (outer1_17 === actionName) {
-          if (trailingAction != null) {
-            obj2.perform();
+      obj5[2] = tmp34;
+      let handleAccessibilityAction;
+      if (items2.length > 0) {
+        handleAccessibilityAction = function handleAccessibilityAction(nativeEvent) {
+          const actionName = nativeEvent.nativeEvent.actionName;
+          if (outer1_17 === actionName) {
+            if (trailingAction != null) {
+              obj2.perform();
+            }
+            obj2 = trailingAction;
+          } else if (outer1_18 === actionName) {
+            if (longPressAction != null) {
+              obj.perform();
+            }
+            obj = longPressAction;
           }
-          obj2 = trailingAction;
-        } else if (outer1_18 === actionName) {
-          if (longPressAction != null) {
-            obj.perform();
-          }
-          obj = longPressAction;
-        }
-      };
+        };
+      }
+      obj5[3] = handleAccessibilityAction;
+      obj5[4] = onPress;
+      obj5[5] = onLongPress;
+      obj5[6] = items;
+      obj5[7] = tmp18Result;
+      let tmp29Result = tmp29(trailingAction(4846).PressableHighlight, obj5);
+    } else {
+      const obj6 = { accessibilityRole: "header", style: null, children: null };
+      obj6[1] = items;
+      obj6[2] = tmp18Result;
+      tmp29Result = tmp29(View, obj6);
     }
-    obj6[3] = handleAccessibilityAction;
-    obj6[4] = onPress;
-    obj6[5] = onLongPress;
-    obj6[6] = items;
-    obj6[7] = tmp14Result;
-    tmp28Result = callback(trailingAction(4846).PressableHighlight, obj6);
-    const tmp14 = closure_13;
-    const tmp15 = closure_12;
-    const tmp28 = callback;
+    return tmp29Result;
   } else {
     const obj7 = { style: null, children: null };
     obj7[0] = styles.trailingActionWrapper;
-    let obj8 = { accessible: false, onPress: null, hitSlop: null, androidRippleConfig: null, children: null };
-    obj8[1] = trailingAction.perform;
-    obj8[2] = closure_15;
-    obj8[3] = closure_16;
+    let obj8 = { accessible: null, accessibilityRole: null, accessibilityLabel: null, onPress: null, hitSlop: null, androidRippleConfig: null, children: null };
+    obj8[0] = !tmp;
+    obj8[1] = "button";
+    let label;
+    if (!tmp) {
+      label = trailingAction.label;
+    }
+    obj8[2] = label;
+    obj8[3] = trailingAction.perform;
+    obj8[4] = closure_15;
+    obj8[5] = closure_16;
     let colors = longPressAction(712).colors;
     const obj9 = { size: "xxs", color: null };
     obj9[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
-    colors = tmp6(trailingAction(12108).PlusMediumIcon, obj9);
-    obj8[4] = colors;
-    obj8 = tmp6(trailingAction(4846).PressableOpacity, obj8);
+    colors = tmp9(Icon, obj9);
+    obj8[6] = colors;
+    obj8 = tmp9(trailingAction(4846).PressableOpacity, obj8);
     obj7[1] = obj8;
     callback(View, obj7);
-    const tmp7 = View;
+    const tmp10 = View;
   }
 }
 ({ CATEGORY_MARGIN_BOTTOM: metroImportAll, CATEGORY_MARGIN_TOP: c9, CATEGORY_VERTICAL_PADDING: c10 } = hairlineWidth);
@@ -236,7 +250,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   let isRefreshEnabled;
   channel = channel.channel;
   let id = channel;
-  const tmp3 = collapsed(1348)("CategoryChannel");
+  const tmp3 = collapsed(1367)("CategoryChannel");
   let obj = id(589);
   const items = [incrementVersion, updateUserGuildSettingsInternal];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ collapsed: outer1_6.isCollapsed(id.id), muted: outer1_7.isChannelMuted(id.getGuildId(), id.id) }));
@@ -257,7 +271,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const tmp4 = styles(tmp3);
   const tmp5 = id;
   const tmp9 = collapsed(4494)(channel);
-  const tmp11 = collapsed(15240)(channel);
+  const tmp11 = collapsed(15249)(channel);
   obj = { name: tmp9, muted: stateFromStoresObject.muted, collapsed, onPress: callback, onLongPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null, trailingAction: null, longPressAction: null };
   let perform;
   if (tmp11 != null) {
@@ -270,14 +284,14 @@ export const CategoryChannel = function CategoryChannel(channel) {
   obj[5] = channel.withMarginTop;
   obj[6] = tmp4;
   obj[7] = tmp3;
-  obj[8] = collapsed(12134)(channel);
+  obj[8] = collapsed(12137)(channel);
   obj[9] = tmp11;
   ({ collapsed: collapsed2, isRefreshEnabled } = obj);
   const merged = Object.assign(obj, Object.create(null));
   const colors = tmp(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(tmp5(9478).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
+  obj.icon = callback(tmp5(9484).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed2 };
   obj.isRefreshEnabled = isRefreshEnabled;
   return renderCategoryItem(obj);
@@ -285,7 +299,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
 export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
-  const tmp2 = stateFromStores(1348)("RecentlyActiveCategory");
+  const tmp2 = stateFromStores(1367)("RecentlyActiveCategory");
   let obj = guildId(589);
   const items = [set];
   stateFromStores = obj.useStateFromStores(items, () => outer1_5.isCollapsed(guildId));
@@ -304,7 +318,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(9478).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
+  obj.icon = callback(guildId(9484).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
   obj.isRefreshEnabled = obj.isRefreshEnabled;
   return renderCategoryItem(obj);
@@ -312,7 +326,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
 export const SuggestedCategory = function SuggestedCategory(guildId) {
   guildId = guildId.guildId;
   const channelIds = guildId.channelIds;
-  const tmp = channelIds(1348)("SuggestedCategory");
+  const tmp = channelIds(1367)("SuggestedCategory");
   let items = [guildId, channelIds];
   let obj = { name: null, onPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null };
   const callback = React.useCallback(() => {

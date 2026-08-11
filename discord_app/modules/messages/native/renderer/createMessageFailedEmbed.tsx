@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
 import { MessageFailureState } from "Changeset";
 import { MessageEmbedTypes } from "ME";
-import { registerAsset } from "../../../../../_runtime/08257_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08258_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08261_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08262_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { frozen } from "EmbedUtils.tsx";
 

@@ -78,7 +78,7 @@ function useQuests(arg0) {
   isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   let obj4 = obj(589);
-  isEligibleForQuests = obj(10461).getIsEligibleForQuests();
+  isEligibleForQuests = obj(10466).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -96,18 +96,18 @@ function useQuests(arg0) {
           if (!hasFetched) {
             if (!isFetchingCurrentQuests) {
               dependencyMap(true);
-              obj = obj(10462);
+              obj = obj(10467);
               const currentQuests = obj.fetchCurrentQuests();
               if (obj2.isMac()) {
-                const obj3 = hasFetched(10470);
+                const obj3 = hasFetched(10475);
               }
               obj2 = obj(500);
               if (!obj4.getConfig({ location: "QuestHookUseQuests" }).enableNewRequestBehavior) {
                 const _HermesInternal = HermesInternal;
-                const questToDeliver = tmp8(10462).fetchQuestToDeliver(tmp8(5164).AdPlacement.MOBILE_HOME_DOCK_AREA, "use_quests_" + tmp.callerSource);
-                const tmp8Result = tmp8(10462);
+                const questToDeliver = tmp8(10467).fetchQuestToDeliver(tmp8(5164).AdPlacement.MOBILE_HOME_DOCK_AREA, "use_quests_" + tmp.callerSource);
+                const tmp8Result = tmp8(10467);
               }
-              obj4 = hasFetched(7175);
+              obj4 = hasFetched(7176);
             }
           }
         }
@@ -234,9 +234,9 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       questHomeHero = questHomeHero.questHomeHero;
       if (null != questHomeHero) {
         if (!questHomeHero.isQuestHomeHeroShelfEnabled) {
-          let tmp50Result = tmp50(7181);
+          let tmp50Result = tmp50(7182);
           const result2 = tmp50Result.isQuestFeaturedByHero(questHomeHero, id.id);
-          tmp50Result = tmp50(7181);
+          tmp50Result = tmp50(7182);
           let num2 = 1;
           if (result2) {
             num2 = c28;
@@ -244,13 +244,13 @@ function defaultSortFn(id, id2, questHomeHero, get) {
           return num2;
         }
       }
-      const questType = tmp50(7181).getQuestType(id.config);
-      const tmp50Result1 = tmp50(7181);
-      const questType1 = tmp50(7181).getQuestType(id2.config);
-      const tmp50Result2 = tmp50(7181);
-      const result3 = tmp50(7183).hasWatchVideoOnMobileTasks(id);
-      const tmp50Result3 = tmp50(7183);
-      const result4 = tmp50(7183).hasWatchVideoOnMobileTasks(id2);
+      const questType = tmp50(7182).getQuestType(id.config);
+      const tmp50Result1 = tmp50(7182);
+      const questType1 = tmp50(7182).getQuestType(id2.config);
+      const tmp50Result2 = tmp50(7182);
+      const result3 = tmp50(7184).hasWatchVideoOnMobileTasks(id);
+      const tmp50Result3 = tmp50(7184);
+      const result4 = tmp50(7184).hasWatchVideoOnMobileTasks(id2);
       if (result3 !== result4) {
         if (!result3) {
           return num3;
@@ -263,7 +263,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       }
       if (questType !== questType1) {
         num3 = 1;
-        if (questType === tmp50(7186).QuestType.VIDEO) {
+        if (questType === tmp50(7187).QuestType.VIDEO) {
           num3 = c28;
         }
       }
@@ -320,7 +320,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
         num10 = c28;
       }
       num5 = num10;
-      const tmp50Result4 = tmp50(7183);
+      const tmp50Result4 = tmp50(7184);
     }
     const obj9 = getQuestDeliveryDataForPlacement;
     const tmp19 = null != completedAt2;
@@ -388,22 +388,22 @@ function doesQuestPassTaskFilter(quest) {
     obj[0] = quest;
     let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj);
     if (!hasPlayOnDesktopTaskResult) {
-      let tmp2Result = tmp2(7183);
+      let tmp2Result = tmp2(7184);
       obj = { quest: null };
       obj[0] = quest;
       hasPlayOnDesktopTaskResult = tmp2Result.hasStreamOnDesktopTask(obj);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      tmp2Result = tmp2(7183);
+      tmp2Result = tmp2(7184);
       hasPlayOnDesktopTaskResult = tmp2Result.hasPlayActivityTask(quest);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = tmp2(7183).isConsoleQuest(quest);
-      const tmp2Result1 = tmp2(7183);
+      hasPlayOnDesktopTaskResult = tmp2(7184).isConsoleQuest(quest);
+      const tmp2Result1 = tmp2(7184);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = tmp2(7183).isInGameQuest(quest);
-      const tmp2Result2 = tmp2(7183);
+      hasPlayOnDesktopTaskResult = tmp2(7184).isInGameQuest(quest);
+      const tmp2Result2 = tmp2(7184);
     }
     return hasPlayOnDesktopTaskResult;
   } else {
@@ -1136,7 +1136,7 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
   let obj = accounts(589);
   const tmp = accounts;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7183).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7184).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1144,8 +1144,8 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  let obj2 = accounts(7183);
-  supportedConsoles = tmp(10489).useGetQuestImpressionId();
+  let obj2 = accounts(7184);
+  supportedConsoles = tmp(10494).useGetQuestImpressionId();
   return () => {
     let obj = accounts(outer1_2[32]);
     if (c3) {
@@ -1426,7 +1426,7 @@ export const useWaitingForConsoleConnection = function useWaitingForConsoleConne
   ({ xboxAccounts, playstationAccounts } = memo);
   const obj = accounts(589);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7183).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7184).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1738,7 +1738,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   let tmp8Result = tmp8(500);
   let tmp17 = tmp8Result.isWeb() && tmp12;
   if (tmp17) {
-    tmp8Result = tmp8(10491);
+    tmp8Result = tmp8(10496);
     tmp17 = !tmp8Result.isQuestSupportedOnWeb(userStatus);
   }
   const obj2 = _initialize;

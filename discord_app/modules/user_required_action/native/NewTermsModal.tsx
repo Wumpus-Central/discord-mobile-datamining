@@ -203,15 +203,15 @@ export default function NewTermsModal() {
     obj18[0] = top;
     items4[1] = obj18;
     obj17[0] = items4;
-    obj17[1] = tmp2(9051);
+    obj17[1] = tmp2(9057);
     obj17[2] = tmp.navbarRight.tintColor;
     obj17[3] = handleMoreActions;
     const intl9 = tmp6(1236).intl;
     obj17[5] = intl9.string(tmp6(1236).t["UKOtz+"]);
-    items3[2] = callback3(tmp2(9057), obj17);
+    items3[2] = callback3(tmp2(9063), obj17);
     obj[1] = items3;
     tmp10 = callback4(closure_6, obj);
-    const tmp2Result = tmp2(9057);
+    const tmp2Result = tmp2(9063);
   }
   return tmp10;
 };

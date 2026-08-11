@@ -7,7 +7,7 @@ import { AnalyticEvents } from "ME";
 import { SearchNavigatorScreens } from "SearchNavigatorScreens";
 import jsxProd from "set";
 import createNativeStackNavigator from "createNativeStackNavigator";
-import { registerAsset } from "../../../../../../_runtime/12124_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12127_registerAsset.js";
 
 let c10;
 let c9;
@@ -37,7 +37,7 @@ function CreateThreadHeaderButton(channel) {
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
     obj[2] = registerAsset;
-    tmp5 = callback(tmp(8382).HeaderIconButton, obj);
+    tmp5 = callback(tmp(8388).HeaderIconButton, obj);
   }
   return tmp5;
 }
@@ -136,7 +136,7 @@ const memoResult = importAllResult.memo((route) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(8382);
+            let obj = route(8388);
             obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(500).isAndroid();

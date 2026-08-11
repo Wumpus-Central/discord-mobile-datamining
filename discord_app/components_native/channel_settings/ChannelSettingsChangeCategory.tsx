@@ -5,7 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import setIndex from "setIndex";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import jsxProd from "TableRowInner";
@@ -273,7 +273,7 @@ prototype["render"] = function render() {
   items[2] = self.renderCategories();
   obj[2] = items;
   obj[1] = closure_14(first(4712).Stack, obj);
-  return closure_13(first(7967).Form, obj);
+  return closure_13(first(7969).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
@@ -284,7 +284,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const items = [ensureGuildLoaded];
   const channel = channelId(589).useStateFromStores(items, () => outer1_6.getChannel(channelId));
   const obj = channelId(589);
-  const navigation = channelId(1480).useNavigation();
+  const navigation = channelId(1499).useNavigation();
   00038__(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation });
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -14,7 +14,7 @@ createToggle = {
   },
   useDescription: function useAccountIgnoredUsersSettingDescription() {
     let obj = initialize;
-    const items = [upsertRelationship];
+    const items = [markAllUserIdListsStale];
     const stateFromStoresArray = obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
     const intl = getSystemLocale.intl;
     obj = { numberOfIgnoredUsers: stateFromStoresArray.length };

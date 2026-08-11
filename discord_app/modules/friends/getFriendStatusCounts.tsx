@@ -1,6 +1,6 @@
 // discord_app/modules/friends/getFriendStatusCounts.tsx
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { StatusTypes } from "ME";
 
 const result = require("ME").fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");

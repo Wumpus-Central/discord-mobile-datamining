@@ -23,13 +23,13 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     flag = false;
   }
   listProps = undefined;
-  let tmp4 = fastListRef(15405)();
+  let tmp4 = fastListRef(15422)();
   fastListRef = tmp4.fastListRef;
   listProps = fastListRef;
   ({ scrollPosition, gesture, scrollerRef, persistantKeys, onFastListScroll, onFastListScrollWorklet } = tmp4);
   let tmp = callback();
   const tmp2 = fastListRef;
-  ({ listProps, listDataProps } = fastListRef(15415)(fastListRef));
+  ({ listProps, listDataProps } = fastListRef(15432)(fastListRef));
   const items = [fastListRef];
   const effect = importAllResult.useEffect(() => {
     const result = listProps(ref[7]).registerGuildVisibilityMethod(listProps);
@@ -82,11 +82,11 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     }
   }, items1);
   let obj = { profile: null, children: null };
-  const tmp5 = fastListRef(15415)(fastListRef);
-  obj[0] = listProps(11003).Profiles.Guilds;
+  const tmp5 = fastListRef(15432)(fastListRef);
+  obj[0] = listProps(11008).Profiles.Guilds;
   obj = { gesture, children: null };
   obj = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
-  const tmp10 = fastListRef(11003);
+  const tmp10 = fastListRef(11008);
   const tmp11 = closure_5;
   const obj1 = {};
   const tmp12 = fastListRef(5781);
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
   }
   obj1.style = obj2;
   obj1.nativeID = "guilds-bar-fast-list";
-  const items2 = [closure_4(fastListRef(8008), obj1), closure_4(tmp2(15482), {})];
+  const items2 = [closure_4(fastListRef(8010), obj1), closure_4(tmp2(15499), {})];
   obj[3] = items2;
   obj[1] = tmp11(tmp12, obj);
   obj[1] = closure_4(listProps(5427).GestureDetector, obj);

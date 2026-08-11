@@ -99,7 +99,7 @@ function _serializeIntlData() {
             str = "iOS";
           }
           obj7[1] = str;
-          obj = lib(1606);
+          obj = lib(1625);
           lib = obj.getConstants();
           let str3 = "N/A";
           if (str2.trim().length > 0) {
@@ -215,7 +215,7 @@ function _handleUploadIntlDataSettingPress() {
         } else {
           if (2 === tmp9) {
             dependencyMap = 1;
-            let obj5 = callback(4002);
+            let obj5 = callback(4021);
             const obj1 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: null, content: "Failed to upload internationalization data." };
             obj1[1] = ANDROID_APP(4259).CircleInformationIcon;
             obj5.open(obj1);
@@ -257,7 +257,7 @@ function _handleUploadIntlDataSettingPress() {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = callback(4002);
+            obj = callback(4021);
             obj5 = { key: "USER_SETTINGS_INTL_DATA_UPLOADED", IconComponent: null, content: "Internationalization data uploaded successfully." };
             obj5[1] = ANDROID_APP(4259).CircleInformationIcon;
             obj.open(obj5);

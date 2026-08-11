@@ -2,7 +2,7 @@
 import noop from "noop";
 import { View } from "XSmallIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -104,7 +104,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     const tmp6 = obj;
   }
   let tmp2Result = tmp2(4494);
-  const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   const type = channel.type;
   let tmp10 = channelName;
   if (onDismiss(692).ChannelTypes.GROUP_DM !== type) {
@@ -119,7 +119,7 @@ export default function MessageNotificationHeader(locationTextColor) {
           let channelName1 = null;
           if (null != parentChannel) {
             tmp2Result = tmp2(4494);
-            channelName1 = tmp2Result.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
+            channelName1 = tmp2Result.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
           }
           if (null != channelName1) {
             const _HermesInternal2 = HermesInternal;

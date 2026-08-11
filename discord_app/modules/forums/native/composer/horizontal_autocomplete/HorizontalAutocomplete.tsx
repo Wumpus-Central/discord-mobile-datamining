@@ -4,13 +4,13 @@ import get_ActivityIndicator from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../../_runtime/08228_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08232_registerAsset.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -33,7 +33,7 @@ function HorizontalAutocompleteOption(arg0) {
   let onPress;
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4036);
+  let obj = sharedValue(4042);
   sharedValue = obj.useSharedValue(0);
   useMountLayoutEffect(() => {
     const result = sharedValue.set(sharedValue(outer1_2[14]).withTiming(1));
@@ -46,7 +46,7 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = closure_14;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4036).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4042).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj[1] = callback(ReanimatedRexport.View, { style: items, children });
   return callback(closure_3, obj);
@@ -165,7 +165,7 @@ let obj3 = {
     tmp2Result = tmp2(4494);
     let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
-    const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
     items[1] = callback(channel(4299).Text, obj);
     obj[1] = items;

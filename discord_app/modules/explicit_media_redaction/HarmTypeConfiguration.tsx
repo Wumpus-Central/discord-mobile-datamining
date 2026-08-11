@@ -57,14 +57,14 @@ obj[obj.EXPLICIT] = {
       }
       let obj = {};
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop;
-      const ExplicitContentSettings = tmp12(3974).ExplicitContentSettings;
+      const ExplicitContentSettings = tmp12(3993).ExplicitContentSettings;
       const setting1 = ExplicitContentSettings.getSetting();
       let prop1;
       if (setting1 != null) {
         prop1 = setting1.explicitContentFriendDm;
       }
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop1;
-      const ExplicitContentSettings2 = tmp12(3974).ExplicitContentSettings;
+      const ExplicitContentSettings2 = tmp12(3993).ExplicitContentSettings;
       const setting2 = ExplicitContentSettings2.getSetting();
       let prop2;
       if (setting2 != null) {
@@ -138,14 +138,14 @@ const obj1 = {
       }
       let obj = {};
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop;
-      const ExplicitContentSettings = tmp12(3974).ExplicitContentSettings;
+      const ExplicitContentSettings = tmp12(3993).ExplicitContentSettings;
       const setting1 = ExplicitContentSettings.getSetting();
       let prop1;
       if (setting1 != null) {
         prop1 = setting1.explicitContentFriendDm;
       }
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop1;
-      const ExplicitContentSettings2 = tmp12(3974).ExplicitContentSettings;
+      const ExplicitContentSettings2 = tmp12(3993).ExplicitContentSettings;
       const setting2 = ExplicitContentSettings2.getSetting();
       let prop2;
       if (setting2 != null) {
@@ -219,14 +219,14 @@ obj[obj.GORE] = {
       }
       let obj = {};
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
-      const GoreContentSettings = tmp12(3974).GoreContentSettings;
+      const GoreContentSettings = tmp12(3993).GoreContentSettings;
       const setting1 = GoreContentSettings.getSetting();
       let goreContentFriendDm;
       if (setting1 != null) {
         goreContentFriendDm = setting1.goreContentFriendDm;
       }
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
-      const GoreContentSettings2 = tmp12(3974).GoreContentSettings;
+      const GoreContentSettings2 = tmp12(3993).GoreContentSettings;
       const setting2 = GoreContentSettings2.getSetting();
       let prop;
       if (setting2 != null) {
@@ -300,14 +300,14 @@ const obj2 = {
       }
       let obj = {};
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
-      const GoreContentSettings = tmp12(3974).GoreContentSettings;
+      const GoreContentSettings = tmp12(3993).GoreContentSettings;
       const setting1 = GoreContentSettings.getSetting();
       let goreContentFriendDm;
       if (setting1 != null) {
         goreContentFriendDm = setting1.goreContentFriendDm;
       }
       obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
-      const GoreContentSettings2 = tmp12(3974).GoreContentSettings;
+      const GoreContentSettings2 = tmp12(3993).GoreContentSettings;
       const setting2 = GoreContentSettings2.getSetting();
       let prop;
       if (setting2 != null) {

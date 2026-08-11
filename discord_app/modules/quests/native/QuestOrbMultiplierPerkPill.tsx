@@ -84,7 +84,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(7704).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(tmp2(7706).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19, ];

@@ -24,14 +24,14 @@ function handleInputModePress() {
   const intl2 = getSystemLocale.intl;
   obj1[0] = intl2.string(getSystemLocale.t.Q8gkVL);
   obj1[1] = function onPress() {
-    callback(9155).setMode(constants.PUSH_TO_TALK);
+    callback(9161).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1, ];
   const obj2 = { label: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
   obj2[1] = function onPress() {
-    callback(9155).setMode(constants.VOICE_ACTIVITY);
+    callback(9161).setMode(constants.VOICE_ACTIVITY);
   };
   items[1] = obj2;
   obj[2] = items;
@@ -100,6 +100,6 @@ export default function UserSettingsVoiceInputOptions() {
   }
   items1[1] = tmp4Result;
   obj[2] = items1;
-  return closure_8(inputMode(10846).UserSettingsTableRowGroup, obj);
+  return closure_8(inputMode(10851).UserSettingsTableRowGroup, obj);
 };
 export { handleInputModePress };

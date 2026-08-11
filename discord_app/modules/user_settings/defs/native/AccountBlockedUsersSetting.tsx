@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -12,7 +12,7 @@ createToggle = {
     return intl.string(getSystemLocale.t.PFOUKW);
   },
   useDescription: function useAccountBlockedUsersSettingDescription() {
-    const items = [upsertRelationship];
+    const items = [markAllUserIdListsStale];
     const numberOfBlockedUsers = initialize.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
     const intl = getSystemLocale.intl;
     return intl.format(getSystemLocale.t["r91W/h"], { numberOfBlockedUsers });

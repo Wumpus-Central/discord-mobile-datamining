@@ -30,7 +30,7 @@ export default function FinishingTouchesScreen() {
   let tmp13;
   let obj = React;
   const ref = React.useRef(null);
-  let obj1 = guild(4005);
+  let obj1 = guild(4024);
   const token = obj1.useToken(first(712).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(589);
   let items = [handleFormInit];
@@ -101,21 +101,21 @@ export default function FinishingTouchesScreen() {
       }
       obj[5] = publicUpdatesChannelId;
       obj[6] = features.defaultMessageNotifications;
-      first(9021).saveGuild(features.id, obj);
+      first(9027).saveGuild(features.id, obj);
       if (removeResult !== everyoneRole.permissions) {
-        obj = guild(16711);
+        obj = guild(16723);
         const items = [obj];
         obj.saveRoleSettings(features.id, items);
       }
-      const obj5 = first(9021);
+      const obj5 = first(9027);
     }
   }, []);
   const tmp11 = callback(obj.useState(!closure_11.some((VIEW_CHANNEL) => outer1_2(outer1_3[11]).canEveryone(VIEW_CHANNEL, guild))), 2);
   const tmp8 = constants2;
-  const tmp19 = first(16753)();
-  const enableCommunitySharedStyles = guild(16752).useEnableCommunitySharedStyles();
+  const tmp19 = first(16765)();
+  const enableCommunitySharedStyles = guild(16764).useEnableCommunitySharedStyles();
   obj = { headerRef: ref, currentStep: null, onSuccess: null, disableNextStep: null, buttonText: null, children: null };
-  obj[1] = guild(16750).EnableCommunityModalSteps.STEP_3;
+  obj[1] = guild(16762).EnableCommunityModalSteps.STEP_3;
   obj[2] = callback1;
   obj[3] = !first1;
   const intl = tmp2(1236).intl;
@@ -139,7 +139,7 @@ export default function FinishingTouchesScreen() {
   const items3 = [callback3(closure_7, obj), , ];
   let obj5 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj6 = { formSwitchDisabled: first === constants2.ONLY_MENTIONS, children: null };
-  let tmp4Result = tmp4(16762);
+  let tmp4Result = tmp4(16774);
   const obj7 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1236).intl;
   obj7[0] = intl5.format(guild(1236).t.K8Eg4P, {
@@ -158,7 +158,7 @@ export default function FinishingTouchesScreen() {
   obj6[1] = callback2(guild(5768).TableSwitchRow, obj7);
   const items4 = [callback2(tmp4Result, obj6), ];
   const obj10 = { formSwitchDisabled: first2, children: null };
-  tmp4Result = tmp4(16762);
+  tmp4Result = tmp4(16774);
   const obj11 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1236).intl;
   obj11[0] = intl6.format(guild(1236).t.v8qCoG, {
@@ -198,12 +198,12 @@ export default function FinishingTouchesScreen() {
       return null;
     }
   };
-  const tmp2Result = guild(16752);
-  obj16[0] = first(1974).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
-  const tmp4Result1 = first(1974);
-  obj16[1] = first(1974).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
+  const tmp2Result = guild(16764);
+  obj16[0] = first(1993).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
+  const tmp4Result1 = first(1993);
+  obj16[1] = first(1993).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
   obj15[3] = intl9.format(guild(1236).t["BwbW/Q"], obj16);
   items3[2] = callback2(guild(4299).Text, obj15);
   obj[5] = items3;
-  return callback3(guild(16750).EnableCommunityModalScreen, obj);
+  return callback3(guild(16762).EnableCommunityModalScreen, obj);
 };

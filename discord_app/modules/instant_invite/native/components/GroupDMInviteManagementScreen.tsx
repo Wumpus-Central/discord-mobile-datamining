@@ -142,8 +142,8 @@ function GroupDMInviteManagement(channelId) {
     let tmp14 = jsx(channelId(5822).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
     let obj = { lightSource: null, darkSource: null, title: null, body: null };
-    obj[0] = tmp4(9702);
-    obj[1] = tmp4(9703);
+    obj[0] = tmp4(9707);
+    obj[1] = tmp4(9708);
     const intl = channelId(1236).intl;
     obj[2] = intl.string(channelId(1236).t["+nLJkZ"]);
     const intl2 = channelId(1236).intl;

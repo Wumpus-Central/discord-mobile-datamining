@@ -5,7 +5,7 @@ import { isThread } from "createChannelRecord";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import recomputeGuild from "recomputeGuild";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { TextAreaCta } from "TextAreaCta";
 import ME from "ME";
@@ -98,7 +98,7 @@ export default function ChatInputGuardWrapper(channel) {
   const tmp11 = tmp2Result.useIsMessageRequest(channel.id) && channel.isPrivate();
   const tmp12 = tmp2Result.useIsSpamMessageRequest(channel.id) && channel.isPrivate();
   const isForumPostResult = channel.isForumPost();
-  const items4 = [upsertRelationship];
+  const items4 = [markAllUserIdListsStale];
   const items5 = [channel];
   const stateFromStores2 = channel(tmp3[12]).useStateFromStores(items4, () => {
     let isDMResult = channel.isDM();

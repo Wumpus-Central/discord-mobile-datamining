@@ -18,7 +18,7 @@ export default function useShowTryItOutButtonInAppLauncher(arg0) {
   const tmp = require;
   const tmp4 = useIsAppDM;
   const tmp4Result = useIsAppDM(channel);
-  const canLaunchFrameResult = tmp(10595).canLaunchFrame(application);
+  const canLaunchFrameResult = tmp(10600).canLaunchFrame(application);
   let tmp8 = !canLaunchFrameResult;
   if (!canLaunchFrameResult) {
     if (isPrimaryAppCommandUsableInAppDM) {

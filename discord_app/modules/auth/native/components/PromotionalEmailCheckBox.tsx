@@ -41,7 +41,7 @@ export default function PromotionalEmailCheckBox(style) {
     obj[4] = tmp.checkboxRow;
     const obj1 = { checked: null };
     obj1[0] = tmp3;
-    const items = [callback2(tmp4(7969).FormCheckbox, obj1), ];
+    const items = [callback2(tmp4(7971).FormCheckbox, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.checkboxLabel;
     const intl2 = tmp4(1236).intl;

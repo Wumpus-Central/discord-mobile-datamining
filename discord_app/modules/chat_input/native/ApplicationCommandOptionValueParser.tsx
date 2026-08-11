@@ -5,7 +5,7 @@ import { isGuildSelectableChannelType as closure_5 } from "createChannelRecord";
 import comparator from "comparator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import regExp from "regExp";
 import { apply } from "../../../../_runtime/00012_apply.js";
@@ -44,7 +44,7 @@ function getChannels(getGuildId, arr) {
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
       const obj = { id: id.id, text: null };
-      obj[1] = arr(4494).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+      obj[1] = arr(4494).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale);
       return obj;
     });
   } else {

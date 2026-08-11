@@ -99,9 +99,9 @@ const memoResult = require("noop").memo(function PremiumGiftPlanSelectPromotiona
     items3[1] = logoLargeTilted;
     obj7[1] = items3;
     obj7[2] = themeAndReducedMotionAwareAssetUrl1;
-    obj6[1] = tmp12(tmp7(10047), obj7);
+    obj6[1] = tmp12(tmp7(10052), obj7);
     tmp12Result = tmp12(View, obj6);
-    const tmp7Result = tmp7(10047);
+    const tmp7Result = tmp7(10052);
   }
   items[2] = tmp12Result;
   obj[6] = items;

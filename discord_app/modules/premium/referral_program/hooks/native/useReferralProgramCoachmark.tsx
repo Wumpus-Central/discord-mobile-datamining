@@ -6,7 +6,7 @@ import { UserSettingsSections } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/15865_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/15882_registerAsset.js";
 import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
@@ -39,11 +39,11 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   _useSelectedDismissibleContent;
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
-      let items = [tmp(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
+      let items = [tmp(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
     }
     const tmp8 = callback(tmp6(items), 2);
     _require = tmp9;
-    const tmp10 = tmp8[0] === tmp(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
+    const tmp10 = tmp8[0] === tmp(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
     c1 = tmp10;
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;

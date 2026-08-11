@@ -88,7 +88,7 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(10599);
+                  let obj9 = callback(10604);
                   const result = obj9.leaveCurrentEmbeddedActivity();
                   callback6();
                 }
@@ -102,15 +102,15 @@ function _launchFrame() {
                 c5 = 4;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = callback(10614).createProxyTicket(callback, callback3(callback2));
+                obj5[0] = callback(10619).createProxyTicket(callback, callback3(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
             callback3 = intent;
-            c5 = callback2(10600)();
-            let obj7 = callback(10612);
+            c5 = callback2(10605)();
+            let obj7 = callback(10617);
             c5 = 3;
             c6 = 1;
             const obj6 = { value: null, done: false };
@@ -296,8 +296,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = dispatcher;
-            dispatcher = applicationId(10600)();
-            let obj8 = callback(10612);
+            dispatcher = applicationId(10605)();
+            let obj8 = callback(10617);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

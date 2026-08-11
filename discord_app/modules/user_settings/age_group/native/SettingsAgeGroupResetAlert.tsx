@@ -47,12 +47,12 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(13031).resetAgeVerification();
+              obj1[0] = outer1_0(13040).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            let obj2 = outer1_0(4001);
+            let obj2 = outer1_0(4020);
             const intl = outer1_0(1236).intl;
             obj2.presentError(intl.string(outer1_0(1236).t.fEptJP));
             const _Error = Error;
@@ -98,9 +98,9 @@ export default function SettingsAgeGroupResetAlert() {
   _require = obj.useNavigation();
   obj = { title: null, content: null, actions: null };
   let intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_handleConfirm(2802)["bD//cU"]);
+  obj[0] = intl.string(_handleConfirm(2821)["bD//cU"]);
   const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_handleConfirm(2802).FbTAmI);
+  obj[1] = intl2.string(_handleConfirm(2821).FbTAmI);
   obj = { children: null };
   let obj1 = {
     variant: "destructive",
@@ -117,7 +117,7 @@ export default function SettingsAgeGroupResetAlert() {
     text: null
   };
   const intl3 = _getSystemLocale.intl;
-  obj1[2] = intl3.string(_handleConfirm(2802).V822Mp);
+  obj1[2] = intl3.string(_handleConfirm(2821).V822Mp);
   const items = [callback(_getAlertModalItemKey.AlertActionButton, obj1, "confirm"), ];
   let obj2 = { variant: "secondary", text: null };
   const intl4 = _getSystemLocale.intl;

@@ -7,6 +7,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-05-mana
 const result = require("set").fileFinishedImporting("modules/design/ManaTypeConsolidationExperiment.tsx");
 
 export default apexExperiment;
-export const useManaTypeConsolidationExperiment = function useManaTypeConsolidationExperiment(RootThemeContextProvider) {
-  return apexExperiment.useConfig({ location: RootThemeContextProvider }).enabled;
+export const useManaTypeConsolidationExperiment = function useManaTypeConsolidationExperiment(ChangeLogStrong) {
+  return apexExperiment.useConfig({ location: ChangeLogStrong }).enabled;
 };

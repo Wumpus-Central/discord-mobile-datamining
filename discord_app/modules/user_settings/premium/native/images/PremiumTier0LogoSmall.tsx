@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/images/PremiumTier0LogoSmall.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { inlineStyles } from "../../../../../../_runtime/07835_inlineStyles.js";
+import { inlineStyles } from "../../../../../../_runtime/07837_inlineStyles.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../../design/tokens/native/useToken.tsx";
 

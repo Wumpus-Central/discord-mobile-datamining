@@ -150,7 +150,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj[2] = tmp5;
     obj[3] = onQueryClear;
     obj[4] = searchInputRef;
-    let tmp13Result = tmp6(tmp2(5992).SearchField, obj);
+    let tmp13Result = tmp6(tmp2(5994).SearchField, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
@@ -164,7 +164,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj1[3] = intl4.formatToPlainString(tmp2(1236).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
     obj3[0] = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
-    const items = [tmp6(tmp2(9945).ChevronLargeLeftIcon, obj3), ];
+    const items = [tmp6(tmp2(9950).ChevronLargeLeftIcon, obj3), ];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1236).intl;
       let stringResult = intl3.string(tmp2(1236).t.TsWCdW);

@@ -2,7 +2,7 @@
 import getSystemLocale from "getSystemLocale";
 import { View } from "registerAsset";
 import recountRelationshipTypes from "recountRelationshipTypes";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import jsxProd from "NoResults";
 import createCacheKey from "createCacheKey";
 

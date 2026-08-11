@@ -9,7 +9,7 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { Pagination } from "../../../../../_runtime/10049_Pagination.js";
+import { Pagination } from "../../../../../_runtime/10054_Pagination.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
@@ -131,7 +131,7 @@ function PremiumFeaturesCarousel(arg0) {
   const callback = React.useCallback((nativeEvent) => {
     _undefined2(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
   }, items2);
-  if (!width(1605).isThumbstickScrollDevice) {
+  if (!width(1624).isThumbstickScrollDevice) {
     if (!isScreenReaderEnabled) {
       let tmp17 = callback2;
       obj = { style: null, data: null, renderItem: null, width: null, loop: false, onConfigurePanGesture: null, scrollAnimationDuration: 200, mode: "parallax", modeConfig: null, onSnapToItem: null };
@@ -191,7 +191,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = analyticsLocations(1474);
+  let obj = analyticsLocations(1493);
   const tmp4 = callback(React.useState(obj.getWindowDimensions().width), 2);
   callback = tmp4[1];
   const items = [analyticsLocations, first];

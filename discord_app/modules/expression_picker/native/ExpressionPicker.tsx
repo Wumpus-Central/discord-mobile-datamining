@@ -1,5 +1,5 @@
 // discord_app/modules/expression_picker/native/ExpressionPicker.tsx
-import importAllResult from "module_9933";
+import importAllResult from "module_9938";
 import { View } from "SegmentedControl";
 import ExpressionPickerViewType from "ExpressionPickerViewType";
 import { AnalyticEvents } from "ME";
@@ -67,9 +67,7 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
     pageWidth: 0,
     defaultIndex: tmp4.expressionPickerSelectedIndex,
     onSetActiveIndex(arg0) {
-      let obj = channel(expressionPickerViewType[11]);
-      obj = { type: channel(expressionPickerViewType[12]).KeyboardTypes.EXPRESSION, context: table[arg0] };
-      obj.setKeyboardType(obj);
+      channel(expressionPickerViewType[11]).setKeyboardContext(channel(expressionPickerViewType[12]).KeyboardTypes.EXPRESSION, table[arg0]);
     },
     items: prop.map((id) => ({ id, label: id, page: null }))
   };

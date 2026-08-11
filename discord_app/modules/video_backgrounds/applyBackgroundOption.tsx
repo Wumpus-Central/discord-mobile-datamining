@@ -105,20 +105,20 @@ function _applyBackgroundOption() {
                 if (typeof tmp59 !== "string") {
                   if (typeof tmp59 !== "number") {
                     const asset = tmp59.asset;
-                    let isAnimatedIconHashResult = callback(1416).isAnimatedIconHash(asset);
+                    let isAnimatedIconHashResult = callback(1435).isAnimatedIconHash(asset);
                     if (!isAnimatedIconHashResult) {
-                      let obj3 = callback(1416);
+                      let obj3 = callback(1435);
                       isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
                     }
                     module_38 = isAnimatedIconHashResult;
-                    let obj4 = callback(1416);
+                    let obj4 = callback(1435);
                     const obj1 = { userId: null, assetId: null, assetHash: null, size: null };
                     ({ user_id: obj6[0], id: obj6[1] } = tmp59);
                     obj1[2] = asset;
                     obj1[3] = outer1_6.width;
                     let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
                     source = videoFilterAssetURL;
-                    const obj11 = callback(1416);
+                    const obj11 = callback(1435);
                   }
                   if (null != videoFilterAssetURL) {
                     c7 = 1;
@@ -165,7 +165,7 @@ function _applyBackgroundOption() {
                     }
                   }
                 }
-                const tmp24 = callback2(9166)()[tmp59];
+                const tmp24 = callback2(9172)()[tmp59];
                 const isVideo = tmp24.isVideo;
                 module_38 = isVideo;
                 if (isVideo == null) {

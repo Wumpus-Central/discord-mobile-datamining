@@ -4,7 +4,7 @@ import { create } from "../../../discord_common/js/packages/protos/discord_proto
 
 const require = arg1;
 const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });
-let closure_3 = Object.freeze({ [arg1(1921).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1921).DayOfWeek.MONDAY]: 1, [arg1(1921).DayOfWeek.TUESDAY]: 2, [arg1(1921).DayOfWeek.WEDNESDAY]: 3, [arg1(1921).DayOfWeek.THURSDAY]: 4, [arg1(1921).DayOfWeek.FRIDAY]: 5, [arg1(1921).DayOfWeek.SATURDAY]: 6, [arg1(1921).DayOfWeek.SUNDAY]: 0 });
+let closure_3 = Object.freeze({ [arg1(1940).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1940).DayOfWeek.MONDAY]: 1, [arg1(1940).DayOfWeek.TUESDAY]: 2, [arg1(1940).DayOfWeek.WEDNESDAY]: 3, [arg1(1940).DayOfWeek.THURSDAY]: 4, [arg1(1940).DayOfWeek.FRIDAY]: 5, [arg1(1940).DayOfWeek.SATURDAY]: 6, [arg1(1940).DayOfWeek.SUNDAY]: 0 });
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
   constructor(arg0) {
@@ -70,7 +70,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
           }
           if (sum > sum1) {
             if (closure_0 === create.DayOfWeek.MONDAY) {
-              let SUNDAY = tmp6(1921).DayOfWeek.SUNDAY;
+              let SUNDAY = tmp6(1940).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;
             }

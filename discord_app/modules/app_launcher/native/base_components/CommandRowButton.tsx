@@ -72,13 +72,13 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               dependencyMap();
             }
             let c3 = 1;
-            let obj1 = outer1_0(8338);
+            let obj1 = outer1_0(8343);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             obj1[0] = outer1_0;
-            obj1[1] = outer1_0(11385).parseOptionValuesForSend(outer1_6.channel, outer1_0, {});
+            obj1[1] = outer1_0(11388).parseOptionValuesForSend(outer1_6.channel, outer1_0, {});
             obj1[2] = outer1_6;
             obj1[3] = c4;
-            obj1[4] = outer1_0(6982).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj1[4] = outer1_0(6985).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };

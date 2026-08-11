@@ -1,153 +1,165 @@
 // discord_app/modules/game_community_upsell/native/GuildUpsellChannelList.tsx
+import OneColumnGuildUpsellList from "OneColumnGuildUpsellList";
+import get_ActivityIndicator from "Button";
 import set from "set";
-import { View } from "handleJoinGuild";
-import closure_6 from "set";
+import { MAX_DISPLAYED_UPSELL_GUILDS as closure_8 } from "MAX_DISPLAYED_UPSELL_GUILDS";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 
-let c9;
-let metroImportAll;
+let c10;
+let c5;
+let closure_6;
+let unpackModuleId;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, header: null, headerTitle: null, twoColumnRow: null, listContainer: null, subheaderWrapper: null, createCard: null, descriptionSpacing: null, joinSection: null };
+({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
+({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+createCacheKey = { container: null, header: null, headerTitle: null, listContainer: null, subheaderWrapper: null, createDescription: null, templateScroll: null, templateRow: null, templateCard: null, templateIconWrapper: null, templateTitle: null, buttonGroup: null, descriptionSpacing: null, joinSection: null };
 createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.PANEL_BG };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: require("Themes").space.PX_16 };
 createCacheKey[2] = { flex: 1 };
+createCacheKey[3] = { flex: 1 };
 let obj1 = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: require("Themes").space.PX_16 };
-createCacheKey[3] = { flexDirection: "row", gap: require("Themes").space.PX_16, flex: 1 };
-createCacheKey[4] = { flex: 1 };
-let obj2 = { flexDirection: "row", gap: require("Themes").space.PX_16, flex: 1 };
-createCacheKey[5] = { marginBottom: require("Themes").space.PX_8 };
-let obj3 = { marginBottom: require("Themes").space.PX_8 };
-createCacheKey[6] = { backgroundColor: require("Themes").colors.BG_SURFACE_RAISED, gap: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_24 };
-let obj4 = { backgroundColor: require("Themes").colors.BG_SURFACE_RAISED, gap: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_24 };
-createCacheKey[7] = { marginBottom: require("Themes").space.PX_8 };
-let obj5 = { marginBottom: require("Themes").space.PX_8 };
-createCacheKey[8] = { gap: require("Themes").space.PX_4 };
+createCacheKey[4] = { marginBottom: require("Themes").space.PX_8 };
+let obj2 = { marginBottom: require("Themes").space.PX_8 };
+createCacheKey[5] = { marginTop: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_12 };
+let obj3 = { marginTop: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_12 };
+createCacheKey[6] = { marginHorizontal: -require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_12 };
+let obj4 = { marginHorizontal: -require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_12 };
+createCacheKey[7] = { flexDirection: "row", alignItems: "stretch", gap: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey[8] = { width: 204 };
+let obj5 = { flexDirection: "row", alignItems: "stretch", gap: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey[9] = { alignItems: "center", marginBottom: require("Themes").space.PX_16 };
+let obj6 = { alignItems: "center", marginBottom: require("Themes").space.PX_16 };
+createCacheKey[10] = { marginBottom: require("Themes").space.PX_4 };
+let obj7 = { marginBottom: require("Themes").space.PX_4 };
+createCacheKey[11] = { gap: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_20 };
+const obj8 = { gap: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_20 };
+createCacheKey[12] = { marginBottom: require("Themes").space.PX_8 };
+const obj9 = { marginBottom: require("Themes").space.PX_8 };
+createCacheKey[13] = { gap: require("Themes").space.PX_4 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj6 = { gap: require("Themes").space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
+const obj10 = { gap: require("Themes").space.PX_4 };
+let items = [{ id: "hangout", title: require("getSystemLocale").t.ScXySs, description: require("getSystemLocale").t.DSCqxM, Icon: require("AccountAgeTier10LargeBadge").BumpingFistsSpotIllustration }, , ];
+const obj11 = { id: "hangout", title: require("getSystemLocale").t.ScXySs, description: require("getSystemLocale").t.DSCqxM, Icon: require("AccountAgeTier10LargeBadge").BumpingFistsSpotIllustration };
+items[1] = { id: "gaming", title: require("getSystemLocale").t["F+MTAZ"], description: require("getSystemLocale").t.srNlJw, Icon: require("AccountAgeTier10LargeBadge").ChatControllersSpotIllustration };
+const obj12 = { id: "gaming", title: require("getSystemLocale").t["F+MTAZ"], description: require("getSystemLocale").t.srNlJw, Icon: require("AccountAgeTier10LargeBadge").ChatControllersSpotIllustration };
+items[2] = { id: "hobbies", title: require("getSystemLocale").t["0Ka6B5"], description: require("getSystemLocale").t["5oGAp/"], Icon: require("AccountAgeTier10LargeBadge").MiniaturesSpotIllustration };
+const obj13 = { id: "hobbies", title: require("getSystemLocale").t["0Ka6B5"], description: require("getSystemLocale").t["5oGAp/"], Icon: require("AccountAgeTier10LargeBadge").MiniaturesSpotIllustration };
+let result = require("set").fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 
 export default function GuildUpsellChannelList(style) {
-  style = style.style;
   let _require;
-  let visualVariant;
+  let stateFromStoresArray;
   let callback1;
+  let callback2;
   let youBarTotalHeight;
   const tmp = createCacheKey();
   _require = tmp;
-  const GameCommunityUpsellMultiExperiment = _require(youBarTotalHeight[7]).GameCommunityUpsellMultiExperiment;
-  visualVariant = GameCommunityUpsellMultiExperiment.useConfig({ location: "GuildUpsellChannelList" }).visualVariant;
-  const effect = React.useEffect(() => {
-    let arr = Array.from(store.getLastFetchedGameIds());
-    arr = Array.from(store.getDismissedGuildIds());
-    const mobileGameCommunities = _undefined(youBarTotalHeight[8]).fetchMobileGameCommunities(arr, arr);
+  const GameCommunityAddServerEntryExperiment = _require(callback2[10]).GameCommunityAddServerEntryExperiment;
+  const effect = youBarTotalHeight.useEffect(() => {
+    const mobileGameCommunitiesIfStale = _undefined(callback2[11]).fetchMobileGameCommunitiesIfStale();
   }, []);
-  let obj = _require(youBarTotalHeight[9]);
-  let items = [closure_6];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const presentableUpsellGuilds = outer1_6.getPresentableUpsellGuilds();
-    let num = 20;
-    if ("one-column" === visualVariant) {
-      num = 8;
-    }
-    return presentableUpsellGuilds.slice(0, num);
+  let obj = _require(callback2[12]);
+  let items = [set];
+  stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+    presentableUpsellGuilds = presentableUpsellGuilds.getPresentableUpsellGuilds();
+    return presentableUpsellGuilds.slice(0, closure_8);
   });
-  let items1 = [visualVariant];
-  const callback = React.useCallback((guild_id, game_id) => {
-    let obj = callback1(youBarTotalHeight[8]);
+  const callback = youBarTotalHeight.useCallback((guild_id, game_id) => {
+    let obj = callback1(callback2[11]);
     obj.dismissGuild(guild_id);
-    obj = { game_id, guild_id, variant: visualVariant };
-    visualVariant(youBarTotalHeight[10]).track(outer1_7.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, obj);
-  }, items1);
-  callback1 = React.useCallback(() => {
-    visualVariant(youBarTotalHeight[11]).openCreateGuildModal();
+    obj = { game_id, guild_id };
+    stateFromStoresArray(callback2[13]).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, obj);
   }, []);
-  let items2 = [callback1, , , , ];
-  ({ subheaderWrapper: arr4[1], createCard: arr4[2], descriptionSpacing: arr4[3], joinSection: arr4[4] } = tmp);
-  const memo = React.useMemo(() => {
+  callback1 = youBarTotalHeight.useCallback(() => {
+    stateFromStoresArray(callback2[14]).openCreateGuildModal();
+  }, []);
+  callback2 = youBarTotalHeight.useCallback(() => {
+    const result = stateFromStoresArray(callback2[14]).openGuildJoinServerScreen();
+  }, []);
+  let items1 = [callback1, callback2, stateFromStoresArray.length, tmp];
+  const memo = youBarTotalHeight.useMemo(() => {
     let obj = { style: _undefined.subheaderWrapper, children: null };
-    obj = { style: _undefined.createCard, children: null };
     obj = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-    const intl = _undefined(youBarTotalHeight[14]).intl;
-    obj[2] = intl.string(_undefined(youBarTotalHeight[14]).t.B44MTm);
-    const items = [outer1_8(_undefined(youBarTotalHeight[13]).Text, obj), , ];
-    const obj1 = { variant: "text-sm/medium", color: "text-default", style: _undefined.descriptionSpacing, children: null };
-    const intl2 = _undefined(youBarTotalHeight[14]).intl;
-    obj1[3] = intl2.string(_undefined(youBarTotalHeight[14]).t.l0tmhq);
-    items[1] = outer1_8(_undefined(youBarTotalHeight[13]).Text, obj1);
-    const obj2 = { variant: "primary", size: "sm", text: null, onPress: null, grow: true };
-    const intl3 = _undefined(youBarTotalHeight[14]).intl;
-    obj2[2] = intl3.string(_undefined(youBarTotalHeight[14]).t.CumH4u);
-    obj2[3] = callback1;
-    items[2] = outer1_8(_undefined(youBarTotalHeight[15]).Button, obj2);
+    let intl = _undefined(callback2[8]).intl;
+    obj[2] = intl.string(_undefined(callback2[8]).t["abaDI+"]);
+    let items = [outer1_10(_undefined(callback2[15]).Text, obj), , , , ];
+    obj = { variant: "text-sm/medium", color: "text-subtle", style: _undefined.createDescription, children: null };
+    let intl2 = _undefined(callback2[8]).intl;
+    obj[3] = intl2.string(_undefined(callback2[8]).t.raDC7V);
+    items[1] = outer1_10(_undefined(callback2[15]).Text, obj);
+    items[2] = outer1_10(outer1_5, {
+      horizontal: true,
+      showsHorizontalScrollIndicator: false,
+      style: _undefined.templateScroll,
+      contentContainerStyle: _undefined.templateRow,
+      children: outer1_13.map((Icon) => {
+        let obj = { onPress: closure_2, radius: 16, style: closure_0.templateCard, children: null };
+        obj = { style: closure_0.templateIconWrapper, children: null };
+        obj[1] = outer1_10(Icon.Icon, { width: 114, height: 64 });
+        const items = [outer1_10(outer1_6, obj), ];
+        obj = { children: null };
+        const obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", style: closure_0.templateTitle, children: null };
+        const intl = outer1_0(outer1_3[8]).intl;
+        obj1[3] = intl.string(Icon.title);
+        const items1 = [outer1_10(outer1_0(outer1_3[15]).Text, obj1), ];
+        const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+        const intl2 = outer1_0(outer1_3[8]).intl;
+        obj2[2] = intl2.string(Icon.description);
+        items1[1] = outer1_10(outer1_0(outer1_3[15]).Text, obj2);
+        obj[0] = items1;
+        items[1] = outer1_11(outer1_6, obj);
+        obj[3] = items;
+        return outer1_11(outer1_0(outer1_3[16]).Card, obj, Icon.id);
+      })
+    });
+    let obj2 = { style: _undefined.buttonGroup, children: null };
+    const obj3 = { variant: "primary", size: "md", text: null, onPress: null, grow: true };
+    const intl3 = _undefined(callback2[8]).intl;
+    obj3[2] = intl3.string(_undefined(callback2[8]).t.B44MTm);
+    obj3[3] = callback1;
+    let items1 = [outer1_10(_undefined(callback2[17]).Button, obj3), ];
+    const obj4 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
+    const intl4 = _undefined(callback2[8]).intl;
+    obj4[2] = intl4.string(_undefined(callback2[8]).t.wKy7MA);
+    obj4[3] = callback2;
+    items1[1] = outer1_10(_undefined(callback2[17]).Button, obj4);
+    obj2[1] = items1;
+    items[3] = outer1_11(outer1_6, obj2);
+    let tmpResult = stateFromStoresArray.length > 0;
+    if (tmpResult) {
+      const obj5 = { style: null, children: null };
+      obj5[0] = tmp3.joinSection;
+      const obj6 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+      const intl5 = tmp5(tmp6[8]).intl;
+      obj6[2] = intl5.string(tmp5(tmp6[8]).t.rJRote);
+      const items2 = [tmp4(tmp5(tmp6[15]).Text, obj6), ];
+      const obj7 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
+      obj7[2] = tmp3.descriptionSpacing;
+      const intl6 = tmp5(tmp6[8]).intl;
+      obj7[3] = intl6.string(tmp5(tmp6[8]).t.pJT2DK);
+      items2[1] = tmp4(tmp5(tmp6[15]).Text, obj7);
+      obj5[1] = items2;
+      tmpResult = tmp(tmp2, obj5);
+    }
+    items[4] = tmpResult;
     obj[1] = items;
-    const items1 = [outer1_9(_undefined(youBarTotalHeight[12]).Card, obj), ];
-    const obj3 = { style: _undefined.joinSection, children: null };
-    const obj4 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-    const intl4 = _undefined(youBarTotalHeight[14]).intl;
-    obj4[2] = intl4.string(_undefined(youBarTotalHeight[14]).t.rJRote);
-    const items2 = [outer1_8(_undefined(youBarTotalHeight[13]).Text, obj4), ];
-    const obj5 = { variant: "text-sm/medium", color: "text-subtle", style: _undefined.descriptionSpacing, children: null };
-    const intl5 = _undefined(youBarTotalHeight[14]).intl;
-    obj5[3] = intl5.string(_undefined(youBarTotalHeight[14]).t.pJT2DK);
-    items2[1] = outer1_8(_undefined(youBarTotalHeight[13]).Text, obj5);
-    obj3[1] = items2;
-    items1[1] = outer1_9(outer1_5, obj3);
-    obj[1] = items1;
-    return outer1_9(outer1_5, obj);
-  }, items2);
-  let obj1 = _require(youBarTotalHeight[16]);
+    return outer1_11(outer1_6, obj);
+  }, items1);
+  let obj1 = _require(callback2[18]);
   youBarTotalHeight = obj1.useYouBarTotalHeight();
-  const items3 = [youBarTotalHeight];
-  const memo1 = React.useMemo(() => ({ paddingHorizontal: visualVariant(youBarTotalHeight[6]).space.PX_16, paddingBottom: visualVariant(youBarTotalHeight[6]).space.PX_16 + youBarTotalHeight }), items3);
-  if (0 === stateFromStoresArray.length) {
-    obj = { style: null, children: null };
-    const items4 = [tmp.container, style];
-    obj[0] = items4;
-    obj[1] = callback(tmp2(tmp3[17]).GuildsEmptyContent, {});
-    let tmp15Result = callback(View, obj);
-  } else {
-    obj = { style: null, children: null };
-    const items5 = [tmp.container, style];
-    obj[0] = items5;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.header;
-    let obj2 = { style: null, color: "mobile-text-heading-primary", variant: "heading-lg/bold", children: null };
-    obj2[0] = tmp.headerTitle;
-    let intl = tmp2(tmp3[14]).intl;
-    obj2[3] = intl.string(tmp2(tmp3[14]).t["7hB4kg"]);
-    obj1[1] = callback(tmp2(tmp3[13]).Text, obj2);
-    const items6 = [callback(View, obj1), ];
-    let obj3 = { style: null, children: null };
-    obj3[0] = tmp.listContainer;
-    let tmp17Result = null;
-    if ("one-column" === visualVariant) {
-      let obj4 = { suggestedGuilds: null, contentContainerStyle: null, onDismiss: null, subheader: null };
-      obj4[0] = stateFromStoresArray;
-      obj4[1] = memo1;
-      obj4[2] = callback;
-      obj4[3] = memo;
-      tmp17Result = tmp17(tmp2(tmp3[18]).OneColumnGuildUpsellList, obj4);
-    }
-    const items7 = [tmp17Result, ];
-    tmp17Result = null;
-    if ("two-column" === visualVariant) {
-      let obj5 = { suggestedGuilds: null, contentContainerStyle: null, rowStyle: null, onDismiss: null, subheader: null };
-      obj5[0] = stateFromStoresArray;
-      obj5[1] = memo1;
-      obj5[2] = tmp.twoColumnRow;
-      obj5[3] = callback;
-      obj5[4] = memo;
-      tmp17Result = tmp17(tmp2(tmp3[18]).TwoColumnGuildUpsellList, obj5);
-    }
-    items7[1] = tmp17Result;
-    obj3[1] = items7;
-    items6[1] = closure_9(View, obj3);
-    obj[1] = items6;
-    tmp15Result = tmp15(tmp16, obj);
-  }
-  return tmp15Result;
+  let items2 = [youBarTotalHeight];
+  obj = { style: items3, children: null };
+  items3 = [tmp.container, style.style];
+  obj = { style: tmp.header, children: null };
+  const memo1 = youBarTotalHeight.useMemo(() => ({ paddingHorizontal: stateFromStoresArray(callback2[7]).space.PX_16, paddingBottom: stateFromStoresArray(callback2[7]).space.PX_16 + youBarTotalHeight }), items2);
+  obj1 = { style: tmp.headerTitle, color: "mobile-text-heading-primary", variant: "heading-lg/bold", children: null };
+  let intl = _require(callback2[8]).intl;
+  obj1[3] = intl.string(_require(callback2[8]).t["7hB4kg"]);
+  obj[1] = callback(_require(callback2[15]).Text, obj1);
+  const items4 = [callback(closure_6, obj), callback(closure_6, { style: tmp.listContainer, children: callback(_require(callback2[19]).OneColumnGuildUpsellList, { suggestedGuilds: stateFromStoresArray, contentContainerStyle: memo1, cardAction: GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildUpsellChannelList" }).cardAction, onDismiss: callback, subheader: memo }) })];
+  obj[1] = items4;
+  return callback2(closure_6, obj);
 };

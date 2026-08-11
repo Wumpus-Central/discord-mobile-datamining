@@ -90,7 +90,7 @@ function RegisterIdentityBase(inputMode) {
               obj1[1] = outer1_13.SUBMITTED;
               outer1_9(obj1);
               if (outer1_0 === outer1_0(outer1_2[18]).PhoneOrEmailSelectorForceMode.EMAIL) {
-                const obj2 = { email: null, phoneToken: "Array" };
+                const obj2 = { email: null, phoneToken: "a" };
                 obj2[0] = c4;
                 outer1_10(obj2);
                 const tmp26 = outer1_7();
@@ -166,19 +166,19 @@ function RegisterIdentityBase(inputMode) {
   ({ headerText, controlComponent, subheader } = inputMode);
   let obj = inputMode(4720);
   const tmp2 = callback4(45 * Math.min(2, obj.useFontScale()));
-  let obj1 = inputMode(1480);
+  let obj1 = inputMode(1499);
   dependencyMap = obj1.useNavigation();
   const tmp5 = callback2((errors) => errors.errors);
   c3 = tmp5;
-  let obj2 = inputMode(15093);
+  let obj2 = inputMode(15102);
   const identityRegistrationStep = obj2.useIdentityRegistrationStep(inputMode(691).AuthStates.REGISTER_IDENTITY, inputMode);
   loginEmail = identityRegistrationStep.loginEmail;
   identityErrorMessage = identityRegistrationStep.identityErrorMessage;
   ({ registerAndVerifyPhone: c6, validateEmail: c7 } = identityRegistrationStep);
   ({ setLoginEmail, loginPhone, updateLoginPhone, preventSubmitIdentity, identityError } = identityRegistrationStep);
-  const tmp4 = setInputMode(8472)();
+  const tmp4 = setInputMode(8478)();
   [tmp8, c8] = loginEmail(identityErrorMessage.useState(false), 2);
-  closure_9 = identityErrorMessage.useContext(inputMode(15081).TrackRegistrationContext);
+  closure_9 = identityErrorMessage.useContext(inputMode(15090).TrackRegistrationContext);
   let items = [tmp5.message, identityErrorMessage];
   const memo = identityErrorMessage.useMemo(() => {
     let message = identityErrorMessage;
@@ -188,18 +188,18 @@ function RegisterIdentityBase(inputMode) {
     return message;
   }, items);
   const tmp7 = loginEmail(identityErrorMessage.useState(false), 2);
-  setInputMode(15098)(inputMode(691).AuthStates.REGISTER_IDENTITY);
-  const tmp10 = setInputMode(15098);
-  let obj3 = inputMode(15082);
-  setInputMode(15099)(obj3.getPreviousRegistrationTransitionStep(inputMode(691).AuthStates.REGISTER_IDENTITY));
+  setInputMode(15107)(inputMode(691).AuthStates.REGISTER_IDENTITY);
+  const tmp10 = setInputMode(15107);
+  let obj3 = inputMode(15091);
+  setInputMode(15108)(obj3.getPreviousRegistrationTransitionStep(inputMode(691).AuthStates.REGISTER_IDENTITY));
   setInputMode(4730)(() => {
     callback({ step: outer1_12.ACCOUNT_IDENTITY, actionType: outer1_13.VIEWED });
   });
   obj = { headerText, subHeader: subheader, children: null };
   obj = { style: tmp2.container, contentContainerStyle: tmp2.scrollContent, keyboardShouldPersistTaps: "handled", children: null };
   const items1 = [controlComponent, , , ];
-  const tmp12 = setInputMode(15099);
-  items1[1] = callback3(inputMode(15100).RegisterPhoneOrEmailInput, { loginPhone, loginEmail, setLoginPhone: updateLoginPhone, setLoginEmail, inputMode, onSubmit: handleSubmit, inputError: identityError, autoFocus: true });
+  const tmp12 = setInputMode(15108);
+  items1[1] = callback3(inputMode(15109).RegisterPhoneOrEmailInput, { loginPhone, loginEmail, setLoginPhone: updateLoginPhone, setLoginEmail, inputMode, onSubmit: handleSubmit, inputError: identityError, autoFocus: true });
   obj1 = { style: tmp2.button, children: null };
   obj2 = { loading: tmp8, size: "lg", text: null, onPress: null, disabled: null };
   const intl = inputMode(1236).intl;
@@ -215,13 +215,13 @@ function RegisterIdentityBase(inputMode) {
       obj3 = { style: null, children: null };
       obj3[0] = tmp2.errors;
       obj3[1] = memo;
-      tmp15Result = tmp15(tmp3(8469), obj3);
+      tmp15Result = tmp15(tmp3(8475), obj3);
     }
   }
   items1[3] = tmp15Result;
   obj[3] = items1;
   obj[2] = closure_15(c7, obj);
-  tmp15Result = tmp15(setInputMode(8499), obj);
+  tmp15Result = tmp15(setInputMode(8505), obj);
   let tmp15Result1 = tmp15Result;
   if (!tmp4) {
     let obj4 = { style: null, children: null };
@@ -243,11 +243,11 @@ let result = require("noop").fileFinishedImporting("modules/auth/native/componen
 
 export const RegisterIdentity = function RegisterIdentity() {
   let obj = hasItem(4720);
-  let obj1 = hasItem(15102);
+  let obj1 = hasItem(15111);
   const deviceCountry = obj1.getDeviceCountry();
   hasItem = null != deviceCountry;
   if (hasItem) {
-    const EMAIL_FIRST_COUNTRIES = tmp(15103).EMAIL_FIRST_COUNTRIES;
+    const EMAIL_FIRST_COUNTRIES = tmp(15112).EMAIL_FIRST_COUNTRIES;
     hasItem = EMAIL_FIRST_COUNTRIES.has(deviceCountry);
   }
   let items = [hasItem];
@@ -296,7 +296,7 @@ export const RegisterIdentity = function RegisterIdentity() {
       return obj;
     })
   };
-  const segmentedControlState = hasItem(8956).useSegmentedControlState(obj);
+  const segmentedControlState = hasItem(8962).useSegmentedControlState(obj);
   const items2 = [segmentedControlState, memo];
   obj = {
     inputMode: tmp6[0],
@@ -310,7 +310,7 @@ export const RegisterIdentity = function RegisterIdentity() {
     controlComponent: null,
     headerText: null
   };
-  obj1 = { style: tmp3.segmentedControl, children: callback3(tmp(9141).SegmentedControl, { state: segmentedControlState, keyboardShouldPersistTaps: "handled" }) };
+  obj1 = { style: tmp3.segmentedControl, children: callback3(tmp(9147).SegmentedControl, { state: segmentedControlState, keyboardShouldPersistTaps: "handled" }) };
   obj[2] = callback3(closure_6, obj1);
   let intl = tmp(1236).intl;
   obj[3] = intl.string(hasItem(1236).t.WEdDgv);

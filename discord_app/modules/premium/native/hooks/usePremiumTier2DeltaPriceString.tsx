@@ -13,7 +13,7 @@ function getViewerProductId(subscription) {
     try {
       const productIdFromSubscription = getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
       try {
-        const productIdFromSubscription1 = tmp3(6871).getProductIdFromSubscription(subscription, true);
+        const productIdFromSubscription1 = tmp3(6873).getProductIdFromSubscription(subscription, true);
         const tmp8 = tmp3(5861).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
         const tmp10 = tmp3(5861).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
         if (null != tmp8) {
@@ -25,7 +25,7 @@ function getViewerProductId(subscription) {
           }
         }
         tmp11 = productIdFromSubscription;
-        const tmp3Result = tmp3(6871);
+        const tmp3Result = tmp3(6873);
       } catch (err) {
         return tmp2;
       }

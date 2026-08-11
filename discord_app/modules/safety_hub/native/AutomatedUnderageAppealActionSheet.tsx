@@ -63,7 +63,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   let obj1 = onClose(589);
   const items1 = [callback1];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => callback1.getIsLoadingAgeVerification());
-  const bottom = classificationId(1609)().bottom;
+  const bottom = classificationId(1628)().bottom;
   const items2 = [onClose];
   callback = stateFromStores.useCallback(() => {
     if (onClose != null) {

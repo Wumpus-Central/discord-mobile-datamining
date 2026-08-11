@@ -33,7 +33,7 @@ export default function GuildScheduledEventPreview(event) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const tmp2Result = tmp2(4151);
+    const tmp2Result = tmp2(4152);
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj[0] = tmp.title;
     const intl = tmp2(1236).intl;
@@ -42,14 +42,14 @@ export default function GuildScheduledEventPreview(event) {
     const obj1 = { style: null, children: null };
     const items2 = [tmp.itemContainer, ];
     const obj2 = { borderColor: null };
-    obj2[0] = tmp2(4151).hexWithOpacity(tmp.borderColor.color, 0.08);
+    obj2[0] = tmp2(4152).hexWithOpacity(tmp.borderColor.color, 0.08);
     items2[1] = obj2;
     obj1[0] = items2;
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.guildInfo;
     const obj4 = { guild: null, size: null, selected: false };
     obj4[0] = stateFromStores;
-    const hexWithOpacityResult = tmp2(4151).hexWithOpacity(tmp.borderColor.color, 0.08);
+    const hexWithOpacityResult = tmp2(4152).hexWithOpacity(tmp.borderColor.color, 0.08);
     obj4[1] = tmp2(5779).GuildIconSizes.XXSMALL;
     const items3 = [callback(GuildIconSizes, obj4), ];
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };

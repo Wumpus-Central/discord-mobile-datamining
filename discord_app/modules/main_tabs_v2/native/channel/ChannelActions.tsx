@@ -276,12 +276,12 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  let obj1 = channelId(8403);
+  let obj1 = channelId(8409);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(12541).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(12545).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

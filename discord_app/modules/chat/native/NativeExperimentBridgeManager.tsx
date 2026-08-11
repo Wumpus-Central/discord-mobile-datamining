@@ -27,7 +27,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(16905);
+        let tmpResult = tmp(16917);
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }

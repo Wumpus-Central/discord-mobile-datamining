@@ -18,12 +18,12 @@ let items = [require("computeGuildsBarCutout")({ position: "bottom-right" })];
 const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp4 = callback();
-  let obj = restrictedGuild(15417);
+  let obj = restrictedGuild(15434);
   let animatableSourceWithFallback = null;
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("GuildsBarGeoRestrictedGuild");
   const tmp5 = restrictedGuild;
   if (null != restrictedGuild.icon) {
-    let tmpResult = tmp(1416);
+    let tmpResult = tmp(1435);
     animatableSourceWithFallback = tmpResult.getAnimatableSourceWithFallback(false, (arg0) => {
       let obj = outer1_1(outer1_2[8]);
       obj = { id: restrictedGuild.id, size: null, icon: null, canAnimate: null };
@@ -53,7 +53,7 @@ const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(res
     }
   }), items);
   obj = { selected: false, unread: false, circle: !tmp3, styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 1, expandedChildren: 2, children: 4 };
-  tmpResult = tmp(15417);
+  tmpResult = tmp(15434);
   obj = { style: tmp4.geoRestrictedBadge };
   obj[9] = jsx(GuildsBarGeoRestrictedBadge, { style: tmp4.geoRestrictedBadge });
   obj[10] = jsx(GuildRowWrapper, { guildId: restrictedGuild.id });

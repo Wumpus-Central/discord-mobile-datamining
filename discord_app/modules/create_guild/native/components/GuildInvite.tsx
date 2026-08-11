@@ -258,8 +258,8 @@ export default function GuildInvite(closeOnEditInviteLink) {
         obj[2] = tmp24;
         tmp27 = callback(GuildInviteSuggestionRows, obj);
       }
-      obj = { top: true, style: null, children: null };
-      obj[1] = tmp.container;
+      obj = { top: true, left: true, right: true, style: null, children: null };
+      obj[3] = tmp.container;
       obj1 = { ref: null, style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
       obj1[0] = ref;
       obj1[1] = tmp.header;
@@ -323,7 +323,7 @@ export default function GuildInvite(closeOnEditInviteLink) {
       obj4[1] = items10;
       items8[3] = closure_20(closure_6, obj4);
       items8[4] = tmp27;
-      obj[2] = items8;
+      obj[4] = items8;
       return closure_20(tmp2(tmp3[31]).SafeAreaPaddingView, obj);
     }
   }

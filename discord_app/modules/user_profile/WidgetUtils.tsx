@@ -397,8 +397,8 @@ export const updatePendingGameTags = function updatePendingGameTags(widgetType, 
         obj.games = mapped;
         const baseGameWidget = new _items.BaseGameWidget(obj);
         const tmp21 = replaceWidgetInList(baseGameWidget);
-        obj(7087).setPendingWidgets(tmp21);
-        const obj3 = obj(7087);
+        obj(7090).setPendingWidgets(tmp21);
+        const obj3 = obj(7090);
       }
     }
   }
@@ -440,10 +440,10 @@ export const removeTagFromGame = function removeTagFromGame(widgetType) {
                 obj = {};
                 const merged1 = Object.assign(tmpResult);
                 obj.games = mapped;
-                const baseGameWidget = new tmp4(7082).BaseGameWidget(obj);
+                const baseGameWidget = new tmp4(7085).BaseGameWidget(obj);
                 const tmp22 = replaceWidgetInList(baseGameWidget);
-                obj(7087).setPendingWidgets(tmp22);
-                const obj3 = obj(7087);
+                obj(7090).setPendingWidgets(tmp22);
+                const obj3 = obj(7090);
               }
             }
           }
@@ -477,8 +477,8 @@ export const updatePendingGameComment = function updatePendingGameComment(widget
         obj.games = mapped;
         const baseGameWidget = new _items.BaseGameWidget(obj);
         const tmp19 = replaceWidgetInList(baseGameWidget);
-        obj(7087).setPendingWidgets(tmp19);
-        const obj3 = obj(7087);
+        obj(7090).setPendingWidgets(tmp19);
+        const obj3 = obj(7090);
       }
     }
   }
@@ -531,11 +531,11 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   obj = {};
   const merged = Object.assign(tmp8);
   obj.games = items1;
-  const baseGameWidget = new tmp2(7082).BaseGameWidget(obj);
+  const baseGameWidget = new tmp2(7085).BaseGameWidget(obj);
   const tmp7 = replaceWidgetInList;
   const tmp7Result = replaceWidgetInList(baseGameWidget);
   WidgetActionCreators.setPendingWidgets(tmp7Result);
-  const useGame = tmp2(7092).useGame;
+  const useGame = tmp2(5926).useGame;
   const items2 = [game.gameId];
   const many = useGame.fetchMany(items2);
 };

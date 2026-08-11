@@ -24,23 +24,26 @@ export default function CutoutableAvatarDecoration(size) {
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [animate, size, avatarDecoration, decorationStyle, stateFromStores];
   const memo = animate.useMemo(() => {
-    let tmp = animate;
-    if (animate) {
-      tmp = !stateFromStores;
+    let tmp2 = true === animate;
+    if (tmp2) {
+      tmp2 = !stateFromStores;
     }
-    if (tmp) {
-      tmp = null != avatarDecoration;
+    if (!tmp2) {
+      tmp2 = "always" === animate;
+    }
+    if (tmp2) {
+      tmp2 = null != avatarDecoration;
     }
     let obj = size(decorationStyle[5]);
-    obj = { avatarDecoration, canAnimate: tmp, size };
+    obj = { avatarDecoration, canAnimate: tmp2, size };
     const avatarDecorationURL = obj.getAvatarDecorationURL(obj);
-    obj = { avatarDecorationUrl: avatarDecorationURL, sizeStyle: obj1, style: items, shouldAnimate: tmp, source: null };
+    obj = { avatarDecorationUrl: avatarDecorationURL, sizeStyle: obj1, style: items, shouldAnimate: tmp2, source: null };
     items = [{ width: size, height: size }, decorationStyle];
-    let str = avatarDecorationURL;
+    let str2 = avatarDecorationURL;
     if (avatarDecorationURL == null) {
-      str = "";
+      str2 = "";
     }
-    obj[4] = { uri: str };
+    obj[4] = { uri: str2 };
     return obj;
   }, items1);
   ({ avatarDecorationUrl, style, sizeStyle, source } = memo);

@@ -20,11 +20,11 @@ function ApplicationStatusIcon(status) {
     obj[1] = Themes.colors.STATUS_POSITIVE_BACKGROUND;
     obj[2] = Themes.colors.STATUS_POSITIVE_TEXT;
     return callback(tmp(4264).CircleCheckIcon, obj);
-  } else if (tmp(4127).GuildJoinRequestApplicationStatuses.REJECTED === status) {
+  } else if (tmp(4129).GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = Themes.colors.ICON_FEEDBACK_CRITICAL;
     obj[2] = Themes.colors.WHITE;
-    return callback(tmp(5996).CircleXIcon, obj);
+    return callback(tmp(5998).CircleXIcon, obj);
   } else {
     return null;
   }

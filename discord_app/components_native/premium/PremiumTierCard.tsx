@@ -49,11 +49,11 @@ export default function _default(children) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp2Result = tmp2(12839);
+    let tmp2Result = tmp2(12843);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(12840);
+    tmp2Result = tmp2(12844);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7390);
+    tmp2Result = tmp2(7392);
   }
   obj[4] = tmp2Result;
   obj[4] = closure_7(closure_4, obj);
@@ -69,11 +69,11 @@ export default function _default(children) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp2Result = tmp2(7329);
-  } else if (tmp11.TIER_1 === premiumType) {
     tmp2Result = tmp2(7330);
+  } else if (tmp11.TIER_1 === premiumType) {
+    tmp2Result = tmp2(7331);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7385);
+    tmp2Result = tmp2(7387);
   }
   obj[3] = tmp2Result;
   items[1] = closure_7(closure_4, obj);

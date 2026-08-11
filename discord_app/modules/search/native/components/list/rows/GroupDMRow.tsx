@@ -20,9 +20,9 @@ export default function GroupDMRow(channel) {
   let obj = { size: null, channel: null };
   obj[0] = channel(1297).AvatarSizes.LARGE_48;
   obj[1] = channel;
-  const tmp4 = onPress(9663);
-  const tmp6 = jsx(onPress(9663), { size: null, channel: null });
-  const recipientsLabel = channel(9664).useRecipientsLabel(channel);
+  const tmp4 = onPress(9668);
+  const tmp6 = jsx(onPress(9668), { size: null, channel: null });
+  const recipientsLabel = channel(9669).useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
@@ -42,5 +42,5 @@ export default function GroupDMRow(channel) {
   obj[5] = trailing;
   obj[6] = accessibilityActions;
   obj[7] = onAccessibilityAction;
-  return jsx(channel(15735).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
+  return jsx(channel(15752).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
 };

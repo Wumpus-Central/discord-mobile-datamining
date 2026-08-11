@@ -58,7 +58,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
     hairlineWidth1 = tmp6.hairlineWidth;
   }
   container.borderLeftWidth = hairlineWidth1;
-  const APP_LAUNCHER = tmp(1607).KeyboardTypes.APP_LAUNCHER;
+  const APP_LAUNCHER = tmp(1626).KeyboardTypes.APP_LAUNCHER;
   container.backgroundColor = Themes.colors.BACKGROUND_BASE_LOW;
   let tmpResult = tmp(500);
   if (tmpResult.isIOS()) {

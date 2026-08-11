@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
@@ -198,7 +198,7 @@ function handleReaction(channelId) {
       } else {
         return false;
       }
-      obj = messageId(3940);
+      obj = messageId(3959);
     }
   }
 }
@@ -292,7 +292,7 @@ class ConversationsStore extends Store {
 }
 const prototype = ConversationsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded, initialize, upsertRelationship, handleConnectionOpen, mergeGuildAvatar);
+  this.waitFor(fetchFingerprint, ensureGuildLoaded, initialize, markAllUserIdListsStale, handleConnectionOpen, mergeGuildAvatar);
 };
 prototype["hasChannelData"] = function hasChannelData(id) {
   return tmp3.has(id);
@@ -570,8 +570,8 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7058).mapConversation);
-      const found = mapped.filter(set(1351).isNotNullish);
+      const mapped = rawConversations.map(set(7061).mapConversation);
+      const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = tmp3.peek(channelId);
       if (isJump) {
         let prop;
@@ -1344,6 +1344,6 @@ obj = {
 };
 const conversationsStore = new ConversationsStore(require("dispatcher"), obj);
 let tmp3 = new require("priv")(obj);
-let result = require("upsertRelationship").fileFinishedImporting("modules/conversations/ConversationsStore.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/conversations/ConversationsStore.tsx");
 
 export default conversationsStore;

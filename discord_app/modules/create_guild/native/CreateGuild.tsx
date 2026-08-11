@@ -76,7 +76,7 @@ export default function CreateGuild(arg0) {
   }
   obj1[3] = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4299).Text, obj1);
-  items1[2] = closure_7(ref(11197), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[2] = closure_7(ref(11202), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj3 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1236).intl;
   obj3[1] = intl3.string(isScreenReaderEnabled(1236).t.dBih7e);
@@ -92,7 +92,7 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj3[5] = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(7790).TextInput, obj3);
+  items1[3] = closure_7(isScreenReaderEnabled(7792).TextInput, obj3);
   if (tmp9Result) {
     const obj4 = { onValueChange: null, value: null, start: true, end: true, label: "Staff Only", subLabel: null };
     obj4[0] = onStaffOnlyChange;
@@ -139,8 +139,8 @@ export default function CreateGuild(arg0) {
         }
         const obj8 = { children: null };
         obj8[0] = message2;
-        tmp9Result = tmp9(ref(8469), obj8);
-        const tmp12Result = ref(8469);
+        tmp9Result = tmp9(ref(8475), obj8);
+        const tmp12Result = ref(8475);
       }
     }
   }

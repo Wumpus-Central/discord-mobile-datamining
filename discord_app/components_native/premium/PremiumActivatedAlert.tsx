@@ -27,19 +27,19 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
     let obj = { headerImage: null };
     obj[0] = { marginLeft: -27, width: 88, top: 18 };
     return obj;
-  } else if (tmp(3947).Branding.TIER_1 === arg0) {
+  } else if (tmp(3966).Branding.TIER_1 === arg0) {
     obj = { headerImage: null };
     obj[0] = { marginLeft: -27, width: 87, top: 18 };
     return obj;
-  } else if (tmp(3947).Branding.BUNDLE === arg0) {
+  } else if (tmp(3966).Branding.BUNDLE === arg0) {
     const obj1 = { headerImage: null };
     obj1[0] = { marginLeft: -29.5, width: 91, top: 18 };
     return obj1;
-  } else if (tmp(3947).Branding.TIER_2 === arg0) {
+  } else if (tmp(3966).Branding.TIER_2 === arg0) {
     const obj2 = { headerImage: null };
     obj2[0] = { marginLeft: -58, width: 122, height: 90, top: 18 };
     return obj2;
-  } else if (tmp(3947).Branding.PREMIUM_GUILD === arg0) {
+  } else if (tmp(3966).Branding.PREMIUM_GUILD === arg0) {
     obj = { headerImage: null };
     obj[0] = { marginLeft: -54, width: 140, top: 18 };
     return obj;
@@ -51,10 +51,10 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     obj[0] = { borderRadius: 6 };
     return obj;
   } else {
-    if (tmp(3947).Branding.TIER_0 !== arg0) {
-      if (tmp(3947).Branding.TIER_1 !== arg0) {
-        if (tmp(3947).Branding.TIER_2 !== arg0) {
-          if (tmp(3947).Branding.PREMIUM_GUILD === arg0) {
+    if (tmp(3966).Branding.TIER_0 !== arg0) {
+      if (tmp(3966).Branding.TIER_1 !== arg0) {
+        if (tmp(3966).Branding.TIER_2 !== arg0) {
+          if (tmp(3966).Branding.PREMIUM_GUILD === arg0) {
             obj = { animation: null };
             obj[0] = { borderRadius: 9 };
             return obj;
@@ -93,14 +93,14 @@ export default function PremiumActivatedAlert(onClose) {
     obj = { logo: null };
     obj[0] = { width: 82, height: 44 };
     let tmp9 = obj;
-  } else if (tmp7(3947).Branding.TIER_1 === premiumBranding) {
+  } else if (tmp7(3966).Branding.TIER_1 === premiumBranding) {
     obj = { logo: null };
     obj[0] = { width: 82, height: 32 };
     tmp9 = obj;
   } else {
-    if (tmp7(3947).Branding.BUNDLE !== premiumBranding) {
-      if (tmp7(3947).Branding.TIER_2 !== premiumBranding) {
-        if (tmp7(3947).Branding.PREMIUM_GUILD === premiumBranding) {
+    if (tmp7(3966).Branding.BUNDLE !== premiumBranding) {
+      if (tmp7(3966).Branding.TIER_2 !== premiumBranding) {
+        if (tmp7(3966).Branding.PREMIUM_GUILD === premiumBranding) {
           const obj1 = { logo: null };
           obj1[0] = { width: 82, height: 18 };
           tmp9 = obj1;
@@ -119,50 +119,50 @@ export default function PremiumActivatedAlert(onClose) {
   obj3[2] = tmp.alert;
   const obj4 = { style: tmp.header, source: null, children: null };
   if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
-    tmp4Result = tmp4(7380);
-  } else if (tmp7(3947).Branding.TIER_1 === premiumBranding) {
-    tmp4Result = tmp4(7381);
-  } else if (tmp7(3947).Branding.TIER_2 === premiumBranding) {
     tmp4Result = tmp4(7382);
-  } else if (tmp7(3947).Branding.BUNDLE === premiumBranding) {
+  } else if (tmp7(3966).Branding.TIER_1 === premiumBranding) {
     tmp4Result = tmp4(7383);
-  } else if (tmp7(3947).Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (tmp7(3966).Branding.TIER_2 === premiumBranding) {
     tmp4Result = tmp4(7384);
+  } else if (tmp7(3966).Branding.BUNDLE === premiumBranding) {
+    tmp4Result = tmp4(7385);
+  } else if (tmp7(3966).Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result = tmp4(7386);
   }
   obj4[1] = tmp4Result;
   if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result1 = tmp4(7388);
-  } else if (tmp7(3947).Branding.TIER_1 === premiumBranding) {
-    tmp4Result1 = tmp4(7389);
+    let tmp4Result1 = tmp4(7390);
+  } else if (tmp7(3966).Branding.TIER_1 === premiumBranding) {
+    tmp4Result1 = tmp4(7391);
   } else {
-    if (tmp7(3947).Branding.BUNDLE !== premiumBranding) {
-      if (tmp7(3947).Branding.TIER_2 !== premiumBranding) {
-        if (tmp7(3947).Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result1 = tmp4(7391);
+    if (tmp7(3966).Branding.BUNDLE !== premiumBranding) {
+      if (tmp7(3966).Branding.TIER_2 !== premiumBranding) {
+        if (tmp7(3966).Branding.PREMIUM_GUILD === premiumBranding) {
+          tmp4Result1 = tmp4(7393);
         }
       }
     }
-    tmp4Result1 = tmp4(7390);
+    tmp4Result1 = tmp4(7392);
   }
   const items = [closure_7(closure_3, { source: tmp4Result1, style: tmp9.logo }), , ];
   let tmp16Result = null;
   if (premiumBranding === getPremiumPlanItem.Branding.BUNDLE) {
     const obj6 = { source: null, style: null };
-    obj6[0] = tmp4(7401);
+    obj6[0] = tmp4(7403);
     obj6[1] = tmp.logoPlusPremiumGuild;
     tmp16Result = tmp16(tmp17, obj6);
   }
   items[1] = tmp16Result;
   if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result2 = tmp4(7329);
-  } else if (tmp7(3947).Branding.TIER_1 === premiumBranding) {
-    tmp4Result2 = tmp4(7330);
-  } else if (tmp7(3947).Branding.TIER_2 === premiumBranding) {
-    tmp4Result2 = tmp4(7385);
-  } else if (tmp7(3947).Branding.BUNDLE === premiumBranding) {
-    tmp4Result2 = tmp4(7386);
-  } else if (tmp7(3947).Branding.PREMIUM_GUILD === premiumBranding) {
+    let tmp4Result2 = tmp4(7330);
+  } else if (tmp7(3966).Branding.TIER_1 === premiumBranding) {
+    tmp4Result2 = tmp4(7331);
+  } else if (tmp7(3966).Branding.TIER_2 === premiumBranding) {
     tmp4Result2 = tmp4(7387);
+  } else if (tmp7(3966).Branding.BUNDLE === premiumBranding) {
+    tmp4Result2 = tmp4(7388);
+  } else if (tmp7(3966).Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result2 = tmp4(7389);
   }
   const items1 = [tmp10.headerImage, tmp.headerImage];
   items[2] = closure_7(closure_3, { source: tmp4Result2, style: items1 });
@@ -174,39 +174,39 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp14 = closure_4;
   const tmp21 = closure_5;
   if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
-    let tmp7Result = tmp7(4153);
+    let tmp7Result = tmp7(1363);
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result4 = tmp4(7392);
+      let tmp4Result4 = tmp4(7394);
     } else {
-      tmp4Result4 = tmp4(7393);
+      tmp4Result4 = tmp4(7395);
     }
   } else {
-    if (tmp7(3947).Branding.TIER_1 === premiumBranding) {
-      tmp7Result = tmp7(4153);
+    if (tmp7(3966).Branding.TIER_1 === premiumBranding) {
+      tmp7Result = tmp7(1363);
       if (tmp7Result.isThemeDark(tmp6)) {
-        let tmp4Result5 = tmp4(7394);
+        let tmp4Result5 = tmp4(7396);
       } else {
-        tmp4Result5 = tmp4(7395);
+        tmp4Result5 = tmp4(7397);
       }
       let tmp4Result8 = tmp4Result5;
-    } else if (tmp7(3947).Branding.TIER_2 === premiumBranding) {
+    } else if (tmp7(3966).Branding.TIER_2 === premiumBranding) {
       if (tmp7Result1.isThemeDark(tmp6)) {
-        let tmp4Result6 = tmp4(7396);
+        let tmp4Result6 = tmp4(7398);
       } else {
-        tmp4Result6 = tmp4(7397);
+        tmp4Result6 = tmp4(7399);
       }
       tmp4Result8 = tmp4Result6;
-      tmp7Result1 = tmp7(4153);
-    } else if (tmp7(3947).Branding.BUNDLE === premiumBranding) {
+      tmp7Result1 = tmp7(1363);
+    } else if (tmp7(3966).Branding.BUNDLE === premiumBranding) {
       if (tmp7Result2.isThemeDark(tmp6)) {
-        let tmp4Result7 = tmp4(7398);
+        let tmp4Result7 = tmp4(7400);
       } else {
-        tmp4Result7 = tmp4(7399);
+        tmp4Result7 = tmp4(7401);
       }
       tmp4Result8 = tmp4Result7;
-      tmp7Result2 = tmp7(4153);
-    } else if (tmp7(3947).Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result8 = tmp4(7400);
+      tmp7Result2 = tmp7(1363);
+    } else if (tmp7(3966).Branding.PREMIUM_GUILD === premiumBranding) {
+      tmp4Result8 = tmp4(7402);
     }
     const obj8 = { source: null, style: null };
     obj8[0] = tmp4Result8;
@@ -214,19 +214,19 @@ export default function PremiumActivatedAlert(onClose) {
     const items3 = [tmp16(tmp4Result3, obj8), ];
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.description;
-    if (tmp7(3947).Branding.TIER_0 !== premiumBranding) {
-      if (tmp7(3947).Branding.TIER_1 !== premiumBranding) {
-        if (tmp7(3947).Branding.TIER_2 === premiumBranding) {
+    if (tmp7(3966).Branding.TIER_0 !== premiumBranding) {
+      if (tmp7(3966).Branding.TIER_1 !== premiumBranding) {
+        if (tmp7(3966).Branding.TIER_2 === premiumBranding) {
           const intl3 = tmp7(1236).intl;
           let stringResult = intl3.string(tmp7(1236).t.aTUr3Z);
-        } else if (tmp7(3947).Branding.BUNDLE === premiumBranding) {
+        } else if (tmp7(3966).Branding.BUNDLE === premiumBranding) {
           const intl2 = tmp7(1236).intl;
           const obj10 = { planName: null };
           ({ planId: obj19[0], additionalPlans: obj19[1] } = renewalMutations);
-          obj10[0] = tmp7(3947).getExternalPlanDisplayName({ planId: null, additionalPlans: null });
+          obj10[0] = tmp7(3966).getExternalPlanDisplayName({ planId: null, additionalPlans: null });
           stringResult = intl2.format(tmp7(1236).t.YJUUH3, obj10);
           const obj11 = { planId: null, additionalPlans: null };
-          const tmp7Result3 = tmp7(3947);
+          const tmp7Result3 = tmp7(3966);
         }
       }
       obj9[1] = stringResult;

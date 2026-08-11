@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/07835_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07837_inlineStyles.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CirclePlayIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import { WaveformIcon } from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
@@ -112,7 +112,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(9807).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(tmp8(9812).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -128,7 +128,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = Themes.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(9812).FileIcon, obj3);
+              obj2[3] = callback(tmp8(9817).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

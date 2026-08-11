@@ -41,7 +41,7 @@ function PostPurchaseFooter(onSendGift) {
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: null };
   obj[1] = Themes.colors.CONTROL_PRIMARY_TEXT_DEFAULT;
-  obj[2] = callback4(onSendGift(9575).GiftIcon, obj);
+  obj[2] = callback4(onSendGift(9580).GiftIcon, obj);
   const intl = onSendGift(1236).intl;
   obj[3] = intl.string(messagesProxy.g86YiI);
   obj[4] = callback;
@@ -97,7 +97,7 @@ function LevelUpScreen(arg0) {
   if (tmp7Result) {
     const obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
-    tmp7Result = tmp7(tmp(10041), obj1);
+    tmp7Result = tmp7(tmp(10046), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];
@@ -127,7 +127,7 @@ function LevelUpScreen(arg0) {
       str2 = "";
     }
     obj7[1] = str2;
-    obj6[3] = intl2.format(tmp(2380)["6QVlxw"], obj7);
+    obj6[3] = intl2.format(tmp(2399)["6QVlxw"], obj7);
     tmp7Result = tmp7(tmp9(4299).Text, obj6);
   }
   items2[1] = tmp7Result;
@@ -166,14 +166,14 @@ export default function GiftBadgePostPurchase(arg0) {
   let onSendGift;
   ({ currentProgress, onSendGift } = arg0);
   const effect = React.useEffect(() => {
-    let obj = callback(4123);
+    let obj = callback(4125);
     obj = { dismissAction: constants.INDIRECT_ACTION };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1358).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
+    const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
   }, []);
   let obj = initialize;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    badgeById = badgeById.getBadgeById(callback(8786).BadgeId.GIFTING);
+    badgeById = badgeById.getBadgeById(callback(8792).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;
@@ -252,7 +252,7 @@ export default function GiftBadgePostPurchase(arg0) {
         }
         const obj3 = { tierName: null };
         obj3[0] = name1;
-        str = intl.formatToPlainString(tmp27(2380).bwyQt8, obj3);
+        str = intl.formatToPlainString(tmp27(2399).bwyQt8, obj3);
       }
       obj2[2] = str;
       obj2[3] = sum;

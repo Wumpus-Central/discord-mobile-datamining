@@ -5,8 +5,8 @@ import { UPLOAD_MEDIUM_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/16619_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16620_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16631_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16632_registerAsset.js";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

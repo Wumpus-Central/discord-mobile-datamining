@@ -48,7 +48,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     headerLabel = intl.format(stateFromStores(1236).t.OhmvYt, {});
   }
   stateFromStores = undefined;
-  let obj = stateFromStores(4005);
+  let obj = stateFromStores(4024);
   const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_PADDING);
   let obj1 = stateFromStores(589);
   const items = [getVerificationKey];
@@ -105,7 +105,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     obj4[0] = tmp10(tmp3(4299).Text, obj5);
     obj4[1] = function onPress() {
       const verificationKey = store.getVerificationKey();
-      const result = callback(13991).confirmViewBackupCodes(verificationKey, true);
+      const result = callback(13999).confirmViewBackupCodes(verificationKey, true);
     };
     obj3[1] = tmp10(tmp3(5374).TableRow, obj4);
     tmp10Result1 = tmp10(tmp3(5767).TableRowGroup, obj3);

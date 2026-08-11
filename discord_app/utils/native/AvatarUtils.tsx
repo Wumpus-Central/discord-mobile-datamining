@@ -1,7 +1,7 @@
 // discord_app/utils/native/AvatarUtils.tsx
 import get_ActivityIndicator from "registerAsset";
 import set from "registerAsset";
-import { registerAsset } from "../../../_runtime/01448_registerAsset.js";
+import { registerAsset } from "../../../_runtime/01467_registerAsset.js";
 
 let NativeModules;
 let obj1;

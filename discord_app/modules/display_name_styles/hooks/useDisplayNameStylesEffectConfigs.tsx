@@ -11,7 +11,7 @@ obj[require("DisplayNameEffect").DisplayNameEffect.TOON] = require("messagesProx
 obj[require("DisplayNameEffect").DisplayNameEffect.POP] = require("messagesProxy").cjQOKb;
 obj[require("DisplayNameEffect").DisplayNameEffect.GUMMY] = require("messagesProxy").x9Gtie;
 obj[require("DisplayNameEffect").DisplayNameEffect.PRISM] = require("messagesProxy")["/M7psm"];
-let closure_5 = { [arg1(1916).DisplayNameEffect.SOLID]: 3, [arg1(1916).DisplayNameEffect.GRADIENT]: 2.5, [arg1(1916).DisplayNameEffect.GLOW]: 2.5, [arg1(1916).DisplayNameEffect.PRISM]: 2.5, [arg1(1916).DisplayNameEffect.NEON]: 3, [arg1(1916).DisplayNameEffect.TOON]: 3, [arg1(1916).DisplayNameEffect.POP]: 3, [arg1(1916).DisplayNameEffect.GUMMY]: 3 };
+let closure_5 = { [arg1(1935).DisplayNameEffect.SOLID]: 3, [arg1(1935).DisplayNameEffect.GRADIENT]: 2.5, [arg1(1935).DisplayNameEffect.GLOW]: 2.5, [arg1(1935).DisplayNameEffect.PRISM]: 2.5, [arg1(1935).DisplayNameEffect.NEON]: 3, [arg1(1935).DisplayNameEffect.TOON]: 3, [arg1(1935).DisplayNameEffect.POP]: 3, [arg1(1935).DisplayNameEffect.GUMMY]: 3 };
 const result = require("messagesProxy").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx");
 
 export const DISPLAY_NAME_STYLES_EFFECT_NAMES = obj;

@@ -7,7 +7,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import jsxProd from "getCoverImageURI";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10817_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10822_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";

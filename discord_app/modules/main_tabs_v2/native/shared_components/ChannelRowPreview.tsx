@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
 import importAllResult from "useTheme";
 import { View } from "map";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import jsxProd from "Themes";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
@@ -87,7 +87,7 @@ class ChannelRowPreview {
         str2 = "markup";
         if ("markup" === type) {
           tmp9 = jsx;
-          tmp10 = f47494;
+          tmp10 = f47531;
           if ("markup" === formattedMessagePreview.type) {
             content = formattedMessagePreview.markup;
           } else {
@@ -247,7 +247,7 @@ let closure_9 = importAllResult.memo((arg0) => {
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
   let obj = _initialize;
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const items1 = [message.message.author.id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.isBlockedOrIgnored(message.message.author.id), items1);
   if (obj2.isMessageContentPreviewable(message.message)) {
@@ -262,7 +262,7 @@ const memoResult = importAllResult.memo((message) => {
   const merged1 = Object.assign(message);
   tmp7 = callback(ChannelRowPreview, obj);
 });
-const result = require("upsertRelationship").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 
 export { ChannelRowPreview };
 export { NativeChannelRowPreview };

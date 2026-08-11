@@ -10,7 +10,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "context";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4036";
+import importDefaultResult from "module_4042";
 import { Storage } from "Storage";
 import { BottomSheetModal } from "../../../../_runtime/05399_BottomSheetModal.js";
 import { getNoResultsSource } from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
@@ -144,7 +144,7 @@ function ReactionTab(arg0) {
   let tmp8 = null;
   if (null != emojiColorPalette) {
     obj = { backgroundColor: null };
-    let tmp3Result = tmp3(4151);
+    let tmp3Result = tmp3(4152);
     obj[0] = tmp3Result.hexOpacityToRgba(emojiColorPalette.backgroundColor, emojiColorPalette.opacity);
     tmp8 = obj;
   }
@@ -152,7 +152,7 @@ function ReactionTab(arg0) {
   tmp3Result = tmp3(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = tmp3Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const AnimateEmoji = tmp3(3974).AnimateEmoji;
+  const AnimateEmoji = tmp3(3993).AnimateEmoji;
   let emojiURL;
   if (null != emoji.id) {
     const obj1 = { id: null, animated: null, size: 48 };
@@ -328,7 +328,7 @@ function EmojiOptionsButton(channelId) {
   const items = [ensureGuildLoaded];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_10.getChannel(channelId), items1);
-  const tmp3 = messageId(12528)(stateFromStores);
+  const tmp3 = messageId(12532)(stateFromStores);
   c2 = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -373,16 +373,16 @@ function ReactionTabs(setReactionSelectedIndex) {
     const result = reactionSelectedIndex(outer1_3[49]).triggerHapticFeedback(setReactionSelectedIndex(outer1_3[50]).IMPACT_LIGHT);
     setReactionSelectedIndex(arg0);
   };
-  obj[6] = reactionSelectedIndex(3940).MAX_REACTIONS;
-  const items = [callback2(setReactionSelectedIndex(12530), obj), callback2(setReactionSelectedIndex(7409), { outer: true }), ];
+  obj[6] = reactionSelectedIndex(3959).MAX_REACTIONS;
+  const items = [callback2(setReactionSelectedIndex(12534), obj), callback2(setReactionSelectedIndex(7411), { outer: true }), ];
   const obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
   const tmp4 = callback2;
-  const tmp5 = setReactionSelectedIndex(12530);
-  obj2[3] = reactionSelectedIndex(3940).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
+  const tmp5 = setReactionSelectedIndex(12534);
+  obj2[3] = reactionSelectedIndex(3959).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [callback2(reactionSelectedIndex(4299).Text, obj2), ];
   const obj3 = {};
-  const obj6 = reactionSelectedIndex(3940);
+  const obj6 = reactionSelectedIndex(3959);
   const merged = Object.assign(setReactionSelectedIndex);
   items1[1] = tmp4(obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled ? EmojiOptionsButton : RemoveAllButton, obj3);
   obj1[1] = items1;
@@ -393,7 +393,7 @@ function ReactionTabs(setReactionSelectedIndex) {
 ({ ActivityIndicator: closure_6, Platform, Pressable: error, View: metroImportAll } = get_ActivityIndicator);
 ({ DEFAULT_NUM_REACTION_USERS: closure_14, Permissions: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-let closure_18 = require("module_4036").createAnimatedComponent(require("Text").Text);
+let closure_18 = require("module_4042").createAnimatedComponent(require("Text").Text);
 let obj = { container: { flex: 1 }, containerEmpty: null, listRow: null, tabContainer: null, tabContainerSelected: null, tab: null, tabSelected: null, tabActive: null, reactionTab: null, removeButtonContainer: null, emojiOptionsButton: null, removeAllButton: null, reactionCountText: null, reactionCountTextSelected: null, emoji: null, emojiText: null, emojiImage: null, emojiTextIdentifier: null, avatar: null, buttonRow: null, loadingSpinner: null };
 obj = { padding: 32, borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm };
 obj[1] = obj;

@@ -25,9 +25,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10865);
+    let tmp2Result = tmp2(10870);
   } else {
-    tmp2Result = tmp2(10866);
+    tmp2Result = tmp2(10871);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -70,7 +70,7 @@ let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10447);
+    let obj = callback(10452);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
@@ -95,7 +95,7 @@ export default function SettingsVoiceScreen() {
     obj3[1] = items3;
     const intl5 = callback(1236).intl;
     const obj4 = { helpCenterArticle: null };
-    let obj7 = callback2(1974);
+    let obj7 = callback2(1993);
     obj4[0] = obj7.getArticleURL(constants2.SOUNDBOARD);
     obj3[2] = intl5.format(callback(1236).t.BPbGq7, obj4);
     items1[2] = obj3;

@@ -22,7 +22,7 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
     if (tmp(4292).CodedLinkType.APP_OAUTH2_LINK !== type) {
       if (tmp(4292).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
         if (tmp(4292).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = tmp(7150);
+          let tmpResult = tmp(7151);
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -36,7 +36,7 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
           obj = { type: null, applicationId: null, params: null };
           obj[0] = type;
           obj[1] = code;
-          tmpResult = tmp(7151);
+          tmpResult = tmp(7152);
           obj[2] = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

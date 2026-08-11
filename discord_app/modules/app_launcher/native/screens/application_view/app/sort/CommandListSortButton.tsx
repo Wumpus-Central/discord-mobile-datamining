@@ -51,7 +51,7 @@ export default function CommandListSortButton(sortOrder) {
   const items = [callback(sortOrder(4299).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), ];
   obj = { size: "xs", color: null };
   obj[1] = onSortOptionPress(712).colors.TEXT_DEFAULT;
-  items[1] = callback(sortOrder(9478).ChevronSmallDownIcon, obj);
+  items[1] = callback(sortOrder(9484).ChevronSmallDownIcon, obj);
   obj[1] = items;
   obj[5] = callback2(View, obj);
   return callback(sortOrder(4846).PressableOpacity, obj);

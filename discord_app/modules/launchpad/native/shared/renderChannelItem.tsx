@@ -2,7 +2,7 @@
 import "set";
 import { View } from "ChannelContent";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "jsxProd";
@@ -30,7 +30,7 @@ function LaunchpadChannelIcon(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
   const tmp2 = getLayoutStyle();
   obj[1] = callback(GuildIconSizes, { guild: stateFromStores, size: getLayoutStyle().icon.guildBadgeIconSize });
-  const items1 = [callback(View, obj), callback(channel(11576).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [callback(View, obj), callback(channel(11579).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
 }
@@ -107,7 +107,7 @@ export default function renderChannelItem(unread) {
     const obj1 = { channel: null, size: null };
     obj1[0] = channel;
     obj1[1] = tmp7.icon.avatarSize;
-    let tmp11Result = tmp11(tmp5(9663), obj1);
+    let tmp11Result = tmp11(tmp5(9668), obj1);
   } else {
     const obj2 = { channel: null };
     obj2[0] = channel;
@@ -119,7 +119,7 @@ export default function renderChannelItem(unread) {
   const tmp8 = renderChannelWrapper;
   const tmp9 = closure_10;
   if (channelName == null) {
-    channelName = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    channelName = computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     const obj6 = computeChannelName;
   }
   children[2] = ChannelContent({ name: channelName, subtitle, unread: flag, resolvedUnreadSetting: ONLY_MENTIONS, muted: flag3, lastMessageTimestampString: relativeTimestamp, channel, channelCategoryName, locked, connected, live: flag2, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess: flag4 });

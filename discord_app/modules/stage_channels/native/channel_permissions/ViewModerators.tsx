@@ -7,7 +7,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { AnalyticEvents } from "ME";
 import { RowType } from "RowType";
 import jsxProd from "_updatePermission";
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -221,5 +221,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(15899, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(15916, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

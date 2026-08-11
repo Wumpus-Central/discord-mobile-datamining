@@ -76,7 +76,7 @@ export default function useModalPanGesture(thresholdVelocity) {
       }
       obj4 = c0(thresholdTranslate[2]);
       fn = function n() {
-        callback(4036).runOnJS(callback2(4509).pop)();
+        callback(4042).runOnJS(callback2(4509).pop)();
       };
       obj = { runOnJS: c0(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]) };
       fn.__closure = obj;

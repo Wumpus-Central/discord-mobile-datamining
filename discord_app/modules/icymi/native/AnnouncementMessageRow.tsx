@@ -3,7 +3,7 @@ import importAllResult from "getSystemLocale";
 import { View } from "generateHydrationId";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ITEM_PADDING } from "ITEM_PADDING";
@@ -145,7 +145,7 @@ export default function AnnouncementMessageRowWrapper(message) {
     author = gravityMessage.author;
   }
   tmp(tmp2[11]);
-  [][0] = upsertRelationship;
+  [][0] = markAllUserIdListsStale;
   let tmp9 = null;
   if (null != stateFromStores) {
     tmp9 = null;

@@ -23,7 +23,7 @@ import importDefaultResult3 from "DEFAULT_FRECENCY";
 import { PersistedStore } from "initialize";
 import set from "getHash";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
 import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
@@ -96,12 +96,12 @@ function _loadSavedEmojis() {
             c0 = undefined;
             callback = undefined;
             if (outer1_30 === outer1_29.Unloaded) {
-              let obj1 = outer1_1(1936);
+              let obj1 = outer1_1(1955);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 outer1_30 = outer1_29.Loading;
-                let obj2 = outer1_0(1955);
+                let obj2 = outer1_0(1974);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -313,7 +313,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    const obj = callback(3920);
+    const obj = callback(3939);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       let c33 = null;
@@ -753,7 +753,7 @@ prototype2["getFrequentlyUsedEmojisWithoutFetchingLatest"] = function getFrequen
       }
       return byId;
     });
-    const found = mapped.filter(self(1351).isNotNullish);
+    const found = mapped.filter(self(1370).isNotNullish);
     const items = [];
     HermesBuiltin.arraySpread(dedupeEmojisByNameOrId(found).values(), 0);
     self.frequentlyUsed = items;
@@ -780,7 +780,7 @@ prototype2["rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest"] = functi
     }
     return byId;
   });
-  const found = mapped.filter(self(1351).isNotNullish);
+  const found = mapped.filter(self(1370).isNotNullish);
   obj = dedupeEmojisByNameOrId(found);
   const items = [...obj.values()];
   self.frequentlyUsedReactionEmojis = items;
@@ -829,7 +829,7 @@ prototype2["rebuildFavoriteEmojisWithoutFetchingLatest"] = function rebuildFavor
     }
     return byId;
   });
-  const found = mapped.filter(self(1351).isNotNullish);
+  const found = mapped.filter(self(1370).isNotNullish);
   obj = dedupeEmojisByNameOrId(found);
   const items = [...obj.values()];
   self.favorites = items;

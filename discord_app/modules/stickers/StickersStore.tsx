@@ -51,12 +51,12 @@ function _loadSavedGuildStickers() {
             c0 = undefined;
             callback = undefined;
             if (outer1_9 === outer1_8.Unloaded) {
-              let obj1 = outer1_1(1936);
+              let obj1 = outer1_1(1955);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 outer1_9 = tmp28.Loaded;
-                let obj2 = outer1_0(1955);
+                let obj2 = outer1_0(1974);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };

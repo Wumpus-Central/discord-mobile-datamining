@@ -33,8 +33,8 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  let tmp4Result = tmp4(1419);
-  tmp4Result = tmp4(1416);
+  let tmp4Result = tmp4(1438);
+  tmp4Result = tmp4(1435);
   const tmp7 = getTagProperties({ message, channel, isSystemDM: true, colors: tmp2 });
   obj.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp7);

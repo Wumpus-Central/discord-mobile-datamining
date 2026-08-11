@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-let result = require("upsertRelationship").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
 
 export default function BlockUserElement(user) {
   user = user.user;
@@ -14,7 +14,7 @@ export default function BlockUserElement(user) {
   const reportId = user.reportId;
   let stateFromStores1;
   let obj = user(reportId[5]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const items1 = [user];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.isBlocked(user.id), items1);
   let obj1 = user(reportId[5]);

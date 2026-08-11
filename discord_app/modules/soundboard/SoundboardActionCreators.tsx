@@ -27,7 +27,7 @@ function _fetchDefaultSoundsFromApi2() {
       callback2 = dependencyMap;
       let obj3 = callback2(709);
       obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
-      const obj4 = callback(5954);
+      const obj4 = callback(5956);
       const tmp28 = new callback2(4203)(callback2);
       const result = obj4.captureOrIgnoreApiError(tmp28);
       let c5 = 3;
@@ -83,7 +83,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(5955);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(5957);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -378,7 +378,7 @@ function _fetchSoundGuildData() {
             lib = arg1;
             let discoverableGuild = null;
             if (null != lib.body) {
-              obj = lib(5956);
+              obj = lib(5958);
               discoverableGuild = obj.makeDiscoverableGuild(lib.body);
             }
             c5 = 0;

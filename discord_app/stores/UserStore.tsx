@@ -39,11 +39,11 @@ function mergeUserPrimaryGuild(id, primary_guild) {
     if (!result) {
       let flag = null == tmp2.primaryGuild || null != primary_guild.primary_guild;
       if (flag) {
-        tmp2.primaryGuild = tmp5(1913).ensureUserPrimaryGuild(primary_guild.primary_guild);
+        tmp2.primaryGuild = tmp5(1932).ensureUserPrimaryGuild(primary_guild.primary_guild);
         tmp[tmp2.id] = tmp2;
         closure_12 = closure_12 + 1;
         flag = true;
-        const tmp5Result = tmp5(1913);
+        const tmp5Result = tmp5(1932);
       }
       tmp8 = flag;
     }
@@ -93,14 +93,14 @@ function transformUser(mfa_enabled) {
   }
   const avatar_decoration_data = mfa_enabled.avatar_decoration_data;
   if (undefined !== avatar_decoration_data) {
-    let tmp4Result = tmp4(1880);
+    let tmp4Result = tmp4(1899);
     mfa_enabled.avatarDecorationData = tmp4Result.parseAvatarDecorationData(avatar_decoration_data);
     delete tmp[tmp3];
   }
   const collectibles = mfa_enabled.collectibles;
   if (undefined !== collectibles) {
     delete tmp[tmp3];
-    tmp4Result = tmp4(1881);
+    tmp4Result = tmp4(1900);
     mfa_enabled.collectibles = tmp4Result.parseServerUserCollectibles(collectibles);
   }
   const global_name = mfa_enabled.global_name;
@@ -110,24 +110,24 @@ function transformUser(mfa_enabled) {
   }
   const primary_guild = mfa_enabled.primary_guild;
   if (undefined !== primary_guild) {
-    mfa_enabled.primary_guild = tmp4(1913).ensureUserPrimaryGuild(primary_guild);
-    const tmp4Result1 = tmp4(1913);
+    mfa_enabled.primary_guild = tmp4(1932).ensureUserPrimaryGuild(primary_guild);
+    const tmp4Result1 = tmp4(1932);
   }
   const display_name_styles = mfa_enabled.display_name_styles;
   if (undefined !== display_name_styles) {
-    mfa_enabled.displayNameStyles = tmp4(1914).parseServerDisplayNameStyles(display_name_styles);
+    mfa_enabled.displayNameStyles = tmp4(1933).parseServerDisplayNameStyles(display_name_styles);
     delete tmp[tmp3];
-    const tmp4Result2 = tmp4(1914);
+    const tmp4Result2 = tmp4(1933);
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
-    mfa_enabled.premiumState = tmp4(1918).parseServerPremiumState(premium_state);
+    mfa_enabled.premiumState = tmp4(1937).parseServerPremiumState(premium_state);
     delete tmp[tmp3];
-    const tmp4Result3 = tmp4(1918);
+    const tmp4Result3 = tmp4(1937);
   }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
-    const RestrictedScheduleRecord = tmp4(1924).RestrictedScheduleRecord;
+    const RestrictedScheduleRecord = tmp4(1943).RestrictedScheduleRecord;
     let fromServerResult = RestrictedScheduleRecord.fromServer(restricted_schedule);
     if (fromServerResult == null) {
       fromServerResult = null;
@@ -207,8 +207,8 @@ function mergeUser(user, arg1) {
       if (tmp14 !== true) {
         if (tmp15 !== true) {
           if (obj4.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
-            user.primary_guild = tmp16(1913).ensureUserPrimaryGuild(user.primary_guild);
-            const tmp16Result = tmp16(1913);
+            user.primary_guild = tmp16(1932).ensureUserPrimaryGuild(user.primary_guild);
+            const tmp16Result = tmp16(1932);
           }
           obj4 = isUserPrimaryGuildEqual;
           tmp16 = require;
@@ -683,15 +683,15 @@ function handleIncomingMessage(message) {
   message = message.message;
   mergeUsersFromMessage(message, true);
   if (null != message.flags) {
-    const obj = importAll(1384);
+    const obj = importAll(1403);
     if (obj.hasFlag(message.flags, constants2.URGENT)) {
       const obj3 = obj[store2.getId(store2)];
       let flag = null != obj3;
       if (flag) {
         const id = store2.getId();
-        obj[id] = obj3.set("flags", tmp2(1384).setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
+        obj[id] = obj3.set("flags", tmp2(1403).setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
         flag = true;
-        const tmp2Result = tmp2(1384);
+        const tmp2Result = tmp2(1403);
       }
       return flag;
     }

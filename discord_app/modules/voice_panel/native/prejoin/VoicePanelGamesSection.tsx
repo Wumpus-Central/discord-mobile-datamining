@@ -30,7 +30,7 @@ function GameRow(gameId) {
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(tmp3(9251), { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(tmp3(9257), { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       const obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;

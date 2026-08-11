@@ -47,7 +47,7 @@ let closure_17 = importAllResult.memo((channel) => {
   let obj = channel(589);
   const items = [updateUserGuildSettingsInternal];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_10.isChannelOptedIn(channel.guild_id, channel.id));
-  let obj1 = channel(4019);
+  let obj1 = channel(4032);
   const checkboxA11yNative = obj1.useCheckboxA11yNative({ checked: stateFromStores });
   obj = {
     style: tmp.categoryContainer,
@@ -79,7 +79,7 @@ let closure_17 = importAllResult.memo((channel) => {
     obj2[0] = tmp.selectAllCheckbox;
     const obj3 = { checked: null };
     obj3[0] = stateFromStores;
-    obj2[1] = tmp8(tmp4(7969).FormCheckbox, obj3);
+    obj2[1] = tmp8(tmp4(7971).FormCheckbox, obj3);
     const items2 = [tmp8(View, obj2), ];
     const obj4 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1236).intl;

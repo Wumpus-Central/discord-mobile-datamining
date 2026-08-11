@@ -56,7 +56,7 @@ function _fetchApplicationCommandIndex() {
                   let closure_0 = arg0;
                   let c2 = 0;
                   let c3 = 0;
-                  return (/* F120054 */ function*() { ... })();
+                  return (/* F120151 */ function*() { ... })();
                 });
                 const _retry = tmp;
                 const apply = tmp.apply;
@@ -82,8 +82,8 @@ function _fetchApplicationCommandIndex() {
                     if ("application" === type) {
                       channelId = tmp3.applicationId;
                     } else {
-                      lib(1351).assertNever(tmp3);
-                      const obj3 = lib(1351);
+                      lib(1370).assertNever(tmp3);
+                      const obj3 = lib(1370);
                     }
                   }
                 }

@@ -71,7 +71,7 @@ let prototype = function AgeVerificationManager() {
         }
         if (tmp16) {
           (function handleLoadChannelMessages(channelId) {
-            let obj = callback(6917);
+            let obj = callback(6920);
             obj = { channelId, limit: closure_9 };
             const messages = obj.fetchMessages(obj);
           })(tmp12);

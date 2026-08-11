@@ -210,7 +210,7 @@ class AddMembersBody {
     tmp33 = Fragment;
     tmp35 = length;
     obj4 = { accessibilityLabel: null, placeholder: null, tags: null, onChangeText: null, onRemove: null };
-    tmp8Result = require("module_9009");
+    tmp8Result = require("module_9015");
     intl5 = require("getSystemLocale").intl;
     obj4[0] = intl5.string(require("getSystemLocale").t["5h0QOP"]);
     intl6 = require("getSystemLocale").intl;
@@ -411,7 +411,7 @@ export default function AddMembersActionSheet(channel) {
         }
       });
       let dependencyMap = 1;
-      yield outer1_0(8998).savePermissionUpdates(outer1_0.id, items);
+      yield outer1_0(9004).savePermissionUpdates(outer1_0.id, items);
       if (1 === tmp7) {
         dependencyMap = 0;
         let c5 = 3;
@@ -419,7 +419,7 @@ export default function AddMembersActionSheet(channel) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        let obj = outer1_0(4001);
+        let obj = outer1_0(4020);
         const result = obj.memberOrRoleAddedToast(c2, c1);
         const obj1 = outer1_1(4271);
         obj1.hideActionSheet();

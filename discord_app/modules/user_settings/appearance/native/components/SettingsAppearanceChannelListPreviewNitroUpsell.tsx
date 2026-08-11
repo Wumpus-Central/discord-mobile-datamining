@@ -6,7 +6,7 @@ import ME from "ME";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4036";
+import importDefaultResult from "module_4042";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
@@ -22,7 +22,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
   const tmp = callback3();
-  let obj = theme(4036);
+  let obj = theme(4042);
   const fn = function l() {
     let num = 1;
     if (theme.theme === outer1_9.LIGHT) {

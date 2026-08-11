@@ -88,7 +88,7 @@ function UserCalloutAvatars(userIds) {
   const items = [mergeGuildAvatar];
   const items1 = [userIds];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => userIds.map((arg0) => user.getUser(arg0)), items1);
-  let found = stateFromStoresArray.filter(userIds(1351).isNotNullish);
+  let found = stateFromStoresArray.filter(userIds(1370).isNotNullish);
   if (1 === userIds.length) {
     if (null != mergeGuildAvatar.getUser(userIds[0])) {
       obj = { user: null, guildId: null, size: null, "aria-hidden": true };
@@ -99,13 +99,13 @@ function UserCalloutAvatars(userIds) {
       obj[2] = REFRESH_MEDIUM_32;
       let tmp6 = callback(tmp(1297).Avatar, obj);
     } else {
-      tmp6 = callback(tmp(11224).UserIcon, {});
+      tmp6 = callback(tmp(11229).UserIcon, {});
     }
   } else {
     obj = { users: null, size: null };
     obj[0] = found;
     obj[1] = tmp(1297).AvatarSizes.REFRESH_MEDIUM_32;
-    return callback(tmp(9663).FacepileGroupDMAvatar, obj);
+    return callback(tmp(9668).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {

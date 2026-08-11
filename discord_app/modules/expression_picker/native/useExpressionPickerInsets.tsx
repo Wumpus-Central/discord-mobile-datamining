@@ -6,7 +6,7 @@ const result = require("useSafeAreaInsets").fileFinishedImporting("modules/expre
 
 export default function useExpressionPickerInsets(hasCategories) {
   let bottom;
-  bottom = bottom(1609)().bottom;
+  bottom = bottom(1628)().bottom;
   const obj = { safeAreaStyle: null, safeAreaBottomKeyboardAware: null };
   const items = [bottom];
   obj[0] = React.useMemo(() => ({ paddingBottom: bottom }), items);

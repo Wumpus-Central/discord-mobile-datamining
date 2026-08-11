@@ -3,7 +3,7 @@ import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -48,7 +48,7 @@ function getChannel(id, arr) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
     let tmpResult = tmp(4494);
-    obj[3] = tmpResult.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    obj[3] = tmpResult.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
     tmpResult = tmp(4746);
@@ -171,7 +171,7 @@ function parseChannel(canViewChannel) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
                 let tmp35Result = tmp35(4494);
-                const channelName = tmp35Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+                const channelName = tmp35Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
                 tmp35Result = tmp35(4486);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
@@ -179,7 +179,7 @@ function parseChannel(canViewChannel) {
                 }
                 const obj13 = { inContent: null, content: null };
                 const obj14 = { type: "text", content: null };
-                obj14[1] = tmp35(1884).truncateText(channelName, 32);
+                obj14[1] = tmp35(1903).truncateText(channelName, 32);
                 const obj15 = { type: "channel", content: null, channelType: null, iconType: null };
                 const items7 = [obj14];
                 obj15[1] = items7;
@@ -190,7 +190,7 @@ function parseChannel(canViewChannel) {
                 const items9 = [obj11];
                 obj13[1] = items9;
                 let obj17 = obj13;
-                const tmp35Result1 = tmp35(1884);
+                const tmp35Result1 = tmp35(1903);
               }
             }
             const obj16 = { inContent: null, content: null };

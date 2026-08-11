@@ -48,9 +48,9 @@ export default function DisplayNameStylesColorPickerSheet(selectedEffectId) {
   let closure_8;
   let tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = selectedEffectId(9473);
+  let obj = selectedEffectId(9479);
   displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(selectedEffectId);
-  let obj1 = selectedEffectId(1914);
+  let obj1 = selectedEffectId(1933);
   let items = [selectedEffectId];
   const effectColorCount = obj1.getEffectColorCount(selectedEffectId);
   memo = memo.useMemo(() => callback2(selectedEffectId), items);

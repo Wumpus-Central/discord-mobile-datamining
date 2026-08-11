@@ -7,7 +7,7 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08468_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08474_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj2[3] = tmp13;
     obj2[4] = onCancelReplying;
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = tmp4(8468);
+    obj3[0] = tmp4(8474);
     obj3[1] = tmp(1297).Icon.Sizes.CUSTOM;
     obj3[2] = tmp3.floatingCloseIcon;
     obj2[5] = callback(tmp(1297).Icon, obj3);
@@ -68,7 +68,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.contextCancelIconWrapper;
     const obj6 = { source: null, size: null };
-    obj6[0] = tmp4(8468);
+    obj6[0] = tmp4(8474);
     obj6[1] = tmp(1297).Icon.Sizes.SMALL_20;
     obj5[1] = callback(tmp(1297).Icon, obj6);
     const items1 = [callback(closure_5, obj5), ];
@@ -91,8 +91,8 @@ class ChatInputReplyBar {
     colorStrings = undefined;
     nick = undefined;
     guildId = undefined;
-    f84688 = undefined;
-    f84688 = undefined;
+    f84743 = undefined;
+    f84743 = undefined;
     id = undefined;
     author = undefined;
     tmp = pendingReply;
@@ -100,7 +100,7 @@ class ChatInputReplyBar {
     ({ onToggleReplyMention, chatInputFloatingOverride } = global);
     obj = require("useIsMobileVisualRefreshExperimentEnabled");
     tmp3 = obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating || chatInputFloatingOverride;
-    tmp4 = f48250();
+    tmp4 = f48287();
     tmpResult = require("map");
     tmp5 = c1;
     token = tmpResult.useToken(require("Themes").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
@@ -108,7 +108,7 @@ class ChatInputReplyBar {
     bound = require("noop");
     tmpResult2 = require("initialize");
     items = [];
-    items[0] = f84688;
+    items[0] = f84743;
     stateFromStores = tmpResult2.useStateFromStores(items, () => roleStyle.roleStyle);
     c1 = stateFromStores;
     tmpResult3 = require("useCheckboxA11yNative");
@@ -122,7 +122,7 @@ class ChatInputReplyBar {
     items1[0] = colorString;
     items1[1] = stateFromStores;
     ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-    f84688 = colorStrings.useMemo(() => {
+    f84743 = colorStrings.useMemo(() => {
       let tmp;
       if ("hidden" !== stateFromStores) {
         if (null != colorString) {
@@ -137,7 +137,7 @@ class ChatInputReplyBar {
     obj1 = { userId: pendingReply.message.author.id, guildId };
     tmp10 = require("useDisplayNameStyles")(obj1);
     tmpResult4 = require("DISPLAY_NAME_STYLES_FONT_FAMILY_MAP");
-    f84688 = tmpResult4.useDisplayNameStylesFont({ displayNameStyles: tmp10 });
+    f84743 = tmpResult4.useDisplayNameStylesFont({ displayNameStyles: tmp10 });
     tmpResult5 = require("processColorStrings");
     processColorStringsArray = tmpResult5.useProcessColorStringsArray(colorStrings);
     id = processColorStringsArray;

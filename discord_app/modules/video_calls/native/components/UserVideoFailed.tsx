@@ -38,7 +38,7 @@ export default function UserVideoFailed(arg0) {
   if (!removeSplashImage) {
     obj = { style: null };
     obj[0] = tmp2.placeholderImage;
-    tmp9 = callback(tmp3(10690).StreamFailed, obj);
+    tmp9 = callback(tmp3(10695).StreamFailed, obj);
   }
   const obj1 = { children: null };
   const items1 = [tmp9, ];

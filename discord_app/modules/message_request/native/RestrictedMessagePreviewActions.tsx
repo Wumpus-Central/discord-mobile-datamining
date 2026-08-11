@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewActions.tsx
 import Button from "Button";
 import { View } from "_submitHamReportForFirstDM";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import ME from "ME";
 import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
 import jsxProd from "Text";
@@ -20,7 +20,7 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_8 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_8 };
-let result = require("upsertRelationship").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
 
 export default function RestrictedMessagePreviewActions(channel) {
   let isLoaded;
@@ -34,7 +34,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   message = dMMessageToReport.message;
   ({ isReportable, isLoaded } = dMMessageToReport);
   let obj1 = channel(message[9]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const items1 = [user.id];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_5.getRelationshipType(user.id), items1);
   const items2 = [user.id];
@@ -148,7 +148,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp18 = null;
     formatResult = null;
   } else if (tmp13.PENDING_OUTGOING === stateFromStores) {
-    const obj6 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "accessibilityRole" };
+    const obj6 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "Boolean" };
     const intl3 = tmp2(tmp3[20]).intl;
     obj6[2] = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
     tmp19 = callback(tmp2(tmp3[19]).Button, obj6);

@@ -95,7 +95,7 @@ export default function SelectedUserField(onPress) {
     const obj7 = { text: null };
     obj7[0] = nameFromUser.getName(selectedUser);
     obj6[3] = intl5.formatToPlainString(tmp4(1236).t["0Vb9FQ"], obj7);
-    obj6[4] = tmp2(tmp4(5996).CircleXIcon, { size: "xs" });
+    obj6[4] = tmp2(tmp4(5998).CircleXIcon, { size: "xs" });
     tmp2Result = tmp2(tmp7, obj6);
     const obj13 = nameFromUser;
   }

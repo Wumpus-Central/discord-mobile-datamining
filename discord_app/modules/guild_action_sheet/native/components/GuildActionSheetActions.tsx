@@ -54,8 +54,8 @@ function HideMutedChannelsOption(guild) {
 }
 function BrowseChannelsOption(guild) {
   guild = guild.guild;
-  let obj = guild(4123);
-  const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1358).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
+  let obj = guild(4125);
+  const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1377).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
   const tmp2 = useGuildOnboardingAvailable(guild);
   const items = [generateOldThreadCutoff];
   const stateFromStores = guild(589).useStateFromStores(items, () => outer1_11.hasUnread(guild.id, outer1_20.GUILD_ONBOARDING_QUESTION));
@@ -92,7 +92,7 @@ function BrowseChannelsOption(guild) {
       obj[2] = stringResult;
       tmp8Result = tmp8(tmp9, obj);
     }
-    tmp8Result = tmp8(tmp3(11663).NewBadge, {});
+    tmp8Result = tmp8(tmp3(11666).NewBadge, {});
   }
 }
 function ChangeIdentityOption(arg0) {
@@ -157,7 +157,7 @@ function GuildThemePreferenceOption(guild) {
 }
 function ServerTagOption(guild) {
   guild = guild.guild;
-  let obj = guild(9024);
+  let obj = guild(9030);
   [][0] = guild.id;
   const result = obj.canViewMobileServerTag(guild.id);
   if (result) {
@@ -166,7 +166,7 @@ function ServerTagOption(guild) {
     if (profile != null) {
       badge = profile.badge;
     }
-    const guildTagBadgeUrl = tmp2(8266).getGuildTagBadgeUrl(guild.id, badge, GuildTagBadgeSize.SIZE_16);
+    const guildTagBadgeUrl = tmp2(8271).getGuildTagBadgeUrl(guild.id, badge, GuildTagBadgeSize.SIZE_16);
     obj = { style: null, children: null };
     obj[0] = tmp.serverTagLabel;
     const profile2 = guild.profile;
@@ -180,7 +180,7 @@ function ServerTagOption(guild) {
     obj2[0] = tag;
     obj2[1] = guildTagBadgeUrl;
     obj2[2] = GuildTagBadgeSize.SIZE_16;
-    obj1[2] = closure_21(tmp2(9252).BaseGuildTagChiplet, obj2);
+    obj1[2] = closure_21(tmp2(9258).BaseGuildTagChiplet, obj2);
     const items = [closure_21(View, obj1), ];
     const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
@@ -327,7 +327,7 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
 };
 export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryActions(guild) {
   guild = guild.guild;
-  let obj = guild(13310);
+  let obj = guild(13318);
   let obj1 = guild(589);
   const items = [createGuildRoleRecordFromRust];
   const items1 = [];
@@ -403,7 +403,7 @@ export const GuildActionSheetDirectoryActions = function GuildActionSheetDirecto
   items.push(callback2(NotificationAction, { guild }));
   items.push(callback2(ChangeIdentityOption, { guild, user: currentUser }));
   items.push(callback2(RestrictedGuildPrivacyOption, { guild }));
-  let obj = guild(13258);
+  let obj = guild(13266);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
@@ -444,13 +444,13 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   let shouldShowIncidentActions;
   guild = guild.guild;
   const currentUser = authStore.getCurrentUser();
-  let obj = guild(9773);
+  let obj = guild(9778);
   const canReportRaid = obj.useCanReportRaid(guild);
-  let obj1 = guild(9772);
+  let obj1 = guild(9777);
   const guildIncidentsState = obj1.useGuildIncidentsState(guild.id);
   const items = [];
   ({ shouldShowIncidentActions, isUnderLockdown } = guildIncidentsState);
-  let obj2 = guild(6994);
+  let obj2 = guild(6997);
   const optInEnabledForGuild = obj2.useOptInEnabledForGuild(guild.id);
   items.push(callback2(ChangeIdentityOption, { guild, user: currentUser }));
   items.push(callback2(GuildThemePreferenceOption, { guild }));
@@ -470,7 +470,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   items.push(callback2(RestrictedGuildPrivacyOption, { guild }));
   const tmp12 = constants;
   const tmp2 = callback(guild, currentUser);
-  const messageRequestPrivacyOption = guild(13258).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13266).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -548,7 +548,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
 };
 export const GuildDeveloperOptionAction = function GuildDeveloperOptionAction(guild) {
   guild = guild.guild;
-  const DeveloperMode = guild(3974).DeveloperMode;
+  const DeveloperMode = guild(3993).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   experiment;
   if (setting) {

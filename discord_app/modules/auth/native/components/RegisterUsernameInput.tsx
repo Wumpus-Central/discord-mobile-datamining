@@ -5,10 +5,10 @@ import noop from "noop";
 import useRegistrationUIStore from "useRegistrationUIStore";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { FadeIn } from "module_4036";
-import { FadeOut } from "module_4036";
-import { LinearTransition } from "module_4036";
-import { Easing } from "module_4036";
+import { FadeIn } from "module_4042";
+import { FadeOut } from "module_4042";
+import { LinearTransition } from "module_4042";
+import { Easing } from "module_4042";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useFocusRefOnNavigation } from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
 import { NameValidationState } from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
@@ -32,7 +32,7 @@ function UsernameStatusMessage(arg0) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = Themes.colors.TEXT_FEEDBACK_CRITICAL;
-    const items = [callback3(tmp3(7793).CircleErrorIcon, obj), ];
+    const items = [callback3(tmp3(7795).CircleErrorIcon, obj), ];
     const obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
@@ -48,7 +48,7 @@ function UsernameStatusMessage(arg0) {
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14006).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(14014).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -86,7 +86,7 @@ createCacheKey[0] = require("module_300");
 createCacheKey[1] = require("module_300");
 createCacheKey = { layout: null };
 createCacheKey[0] = require("module_300");
-const easingResult = LinearTransition.easing(Easing.inOut(require("module_4036").Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(require("module_4042").Easing.quad));
 const result = require("noop").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
 export const RegisterUsernameInput = function RegisterUsernameInput(setUsername) {
@@ -154,13 +154,13 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14006).NameValidationState.ERROR) {
+  if (type === tmp14(14014).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
-  const items3 = [closure_9(setUsername(7790).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7792).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj1[0] = items3;
   return tmp11(tmp12, obj1);
 };

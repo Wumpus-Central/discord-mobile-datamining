@@ -12,7 +12,7 @@ import GuildFeatures from "GuildFeatures";
 import { getPremiumGroupProductName as closure_47 } from "SubscriptionStatusTypes";
 import sum from "sum";
 import set from "createFromServer";
-import { t } from "../../_runtime/03883_t.js";
+import { t } from "../../_runtime/03902_t.js";
 import { 00038__ } from "../../_runtime/metro/00038__.js";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
@@ -179,8 +179,8 @@ function getPrice(id) {
         }
         obj5[2] = currency;
         obj3[1] = obj5;
-        const result = currency2(3962).captureBillingException(error, obj3);
-        const obj10 = currency2(3962);
+        const result = currency2(3981).captureBillingException(error, obj3);
+        const obj10 = currency2(3981);
       }
       throw error;
     } else {
@@ -191,7 +191,7 @@ function getPrice(id) {
     const _Error2 = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
-      obj2 = currency2(3962);
+      obj2 = currency2(3981);
       const obj6 = { planId: null, currency: null };
       obj6[0] = id;
       let str = currency;
@@ -303,9 +303,9 @@ function getItemPlansTotalServerPrice(items, currency, id) {
   if (null != baseSubscriptionItemForSubscriptionItems) {
     premiumType = dependencyMap3[baseSubscriptionItemForSubscriptionItems.planId].premiumType;
   }
-  let tmpResult = tmp(1926);
+  let tmpResult = tmp(1945);
   const obj2 = getNonePlanIdForIntervalType;
-  tmpResult = tmp(1926);
+  tmpResult = tmp(1945);
   const isPremiumAtLeastResult = tmpResult.isPremiumAtLeast(premiumType, closure_39.TIER_0);
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -904,10 +904,10 @@ function getPlanDescription(arg0) {
                 } else if (tmp17.PAST_DUE === CANCELED) {
                   const intl7 = tmp5(1236).intl;
                   const obj12 = { endDate: null, onClick: null };
-                  let tmp5Result = tmp5(3971);
+                  let tmp5Result = tmp5(3990);
                   obj12[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
                   obj12[1] = function onClick() {
-                    callback(3992)("https://support.discord.com/hc/articles/23082866222871");
+                    callback(4011)("https://support.discord.com/hc/articles/23082866222871");
                   };
                   return intl7.format(tmp5(1236).t["d+0vwo"], obj12);
                 } else if (!hasDiscountApplied) {
@@ -1042,10 +1042,10 @@ function getPlanDescription(arg0) {
             } else if (tmp17.PAST_DUE === CANCELED) {
               const intl15 = tmp5(1236).intl;
               const obj20 = { endDate: null, onClick: null };
-              tmp5Result = tmp5(3971);
+              tmp5Result = tmp5(3990);
               obj20[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
               obj20[1] = function onClick() {
-                callback(3992)("https://support.discord.com/hc/articles/23082866222871");
+                callback(4011)("https://support.discord.com/hc/articles/23082866222871");
               };
               return intl15.format(tmp5(1236).t["d+0vwo"], obj20);
             } else {
@@ -1120,9 +1120,9 @@ function getPlanDescription(arg0) {
         } else if (tmp17.PAST_DUE === CANCELED) {
           const intl22 = tmp5(1236).intl;
           const obj26 = { endDate: null, onClick: null };
-          obj26[0] = tmp5(3971).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
+          obj26[0] = tmp5(3990).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
           obj26[1] = function onClick() {
-            callback(3992)("https://support.discord.com/hc/articles/23082866222871");
+            callback(4011)("https://support.discord.com/hc/articles/23082866222871");
           };
           return intl22.format(tmp5(1236).t["d+0vwo"], obj26);
         } else {
@@ -1243,7 +1243,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       const tmp11 = importDefault;
       const tmp13 = t;
       obj2[0] = t(prop4).diff(subscription.currentPeriodStart, "days");
-      obj2[1] = tmp11(3883)(subscription.metadata.grace_period_expires_date);
+      obj2[1] = tmp11(3902)(subscription.metadata.grace_period_expires_date);
       return obj2;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? closure_19 : closure_30;
@@ -2588,40 +2588,40 @@ obj = {
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      hasPerkResult = tmp(1919).hasPerk(perks, tmp(1921).Perk.MONTHLY_ORBS);
-      const tmpResult = tmp(1919);
+      hasPerkResult = tmp(1938).hasPerk(perks, tmp(1940).Perk.MONTHLY_ORBS);
+      const tmpResult = tmp(1938);
     }
     return hasPerkResult;
   },
   canUseShopDiscounts(currentUser) {
     let isCrepeEnabled = apexExperiment.getIsCrepeEnabled("canUseShopDiscounts");
     if (isCrepeEnabled) {
-      let tmpResult = tmp(1919);
+      let tmpResult = tmp(1938);
       let perks;
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1921).Perk.SHOP_DISCOUNTS);
+      isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.SHOP_DISCOUNTS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13329);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13329).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13337);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13337).COLLECTIBLES, currentUser);
     }
     return isCrepeEnabled;
   },
   canUseMoreQuestOrbs(perks) {
     let isCrepeEnabled = apexExperiment.getIsCrepeEnabled("canUseMoreQuestOrbs");
     if (isCrepeEnabled) {
-      let tmpResult = tmp(1919);
+      let tmpResult = tmp(1938);
       perks = undefined;
       if (perks != null) {
         perks = perks.perks;
       }
-      isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1921).Perk.MORE_QUEST_ORBS);
+      isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.MORE_QUEST_ORBS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13329);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13329).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13337);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13337).QUEST_ORB_MULTIPLIER, perks);
     }
     return isCrepeEnabled;
   },

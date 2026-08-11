@@ -2,7 +2,7 @@
 import { useRef } from "noop";
 import processChannel from "processChannel";
 import reinjectEphemerals from "reinjectEphemerals";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { ChannelFlags } from "set";

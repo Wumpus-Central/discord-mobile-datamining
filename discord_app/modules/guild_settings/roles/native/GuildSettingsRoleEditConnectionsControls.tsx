@@ -111,15 +111,15 @@ function AndOrRadios(setPendingRoleConfigurations) {
       tmp11 = values.length < 2;
     }
     obj[2] = tmp11;
-    const items2 = [closure_10(tmp(7984).TableRadioRow, obj), ];
+    const items2 = [closure_10(tmp(7986).TableRadioRow, obj), ];
     const obj1 = { value: null, label: null, disabled: null };
     obj1[0] = tmp(5124).ConnectionConfigurationRuleOperator.AND;
     const intl3 = tmp(1236).intl;
     obj1[1] = intl3.string(tmp(1236).t.gHXS9A);
     obj1[2] = locked;
-    items2[1] = closure_10(tmp(7984).TableRadioRow, obj1);
+    items2[1] = closure_10(tmp(7986).TableRadioRow, obj1);
     obj[4] = items2;
-    return closure_11(tmp(7985).TableRadioGroup, obj);
+    return closure_11(tmp(7987).TableRadioGroup, obj);
   }
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -393,7 +393,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   obj3 = {
     handleConnectionTapped(connectionType) {
       const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId: "accessibilityRole", operator: "sr", value: "r" };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId: "accessible", operator: "d", value: "r" };
       obj[2] = arg1;
       items.push(obj);
       if (AND === guild(stateFromStoresArray[9]).ConnectionConfigurationRuleOperator.AND) {

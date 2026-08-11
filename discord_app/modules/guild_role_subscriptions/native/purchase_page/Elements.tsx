@@ -5,7 +5,7 @@ import get_ActivityIndicator from "set";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15657_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15674_registerAsset.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -118,8 +118,8 @@ export const ArrowButton = function ArrowButton(arg0) {
 };
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
   const obj = notSupported;
-  const _require = callback(importAll(14463).useSubscriptionPlan(listingId), 1)[0];
-  const obj2 = importAll(14463);
+  const _require = callback(importAll(14471).useSubscriptionPlan(listingId), 1)[0];
+  const obj2 = importAll(14471);
   const tmp2 = _require;
   const items = [addSubscriptionPlan];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_8.get(id.id));

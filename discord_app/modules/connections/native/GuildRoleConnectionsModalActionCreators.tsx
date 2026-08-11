@@ -1,5 +1,5 @@
 // discord_app/modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 const ROLE_CONNECTIONS_MODAL_KEY = "ROLE_CONNECTIONS_MODAL_KEY";
@@ -17,7 +17,7 @@ export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsMo
       }
     }
   };
-  obj.pushLazy(onClose(1988)(11043, dependencyMap.paths), obj, ROLE_CONNECTIONS_MODAL_KEY);
+  obj.pushLazy(onClose(2007)(11048, dependencyMap.paths), obj, ROLE_CONNECTIONS_MODAL_KEY);
 };
 export const makeGuildRoleConnectionsConnectAccountsActionSheetKey = function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
   return "GuildRoleConnectionsConnectAccountsActionSheet-" + id;
@@ -25,5 +25,5 @@ export const makeGuildRoleConnectionsConnectAccountsActionSheetKey = function ma
 export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(id, guildId) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { role: id, guildId };
-  obj.openLazy(asyncRequireImpl(11035, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id, obj);
+  obj.openLazy(asyncRequireImpl(11040, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id, obj);
 };

@@ -28,10 +28,8 @@ const memoResult = importAllResult.memo(function InstantInviteShareApps(onItemPr
   closure_1 = obj.useFontScale();
   const tmp = callback2();
   [arr, c2] = callback(importAllResult.useState(closure_8), 2);
-  const gesture = importAllResult.useMemo(() => {
-    const Gesture = onItemPressed(_undefined[8]).Gesture;
-    return Gesture.Native().disallowInterruption(true);
-  }, []);
+  const tmp2 = callback(importAllResult.useState(closure_8), 2);
+  const gesture = onItemPressed(5427).useNativeGesture({ disallowInterruption: true });
   const effect = importAllResult.useEffect(() => {
     Promise.all(outer1_7.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       const items = [];

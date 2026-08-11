@@ -41,7 +41,7 @@ function ObscuredView(source) {
       obj[1] = tmp11.absoluteFill;
       obj[2] = tmp8;
       obj[1] = closure_8(tmp7Result, obj);
-      tmp10Result = tmp10(tmp7(4036).View, obj);
+      tmp10Result = tmp10(tmp7(4042).View, obj);
       tmpResult = set;
     } else {
       tmp10Result = null;
@@ -86,7 +86,7 @@ let closure_12 = importAllResult.memo((onSelect) => {
   const items2 = [closure_8(onSelect(5268), obj), closure_8(ObscuredView, { source: first, index })];
   obj[7] = items2;
   obj[1] = closure_9(closure_5, obj);
-  return closure_8(onSelect(4036).View, obj);
+  return closure_8(onSelect(4042).View, obj);
 });
 let closure_13 = { code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerThumbnails.tsx");

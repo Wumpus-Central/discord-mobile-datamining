@@ -84,8 +84,8 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   obj9[1] = callback(tmp3Result, obj10);
   items2[1] = callback(closure_4, obj9);
   const obj12 = { frame: profileFrame, filterLayer: tmp10, profileThemeType: tmp11.PREVIEW, frameOrder: null, containerWidth: null, containerHeight: null };
-  tmp3Result = tmp3(8817);
-  obj12[3] = tmp6(8803).ProfileFrameLayerOrder.FRONT;
+  tmp3Result = tmp3(8823);
+  obj12[3] = tmp6(8809).ProfileFrameLayerOrder.FRONT;
   obj12[4] = result;
   obj12[5] = previewHeight - overflowTop - overflowBottom;
   items2[2] = callback(tmp3Result, obj12);

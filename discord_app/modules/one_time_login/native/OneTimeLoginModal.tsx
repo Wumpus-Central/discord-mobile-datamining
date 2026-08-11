@@ -182,13 +182,13 @@ export default function OneTimeLoginModal(token) {
   let obj = { style: memo, children: null };
   obj = { absolute: true, wide: true, tall: true, gradientOverride: table[5], mix: true, angleOverride: 0, mixAmount: null };
   obj = { dark: null };
-  obj[0] = token(4118).OverlayOpacity.LEVEL_1;
+  obj[0] = token(4123).OverlayOpacity.LEVEL_1;
   obj[6] = obj;
   const items6 = [callback(getMixedGradientColor, obj), ];
   let obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
   const tmp11 = getMixedGradientColor;
-  const items7 = [callback(callback3, { source: token(13211), style: tmp.logo }), ];
+  const items7 = [callback(callback3, { source: token(13219), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];
   let obj5 = { variant: "text-lg/semibold", children: null };
@@ -209,7 +209,7 @@ export default function OneTimeLoginModal(token) {
   obj8[1] = intl3.string(token(1236).t.FIEwfG);
   obj8[3] = callback;
   obj8[4] = tmp.link;
-  items10[1] = callback(token(8470).LinkButton, obj8);
+  items10[1] = callback(token(8476).LinkButton, obj8);
   obj6[1] = items10;
   items9[1] = callback2(callback1, obj6);
   obj1[1] = items9;

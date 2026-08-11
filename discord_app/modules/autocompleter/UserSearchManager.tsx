@@ -3,7 +3,7 @@ import { isPrivate } from "createChannelRecord";
 import createdAt from "createdAt";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserFlags } from "ME";
 import "initialize";
@@ -39,8 +39,8 @@ function getTransformedUser(author) {
           if (num == null) {
             num = 0;
           }
-          isProvisional = importAll(1384).hasFlag(num, UserFlags.PROVISIONAL_ACCOUNT);
-          const obj3 = importAll(1384);
+          isProvisional = importAll(1403).hasFlag(num, UserFlags.PROVISIONAL_ACCOUNT);
+          const obj3 = importAll(1403);
         }
       }
       obj.isProvisional = isProvisional;
@@ -57,8 +57,8 @@ function getTransformedUser(author) {
           if (num2 == null) {
             num2 = 0;
           }
-          isStaffResult = importAll(1384).hasFlag(num2, UserFlags.STAFF);
-          const obj4 = importAll(1384);
+          isStaffResult = importAll(1403).hasFlag(num2, UserFlags.STAFF);
+          const obj4 = importAll(1403);
         }
       }
       obj.isStaff = isStaffResult;

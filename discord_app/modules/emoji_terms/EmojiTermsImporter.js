@@ -1,5 +1,5 @@
 // discord_app/modules/emoji_terms/EmojiTermsImporter.js
-import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 const result = require("module_5188").fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {

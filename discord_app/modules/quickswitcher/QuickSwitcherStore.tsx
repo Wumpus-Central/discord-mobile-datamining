@@ -365,61 +365,61 @@ function handleUserSearchUpdate(arg0, str) {
         const intl6 = DOWN(1236).intl;
         formatToPlainStringResult = intl6.string(DOWN(1236).t.XFYW1o);
       }
-      arr = arr.unshift(DOWN(7308).createHeaderResult(formatToPlainStringResult));
+      arr = arr.unshift(DOWN(7309).createHeaderResult(formatToPlainStringResult));
       let items = arr;
-      const DOWNResult = DOWN(7308);
+      const DOWNResult = DOWN(7309);
     } else {
-      if (DOWN(7308).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
+      if (DOWN(7309).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
         const intl5 = DOWN(1236).intl;
-        arr = arr.unshift(DOWN(7308).createHeaderResult(intl5.string(DOWN(1236).t.W26k4V)));
+        arr = arr.unshift(DOWN(7309).createHeaderResult(intl5.string(DOWN(1236).t.W26k4V)));
         items = arr;
         items = arr;
-        const DOWNResult1 = DOWN(7308);
-      } else if (DOWN(7308).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
+        const DOWNResult1 = DOWN(7309);
+      } else if (DOWN(7309).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
         const intl4 = DOWN(1236).intl;
-        arr.unshift(DOWN(7308).createHeaderResult(intl4.string(DOWN(1236).t.zUoI5C)));
+        arr.unshift(DOWN(7309).createHeaderResult(intl4.string(DOWN(1236).t.zUoI5C)));
         items = arr;
         items = arr;
-        const DOWNResult2 = DOWN(7308);
-      } else if (DOWN(7308).AutocompleterResultTypes.GUILD === tmp7) {
+        const DOWNResult2 = DOWN(7309);
+      } else if (DOWN(7309).AutocompleterResultTypes.GUILD === tmp7) {
         const intl3 = DOWN(1236).intl;
-        arr.unshift(DOWN(7308).createHeaderResult(intl3.string(DOWN(1236).t.olADPs)));
+        arr.unshift(DOWN(7309).createHeaderResult(intl3.string(DOWN(1236).t.olADPs)));
         items = arr;
         items = arr;
-        const DOWNResult3 = DOWN(7308);
-      } else if (DOWN(7308).AutocompleterResultTypes.APPLICATION === tmp7) {
+        const DOWNResult3 = DOWN(7309);
+      } else if (DOWN(7309).AutocompleterResultTypes.APPLICATION === tmp7) {
         const intl2 = DOWN(1236).intl;
-        arr.unshift(DOWN(7308).createHeaderResult(intl2.string(DOWN(1236).t.VwK1ld)));
+        arr.unshift(DOWN(7309).createHeaderResult(intl2.string(DOWN(1236).t.VwK1ld)));
         items = arr;
         items = arr;
-        const DOWNResult4 = DOWN(7308);
-      } else if (DOWN(7308).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
+        const DOWNResult4 = DOWN(7309);
+      } else if (DOWN(7309).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
         const intl = DOWN(1236).intl;
-        arr.unshift(DOWN(7308).createHeaderResult(intl.string(DOWN(1236).t.gEp2SG)));
+        arr.unshift(DOWN(7309).createHeaderResult(intl.string(DOWN(1236).t.gEp2SG)));
         items = arr;
         items = arr;
-        const DOWNResult5 = DOWN(7308);
+        const DOWNResult5 = DOWN(7309);
       } else {
-        const found = arr.filter((type) => type.type === callback(7308).AutocompleterResultTypes.GAME_PROFILE);
+        const found = arr.filter((type) => type.type === callback(7309).AutocompleterResultTypes.GAME_PROFILE);
         const substr = found.slice(0, 3);
         items = [];
-        HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(7308).AutocompleterResultTypes.GAME_PROFILE), 0));
+        HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(7309).AutocompleterResultTypes.GAME_PROFILE), 0));
       }
       if (str !== str) {
         const _Math = Math;
         closure_29 = Math.max(str.length, closure_29);
-        str = DOWN(7308).findNextSelectedResult;
-        DOWN = DOWN(7308).FindResultDirections.DOWN;
+        str = DOWN(7309).findNextSelectedResult;
+        DOWN = DOWN(7309).FindResultDirections.DOWN;
         let closure_23 = str(DOWN, -1, items);
-        const DOWNResult6 = DOWN(7308);
+        const DOWNResult6 = DOWN(7309);
       } else {
         let tmp29 = null != tmp27;
         if (tmp29) {
-          tmp29 = tmp27.type === DOWN(7308).AutocompleterResultTypes.HEADER;
+          tmp29 = tmp27.type === DOWN(7309).AutocompleterResultTypes.HEADER;
         }
         if (tmp29) {
-          closure_23 = DOWN(7308).findNextSelectedResult(DOWN(7308).FindResultDirections.DOWN, closure_23, items);
-          const DOWNResult7 = DOWN(7308);
+          closure_23 = DOWN(7309).findNextSelectedResult(DOWN(7309).FindResultDirections.DOWN, closure_23, items);
+          const DOWNResult7 = DOWN(7309);
         }
       }
       quickSwitcherStoreClass.emitChange();
@@ -583,10 +583,10 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
             store.setOptions(obj, true);
           }
         }
-        if (queryMode === tmp7(7308).AutocompleterResultTypes.VOICE_CHANNEL) {
+        if (queryMode === tmp7(7309).AutocompleterResultTypes.VOICE_CHANNEL) {
           store.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
-          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "Array" }, true);
+          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "a" }, true);
         }
         tmp7 = require;
       }

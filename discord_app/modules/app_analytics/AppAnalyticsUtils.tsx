@@ -13,7 +13,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import sortActivity from "sortActivity";
 import createRTCConnection from "createRTCConnection";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_21 from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -58,7 +58,7 @@ function collectGuildAnalyticsMetadata(guildId) {
       obj[6] = num;
       let NONE = store3.getGuildPermissions(guild);
       if (NONE == null) {
-        NONE = importAll(3934).NONE;
+        NONE = importAll(3953).NONE;
       }
       obj[7] = String(NONE);
       const features = guild.features;
@@ -95,11 +95,11 @@ function collectChannelAnalyticsMetadata(channel) {
       if (null != guildId) {
         let NONE2 = store3.getChannelPermissions(channel);
         if (NONE2 == null) {
-          NONE2 = importAll(3934).NONE;
+          NONE2 = importAll(3953).NONE;
         }
         let NONE = NONE2;
       } else {
-        NONE = importAll(3934).NONE;
+        NONE = importAll(3953).NONE;
       }
       obj[3] = String(NONE);
       obj[4] = false;

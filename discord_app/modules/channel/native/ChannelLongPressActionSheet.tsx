@@ -11,7 +11,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import closure_19 from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";

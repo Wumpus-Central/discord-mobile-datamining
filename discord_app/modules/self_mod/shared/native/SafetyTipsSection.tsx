@@ -20,7 +20,7 @@ export default function SafetyTipsContainer(children) {
   let showHeader = children.showHeader;
   const tmp = createCacheKey();
   let obj = { style: tmp.image, children: null };
-  obj[1] = callback(safetyTips(6027).SafetyBookletSpotIllustration, {});
+  obj[1] = callback(safetyTips(6029).SafetyBookletSpotIllustration, {});
   const items = [callback(View, obj), , ];
   if (showHeader) {
     obj = { style: null, variant: "heading-xl/semibold", children: null };

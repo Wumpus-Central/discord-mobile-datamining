@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
 import noop from "noop";
-import { View } from "get ActivityIndicator";
+import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import { createElement } from "noop";
@@ -8,6 +8,7 @@ import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
+import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let closure_6;
@@ -26,7 +27,7 @@ function AnimatedContainer(scale) {
   let sharedValue2;
   let sharedValue3;
   ({ shadow, children } = scale);
-  const tmp3 = callback3(translateX(translateY[7])("GroupAvatar"));
+  const tmp3 = callback2(translateX(translateY[7])("GroupAvatar"));
   let obj = scale(translateY[10]);
   let items = [sharedValue1];
   stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
@@ -119,17 +120,28 @@ function AnimatedContainer(scale) {
   return sharedValue2(tmp(translateY[11]).View, { style, children });
 }
 function GroupMemberCount(count) {
-  const tmp = callback3(useIsMobileVisualRefreshExperimentEnabled("GroupAvatar"));
-  let obj = { style: tmp.avatarWrapper, children: null };
-  obj = { style: tmp.overflowCount, children: callback2(Text.Text, { variant: "text-sm/semibold", children: items }) };
-  items = ["+", count.count];
-  obj[1] = callback(View, obj);
-  return callback(View, obj);
+  count = count.count;
+  let obj = apexExperiment;
+  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GroupAvatar");
+  const tmp3 = callback2(useIsMobileVisualRefreshExperimentEnabled("GroupAvatar"));
+  obj = { style: tmp3.avatarWrapper, children: null };
+  obj = { style: tmp3.overflowCount, children: null };
+  let str = "text-sm/semibold";
+  if (manaTypeConsolidationExperiment) {
+    str = "text-sm/semibold";
+    if (count < 100) {
+      str = "experimental/body-md/semibold";
+    }
+  }
+  const items = ["+", count];
+  obj[1] = closure_7(Text.Text, { variant: str, children: items });
+  obj[1] = closure_6(View, obj);
+  return closure_6(View, obj);
 }
 function GroupMemberAvatar(guildId) {
   guildId = guildId.guildId;
   const user = guildId.user;
-  const tmp3 = callback3(user(1348)("GroupAvatar"));
+  const tmp3 = callback2(user(1367)("GroupAvatar"));
   const items = [guildId, user];
   const memo = React.useMemo(() => {
     let avatarSource;
@@ -259,7 +271,7 @@ export default function GroupAvatar(users) {
   let c4;
   let num;
   let closure_6;
-  let tmp3 = callback3(guildId(ref[7])("GroupAvatar"));
+  let tmp3 = callback2(guildId(ref[7])("GroupAvatar"));
   let obj = users(ref[8]);
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme } = themeContext);

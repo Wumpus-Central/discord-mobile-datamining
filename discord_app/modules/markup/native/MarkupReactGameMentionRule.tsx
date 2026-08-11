@@ -55,7 +55,7 @@ export default function MarkupGameMention(state) {
     if (tmp11) {
       tmp11 = "" !== tmp8Result;
     }
-    let tmp17Result = callback(tmp2(7947).UnknownGameIcon, obj);
+    let tmp17Result = callback(tmp2(7949).UnknownGameIcon, obj);
     if (tmp11) {
       const obj1 = { style: null, source: null };
       obj1[0] = tmp.icon;

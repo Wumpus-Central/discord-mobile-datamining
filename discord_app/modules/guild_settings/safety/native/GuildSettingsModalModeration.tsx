@@ -125,7 +125,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14084).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14092).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj[5] = verificationLevelOptions.map((arg0) => {
     let color;
     let desc;
@@ -154,7 +154,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj[3] = tmp5;
     return outer1_10(self(outer1_2[18]).TableRadioRow, obj, "level-" + value);
   });
-  return callback(self(7985).TableRadioGroup, obj, "level-section");
+  return callback(self(7987).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -172,7 +172,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   };
   const obj3 = combined;
   const features = guild.features;
-  const contentFilterOptions = self(14084).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14092).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
     let desc;
     let disabled;
@@ -188,7 +188,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj[3] = tmp2;
     return outer1_10(self(outer1_2[18]).TableRadioRow, obj, "filter-" + value);
   });
-  return callback(self(7985).TableRadioGroup, obj, "filter-section");
+  return callback(self(7987).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   let guild;
@@ -238,7 +238,7 @@ export default function ConnectedGuildSettingsModalModeration(contentContainerSt
   let hasChanges;
   let submitting;
   let guild;
-  let obj = guild(1480);
+  let obj = guild(1499);
   const navigation = obj.useNavigation();
   const items = [handleFormInit];
   const stateFromStoresObject = guild(589).useStateFromStoresObject(items, () => {

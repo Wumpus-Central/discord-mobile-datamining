@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx
 import noop from "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import { RelationshipTypes } from "ME";
@@ -17,7 +17,7 @@ export default function IgnoredUserRequestsScreen(navigation) {
   let callback;
   analyticsLocations = stateFromStoresArray(stateFromStores[6])(stateFromStoresArray(stateFromStores[7]).FRIEND_REQUESTS).analyticsLocations;
   let obj = analyticsLocations(stateFromStores[8]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStores[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).ignoredUserIds);
   const tmp = stateFromStores;
   const tmp2 = stateFromStoresArray(stateFromStores[6]);

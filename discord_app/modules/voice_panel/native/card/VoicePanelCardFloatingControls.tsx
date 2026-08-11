@@ -11,10 +11,10 @@ import { VOICE_PANEL_CARD_INNER_PADDING as closure_12 } from "CARD_SIZE";
 import { ThemeTypes } from "ME";
 import ParticipantTypes from "ParticipantTypes";
 import jsxProd from "registerAsset";
-import importDefaultResult from "module_4036";
+import importDefaultResult from "module_4042";
 import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "module_4036";
-import { registerAsset } from "../../../../../_runtime/16183_registerAsset.js";
+import importDefaultResult1 from "module_4042";
+import { registerAsset } from "../../../../../_runtime/16199_registerAsset.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
@@ -35,7 +35,7 @@ function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
   let controlsSpecs;
   controlsSpecs = importAllResult.useContext(dismissPanel).controlsSpecs;
-  let obj = controlsSpecs(4036);
+  let obj = controlsSpecs(4042);
   const fn = function o() {
     const tmp = controlsSpecs.get().mode === outer1_11.HIDDEN;
     let num = 4;
@@ -57,11 +57,11 @@ function StreamIcon(voicePlatform) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let source = registerAsset;
   if (voicePlatform === constants2.XBOX) {
-    source = tmp(16228);
+    source = tmp(16242);
   } else if (voicePlatform === tmp6.MOBILE) {
-    source = tmp(10945);
+    source = tmp(10950);
   } else if (voicePlatform === tmp6.QUEST) {
-    source = tmp(16229);
+    source = tmp(16243);
   }
   const style = [callback2(useIsMobileVisualRefreshExperimentEnabled("VoicePanelCardFloatingControls")).iconWithoutBackground, animatedStyle];
   return callback(closure_19, { source, style });
@@ -74,24 +74,24 @@ function AnimatedLabelIcon(icon) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
-  } else if (tmp4(16181).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
+  } else if (tmp4(16197).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
     obj = { style: null, hitSlop: 12, onPress: null, children: null };
     obj[0] = tmp3.speakerMuteIcon;
     obj[2] = icon.onPress;
     const obj1 = { style: null };
     obj1[0] = tmp3.iconWithoutBackground;
-    obj[3] = callback(tmp4(10854).VoiceXIcon, obj1);
+    obj[3] = callback(tmp4(10859).VoiceXIcon, obj1);
     return callback(Pressable, obj);
-  } else if (tmp4(16181).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
+  } else if (tmp4(16197).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
     const obj2 = { style: null, onPress: null, children: null };
     obj2[0] = tmp3.iconContainer;
     obj2[1] = icon.onPress;
     const obj3 = { style: null, state: null };
     obj3[0] = tmp3.icon;
     obj3[1] = icon.videoIconState;
-    obj2[2] = callback(tmp4(9178).VideoIcon, obj3);
+    obj2[2] = callback(tmp4(9184).VideoIcon, obj3);
     return callback(Pressable, obj2);
-  } else if (tmp4(16181).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
+  } else if (tmp4(16197).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp3.iconContainer;
     const obj5 = { onPress: null, hitSlop: 12, children: null };
@@ -99,16 +99,16 @@ function AnimatedLabelIcon(icon) {
     const obj6 = { style: null, state: null, alwaysWhite: true };
     obj6[0] = tmp3.icon;
     obj6[1] = icon.muteDeafenIconState;
-    obj5[2] = callback(tmp4(9178).MuteDeafenIcon, obj6);
+    obj5[2] = callback(tmp4(9184).MuteDeafenIcon, obj6);
     obj4[1] = callback(Pressable, obj5);
     return callback(tmp(5781), obj4);
-  } else if (tmp4(16181).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
+  } else if (tmp4(16197).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
     obj = { style: null, onPress: null, children: null };
     obj[0] = tmp3.iconContainer;
     obj[1] = icon.onPress;
     const obj7 = { size: "xs", color: null };
     obj7[1] = tmp(712).colors.TEXT_FEEDBACK_WARNING;
-    obj[2] = callback(tmp4(7793).CircleErrorIcon, obj7);
+    obj[2] = callback(tmp4(7795).CircleErrorIcon, obj7);
     return callback(Pressable, obj);
   }
 }
@@ -117,8 +117,8 @@ let c3 = importAllResult;
 ({ MODE_CHANGE_PHYSICS: c9, VoicePanelModes: c10 } = VoicePanelModes);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = ParticipantTypes);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-let closure_19 = require("module_4036").createAnimatedComponent(require("Button").Icon);
-let closure_20 = require("module_4036").createAnimatedComponent(Pressable);
+let closure_19 = require("module_4042").createAnimatedComponent(require("Button").Icon);
+let closure_20 = require("module_4042").createAnimatedComponent(Pressable);
 let c21 = 28;
 let closure_22 = createCacheKey.createStyles((arg0) => {
   let obj = { labelPositionContainer: { position: "absolute", left: 8, right: 8, bottom: 8, justifyContent: "center", alignItems: "center", marginHorizontal: 8 }, labelOuterContainer: null, initialIcons: null, icon: null, iconWithoutBackground: null, iconContainer: null, speakerMuteIcon: null, floatingContainer: null, floatingText: null, ringingIconContainer: null, ringingIcon: null, secureFramesIcon: null };
@@ -158,8 +158,8 @@ let closure_27 = importAllResult.memo((participant) => {
   controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = importAllResult.useContext(guildId(11645)).guildId;
-  let obj = controlsHidden(4036);
+  guildId = importAllResult.useContext(guildId(11648)).guildId;
+  let obj = controlsHidden(4042);
   const fn = function n() {
     const value = controlsHidden.get();
     if (value) {
@@ -205,13 +205,13 @@ let closure_27 = importAllResult.memo((participant) => {
     }
   }, items);
   obj = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
-  obj[0] = guildId(16230);
+  obj[0] = guildId(16244);
   obj[1] = callback;
   obj[2] = animatedStyle;
   obj[3] = layout;
   const tmp3 = closure_16;
-  const tmp4 = guildId(16110);
-  const result = controlsHidden(16179).isStableActivityParticipant(participant);
+  const tmp4 = guildId(16127);
+  const result = controlsHidden(16195).isStableActivityParticipant(participant);
   const intl = controlsHidden(1236).intl;
   const string = intl.string;
   const t = controlsHidden(1236).t;

@@ -174,7 +174,7 @@ function transformOutboundVideoStats(substreams, id) {
     const substreams1 = substreams.substreams;
     const substreams2 = substreams.substreams;
     const reduced = substreams1.reduce((arg0, rtpStats) => arg0 + callback(rtpStats.rtpStats), 0);
-    let obj = { type: "video", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, keyFrameInterval: null, bytesSent: null, packetsSent: null, packetsLost: null, fractionLost: null, bitrate: null, bitrateTarget: null, encoderImplementationName: null, encodeUsage: null, averageEncodeTime: null, resolution: null, framesSent: null, keyFramesEncoded: null, framesEncoded: null, frameRateInput: null, frameRateEncode: null, firCount: null, nackCount: null, pliCount: null, qpSum: null, bandwidthLimitedResolution: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, cpuLimitedResolution: null, encoderQualityVmaf: null, encoderQualityPsnr: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, filter: null, passthroughCount: null, encryptSuccessCount: null, encryptFailureCount: null, encryptDuration: null, encryptAttempts: null, encryptMaxAttempts: null, encryptMissingKeyCount: null, hqSimulcastStreamEncoded: null, lqSimulcastStreamEncoded: null, bandwidthLimitedFrameRate: null, freezeCount: null, totalFreezesDuration: null, totalFramesDuration: null, videoEntropy: null, consecutiveStaticColorFrames: null, minResolutionWidth: null, minResolutionHeight: null, reconFramesRequested: null, reconFramesSuccessful: null, reconFramesFailed: null };
+    let obj = { type: "video", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, keyFrameInterval: null, bytesSent: null, packetsSent: null, packetsLost: null, fractionLost: null, bitrate: null, bitrateTarget: null, encoderImplementationName: null, encodeUsage: null, averageEncodeTime: null, resolution: null, framesSent: null, keyFramesEncoded: null, framesEncoded: null, frameRateInput: null, frameRateEncode: null, firCount: null, nackCount: null, pliCount: null, qpSum: null, bandwidthLimitedResolution: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, cpuLimitedResolution: null, encoderQualityVmaf: null, encoderQualityPsnr: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, filter: null, passthroughCount: null, encryptSuccessCount: null, encryptFailureCount: null, encryptDuration: null, encryptAttempts: null, encryptMaxAttempts: null, encryptMissingKeyCount: null, hqSimulcastStreamEncoded: null, lqSimulcastStreamEncoded: null, bandwidthLimitedFrameRate: null, freezeCount: null, totalFreezesDuration: null, totalFramesDuration: null, videoEntropy: null, consecutiveStaticColorFrames: null, minResolutionWidth: null, minResolutionHeight: null };
     obj[1] = found.ssrc;
     const reduced1 = substreams2.reduce((arg0, rtpStats) => {
       rtpStats = rtpStats.rtpStats;
@@ -365,24 +365,6 @@ function transformOutboundVideoStats(substreams, id) {
       minResolutionHeight = encoderQualityStats14.minResolutionHeight;
     }
     obj[55] = minResolutionHeight;
-    const encoderQualityStats15 = found.encoderQualityStats;
-    let reconFramesRequested;
-    if (encoderQualityStats15 != null) {
-      reconFramesRequested = encoderQualityStats15.reconFramesRequested;
-    }
-    obj[56] = reconFramesRequested;
-    const encoderQualityStats16 = found.encoderQualityStats;
-    let prop3;
-    if (encoderQualityStats16 != null) {
-      prop3 = encoderQualityStats16.reconFramesSuccessful;
-    }
-    obj[57] = prop3;
-    const encoderQualityStats17 = found.encoderQualityStats;
-    let reconFramesFailed;
-    if (encoderQualityStats17 != null) {
-      reconFramesFailed = encoderQualityStats17.reconFramesFailed;
-    }
-    obj[58] = reconFramesFailed;
     return obj;
   }
 }

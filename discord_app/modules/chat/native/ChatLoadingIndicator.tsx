@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/ChatLoadingIndicator.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_4036";
+import importAllResult from "module_4042";
 import { View } from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -237,7 +237,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return isStaffResult;
   });
-  let obj2 = stateFromStores(4036);
+  let obj2 = stateFromStores(4042);
   const fn = function t() {
     let obj = { transform: null };
     if (stateFromStores) {
@@ -265,7 +265,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4036).withRepeat, withSequence: stateFromStores(4036).withSequence, withTiming: stateFromStores(4304).withTiming, Easing: stateFromStores(4036).Easing };
+  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4042).withRepeat, withSequence: stateFromStores(4042).withSequence, withTiming: stateFromStores(4304).withTiming, Easing: stateFromStores(4042).Easing };
   fn.__closure = obj;
   fn.__workletHash = 17454673879926;
   fn.__initData = closure_19;

@@ -61,7 +61,7 @@ function _handleInteractionModalCreate() {
             const obj3 = { type: "interaction_modal", application_id: null };
             obj3[1] = lib.application.id;
             callback(698).track(constants.OPEN_MODAL, obj3);
-            const AndroidPullModeRenderingExperiment = lib(1895).AndroidPullModeRenderingExperiment;
+            const AndroidPullModeRenderingExperiment = lib(1914).AndroidPullModeRenderingExperiment;
             if (AndroidPullModeRenderingExperiment.getCurrentConfig().treatmentId >= 2) {
               callback = (function getInteractionModalDebugData(closure_0) {
                 interactionDebugContext = interactionDebugContext.getInteractionDebugContext(closure_0.nonce);

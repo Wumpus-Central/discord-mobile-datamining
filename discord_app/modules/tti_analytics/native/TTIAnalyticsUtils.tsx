@@ -182,7 +182,7 @@ function _trackAppUIViewedAsync() {
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", handleClearCaches);
             const obj8 = callback2(10);
-            callback(7134).ttiRecorded(getHash);
+            callback(7135).ttiRecorded(getHash);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -204,7 +204,7 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F120016 */ function() { ... });
+                  callback(9).setTTICallback(/* F120113 */ function() { ... });
                   callback3();
                   let c25 = null;
                 }, 15 * callback(687).Millis.SECOND);
@@ -458,7 +458,7 @@ function _trackAppUIViewed() {
           obj4[0] = arg1;
           return obj4;
         } else {
-          const cumulativeCPUUsage = callback(7135).getCumulativeCPUUsage();
+          const cumulativeCPUUsage = callback(7136).getCumulativeCPUUsage();
           let usage;
           if (cumulativeCPUUsage != null) {
             usage = cumulativeCPUUsage.usage;
@@ -509,7 +509,7 @@ function _trackAppUIViewed() {
             };
             obj4.openLazy(obj5);
           }
-          const obj14 = callback(7135);
+          const obj14 = callback(7136);
           if (obj7.runningTTIAutomation()) {
             (function logToDevice(json) {
               let obj = {};

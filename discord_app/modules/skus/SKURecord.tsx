@@ -3,7 +3,7 @@ import "toJS";
 import createExecutable from "createExecutable";
 import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "set";
 import ME from "ME";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { getPricesFromServer } from "utils/getPricesFromServer.tsx";
 import { transformProfileEffectKeyFrameFromServer } from "utils/transformSKUTenantMetadata.tsx";
@@ -289,8 +289,8 @@ prototype["isPremiumPerk"] = function isPremiumPerk() {
   if (premium) {
     let hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp(1384).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
-      const tmpResult = tmp(1384);
+      hasFlagResult = tmp(1403).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
+      const tmpResult = tmp(1403);
     }
     premium = hasFlagResult;
     const obj = hasFlag;

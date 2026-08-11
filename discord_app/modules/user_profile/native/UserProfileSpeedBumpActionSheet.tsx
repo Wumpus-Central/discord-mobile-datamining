@@ -9,7 +9,7 @@ import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY";
 import ME from "ME";
 import jsxProd from "QUICK_SWITCHER";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08787_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08793_registerAsset.js";
 
 let c10;
 let closure_12;

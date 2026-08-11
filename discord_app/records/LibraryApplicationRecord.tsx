@@ -3,7 +3,7 @@ import "toJS";
 import addApplication from "addApplication";
 import createFromServer from "createFromServer";
 import ME from "ME";
-import { t } from "../../_runtime/03883_t.js";
+import { t } from "../../_runtime/03902_t.js";
 
 let c5;
 let closure_6;
@@ -78,7 +78,7 @@ prototype["getFlags"] = function getFlags() {
   return this.flags;
 };
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return importAll(1384).hasFlag(this.flags, arg0);
+  return importAll(1403).hasFlag(this.flags, arg0);
 };
 prototype["isHidden"] = function isHidden() {
   return this.hasFlag(closure_5.HIDDEN);

@@ -60,16 +60,16 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
       const intl2 = tmp7(1236).intl;
       obj = { duration: null, timestamp: null };
       obj[0] = tmp6;
-      let tmp7Result = tmp7(3971);
+      let tmp7Result = tmp7(3990);
       obj[1] = tmp7Result.calendarFormat(message.timestamp);
       formatToPlainStringResult = intl2.formatToPlainString(tmp7(1236).t.SBDnp1, obj);
     } else {
-      tmp7Result = tmp7(3971);
+      tmp7Result = tmp7(3990);
       formatToPlainStringResult = tmp7Result.calendarFormat(message.timestamp);
     }
     const author = message.author;
-    mapped = [tmp7(1419).ensureAvatarSource(author.getAvatarSource(undefined)).uri];
-    const tmp7Result1 = tmp7(1419);
+    mapped = [tmp7(1438).ensureAvatarSource(author.getAvatarSource(undefined)).uri];
+    const tmp7Result1 = tmp7(1438);
   }
   obj = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
   timestamp = message.timestamp;

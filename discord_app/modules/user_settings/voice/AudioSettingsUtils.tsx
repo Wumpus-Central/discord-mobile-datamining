@@ -6,9 +6,9 @@ let result = require("AudioSettingsDefaultVolumes").fileFinishedImporting("modul
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9158).AudioSettingsDefaultVolumes.STREAM;
+    USER = tmp(9164).AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9158).AudioSettingsDefaultVolumes.USER;
+    USER = tmp(9164).AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
   let tmpResult = tmp(4751);

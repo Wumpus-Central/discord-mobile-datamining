@@ -31,9 +31,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = createCacheKey();
-  let obj = quest(14368);
+  let obj = quest(14376);
   quest = obj.useVideoQuestModalContext().quest;
-  let obj1 = quest(10460);
+  let obj1 = quest(10465);
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -45,15 +45,15 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     const result = quest(outer1_2[8]).parseMinutesAndSecondsFromSeconds(tmp.duration - tmp.timestampSec);
     const obj2 = quest(outer1_2[8]);
     return quest(outer1_2[8]).formatWatchTaskTime(result.minutes, result.seconds);
-  }, quest(3914).shallow);
+  }, quest(3933).shallow);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(10587).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
-    const tmp3Result = tmp3(10587);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(10592).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const tmp3Result = tmp3(10592);
   }
   obj = { style: items, children: null };
   items = [tmp2.videoContentHeaderWrapper, style];
@@ -83,7 +83,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj3[4] = gamePublisher;
   items1[1] = closure_5(quest(4299).Text, obj3);
   obj[1] = items1;
-  const items3 = [closure_6(View, obj), closure_5(questTaskDetails(14391), { iconColor: closeButtonIconColor, onClose })];
+  const items3 = [closure_6(View, obj), closure_5(questTaskDetails(14399), { iconColor: closeButtonIconColor, onClose })];
   obj[1] = items3;
   return closure_6(View, obj);
 };

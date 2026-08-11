@@ -1,14 +1,14 @@
 // discord_app/modules/messages/validateJumpWithAlert.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { Permissions } from "ME";
 import { set } from "../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { isSpamSupported } from "isSpam.tsx";
 
 const require = arg1;
-const result = require("upsertRelationship").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
 
 export default function validateJumpWithAlert(author) {
   let obj = blockedForMessage;

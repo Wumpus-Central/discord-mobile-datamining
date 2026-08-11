@@ -155,7 +155,7 @@ function MemberJoinDates(userId) {
   const items3 = [callback(Heading, obj), ];
   obj = { style: items4, children: null };
   items4 = [callback3().memberJoinDates, { columnGap }];
-  obj1 = { themeType, icon: callback(tmp4(9533).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  obj1 = { themeType, icon: callback(tmp4(9539).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1236).intl;
   obj1[2] = intl2.formatToPlainString(userId(1236).t["9t7w53"], { date: createdAtDate });
   obj1[3] = createdAtDate;

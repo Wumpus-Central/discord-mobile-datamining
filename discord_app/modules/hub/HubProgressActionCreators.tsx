@@ -7,7 +7,7 @@ import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActio
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
-export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, INVITE_USER) {
+export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, JOIN_GUILD) {
   if (null != guildId) {
     guild = guild.getGuild(guildId);
     let hasItem = null != guild;
@@ -16,8 +16,8 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
       hasItem = features.has(GuildFeatures.HUB);
     }
     if (hasItem) {
-      const items = [INVITE_USER];
-      const result = items(1355).updateUserGuildSettings(guildId, (hubProgress) => {
+      const items = [JOIN_GUILD];
+      const result = items(1374).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
           let tmp = item10008;
@@ -33,8 +33,8 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           continue;
         }
         return flag;
-      }, items(1355).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      const obj = items(1355);
+      }, items(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      const obj = items(1374);
     }
   }
 };

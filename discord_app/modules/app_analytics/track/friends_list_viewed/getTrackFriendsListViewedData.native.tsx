@@ -3,7 +3,7 @@ import { useContactSyncStore } from "setStoredContacts";
 import initialize from "initialize";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import set from "set";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import ME from "ME";
 import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";

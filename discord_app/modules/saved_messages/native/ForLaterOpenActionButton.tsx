@@ -26,7 +26,7 @@ function BadgedIcon(arg0) {
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4267).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(10276).BookmarkIcon;
+    BookmarkIcon = tmp4(10281).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];
@@ -56,10 +56,10 @@ function BadgedIcon(arg0) {
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { shape: require("SolidCutout").CutoutShape.Circle, x: require("getIconSize").ICON_SIZE.sm - 9, y: -1, size: 10 };
+let obj = { shape: require("SolidCutout").CutoutShape.Circle, x: require("getIconSize").ICON_SIZE.sm - 7, y: require("getIconSize").ICON_SIZE.sm - 8, size: 10 };
 obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
 obj[1] = { width: require("getIconSize").ICON_SIZE.sm, height: require("getIconSize").ICON_SIZE.sm, position: "relative" };
-createCacheKey = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: require("Themes").radii.lg, right: 1, top: 0.7 };
+createCacheKey = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: require("Themes").radii.lg, right: -2, bottom: -0.5 };
 obj[2] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
 let obj1 = { width: require("getIconSize").ICON_SIZE.sm, height: require("getIconSize").ICON_SIZE.sm, position: "relative" };

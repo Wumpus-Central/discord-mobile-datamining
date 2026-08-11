@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 
 let require = arg1;
 const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");

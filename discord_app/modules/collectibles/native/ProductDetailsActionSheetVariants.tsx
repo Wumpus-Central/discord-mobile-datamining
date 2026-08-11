@@ -73,7 +73,7 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
   ({ product, selectedVariantIndex } = onVariantSelect);
   onVariantSelect = onVariantSelect.onVariantSelect;
   const tmp = createCacheKey();
-  let obj = selectedVariantIndex(7012);
+  let obj = selectedVariantIndex(7015);
   let tmp5Result = null;
   if (obj.getIsVariantProduct(product)) {
     obj = { style: null, children: null };

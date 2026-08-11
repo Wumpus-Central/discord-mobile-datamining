@@ -66,7 +66,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
   const tmp = createCacheKey();
   dependencyMap = tmp;
   callback = tmp2;
-  let obj = channelId(1480);
+  let obj = channelId(1499);
   navigation = obj.useNavigation();
   let obj1 = navigation;
   let tmp6 = null;
@@ -229,7 +229,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "Promise" });
+      setOptions({ headerRight: "r" });
     }
   }, items5);
   obj = { style: tmp.container, children: null };
@@ -264,7 +264,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
           usableCustomEmojiById(null);
           callback("");
         };
-        obj5[2] = tmp27(tmp3(5996).CircleXIcon, { size: "xs" });
+        obj5[2] = tmp27(tmp3(5998).CircleXIcon, { size: "xs" });
         let tmp27Result = tmp27(tmp3(4846).PressableOpacity, obj5);
       } else {
         tmp27Result = null;
@@ -346,8 +346,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
       const obj15 = { id: null, animated: null, size: null };
       ({ id: obj11[0], animated: obj11[1] } = stateFromStores);
       obj15[2] = closure_8;
-      emojiURL = tmp31(1416).getEmojiURL(obj15);
-      const tmp31Result = tmp31(1416);
+      emojiURL = tmp31(1435).getEmojiURL(obj15);
+      const tmp31Result = tmp31(1435);
     }
     obj14[2] = emojiURL;
     let str2;
@@ -362,5 +362,5 @@ export default function ChannelSettingsEditForumTag(channelId) {
     tmp31 = tag;
     const tmp32 = tag(5360);
   }
-  tmp27Result1 = tmp27(tmp3(7655).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(7657).ReactionIcon, {});
 };

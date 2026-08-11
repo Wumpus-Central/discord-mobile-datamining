@@ -33,15 +33,15 @@ function useDeliveredDockCreative() {
     let questToDeliverForPlacement;
     let quests;
     ({ quests, questToDeliverForPlacement } = initializeState);
-    let questForPlacement = adDecisionForPlacement(7158).getQuestForPlacement(quests, questToDeliverForPlacement, adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    let questForPlacement = adDecisionForPlacement(7159).getQuestForPlacement(quests, questToDeliverForPlacement, adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
     if (questForPlacement == null) {
       questForPlacement = null;
     }
     return questForPlacement;
   });
   const obj3 = adDecisionForPlacement(589);
-  adDecisionForPlacement = adDecisionForPlacement(14357).useAdDecisionForPlacement(adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
-  const obj4 = adDecisionForPlacement(14357);
+  adDecisionForPlacement = adDecisionForPlacement(14365).useAdDecisionForPlacement(adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
+  const obj4 = adDecisionForPlacement(14365);
   const items2 = [initializeState];
   const items3 = [adDecisionForPlacement];
   if (obj.useConfig({ location: "QuestMobileDock" }).enableNewRequestBehavior) {
@@ -68,7 +68,7 @@ function useDeliveredDockCreative() {
     if (!tmp2Result.isQuestExpired(stateFromStores1)) {
       tmp6 = stateFromStores1;
     }
-    tmp2Result = tmp2(7158);
+    tmp2Result = tmp2(7159);
   }
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
@@ -100,7 +100,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7158);
+    let tmpResult = tmp(7159);
     isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5164).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
@@ -110,14 +110,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10460);
+  tmpResult = tmp(10465);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7188).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7188).AdCreativeType.QUEST === type) {
+    if (tmp(7189).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7189).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;

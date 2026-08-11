@@ -1,6 +1,6 @@
 // discord_app/stores/native/NUFStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { PersistedStore } from "initialize";
 
 function handleCacheOrSocketLoaded() {
@@ -41,8 +41,8 @@ class NUFStore extends PersistedStore {
 }
 const prototype = NUFStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(upsertRelationship, createGuildRecordFromRust);
-  const items = [upsertRelationship, createGuildRecordFromRust];
+  this.waitFor(markAllUserIdListsStale, createGuildRecordFromRust);
+  const items = [markAllUserIdListsStale, createGuildRecordFromRust];
   this.syncWith(items, handleUpdate);
 };
 prototype["getState"] = function getState() {

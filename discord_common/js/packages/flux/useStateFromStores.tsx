@@ -24,7 +24,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
   let callback2;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "Boolean", state: "add" };
+    const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "Boolean", state: "call" };
     obj[0] = items;
     obj[1] = tmp;
     obj[2] = getCurrentRestrictedHoursState;

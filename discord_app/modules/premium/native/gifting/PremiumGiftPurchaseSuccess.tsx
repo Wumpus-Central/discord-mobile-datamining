@@ -33,7 +33,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let giftCodeURL;
   let tmp = createCacheKey();
-  let obj = giftCodeRecord(9611);
+  let obj = giftCodeRecord(9616);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
   let obj1 = giftCodeRecord(4538);
@@ -44,12 +44,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   if (null != giftCodeRecord.subscriptionPlanId) {
     let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    subscriptionPlanId = tmp2(3947).getPlanIdForPremiumType(premiumType, planInterval);
-    const tmp2Result = tmp2(3947);
+    subscriptionPlanId = tmp2(3966).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(3966);
   }
-  let obj3 = giftCodeURL(3947);
+  let obj3 = giftCodeURL(3966);
   const tierDisplayNameByPlanId = obj3.getTierDisplayNameByPlanId(subscriptionPlanId);
-  let obj4 = giftCodeURL(3947);
+  let obj4 = giftCodeURL(3966);
   const items = [giftCodeRecord, giftCodeURL];
   obj = { children: null };
   const callback = React.useCallback(() => {
@@ -63,7 +63,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     tmp = giftCodeRecord;
     const result = giftCodeRecord(outer1_2[18]).presentCopiedToClipboard();
   }, items);
-  obj[0] = callback(giftCodeURL(9585), { giftStyle });
+  obj[0] = callback(giftCodeURL(9590), { giftStyle });
   const items1 = [callback(View, obj), , , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1236).intl;
@@ -87,7 +87,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const obj5 = { text: giftCodeURL, icon: null, iconPosition: "end", onPress: null };
   obj5[1] = giftCodeURL(4252);
   obj5[3] = callback;
-  items2[1] = callback(giftCodeRecord(8663).InputButton, obj5);
+  items2[1] = callback(giftCodeRecord(8669).InputButton, obj5);
   obj3[1] = items2;
   items1[3] = closure_10(View, obj3);
   const obj6 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };

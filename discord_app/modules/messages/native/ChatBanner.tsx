@@ -229,7 +229,7 @@ function NewMessagesChatBar(channel) {
         obj = { section: outer1_11.NEW_MESSAGES_BANNER, object: outer1_9.MARK_CHANNEL_AS_READ_BUTTON, objectType: outer1_8.ACK_MANUAL };
         return obj.ack(channel.id, obj);
       };
-      XSmallBoldIcon = XSmallBoldIcon(8080).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(8082).XSmallBoldIcon;
       const obj3 = { size: "sm", color: null };
       WHITE = Themes.colors.WHITE;
       obj3[1] = WHITE;

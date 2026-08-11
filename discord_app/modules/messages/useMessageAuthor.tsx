@@ -3,7 +3,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { nameFromUser } from "../../utils/UserUtils.tsx";
@@ -80,7 +80,7 @@ function useNullableMessageAuthor(message) {
     return role;
   }, items7);
   const tmpResult2 = _require(id[7]);
-  const items8 = [upsertRelationship];
+  const items8 = [markAllUserIdListsStale];
   const stateFromStores5 = _require(id[7]).useStateFromStores(items8, () => {
     let nickname = null;
     if (null != id) {
@@ -153,7 +153,7 @@ function useNullableUserAuthor(author, channel) {
     return role;
   }, items4);
   tmp3Result = tmp3(tmp4[7]);
-  const items5 = [upsertRelationship];
+  const items5 = [markAllUserIdListsStale];
   const stateFromStores3 = tmp3Result.useStateFromStores(items5, () => {
     let nickname = null;
     if (null != id) {

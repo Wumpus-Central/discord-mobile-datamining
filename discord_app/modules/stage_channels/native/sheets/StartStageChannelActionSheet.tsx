@@ -73,18 +73,18 @@ export default function StartStageChannelEventActionSheet(channel) {
               if ("" !== outer1_2.trim()) {
                 dependencyMap(true);
                 v0(null);
-                let obj3 = outer1_2(1872);
+                let obj3 = outer1_2(1891);
                 const result = obj3.dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != outer1_1) {
-                  let tmp33Result = tmp33(7778);
+                  let tmp33Result = tmp33(7780);
                   v0 = 3;
                   c5 = 1;
                   let obj1 = { value: null, done: false };
                   obj1[0] = tmp33Result.editStage(outer1_0, tmp54, outer1_12.GUILD_ONLY);
                   return obj1;
                 } else {
-                  tmp33Result = tmp33(7778);
+                  tmp33Result = tmp33(7780);
                   v0 = 2;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -176,7 +176,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj.track(outer1_11.START_STAGE_OPENED, obj);
   });
   obj = { style: tmp.header, children: null };
-  const items1 = [callback(stateFromStores(7787), {}), , ];
+  const items1 = [callback(stateFromStores(7789), {}), , ];
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == stateFromStores) {
     const intl2 = tmp2(1236).intl;
@@ -228,8 +228,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const intl8 = tmp2(1236).intl;
   obj3[8] = intl8.string(channel(1236).t["5FPBOB"]);
   obj3[9] = handleSave;
-  items2[1] = callback(channel(7790).TextInput, obj3);
-  items2[2] = callback(tmp11(7796), {
+  items2[1] = callback(channel(7792).TextInput, obj3);
+  items2[2] = callback(tmp11(7798), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_10);
     },

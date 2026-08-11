@@ -33,7 +33,7 @@ function ChannelSubtitle(arg0) {
     obj[3] = guildId;
     obj[4] = layout;
     obj[6] = !("voice" === channelSubtitleData.type && connected);
-    obj.children = tmp(9793).renderMessagePreviewMarkup(obj);
+    obj.children = tmp(9798).renderMessagePreviewMarkup(obj);
     return jsx(tmp(4299).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
   }
 }

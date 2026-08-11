@@ -20,12 +20,12 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   isTryItOut = isTryItOut.isTryItOut;
   let navigation;
   let analyticsLocations;
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
-  const tmp3 = callback(analyticsLocations(1609)().bottom);
-  let nitroTrialCtaOverride = navigation(6910).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(6910);
+  const tmp3 = callback(analyticsLocations(1628)().bottom);
+  let nitroTrialCtaOverride = navigation(6912).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(6912);
   const tmp8 = analyticsLocations(5748);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
   analyticsLocations = analyticsLocations(5728)(items).analyticsLocations;
@@ -67,5 +67,5 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     stringResult1 = string(t.Tii53U);
   }
   obj[4] = jsx(navigation(4299).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(13955), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  return jsx(tmp(13963), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

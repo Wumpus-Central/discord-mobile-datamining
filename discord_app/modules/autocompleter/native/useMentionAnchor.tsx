@@ -63,8 +63,8 @@ export default function useMentionAnchor(c22) {
             startsWithResult1 = arg1 >= lastIndexOfResult + arg3.length;
           }
           if (startsWithResult1) {
-            startsWithResult1 = tmp25(9916).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
-            const tmp25Result = tmp25(9916);
+            startsWithResult1 = tmp25(9921).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
+            const tmp25Result = tmp25(9921);
           }
           tmp18 = null;
           if (startsWithResult1) {

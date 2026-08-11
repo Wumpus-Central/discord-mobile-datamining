@@ -27,9 +27,9 @@ function TieredTenureBadgeItem(arg0) {
   if (mobileTenureBadgeImages != null) {
     const small = mobileTenureBadgeImages.small;
   }
-  let tmp2Result = tmp2(7095);
+  let tmp2Result = tmp2(7096);
   const tieredTenureBadgeData = tmp2Result.getTieredTenureBadgeData(badge);
-  tmp2Result = tmp2(9509);
+  tmp2Result = tmp2(9515);
   if (tieredTenureBadgeData != null) {
     const tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
   }

@@ -17,13 +17,13 @@ export const isValidFormResponse = function isValidFormResponse(required) {
       return false;
     } else {
       if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4127).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4127).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4127).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4127).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (tmp4(4129).VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (tmp4(4129).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (tmp4(4129).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (tmp4(4129).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
-                return tmp4(1351).assertNever(field_type);
+                return tmp4(1370).assertNever(field_type);
               }
             }
           }

@@ -81,7 +81,7 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
     obj1 = tmp9(tmp11, obj1);
     items1[1] = obj1;
     obj[1] = items1;
-    closure_7(tmp3(4036).View, obj);
+    closure_7(tmp3(4042).View, obj);
     const tmp3Result = tmp3(4704);
     const tmp8 = absoluteFill;
   }

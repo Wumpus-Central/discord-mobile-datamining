@@ -13,7 +13,7 @@ export const getIsScreenLandscape = function getIsScreenLandscape() {
   return state.getState().byAppEntry[str].screenIsLandscape;
 };
 export const useIsScreenLandscape = function useIsScreenLandscape() {
-  appEntryKey = appEntryKey(1477).useAppEntryKey();
+  appEntryKey = appEntryKey(1496).useAppEntryKey();
   const items = [appEntryKey];
   return state(React.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
 };

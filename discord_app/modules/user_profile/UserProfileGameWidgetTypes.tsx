@@ -21,6 +21,9 @@ prototype["toSubmission"] = function toSubmission() {
   obj[1] = obj;
   return obj;
 };
+prototype["isUpdatable"] = function isUpdatable() {
+  return true;
+};
 prototype["isDiscardable"] = function isDiscardable() {
   return 0 === this.games.length;
 };

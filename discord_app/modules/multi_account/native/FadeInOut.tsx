@@ -64,6 +64,6 @@ const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
   style[1] = animatedStyle;
   return jsx(sharedValue(ref[2]).View, { style, children });
 });
-let result = require("module_4036").fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
+let result = require("module_4042").fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
 
 export default forwardRefResult;

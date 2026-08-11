@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeCrown.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/07835_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07837_inlineStyles.js";
 import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
 
 let c3;

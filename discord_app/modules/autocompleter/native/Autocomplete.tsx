@@ -2,12 +2,12 @@
 import getChannelIcon from "getChannelIcon";
 import { View } from "getSystemLocale";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08228_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08232_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import { TableRowTrailingText } from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
@@ -69,7 +69,7 @@ const obj9 = {
     ({ status, onPress } = user);
     const tmp = createCacheKey();
     let obj = user(589);
-    const items = [upsertRelationship];
+    const items = [markAllUserIdListsStale];
     const stateFromStores = obj.useStateFromStores(items, () => {
       let nickname = null;
       if (null == guildId) {
@@ -82,8 +82,8 @@ const obj9 = {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4146).getName(user);
-      const obj3 = guildId(4146);
+      nick = guildId(4148).getName(user);
+      const obj3 = guildId(4148);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: null, guildId: null, autoStatusCutout: true };
@@ -92,8 +92,8 @@ const obj9 = {
     obj[4] = closure_9(user(1297).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9130), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(7967).FormRow, obj);
+    obj[5] = closure_9(guildId(9136), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(7969).FormRow, obj);
   },
   Global(arg0) {
     let badge;
@@ -158,7 +158,7 @@ const obj9 = {
     }
     obj = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
     const tmp9 = callback(Button.Icon, obj);
-    const channelName = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const channelName = computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     obj = { onPress: onPress.onPress, accessibilityRole: "menuitem", leading: tmp9, label: null, trailing: null };
     obj[3] = callback(AutocompleteLabel, { text: channelName });
     const obj1 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
@@ -254,7 +254,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(7947).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(7949).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };

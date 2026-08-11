@@ -58,6 +58,6 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj1 = {};
     const merged1 = Object.assign(merged);
     obj[1] = jsx(_PlusLargeIcon.PlusLargeIcon, {});
-    return jsx(chatInputFloating(4036).View, { style: null, children: null });
+    return jsx(chatInputFloating(4042).View, { style: null, children: null });
   }
 };

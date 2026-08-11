@@ -40,7 +40,7 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(16257);
+    let tmpResult = tmp(16271);
     const intl = tmp4(1236).intl;
     obj[3] = intl.string(tmp4(1236).t["6EJvHt"]);
     obj = { style: null };
@@ -55,7 +55,7 @@ export default function SoundboardButton(arg0) {
     tmpResult = tmp(5781);
     const obj3 = { color: null };
     obj3[0] = color;
-    obj2[1] = callback(tmp4(7709).SoundboardIcon, obj3);
+    obj2[1] = callback(tmp4(7711).SoundboardIcon, obj3);
     items1[1] = callback(tmpResult, obj2);
     obj[4] = items1;
     tmp8 = callback2(tmpResult, obj);

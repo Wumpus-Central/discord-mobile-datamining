@@ -2,7 +2,7 @@
 import "noop";
 import { View } from "get ActivityIndicator";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { StatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -18,7 +18,7 @@ const require = arg1;
 function HomeDrawerDMsRow() {
   const tmp = createCacheKey();
   let obj = initialize;
-  const items = [upsertRelationship, sortActivity];
+  const items = [markAllUserIdListsStale, sortActivity];
   const stateFromStores = obj.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
     return friendIDs.filter((arg0) => status.getStatus(arg0) !== constants.OFFLINE).length;

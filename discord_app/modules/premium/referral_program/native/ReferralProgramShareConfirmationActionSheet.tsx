@@ -16,7 +16,7 @@ function SharedUser(user) {
   const tmp = callback3();
   let obj = nameFromUser;
   const name = obj.getName(user);
-  const tmp6 = user.trialCreationResult === user(6916).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(6919).CreateReferralStatus.FAIL;
   obj = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer, ];
   let erroredAvatar = tmp6;
@@ -103,7 +103,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   obj[2] = callback(tmp5(5396).BottomSheetTitleHeader, { title: null });
   obj = { children: null };
   obj1 = { style: tmp.headerAsset, children: null };
-  obj1[1] = callback(tmp5(6027).FistBumpSpotIllustration, {});
+  obj1[1] = callback(tmp5(6029).FistBumpSpotIllustration, {});
   const items = [callback(View, obj1), callback(tmp5(4299).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), , ];
   const formatResult = intl3.format(tmp5(1236).t.AwGSWl, obj);
   const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };

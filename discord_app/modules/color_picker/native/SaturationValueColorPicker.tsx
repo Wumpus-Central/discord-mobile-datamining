@@ -18,7 +18,7 @@ function ColorBox(hue) {
   const tmp = createCacheKey();
   const tmp2 = callback(React.useState("rgb(0,0,0)"), 2);
   importDefault = tmp3;
-  let obj = hue(4036);
+  let obj = hue(4042);
   class S {
     constructor() {
       obj = hue(outer1_2[7]);
@@ -26,7 +26,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(13908).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(13916).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;
@@ -38,7 +38,7 @@ function ColorBox(hue) {
       const runOnJSResult = hue(outer1_2[6]).runOnJS(c1);
     }
   };
-  obj = { runOnJS: hue(4036).runOnJS, setColor: tmp3 };
+  obj = { runOnJS: hue(4042).runOnJS, setColor: tmp3 };
   fn.__closure = obj;
   fn.__workletHash = 14688428173537;
   fn.__initData = closure_10;

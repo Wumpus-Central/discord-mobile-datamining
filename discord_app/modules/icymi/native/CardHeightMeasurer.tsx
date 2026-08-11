@@ -10,7 +10,7 @@ const memoResult = importAllResult.memo((children) => {
   const items = [itemId];
   return <View onLayout={importAllResult.useCallback((nativeEvent) => {
     outer1_1(outer1_2[4]).setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
-  }, items)} pointerEvents="box-none" style={{ width: importAllResult.useContext(itemId(15568).ICYMIContext).width, alignSelf: "center" }}>{arg0.children}</View>;
+  }, items)} pointerEvents="box-none" style={{ width: importAllResult.useContext(itemId(15585).ICYMIContext).width, alignSelf: "center" }}>{arg0.children}</View>;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/icymi/native/CardHeightMeasurer.tsx");
 

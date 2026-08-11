@@ -22,7 +22,7 @@ export const getHubProgressTitleForStep = function getHubProgressTitleForStep(ne
   } else if (tmp(1306).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
     return null;
   } else {
-    tmp(1351).assertNever(nextHubProgressStep);
+    tmp(1370).assertNever(nextHubProgressStep);
   }
 };
 export const useHubProgressBarCompletedSteps = function useHubProgressBarCompletedSteps(guild) {

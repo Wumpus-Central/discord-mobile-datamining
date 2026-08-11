@@ -61,11 +61,11 @@ function loadThread(channelId) {
         }
         return resolved;
       } else {
-        let tmp13Result = tmp13(4129);
+        let tmp13Result = tmp13(4131);
         const _location = location;
         obj = { path: null, exact: true };
-        const RouteParam = tmp13(4142).RouteParam;
-        const RouteParam2 = tmp13(4142).RouteParam;
+        const RouteParam = tmp13(4144).RouteParam;
+        const RouteParam2 = tmp13(4144).RouteParam;
         obj[0] = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj);
         const HTTP = tmp13(530).HTTP;

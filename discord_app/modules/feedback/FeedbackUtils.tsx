@@ -33,7 +33,7 @@ export const processOptOut = function processOptOut(feedbackType) {
   let obj = expandEventProperties;
   obj = { feedback_type: table[feedbackType], opted_out_until: closure_10 };
   obj.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, obj);
-  const InAppFeedbackStates = feedbackType(3974).InAppFeedbackStates;
+  const InAppFeedbackStates = feedbackType(3993).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
     let obj = {};
     const merged = Object.assign(arg0);

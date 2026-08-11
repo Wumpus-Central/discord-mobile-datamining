@@ -117,7 +117,7 @@ export const canUploadNatively = function canUploadNatively(item) {
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
   }
   if (fileIsInAppDirResult) {
-    tmpResult = tmp(1898);
+    tmpResult = tmp(1917);
     fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
   }
   return fileIsInAppDirResult;

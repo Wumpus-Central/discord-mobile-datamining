@@ -70,7 +70,7 @@ function _uploadMessageAttachments() {
               set = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              const tmp16 = new callback2(7298)();
+              const tmp16 = new callback2(7299)();
               set = tmp16;
               const _HermesInternal = HermesInternal;
               closure_6 = "pending-upload-" + set._file.id;

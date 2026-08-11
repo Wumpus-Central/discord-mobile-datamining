@@ -4,7 +4,7 @@ import { View } from "TextIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import { ReadStateTypes } from "ReadStateTypes";

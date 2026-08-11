@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-const result = require("upsertRelationship").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
 export default function IgnoreUserElement(user) {
   let isBlocked;
@@ -16,7 +16,7 @@ export default function IgnoreUserElement(user) {
   const reportId = user.reportId;
   let stateFromStores;
   let obj = user(reportId[5]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const items1 = [user];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isIgnored: outer1_5.isIgnored(user.id), isBlocked: outer1_5.isBlocked(user.id) }), items1);
   ({ isIgnored, isBlocked } = stateFromStoresObject);

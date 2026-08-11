@@ -47,7 +47,7 @@ function _updateGuildRole() {
       obj3 = callback(530);
       obj2[3] = obj3.rejectWithMigratedError();
       let closure_7 = yield HTTP.patch(obj2);
-      const obj = callback2(5938);
+      const obj = callback2(5940);
       const result = obj.checkGuildTemplateDirty(callback);
       return closure_7;
     })();

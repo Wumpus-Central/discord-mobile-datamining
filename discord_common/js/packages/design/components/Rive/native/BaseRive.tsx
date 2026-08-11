@@ -2,7 +2,7 @@
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { DataBindByName } from "../../../../../../../_runtime/04031_DataBindByName.js";
+import { DataBindByName } from "../../../../../../../_runtime/04037_DataBindByName.js";
 
 let Platform;
 let StyleSheet;

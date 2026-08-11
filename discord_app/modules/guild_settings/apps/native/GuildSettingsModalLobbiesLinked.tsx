@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx
 import "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { GuildSettingsSections } from "ME";
 import jsxProd from "jsxProd";
@@ -18,7 +18,7 @@ function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
   let dependencyMap;
-  let obj = channels(1480);
+  let obj = channels(1499);
   dependencyMap = obj.useNavigation();
   const getOrFetchApplication = channels(5734).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;

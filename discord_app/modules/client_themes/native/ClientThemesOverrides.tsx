@@ -8,7 +8,7 @@ let closure_4 = createCacheKey.createStyles({ none: { backgroundColor: "transpar
 const result = require("getGradientColorByPercentage").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
 
 export const useGradientBottom = function useGradientBottom() {
-  gradientValue = gradientValue(4118).useGradientValue(gradientValue(4118).GradientPercentage.END);
+  gradientValue = gradientValue(4123).useGradientValue(gradientValue(4123).GradientPercentage.END);
   const items = [gradientValue];
   return React.useMemo(() => {
     let tmp2;
@@ -21,7 +21,7 @@ export const useGradientBottom = function useGradientBottom() {
   }, items);
 };
 export const useGradientTop = function useGradientTop() {
-  gradientValue = gradientValue(4118).useGradientValue(gradientValue(4118).GradientPercentage.START);
+  gradientValue = gradientValue(4123).useGradientValue(gradientValue(4123).GradientPercentage.START);
   const items = [gradientValue];
   return React.useMemo(() => {
     let tmp2;
@@ -34,7 +34,7 @@ export const useGradientTop = function useGradientTop() {
   }, items);
 };
 export const useGradientMidpoint = function useGradientMidpoint() {
-  gradientValue = gradientValue(4118).useGradientValue(gradientValue(4118).GradientPercentage.MID);
+  gradientValue = gradientValue(4123).useGradientValue(gradientValue(4123).GradientPercentage.MID);
   const items = [gradientValue];
   return React.useMemo(() => {
     let tmp2;

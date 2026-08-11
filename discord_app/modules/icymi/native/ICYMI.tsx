@@ -50,11 +50,11 @@ function InfoButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
   obj[3] = callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" });
   obj[4] = function onPress() {
-    callback2(8913).itemInteracted("info_button", "info_button", "press_info_button");
-    const obj = callback2(8913);
-    callback2(8913).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-    const obj2 = callback2(8913);
-    callback(15580).pushICYMIInfoModal({ extendedOnboarding: true });
+    callback2(8919).itemInteracted("info_button", "info_button", "press_info_button");
+    const obj = callback2(8919);
+    callback2(8919).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+    const obj2 = callback2(8919);
+    callback(15597).pushICYMIInfoModal({ extendedOnboarding: true });
   };
   return callback(IconButton.IconButton, obj);
 }
@@ -191,7 +191,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(8379).showForLaterModal(callback(8381).SavedMessageSortTypes.BOOKMARK);
+        callback(8384).showForLaterModal(callback(8385).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }
@@ -399,9 +399,9 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
   const intl = LeftBackIconWithBadge(1236).intl;
   obj6[1] = intl.string(LeftBackIconWithBadge(1236).t["13/7kX"]);
-  obj6[2] = LeftBackIconWithBadge(15516).goBack;
+  obj6[2] = LeftBackIconWithBadge(15533).goBack;
   if (inNestedNavigator) {
-    LeftBackIconWithBadge = LeftBackIconWithBadge(15518).LeftBackIconWithBadge;
+    LeftBackIconWithBadge = LeftBackIconWithBadge(15535).LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
     let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
   } else {

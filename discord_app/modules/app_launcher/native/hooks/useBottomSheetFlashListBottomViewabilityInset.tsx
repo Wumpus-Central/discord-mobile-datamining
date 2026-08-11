@@ -8,13 +8,13 @@ const result = require("context").fileFinishedImporting("modules/app_launcher/na
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
   let obj = bottomVisibilityInsetRef;
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(9548).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(9554).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1474)().height - flashListRef(11423)().maximum;
+  const diff = flashListRef(1493)().height - flashListRef(11426)().maximum;
   const dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(() => flashListRef(diff[4]).debounce((current) => {
@@ -25,7 +25,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
     }
   }, 200), []);
   const tmp = flashListRef;
-  const tmp3 = flashListRef(1474)();
+  const tmp3 = flashListRef(1493)();
   const fn = function u() {
     let num;
     if (bottomSheetPosition != null) {
@@ -42,10 +42,10 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   const fn2 = function s(arg0) {
     bottomSheetPosition(diff[5]).runOnJS(memo)(arg0 - closure_2);
   };
-  obj = { distanceBetweenExpandedScreenTopAndSheetTop: diff, runOnJS: tmp4(4036).runOnJS, handleBottomViewabilityInsetDebounced: memo };
+  obj = { distanceBetweenExpandedScreenTopAndSheetTop: diff, runOnJS: tmp4(4042).runOnJS, handleBottomViewabilityInsetDebounced: memo };
   fn2.__closure = obj;
   fn2.__workletHash = 6025307858098;
   fn2.__initData = closure_5;
-  const animatedReaction = bottomSheetPosition(4036).useAnimatedReaction(fn, fn2);
+  const animatedReaction = bottomSheetPosition(4042).useAnimatedReaction(fn, fn2);
   return { flashListRef, bottomVisibilityInsetRef };
 };

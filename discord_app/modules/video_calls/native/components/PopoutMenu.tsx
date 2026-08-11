@@ -30,7 +30,7 @@ function PopoutMenuRow(onClose) {
     obj[0] = icon;
     tmp3Result = tmp3(onClick(1297).Icon, obj);
   }
-  obj = { leading: tmp3Result, label: tmp3(onClick(7967).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
+  obj = { leading: tmp3Result, label: tmp3(onClick(7969).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
   obj = { style: tmp.popoutMenuRowLabel, text: onClose.text };
   return closure_6(onClose(5367), obj);
 }

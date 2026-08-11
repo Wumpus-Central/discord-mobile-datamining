@@ -4,8 +4,8 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { QRCode } from "../../_runtime/09099_QRCode.js";
-import { registerAsset } from "../../_runtime/09113_registerAsset.js";
+import { QRCode } from "../../_runtime/09105_QRCode.js";
+import { registerAsset } from "../../_runtime/09119_registerAsset.js";
 import { VisualEffectViewThemed } from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 
 let c5;

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
 import { UserSettingsSections } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { PremiumModal } from "../../../components_native/premium/PremiumModal.tsx";
 import { getSanitizedRestrictedGuilds } from "../../../utils/UserSettingsUtils.tsx";
 
@@ -74,8 +74,8 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[10] = onPaymentSuccess;
     obj[11] = onPaymentDismiss;
     const obj3 = flag2(4509);
-    obj3.pushLazy(asyncRequireImpl(6874, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(6874, dependencyMap.paths);
+    obj3.pushLazy(asyncRequireImpl(6876, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(6876, dependencyMap.paths);
   }
   let result = getSanitizedRestrictedGuilds.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

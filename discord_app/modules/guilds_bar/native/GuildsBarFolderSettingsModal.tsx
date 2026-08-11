@@ -86,7 +86,7 @@ export default function GuildFolderSettingsModal(folderId) {
   callback = obj2.useCallback(() => {
     const dependencyMap = first1;
     const guildFolders = _undefined.getGuildFolders();
-    folderId(8698).saveGuildFolders(guildFolders.map((folderId) => {
+    folderId(8704).saveGuildFolders(guildFolders.map((folderId) => {
       let tmp = folderId;
       if (folderId.folderId === closure_0) {
         const obj = {};
@@ -97,11 +97,11 @@ export default function GuildFolderSettingsModal(folderId) {
       }
       return tmp;
     }));
-    let obj = folderId(8698);
-    const result = folderId(15410).hideGuildsBarFolderModal();
+    let obj = folderId(8704);
+    const result = folderId(15427).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(15410).hideGuildsBarFolderModal();
+    const result = folderId(15427).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {

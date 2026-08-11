@@ -1,10 +1,11 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx
 import initialize from "initialize";
 import set from "set";
+import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS";
 import "initialize";
 import { DetectableAppNames } from "../../local_app_detection/LocalAppDetectionTypes.tsx";
 import { DETECTABLE_GAME_TO_APPLICATION_ID_MAP } from "GameCommunityConfig.tsx";
-import { GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT } from "GameCommunityUpsellExperiment.tsx";
+import { GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT } from "GameCommunityUpsellExperiment.tsx";
 
 let require = arg1;
 class MobileGameCommunitiesManager extends tmp2 {
@@ -30,13 +31,13 @@ prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
   if (diff >= 86400000) {
     const dismissedGuildIds = store.getDismissedGuildIds();
     const _Array = Array;
-    const mobileGameCommunities = importAll(15393).fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), 6);
-    const obj3 = importAll(15393);
+    const mobileGameCommunities = importAll(15408).fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), closure_5);
+    const obj3 = importAll(15408);
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  const GameCommunityUpsellMultiExperiment = GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT.GameCommunityUpsellMultiExperiment;
-  if (GameCommunityUpsellMultiExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
+  const GameCommunityAddServerEntryExperiment = GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT.GameCommunityAddServerEntryExperiment;
+  if (GameCommunityAddServerEntryExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
     if (0 === store.getLastFetchedAt()) {
       const _Object = Object;
       const values = Object.values(initialize.getUserAgnosticState().apps);
@@ -61,13 +62,13 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {
-  const GameCommunityUpsellMultiExperiment = GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT.GameCommunityUpsellMultiExperiment;
-  if (GameCommunityUpsellMultiExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
+  const GameCommunityAddServerEntryExperiment = GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT.GameCommunityAddServerEntryExperiment;
+  if (GameCommunityAddServerEntryExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
     const self = this;
     result = this._fetchGameCommunities(result.result);
   }
 };
 const mobileGameCommunitiesManager = new MobileGameCommunitiesManager();
-let result = require("initialize").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
+let result = require("MAX_DISPLAYED_UPSELL_GUILDS").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
 
 export default mobileGameCommunitiesManager;

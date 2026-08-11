@@ -4,7 +4,7 @@ import { View } from "GuildIconWithChannelTypeSizes";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { StatusTypes } from "sum";
 import jsxProd from "set";
@@ -38,7 +38,7 @@ function FailedUserRow(user) {
   user = user.user;
   const tmp = createCacheKey();
   let obj = user(589);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   let stateFromStores = obj.useStateFromStores(items, () => outer1_7.getNickname(user.id));
   let obj1 = user(589);
   const items1 = [sortActivity];
@@ -89,8 +89,8 @@ function FailedChannelRow(channel) {
   });
   obj = { style: tmp.row, children: null };
   obj = { "aria-label": "", guild: stateFromStores, channel, size: null };
-  obj[3] = channel(10269).GuildIconWithChannelTypeSizes.SMALL_32;
-  const items1 = [callback(channel(10269).GuildIconWithChannelType, obj), ];
+  obj[3] = channel(10274).GuildIconWithChannelTypeSizes.SMALL_32;
+  const items1 = [callback(channel(10274).GuildIconWithChannelType, obj), ];
   const tmp3 = computeChannelName(channel);
   items1[1] = callback(channel(4299).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelName(channel) });
   obj[1] = items1;

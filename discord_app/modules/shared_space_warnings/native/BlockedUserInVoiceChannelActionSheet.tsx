@@ -2,7 +2,7 @@
 import "UserIcon";
 import get_ActivityIndicator from "TableRowInner";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { setDismissalTimeForUser } from "useSharedSpacesWarningStore";
 import GdmWarningMedium from "GdmWarningMedium";
@@ -40,7 +40,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   let stateFromStores;
   const tmp = createCacheKey();
   let obj = require(stateFromStores[11]);
-  let items = [upsertRelationship];
+  let items = [markAllUserIdListsStale];
   stateFromStores = obj.useStateFromStores(items, () => outer1_6.isBlocked(blockedUserId));
   let obj1 = require(stateFromStores[11]);
   let items1 = [ensureGuildLoaded];

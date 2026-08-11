@@ -67,7 +67,7 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1236).intl;
     name = intl2.string(tmp7(1236).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(7967).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(7967).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
+  items1[2] = callback(selectedGuildId(7969).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(7969).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
   const obj2 = { style: tmp.label, children: null };
   const intl3 = tmp7(1236).intl;
   obj2[1] = intl3.format(selectedGuildId(1236).t.t9Jm9o, {});

@@ -78,7 +78,7 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
   if (obj2.isAndroid()) {
     num = renderItem(712).space.PX_16;
   }
-  items[1] = { paddingBottom: renderItem(1609)().bottom + num };
+  items[1] = { paddingBottom: renderItem(1628)().bottom + num };
   items[2] = data.contentContainerStyle;
   obj.contentContainerStyle = items;
   obj.renderItem = function renderItem(index) {

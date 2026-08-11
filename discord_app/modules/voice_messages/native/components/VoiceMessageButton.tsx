@@ -1,7 +1,7 @@
 // discord_app/modules/voice_messages/native/components/VoiceMessageButton.tsx
 import getState from "getState";
 import getSystemLocale from "getSystemLocale";
-import importAllResult from "module_4036";
+import importAllResult from "module_4042";
 import get_ActivityIndicator from "openChannelCallModal";
 import setContent from "setContent";
 import closure_9 from "getState";
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   setContent = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp11 = sharedValue1(10996)();
+  const tmp11 = sharedValue1(11001)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     let closure_0 = arg0;
@@ -609,9 +609,9 @@ const memoResult = importAllResult.memo((disabled) => {
         items[0] = obj.get()[1];
         items[1] = disabled;
         result = obj.set(items);
-        tmp2 = f109299;
+        tmp2 = f109380;
         tmp3 = c2;
-        obj2 = f109299(c2[19]);
+        obj2 = f109380(c2[19]);
         tmp4 = outer1_29;
         tmp5 = obj2.runOnJS(outer1_29)();
       }
@@ -650,7 +650,7 @@ const memoResult = importAllResult.memo((disabled) => {
     }
   }, items9);
   let obj5 = _navigationToRootTabHelper;
-  const tmp23 = sharedValue1(9013);
+  const tmp23 = sharedValue1(9019);
   let intl = _getSystemLocale.intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
@@ -708,7 +708,7 @@ const memoResult = importAllResult.memo((disabled) => {
       }
     }
   });
-  const sum = 0.5 * tmp11 + (sharedValue1(1474)().width - tmp11);
+  const sum = 0.5 * tmp11 + (sharedValue1(1493)().width - tmp11);
   c14 = sum;
   const items10 = [disabled, tmp7[1], tmp3, callback1, sum, callback2, callback3];
   ({ accessibilityActions, onAccessibilityAction } = tmp23(sharedValue(function*() {
@@ -820,7 +820,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   obj = { gesture: memo, children: null };
-  obj1 = { ref: sharedValue1(11629)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
+  obj1 = { ref: sharedValue1(11632)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
   const tmp23Result = tmp23(sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -888,7 +888,7 @@ const memoResult = importAllResult.memo((disabled) => {
     tmp30 = clientThemesOverride;
   }
   obj1[7] = tmp30;
-  obj[1] = jsx(sharedValue1(11610), { ref: sharedValue1(11629)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
+  obj[1] = jsx(sharedValue1(11613), { ref: sharedValue1(11632)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
   return jsx(_LegacyBaseButton.GestureDetector, { gesture: memo, children: null });
 });
 let result = require("noop").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");

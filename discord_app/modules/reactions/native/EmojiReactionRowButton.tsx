@@ -94,7 +94,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
     }
     obj[2] = str;
     if (null != animated.id) {
-      const emojiURL1 = getEmojiURL(1416);
+      const emojiURL1 = getEmojiURL(1435);
       getEmojiURL = emojiURL1.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj[0], animated } = animated);

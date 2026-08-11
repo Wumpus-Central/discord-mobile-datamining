@@ -20,101 +20,106 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
     } else {
       let REPLY = constants;
       if (type.type > constants.DEFAULT) {
-        const tmp35 = isSystemMessage(content);
-        let tmp36 = !tmp35;
-        if (tmp35) {
+        const tmp37 = isSystemMessage(content);
+        let tmp38 = !tmp37;
+        if (tmp37) {
           type = type.type;
           REPLY = REPLY.REPLY;
-          tmp36 = type === REPLY;
+          tmp38 = type === REPLY;
         }
-        let tmp32 = tmp36;
+        let tmp34 = tmp38;
       } else {
-        tmp32 = isSystemMessage(content);
-        if (!tmp32) {
+        tmp34 = isSystemMessage(content);
+        if (!tmp34) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
             let tmp9 = content.hasFlag(tmp.EPHEMERAL) !== type.hasFlag(tmp.EPHEMERAL);
             if (!tmp9) {
-              let tmp11 = null != type.webhookId && content.author.username !== type.author.username;
+              let tmp11 = content.hasFlag(tmp.IS_SCHEDULED) !== type.hasFlag(tmp.IS_SCHEDULED);
               if (!tmp11) {
-                let isForumPostResult;
-                if (isForumPost != null) {
-                  isForumPostResult = isForumPost.isForumPost();
-                }
-                let tmp14 = !isForumPostResult;
-                if (isForumPostResult) {
-                  tmp14 = content.id !== tmp38(11).castChannelIdAsMessageId(isForumPost.id);
-                  const tmp38Result = tmp38(11);
-                }
-                let tmp15 = !tmp14;
-                if (tmp14) {
-                  const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
-                  let tmp18 = !isSameDayResult;
-                  if (isSameDayResult) {
-                    const isWithinIntervalResult = tmp16(3971).isWithinInterval(content.timestamp, type.timestamp, closure_6);
-                    let tmp21 = !isWithinIntervalResult;
-                    if (isWithinIntervalResult) {
-                      const hasFlagResult2 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
-                      let hasFlagResult3 = !hasFlagResult2;
-                      if (hasFlagResult2) {
-                        hasFlagResult3 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
-                      }
-                      let tmp24 = !hasFlagResult3;
-                      if (hasFlagResult3) {
-                        const hasFlagResult4 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
-                        let hasFlagResult5 = !hasFlagResult4;
-                        if (hasFlagResult4) {
-                          hasFlagResult5 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
-                        }
-                        if (!hasFlagResult5) {
-                          hasFlagResult5 = !(type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone);
-                          const tmp27 = type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
-                        }
-                        let tmp28 = !hasFlagResult5;
-                        if (hasFlagResult5) {
-                          let tmp29 = type.applicationId !== content.applicationId;
-                          if (!tmp29) {
-                            const additionalName = type.additionalName;
-                            let tmp30 = null;
-                            if (null != additionalName) {
-                              tmp30 = null;
-                              if ("" !== additionalName) {
-                                tmp30 = additionalName;
-                              }
-                            }
-                            const additionalName2 = content.additionalName;
-                            let tmp31 = null;
-                            if (null != additionalName2) {
-                              tmp31 = null;
-                              if ("" !== additionalName2) {
-                                tmp31 = additionalName2;
-                              }
-                            }
-                            tmp29 = tmp30 !== tmp31;
-                          }
-                          tmp28 = tmp29;
-                        }
-                        tmp24 = tmp28;
-                      }
-                      tmp21 = tmp24;
-                    }
-                    tmp18 = tmp21;
-                    const tmp16Result = tmp16(3971);
+                let tmp13 = null != type.webhookId && content.author.username !== type.author.username;
+                if (!tmp13) {
+                  let isForumPostResult;
+                  if (isForumPost != null) {
+                    isForumPostResult = isForumPost.isForumPost();
                   }
-                  tmp15 = tmp18;
-                  const obj2 = resetCache;
-                  tmp16 = require;
+                  let tmp16 = !isForumPostResult;
+                  if (isForumPostResult) {
+                    tmp16 = content.id !== tmp40(11).castChannelIdAsMessageId(isForumPost.id);
+                    const tmp40Result = tmp40(11);
+                  }
+                  let tmp17 = !tmp16;
+                  if (tmp16) {
+                    const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
+                    let tmp20 = !isSameDayResult;
+                    if (isSameDayResult) {
+                      const isWithinIntervalResult = tmp18(3990).isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                      let tmp23 = !isWithinIntervalResult;
+                      if (isWithinIntervalResult) {
+                        const hasFlagResult3 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                        let hasFlagResult4 = !hasFlagResult3;
+                        if (hasFlagResult3) {
+                          hasFlagResult4 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                        }
+                        let tmp26 = !hasFlagResult4;
+                        if (hasFlagResult4) {
+                          const hasFlagResult5 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                          let hasFlagResult6 = !hasFlagResult5;
+                          if (hasFlagResult5) {
+                            hasFlagResult6 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                          }
+                          if (!hasFlagResult6) {
+                            hasFlagResult6 = !(type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone);
+                            const tmp29 = type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
+                          }
+                          let tmp30 = !hasFlagResult6;
+                          if (hasFlagResult6) {
+                            let tmp31 = type.applicationId !== content.applicationId;
+                            if (!tmp31) {
+                              const additionalName = type.additionalName;
+                              let tmp32 = null;
+                              if (null != additionalName) {
+                                tmp32 = null;
+                                if ("" !== additionalName) {
+                                  tmp32 = additionalName;
+                                }
+                              }
+                              const additionalName2 = content.additionalName;
+                              let tmp33 = null;
+                              if (null != additionalName2) {
+                                tmp33 = null;
+                                if ("" !== additionalName2) {
+                                  tmp33 = additionalName2;
+                                }
+                              }
+                              tmp31 = tmp32 !== tmp33;
+                            }
+                            tmp30 = tmp31;
+                          }
+                          tmp26 = tmp30;
+                        }
+                        tmp23 = tmp26;
+                      }
+                      tmp20 = tmp23;
+                      const tmp18Result = tmp18(3990);
+                    }
+                    tmp17 = tmp20;
+                    const obj2 = resetCache;
+                    tmp18 = require;
+                  }
+                  tmp13 = tmp17;
                 }
-                tmp11 = tmp15;
+                tmp11 = tmp13;
               }
               tmp9 = tmp11;
+              const hasFlagResult2 = content.hasFlag(tmp.IS_SCHEDULED);
             }
             tmp7 = tmp9;
             const hasFlagResult1 = content.hasFlag(tmp.EPHEMERAL);
           }
-          tmp32 = tmp7;
+          tmp34 = tmp7;
         }
-        tmp38 = importDefault;
+        tmp40 = importDefault;
       }
     }
   }

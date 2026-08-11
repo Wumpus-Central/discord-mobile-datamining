@@ -30,7 +30,7 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = createCacheKey();
-  let obj = collapsed(4036);
+  let obj = collapsed(4042);
   const fn = function y() {
     let obj = collapsed(outer1_2[6]);
     let str = "0deg";

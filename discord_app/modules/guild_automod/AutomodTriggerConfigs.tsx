@@ -211,7 +211,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(15906).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(15923).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return React.useMemo(() => {
     const keys = Object.keys(outer1_7);

@@ -1,7 +1,7 @@
 // discord_app/modules/friend_groups/FriendGroupsStore.tsx
 import recomputeAffinities from "recomputeAffinities";
 import hasConsented from "hasConsented";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PersistedStore } from "initialize";
 
@@ -11,7 +11,7 @@ class FriendGroupsStore extends PersistedStore {
 }
 const prototype = FriendGroupsStore.prototype;
 prototype["initialize"] = function initialize(groups) {
-  this.waitFor(hasConsented, upsertRelationship, recomputeAffinities, mergeGuildAvatar);
+  this.waitFor(hasConsented, markAllUserIdListsStale, recomputeAffinities, mergeGuildAvatar);
   if (null != groups) {
     groups = groups.groups;
     if (groups == null) {
@@ -172,6 +172,6 @@ const friendGroupsStore = new FriendGroupsStore(require("dispatcher"), {
     }
   }
 });
-const result = require("upsertRelationship").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
 
 export default friendGroupsStore;

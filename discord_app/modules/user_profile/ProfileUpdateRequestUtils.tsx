@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/ProfileUpdateRequestUtils.tsx
 import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { AssetOriginTypes } from "../recent_avatars/RecentAvatarsTypes.tsx";
+import { AssetOriginTypes } from "../profile_customization/ProfilePendingImageTypes.tsx";
 import { getCurrentUserProfile } from "utils/getCurrentUserProfile.tsx";
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
@@ -9,13 +9,21 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   let pendingProfileFrame;
   let obj = {};
   if (undefined !== outer1_0.pendingBanner) {
-    obj.banner = outer1_0.pendingBanner;
+    const pendingBanner = outer1_0.pendingBanner;
+    let imageUri;
+    if (pendingBanner != null) {
+      imageUri = pendingBanner.imageUri;
+    }
+    if (imageUri == null) {
+      imageUri = null;
+    }
+    obj.banner = imageUri;
     if (null !== outer1_0.pendingBanner) {
-      let prop = outer1_0.pendingBannerOriginalMd5;
-      if (prop == null) {
-        prop = null;
+      let originalMd5 = outer1_0.pendingBanner.originalMd5;
+      if (originalMd5 == null) {
+        originalMd5 = null;
       }
-      obj.bannerOriginalMd5 = prop;
+      obj.bannerOriginalMd5 = originalMd5;
     }
   }
   if (null != outer1_0.pendingBio) {
@@ -40,17 +48,17 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
     }
     return obj;
   }
-  const tmp4 = getCurrentUserProfile(id);
+  const tmp5 = getCurrentUserProfile(id);
   let collectibles;
-  if (tmp4 != null) {
-    collectibles = tmp4.collectibles;
+  if (tmp5 != null) {
+    collectibles = tmp5.collectibles;
   }
   if (collectibles == null) {
     collectibles = [];
   }
   const items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
-    const found = items.filter((type) => type.type !== callback(1930).CollectiblesItemType.PROFILE_EFFECT);
+    const found = items.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;
     if (null !== pendingProfileEffect) {
       obj = { skuId: null, type: null };
@@ -62,7 +70,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   let arr5 = arr3;
   if (undefined !== pendingProfileFrame) {
-    const found1 = arr3.filter((type) => type.type !== callback(1930).CollectiblesItemType.PROFILE_FRAME);
+    const found1 = arr3.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_FRAME);
     arr5 = found1;
     if (null !== pendingProfileFrame) {
       found1.push(pendingProfileFrame);

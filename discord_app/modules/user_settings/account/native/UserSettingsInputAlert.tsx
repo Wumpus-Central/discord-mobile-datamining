@@ -9,7 +9,7 @@ let c3;
 let c4;
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "Array" };
+let closure_5 = { input: "", error: "paddingHorizontal" };
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -100,7 +100,7 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7790).TextInput, obj);
+    items[1] = callback(self(7792).TextInput, obj);
     obj[1] = items;
     return closure_4(self(4712).Stack, obj);
   }

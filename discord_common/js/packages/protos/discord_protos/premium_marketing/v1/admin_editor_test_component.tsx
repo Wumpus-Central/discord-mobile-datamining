@@ -15,7 +15,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "localized_text_field",
       kind: "message",
       T() {
-            return callback(7350).LocalizedString;
+            return callback(7351).LocalizedString;
           }
     };
     items[2] = { no: 3, name: "plain_text_field", kind: "scalar", T: 9 };
@@ -34,7 +34,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "themed_asset_field",
       kind: "message",
       T() {
-            return callback(7360).ThemeAwareAsset;
+            return callback(7361).ThemeAwareAsset;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
@@ -188,7 +188,7 @@ let items = [
     name: "localized_text_field",
     kind: "message",
     T() {
-      return callback(7350).LocalizedString;
+      return callback(7351).LocalizedString;
     }
   },
   { no: 3, name: "plain_text_field", kind: "scalar", T: 9 },
@@ -212,7 +212,7 @@ items[6] = {
   name: "themed_asset_field",
   kind: "message",
   T() {
-    return callback(7360).ThemeAwareAsset;
+    return callback(7361).ThemeAwareAsset;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, tmp, T, AdminEditorTestComponent$Type, prototype, items);

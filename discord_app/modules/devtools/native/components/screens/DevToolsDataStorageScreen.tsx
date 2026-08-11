@@ -4,9 +4,9 @@ import importAllResult from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "styles";
 import { PersistedStore } from "getClass";
 import fetchFingerprint from "fetchFingerprint";
-import { jsx } from "module_8526";
+import { jsx } from "module_8532";
 import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../../_runtime/01500_createStandardNavigationFactories.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { databaseName } from "../../../../app_database/system/DatabaseManager.tsx";
@@ -72,9 +72,9 @@ let closure_11 = importAllResult.memo(() => {
 let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
-    const result = callback(1952).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-    const obj = callback(1952);
-    callback(4002).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    const result = callback(1971).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+    const obj = callback(1971);
+    callback(4021).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {

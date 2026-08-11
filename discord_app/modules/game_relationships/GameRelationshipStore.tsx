@@ -1,5 +1,5 @@
 // discord_app/modules/game_relationships/GameRelationshipStore.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 import { Store } from "initialize";
 
@@ -19,7 +19,7 @@ function recountRelationshipTypes() {
     } else if (type === tmp.PENDING_INCOMING) {
       if (!spam.isSpam(id)) {
         if (!spam.isIgnored(id)) {
-          upsertRelationship = upsertRelationship + 1;
+          markAllUserIdListsStale = markAllUserIdListsStale + 1;
         }
       }
     }
@@ -69,7 +69,7 @@ class GameRelationshipStore extends Store {
 }
 const prototype = GameRelationshipStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(upsertRelationship);
+  this.waitFor(markAllUserIdListsStale);
 };
 prototype["getPendingIncomingCount"] = function getPendingIncomingCount() {
   return c7;
@@ -87,19 +87,19 @@ prototype["getGameFriendsForApplication"] = function getGameFriendsForApplicatio
   const values = secondaryIndexMap.values("application-id-" + arg0, true);
   return values.filter((type) => type.type === constants.FRIEND);
 };
-prototype["getGameRelationshipsForUser"] = function getGameRelationshipsForUser(upsertRelationship) {
+prototype["getGameRelationshipsForUser"] = function getGameRelationshipsForUser(markAllUserIdListsStale) {
   if (typeof GameRelationshipIndexes_BY_USER_ID !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  return secondaryIndexMap.values("user-id-" + upsertRelationship, true);
+  return secondaryIndexMap.values("user-id-" + markAllUserIdListsStale, true);
 };
-prototype["getGameRelationshipsForUserByType"] = function getGameRelationshipsForUserByType(upsertRelationship, FRIEND) {
-  upsertRelationship = FRIEND;
-  const gameRelationshipsForUser = this.getGameRelationshipsForUser(upsertRelationship);
-  return gameRelationshipsForUser.filter((type) => type.type === upsertRelationship);
+prototype["getGameRelationshipsForUserByType"] = function getGameRelationshipsForUserByType(markAllUserIdListsStale, FRIEND) {
+  markAllUserIdListsStale = FRIEND;
+  const gameRelationshipsForUser = this.getGameRelationshipsForUser(markAllUserIdListsStale);
+  return gameRelationshipsForUser.filter((type) => type.type === markAllUserIdListsStale);
 };
-prototype["getGameFriendsForUser"] = function getGameFriendsForUser(upsertRelationship) {
-  return this.getGameRelationshipsForUserByType(upsertRelationship, RelationshipTypes.FRIEND);
+prototype["getGameFriendsForUser"] = function getGameFriendsForUser(markAllUserIdListsStale) {
+  return this.getGameRelationshipsForUserByType(markAllUserIdListsStale, RelationshipTypes.FRIEND);
 };
 prototype["getGameRelationshipCount"] = function getGameRelationshipCount() {
   return secondaryIndexMap.size();
@@ -145,7 +145,7 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       } else if (type === tmp.PENDING_INCOMING) {
         if (!spam.isSpam(id)) {
           if (!spam.isIgnored(id)) {
-            upsertRelationship = upsertRelationship + 1;
+            markAllUserIdListsStale = markAllUserIdListsStale + 1;
           }
         }
       }
@@ -178,7 +178,7 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       } else if (type === tmp.PENDING_INCOMING) {
         if (!spam.isSpam(id)) {
           if (!spam.isIgnored(id)) {
-            upsertRelationship = upsertRelationship + 1;
+            markAllUserIdListsStale = markAllUserIdListsStale + 1;
           }
         }
       }
@@ -210,7 +210,7 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       } else if (type === tmp.PENDING_INCOMING) {
         if (!spam.isSpam(id)) {
           if (!spam.isIgnored(id)) {
-            upsertRelationship = upsertRelationship + 1;
+            markAllUserIdListsStale = markAllUserIdListsStale + 1;
           }
         }
       }

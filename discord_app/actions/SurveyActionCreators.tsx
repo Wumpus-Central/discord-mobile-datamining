@@ -60,7 +60,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       if (survey != null) {
         key = survey.key;
       }
-      return callback(1385).exact({ key });
+      return callback(1404).exact({ key });
     }
   };
   obj[2] = obj;

@@ -17,7 +17,7 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8813);
+  let obj = user(8819);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [sortActivity];
   const stateFromStoresObject = user(589).useStateFromStoresObject(items, () => ({ status: outer1_3.getStatus(user.id), isMobileOnline: outer1_3.isMobileOnline(user.id), isVROnline: outer1_3.isVROnline(user.id) }));

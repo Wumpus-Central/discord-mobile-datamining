@@ -2,7 +2,7 @@
 import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN as closure_10 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN";
@@ -78,7 +78,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                 } else {
                   const obj = { id: null, name: null };
                   obj[0] = channel.id;
-                  obj[1] = dependencyMap(table[9]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+                  obj[1] = dependencyMap(table[9]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
                   if (channel.topic.length > 0) {
                     obj.channel_topic = channel.topic;
                   }

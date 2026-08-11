@@ -19,13 +19,13 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "Promise" } : { bottom: "Promise" });
+  const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   obj.height = 380;
   obj.zIndex = 1;
   obj[0] = obj;
   obj = {};
   const merged2 = Object.assign(tmp.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "Promise" } : { bottom: "Promise" });
+  const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   if (arg0) {
     let obj1 = {};
   } else {
@@ -86,7 +86,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2[0] = items2;
-    obj2[1] = importDefault(isThemeDarkResult ? 14370 : 14371);
+    obj2[1] = importDefault(isThemeDarkResult ? 14378 : 14379);
     obj2[2] = str2;
     items1[1] = tmp6(preload, obj2);
     obj[1] = items1;

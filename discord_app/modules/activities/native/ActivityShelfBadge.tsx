@@ -40,7 +40,7 @@ export default function ActivityShelfBadge(arg0) {
     let tmp6 = <View variant="text-xs/semibold" style={null} color="text-overlay-light">{null}</View>;
   } else {
     tmp6 = null;
-    if (labelType === tmp2(1935).EmbeddedActivityLabelTypes.UPDATED) {
+    if (labelType === tmp2(1954).EmbeddedActivityLabelTypes.UPDATED) {
       obj = { style: null, children: null };
       const items1 = [replacementStyles, , ];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);

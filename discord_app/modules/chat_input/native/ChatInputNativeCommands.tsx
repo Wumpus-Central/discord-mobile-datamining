@@ -1,177 +1,85 @@
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
-
-let c3;
-let c4;
-({ findNodeHandle: c3, NativeModules: c4 } = get_ActivityIndicator);
-let result = require("__INTERNAL_VIEW_CONFIG").fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
+import { snowflakeSequence } from "../../messages/createNonce.tsx";
+let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
 export default {
   backspace(arg0) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.backspace(arg0);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.backspace(callback(arg0));
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.backspace(arg0);
     }
   },
   blur(arg0) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.blur(arg0);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.blur(callback(arg0));
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.blur(arg0);
     }
   },
   closeCustomKeyboard(arg0) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.closeCustomKeyboard(arg0);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.closeCustomKeyboard(callback(arg0));
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.closeCustomKeyboard(arg0);
     }
   },
   flushText(arg0, arg1) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.flushText(arg0, arg1);
-      } else {
-        const _Error = Error;
-        const error = new Error("flushText is not supported/needed on iOS");
-        throw error;
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.flushText(arg0, arg1);
     }
   },
   getText(arg0, set) {
     const _require = set;
-    const importDefault = arg2;
+    const dependencyMap = arg2;
     if (null == arg0) {
       return null;
-    } else if (obj3.shouldUseFabricChatInput()) {
-      const nonce = tmp17(tmp18[3]).createNonce();
+    } else {
+      const nonce = _snowflakeSequence.createNonce();
       const result = set.set(nonce, (arg0) => {
         set.delete(nonce);
         callback(arg0);
       });
-      const Commands = tmp17(tmp18[2]).Commands;
+      const Commands = ___INTERNAL_VIEW_CONFIG.Commands;
       Commands.flushText(arg0, nonce);
-      const tmp17Result = tmp17(tmp18[3]);
-    } else {
-      const tmp2 = callback(arg0);
-      if (null == tmp2) {
-        const _Error = Error;
-        const error = new Error("inputRef is null");
-        importDefault(tmp18[4]).captureException(error);
-        const obj = importDefault(tmp18[4]);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.markTextInputChanged(tmp(arg0));
-        const DCDChatInputLegacyManager2 = closure_4.DCDChatInputLegacyManager;
-        const text = DCDChatInputLegacyManager2.getText(tmp2);
-        text.then(arg2).catch(importDefault(tmp18[4]).captureException);
-        const nextPromise = text.then(arg2);
-      }
-      tmp = callback;
     }
   },
   focus(arg0) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.focus(arg0);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.focus(callback(arg0));
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.focus(arg0);
     }
   },
   openCustomKeyboard(arg0) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.openCustomKeyboard(arg0);
-      } else {
-        const _Error = Error;
-        const error = new Error("openCustomKeyboard is not supported/needed on iOS");
-        throw error;
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.openCustomKeyboard(arg0);
     }
   },
   openSystemKeyboard(arg0) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11381).Commands;
-        Commands.openSystemKeyboard(arg0);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.openSystemKeyboard(callback(arg0));
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.openSystemKeyboard(arg0);
     }
   },
   setText(arg0, arg1) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp2(11381).Commands;
-        Commands.setText(arg0, arg1);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.setText(callback(arg0), arg1);
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp2 = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.setText(arg0, arg1);
     }
   },
   setSelectedRange(arg0, arg1, arg2) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp3(11381).Commands;
-        Commands.setSelectedRange(arg0, arg1, arg2);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.setSelectedRange(callback(arg0), arg1, arg2);
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp3 = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.setSelectedRange(arg0, arg1, arg2);
     }
   },
   updateTextBlocks(arg0, arg1, arg2) {
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp9(11381).Commands;
-        const _JSON = JSON;
-        const json = JSON.stringify(arg1);
-        Commands.updateTextBlocks(arg0, json, tmp6);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.updateTextBlocks(callback(arg0), arg1, tmp6);
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp9 = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const _JSON = JSON;
+      const json = JSON.stringify(arg1);
+      Commands.updateTextBlocks(arg0, json, arg2);
+      const tmp2 = arg2;
     }
   },
   replaceRange(arg0, keepCursorPosition) {
@@ -189,16 +97,9 @@ export default {
     }
     const editId = keepCursorPosition.editId;
     if (null != arg0) {
-      if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp20(11381).Commands;
-        const _JSON = JSON;
-        Commands.replaceRange(arg0, _location, length, text, JSON.stringify(nodes), flag, editId);
-      } else {
-        const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
-        DCDChatInputLegacyManager.replaceRange(callback(arg0), _location, length, text, nodes, flag, editId);
-      }
-      obj = useShouldUseFabricChatInput;
-      tmp20 = require;
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const _JSON = JSON;
+      Commands.replaceRange(arg0, _location, length, text, JSON.stringify(nodes), flag, editId);
     }
   }
 };

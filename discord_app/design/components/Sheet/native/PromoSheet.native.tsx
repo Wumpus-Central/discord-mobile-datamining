@@ -54,7 +54,7 @@ export const PromoSheet = function PromoSheet(arg0) {
       obj = {};
       const merged1 = Object.assign(graphic);
       obj.style = tmp4.graphic;
-      let tmp6Result = tmp6(tmp7(7735).Graphic, obj);
+      let tmp6Result = tmp6(tmp7(7737).Graphic, obj);
     }
     const items1 = [tmp6Result, , ];
     let str = "heading-xl/bold";

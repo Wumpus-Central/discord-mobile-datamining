@@ -41,7 +41,7 @@ const memoResult = require("noop").memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: "man_running_facing_right_light_skin_tone" };
+    return { channelId: "call", type: "person_wearing_turban_tone4" };
   });
   if ("private" === stateFromStoresObject.type) {
     obj = { style: null, children: null };

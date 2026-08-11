@@ -9,7 +9,7 @@ import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY";
 import jsxProd from "SafeAreaPaddingView";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08060_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08062_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 

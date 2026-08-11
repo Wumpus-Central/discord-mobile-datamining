@@ -73,7 +73,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (premiumDiscountOffer != null) {
     const discount = premiumDiscountOffer.discount;
     if (discount != null) {
-      num2 = discount.userUsageLimit;
+      num2 = discount.intervalCount;
     }
   }
   if (num2 == null) {

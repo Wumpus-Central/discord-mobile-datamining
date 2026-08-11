@@ -1,5 +1,5 @@
 // discord_app/modules/user_affinities/UserAffinitiesV2Store.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { USER_AFFINITY_TTL } from "result";
 import { PersistedStore } from "initialize";
 
@@ -21,7 +21,7 @@ class UserAffinitiesV2Store extends PersistedStore {
 const prototype = UserAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(userAffinities) {
   const self = this;
-  this.waitFor(upsertRelationship);
+  this.waitFor(markAllUserIdListsStale);
   if (null != userAffinities) {
     obj.userAffinities = userAffinities.userAffinities;
     obj.lastFetched = userAffinities.lastFetched;
@@ -33,7 +33,7 @@ prototype["initialize"] = function initialize(userAffinities) {
       return items;
     }));
   }
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   self.syncWith(items, recomputeAffinities);
 };
 prototype["shouldFetch"] = function shouldFetch() {

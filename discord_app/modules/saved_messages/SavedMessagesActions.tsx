@@ -210,43 +210,74 @@ function _fetchAndUpdateSavedMessages() {
               return obj3;
             }
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          closure_0 = arg1;
-          if (closure_0.ok) {
-            const results = closure_0.body.results;
-            callback = results.map((message) => {
-              let messageRecord = null;
-              if (null != message.message) {
-                let obj = callback(4523);
-                messageRecord = obj.createMessageRecord(message.message);
-              }
-              obj = { message: messageRecord, saveData: null };
-              obj[1] = callback(8381).savedMessageDataToClient(message.save_data);
-              return obj;
-            });
-            obj2 = callback(709);
-            const obj5 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
-            obj5[1] = callback;
-            obj2.dispatch(obj5);
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
           } else {
-            obj = callback(709);
-            const obj6 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
-            obj6[1] = [];
-            obj.dispatch(obj6);
+            closure_0 = arg1;
+            if (closure_0.ok) {
+              const results = closure_0.body.results;
+              callback = results.map((message) => {
+                let messageRecord = null;
+                if (null != message.message) {
+                  let obj = callback(4523);
+                  messageRecord = obj.createMessageRecord(message.message);
+                }
+                obj = { message: messageRecord, saveData: null };
+                obj[1] = callback(8385).savedMessageDataToClient(message.save_data);
+                return obj;
+              });
+              let obj5 = callback(709);
+              obj5 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
+              obj5[1] = callback;
+              dependencyMap = 2;
+              c3 = 1;
+              const obj6 = { value: null, done: false };
+              obj6[0] = obj5.dispatch(obj5);
+              return obj6;
+            } else {
+              obj2 = callback(709);
+              const obj7 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
+              obj7[1] = [];
+              dependencyMap = 3;
+              c3 = 1;
+              const obj8 = { value: null, done: false };
+              obj8[0] = obj2.dispatch(obj7);
+              return obj8;
+            }
+          }
+        } else {
+          if (2 === tmp5) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj9 = { value: null, done: true };
+              obj9[0] = arg1;
+              return obj9;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           }
           c3 = 3;
+          return { value: "HermesInternal", done: null };
         }
-      } catch (tmp22) {
+      } catch (tmp20) {
         c3 = tmp;
-        throw tmp22;
+        throw tmp20;
       }
     }
   });

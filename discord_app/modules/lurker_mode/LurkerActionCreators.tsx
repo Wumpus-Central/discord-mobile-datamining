@@ -51,8 +51,8 @@ function _stopLurkingAll() {
               const found = outer1_5.lurkingGuildIds().filter((arg0) => !closure_0.includes(arg0));
               if (0 !== found.length) {
                 const _Map = Map;
-                const map = new Map(found.map((arg0) => {
-                  const items = [arg0, lurkingSourceForGuild.getLurkingSourceForGuild(arg0)];
+                const map = new Map(found.map((closure_0) => {
+                  const items = [closure_0, lurkingSourceForGuild.getLurkingSourceForGuild(closure_0)];
                   return items;
                 }));
                 v0 = map;
@@ -69,7 +69,7 @@ function _stopLurkingAll() {
                     let c6 = 0;
                     let c7 = 0;
                     let c5 = 0;
-                    return (/* F120007 */ function*() { ... })();
+                    return (/* F120104 */ function*() { ... })();
                   });
                   return function() {
                     const self = this;

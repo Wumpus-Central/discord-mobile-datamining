@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/native/MessageRequestRowSenderDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { ensureAvatarSource } from "../../../utils/native/AvatarUtils.tsx";
@@ -25,7 +25,7 @@ createCacheKey[6] = { marginTop: 2 };
 createCacheKey[7] = { flexShrink: 1 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flexShrink: 1, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-const result = require("upsertRelationship").fileFinishedImporting("modules/message_request/native/MessageRequestRowSenderDetails.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/message_request/native/MessageRequestRowSenderDetails.tsx");
 
 export default function MessageRequestRowSenderDetails(isRestricted) {
   let channel;
@@ -37,7 +37,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   }
   const tmp = createCacheKey();
   let obj = otherUser(589);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != otherUser) {
@@ -50,13 +50,13 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     }
     return tmp2;
   });
-  let obj1 = otherUser(15950);
+  let obj1 = otherUser(15967);
   const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * ensureAvatarSource.DEFAULT_AVATARS.length);
   obj = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
-    obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
+    obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "fatal" };
     obj[0] = tmp.avatar;
     obj[1] = otherUser;
     let avatarDecoration;
@@ -93,10 +93,10 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", tmp2(4146).getUserTag(otherUser)];
+    const items3 = [" ", tmp2(4148).getUserTag(otherUser)];
     obj6[2] = items3;
     tmp9Result = tmp9(tmp2(4299).Text, obj6);
-    const tmp2Result = tmp2(4146);
+    const tmp2Result = tmp2(4148);
   }
   items2[1] = tmp9Result;
   obj4[4] = items2;
@@ -108,7 +108,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const obj8 = { style: null, channel: null };
     obj8[0] = tmp.messagePreview;
     obj8[1] = channel;
-    tmp11Result = tmp11(tmp7(15951), obj8);
+    tmp11Result = tmp11(tmp7(15968), obj8);
   }
   items5[1] = tmp11Result;
   if (flag) {
@@ -120,8 +120,8 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     obj9[1] = otherUser.id;
     const intl2 = tmp2(1236).intl;
     obj9[2] = intl2.string(tmp2(1236).t.hTltPn);
-    flag = tmp11(tmp7(15952), obj9);
-    const tmp7Result = tmp7(15952);
+    flag = tmp11(tmp7(15969), obj9);
+    const tmp7Result = tmp7(15969);
   }
   const obj10 = { children: null };
   items5[2] = flag;

@@ -31,13 +31,13 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp5;
   const memo = React.useMemo(() => outer1_8(onBack(_undefined[8]), { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9541).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9547).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9541).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9547).ApplicationIntegrationType.GUILD_INSTALL];
   }
   React = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -132,7 +132,7 @@ export default function AppInteractionInfoActionSheet(message) {
       tmp26 = callback(tmp10(4846).PressableOpacity, obj5);
     }
   }
-  const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1609)().bottom }, children: null };
+  const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1628)().bottom }, children: null };
   const items9 = [tmp26, ];
   let tmp32 = null;
   if (null != tmp15) {

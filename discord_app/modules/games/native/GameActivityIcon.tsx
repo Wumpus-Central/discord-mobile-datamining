@@ -18,7 +18,7 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
   style = style.style;
   let iconURL;
   const tmp = callback();
-  let obj = onShown(4013);
+  let obj = onShown(4031);
   iconURL = game.getIconURL(size);
   obj = { width: size, height: size };
   const items = [iconURL, onShown];
@@ -36,15 +36,15 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
       obj = { size: "custom", style: null, color: null };
       const items1 = [tmp.icon, obj];
       obj[1] = items1;
-      let tmp2Result = tmp2(4153);
+      let tmp2Result = tmp2(1363);
       const colors = iconURL(712).colors;
       obj[2] = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(7947).UnknownGameIcon, { size: "custom", style: null, color: null });
+      jsx(tmp2(7949).UnknownGameIcon, { size: "custom", style: null, color: null });
       const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
     }
   } else {
     const obj1 = { source: null, style: null };
-    tmp2Result = tmp2(1416);
+    tmp2Result = tmp2(1435);
     obj1[0] = tmp2Result.makeSource(iconURL);
     const items2 = [tmp.icon, obj];
     obj1[1] = items2;

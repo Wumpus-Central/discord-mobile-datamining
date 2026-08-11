@@ -35,8 +35,8 @@ function isAnimatedBackgroundOption(closure_0) {
     if (hasItem) {
       let isAnimatedIconHashResult = getAvatarURL.isAnimatedIconHash(closure_0.asset);
       if (!isAnimatedIconHashResult) {
-        isAnimatedIconHashResult = tmp6(1416).isVideoAssetHash(closure_0.asset);
-        const tmp6Result = tmp6(1416);
+        isAnimatedIconHashResult = tmp6(1435).isVideoAssetHash(closure_0.asset);
+        const tmp6Result = tmp6(1435);
       }
       hasItem = isAnimatedIconHashResult;
       const obj = getAvatarURL;
@@ -171,7 +171,7 @@ export const trackBackgroundOptionDeleted = function trackBackgroundOptionDelete
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(closure_0) {
   if (null == closure_0) {
-    let obj = { oneofKind: "Promise" };
+    let obj = { oneofKind: "r" };
   } else {
     let tmp = null != closure_0 && typeof closure_0 === "object";
     if (tmp) {

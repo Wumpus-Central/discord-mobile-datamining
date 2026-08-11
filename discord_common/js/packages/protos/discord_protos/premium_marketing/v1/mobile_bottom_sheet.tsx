@@ -19,7 +19,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(7352).CTAButton;
+            return callback(7353).CTAButton;
           }
     };
     items[5] = {
@@ -27,7 +27,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "dismissible_content",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1358).DismissibleContent];
+            const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1377).DismissibleContent];
             return items;
           }
     };
@@ -36,7 +36,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7351).HelpArticle;
+            return callback(7352).HelpArticle;
           }
     };
     obj = { no: 8, name: "header_localized", kind: "message", T: null };
@@ -52,7 +52,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7350).LocalizedString;
+            return callback(7351).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.MobileBottomSheet", items, T);
@@ -229,7 +229,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(7352).CTAButton;
+      return callback(7353).CTAButton;
     }
   },
   {
@@ -237,7 +237,7 @@ let items = [
     name: "dismissible_content",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1358).DismissibleContent];
+      const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1377).DismissibleContent];
       return items;
     }
   },
@@ -246,7 +246,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7351).HelpArticle;
+      return callback(7352).HelpArticle;
     }
   },
 ,
@@ -265,7 +265,7 @@ items[8] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7350).LocalizedString;
+    return callback(7351).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.MobileBottomSheet", items, tmp, T, MobileBottomSheet$Type, prototype, items);

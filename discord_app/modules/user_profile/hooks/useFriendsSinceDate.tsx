@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/hooks/useFriendsSinceDate.tsx
 import _getSystemLocale from "_getSystemLocale";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { officialApplicationIds } from "../../connections/ConnectionsUtils.tsx";
@@ -13,7 +13,7 @@ export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
   const items = [_getSystemLocale];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => locale.locale);
   const obj = _defaultAreStatesEqual;
-  const items1 = [upsertRelationship];
+  const items1 = [markAllUserIdListsStale];
   const items2 = [userId];
   const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
     let since = null;

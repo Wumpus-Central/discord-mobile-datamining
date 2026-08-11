@@ -24,7 +24,7 @@ function ICYMIGuildEventRow(event) {
   let dependencyMap;
   let React;
   const tmp = callback4();
-  const tmp4 = guild(8948)(event, null);
+  const tmp4 = guild(8954)(event, null);
   const tmp5 = callback2(event);
   dependencyMap = tmp5;
   let toISOStringResult;
@@ -35,13 +35,13 @@ function ICYMIGuildEventRow(event) {
   React = toISOStringResult;
   const items = [toISOStringResult, tmp5];
   const tmp7 = guild(4494)(channel);
-  let obj = event(8945);
+  let obj = event(8951);
   const locationFromEvent = obj.getLocationFromEvent(event);
-  let obj1 = event(9032);
+  let obj1 = event(9038);
   const eventLocationIconSource = obj1.getEventLocationIconSource(event, channel, true);
-  let obj2 = event(9032);
+  let obj2 = event(9038);
   const eventLocationIconComponent = obj2.getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(8942);
+  let obj3 = event(8948);
   const items1 = [event];
   const nextRecurrenceIdInEvent = obj3.getNextRecurrenceIdInEvent(event);
   const items2 = [guild.id, event.id];
@@ -67,7 +67,7 @@ function ICYMIGuildEventRow(event) {
     title = event.description.length > 0;
   }
   let guild_id;
-  let tmp2Result = tmp2(8952);
+  let tmp2Result = tmp2(8958);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -76,7 +76,7 @@ function ICYMIGuildEventRow(event) {
     id = event.id;
   }
   obj = { actionLabel: null, id: null, interactionType: "guild_event", channelId: null, guildId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, children: null };
-  tmp2Result = tmp2(15608);
+  tmp2Result = tmp2(15625);
   let intl = tmp8(1236).intl;
   obj[0] = intl.string(event(1236).t["6pFsLQ"]);
   obj[1] = event.id;
@@ -124,7 +124,7 @@ function ICYMIGuildEventRow(event) {
   }
   if (tmp19Result) {
     obj3 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
-    let tmp8Result = tmp8(9034);
+    let tmp8Result = tmp8(9040);
     const obj4 = { guildId: null };
     obj4[0] = guild.id;
     obj3[3] = tmp8Result.guildEventDetailsParser(event.description, true, obj4);
@@ -161,7 +161,7 @@ function ICYMIGuildEventRow(event) {
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp8Result = tmp8(9034);
+      tmp8Result = tmp8(9040);
       result = tmp8Result.guildEventLocationParser(locationFromEvent, true);
     }
     tmp27 = result;

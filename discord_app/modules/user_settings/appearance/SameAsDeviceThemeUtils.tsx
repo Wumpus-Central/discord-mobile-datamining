@@ -4,6 +4,7 @@ import handleThemeChange from "handleThemeChange";
 import SystemThemeState from "SystemThemeState";
 import { saveGuildFolders } from "../../../actions/UserSettingsActionCreators.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { getThemeForColor } from "../../client_themes/ClientThemesUtils.tsx";
 import { setSystemTheme } from "../ThemeActionCreators.tsx";
 
 let c5;
@@ -19,7 +20,12 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
   if (null == syncedClientTheme.getSyncedClientTheme(constants.LIGHT)) {
     if (null == obj1.getSyncedClientTheme(tmp3.DARK)) {
       const theme = obj1.theme;
-      const tmp4 = AccessibilityAnnouncer.isThemeDark(theme) ? tmp3.DARK : tmp3.LIGHT;
+      let customThemeBaseTheme = theme;
+      if (null != arg0) {
+        let obj2 = getThemeForColor;
+        customThemeBaseTheme = obj2.getCustomThemeBaseTheme(theme);
+      }
+      const tmp8 = AccessibilityAnnouncer.isThemeDark(customThemeBaseTheme) ? tmp3.DARK : tmp3.LIGHT;
       if (!isSyncedModeThemesEnabled.isPreview) {
         const gradientPreset = isSyncedModeThemesEnabled.gradientPreset;
         let id;
@@ -27,31 +33,31 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
           id = gradientPreset.id;
         }
       }
-      let tmp14Result = tmp14(4149);
+      let tmp6Result = tmp6(4151);
       obj = {};
-      obj[tmp4] = theme;
-      const result1 = tmp14Result.updateThemePreferences(obj);
+      obj[tmp8] = customThemeBaseTheme;
+      const result1 = tmp6Result.updateThemePreferences(obj);
       if (null != arg0) {
-        tmp14Result = tmp14(4149);
+        tmp6Result = tmp6(4151);
         obj = { customUserThemeSettings: null };
         obj[0] = arg0;
-        const result2 = tmp14Result.updateSyncedClientTheme(tmp4, obj);
-      } else if (null != tmp5) {
+        const result2 = tmp6Result.updateSyncedClientTheme(tmp8, obj);
+      } else if (null != tmp9) {
         obj1 = { backgroundGradientPresetId: null };
-        obj1[0] = tmp5;
-        const result3 = tmp14(4149).updateSyncedClientTheme(tmp4, obj1);
-        const tmp14Result1 = tmp14(4149);
+        obj1[0] = tmp9;
+        const result3 = tmp6(4151).updateSyncedClientTheme(tmp8, obj1);
+        const tmp6Result1 = tmp6(4151);
       } else {
-        const obj2 = { theme: null };
-        obj2[0] = theme;
-        const result4 = tmp14(4149).updateSyncedClientTheme(tmp4, obj2);
-        const tmp14Result2 = tmp14(4149);
+        obj2 = { theme: null };
+        obj2[0] = customThemeBaseTheme;
+        const result4 = tmp6(4151).updateSyncedClientTheme(tmp8, obj2);
+        const tmp6Result2 = tmp6(4151);
       }
-      const obj13 = AccessibilityAnnouncer;
+      const obj4 = AccessibilityAnnouncer;
     }
   }
   const result5 = setSystemTheme.setSameAsDeviceThemeEnabled(true);
-  const obj11 = setSystemTheme;
+  const obj13 = setSystemTheme;
   setSystemTheme.setUseSystemTheme(constants2.ON);
 };
 export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {

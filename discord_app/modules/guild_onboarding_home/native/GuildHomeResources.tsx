@@ -8,7 +8,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "transitionTo";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/15682_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15699_registerAsset.js";
 import { useResourceChannels } from "../useResourceChannels.tsx";
 
 let c10;
@@ -36,9 +36,9 @@ function ResourceChannelRow(channelId) {
   const items2 = [reinjectEphemerals];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => outer1_8.getMessages(channelId));
   const firstResult = stateFromStores2.first();
-  let obj4 = channelId(8405);
+  let obj4 = channelId(8411);
   const forumPostMediaProperties = obj4.useForumPostMediaProperties(firstResult, false);
-  let obj5 = channelId(8405);
+  let obj5 = channelId(8411);
   let length;
   const firstMediaIsEmbed = obj5.useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
@@ -48,9 +48,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(11400);
+  let tmp2Result = tmp2(11403);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(15681)(firstResult);
+  const tmp11 = stateFromStores(15698)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -66,7 +66,7 @@ function ResourceChannelRow(channelId) {
   [][0] = stateFromStores;
   if (null != stateFromStores) {
     if (stateFromStores1) {
-      let tmp10Result = tmp10(1416);
+      let tmp10Result = tmp10(1435);
       obj = { channelId: null, icon: null };
       obj[0] = stateFromStores.id;
       obj[1] = icon;
@@ -135,7 +135,7 @@ function ResourceChannelRow(channelId) {
               obj9[0] = stateFromStores;
               obj9[1] = first;
               obj9[2] = firstMediaIsEmbed;
-              tmp2Result = tmp2(8405);
+              tmp2Result = tmp2(8411);
               if (flag == null) {
                 flag = false;
               }
@@ -146,7 +146,7 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(11400).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(11403).ForumPostMediaThumbnail, obj9);
             }
           }
         }

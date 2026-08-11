@@ -2,8 +2,8 @@
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/09528_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/09529_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09534_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09535_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

@@ -18,7 +18,7 @@ function getClientInfo() {
   const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
   let tmp;
   if (overrides != null) {
-    tmp = overrides[require(undefined, 11186) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+    tmp = overrides[require(undefined, 11191) /* setBuildOverrideForBranch */.DEVICE_FIELD];
   }
   let str2 = "N/A";
   if (str.trim().length > 0) {
@@ -76,7 +76,7 @@ function ClientClientInfoActionSheet() {
   obj[2] = function onPress() {
     callback(5756).copy(callback2().appVersion);
     const obj = callback(5756);
-    const result = callback(4001).presentCopiedToClipboard();
+    const result = callback(4020).presentCopiedToClipboard();
   };
   const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj), , , , , , ];
   const obj1 = { label: null, subLabel: null, onPress: null };
@@ -86,7 +86,7 @@ function ClientClientInfoActionSheet() {
   obj1[2] = function onPress() {
     callback(5756).copy(callback2().buildNumber);
     const obj = callback(5756);
-    const result = callback(4001).presentCopiedToClipboard();
+    const result = callback(4020).presentCopiedToClipboard();
   };
   items[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj1);
   let obj2 = { label: null, subLabel: null, onPress: null };
@@ -96,7 +96,7 @@ function ClientClientInfoActionSheet() {
   obj2[2] = function onPress() {
     callback(5756).copy(callback2().releaseChannel);
     const obj = callback(5756);
-    const result = callback(4001).presentCopiedToClipboard();
+    const result = callback(4020).presentCopiedToClipboard();
   };
   items[2] = callback(ActionSheetRowIcon.ActionSheetRow, obj2);
   let obj3 = { label: null, subLabel: null, onPress: null };
@@ -106,7 +106,7 @@ function ClientClientInfoActionSheet() {
   obj3[2] = function onPress() {
     callback(5756).copy(callback2().manifest);
     const obj = callback(5756);
-    const result = callback(4001).presentCopiedToClipboard();
+    const result = callback(4020).presentCopiedToClipboard();
   };
   items[3] = callback(ActionSheetRowIcon.ActionSheetRow, obj3);
   const obj4 = { label: null, subLabel: null, onPress: null };
@@ -116,7 +116,7 @@ function ClientClientInfoActionSheet() {
   obj4[2] = function onPress() {
     callback(5756).copy(callback2().buildOverride);
     const obj = callback(5756);
-    const result = callback(4001).presentCopiedToClipboard();
+    const result = callback(4020).presentCopiedToClipboard();
   };
   items[4] = callback(ActionSheetRowIcon.ActionSheetRow, obj4);
   let obj7 = isFabric;
@@ -126,7 +126,7 @@ function ClientClientInfoActionSheet() {
     obj5[2] = function onPress() {
       callback(5756).copy("React Native New Architecture is enabled.");
       const obj = callback(5756);
-      const result = callback(4001).presentCopiedToClipboard();
+      const result = callback(4020).presentCopiedToClipboard();
     };
     tmp4Result = tmp4(tmp2(5766).ActionSheetRow, obj5);
   }
@@ -134,20 +134,20 @@ function ClientClientInfoActionSheet() {
   tmp4Result = null;
   if (tmp2Result.isFabric()) {
     let str = "Disabled";
-    if (tmp2(4039).isBridgeless) {
+    if (tmp2(4045).isBridgeless) {
       str = "Enabled";
     }
     const obj6 = { label: "Bridgeless mode", subLabel: null, onPress: null };
     obj6[1] = str;
     obj6[2] = function onPress() {
       let str = "disabled";
-      if (callback(4039).isBridgeless) {
+      if (callback(4045).isBridgeless) {
         str = "enabled";
       }
       const combined = "Bridgeless is " + str + ".";
       let tmpResult = tmp(5756);
       tmpResult.copy(combined);
-      tmpResult = tmp(4001);
+      tmpResult = tmp(4020);
       const result = tmpResult.presentCopiedToClipboard();
     };
     tmp4Result = tmp4(tmp2(5766).ActionSheetRow, obj6);
@@ -174,7 +174,7 @@ function ClientClientInfoActionSheet() {
     const obj2 = callback(4283);
     callback(5756).copy(combined);
     const obj3 = callback(5756);
-    const result = callback(4001).presentCopiedToClipboard();
+    const result = callback(4020).presentCopiedToClipboard();
   };
   obj7[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj8);
   items1[1] = callback(ActionSheetRowIcon.ActionSheetRow.Group, obj7);

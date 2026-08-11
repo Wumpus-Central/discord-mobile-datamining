@@ -13,11 +13,11 @@ import ME from "ME";
 import { SelfStreamAndVideoAlertType as closure_15 } from "SelfStreamAndVideoAlertType";
 import { MediaEngineContextTypes } from "DesktopSources";
 import { jsx } from "initialize";
-import { registerAsset } from "../../../../../_runtime/08018_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10355_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10868_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16191_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16192_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08020_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10360_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10873_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16207_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16208_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
 import { HeadphonesSlashIcon } from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
@@ -184,7 +184,7 @@ export { GameConsoleAccountButton };
 export const ActivitiesButton = function ActivitiesButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = React.useContext(dismissPanel(11645)).dismissPanel;
+  dismissPanel = React.useContext(dismissPanel(11648)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = React.useCallback(() => {
     dismissPanel();
@@ -194,7 +194,7 @@ export const ActivitiesButton = function ActivitiesButton(openTab) {
   }, items);
   let obj = { onPress: callback, icon: null, label: null };
   obj = { IconComponent: null };
-  obj[0] = openTab(7690).AppsIcon;
+  obj[0] = openTab(7692).AppsIcon;
   obj[1] = jsx(openTab(5380).TableRowIcon, { IconComponent: null });
   const intl = openTab(1236).intl;
   obj[2] = intl.string(openTab(1236).t.aeuOoh);
@@ -203,7 +203,7 @@ export const ActivitiesButton = function ActivitiesButton(openTab) {
 export const ChatButton = function ChatButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = React.useContext(dismissPanel(11645)).dismissPanel;
+  dismissPanel = React.useContext(dismissPanel(11648)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = React.useCallback(() => {
     dismissPanel();
@@ -229,7 +229,7 @@ export const SoundboardButton = function SoundboardButton(channel) {
     obj[1] = tmp5;
     obj[2] = tmp6;
     obj = { IconComponent: null };
-    obj[0] = tmp3(7709).SoundboardIcon;
+    obj[0] = tmp3(7711).SoundboardIcon;
     obj[3] = jsx(tmp3(5380).TableRowIcon, { IconComponent: null });
     tmp7 = jsx(tmp3(5374).TableRow, { IconComponent: null });
   }
@@ -241,7 +241,7 @@ export const ScreenshareButton = function ScreenshareButton(channel) {
   let text;
   let onPress;
   let isActive;
-  const tmp = isActive(10825)(channel.channel);
+  const tmp = isActive(10830)(channel.channel);
   onPress = tmp.onPress;
   isActive = tmp.isActive;
   const items = [isActive, onPress];
@@ -281,7 +281,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
     obj = { title: null, hasIcons: false, children: null };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.pEAl4b);
-    const tmp4Result = tmp4(10853);
+    const tmp4Result = tmp4(10858);
     let fn;
     if (tmpResult.isAndroid()) {
       fn = () => true;
@@ -348,7 +348,7 @@ export const InviteButton = function InviteButton(channel) {
         obj = { onPress: null, icon: null, label: null, trailing: null };
         obj[0] = tmp7;
         obj = { IconComponent: null, source: null };
-        obj[0] = tmp(9721).GroupPlusIcon;
+        obj[0] = tmp(9726).GroupPlusIcon;
         obj[1] = registerAsset;
         obj[1] = jsx(tmp(5380).TableRowIcon, { IconComponent: null, source: null });
         const intl = tmp(1236).intl;
@@ -372,8 +372,8 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   }, items1);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = channelId(7714).VideoIcon;
-  obj[1] = stateFromStores(10824);
+  obj[0] = channelId(7716).VideoIcon;
+  obj[1] = stateFromStores(10829);
   obj[0] = jsx(channelId(5380).TableRowIcon, { IconComponent: null, source: null });
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t.ZMTRyc);
@@ -396,14 +396,14 @@ export const HideSelfVideo = function HideSelfVideo() {
   if (tmp3[0]) {
     obj = { icon: null, value: null, onValueChange: null, label: null };
     obj = { IconComponent: null };
-    obj[0] = tmp5(7692).UserSquareIcon;
+    obj[0] = tmp5(7694).UserSquareIcon;
     obj[0] = jsx(tmp5(5380).TableRowIcon, { IconComponent: null });
     obj[1] = !tmp4;
     obj[2] = function onValueChange() {
       if (!table) {
         if (!VIDEO) {
           VIDEO = outer1_15.VIDEO;
-          const f113743 = (arg0) => f113743(!VIDEO);
+          const f113835 = (arg0) => f113835(!VIDEO);
           let obj = callback(table[14]);
           obj = { importer: null };
           obj[0] = function importer() {
@@ -421,7 +421,7 @@ export const HideSelfVideo = function HideSelfVideo() {
           obj.openLazy(obj);
         }
       }
-      return f113743(!VIDEO);
+      return f113835(!VIDEO);
     };
     const intl = tmp5(1236).intl;
     obj[3] = intl.string(tmp5(1236).t.MH8ESU);
@@ -494,7 +494,7 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   }, items);
   let obj = { onPress: callback, icon: null, label: null, subLabel: null, trailing: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = guildId(6011).SettingsIcon;
+  obj[0] = guildId(6013).SettingsIcon;
   obj[1] = registerAsset;
   obj[1] = jsx(guildId(5380).TableRowIcon, { IconComponent: null, source: null });
   const intl = guildId(1236).intl;

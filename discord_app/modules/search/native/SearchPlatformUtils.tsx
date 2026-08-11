@@ -35,7 +35,7 @@ function performKeyboardAwareNavigation(arg0) {
   if (obj.getKeyboardIsOpen()) {
     let tmpResult = tmp(500);
     if (tmpResult.isIOS()) {
-      tmpResult = tmp(1872);
+      tmpResult = tmp(1891);
       const result = tmpResult.dismissGlobalKeyboard();
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => callback(), 100);
@@ -67,7 +67,7 @@ function getUrlIcon(target) {
         }
         return LinkIcon.LinkIcon;
       }
-      tmp10Result = tmp10(1467);
+      tmp10Result = tmp10(1486);
     }
     obj = isDiscordProxiedAssetUrl;
     tmp10 = importDefault;
@@ -190,12 +190,12 @@ function fetchInitialMessages(closure_0) {
     const searchTabFetchId = obj.getSearchTabFetchId(closure_0, tmp3[0], queryString);
     let obj1 = store;
     if (!store.getIsFetching(searchTabFetchId)) {
-      const result = queryString(11719).clearAllSearchMesssages();
-      const obj3 = queryString(11719);
+      const result = queryString(11722).clearAllSearchMesssages();
+      const obj3 = queryString(11722);
       obj = { searchContext: null };
       obj[0] = closure_0;
-      queryString(11732).trackSearchStarted(obj);
-      const obj4 = queryString(11732);
+      queryString(11735).trackSearchStarted(obj);
+      const obj4 = queryString(11735);
       obj = { searchContext: null, searchTabs: null, searchQueryString: null, getId: null, getLimit: null, onFetchStart: null, onFetchSuccess: null, pagination: null, trackExactTotalHits: null, searchMode: null };
       obj[0] = closure_0;
       obj[1] = tmp3;
@@ -213,7 +213,7 @@ function fetchInitialMessages(closure_0) {
       obj1 = { cursor: null };
       obj1[0] = cursor;
       obj[7] = obj1;
-      const obj6 = queryString(11719);
+      const obj6 = queryString(11722);
       obj[8] = _explicitContentFromProto.SearchResultExactCountEnabled.getSetting();
       obj[9] = constants2.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
@@ -269,11 +269,11 @@ obj[9] = function fetchNextMessages(searchContext, tab, arg2) {
       obj = { cursor: null };
       obj[0] = cursor;
       obj[7] = obj;
-      const obj4 = queryString(11719);
-      obj[8] = tmp2(3974).SearchResultExactCountEnabled.getSetting();
+      const obj4 = queryString(11722);
+      obj[8] = tmp2(3993).SearchResultExactCountEnabled.getSetting();
       obj[9] = constants2.NEWEST;
       tabMessages = obj4.fetchTabMessages(obj);
-      const SearchResultExactCountEnabled2 = tmp2(3974).SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled2 = tmp2(3993).SearchResultExactCountEnabled;
     }
     return tabMessages;
   } else {
@@ -290,7 +290,7 @@ obj[9] = function fetchNextMessages(searchContext, tab, arg2) {
     } else if (null == totalCount) {
       tmp10 = null != cursor1;
     }
-    SearchResultExactCountEnabled = tmp2(3974).SearchResultExactCountEnabled;
+    SearchResultExactCountEnabled = tmp2(3993).SearchResultExactCountEnabled;
   }
 };
 obj[10] = syncAutocomplete;
@@ -309,9 +309,9 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
   let closure_2 = arg2;
   let tmp = arg3;
   function callback() {
-    const tmp = f88303(callback.getManager(closure_0));
+    const tmp = f88356(callback.getManager(closure_0));
     if (null == obj) {
-      f88304(tmp, tmp);
+      f88357(tmp, tmp);
     }
   }
   const tmp2 = arg1(callback.getManager(searchContext));
@@ -328,8 +328,8 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
 obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
   closure_0 = debounceResult;
   let flag = arg2;
-  const f88303 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
-  const f88304 = (textInputValue, textInputValue2) => {
+  const f88356 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
+  const f88357 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
@@ -337,9 +337,9 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
     closure_0(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
-    const tmp = f88303(callback.getManager(closure_0));
+    const tmp = f88356(callback.getManager(closure_0));
     if (null == obj) {
-      f88304(tmp, tmp);
+      f88357(tmp, tmp);
     }
   }
   let obj = callback;
@@ -358,7 +358,7 @@ let result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/
 
 export default obj;
 export const getMedia = function getMedia(items, items1) {
-  guildIdFromSearchContext = guildIdFromSearchContext(11712).getGuildIdFromSearchContext(items);
+  guildIdFromSearchContext = guildIdFromSearchContext(11715).getGuildIdFromSearchContext(items);
   items = [];
   let item = items1.forEach((getContentMessage) => {
     let closure_0 = getContentMessage;

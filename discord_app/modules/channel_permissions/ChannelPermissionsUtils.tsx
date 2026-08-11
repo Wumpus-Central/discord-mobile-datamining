@@ -573,7 +573,7 @@ export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
 export const flipEveryonePermission = function flipEveryonePermission(outer1_0, accessPermissions, result) {
   let everyoneOverwrite = outer1_0.permissionOverwrites[outer1_0.guild_id];
   if (null == everyoneOverwrite) {
-    let obj = importAll(3934);
+    let obj = importAll(3953);
     everyoneOverwrite = obj.makeEveryoneOverwrite(outer1_0.guild_id);
   }
   obj = {};
@@ -591,7 +591,7 @@ export const flipEveryonePermission = function flipEveryonePermission(outer1_0, 
 export const toggleChannelEveryonePermission = function toggleChannelEveryonePermission(guild_id) {
   let everyoneOverwrite = guild_id.permissionOverwrites[guild_id.guild_id];
   if (null == everyoneOverwrite) {
-    let obj = importAll(3934);
+    let obj = importAll(3953);
     everyoneOverwrite = obj.makeEveryoneOverwrite(guild_id.guild_id);
   }
   obj = {};
@@ -616,8 +616,8 @@ export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, 
       let obj = { id: null, type: null, allow: null, deny: null };
       obj[0] = currentUser.id;
       obj[1] = PermissionOverwriteType.PermissionOverwriteType.MEMBER;
-      obj[2] = importAll(506).add(importAll(3934).NONE, accessPermissions);
-      obj[3] = importAll(3934).NONE;
+      obj[2] = importAll(506).add(importAll(3953).NONE, accessPermissions);
+      obj[3] = importAll(3953).NONE;
       const obj4 = importAll(506);
       const items = [obj];
       return _updatePermission.savePermissionUpdates(outer1_0.id, items, true);

@@ -214,14 +214,14 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9242);
+                                const tmp8 = v0(9248);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(10972)(_slicedToArray);
+                                v0(10977)(_slicedToArray);
                                 dependencyMap = 3;
                                 tmp9 = _slicedToArray;
                               }
@@ -298,7 +298,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   _slicedToArray = arg1;
-                  obj = arr(9242);
+                  obj = arr(9248);
                   obj.ring(_slicedToArray, arr, "gdm_invite");
                 }
                 c6 = 3;

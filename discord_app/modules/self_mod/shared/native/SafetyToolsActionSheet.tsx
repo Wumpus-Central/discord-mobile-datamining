@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/shared/native/SafetyToolsActionSheet.tsx
 import Linking from "../../../../lib/native/Linking.tsx";
 import { View } from "SafetyToolsCrisisTextLineActionSheet";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE";
 import { jsx } from "registerAsset";
 import createCacheKey from "createCacheKey";
@@ -17,7 +17,7 @@ createCacheKey = { container: { flex: 1 }, actionRowGroup: null };
 createCacheKey = { marginHorizontal: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_24 };
 createCacheKey[1] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("upsertRelationship").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheet.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheet.tsx");
 
 export default function SafetyToolsActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -74,7 +74,7 @@ export default function SafetyToolsActionSheet(channelId) {
       closure_0 = outer1_7(closure_0);
       let obj = outer1_1(outer1_2[16]);
       obj = {
-        recipientId: module_3998,
+        recipientId: module_4017,
         channelId: closure_0,
         warningId: closure_1,
         warningType: closure_2,
@@ -134,10 +134,10 @@ export default function SafetyToolsActionSheet(channelId) {
     obj2[5] = function onPress() {
       const obj = outer1_1(outer1_2[24]);
       if (closure_11) {
-        obj.unignoreUser(module_3998, outer1_6, closure_0);
+        obj.unignoreUser(module_4017, outer1_6, closure_0);
         callback2(outer1_0(outer1_2[11]).CtaEventTypes.USER_SAFETY_TOOLS_UNIGNORE);
       } else {
-        obj.ignoreUser(module_3998, outer1_6, closure_0);
+        obj.ignoreUser(module_4017, outer1_6, closure_0);
         callback2(outer1_0(outer1_2[11]).CtaEventTypes.USER_SAFETY_TOOLS_IGNORE);
       }
     };
@@ -161,8 +161,8 @@ export default function SafetyToolsActionSheet(channelId) {
         let tmpResult = tmp(tmp2[24]);
         let obj = { location: null };
         obj[0] = outer1_6;
-        tmpResult.unblockUser(module_3998, obj);
-        const result = outer1_1(outer1_2[27]).showUnblockSuccessToast(module_3998, closure_0);
+        tmpResult.unblockUser(module_4017, obj);
+        const result = outer1_1(outer1_2[27]).showUnblockSuccessToast(module_4017, closure_0);
         callback2(outer1_0(outer1_2[11]).CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK);
         const obj5 = outer1_1(outer1_2[27]);
       } else {
@@ -225,7 +225,7 @@ export default function SafetyToolsActionSheet(channelId) {
       closure_0 = outer1_7(closure_0);
       let obj = outer1_1(outer1_2[16]);
       obj = {
-        recipientId: module_3998,
+        recipientId: module_4017,
         channelId: closure_0,
         warningId: closure_1,
         warningType: closure_2,
@@ -256,7 +256,7 @@ export default function SafetyToolsActionSheet(channelId) {
       closure_0 = outer1_7(closure_0);
       let obj = outer1_1(outer1_2[16]);
       obj = {
-        recipientId: module_3998,
+        recipientId: module_4017,
         channelId: closure_0,
         warningId: closure_1,
         warningType: closure_2,

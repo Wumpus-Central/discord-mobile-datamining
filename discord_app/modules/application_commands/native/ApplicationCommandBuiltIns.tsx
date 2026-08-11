@@ -1,5 +1,5 @@
 // discord_app/modules/application_commands/native/ApplicationCommandBuiltIns.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { set } from "../../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -30,7 +30,7 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4494).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const channelName = channel(4494).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     const intl5 = channel(1236).intl;
     let obj = { name: null };
     obj[0] = channelName;

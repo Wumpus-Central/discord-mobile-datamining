@@ -40,13 +40,13 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   let dependencyMap;
   const tmp = callback2();
   dependencyMap = tmp;
-  const tmp4 = scrollPosition(1348)("MessagesHeader");
+  const tmp4 = scrollPosition(1367)("MessagesHeader");
   let items = [tmp, height];
   const memo = importAllResult.useMemo(() => {
     const items = [_undefined.headerPanel, { height }];
     return items;
   }, items);
-  let obj = height(4036);
+  let obj = height(4042);
   const fn = function c() {
     let obj = height(_undefined[10]);
     let num = 0;
@@ -61,7 +61,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   fn.__workletHash = 17233409273245;
   fn.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = height(15159);
+  let obj2 = height(15168);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = importAllResult.useCallback(() => {
     const rootNavigationRef = height(_undefined[12]).getRootNavigationRef();
@@ -103,7 +103,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   obj = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const obj1 = { size: "sm", color: null };
   obj1[1] = scrollPosition(712).colors.WHITE;
-  obj[1] = callback(height(9706).PlusLargeIcon, obj1);
+  obj[1] = callback(height(9711).PlusLargeIcon, obj1);
   const intl = height(1236).intl;
   obj[3] = intl.string(height(1236).t.jD1qzM);
   obj[4] = callback3;
@@ -129,14 +129,14 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   const obj5 = { style: tmp.headerPanelButtons, children: null };
   const obj6 = { onPress: callback2, variant: "secondary", size: "sm", icon: null, accessibilityLabel: null };
   if (tmp4) {
-    let tmp14Result = tmp2(6007);
+    let tmp14Result = tmp2(6009);
   } else {
-    tmp14Result = tmp14(tmp6(6006).MagnifyingGlassIcon, { size: "sm" });
+    tmp14Result = tmp14(tmp6(6008).MagnifyingGlassIcon, { size: "sm" });
   }
   obj6[3] = tmp14Result;
   const intl3 = tmp6(1236).intl;
   obj6[4] = intl3.string(height(1236).t["5h0QOP"]);
-  const items2 = [callback(height(7751).IconButton, obj6), callback(scrollPosition(15164), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const items2 = [callback(height(7753).IconButton, obj6), callback(scrollPosition(15173), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
   if (tmp4) {
     let tmp2Result = tmp2(4242);
   } else {
@@ -146,11 +146,11 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   const intl4 = tmp6(1236).intl;
   obj7[7] = intl4.string(height(1236).t.zIJnA6);
   items2[2] = callback(height(4714).Button, obj7);
-  items2[3] = callback(height(7751).IconButton, obj);
+  items2[3] = callback(height(7753).IconButton, obj);
   obj5[1] = items2;
   items1[1] = closure_7(closure_4, obj5);
   const items3 = [tmp.headerBorder, animatedStyle];
-  items1[2] = callback(scrollPosition(4036).View, { style: items3 });
+  items1[2] = callback(scrollPosition(4042).View, { style: items3 });
   items1[3] = tmp13;
   obj2[1] = items1;
   return closure_7(closure_4, obj2);

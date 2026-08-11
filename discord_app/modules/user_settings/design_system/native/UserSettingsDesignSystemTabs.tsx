@@ -77,29 +77,29 @@ export default function UserSettingsDesignSystemTabs() {
     }
     return items;
   }, items);
-  let obj = first(8956);
+  let obj = first(8962);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
   callback = React.useCallback((nativeEvent) => {
     first(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj1 = first(4005);
+  let obj1 = first(4024);
   const token = obj1.useToken(first(712).colors.BACKGROUND_BASE_LOW);
   let items1 = [token, ];
-  let obj2 = first(4151);
+  let obj2 = first(4152);
   items1[1] = obj2.hexWithOpacity(token, 0);
   obj = { style: createCacheKey().container, onLayout: callback, children: null };
-  const items2 = [callback2(first(11973).Tabs, { state: segmentedControlState, grow: first1 }), ];
+  const items2 = [callback2(first(11976).Tabs, { state: segmentedControlState, grow: first1 }), ];
   let tmp20Result = first2;
   if (first2) {
     obj = { state: null, colors: null };
     obj[0] = segmentedControlState;
     obj[1] = items1;
-    tmp20Result = tmp20(first(12114), obj);
+    tmp20Result = tmp20(first(12117), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };
   items2[1] = tmp20Result;
-  const items3 = [closure_7(closure_5, { children: items2 }), callback2(first(9562).SegmentedControlPages, { state: segmentedControlState }), , ];
+  const items3 = [closure_7(closure_5, { children: items2 }), callback2(first(9567).SegmentedControlPages, { state: segmentedControlState }), , ];
   const obj3 = { spacing: 8, direction: "horizontal", children: null };
   const items4 = [
     callback2(first(4714).Button, {

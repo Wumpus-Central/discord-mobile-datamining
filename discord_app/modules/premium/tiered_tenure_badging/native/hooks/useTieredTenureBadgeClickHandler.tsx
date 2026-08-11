@@ -20,7 +20,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   const isPremiumSubscriber = _useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
-    let tmpResult = tmp(7095);
+    let tmpResult = tmp(7096);
     tmp4 = null != tmpResult.getTieredTenureBadge(id);
   }
   tmpResult = tmp(589);

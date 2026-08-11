@@ -99,7 +99,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11359)(c0, first[first.length - 1], props)) {
+            if (messages(11364)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -123,7 +123,7 @@ class ChatPreviewBase extends PureComponent {
             isSameDayResult = null == timestamp;
           }
           if (!isSameDayResult) {
-            let obj = _undefined(3971);
+            let obj = _undefined(3990);
             isSameDayResult = obj.isSameDay(tmp.timestamp, timestamp);
           }
           let flag = false;
@@ -203,9 +203,9 @@ class ChatPreviewBase extends PureComponent {
             obj4[0] = roleStyle;
             obj4[1] = outer1_12.DAY;
             obj4[2] = dependencyMap;
-            obj4[3] = _undefined(3971).dateFormat(tmp.timestamp, "LL");
+            obj4[3] = _undefined(3990).dateFormat(tmp.timestamp, "LL");
             arr.push(obj4);
-            const obj8 = _undefined(3971);
+            const obj8 = _undefined(3990);
           }
         });
         for (const item10042 of items1) {
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: "ResponderEventPlugin", scrollPosition: "ReactNativeBridgeEventPlugin", focusTargetId: "EMOJI_UPLOAD_START" };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: 0, scrollPosition: 2, focusTargetId: 0 };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -277,7 +277,7 @@ class ChatPreviewBase extends PureComponent {
         }
       }
       let obj = applyArgumentsResult(outer1_3[21]);
-      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 0, messageChannel: "absolute", selectedChannelId: 0, tapLinkData: 0 };
+      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 0, messageChannel: "isInRestrictedHours", selectedChannelId: "https://support.discord.com/hc/articles/14155060633623", tapLinkData: "https://support.discord.com/hc/articles/14155043715735" };
       obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
         const jumpToChatProps = props.props.jumpToChatProps;
         const onBeforeJumpToMessage = jumpToChatProps.onBeforeJumpToMessage;
@@ -531,11 +531,11 @@ let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImp
 
 export const ChatPreview = function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(3974).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(3993).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(3974).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(3993).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(3974).RenderEmbeds;
+  const RenderEmbeds = channelId(3993).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   let obj = channelId(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -543,8 +543,8 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ensureGuildLoaded];
   const stateFromStores1 = channelId(589).useStateFromStores(items1, () => outer1_8.getChannel(channelId));
   const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(5944).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(5944);
+  const isChannelSpoilerGated = channelId(5946).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(5946);
   const isChannelContentGated = channelId(4517).useIsChannelContentGated(stateFromStores1);
   const obj4 = channelId(4517);
   const items2 = [setContent];

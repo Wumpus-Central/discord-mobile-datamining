@@ -201,7 +201,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  const obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: 0.3 };
+  const obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "ClipPath" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -322,7 +322,7 @@ obj = {
     section = section.section;
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY: function handleOpenReplay() {
-    importAll(10920).chooseReplayPath();
+    importAll(10925).chooseReplayPath();
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: function handleOpenReplayAtPath(path) {
     path = path.path;

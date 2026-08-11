@@ -10,7 +10,7 @@ import ME from "ME";
 import jsxProd from "HubProgressHeader";
 import createCacheKey from "createCacheKey";
 import ArrayResult from "TTIFirstContentfulPaint";
-import { registerAsset } from "../../../../../_runtime/12026_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12029_registerAsset.js";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -63,7 +63,7 @@ function renderItem(item) {
     let obj = { children: null };
     obj[0] = item.header;
     return callback(GuildDirectoryHeaderRowItem, obj);
-  } else if (tmp2(12025).RowType.ENTRY === type) {
+  } else if (tmp2(12028).RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
     return callback(GuildDirectoryRow, obj);
@@ -138,7 +138,7 @@ function GuildDirectoryFooter(hideFooter) {
       obj[0] = tmp.footer;
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.addIcon;
-      obj1[1] = callback(tmp2(12108).PlusMediumIcon, {});
+      obj1[1] = callback(tmp2(12111).PlusMediumIcon, {});
       const items = [callback(closure_5, obj1), ];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp2(1236).intl;
@@ -200,10 +200,10 @@ export default function GuildDirectory(channel) {
   onPressSearch = obj.useStateFromStores(items, () => allEntriesCount.getGuild(guildId));
   let obj1 = React;
   dependencyMap = React.useRef(null);
-  let bottom = guildId(1609)().bottom;
-  let obj2 = channel(12024);
+  let bottom = guildId(1628)().bottom;
+  let obj2 = channel(12027);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(12024);
+  let obj3 = channel(12027);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
@@ -274,9 +274,9 @@ export default function GuildDirectory(channel) {
   }, items4);
   ref = obj1.useRef(null);
   closure_11 = obj1.useRef(0);
-  tmp2Result = tmp2(4135);
+  tmp2Result = tmp2(4137);
   _location = tmp2Result.useLocation();
-  history = channel(4135).useHistory();
+  history = channel(4137).useHistory();
   const items5 = [_location, history];
   const effect2 = obj1.useEffect(() => {
     const state = _location.state;
@@ -341,8 +341,8 @@ export default function GuildDirectory(channel) {
         obj2 = { guild: null, channel: null };
         obj2[0] = onPressSearch;
         obj2[1] = channel;
-        items9[1] = callback(guildId(12109), obj2);
-        items9[2] = callback(tmp2(11295).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = callback(guildId(12112), obj2);
+        items9[2] = callback(tmp2(11300).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj[1] = items9;
         let tmp23 = callback2(currentCategoryId, obj);
       }

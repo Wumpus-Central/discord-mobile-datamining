@@ -62,7 +62,7 @@ export default function StageBoostingActionSheet(channel) {
   let tmpResult = tmp(589);
   const items3 = [getUncachedChannelPermissions];
   const items4 = [channel];
-  stateFromStores2 = tmpResult.useStateFromStores(items3, () => outer1_5.can(channel(1380).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
+  stateFromStores2 = tmpResult.useStateFromStores(items3, () => outer1_5.can(channel(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
   if (hasItem) {
     let premiumTier1;
     if (stateFromStores != null) {
@@ -160,15 +160,15 @@ export default function StageBoostingActionSheet(channel) {
     obj4[0] = string3Result1;
     obj4[1] = stringResult;
     if (tmp9) {
-      tmp23Result = tmp23(tmp(6027).HoldingGemSpotIllustration, { accessible: false });
+      tmp23Result = tmp23(tmp(6029).HoldingGemSpotIllustration, { accessible: false });
     } else {
       const obj5 = { source: null };
-      obj5[0] = tmp21(7966);
+      obj5[0] = tmp21(7968);
       tmp23Result = tmp23(tmp21(5268), obj5);
       const tmp21Result = tmp21(5268);
     }
     obj4[2] = tmp23Result;
     obj4[3] = tmp23Result;
-    return tmp23(tmp(7733).PromoSheet, obj4);
+    return tmp23(tmp(7735).PromoSheet, obj4);
   }
 };

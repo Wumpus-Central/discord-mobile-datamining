@@ -1,6 +1,6 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
 import noop from "noop";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 
 const require = arg1;
 require("get ActivityIndicator").BackHandler;

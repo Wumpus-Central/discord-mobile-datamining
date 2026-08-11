@@ -37,7 +37,7 @@ function Scope(arg0) {
     obj = { style: null, color: null, size: "refresh_sm" };
     obj[0] = tmp.fakeScopeIcon;
     obj[1] = Themes.colors.TEXT_MUTED;
-    let tmp10Result = tmp10(tmp6(5996).CircleXIcon, obj);
+    let tmp10Result = tmp10(tmp6(5998).CircleXIcon, obj);
   } else {
     const obj1 = { color: null, size: "refresh_sm" };
     obj1[0] = Themes.colors.TEXT_MUTED;
@@ -89,9 +89,9 @@ export default function AuthorizeScopes(accountScopes) {
     } else {
       tmp4 = tmp14;
     }
-    let hasItem = integrationType === tmp4(9541).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp4(9547).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp4(8902).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp4(8908).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: null, children: null };
     obj[0] = tmp.scopesContainer;

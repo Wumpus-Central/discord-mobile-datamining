@@ -77,7 +77,7 @@ prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endp
   if (closure_0 === undefined) {
     tmp = null;
   }
-  let obj = self(7175);
+  let obj = self(7176);
   let tmp2 = null;
   if (obj.getConfig({ location: "recordQuestRequestAttempt" }).enableNewRequestBehavior) {
     tmp2 = null;

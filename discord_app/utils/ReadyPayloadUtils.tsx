@@ -363,14 +363,14 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   const obj = items;
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
-    let tmpResult = tmp(7114);
+    let tmpResult = tmp(7115);
     let committedVersions = tmpResult.getCommittedVersions();
   } else {
     committedVersions = Promise.resolve({});
   }
   obj2 = isCacheEnabled;
   if (tmp4Result.isCacheEnabled()) {
-    tmpResult = tmp(1956);
+    tmpResult = tmp(1975);
     let guildIds = tmpResult.getGuildIds();
   } else {
     const _Set = Set;
@@ -378,13 +378,13 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {
-    let okAsyncResult = tmp(7115).okAsync(databaseResult);
-    const tmpResult1 = tmp(7115);
+    let okAsyncResult = tmp(7116).okAsync(databaseResult);
+    const tmpResult1 = tmp(7116);
   } else {
     okAsyncResult = Promise.resolve(false);
   }
   const items = [committedVersions, guildIds, okAsyncResult];
-  tmp4Result = tmp4(7110);
+  tmp4Result = tmp4(7111);
   return Promise.all(items).then((arg0) => {
     let tmp;
     let tmp2;
@@ -406,7 +406,7 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
     tmp4 = false === closure_1.databaseOk;
   }
   if (tmp4) {
-    let tmp2Result = tmp2(1952);
+    let tmp2Result = tmp2(1971);
     const result = tmp2Result.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
   }
   tmp2Result = tmp2(12);

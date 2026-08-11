@@ -40,11 +40,11 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   if (str == null) {
     str = "";
   }
-  let tmp2Result = tmp2(3947);
+  let tmp2Result = tmp2(3966);
   const tierDisplayNameByPlanId = tmp2Result.getTierDisplayNameByPlanId(str);
-  tmp2Result = tmp2(3947);
-  const intervalStringAsNoun = markAsDismissed(3947).getIntervalStringAsNoun(tmp2Result.getInterval(str).intervalType);
-  const tmp2Result1 = markAsDismissed(3947);
+  tmp2Result = tmp2(3966);
+  const intervalStringAsNoun = markAsDismissed(3966).getIntervalStringAsNoun(tmp2Result.getInterval(str).intervalType);
+  const tmp2Result1 = markAsDismissed(3966);
   const tmp2Result2 = markAsDismissed(5855);
   const formatPriceResult = markAsDismissed(5855).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
   const tmp2Result3 = markAsDismissed(5855);

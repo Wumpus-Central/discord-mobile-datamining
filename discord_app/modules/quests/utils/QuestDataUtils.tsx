@@ -126,7 +126,7 @@ export const isDismissible = function isDismissible(closure_1) {
 export const isDismissed = function isDismissed(dismissedQuestContent) {
   const keys = Object.keys(closure_6);
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
-    return tmp2(1384).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5164).QuestContent[arg1]]);
+    return tmp2(1403).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5164).QuestContent[arg1]]);
   } else {
     return false;
   }

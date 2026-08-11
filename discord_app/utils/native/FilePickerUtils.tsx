@@ -128,9 +128,9 @@ function _handleDocumentSelection() {
           } else if (2 === tmp7) {
             c4 = 0;
             c4 = getSystemLocale;
-            obj3 = flag(10166);
+            obj3 = flag(10171);
             if (obj3.isErrorWithCode(c4)) {
-              if (c4.code === flag(10166).errorCodes.OPERATION_CANCELED) {
+              if (c4.code === flag(10171).errorCodes.OPERATION_CANCELED) {
                 c6 = 3;
                 return { value: "HermesInternal", done: null };
               }

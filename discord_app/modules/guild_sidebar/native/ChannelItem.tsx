@@ -2,7 +2,7 @@
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "BookCheckIcon";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { StaticChannelRoute } from "set";
@@ -11,7 +11,7 @@ import jsxProd from "getChannelRoleSubscriptionStatus";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
 import set from "get ActivityIndicator";
-import { registerAsset } from "../../../../_runtime/15249_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15258_registerAsset.js";
 import { BookCheckIcon } from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
@@ -110,7 +110,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return callback2(tmp9(11753).BaseChannelIcon, obj4);
+    return callback2(tmp9(11756).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {
@@ -128,7 +128,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(589).useStateFromStoresObject(items2, () => ({ status: outer1_6.getStatus(userId), isMobileOnline: outer1_6.isMobileOnline(userId), isVROnline: outer1_6.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA", style: null, status: "FAVORITES_GUILD_CHANNEL_SORT", isMobileOnline: 113, isVROnline: 124, statusStyle: "none" };
+  obj = { user: stateFromStores, guildId: "o", size: "M7 8H5v2h2V8Z", style: null, status: "pre", isMobileOnline: null, isVROnline: null, statusStyle: null };
   obj[2] = userId(1297).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;
@@ -203,7 +203,7 @@ export default importAllResult.memo((channel) => {
   obj[2] = hideIcon;
   const obj1 = { mode: tmp6, name: null, subtitle: null, textStyle: null };
   const tmp15 = tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT || tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
-  obj1[1] = channel(needSubscriptionToAccess[23]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  obj1[1] = channel(needSubscriptionToAccess[23]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   obj1[2] = subtitle;
   obj1[3] = textStyle;
   obj[3] = callback2(channel(needSubscriptionToAccess[13]).BaseChannelName, obj1);

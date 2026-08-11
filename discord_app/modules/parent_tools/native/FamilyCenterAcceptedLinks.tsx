@@ -5,7 +5,7 @@ import items from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14170_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14178_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
 import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
@@ -74,7 +74,7 @@ export default function FamilyCenterAcceptedLinks() {
   const tmp5Result = useAgeSpecificText;
   const intl2 = tmp5(1236).intl;
   obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxy["+tnO34"], obj), intl2.formatToPlainString(tmp2(2284)["pu6/U0"], obj));
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxy["+tnO34"], obj), intl2.formatToPlainString(tmp2(2303)["pu6/U0"], obj));
   const items = [callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
@@ -82,10 +82,10 @@ export default function FamilyCenterAcceptedLinks() {
     obj3[0] = tmp.empty;
     const obj4 = { text: null };
     const intl3 = tmp5(1236).intl;
-    obj4[0] = intl3.string(tmp2(2284).C4ScLD);
-    obj3[1] = tmp10(tmp2(14163), obj4);
+    obj4[0] = intl3.string(tmp2(2303).C4ScLD);
+    obj3[1] = tmp10(tmp2(14171), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14163);
+    const tmp2Result = tmp2(14171);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

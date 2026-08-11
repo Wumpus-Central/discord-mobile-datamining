@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetMenu.tsx
 import ref from "ref";
-import { View } from "module_9422";
+import { View } from "module_9428";
 import { AnalyticEvents } from "ME";
 import { CollectiblesMobileShopScreen as closure_6 } from "items";
 import ContentDismissActionType from "ContentDismissActionType";
@@ -77,7 +77,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(9422);
+  let obj = str(9428);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = React.useCallback(() => {

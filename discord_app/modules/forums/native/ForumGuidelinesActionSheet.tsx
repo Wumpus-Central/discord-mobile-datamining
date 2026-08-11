@@ -5,7 +5,7 @@ import { View } from "ME";
 import { FORUM_GUIDELINES_ACTION_SHEET as closure_6 } from "FORUM_GUIDELINES_ACTION_SHEET";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let c9;
@@ -188,5 +188,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(9921, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(9926, dependencyMap.paths), closure_6, obj);
 };

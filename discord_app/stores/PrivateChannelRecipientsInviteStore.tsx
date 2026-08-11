@@ -7,7 +7,7 @@ import hasConsented from "hasConsented";
 import handleChannelSelect from "handleChannelSelect";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
@@ -256,12 +256,12 @@ class PrivateChannelRecipientsInviteStoreClass extends Store {
 }
 const prototype = PrivateChannelRecipientsInviteStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, hasConsented, getHash, handleChannelSelect, trackCommunicationDisabled, createGuildRecordFromRust, upsertRelationship, recomputeAffinities, mergeGuildAvatar);
+  this.waitFor(ensureGuildLoaded, hasConsented, getHash, handleChannelSelect, trackCommunicationDisabled, createGuildRecordFromRust, markAllUserIdListsStale, recomputeAffinities, mergeGuildAvatar);
   const items = [mergeGuildAvatar, ensureGuildLoaded];
   this.syncWith(items, performQuery);
   const items1 = [recomputeAffinities];
   this.syncWith(items1, performQueryOnAffinityChange);
-  const items2 = [upsertRelationship];
+  const items2 = [markAllUserIdListsStale];
   this.syncWith(items2, updateHasFriends);
 };
 prototype["getResults"] = function getResults() {

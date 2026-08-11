@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import NoResults from "NoResults";
 import { View } from "UserFlashListActions";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import jsxProd from "set";
@@ -33,7 +33,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         let num3 = 1;
         return 1;
       } else {
-        let tmp19Result = tmp19(4146);
+        let tmp19Result = tmp19(4148);
         let tmp5 = user;
         let globalName = tmp19Result.getGlobalName(tmp4);
         let toLocaleLowerCaseResult1;
@@ -75,7 +75,7 @@ function matchGroupDM(id, trimmed1) {
   if ("" === trimmed1) {
     return 0;
   } else {
-    const channelName = computeChannelName.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+    const channelName = computeChannelName.computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale);
     const toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
     let num = 3;
     if (!toLocaleLowerCaseResult.startsWith(trimmed1)) {

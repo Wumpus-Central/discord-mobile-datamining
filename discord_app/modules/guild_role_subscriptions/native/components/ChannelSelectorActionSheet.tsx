@@ -10,7 +10,7 @@ import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "SearchField";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/12879_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12883_registerAsset.js";
 
 let Fonts;
 let c9;
@@ -34,11 +34,11 @@ function ChannelRow(channel) {
   obj[4] = channel;
   obj[5] = selected;
   obj[7] = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(15248), obj), ];
+  const children = [closure_11(onChannelSelected(15257), obj), ];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(16779);
+    obj[1] = tmp2(16791);
     selected = tmp8(tmp2(5268), obj);
     const tmp2Result = tmp2(5268);
   }
@@ -137,7 +137,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     return expandActionSheetResult;
   };
-  obj1[1] = closure_11(guildId(5992).SearchField, obj2);
+  obj1[1] = closure_11(guildId(5994).SearchField, obj2);
   items2[1] = closure_11(View, obj1);
   let tmp9Result = !hideCreateChannel;
   if (!hideCreateChannel) {

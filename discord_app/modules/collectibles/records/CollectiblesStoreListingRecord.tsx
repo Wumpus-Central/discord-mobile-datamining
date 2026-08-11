@@ -36,17 +36,17 @@ prototype["fromServer"] = function fromServer(styles) {
     obj = { backgroundColors: null, buttonColors: null, confettiColors: null };
     const background_colors = styles.background_colors;
     obj[0] = background_colors.map((color) => {
-      const tmp = callback2(7011);
+      const tmp = callback2(7014);
       return tmp(callback(688).int2hex(color));
     });
     const button_colors = styles.button_colors;
     obj[1] = button_colors.map((color) => {
-      const tmp = callback2(7011);
+      const tmp = callback2(7014);
       return tmp(callback(688).int2hex(color));
     });
     const confetti_colors = styles.confetti_colors;
     obj[2] = confetti_colors.map((color) => {
-      const tmp = callback2(7011);
+      const tmp = callback2(7014);
       return tmp(callback(688).int2hex(color));
     });
     tmp5 = obj;

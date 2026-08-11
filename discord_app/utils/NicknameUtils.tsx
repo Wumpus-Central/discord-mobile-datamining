@@ -1,7 +1,7 @@
 // discord_app/utils/NicknameUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { nameFromUser } from "UserUtils.tsx";
@@ -61,10 +61,10 @@ function useName(arg0, arg1, arg2) {
   const _require = arg0;
   let closure_1 = arg1;
   const dependencyMap = arg2;
-  const items = [trackCommunicationDisabled, ensureGuildLoaded, upsertRelationship];
+  const items = [trackCommunicationDisabled, ensureGuildLoaded, markAllUserIdListsStale];
   return _initialize.useStateFromStores(items, () => outer1_6(closure_0, closure_1, closure_2));
 }
-const result = require("upsertRelationship").fileFinishedImporting("utils/NicknameUtils.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("utils/NicknameUtils.tsx");
 
 export default { getNickname, getName, useName };
 export { getNickname };

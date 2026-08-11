@@ -2,7 +2,7 @@
 import storeThread from "storeThread";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -52,7 +52,7 @@ export const getMuteSettingLabel = function getMuteSettingLabel(channel, guild) 
 export const getMuteSettingSublabel = function getMuteSettingSublabel(channel, guild) {
   if (null != channel) {
     const obj = computeChannelName;
-    let name = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
+    let name = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true);
   } else if (null != guild) {
     name = guild.name;
   }
@@ -62,7 +62,7 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   const channel = store.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
-      let tmp7Result = tmp7(7224);
+      let tmp7Result = tmp7(7225);
       const result = tmp7Result.setNotificationSettings(channel, { muted: false });
     } else {
       tmp7Result = tmp7(5262);
@@ -77,14 +77,14 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
   let onOptionPress;
   ({ guildId, onOptionPress } = arg0);
   ({ channelId, muteDurationSeconds } = arg0);
-  const muteSettings = importAll(9821).getMuteSettings(muteDurationSeconds);
+  const muteSettings = importAll(9826).getMuteSettings(muteDurationSeconds);
   const channel = store.getChannel(channelId);
   guild = guild.getGuild(guildId);
   if (null != onOptionPress) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
     if (channel.isThread()) {
-      let tmp4Result = tmp4(7224);
+      let tmp4Result = tmp4(7225);
       const result = tmp4Result.setNotificationSettings(channel, muteSettings);
     } else {
       tmp4Result = tmp4(5262);

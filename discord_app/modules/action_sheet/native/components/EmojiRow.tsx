@@ -41,7 +41,7 @@ export default function EmojiRow(arg0) {
   const items = [
     emojisForReactionRow.map((emoji) => {
       let closure_0 = emoji;
-      return token(outer1_0(9860).EmojiReactionRowButton, {
+      return token(outer1_0(9865).EmojiReactionRowButton, {
         emoji,
         onPress() {
           let channel_id;
@@ -67,14 +67,14 @@ export default function EmojiRow(arg0) {
         emojiFontSize: closure_3,
         emojiLineHeight: closure_4,
         emojiContainerSize: token
-      }, outer1_0(9860).getEmojiKey(emoji, arg1));
+      }, outer1_0(9865).getEmojiKey(emoji, arg1));
     }),
 
   ];
   obj1 = {
     emojiContainerSize: token,
     onPress() {
-      return outer1_0(8613).handleAddNewReactions(channel, id.id, outer1_0(7223).ReactionLocations.MESSAGE);
+      return outer1_0(8619).handleAddNewReactions(channel, id.id, outer1_0(7224).ReactionLocations.MESSAGE);
     }
   };
   items[1] = token(EmojiPickerRowButton.EmojiPickerRowButton, obj1);

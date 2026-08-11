@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "MediaModalOverlayHeader";
 import get_ActivityIndicator from "ObscuredView";
-import jsxProd from "module_12246";
+import jsxProd from "module_12249";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
@@ -29,7 +29,7 @@ function OverlayMuteButton(arg0) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.w4m945);
   obj = { left: true, right: true, children: null };
-  obj[2] = importDefault(isMuted ? 12236 : 10894);
+  obj[2] = importDefault(isMuted ? 12239 : 10899);
   obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
@@ -45,7 +45,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.UIsxUw);
   obj = { left: true, right: true, children: null };
-  obj[2] = importDefault(spoilerActive ? 12237 : 12238);
+  obj[2] = importDefault(spoilerActive ? 12240 : 12241);
   obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
@@ -57,7 +57,7 @@ function MediaModalOverlay(getVideoControls) {
   let source;
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  let obj = index(12241);
+  let obj = index(12244);
   const items = [index];
   const items1 = [videoControls];
   const callback = importAllResult.useCallback(() => index(outer1_2[25]).toggleSpoiler(index), items);
@@ -66,7 +66,7 @@ function MediaModalOverlay(getVideoControls) {
   }, items1);
   obj = {};
   const merged = Object.assign(getVideoControls);
-  obj.slider = videoControls(8851)(index, source, videoControls);
+  obj.slider = videoControls(8857)(index, source, videoControls);
   obj.source = source;
   let flag = source.obscure;
   if (flag == null) {
@@ -144,7 +144,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   } else {
     tmp21Result2 = null;
   }
-  tmp2Result = tmp2(8865);
+  tmp2Result = tmp2(8871);
   obj2 = { animationDriver: overlayLayoutDriver, disableDownload, disableMediaOverlayButton, source, shareable, contextName, contextIcon, onClose, channelId: source.channelId };
   const items1 = [callback2(MediaModalOverlayHeader.MediaModalOverlayHeader, obj2), ];
   const obj3 = { style: items2, children: null };
@@ -163,7 +163,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     if (tmp21Result) {
       const obj6 = { isMuted: null, onToggleMute: null };
       obj6[0] = mediaPlayerMutedStore;
-      obj6[1] = tmp2(8851).toggleMuted;
+      obj6[1] = tmp2(8857).toggleMuted;
       tmp21Result = tmp21(OverlayMuteButton, obj6);
     }
     const items4 = [tmp21Result, ];
@@ -194,7 +194,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj9[5] = onClose;
     obj9[6] = tmp8;
     obj9[7] = overlayEnabled;
-    tmp21Result2 = tmp21(tmp2(12247).MediaModalOverlayFooter, obj9);
+    tmp21Result2 = tmp21(tmp2(12250).MediaModalOverlayFooter, obj9);
   }
   const obj10 = { children: null };
   items3[2] = tmp21Result2;
@@ -211,7 +211,7 @@ export default function MediaModalOverlayGuard(onIndexChange) {
   let tmp = null;
   const merged = Object.assign(onIndexChange, Object.create(null));
   let first;
-  let obj = onIndexChange(8846);
+  let obj = onIndexChange(8852);
   const tmp3 = callback(obj.useSelectedMediaSource(merged.syncer), 2);
   first = tmp3[0];
   const items = [first, onIndexChange];

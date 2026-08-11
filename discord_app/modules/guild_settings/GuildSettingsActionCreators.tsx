@@ -278,7 +278,7 @@ let obj = {
     obj(709).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
     const obj5 = obj(709);
-    const obj6 = obj(8273);
+    const obj6 = obj(8278);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = _sendRequest.HTTP;
     const obj2 = { url: closure_10.GUILD(id), query: obj3, body: obj, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -307,18 +307,6 @@ let obj = {
     const HTTP = _sendRequest.HTTP;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { verification_level: verificationLevel.verificationLevel, explicit_content_filter: verificationLevel.explicitContentFilter };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
-    return HTTP.patch(obj).then((arg0) => {
-      const result = outer1_1(outer1_2[11]).checkGuildTemplateDirty(closure_0);
-      return arg0;
-    });
-  },
-  updateGuildPremiumProgressBar(id, premium_progress_bar_enabled) {
-    const _require = id;
-    const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { premium_progress_bar_enabled };
     obj[3] = _sendRequest.rejectWithMigratedError();
     const obj3 = _sendRequest;
     return HTTP.patch(obj).then((arg0) => {
@@ -418,7 +406,7 @@ let obj = {
               c3 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = HTTP.del(obj1).then(() => {
-                const AccessibilityAnnouncer = _undefined(4122).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = _undefined(1350).AccessibilityAnnouncer;
                 const intl = _undefined(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(_undefined(1236).t["7iPyVW"]));
               });

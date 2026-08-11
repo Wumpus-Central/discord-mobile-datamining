@@ -46,7 +46,7 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
   }
   const obj1 = { marginBottom: PX_24, paddingVertical: tmp8(712).space.PX_8, paddingHorizontal: tmp8(712).space.PX_24, borderRadius: null, backgroundColor: null, flexDirection: "row", borderColor: null, borderWidth: 1 };
   isIOSResult = PlatformTypes.isIOS();
-  const result = tmp3(1348).isMobileVisualRefreshEnabled("YouBannerDecorations");
+  const result = tmp3(1367).isMobileVisualRefreshEnabled("YouBannerDecorations");
   const radii = tmp8(712).radii;
   let BACKGROUND_SURFACE_HIGH = arg1;
   obj1[3] = result ? radii.lg : radii.round;
@@ -57,7 +57,7 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
   obj1[6] = arg3;
   const merged2 = Object.assign(tmp8(712).shadows.SHADOW_HIGH);
   obj[2] = obj1;
-  const tmp3Result = tmp3(1348);
+  const tmp3Result = tmp3(1367);
   obj[3] = { flexDirection: "row", alignItems: "center", gap: tmp8(712).space.PX_16 };
   obj[4] = { height: "100%", alignItems: "center", justifyContent: "center" };
   return obj;

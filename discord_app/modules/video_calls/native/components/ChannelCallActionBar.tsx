@@ -11,7 +11,7 @@ import initialize from "initialize";
 import { ParticipantTypes } from "ParticipantTypes";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10843_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10848_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
 import { useIsRemote } from "../../../game_console/hooks/useIsRemote.tsx";
@@ -167,7 +167,7 @@ class DisconnectCallButton {
 class DisconnectStreamButton {
   constructor(arg0) {
     channel = global.channel;
-    f86139 = undefined;
+    f86193 = undefined;
     channel = undefined;
     tmp = channel;
     tmp2 = closure_3;
@@ -175,7 +175,7 @@ class DisconnectStreamButton {
     items = [, ];
     items[0] = View;
     items[1] = View;
-    f86139 = obj.useStateFromStores(items, () => {
+    f86193 = obj.useStateFromStores(items, () => {
       const selectedParticipant = outer1_7.getSelectedParticipant(channel.id);
       if (null != selectedParticipant) {
         if (selectedParticipant.type !== outer1_13.ACTIVITY) {
@@ -205,7 +205,7 @@ class DisconnectStreamButton {
       tmp5 = jsx;
       tmp6 = channel;
       obj = { source: null, accessibilityLabel: null, isSmallSize: null, onPress: null };
-      tmp7 = f86139;
+      tmp7 = f86193;
       obj[0] = require("registerAsset");
       intl = require("getSystemLocale").intl;
       obj[1] = intl.string(require("getSystemLocale").t.q3O3J8);
@@ -242,7 +242,7 @@ function LeaveActivityButton(isSmallSize) {
   };
   obj[2] = registerAsset;
   obj[3] = isSmallSize.isSmallSize;
-  return callback(importAll(10668).PrimaryActionButton, obj);
+  return callback(importAll(10673).PrimaryActionButton, obj);
 }
 function useActionBarSecondButton(channel) {
   channel = channel.channel;
@@ -281,7 +281,7 @@ function useActionBarSecondButton(channel) {
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
   let closure_1;
-  let obj = channel(9743);
+  let obj = channel(9748);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const items = [getParticipants, fetchFingerprint];
   closure_1 = channel(589).useStateFromStores(items, () => {
@@ -358,7 +358,7 @@ export default function ChannelCallActionBar(arg0) {
   if (shouldShowConnectingScreen) {
     const obj1 = { channel: null };
     obj1[0] = channel;
-    let tmp13Result = tmp11(tmp9(10845).CallConnectingActionBar, obj1);
+    let tmp13Result = tmp11(tmp9(10850).CallConnectingActionBar, obj1);
   } else {
     let tmp11Result = null;
     if (!tmp4) {
@@ -389,12 +389,12 @@ export default function ChannelCallActionBar(arg0) {
     const obj5 = { channel: null, isSmallSize: null };
     obj5[0] = channel;
     obj5[1] = isFiveButtonLayout;
-    items[2] = tmp11(tmp9(10869).ChannelCallMicButton, obj5);
+    items[2] = tmp11(tmp9(10874).ChannelCallMicButton, obj5);
     if (tmp7.END_REMOTE === END_REMOTE) {
       const obj6 = { channel: null, isSmallSize: null };
       obj6[0] = channel;
       obj6[1] = isFiveButtonLayout;
-      let tmp11Result2 = tmp11(tmp9(10895).DisconnectRemoteButton, obj6);
+      let tmp11Result2 = tmp11(tmp9(10900).DisconnectRemoteButton, obj6);
     } else if (tmp7.END_STREAM === END_REMOTE) {
       const obj7 = { channel: null, isSmallSize: null };
       obj7[0] = channel;

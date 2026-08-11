@@ -4,7 +4,7 @@ import { UserFlags } from "ME";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";
 import apply from "asyncRequireImpl";
 import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { MFAActionCreators } from "../../../../actions/MFAActionCreators.tsx";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
@@ -50,8 +50,8 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     obj = ModalActionCreators;
     const obj1 = { reason: null };
     obj1[0] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(8516, dependencyMap.paths), obj1, closure_5);
-    const tmp5 = asyncRequireImpl(8516, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(8522, dependencyMap.paths), obj1, closure_5);
+    const tmp5 = asyncRequireImpl(8522, dependencyMap.paths);
   }
 }, 200);
 apply = {

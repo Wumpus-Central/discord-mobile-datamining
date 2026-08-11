@@ -80,7 +80,7 @@ function RoleCreateScene() {
     if (1 === tmp7) {
       c2 = 0;
       callback(false);
-      const obj1 = outer1_0(4001);
+      const obj1 = outer1_0(4020);
       const result = obj1.roleCreateFailedToast();
       let c4 = 3;
     } else if (arg0 === 1) {
@@ -101,16 +101,16 @@ function RoleCreateScene() {
         if (null != selectedRoleId) {
           if (null != role) {
             if (null != guild) {
-              tmp3(4001).roleCreatedToast();
-              const obj5 = tmp3(4001);
+              tmp3(4020).roleCreatedToast();
+              const obj5 = tmp3(4020);
               const tmp13 = tmp3;
-              tmp3(16693).setRoleJustCreated(true);
+              tmp3(16705).setRoleJustCreated(true);
               let STEP_MEMBERS = outer1_25.STEP_PERMISSIONS;
               const guild2 = obj.getProps().guild;
               tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               const currentUser = outer1_11.getCurrentUser();
               const tmp23 = outer1_9(guild2, currentUser);
-              const obj6 = tmp3(16693);
+              const obj6 = tmp3(16705);
               const tmp18 = tmp32;
               obj = { permission: null, user: null, context: null };
               obj[0] = outer1_20.ADMINISTRATOR;
@@ -124,7 +124,7 @@ function RoleCreateScene() {
                 STEP_MEMBERS = tmp17.STEP_MEMBERS;
               }
               tmp3.push(STEP_MEMBERS);
-              obj7 = v0(3934);
+              obj7 = v0(3953);
               obj = { flow_type: null, from_step: null, to_step: null, skip: false };
               obj[0] = outer1_19.GUILD_ROLE_CREATION_MODAL;
               obj[1] = outer1_26[outer1_25.STEP_DISPLAY];

@@ -63,9 +63,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(589);
-  let obj2 = stateFromStores3(14667);
-  const canSeePushNotificationNudge = stateFromStores(11780).useCanSeePushNotificationNudge();
-  const obj3 = stateFromStores(11780);
+  let obj2 = stateFromStores3(14677);
+  const canSeePushNotificationNudge = stateFromStores(11783).useCanSeePushNotificationNudge();
+  const obj3 = stateFromStores(11783);
   const items1 = [updateUserGuildSettingsInternal];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
@@ -125,7 +125,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return tmp2;
   });
   if (tmp12) {
-    let tmpResult = tmp(4142);
+    let tmpResult = tmp(4144);
     tmp12 = !tmpResult.isPseudoGuildId(stateFromStores);
   }
   if (tmp12) {
@@ -146,10 +146,10 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   if (tmp12) {
     tmp12 = stateFromStores4;
   }
-  tmpResult = tmp(6022);
+  tmpResult = tmp(6024);
   let prop = null;
   if (tmp12) {
-    prop = tmp(1358).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
+    prop = tmp(1377).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
   }
   let tmp15 = stateFromStores;
   if (stateFromStores == null) {

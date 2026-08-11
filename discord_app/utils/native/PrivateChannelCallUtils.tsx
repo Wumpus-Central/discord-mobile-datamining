@@ -1,17 +1,17 @@
 // discord_app/utils/native/PrivateChannelCallUtils.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import runAfterInteractions from "runAfterInteractions";
 import setContent from "setContent";
 import withEqualityFn from "withEqualityFn";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "upsertRelationship";
+import closure_8 from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { AgeGateSource } from "result";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
-import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
@@ -44,10 +44,10 @@ function openChannelCallModal(channel) {
       obj[0] = channel;
       const _HermesInternal = HermesInternal;
       const tmp3Result = tmp3(4509);
-      tmp3Result.pushLazy(tmp(1988)(10652, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
-      const tmp5 = tmp(1988)(10652, dependencyMap.paths);
+      tmp3Result.pushLazy(tmp(2007)(10657, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
+      const tmp5 = tmp(2007)(10657, dependencyMap.paths);
     }
-    tmpResult = tmp(10769);
+    tmpResult = tmp(10774);
   }
 }
 function monkeyPatchCall() {
@@ -172,7 +172,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(13032, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(asyncRequireImpl(13041, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet("" + c17 + "-" + closure_0.id);
@@ -359,7 +359,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
             recipientId = outer1_0.getRecipientId();
           }
           outer1_1 = recipientId;
-          const tmp25 = outer1_1(9242);
+          const tmp25 = outer1_1(9248);
           const call = tmp25.call;
           const id = c0.id;
           let tmp28 = outer1_0;
@@ -474,7 +474,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           }
           obj1 = outer1_0(4166);
           obj1.dismissKeyboard();
-          const tmp11 = v0(9242);
+          const tmp11 = v0(9248);
           const call = tmp11.call;
           id = id.id;
           if (typeof call === "unknown") {

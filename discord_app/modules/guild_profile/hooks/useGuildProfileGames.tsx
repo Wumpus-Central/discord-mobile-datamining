@@ -1,6 +1,6 @@
 // discord_app/modules/guild_profile/hooks/useGuildProfileGames.tsx
 import noop from "noop";
-import applicationId from "applicationId";
+import getOfficialApplicationId from "getOfficialApplicationId";
 import handleLoadMessages from "handleLoadMessages";
 import fetchFingerprint from "fetchFingerprint";
 
@@ -97,7 +97,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [fetchFingerprint];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(7092);
+  games(5926);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];

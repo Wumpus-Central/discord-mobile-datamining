@@ -2,7 +2,7 @@
 import { AnalyticEvents } from "ME";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { AssetOriginTypes } from "../../recent_avatars/RecentAvatarsTypes.tsx";
+import { AssetOriginTypes } from "../../profile_customization/ProfilePendingImageTypes.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/user_profile/utils/trackUserAvatarUpdated.tsx");
 

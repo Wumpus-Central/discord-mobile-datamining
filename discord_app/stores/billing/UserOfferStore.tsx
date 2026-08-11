@@ -1,6 +1,7 @@
 // discord_app/stores/billing/UserOfferStore.tsx
-import emitChanges from "emitChanges";
 import createFromServer from "createFromServer";
+import emitChanges from "emitChanges";
+import closure_4 from "createFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import addEntitlement from "addEntitlement";
 import reset from "reset";
@@ -12,7 +13,7 @@ import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 let c10;
 let c9;
 let closure_12;
-let error;
+let closure_14;
 let map1;
 let metroImportAll;
 let unpackModuleId;
@@ -20,17 +21,58 @@ const require = arg1;
 function emitChanges() {
   return true;
 }
+function rehydrateDiscountOffer(discount) {
+  let obj = closure_4;
+  if (discount instanceof closure_4) {
+    return discount;
+  } else if ("discount_id" in discount) {
+    let fromServer = obj.createFromServer(discount);
+  } else {
+    obj = {};
+    const merged = Object.assign(discount);
+    discount = discount.discount;
+    if (null != discount) {
+      if (!(discount instanceof createFromServer)) {
+        tmp6 = new tmp6(discount);
+      }
+      obj.discount = tmp6;
+      let date = null;
+      if (null != discount.appliedAt) {
+        const _Date = Date;
+        date = new Date(discount.appliedAt);
+      }
+      obj.appliedAt = date;
+      let date1 = null;
+      if (null != discount.deletedAt) {
+        const _Date2 = Date;
+        date1 = new Date(discount.deletedAt);
+      }
+      obj.deletedAt = date1;
+      let date2 = null;
+      if (null != discount.expiresAt) {
+        const _Date3 = Date;
+        date2 = new Date(discount.expiresAt);
+      }
+      obj.expiresAt = date2;
+      fromServer = new obj(obj);
+    }
+    if (discount == null) {
+      discount = null;
+    }
+    tmp6 = discount;
+  }
+}
 function handleSubscriptionStoreUpdate() {
   const tmp = null != store.getPremiumTypeSubscription();
   if (!tmp) {
     return tmp;
   } else {
-    if (null != obj.userDiscountOffers[closure_9]) {
+    if (null != obj.userDiscountOffers[closure_10]) {
       obj = {};
       obj[tmp3] = obj.userDiscountOffers[tmp3];
       obj.userDiscountOffers = obj;
       obj.userTrialOffers = {};
-    } else if (null == obj.userDiscountOffers[closure_10]) {
+    } else if (null == obj.userDiscountOffers[closure_11]) {
       obj.userDiscountOffers = {};
     }
     obj = {};
@@ -44,7 +86,7 @@ function handlePaymentSourceChange() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-({ ANNUAL_DISCOUNT_IDS: error, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: metroImportAll, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c9, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: c10, SubscriptionPlanInfo: unpackModuleId, SubscriptionTrials: closure_12, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: map1 } = GuildFeatures);
+({ ANNUAL_DISCOUNT_IDS: metroImportAll, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: unpackModuleId, SubscriptionPlanInfo: closure_12, SubscriptionTrials: map1, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_14 } = GuildFeatures);
 let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "PX_16", userDiscountOffers: "TRANSPARENT", userDiscounts: 0, isFetching: "19.2.3", lastFetchSuccessful: "react-native-renderer" };
 obj[1] = {};
 obj[2] = {};
@@ -54,7 +96,7 @@ const prototype = UserOfferStore.prototype;
 prototype["initialize"] = function initialize(userDiscountOffers) {
   if (null != userDiscountOffers) {
     let obj = {};
-    let merged = Object.assign(userDiscountOffers);
+    const merged = Object.assign(userDiscountOffers);
     userDiscountOffers = userDiscountOffers.userDiscountOffers;
     if (userDiscountOffers == null) {
       userDiscountOffers = {};
@@ -64,36 +106,8 @@ prototype["initialize"] = function initialize(userDiscountOffers) {
       let tmp;
       let tmp2;
       [tmp, tmp2] = arg0;
-      const items = [tmp, ];
-      let obj = createFromServer;
-      if (tmp2 instanceof createFromServer) {
-        items[1] = tmp2;
-        return items;
-      } else if ("discount_id" in tmp2) {
-        let fromServer = obj.createFromServer(tmp2);
-      } else {
-        obj = {};
-        const merged = Object.assign(tmp2);
-        let date = null;
-        if (null != tmp2.appliedAt) {
-          const _Date = Date;
-          date = new Date(tmp2.appliedAt);
-        }
-        obj.appliedAt = date;
-        let date1 = null;
-        if (null != tmp2.deletedAt) {
-          const _Date2 = Date;
-          date1 = new Date(tmp2.deletedAt);
-        }
-        obj.deletedAt = date1;
-        let date2 = null;
-        if (null != tmp2.expiresAt) {
-          const _Date3 = Date;
-          date2 = new Date(tmp2.expiresAt);
-        }
-        obj.expiresAt = date2;
-        fromServer = new obj(obj);
-      }
+      const items = [tmp, callback(tmp2)];
+      return items;
     }));
     let tmp = obj;
   } else {
@@ -168,7 +182,7 @@ prototype["shouldFetchReferralOffer"] = function shouldFetchReferralOffer(tmp9Re
   }
 };
 prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminder(trial_id) {
-  const hasItem = closure_13.includes(trial_id.trial_id);
+  const hasItem = closure_14.includes(trial_id.trial_id);
   let result = !hasItem;
   if (hasItem) {
     result = apexExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -180,7 +194,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   let self = this;
   self = this;
   const dependencyMap = items;
-  let values = Object.values(closure_12);
+  let values = Object.values(closure_13);
   const _require = values.map((id) => id.id);
   const currentUser = authStore.getCurrentUser();
   let obj = _getPremiumPlanItem;
@@ -207,8 +221,8 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
       const _Date2 = Date;
       const parsed = Date.parse(trial_id.expires_at);
       const timestamp = Date.now();
-      hasItem = parsed < timestamp + lib(items[8]).getOfferNoticeThreshold(trial_id);
-      const obj = lib(items[8]);
+      hasItem = parsed < timestamp + lib(items[9]).getOfferNoticeThreshold(trial_id);
+      const obj = lib(items[9]);
     }
     if (hasItem) {
       hasItem = self.shouldShowTrialOfferReminder(trial_id);
@@ -217,7 +231,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   });
 };
 prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferReminder(discountId) {
-  const hasItem = closure_8.includes(discountId.discountId);
+  const hasItem = closure_9.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
     result = apexExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -230,7 +244,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
   self = this;
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  let obj = _require(self[8]);
+  let obj = _require(self[9]);
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
       let items = [];
@@ -242,15 +256,15 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
     let someResult = null != expiresAt.expiresAt && null != expiresAt.discount;
     if (someResult) {
       const planIds = expiresAt.discount.planIds;
-      someResult = planIds.some((arg0) => closure_0.includes(outer1_11[arg0].skuId));
+      someResult = planIds.some((arg0) => closure_0.includes(outer1_12[arg0].skuId));
     }
     if (someResult) {
       expiresAt = expiresAt.expiresAt;
       const _Date = Date;
       const time = expiresAt.getTime();
       const timestamp = Date.now();
-      someResult = time < timestamp + callback(self[8]).getOfferNoticeThreshold(expiresAt);
-      const obj = callback(self[8]);
+      someResult = time < timestamp + callback(self[9]).getOfferNoticeThreshold(expiresAt);
+      const obj = callback(self[9]);
     }
     if (someResult) {
       someResult = self.shouldShowDiscountOfferReminder(expiresAt);
@@ -297,7 +311,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
     const hasAcknowledgedResult = hasAcknowledged.hasAcknowledged();
     let tmp2 = !hasAcknowledgedResult;
     if (!hasAcknowledgedResult) {
-      tmp2 = !closure_7.includes(hasAcknowledged.discountId);
+      tmp2 = !closure_8.includes(hasAcknowledged.discountId);
     }
     return tmp2;
   });
@@ -415,8 +429,8 @@ let items = [
       userDiscountOffers = userDiscountOffers.userDiscountOffers;
     }
     if (null != userDiscountOffers) {
-      let obj = {};
-      let merged = Object.assign(userDiscountOffers);
+      const obj = {};
+      const merged = Object.assign(userDiscountOffers);
       const _Object = Object;
       const _Object2 = Object;
       const entries = Object.entries(userDiscountOffers.userDiscountOffers);
@@ -424,36 +438,8 @@ let items = [
         let tmp;
         let tmp2;
         [tmp, tmp2] = arg0;
-        const items = [tmp, ];
-        let obj = createFromServer;
-        if (tmp2 instanceof createFromServer) {
-          items[1] = tmp2;
-          return items;
-        } else if ("discount_id" in tmp2) {
-          let fromServer = obj.createFromServer(tmp2);
-        } else {
-          obj = {};
-          const merged = Object.assign(tmp2);
-          let date = null;
-          if (null != tmp2.appliedAt) {
-            const _Date = Date;
-            date = new Date(tmp2.appliedAt);
-          }
-          obj.appliedAt = date;
-          let date1 = null;
-          if (null != tmp2.deletedAt) {
-            const _Date2 = Date;
-            date1 = new Date(tmp2.deletedAt);
-          }
-          obj.deletedAt = date1;
-          let date2 = null;
-          if (null != tmp2.expiresAt) {
-            const _Date3 = Date;
-            date2 = new Date(tmp2.expiresAt);
-          }
-          obj.expiresAt = date2;
-          fromServer = new obj(obj);
-        }
+        const items = [tmp, callback(tmp2)];
+        return items;
       }));
       return obj;
     }
@@ -525,12 +511,12 @@ obj = {
   BILLING_USER_OFFER_REDEEMED: function handleUserOfferRedeemed(offerId) {
     offerId = offerId.offerId;
     const keys = Object.keys(obj.userDiscountOffers);
-    if (null != keys.find((arg0) => outer1_15.userDiscountOffers[arg0].id === offerId)) {
+    if (null != keys.find((arg0) => outer1_16.userDiscountOffers[arg0].id === offerId)) {
       const userDiscountOffers = obj.userDiscountOffers;
       delete tmp3[tmp4];
     }
     const keys1 = Object.keys(obj.userTrialOffers);
-    if (null != keys1.find((arg0) => outer1_15.userTrialOffers[arg0].id === offerId)) {
+    if (null != keys1.find((arg0) => outer1_16.userTrialOffers[arg0].id === offerId)) {
       const userTrialOffers = obj.userTrialOffers;
       delete tmp[tmp2];
     }
@@ -547,6 +533,6 @@ obj = {
   }
 };
 const userOfferStore = new UserOfferStore(require("dispatcher"), obj);
-let result = require("mergeGuildAvatar").fileFinishedImporting("stores/billing/UserOfferStore.tsx");
+let result = require("createFromServer").fileFinishedImporting("stores/billing/UserOfferStore.tsx");
 
 export default userOfferStore;

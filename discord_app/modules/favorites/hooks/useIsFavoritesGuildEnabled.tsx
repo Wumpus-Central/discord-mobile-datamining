@@ -21,8 +21,8 @@ export const getIsFavoritesGuildEnabled = function getIsFavoritesGuildEnabled() 
   return favoriteGuildEnabled;
 };
 export const useIsFavoritesGuildEnabled = function useIsFavoritesGuildEnabled() {
-  isFreemium = isFreemium(9711).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
-  const obj = isFreemium(9711);
+  isFreemium = isFreemium(9716).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
+  const obj = isFreemium(9716);
   const items = [initializeFromUserSettings];
   return isFreemium(589).useStateFromStores(items, () => {
     if (isFreemium) {

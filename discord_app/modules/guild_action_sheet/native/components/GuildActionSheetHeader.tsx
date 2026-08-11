@@ -8,8 +8,8 @@ import { GuildFeatures } from "ME";
 import jsxProd from "fromGuildPropertiesWithAdditionalFields";
 import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
-import { registerAsset } from "../../../../../_runtime/09265_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09268_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09271_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09274_registerAsset.js";
 
 let c10;
 let c4;
@@ -23,10 +23,10 @@ function CommunityPill(guildVisibility) {
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
   let tmp4Result = registerAsset;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(9261).GuildVisibility.PUBLIC) {
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(9267).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
-    GlobeEarthIcon = tmp2(10536).GlobeEarthIcon;
+    GlobeEarthIcon = tmp2(10541).GlobeEarthIcon;
     tmp4Result = registerAsset;
   }
   let obj = {

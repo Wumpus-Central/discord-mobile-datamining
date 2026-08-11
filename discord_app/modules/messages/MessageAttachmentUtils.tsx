@@ -22,14 +22,14 @@ function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChanne
       obj[0] = tmp4(5914).ObscuredMediaTypes.Embed;
       obj[1] = media;
       let tmp = obj;
-    } else if (tmp4(8405).ForumPostMediaTypes.ATTACHMENT === type) {
+    } else if (tmp4(8411).ForumPostMediaTypes.ATTACHMENT === type) {
       obj = { type: null, media: null };
       obj[0] = tmp4(5914).ObscuredMediaTypes.Attachment;
       obj[1] = media;
       tmp = obj;
     } else {
       tmp = null;
-      if (tmp4(8405).ForumPostMediaTypes.COMPONENT === type) {
+      if (tmp4(8411).ForumPostMediaTypes.COMPONENT === type) {
         obj = { type: null, media: null };
         obj[0] = tmp4(5914).ObscuredMediaTypes.GenericMedia;
         obj[1] = media.srcUnfurledMediaItem;
@@ -89,7 +89,7 @@ export const getObscureReasonForAttachment = function getObscureReasonForAttachm
     if (tmpResult.hasFlag(num, constants.IS_SPOILER)) {
       first = tmp(5913).ObscureReason.SPOILER;
     }
-    tmpResult = tmp(1384);
+    tmpResult = tmp(1403);
   }
   return first;
 };
@@ -165,7 +165,7 @@ export const useShouldObscure = function useShouldObscure(channel) {
     }
     return canResult;
   });
-  const RenderSpoilers = channel(3974).RenderSpoilers;
+  const RenderSpoilers = channel(3993).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(647);
   const enabledHarmTypesBitmaskForChannelType = channel(5909).getEnabledHarmTypesBitmaskForChannelType(channel(5914).ContentHarmTypeChannel.GUILD);

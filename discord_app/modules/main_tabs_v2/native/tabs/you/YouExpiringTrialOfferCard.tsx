@@ -7,7 +7,7 @@ import { Gradients } from "items";
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
-import { t } from "../../../../../../_runtime/03883_t.js";
+import { t } from "../../../../../../_runtime/03902_t.js";
 import { useCountdown } from "../../../../../hooks/useCountdown.tsx";
 
 let c9;
@@ -44,7 +44,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   let obj1 = navigateToPremium(647);
   let items = [shouldShowExpiringTrialOfferCard];
   stateFromStores = obj1.useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
-  let obj2 = navigateToPremium(6911);
+  let obj2 = navigateToPremium(6913);
   premiumTrialOffer = obj2.usePremiumTrialOffer();
   let num = 0;
   if (null != premiumTrialOffer) {
@@ -55,7 +55,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const tmp7Result = useCountdown(num, closure_15);
-  let tmp4Result = tmp4(15879);
+  let tmp4Result = tmp4(15896);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
@@ -82,10 +82,10 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         } else {
           PREMIUM_TRIAL = constants.PREMIUM_TRIAL;
         }
-        const articleURL = tmp(1974).getArticleURL(PREMIUM_TRIAL);
+        const articleURL = tmp(1993).getArticleURL(PREMIUM_TRIAL);
         obj = { style: null, children: null };
         obj[0] = tmp3.header;
-        tmp4Result = tmp4(3947);
+        tmp4Result = tmp4(3966);
         const subscription_trial = premiumTrialOffer.subscription_trial;
         let interval;
         if (subscription_trial != null) {
@@ -186,7 +186,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const tmp15 = closure_14;
         const tmp16 = closure_13;
         const tmp18 = premiumTrialOffer;
-        const tmpResult = tmp(1974);
+        const tmpResult = tmp(1993);
         const obj9 = { style: null, children: null };
         obj9[0] = navigateToPremium.style;
         obj9[1] = closure_14(closure_13, obj4);

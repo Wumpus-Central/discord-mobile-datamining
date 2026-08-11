@@ -24,26 +24,26 @@ export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
   const tmp = createCacheKey();
-  let obj = sharedValue(4036);
+  let obj = sharedValue(4042);
   sharedValue = obj.useSharedValue(initialPercent);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj1 = sharedValue(4036);
+  let obj1 = sharedValue(4042);
   const fn = function b() {
     const obj = { width: null };
     const obj2 = sharedValue(outer1_2[5]);
     obj[0] = obj2.withDelay(500, sharedValue(outer1_2[6]).withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
-  obj = { withDelay: sharedValue(4036).withDelay, withTiming: sharedValue(4304).withTiming, barWidth: sharedValue };
+  obj = { withDelay: sharedValue(4042).withDelay, withTiming: sharedValue(4304).withTiming, barWidth: sharedValue };
   fn.__closure = obj;
   fn.__workletHash = 7643178959760;
   fn.__initData = closure_8;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   const effect1 = React.useEffect(() => {
-    const timerId = setTimeout(() => callback2(4509).popWithKey(callback(11658).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => callback2(4509).popWithKey(callback(11661).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   obj = { style: tmp.screen, children: null };
   obj1 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };

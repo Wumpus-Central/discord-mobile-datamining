@@ -60,7 +60,7 @@ function SurveyOverrideActionSheet() {
   const first = tmp[0];
   let obj = { header: null, children: null };
   obj[0] = callback2(first(5396).BottomSheetTitleHeader, { title: "Survey Override" });
-  const items = [callback2(first(7790).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
+  const items = [callback2(first(7792).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -139,7 +139,7 @@ function ChangelogOverrideActionSheet() {
   const first = tmp[0];
   let obj = { header: null, children: null };
   obj[0] = callback2(first(5396).BottomSheetTitleHeader, { title: "Changelog Override" });
-  const items = [callback2(first(7790).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
+  const items = [callback2(first(7792).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";

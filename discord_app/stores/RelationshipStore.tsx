@@ -7,29 +7,53 @@ import { Store } from "initialize";
 import set from "mergeGuildAvatar";
 import { dispatcher } from "../Dispatcher.tsx";
 
-function upsertRelationship(arg0, arg1) {
-  let value = map.get(arg0);
-  if (value !== arg1) {
+function markAllUserIdListsStale() {
+  set3.add("friends");
+  set3.add("blocked");
+  set3.add("ignored");
+  set3.add("blockedOrIgnored");
+}
+function flushStaleUserIdLists() {
+  for (const item10005 of set3) {
+    let tmp = closure_19;
+    closure_19[item10005] = undefined;
+    continue;
+  }
+  set3.clear();
+}
+function upsertRelationship(id, type) {
+  let value = map.get(id);
+  if (value !== type) {
     if (null != value) {
       value = map1.get(value);
       if (value != null) {
-        value.delete(arg0);
+        value.delete(id);
       }
     }
-    const result = map.set(arg0, arg1);
-    const value1 = map1.get(arg1);
+    const result = map.set(id, type);
+    const value1 = map1.get(type);
     if (null != value1) {
-      value1.add(arg0);
+      value1.add(id);
     } else {
       const _Set = Set;
-      const items = [arg0];
+      const items = [id];
       const set = new Set(items);
-      const result1 = obj3.set(arg1, set);
+      const result1 = obj3.set(type, set);
     }
-    closure_19.friends = undefined;
-    closure_19.blocked = undefined;
-    closure_19.ignored = undefined;
-    closure_19.blockedOrIgnored = undefined;
+    if (value === RelationshipTypes.FRIEND) {
+      set3.add("friends");
+    } else if (value === tmp13.BLOCKED) {
+      set3.add("blocked");
+      set3.add("ignored");
+      set3.add("blockedOrIgnored");
+    }
+    if (type === RelationshipTypes.FRIEND) {
+      set3.add("friends");
+    } else if (type === tmp13.BLOCKED) {
+      set3.add("blocked");
+      set3.add("ignored");
+      set3.add("blockedOrIgnored");
+    }
     obj3 = map1;
   }
 }
@@ -41,10 +65,13 @@ function removeRelationship(arg0) {
     if (value != null) {
       value.delete(arg0);
     }
-    closure_19.friends = undefined;
-    closure_19.blocked = undefined;
-    closure_19.ignored = undefined;
-    closure_19.blockedOrIgnored = undefined;
+    if (value === RelationshipTypes.FRIEND) {
+      set3.add("friends");
+    } else if (value === tmp3.BLOCKED) {
+      set3.add("blocked");
+      set3.add("ignored");
+      set3.add("blockedOrIgnored");
+    }
   }
 }
 function recountPending() {
@@ -74,7 +101,8 @@ let closure_15 = {};
 let c16 = 0;
 let c17 = 0;
 let c18 = 0;
-let closure_19 = { friends: "HermesInternal", blocked: "accessibilityRole", ignored: "onPress", blockedOrIgnored: "keys" };
+let closure_19 = { friends: "Array", blocked: "flex", ignored: "y", blockedOrIgnored: "HermesInternal" };
+const set3 = new Set();
 const map1 = new Map();
 class RelationshipStore extends Store {
 }
@@ -287,13 +315,12 @@ prototype["getBlockedOrIgnoredIDs"] = function getBlockedOrIgnoredIDs() {
     const set = new Set(set1);
     const value = map1.get(RelationshipTypes.BLOCKED);
     if (null != value) {
-      for (const item10007 of value) {
-        let addResult = set.add(item10007);
+      for (const item10019 of value) {
+        let addResult = set.add(item10019);
         continue;
       }
     }
-    const _Array = Array;
-    closure_19.blockedOrIgnored = Array.from(set.values());
+    closure_19.blockedOrIgnored = set;
     tmp = closure_19;
   }
   return tmp.blockedOrIgnored;
@@ -322,67 +349,47 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     set1.clear();
     set.clear();
     set2.clear();
-    closure_19.friends = undefined;
-    closure_19.blocked = undefined;
-    closure_19.ignored = undefined;
-    closure_19.blockedOrIgnored = undefined;
+    set3.add("friends");
+    set3.add("blocked");
+    set3.add("ignored");
+    set3.add("blockedOrIgnored");
     let closure_13 = {};
     let closure_15 = {};
     relationships = relationships.relationships;
-    const item = relationships.forEach((nickname) => {
-      let id;
-      let type;
-      ({ id, type } = nickname);
-      let value = closure_6.get(id);
-      if (value === type) {
-        if (null != nickname.nickname) {
-          closure_7[nickname.id] = nickname.nickname;
+    const item = relationships.forEach((id) => {
+      callback(id.id, id.type);
+      if (null != id.nickname) {
+        closure_7[id.id] = id.nickname;
+      }
+      if (null != id.since) {
+        closure_8[id.id] = id.since;
+      }
+      if (null != id.note) {
+        closure_9[id.id] = id.note;
+      }
+      if (id.is_spam_request) {
+        set.add(id.id);
+      }
+      if (null != id.origin_application_id) {
+        closure_13[id.id] = id.origin_application_id;
+      }
+      if (id.user_ignored) {
+        id = id.id;
+        if (!set2.has(id)) {
+          obj.add(id);
+          set4.add("ignored");
+          set4.add("blockedOrIgnored");
         }
-        if (null != nickname.since) {
-          closure_8[nickname.id] = nickname.since;
+        if (id.type === constants.PENDING_INCOMING) {
+          set3.add(id.id);
         }
-        if (null != nickname.note) {
-          closure_9[nickname.id] = nickname.note;
-        }
-        if (nickname.is_spam_request) {
-          set.add(nickname.id);
-        }
-        if (null != nickname.origin_application_id) {
-          closure_13[nickname.id] = nickname.origin_application_id;
-        }
-        if (nickname.user_ignored) {
-          set2.add(nickname.id);
-          if (nickname.type === constants.PENDING_INCOMING) {
-            set3.add(nickname.id);
-          }
-        }
-      } else {
-        if (null != value) {
-          value = store.get(value);
-          if (value != null) {
-            value.delete(id);
-          }
-        }
-        const result = closure_6.set(id, type);
-        const value1 = store.get(type);
-        if (null != value1) {
-          value1.add(id);
-        } else {
-          const _Set = Set;
-          const items = [id];
-          set = new Set(items);
-          const result1 = obj3.set(type, set);
-        }
-        closure_19.friends = undefined;
-        closure_19.blocked = undefined;
-        closure_19.ignored = undefined;
-        closure_19.blockedOrIgnored = undefined;
-        obj3 = store;
+        obj = set2;
       }
     });
+    flushStaleUserIdLists();
     let size = set.size;
     size = set2.size;
-    let value = map1.get(RelationshipTypes.PENDING_INCOMING);
+    const value = map1.get(RelationshipTypes.PENDING_INCOMING);
     let num;
     if (value != null) {
       num = value.size;
@@ -396,100 +403,84 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
     map.clear();
     map1.clear();
-    while (tmp3 !== undefined) {
-      let tmp5 = callback;
-      let tmp6 = callback(tmp4, 2);
-      let tmp7 = upsertRelationship;
-      let tmp8 = upsertRelationship(tmp6[0], tmp6[1]);
+    markAllUserIdListsStale();
+    while (tmp4 !== undefined) {
+      let tmp6 = callback;
+      let tmp7 = callback(tmp5, 2);
+      let tmp8 = upsertRelationship;
+      let tmp9 = upsertRelationship(tmp7[0], tmp7[1]);
       continue;
     }
+    flushStaleUserIdLists();
     recountPending();
   },
   RELATIONSHIP_ADD: function handleRelationshipAdd(relationship) {
-    let obj = map;
-    const id = relationship.relationship.id;
-    const type = relationship.relationship.type;
     let value = map.get(relationship.relationship.id);
-    value = map.get(id);
-    if (value === type) {
-      if (null != relationship.relationship.nickname) {
-        obj = {};
-        const merged = Object.assign(obj);
-        obj[relationship.relationship.id] = relationship.relationship.nickname;
+    upsertRelationship(relationship.relationship.id, relationship.relationship.type);
+    if (null != relationship.relationship.nickname) {
+      let obj = {};
+      const merged = Object.assign(obj);
+      obj[relationship.relationship.id] = relationship.relationship.nickname;
+    }
+    if (null != relationship.relationship.since) {
+      obj = {};
+      const merged1 = Object.assign(obj);
+      obj[relationship.relationship.id] = relationship.relationship.since;
+    }
+    if (null != relationship.relationship.note) {
+      obj = {};
+      const merged2 = Object.assign(obj);
+      obj[relationship.relationship.id] = relationship.relationship.note;
+    }
+    if (null != relationship.relationship.originApplicationId) {
+      const obj1 = {};
+      const merged3 = Object.assign(obj1);
+      obj1[relationship.relationship.id] = relationship.relationship.originApplicationId;
+    }
+    if (relationship.relationship.isSpamRequest) {
+      obj5.add(relationship.relationship.id);
+      let tmp16 = obj5;
+    } else {
+      obj5.delete(relationship.relationship.id);
+      tmp16 = obj5;
+    }
+    const id = relationship.relationship.id;
+    if (relationship.relationship.userIgnored) {
+      if (!obj6.has(id)) {
+        obj6.add(id);
+        set3.add("ignored");
+        set3.add("blockedOrIgnored");
       }
-      if (null != relationship.relationship.since) {
-        obj = {};
-        const merged1 = Object.assign(obj);
-        obj[relationship.relationship.id] = relationship.relationship.since;
-      }
-      if (null != relationship.relationship.note) {
-        const obj1 = {};
-        const merged2 = Object.assign(obj1);
-        obj1[relationship.relationship.id] = relationship.relationship.note;
-      }
-      if (null != relationship.relationship.originApplicationId) {
-        let obj2 = {};
-        const merged3 = Object.assign(obj2);
-        obj2[relationship.relationship.id] = relationship.relationship.originApplicationId;
-      }
-      if (relationship.relationship.isSpamRequest) {
-        obj9.add(relationship.relationship.id);
-        let tmp29 = obj9;
-      } else {
-        obj9.delete(relationship.relationship.id);
-        tmp29 = obj9;
-      }
-      if (relationship.relationship.userIgnored) {
-        obj10.add(relationship.relationship.id);
-        if (relationship.relationship.type === RelationshipTypes.PENDING_INCOMING) {
-          set2.add(relationship.relationship.id);
-        } else if (relationship.relationship.type === tmp35.FRIEND) {
-          set2.delete(relationship.relationship.id);
-        }
-      } else {
-        obj10.delete(relationship.relationship.id);
+      if (relationship.relationship.type === RelationshipTypes.PENDING_INCOMING) {
+        set2.add(relationship.relationship.id);
+      } else if (relationship.relationship.type === tmp27.FRIEND) {
         set2.delete(relationship.relationship.id);
       }
-      let size = tmp29.size;
-      size = set2.size;
-      const value1 = map1.get(RelationshipTypes.PENDING_INCOMING);
-      let num;
-      if (value1 != null) {
-        num = value1.size;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      let closure_16 = Math.max(num - size - size, 0);
-      closure_14 = closure_14 + 1;
-      if (tmp48) {
-        const obj3 = { type: "FRIEND_REQUEST_ACCEPTED", user: null };
-        obj3[1] = relationship.relationship.user;
-        dispatcher.dispatch(obj3);
-        const obj11 = dispatcher;
-      }
     } else {
-      if (null != value) {
-        const value2 = map1.get(value);
-        if (value2 != null) {
-          value2.delete(id);
-        }
+      if (obj6.delete(id)) {
+        set3.add("ignored");
+        set3.add("blockedOrIgnored");
       }
-      const result = obj.set(id, type);
-      obj2 = map1;
-      const value3 = map1.get(type);
-      if (null != value3) {
-        value3.add(id);
-      } else {
-        const _Set = Set;
-        const items = [id];
-        const set = new Set(items);
-        const result1 = obj2.set(type, set);
-      }
-      closure_19.friends = undefined;
-      closure_19.blocked = undefined;
-      closure_19.ignored = undefined;
-      closure_19.blockedOrIgnored = undefined;
+      set2.delete(relationship.relationship.id);
+    }
+    flushStaleUserIdLists();
+    let size = tmp16.size;
+    size = set2.size;
+    value = map1.get(RelationshipTypes.PENDING_INCOMING);
+    let num;
+    if (value != null) {
+      num = value.size;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    let closure_16 = Math.max(num - size - size, 0);
+    closure_14 = closure_14 + 1;
+    if (tmp35) {
+      const obj2 = { type: "FRIEND_REQUEST_ACCEPTED", user: null };
+      obj2[1] = relationship.relationship.user;
+      dispatcher.dispatch(obj2);
+      const obj7 = dispatcher;
     }
   },
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(relationship) {
@@ -502,10 +493,13 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
       if (value != null) {
         value.delete(id);
       }
-      closure_19.friends = undefined;
-      closure_19.blocked = undefined;
-      closure_19.ignored = undefined;
-      closure_19.blockedOrIgnored = undefined;
+      if (value === RelationshipTypes.FRIEND) {
+        set3.add("friends");
+      } else if (value === tmp5.BLOCKED) {
+        set3.add("blocked");
+        set3.add("ignored");
+        set3.add("blockedOrIgnored");
+      }
     }
     if (null != obj[relationship.relationship.id]) {
       obj = {};
@@ -532,10 +526,14 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
       delete tmp2[tmp];
     }
     if (!relationship.relationship.userIgnored) {
-      set1.delete(relationship.relationship.id);
+      if (set1.delete(relationship.relationship.id)) {
+        set3.add("ignored");
+        set3.add("blockedOrIgnored");
+      }
     }
     set2.delete(relationship.relationship.id);
     set.delete(relationship.relationship.id);
+    flushStaleUserIdLists();
     let size = set.size;
     size = set2.size;
     const value1 = map1.get(RelationshipTypes.PENDING_INCOMING);
@@ -550,91 +548,73 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     closure_14 = closure_14 + 1;
   },
   RELATIONSHIP_UPDATE: function handleRelationshipUpdate(relationship) {
-    let id;
-    let type;
     relationship = relationship.relationship;
-    ({ id, type } = relationship);
-    let value = map.get(id);
-    if (value === type) {
-      if (null == relationship.since) {
-        const id2 = relationship.id;
-        delete tmp2[tmp];
-      } else {
-        closure_8[relationship.id] = relationship.since;
-      }
-      if (null == relationship.nickname) {
-        const id3 = relationship.id;
-        delete tmp2[tmp];
-      } else {
-        closure_7[relationship.id] = relationship.nickname;
-      }
-      if (null == relationship.note) {
-        const id4 = relationship.id;
-        delete tmp2[tmp];
-      } else {
-        closure_9[relationship.id] = relationship.note;
-      }
-      if (relationship.isSpamRequest) {
-        obj5.add(relationship.id);
-        let tmp25 = obj5;
-      } else {
-        obj5.delete(relationship.id);
-        tmp25 = obj5;
-      }
-      if (null != dependencyMap[relationship.id]) {
-        const id5 = relationship.id;
-        delete tmp3[tmp2];
-      }
-      if (null == relationship.originApplicationId) {
-        const id6 = relationship.id;
-        delete tmp3[tmp2];
-      } else {
-        closure_13[relationship.id] = relationship.originApplicationId;
-      }
-      if (relationship.userIgnored) {
-        obj6.add(relationship.id);
-        if (relationship.type === RelationshipTypes.PENDING_INCOMING) {
-          set2.add(relationship.id);
-        }
-      } else {
-        obj6.delete(relationship.id);
-        set2.delete(relationship.id);
-      }
-      let size = tmp25.size;
-      size = set2.size;
-      value = map1.get(RelationshipTypes.PENDING_INCOMING);
-      let num;
-      if (value != null) {
-        num = value.size;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      let closure_16 = Math.max(num - size - size, 0);
-      closure_14 = closure_14 + 1;
+    upsertRelationship(relationship.id, relationship.type);
+    if (null == relationship.since) {
+      const id = relationship.id;
+      delete tmp2[tmp];
     } else {
-      if (null != value) {
-        const value1 = map1.get(value);
-        if (value1 != null) {
-          value1.delete(id);
-        }
-      }
-      const result = map.set(id, type);
-      const value2 = map1.get(type);
-      if (null != value2) {
-        value2.add(id);
-      } else {
-        const _Set = Set;
-        const items = [id];
-        const set = new Set(items);
-        const result1 = obj3.set(type, set);
-      }
-      closure_19.friends = undefined;
-      closure_19.blocked = undefined;
-      closure_19.ignored = undefined;
-      closure_19.blockedOrIgnored = undefined;
-      obj3 = map1;
+      closure_8[relationship.id] = relationship.since;
     }
+    if (null == relationship.nickname) {
+      const id2 = relationship.id;
+      delete tmp2[tmp];
+    } else {
+      closure_7[relationship.id] = relationship.nickname;
+    }
+    if (null == relationship.note) {
+      const id3 = relationship.id;
+      delete tmp2[tmp];
+    } else {
+      closure_9[relationship.id] = relationship.note;
+    }
+    if (relationship.isSpamRequest) {
+      obj.add(relationship.id);
+      let tmp12 = obj;
+    } else {
+      obj.delete(relationship.id);
+      tmp12 = obj;
+    }
+    if (null != dependencyMap[relationship.id]) {
+      const id4 = relationship.id;
+      delete tmp3[tmp2];
+    }
+    if (null == relationship.originApplicationId) {
+      const id5 = relationship.id;
+      delete tmp3[tmp2];
+    } else {
+      closure_13[relationship.id] = relationship.originApplicationId;
+    }
+    const id6 = relationship.id;
+    if (relationship.userIgnored) {
+      if (!obj2.has(id6)) {
+        obj2.add(id6);
+        set3.add("ignored");
+        set3.add("blockedOrIgnored");
+      }
+      if (relationship.type === RelationshipTypes.PENDING_INCOMING) {
+        set2.add(relationship.id);
+      }
+    } else {
+      if (obj2.delete(id6)) {
+        set3.add("ignored");
+        set3.add("blockedOrIgnored");
+      }
+      set2.delete(relationship.id);
+    }
+    flushStaleUserIdLists();
+    let size = tmp12.size;
+    size = set2.size;
+    const value = map1.get(RelationshipTypes.PENDING_INCOMING);
+    let num;
+    if (value != null) {
+      num = value.size;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    let closure_16 = Math.max(num - size - size, 0);
+    closure_14 = closure_14 + 1;
   },
   RELATIONSHIP_PENDING_INCOMING_REMOVED: function handlePendingIncomingRemoved() {
     const keys = map.keys();
@@ -657,6 +637,7 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
       }
       continue;
     }
+    flushStaleUserIdLists();
     recountPending();
   },
   UPDATE_STRANGER_STATUS: function handleUpdateStrangerStatus(isStranger) {

@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { SubscriptionStatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07635_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07637_registerAsset.js";
 
 let c3;
 let c4;
@@ -41,7 +41,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     const intl = subscription(1236).intl;
     const obj2 = { endDate: null, planDescription: null };
     obj2[0] = subscription.currentPeriodEnd;
-    obj2[1] = subscription(3947).getDisplayName(subscription.planId);
+    obj2[1] = subscription(3966).getDisplayName(subscription.planId);
     obj1[2] = intl.format(subscription(1236).t["7I21Iz"], obj2);
     items[1] = callback(subscription(4299).Text, obj1);
     obj[1] = items;
@@ -55,7 +55,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     items1[1] = callback(subscription(4714).Button, obj3);
     obj[1] = items1;
     tmp2 = callback2(closure_4, obj);
-    const obj6 = subscription(3947);
+    const obj6 = subscription(3966);
   }
   return tmp2;
 };

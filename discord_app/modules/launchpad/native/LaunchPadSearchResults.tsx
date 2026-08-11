@@ -5,7 +5,7 @@ import _getSystemLocale from "_getSystemLocale";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_16060";
+import jsxProd from "module_16077";
 import createCacheKey from "createCacheKey";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { sortByMatchScore } from "../../autocompleter/index.tsx";
@@ -37,27 +37,27 @@ function renderItemJSX(result) {
       let obj = { guild: null };
       obj[0] = result.record;
       return callback(closure_14, obj);
-    } else if (tmp14(7308).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+    } else if (tmp14(7309).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: null, navigationReplace: true, showGuildBadgeIcon: true };
       obj[0] = result.record;
       return callback(TextChannel, obj);
-    } else if (tmp14(7308).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (tmp14(7309).AutocompleterResultTypes.GROUP_DM === type) {
       const obj1 = { channel: null, navigationReplace: true };
       obj1[0] = result.record;
       return callback(DMChannel, obj1);
-    } else if (tmp14(7308).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+    } else if (tmp14(7309).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: null };
       obj2[0] = result.record;
       return callback(handleVoiceOrStageChannelConnectPress, obj2);
-    } else if (tmp14(7308).AutocompleterResultTypes.USER === type) {
+    } else if (tmp14(7309).AutocompleterResultTypes.USER === type) {
       ({ record: obj4[0], comparator: obj4[1] } = result);
       return callback(user, { user: null, comparator: null });
-    } else if (tmp14(7308).AutocompleterResultTypes.HEADER === type) {
+    } else if (tmp14(7309).AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: null, styles: null, isRefreshEnabled: null };
       obj4[0] = result.record.text;
       obj4[1] = tmp;
       obj4[2] = tmp2;
-      return tmp14(15239).renderCategoryItem(obj4);
+      return tmp14(15248).renderCategoryItem(obj4);
     } else {
       obj = { variant: "text-sm/semibold", children: null };
       obj[1] = result.type;
@@ -266,9 +266,9 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
   let c4;
   let fontScale;
   const tmp = callback3();
-  let obj = results(15239);
+  let obj = results(15248);
   categoryStyles = obj.useCategoryStyles();
-  const tmp5 = categoryStyles(1348)("SearchResults");
+  const tmp5 = categoryStyles(1367)("SearchResults");
   dependencyMap = tmp5;
   const items = [results, categoryStyles, tmp5];
   const callback = ref.useCallback((arg0, arg1) => outer1_15({ result: results[arg1], categoryStyles, isRefreshEnabled: c2 }), items);
@@ -283,7 +283,7 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
       }
     }
   }, items1);
-  const tmp9 = categoryStyles(16052)();
+  const tmp9 = categoryStyles(16069)();
   c4 = tmp9;
   fontScale = results(4720).useFontScale();
   const items2 = [fontScale, results, tmp9];
@@ -300,8 +300,8 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
     const items3 = [results.length];
     obj[8] = items3;
     obj[10] = closure_12;
-    obj[11] = categoryStyles(1474)().height;
-    tmp12Result = tmp12(categoryStyles(8008), obj);
+    obj[11] = categoryStyles(1493)().height;
+    tmp12Result = tmp12(categoryStyles(8010), obj);
   }
   obj[1] = tmp12Result;
   return closure_9(c4, obj);

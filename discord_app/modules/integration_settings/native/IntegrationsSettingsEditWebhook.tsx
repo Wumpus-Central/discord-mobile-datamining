@@ -1,7 +1,7 @@
 // discord_app/modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "Text";
@@ -276,13 +276,13 @@ prototype["render"] = function render() {
     }
   }
   obj2[3] = first;
-  items1[1] = closure_11(webhookId(7790).TextInput, obj2);
+  items1[1] = closure_11(webhookId(7792).TextInput, obj2);
   const obj3 = { title: null, hasIcons: true, children: null };
   const intl4 = tmp3(1236).intl;
   obj3[0] = intl4.string(webhookId(1236).t.GK18KJ);
   const obj4 = { label: null, arrow: true, onPress: null, icon: null };
   let tmp3Result = tmp3(4494);
-  obj4[0] = tmp3Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  obj4[0] = tmp3Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   obj4[2] = self.handleChannelChange;
   const obj5 = { size: null, source: null, style: null };
   obj5[0] = webhookId(1297).Icon.Sizes.CUSTOM;
@@ -316,7 +316,7 @@ prototype["render"] = function render() {
   items1[4] = closure_11(webhookId(5767).TableRowGroup, obj8);
   obj[2] = items1;
   obj[2] = closure_12(webhookId(4712).Stack, obj);
-  return closure_11(webhookId(7967).Form, obj);
+  return closure_11(webhookId(7969).Form, obj);
 };
 EditWebhook.contextType = require("ManaContext").ThemeContext;
 let obj1 = { padding: require("Themes").modules.mobile.TABLE_ROW_PADDING };

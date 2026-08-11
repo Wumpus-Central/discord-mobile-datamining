@@ -7,14 +7,14 @@ const require = arg1;
 function isNonEmptyBoardWidget(games) {
   let tmp3 = games instanceof toSubmission.ApplicationWidget;
   if (!tmp3) {
-    let tmp4 = games instanceof tmp(7089).UserProfilePersonalWidget;
+    let tmp4 = games instanceof tmp(7092).UserProfilePersonalWidget;
     if (!tmp4) {
-      let isGameWidgetResult = tmp(7082).isGameWidget(games);
+      let isGameWidgetResult = tmp(7085).isGameWidget(games);
       if (isGameWidgetResult) {
         isGameWidgetResult = games.games.length > 0;
       }
       tmp4 = isGameWidgetResult;
-      const tmpResult = tmp(7082);
+      const tmpResult = tmp(7085);
     }
     tmp3 = tmp4;
   }
@@ -23,7 +23,7 @@ function isNonEmptyBoardWidget(games) {
 const result = require("isFieldEmpty").fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(12459).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(12462).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
   const tmp2 = useUserProfileWidgets(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];

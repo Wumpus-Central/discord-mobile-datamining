@@ -120,7 +120,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   obj7[1] = intl3.string(messagesProxy.DZnomS);
   const obj8 = { size: "sm", color: null };
   obj8[1] = Themes.colors.CONTROL_PRIMARY_TEXT_DEFAULT;
-  obj7[2] = callback(markAsDismissed(9575).GiftIcon, obj8);
+  obj7[2] = callback(markAsDismissed(9580).GiftIcon, obj8);
   obj7[3] = callback;
   obj6[1] = callback(markAsDismissed(4714).Button, obj7);
   items2[2] = callback(closure_5, obj6);
@@ -150,9 +150,9 @@ export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let getCurrentTier;
     let getSingleRequirementProgress;
-    const obj = { currentTier: getCurrentTier(callback(8786).BadgeId.GIFTING), giftCount: null };
+    const obj = { currentTier: getCurrentTier(callback(8792).BadgeId.GIFTING), giftCount: null };
     ({ getCurrentTier, getSingleRequirementProgress } = map);
-    const singleRequirementProgress = getSingleRequirementProgress(callback(8786).BadgeId.GIFTING);
+    const singleRequirementProgress = getSingleRequirementProgress(callback(8792).BadgeId.GIFTING);
     let current;
     if (singleRequirementProgress != null) {
       current = singleRequirementProgress.current;

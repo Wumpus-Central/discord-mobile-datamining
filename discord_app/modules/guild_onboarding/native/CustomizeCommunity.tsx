@@ -29,12 +29,12 @@ function EmptyCustomizeCommunity(setTab) {
   setTab = setTab.setTab;
   let importDefault;
   const tmp = createCacheKey();
-  let obj = setTab(4011);
+  let obj = setTab(1364);
   let obj1 = setTab(589);
   const items = [handleConnectionOpen];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   obj = { style: tmp.emptyContainer, children: null };
-  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useTheme()) ? 11024 : 11025) };
+  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useTheme()) ? 11029 : 11030) };
   const items1 = [closure_16(closure_5, obj), , ];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1236).intl;
@@ -209,8 +209,8 @@ function DropdownOption(option) {
       const obj2 = { id: null, animated: null, size: null };
       ({ id: obj6[0], animated: obj6[1] } = stateFromStores);
       obj2[2] = EMOJI_URL_BASE_SIZE;
-      emojiURL = tmp11(1416).getEmojiURL(obj2);
-      const tmp11Result = tmp11(1416);
+      emojiURL = tmp11(1435).getEmojiURL(obj2);
+      const tmp11Result = tmp11(1435);
     }
     obj1[2] = emojiURL;
     const emoji3 = option.emoji;
@@ -483,7 +483,7 @@ export default function CustomizeCommunity(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
   const tmp = createCacheKey();
-  const bottom = stateFromStores(1609)().bottom;
+  const bottom = stateFromStores(1628)().bottom;
   let obj = guildId(589);
   const items = [generateOldThreadCutoff];
   stateFromStores = obj.useStateFromStores(items, () => outer1_9.hasUnread(guildId, outer1_15.GUILD_ONBOARDING_QUESTION));
@@ -497,7 +497,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11026)(guildId);
+  const tmp7 = stateFromStores(11031)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

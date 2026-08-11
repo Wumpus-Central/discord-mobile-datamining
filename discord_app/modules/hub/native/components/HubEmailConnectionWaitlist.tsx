@@ -23,7 +23,7 @@ export default function HubEmailConnectionWaitlist(school) {
   const onClose = school.onClose;
   let navigation;
   const tmp = createCacheKey();
-  let obj = onClose(1480);
+  let obj = onClose(1499);
   navigation = obj.useNavigation();
   const items = [navigation, onClose];
   const layoutEffect = React.useLayoutEffect(() => {
@@ -38,7 +38,7 @@ export default function HubEmailConnectionWaitlist(school) {
     });
   }, items);
   obj = { style: tmp.container, children: null };
-  obj = { source: navigation(12090), style: tmp.header };
+  obj = { source: navigation(12093), style: tmp.header };
   const items1 = [callback(closure_5, obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1236).intl;

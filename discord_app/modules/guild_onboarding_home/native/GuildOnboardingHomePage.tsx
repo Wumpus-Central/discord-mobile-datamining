@@ -16,7 +16,7 @@ function GuildOnboardingHomePage(guildId) {
   let stateFromStores;
   let dependencyMap;
   let tmp = dependencyMap;
-  let obj = guildId(4036);
+  let obj = guildId(4042);
   const sharedValue = obj.useSharedValue(-999);
   let obj1 = guildId(589);
   const items = [handleSettingsLoadSuccess];
@@ -95,16 +95,16 @@ function GuildOnboardingHomePage(guildId) {
     obj = { guildId: null, hideDescription: null };
     obj[0] = guildId;
     obj[1] = tmp5;
-    const items3 = [callback(tmp4(15667), obj), ];
+    const items3 = [callback(tmp4(15684), obj), ];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId: null };
       obj2[0] = guildId;
-      const items4 = [tmp12(tmp4(15672), obj2), , ];
+      const items4 = [tmp12(tmp4(15689), obj2), , ];
       let obj3 = { guildId: null };
       obj3[0] = guildId;
-      items4[1] = tmp12(tmp4(15676), obj3);
-      tmp4 = tmp4(15677);
+      items4[1] = tmp12(tmp4(15693), obj3);
+      tmp4 = tmp4(15694);
       const obj4 = { guildId: null };
       obj4[0] = guildId;
       tmp = tmp12(tmp4, obj4);
@@ -114,12 +114,12 @@ function GuildOnboardingHomePage(guildId) {
     } else {
       let obj5 = { guildId: null };
       obj5[0] = guildId;
-      tmp12Result = tmp12(tmp4(15680), obj5);
+      tmp12Result = tmp12(tmp4(15697), obj5);
     }
     items3[1] = tmp12Result;
     obj[2] = items3;
-    closure_11(tmp4(15666), obj);
-    const tmp4Result = tmp4(15666);
+    closure_11(tmp4(15683), obj);
+    const tmp4Result = tmp4(15683);
   }
 }
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);

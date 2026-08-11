@@ -1,7 +1,7 @@
 // discord_app/modules/channel/useChannelName.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
@@ -145,7 +145,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
   }
 }
 ({ ChannelTypes: error, NULL_STRING_CHANNEL_ID: metroImportAll } = ME);
-const result = require("upsertRelationship").fileFinishedImporting("modules/channel/useChannelName.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/channel/useChannelName.tsx");
 
 export default function useChannelName(arg0) {
   const _require = arg0;
@@ -153,7 +153,7 @@ export default function useChannelName(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [mergeGuildAvatar, getHash, upsertRelationship];
+  const items = [mergeGuildAvatar, getHash, markAllUserIdListsStale];
   return _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
@@ -211,7 +211,7 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
 };
 export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
   const _require = arg0;
-  const items = [mergeGuildAvatar, upsertRelationship];
+  const items = [mergeGuildAvatar, markAllUserIdListsStale];
   return _initialize.useStateFromStores(items, () => {
     let obj = callback;
     let tmp = null;

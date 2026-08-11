@@ -8,7 +8,7 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07635_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07637_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
@@ -48,7 +48,7 @@ function FamilyCenterActivityCardPrefaceText() {
   if (!tmp4) {
     obj1 = { color: null, source: null, style: null };
     obj1[0] = tmp.icon.color;
-    obj1[1] = tmp2(14137);
+    obj1[1] = tmp2(14145);
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1297).Icon, obj1);
   }
@@ -110,10 +110,10 @@ class FamilyCenterActivityCardHeader {
         tmp3 = jsx;
         tmp4 = View;
         obj = { children: null };
-        tmp5 = f58776;
+        tmp5 = f58816;
         obj1 = { user: null };
         obj1[0] = selectedTeenUser;
-        obj[0] = jsx(f58776, obj1);
+        obj[0] = jsx(f58816, obj1);
         tmp6 = jsx(View, obj);
         tmp9 = tmp6;
       } else {
@@ -150,11 +150,11 @@ class FamilyCenterActivityCardAccountSelect {
     selectTeenUser = obj3.useFamilyCenterActions(obj).selectTeenUser;
     items = [];
     items[0] = activeLinkUsers;
-    f93361 = f93361.useMemo(() => activeLinkUsers.map((id) => {
+    f93426 = f93426.useMemo(() => activeLinkUsers.map((id) => {
       const obj = { label: null, value: null };
-      const name = callback(4146).getName(id);
-      const obj2 = callback(4146);
-      obj[0] = "" + name + " (" + callback(4146).getUserTag(id) + ")";
+      const name = callback(4148).getName(id);
+      const obj2 = callback(4148);
+      obj[0] = "" + name + " (" + callback(4148).getUserTag(id) + ")";
       obj[1] = id.id;
       return obj;
     }), items);
@@ -195,12 +195,12 @@ class FamilyCenterActivityCardAccountSelect {
           const tmp5 = activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths);
         }
       };
-      tmp12 = f58776;
+      tmp12 = f58816;
       obj3 = { user: null, inSelector: true };
       obj3[0] = selectedTeenUser;
       tmp11 = require("render");
       items1 = [, ];
-      items1[0] = jsx(f58776, obj3);
+      items1[0] = jsx(f58816, obj3);
       obj4 = { style: null, size: null, source: null };
       obj4[0] = tmp.icon;
       obj4[1] = require("Button").Icon.Sizes.MEDIUM;
@@ -251,7 +251,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
-  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 403.5 };
+  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 183.5 };
   obj[5] = NORMAL;
   const items = [callback(View, obj), ];
   const items1 = [tmp.userHeader, ];
@@ -306,7 +306,7 @@ export default function FamilyCenterActivityCard() {
   if (undefined === selectedTeenUser) {
     return null;
   } else {
-    const sortedActivityTypeConfigs = tmp2(7052).getSortedActivityTypeConfigs();
+    const sortedActivityTypeConfigs = tmp2(7055).getSortedActivityTypeConfigs();
     obj = { style: null, children: null };
     obj[0] = tmp.card;
     obj = { style: null, children: null };

@@ -76,7 +76,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(1358).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(1377).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (canUseGuildSpace) {

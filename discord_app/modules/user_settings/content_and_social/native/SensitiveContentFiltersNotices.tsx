@@ -25,8 +25,8 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
   let obj = { label: null, labelHook: null, noticeType: null };
   obj[0] = getSystemLocale.t.OX4ybh;
   obj[1] = function labelHook() {
-    let obj = callback2(7797);
-    obj = { entryPoint: callback(7799).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+    let obj = callback2(7799);
+    obj = { entryPoint: callback(7801).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   };
   obj[2] = SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE;

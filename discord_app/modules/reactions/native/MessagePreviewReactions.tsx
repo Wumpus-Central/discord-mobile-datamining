@@ -29,9 +29,9 @@ export default function MessagePreviewReactions(emoji) {
     obj[1] = messageId;
     obj[2] = emoji.emoji;
     obj[3] = stateFromStores;
-    let tmp4Result = tmp4(tmp(8781).MessageReactionsContent, obj);
+    let tmp4Result = tmp4(tmp(8787).MessageReactionsContent, obj);
   } else {
-    tmp4Result = tmp4(tmp(8781).MessageReactionsEmpty, {});
+    tmp4Result = tmp4(tmp(8787).MessageReactionsEmpty, {});
   }
   obj[1] = tmp4Result;
   return jsx(channelId(5728).AnalyticsLocationProvider, { value: messageId(5728)(messageId(5748).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });

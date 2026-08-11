@@ -1,6 +1,6 @@
 // discord_app/modules/channel/native/ChannelPickerActionSheet.tsx
 import "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 
@@ -12,13 +12,13 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/channe
 
 export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   let channels;
-  let upsertRelationship;
+  let markAllUserIdListsStale;
   let header;
   let importDefault;
   let selectedChannel;
   const _require = noChannelOptionLabel;
   ({ header, guild: importDefault, channels } = noChannelOptionLabel);
-  ({ onSelect: upsertRelationship, selectedChannel } = noChannelOptionLabel);
+  ({ onSelect: markAllUserIdListsStale, selectedChannel } = noChannelOptionLabel);
   let tmp3;
   if (null != header) {
     const onClose = header.onClose;

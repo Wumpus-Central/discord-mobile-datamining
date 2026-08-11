@@ -53,7 +53,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t["9m/HsX"]);
-      obj[1] = callback2(13038);
+      obj[1] = callback2(13047);
       obj[2] = intl.string(callback(1236).t["5alrl0"]);
       items[tmp] = obj;
       return items;
@@ -64,7 +64,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t["AW1kM+"]);
-      obj[1] = callback2(13039);
+      obj[1] = callback2(13048);
       obj[2] = intl.string(callback(1236).t["5Oo+vS"]);
       items[tmp] = obj;
       return items;
@@ -90,7 +90,7 @@ export default function NUFChannelIllustration() {
   const fn = function b() {
     let obj = { transform: null };
     obj = { translateY: null };
-    obj[0] = tmp(4036).interpolate(sharedValue.get(), [0, 1], [50, 0]);
+    obj[0] = tmp(4042).interpolate(sharedValue.get(), [0, 1], [50, 0]);
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -102,22 +102,22 @@ export default function NUFChannelIllustration() {
   obj = { style: tmp.container, children: null };
   obj1 = { source: null, style: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1[0] = first(13040);
+  obj1[0] = first(13049);
   const items2 = [, ];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj1[1] = items2;
   const items3 = [callback(closure_6, obj1), , , , , ];
-  obj2 = { source: first(13041), style: items4 };
+  obj2 = { source: first(13050), style: items4 };
   items4 = [, ];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   items3[1] = callback(closure_6, obj2);
   const items5 = [, ];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
-  items3[2] = callback(closure_6, { source: first(13042), style: items5 });
-  const obj3 = { source: first(13042), style: items5 };
+  items3[2] = callback(closure_6, { source: first(13051), style: items5 });
+  const obj3 = { source: first(13051), style: items5 };
   const items6 = [, ];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
-  items3[3] = callback(closure_6, { source: first(13043), style: items6 });
+  items3[3] = callback(closure_6, { source: first(13052), style: items6 });
   items3[4] = callback(closure_5, { style: tmp.cardBackground });
   const obj6 = { style: tmp.card, shadow: "low", border: "subtle", children: null };
   const obj7 = { style: tmp.header, children: null };
@@ -142,7 +142,7 @@ export default function NUFChannelIllustration() {
     obj[1] = items;
     return outer1_8(outer1_5, obj, children.message);
   });
-  obj9[1] = callback(first(4036).View, obj10);
+  obj9[1] = callback(first(4042).View, obj10);
   items9[1] = callback(closure_5, obj9);
   obj6[3] = items9;
   items3[5] = callback2(PressableCard.Card, obj6);

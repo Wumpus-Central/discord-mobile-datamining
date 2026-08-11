@@ -39,9 +39,9 @@ export default function AppShare(targetUserId) {
   const items = [first];
   const effect = obj.useEffect(() => {
     if (!first) {
-      first(13709).init();
+      first(13717).init();
       dependencyMap(true);
-      const obj = first(13709);
+      const obj = first(13717);
     }
   }, items);
   const items1 = [targetUserId];
@@ -97,28 +97,28 @@ export default function AppShare(targetUserId) {
       }
       return str;
     });
-    stateFromStores(6934).trackAppUIViewed("share", { share_num_attachments: stateFromStores.attachments.length, share_attachment_mimetypes: mapped });
+    stateFromStores(6937).trackAppUIViewed("share", { share_num_attachments: stateFromStores.attachments.length, share_attachment_mimetypes: mapped });
   });
   obj = { appEntryKey: share, children: null };
   if (first) {
     obj = { appEntryKey: null, sharedContent: null, onClose: null };
     obj[0] = tmp18;
     obj[1] = targetUserId;
-    const tmp14Result = tmp14(13249);
+    const tmp14Result = tmp14(13257);
     if (tmp9Result.isMetaQuest()) {
-      let exitApp = tmp14(8924).close;
+      let exitApp = tmp14(8930).close;
     } else {
       exitApp = exitApp.exitApp;
     }
     obj[2] = exitApp;
     tmp19(tmp14Result, obj);
-    tmp9Result = tmp9(1605);
+    tmp9Result = tmp9(1624);
   } else {
     const items5 = [tmp19(tmp9(5822).SceneLoadingIndicator, {}), , , ];
     obj1 = { appEntryKey: null };
     obj1[0] = tmp18;
-    items5[1] = tmp19(tmp9(15981).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16029), {});
+    items5[1] = tmp19(tmp9(15998).ActionSheetContainer, obj1);
+    items5[2] = tmp19(tmp14(16046), {});
     items5[3] = tmp19(tmp9(4647).AlertModalContainer, {});
     obj[1] = items5;
     return closure_11(tmp17, obj);

@@ -175,7 +175,7 @@ import getVoiceStatesForGuild from "performQuery";
 import getVoiceStatesForGuild from "retryFailedUsers";
 import getVoiceStatesForGuild from "createRTCConnection";
 import getVoiceStatesForGuild from "generateOldThreadCutoff";
-import getVoiceStatesForGuild from "upsertRelationship";
+import getVoiceStatesForGuild from "markAllUserIdListsStale";
 import getVoiceStatesForGuild from "handleConnectionOpen";
 import getVoiceStatesForGuild from "handleConnectionOpen";
 import getVoiceStatesForGuild from "filterPlayingActivities";

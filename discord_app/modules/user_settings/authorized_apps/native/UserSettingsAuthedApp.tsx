@@ -4,7 +4,7 @@ import get_ActivityIndicator from "createStandardNavigationFactories";
 import participantFromServer from "participantFromServer";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
@@ -39,7 +39,7 @@ function WarningLabel(children) {
 }
 function AuthorizedAppTwoWay(application) {
   let navigation;
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const items = [navigation];
   obj = { text: null };
@@ -92,7 +92,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   let obj2 = id(stateFromStores[16]);
   navigation = obj2.useNavigation();
   let obj3 = id(stateFromStores[22]);
-  const items2 = [upsertRelationship];
+  const items2 = [markAllUserIdListsStale];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => {
     let id;
     if (application != null) {

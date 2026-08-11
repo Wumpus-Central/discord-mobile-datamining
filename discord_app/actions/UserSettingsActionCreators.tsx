@@ -83,7 +83,7 @@ export default {
               let closure_0 = tmp3;
               if (outer1_0) {
                 let dependencyMap = 1;
-                const PreloadedUserSettingsActionCreators = outer1_0(1355).PreloadedUserSettingsActionCreators;
+                const PreloadedUserSettingsActionCreators = outer1_0(1374).PreloadedUserSettingsActionCreators;
                 v0 = 2;
                 c3 = 1;
                 let obj1 = { value: null, done: false };
@@ -116,7 +116,7 @@ export default {
                   if (gradientPreset != null) {
                     id = gradientPreset.id;
                   }
-                  const ClientThemeSettings = tmp4(3974).ClientThemeSettings;
+                  const ClientThemeSettings = tmp4(3993).ClientThemeSettings;
                   const setting = ClientThemeSettings.getSetting();
                   let prop;
                   if (setting != null) {
@@ -138,7 +138,7 @@ export default {
                   }
                   obj[1] = tmp17;
                   arg0.clientThemeSettings = obj;
-                }, outer1_0(1355).UserSettingsDelay.INFREQUENT_USER_ACTION);
+                }, outer1_0(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
                 return obj1;
               }
             }
@@ -173,10 +173,10 @@ export default {
             }
             const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
-            let ClientThemeSettings = outer1_0(3974).ClientThemeSettings;
+            let ClientThemeSettings = outer1_0(3993).ClientThemeSettings;
             obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = outer1_0(3974).DeveloperMode;
+            const DeveloperMode = outer1_0(3993).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

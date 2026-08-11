@@ -38,11 +38,11 @@ function FavoritesGuildActionSheet() {
       const intl2 = tmp4(1236).intl;
       obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
       const obj3 = { IconComponent: null };
-      obj3[0] = tmp4(11539).ArrowsUpDownIcon;
+      obj3[0] = tmp4(11542).ArrowsUpDownIcon;
       obj2[1] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
         tmp3(4271).hideActionSheet(closure_6);
-        tmp3(15271)();
+        tmp3(15281)();
       };
       obj1[1] = tmp7(tmp4(5766).ActionSheetRow, obj2);
       tmp7Result = tmp7(tmp4(5766).ActionSheetRow.Group, obj1);
@@ -53,7 +53,7 @@ function FavoritesGuildActionSheet() {
   if (tmp2.isPreview) {
     let EyeSlashIcon = tmp4(5326).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp4(8495).EyeSlashIcon;
+    EyeSlashIcon = tmp4(8501).EyeSlashIcon;
   }
   obj4[2] = callback(ActionSheetRowIcon.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";

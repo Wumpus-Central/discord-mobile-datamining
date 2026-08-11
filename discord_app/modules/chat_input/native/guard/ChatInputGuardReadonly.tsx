@@ -5,7 +5,7 @@ import comparator from "comparator";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { TextAreaCta } from "TextAreaCta";
 import ME from "ME";
@@ -63,7 +63,7 @@ const memoResult = require("ChatInputGuard").memo(function ChatInputGuardReadonl
     obj = { text: null, handlePress: null };
     const intl2 = tmp(tmp2[14]).intl;
     obj = { channelName: null };
-    obj[0] = tmp(tmp2[15]).computeChannelName(stateFromStores, mergeGuildAvatar, upsertRelationship);
+    obj[0] = tmp(tmp2[15]).computeChannelName(stateFromStores, mergeGuildAvatar, markAllUserIdListsStale);
     obj[0] = intl2.formatToPlainString(tmp(tmp2[14]).t.q1krfU, obj);
     obj[1] = function handlePress() {
       let obj = lib(stateFromStores[16]);
@@ -88,7 +88,7 @@ const memoResult = require("ChatInputGuard").memo(function ChatInputGuardReadonl
     const intl4 = tmp(tmp2[14]).intl;
     let str = "";
     if (null != stateFromStoresArray1[0]) {
-      str = tmp(tmp2[15]).computeChannelName(stateFromStoresArray1[0], mergeGuildAvatar, upsertRelationship);
+      str = tmp(tmp2[15]).computeChannelName(stateFromStoresArray1[0], mergeGuildAvatar, markAllUserIdListsStale);
       const tmpResult3 = tmp(tmp2[15]);
     }
     obj2 = { text: null, handlePress: null };

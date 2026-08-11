@@ -2,9 +2,9 @@
 import handleUserUpdate from "handleUserUpdate";
 import fromPath from "fromPath";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { t } from "../../../_runtime/04000_t.js";
+import { t } from "../../../_runtime/04019_t.js";
 import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 import { getGuildNameSuggestion } from "../../utils/GuildUtils.tsx";
 import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
@@ -620,7 +620,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
         if (undefined !== hostname) {
           str = hostname;
         }
-        let tmp17Result = tmp17(1467);
+        let tmp17Result = tmp17(1486);
         let isDiscordHostnameResult = tmp17Result.isDiscordHostname(str);
         if (!isDiscordHostnameResult) {
           const _window = window;
@@ -628,7 +628,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
         }
         if (null !== pathname) {
           if (isDiscordHostnameResult) {
-            tmp17Result = tmp17(1467);
+            tmp17Result = tmp17(1486);
             if (tmp17Result.isAppRoute(pathname)) {
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;

@@ -1,5 +1,5 @@
 // discord_app/modules/markup/CustomMarkup.native.tsx
-import { t } from "../../../_runtime/04000_t.js";
+import { t } from "../../../_runtime/04019_t.js";
 import { combineMarkupRules } from "combineMarkupRules.tsx";
 import { MarkupText } from "MarkupReactRules.native.tsx";
 import { parseLink } from "MarkupRules.tsx";

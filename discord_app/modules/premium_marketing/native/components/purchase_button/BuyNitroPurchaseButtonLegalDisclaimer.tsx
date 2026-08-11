@@ -52,7 +52,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(3947);
+        tmp3Result = tmp3(3966);
         obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
         obj[2] = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);

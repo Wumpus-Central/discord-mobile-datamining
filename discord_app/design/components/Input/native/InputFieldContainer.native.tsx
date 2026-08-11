@@ -39,11 +39,11 @@ function useInputStyles(size) {
     INPUT_FIELD_RADIUS_LG = Themes.modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
   let token = map.useToken(INPUT_FIELD_RADIUS_LG);
-  let tmpResult = tmp(4005);
+  let tmpResult = tmp(4024);
   if (flag) {
     token = tmpResult.useToken(Themes.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
   }
-  tmpResult = tmp(4005);
+  tmpResult = tmp(4024);
   if ("sm" === str) {
     let INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
   } else if ("md" === str) {

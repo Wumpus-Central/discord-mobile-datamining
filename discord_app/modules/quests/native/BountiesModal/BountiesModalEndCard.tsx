@@ -32,7 +32,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = callback3();
-  visible(4036);
+  visible(4042);
   const fn = function y() {
     let obj = visible(outer1_2[4]);
     let num = 0;

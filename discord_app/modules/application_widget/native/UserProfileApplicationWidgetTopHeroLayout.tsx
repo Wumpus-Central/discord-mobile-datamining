@@ -72,7 +72,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   if (tmp14Result) {
     obj3 = { style: null };
     obj3[0] = tmp.heroImageSkeleton;
-    tmp14Result = tmp14(tmp4(12442).ImageSkeleton, obj3);
+    tmp14Result = tmp14(tmp4(12445).ImageSkeleton, obj3);
   }
   obj2[1] = tmp14Result;
   items3[1] = callback2(closure_6, obj2);

@@ -64,7 +64,7 @@ export default function FormSection(arg0) {
     const found = toArrayResult.filter((type) => {
       let isValidElementResult = noop.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = type.type !== callback(7409);
+        isValidElementResult = type.type !== callback(7411);
       }
       return isValidElementResult;
     });

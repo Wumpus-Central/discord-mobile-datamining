@@ -46,12 +46,12 @@ export default function GetStartedScreen(onComplete) {
   let obj = modalSessionId(4519);
   const initiateAgeVerification = obj.useInitiateAgeVerification({ onComplete: onComplete.onClose, entryPoint });
   ({ initiateAgeVerification: c1, loading } = initiateAgeVerification);
-  let obj1 = modalSessionId(7953);
+  let obj1 = modalSessionId(7955);
   const isManualAgeVerificationHidden = obj1.useIsManualAgeVerificationHidden("age_verification_get_started_modal");
   obj = { children: null };
   obj = { style: tmp.getStartedContainer, children: null };
   obj1 = { style: tmp.getStartedHeaderContainer, children: null };
-  const items = [callback3(modalSessionId(6027).ShieldSpotIllustration, {}), , ];
+  const items = [callback3(modalSessionId(6029).ShieldSpotIllustration, {}), , ];
   let obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.getStartedHeaderText, children: null };
   let obj6 = modalSessionId(4519);
   obj2[3] = obj6.getAgeVerificationGetStartedTitle(entryPoint);
@@ -74,7 +74,7 @@ export default function GetStartedScreen(onComplete) {
       tmpResult = tmp(modalSessionId(4299).Text, obj);
     }
     obj[2] = tmpResult;
-    return callback(_undefined(7954), obj, arg1);
+    return callback(_undefined(7956), obj, arg1);
   });
   items1[1] = callback3(modalSessionId(5767).TableRowGroup, obj4);
   const obj5 = { style: tmp.ageGroupLearnMoreContainer, children: null };
@@ -173,7 +173,7 @@ export default function GetStartedScreen(onComplete) {
   });
   const obj15 = { color: null };
   obj15[0] = Themes.colors.WHITE;
-  obj14[4] = callback3(modalSessionId(7955).LinkExternalSmallIcon, obj15);
+  obj14[4] = callback3(modalSessionId(7957).LinkExternalSmallIcon, obj15);
   obj14[5] = loading;
   obj13[1] = callback3(modalSessionId(4714).Button, obj14);
   items4[1] = callback3(closure_5, obj13);

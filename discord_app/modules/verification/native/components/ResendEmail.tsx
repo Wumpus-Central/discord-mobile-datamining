@@ -19,7 +19,7 @@ export default function ResendEmail() {
   let dependencyMap;
   let tmp10;
   let tmp = callback3();
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   let obj1 = navigation(589);
   const items = [mergeGuildAvatar];
@@ -32,7 +32,7 @@ export default function ResendEmail() {
   let obj2 = navigation(589);
   const items1 = [handleRequiredAction];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => action.getAction());
-  let obj3 = verified(8459);
+  let obj3 = verified(8465);
   const result = obj3.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = callback(React.useState(false), 2);
@@ -56,7 +56,7 @@ export default function ResendEmail() {
   callback = React.useCallback(() => {
     navigation.push(outer1_8.ENTER_EMAIL);
   }, items3);
-  const items4 = [callback2(navigation(6027).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [callback2(navigation(6029).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1236).intl;
   obj[4] = intl.string(navigation(1236).t.fUtddV);

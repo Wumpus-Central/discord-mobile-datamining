@@ -14,17 +14,17 @@ let closure_9 = createCacheKey.createStyles({ badgeNameContainer: { flexDirectio
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
 
 export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
-  let obj = tieredTenureBadgeData(9510);
+  let obj = tieredTenureBadgeData(9516);
   tieredTenureBadgeData = obj.useTieredTenureBadgeData();
-  let obj1 = tieredTenureBadgeData(9510);
+  let obj1 = tieredTenureBadgeData(9516);
   const premiumSince = obj1.usePremiumSince();
-  let obj2 = tieredTenureBadgeData(12716);
+  let obj2 = tieredTenureBadgeData(12720);
   const timeUntilNextBadge = obj2.useTimeUntilNextBadge();
   const tmp6 = callback3();
   let obj3 = tieredTenureBadgeData(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj3.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj4 = tieredTenureBadgeData(9484);
+  let obj4 = tieredTenureBadgeData(9490);
   let id;
   if (tieredTenureBadgeData != null) {
     id = tieredTenureBadgeData.id;
@@ -42,7 +42,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   if (null == tieredTenureBadgeData) {
     return null;
   } else {
-    if (tieredTenureBadgeData.status === tmp(9510).TieredTenureBadgeStatus.UPCOMING) {
+    if (tieredTenureBadgeData.status === tmp(9516).TieredTenureBadgeStatus.UPCOMING) {
       const intl2 = tmp(1236).intl;
       let stringResult = intl2.string(tmp(1236).t.O9TBwQ);
     } else {
@@ -53,7 +53,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     let tmp14 = large;
     if (null != premiumSince) {
       const status = tieredTenureBadgeData.status;
-      if (tmp(9510).TieredTenureBadgeStatus.EARNED === status) {
+      if (tmp(9516).TieredTenureBadgeStatus.EARNED === status) {
         const intl5 = tmp(1236).intl;
         obj = { date: null };
         const _Date2 = Date;
@@ -64,7 +64,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
       } else {
         formatResult = null;
         tmp14 = large;
-        if (tmp(9510).TieredTenureBadgeStatus.UPCOMING === status) {
+        if (tmp(9516).TieredTenureBadgeStatus.UPCOMING === status) {
           formatResult = null;
           tmp14 = large;
           if (null != timeUntilNextBadge) {
@@ -78,7 +78,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
             const date1 = new Date(premiumSince);
             obj[1] = date1;
             formatResult = intl3.format(tmp(1236).t.vwLvec, obj);
-            tmp14 = stateFromStores(12718);
+            tmp14 = stateFromStores(12722);
           }
         }
       }
@@ -91,7 +91,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     const items2 = [callback(tmp(4299).Text, obj3), ];
     obj4 = { variant: "heading-md/medium", color: "text-muted", style: null, children: null };
     obj4[2] = tmp6.tenureRequirements;
-    obj4[3] = tmp(9509).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths);
+    obj4[3] = tmp(9515).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths);
     items2[1] = callback(tmp(4299).Text, obj4);
     obj2[1] = items2;
     const items3 = [callback2(View, obj2), ];
@@ -105,7 +105,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     items3[1] = tmp30Result;
     obj6[0] = items3;
     const tmp28 = callback2;
-    const tmpResult = tmp(9509);
+    const tmpResult = tmp(9515);
     const obj7 = { title: null, titleStyle: null, bodyComponent: null, cta: null, buttonOnPress: null, headerComponent: null, pillText: null };
     const tmp28Result = callback2(View, obj6);
     const intl7 = tmp(1236).intl;
@@ -118,10 +118,10 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp6.imageContainer;
     const items4 = [tmp6.image, ];
-    const tmp34 = stateFromStores(12692);
+    const tmp34 = stateFromStores(12696);
     const tmp35 = stateFromStores(5268);
     const obj9 = { resizeMode: "contain", style: null, source: null };
-    items4[1] = tieredTenureBadgeData.status === tmp(9510).TieredTenureBadgeStatus.UPCOMING && tmp6.upcomingBadge;
+    items4[1] = tieredTenureBadgeData.status === tmp(9516).TieredTenureBadgeStatus.UPCOMING && tmp6.upcomingBadge;
     obj9[1] = items4;
     const obj10 = { uri: null };
     obj10[0] = tmp14;

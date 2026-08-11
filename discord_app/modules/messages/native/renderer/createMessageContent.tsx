@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/createMessageContent.tsx
-import { processColor } from "upsertRelationship";
+import { processColor } from "markAllUserIdListsStale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import addApplication from "addApplication";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -17,7 +17,7 @@ import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import closure_22 from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
@@ -42,7 +42,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
     if (message.hasFlag(constants3.HAS_THREAD)) {
       if (null != channel1) {
         let string2Result = dependencyMap;
-        const channelName = computeChannelName.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
+        const channelName = computeChannelName.computeChannelName(channel1, mergeGuildAvatar, markAllUserIdListsStale);
         const backgroundColor = getEmbedThemeColors(arg5).baseColors.backgroundColor;
         const obj11 = computeChannelName;
         const tmp19 = importDefault;
@@ -55,7 +55,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(5944);
+            let tmp15Result = tmp15(5946);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
               obj[0] = channelName;
@@ -80,8 +80,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1236).intl;
                 obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(8055);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8056));
+                tmp15Result = tmp15(8057);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8058));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {

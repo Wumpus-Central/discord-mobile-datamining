@@ -46,7 +46,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let obj = markAsDismissed(589);
   const items = [analyticsLocations];
   const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
-  let obj1 = markAsDismissed(10043);
+  let obj1 = markAsDismissed(10048);
   let asset;
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
@@ -55,7 +55,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let tmp2Result = tmp2(589);
   const items1 = [createEmptyPromotionsByType];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = tmp2(16002);
+  tmp2Result = tmp2(16019);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
@@ -138,7 +138,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           const obj8 = { url: null, style: null, autoplay: true };
           obj8[0] = themeAndReducedMotionAwareAssetUrl;
           obj8[1] = tmp.imageShared;
-          obj7[1] = tmp18(tmp2(9386).APNGPlayer, obj8);
+          obj7[1] = tmp18(tmp2(9392).APNGPlayer, obj8);
           let tmp18Result1 = tmp18(tmp21, obj7);
         }
       }

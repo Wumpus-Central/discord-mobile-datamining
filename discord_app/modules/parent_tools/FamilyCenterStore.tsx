@@ -66,7 +66,7 @@ function handleInitialLoad(arg0) {
     let obj = {};
     const merged = Object.assign(arg0);
     obj = {};
-    const merged1 = Object.assign(_undefined(1411).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+    const merged1 = Object.assign(_undefined(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
       num = 0;
@@ -196,7 +196,7 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       let obj = {};
       const merged = Object.assign(arg0);
       obj = {};
-      const merged1 = Object.assign(_undefined(1411).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      const merged1 = Object.assign(_undefined(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
@@ -257,7 +257,7 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
     let obj = {};
     const merged = Object.assign(arg0);
     obj = {};
-    const merged1 = Object.assign(_undefined(1411).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+    const merged1 = Object.assign(_undefined(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
       num = 0;
@@ -521,7 +521,7 @@ prototype["loadCache"] = function loadCache() {
       let obj = {};
       const merged = Object.assign(arg0);
       obj = {};
-      const merged1 = Object.assign(_undefined(1411).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      const merged1 = Object.assign(_undefined(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
@@ -555,7 +555,7 @@ prototype["loadCache"] = function loadCache() {
       let tmp2;
       let tmp3;
       [tmp2, tmp3] = callback(str.split(":"), 2);
-      let obj = _undefined(7052);
+      let obj = _undefined(7055);
       const result = obj.displayTypeFromString(tmp2);
       let tmp5 = arg0;
       if (undefined !== result) {
@@ -744,7 +744,7 @@ prototype["isCurrentUserInRestrictedHours"] = function isCurrentUserInRestricted
   } else {
     return false;
   }
-  obj = prototype(7053);
+  obj = prototype(7056);
 };
 FamilyCenterStore.displayName = "FamilyCenterStore";
 FamilyCenterStore.LATEST_SNAPSHOT_VERSION = 3;

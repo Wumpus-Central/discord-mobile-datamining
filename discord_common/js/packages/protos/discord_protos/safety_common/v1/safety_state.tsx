@@ -490,7 +490,7 @@ class BannedState$Type extends MessageType5 {
       kind: "enum",
       repeat: 1,
       T() {
-            const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1923).ClassificationType];
+            const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1942).ClassificationType];
             return items;
           }
     };
@@ -633,7 +633,7 @@ const items3 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1923).ClassificationType];
+      const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1942).ClassificationType];
       return items;
     }
   },
@@ -733,7 +733,7 @@ class SafetyState$Type extends MessageType6 {
 }
 const prototype6 = SafetyState$Type.prototype;
 prototype6["create"] = function create(arr) {
-  let obj = { state: { oneofKind: "Promise" }, reason: 0, annotations: [] };
+  let obj = { state: { oneofKind: "r" }, reason: 0, annotations: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
@@ -1011,7 +1011,7 @@ const obj4 = {
   kind: "enum",
   repeat: 1,
   T() {
-    const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1923).ClassificationType];
+    const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1942).ClassificationType];
     return items;
   }
 };

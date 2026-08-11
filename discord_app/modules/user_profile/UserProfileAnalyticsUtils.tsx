@@ -6,7 +6,7 @@ import recomputeAffinities from "recomputeAffinities";
 import reset from "reset";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY";

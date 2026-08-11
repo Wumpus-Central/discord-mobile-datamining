@@ -1,10 +1,13 @@
 // discord_app/modules/saved_messages/native/showForLaterModal.tsx
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/saved_messages/native/showForLaterModal.tsx");
+import { SavedMessageSortTypes } from "../SavedMessagesTypes.tsx";
+const result = require("module_4509").fileFinishedImporting("modules/saved_messages/native/showForLaterModal.tsx");
 
 export const showForLaterModal = function showForLaterModal(BOOKMARK) {
-  let obj = ModalActionCreators;
-  obj = { type: BOOKMARK };
-  obj.pushLazy(asyncRequireImpl(8380, dependencyMap.paths), obj, "for-later-modal", { presentation: "modal" });
+  if (BOOKMARK === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
+    tmp(8386).markRemindersSeen();
+    const tmpResult = tmp(8386);
+  }
+  ModalActionCreators.pushLazy(asyncRequireImpl(8387, dependencyMap.paths), { type: BOOKMARK }, "for-later-modal", { presentation: "modal" });
 };

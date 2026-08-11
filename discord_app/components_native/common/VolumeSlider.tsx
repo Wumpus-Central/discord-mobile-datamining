@@ -6,7 +6,7 @@ import jsxProd from "jsxProd";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "DesktopSources";
-import { _getRequireWildcardCache } from "../../../_runtime/07989__getRequireWildcardCache.js";
+import { _getRequireWildcardCache } from "../../../_runtime/07991__getRequireWildcardCache.js";
 import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import { VoiceXIcon } from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";

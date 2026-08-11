@@ -14,11 +14,11 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
   const type = collectibles_item.type;
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     return fromServer.fromServer(collectibles_item);
-  } else if (tmp(1930).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
     return closure_5.fromServer(collectibles_item);
-  } else if (tmp(1930).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
     return closure_4.fromServer(collectibles_item);
-  } else if (tmp(1930).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
     return closure_6.fromServer(collectibles_item);
   } else {
     return null;

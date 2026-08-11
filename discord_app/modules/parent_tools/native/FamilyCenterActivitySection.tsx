@@ -87,11 +87,11 @@ export default function FamilyCenterActivitySection(displayType) {
   let loadMore;
   let dependencyMap;
   let loadMoreButton = callback3();
-  let obj = displayType(14141);
+  let obj = displayType(14149);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14141);
+  let obj1 = displayType(14149);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11324);
+  let obj2 = displayType(11329);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   loadMore = familyCenterActions.loadMore;
   const tmp6 = callback(React.useState(closure_7), 2);
@@ -105,12 +105,12 @@ export default function FamilyCenterActivitySection(displayType) {
     obj = { pageSize: null };
     const _Math = Math;
     obj[0] = Math.min(actionTotalsForDisplayType - substr.length, closure_7);
-    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2284)["7dMmJY"], obj);
+    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2303)["7dMmJY"], obj);
     obj = { style: null, children: null };
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14147), { action }, action.event_id)), ];
+    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14155), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;

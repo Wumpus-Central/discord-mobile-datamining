@@ -1,6 +1,6 @@
 // discord_app/modules/forums/native/ForumPost.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { useForumChannelStore } from "set";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
@@ -62,7 +62,7 @@ function ConnectedForumPost(arg0) {
   const obj6 = require(firstMessage[14]);
   const firstMediaIsEmbed = require(firstMessage[14]).useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds);
   const obj7 = require(firstMessage[14]);
-  const items2 = [upsertRelationship];
+  const items2 = [markAllUserIdListsStale];
   const stateFromStoresObject = require(firstMessage[8]).useStateFromStoresObject(items2, () => {
     let isBlockedForMessageResult = null != firstMessage;
     if (isBlockedForMessageResult) {
@@ -150,7 +150,7 @@ const memoResult = require("noop").memo((arg0) => {
   }
   return tmp;
 });
-const result = require("upsertRelationship").fileFinishedImporting("modules/forums/native/ForumPost.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/forums/native/ForumPost.tsx");
 
 export default memoResult;
 export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
@@ -173,7 +173,7 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const tmp4 = stateFromStores;
   const firstForumPostMessage = threadId(5920).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(8403);
+  threadId(8409);
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -184,8 +184,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(11413), obj);
-    tmp5 = callback(tmp(11412).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(11416), obj);
+    tmp5 = callback(tmp(11415).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

@@ -65,7 +65,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (arg1 === obj.SHOW_ALWAYS) {
             if (null != substr) {
-              let tmp18Result = tmp18(9247);
+              let tmp18Result = tmp18(9253);
               if (!num) {
                 num = 0;
               }
@@ -157,21 +157,21 @@ obj = {
   },
   acceptFriendRequest(arg0) {
     return obj.addRelationship(arg0, () => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t["3goNa5"]));
     });
   },
   cancelFriendRequest(arg0, arg1) {
     return obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.pLUaxR));
     });
   },
   removeFriend(arg0, arg1) {
     obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.vGSLa2));
     });
@@ -179,14 +179,14 @@ obj = {
   blockUser(userId, context) {
     const obj = { userId, context, type: constants2.BLOCKED };
     return obj.addRelationship(obj, () => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.mU0Vrp));
     });
   },
   unblockUser(id, arg1) {
     return obj.removeRelationship(id, arg1, () => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t["9t1au7"]));
     });
@@ -203,7 +203,7 @@ obj = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -237,7 +237,7 @@ obj = {
     return HTTP.del(obj).then(() => {
       callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -254,7 +254,7 @@ obj = {
     return HTTP.del(obj).then(() => {
       callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -277,8 +277,8 @@ obj = {
       obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
       channelId(outer1_3[14]).dispatch(obj);
     }).catch(() => {
-      channelId(7784).showFailedToast();
-      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+      channelId(7786).showFailedToast();
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -298,8 +298,8 @@ obj = {
       const intl = id(outer1_3[7]).intl;
       AccessibilityAnnouncer.announce(intl.string(id(outer1_3[7]).t.QlH5w6));
     }).catch(() => {
-      id2(7784).showFailedToast();
-      const AccessibilityAnnouncer = id(4153).AccessibilityAnnouncer;
+      id2(7786).showFailedToast();
+      const AccessibilityAnnouncer = id(1363).AccessibilityAnnouncer;
       const intl = id(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(id(1236).t.n6Jo3E));
     });

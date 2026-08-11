@@ -51,11 +51,11 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj = {
     user: stateFromStores,
     onError() {
-      let obj = callback(4002);
+      let obj = callback(4021);
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1236).intl;
       obj[1] = intl.string(recipientId(1236).t["EDYbS+"]);
-      obj[2] = callback(8445);
+      obj[2] = callback(8451);
       obj.open(obj);
     },
     onAcceptSuccess(arg0) {

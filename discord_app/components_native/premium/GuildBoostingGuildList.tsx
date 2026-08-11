@@ -33,7 +33,7 @@ function GuildBoostingGuildListItem(guildId) {
       const obj = guildId(outer1_2[12]);
       outer1_1(outer1_2[13]).close();
     };
-    let tmp2Result = tmp2(9057);
+    let tmp2Result = tmp2(9063);
     obj = { guild: null, size: null, style: null, selected: false };
     obj[0] = stateFromStores;
     tmp2Result = tmp2(5779);
@@ -48,7 +48,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.subscriptionInfo;
     const obj4 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
-    obj4[0] = tmp2(9980);
+    obj4[0] = tmp2(9985);
     obj4[1] = tmp.premiumGuildImage;
     const items3 = [callback(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
@@ -64,7 +64,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj7 = { guild: null, theme: null };
     obj7[0] = stateFromStores;
     obj7[1] = tmp4;
-    items1[2] = callback(tmp2(12779), obj7);
+    items1[2] = callback(tmp2(12783), obj7);
     obj[4] = items1;
     tmp9 = callback2(tmp2Result, obj);
   }

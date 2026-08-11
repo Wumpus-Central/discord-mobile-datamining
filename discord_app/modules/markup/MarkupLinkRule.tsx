@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupLinkRule.tsx
 import _slicedToArray from "_slicedToArray";
-import { t } from "../../../_runtime/04000_t.js";
+import { t } from "../../../_runtime/04019_t.js";
 import { error } from "../../../_runtime/04741_error.js";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
@@ -102,7 +102,7 @@ function getRawText(content) {
                         if (tmp3(4734).AST_KEY.LIST !== type) {
                           if (tmp3(4734).AST_KEY.HEADING !== type) {
                             if (tmp3(4734).AST_KEY.SUBTEXT !== type) {
-                              let tmp3Result = tmp3(1351);
+                              let tmp3Result = tmp3(1370);
                               let tmp5 = nextResult;
                               let assertNeverResult = tmp3Result.assertNever(tmp2.type);
                             }
@@ -165,8 +165,8 @@ function isSuspiciousUrl(url) {
         if (!tmp7) {
           let tmp8 = "" !== parts[1];
           if (!tmp8) {
-            tmp8 = tmp9(1467).safeDecodeURIComponent(parts[2]) !== parts[2];
-            const tmp9Result = tmp9(1467);
+            tmp8 = tmp9(1486).safeDecodeURIComponent(parts[2]) !== parts[2];
+            const tmp9Result = tmp9(1486);
           }
           tmp7 = tmp8;
         }
@@ -355,7 +355,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
                   return obj4;
                 } else {
                   let tmp51Result = tmp51(12);
-                  tmp51Result = tmp51(4000);
+                  tmp51Result = tmp51(4019);
                   const obj5 = { content: null, target: null, title: null };
                   obj5[0] = tmp51Result.parserFor(tmp51Result.pick(rules.rules, tmp28))(value.whitespaceSanitized, obj3);
                   obj5[1] = tmp53.target;

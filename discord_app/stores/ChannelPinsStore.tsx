@@ -4,7 +4,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import reinjectEphemerals from "reinjectEphemerals";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 import { apply } from "../../_runtime/00012_apply.js";
@@ -18,8 +18,8 @@ function handleRelationshipUpdate() {
     items = items.items;
     const item = items.forEach((message) => {
       message = message.message;
-      const result = message.set("blocked", upsertRelationship.isBlockedForMessage(message));
-      const result1 = message.set("ignored", upsertRelationship.isIgnoredForMessage(message));
+      const result = message.set("blocked", markAllUserIdListsStale.isBlockedForMessage(message));
+      const result1 = message.set("ignored", markAllUserIdListsStale.isIgnoredForMessage(message));
     });
     const items1 = items.items;
     items.items = items1.slice();
@@ -31,7 +31,7 @@ class ChannelPinsStore extends Store {
 }
 const prototype = ChannelPinsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, _getSystemLocale, reinjectEphemerals, upsertRelationship, mergeGuildAvatar);
+  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, _getSystemLocale, reinjectEphemerals, markAllUserIdListsStale, mergeGuildAvatar);
 };
 prototype["getPins"] = function getPins(channelId) {
   return dependencyMap[channelId];
@@ -186,7 +186,7 @@ obj = {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = messageId(7059).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
+        tmp.items[findIndexResult].message = messageId(7062).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
       }
       const obj2 = apply;
     }

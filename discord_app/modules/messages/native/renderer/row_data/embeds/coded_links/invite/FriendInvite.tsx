@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
 import { Image } from "get ActivityIndicator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { InviteTypes } from "InviteSendStates";
 import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
 import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
@@ -31,7 +31,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = tmp(4146);
+    let tmpResult = tmp(4148);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;
@@ -45,7 +45,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str4 = "";
   if (null != inviter.inviter) {
-    tmpResult = tmp(1416);
+    tmpResult = tmp(1435);
     str4 = Image.resolveAssetSource(tmpResult.getUserAvatarSource(inviter.inviter)).uri;
   }
   const inviter2 = inviter.inviter;

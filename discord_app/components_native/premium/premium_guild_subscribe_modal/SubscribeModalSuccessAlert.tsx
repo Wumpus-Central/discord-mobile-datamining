@@ -25,7 +25,7 @@ class PremiumPaymentGuildAnimation {
     tmp = jsxs();
     obj = { nextScene, onSceneComplete, loop, sceneSegments: idle, style: tmp.animation, source: null };
     tmp2 = require("componentDidMount");
-    obj[5] = require("module_12897");
+    obj[5] = require("module_12901");
     return jsx(tmp2, obj);
   }
 }
@@ -100,9 +100,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradient;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(12898);
+    let tmp8Result = tmp8(12902);
   } else {
-    tmp8Result = tmp8(12899);
+    tmp8Result = tmp8(12903);
   }
   obj3[1] = tmp8Result;
   obj2[1] = callback2(tmp15, obj3);

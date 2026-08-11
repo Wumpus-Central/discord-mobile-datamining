@@ -7,17 +7,17 @@ function getLayoutStyles(layout, launchpad) {
     flag = false;
   }
   if (ChannelListLayoutTypes.ChannelListLayoutTypes.COZY_DRAWER === layout) {
-    return tmp(9797).CHANNEL_LIST_STYLES_COZY_DRAWER;
-  } else if (tmp(3979).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
-    return tmp(9797).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
-  } else if (tmp(3979).ChannelListLayoutTypes.COMPACT === layout) {
-    let tmpResult = tmp(9799);
+    return tmp(9802).CHANNEL_LIST_STYLES_COZY_DRAWER;
+  } else if (tmp(3998).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
+    return tmp(9802).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
+  } else if (tmp(3998).ChannelListLayoutTypes.COMPACT === layout) {
+    let tmpResult = tmp(9804);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
-    if (tmp(3979).ChannelListLayoutTypes.MINIMAL !== layout) {
-      const COZY = tmp(3979).ChannelListLayoutTypes.COZY;
+    if (tmp(3998).ChannelListLayoutTypes.MINIMAL !== layout) {
+      const COZY = tmp(3998).ChannelListLayoutTypes.COZY;
     }
-    tmpResult = tmp(9800);
+    tmpResult = tmp(9805);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }
@@ -40,9 +40,9 @@ export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) 
   if (panelVariant) {
     let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
   } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = tmp(3979).ChannelListLayoutTypes.COMPACT;
+    COZY = tmp(3998).ChannelListLayoutTypes.COMPACT;
   } else {
-    COZY = tmp(3979).ChannelListLayoutTypes.COZY;
+    COZY = tmp(3998).ChannelListLayoutTypes.COZY;
   }
   return COZY;
 };

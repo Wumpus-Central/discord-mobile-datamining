@@ -155,7 +155,7 @@ export default {
               let closure_1 = tmp2;
               let c0 = tmp5;
               c0 = undefined;
-              const setFlagResult = outer1_0(1384).setFlag(outer1_4.accountNotificationSettings.flags, outer1_0, outer1_1);
+              const setFlagResult = outer1_0(1403).setFlag(outer1_4.accountNotificationSettings.flags, outer1_0, outer1_1);
               c0 = setFlagResult;
               const HTTP = outer1_0(530).HTTP;
               let obj1 = { url: null, body: null, rejectWithError: null };
@@ -163,7 +163,7 @@ export default {
               const obj2 = { flags: null };
               obj2[0] = setFlagResult;
               obj1[1] = obj2;
-              const obj10 = outer1_0(1384);
+              const obj10 = outer1_0(1403);
               obj1[2] = outer1_0(530).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;

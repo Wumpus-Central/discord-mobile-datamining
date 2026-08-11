@@ -59,7 +59,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj1 = v0(11242);
+              let obj1 = v0(11247);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -78,8 +78,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
             const intl = outer1_0(1236).intl;
             obj2[1] = intl.string(outer1_0(1236).t["/Mmbfv"]);
-            obj2[2] = v0(9878);
-            v0(4002).open(obj2);
+            obj2[2] = v0(9883);
+            v0(4021).open(obj2);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -100,7 +100,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   }
   const tmp2 = callback();
   dependencyMap = tmp2;
-  closure_3 = _handleConfirmRemoveTimeout(userId(8084)(userId, guildId), 1)[0];
+  closure_3 = _handleConfirmRemoveTimeout(userId(8086)(userId, guildId), 1)[0];
   userId(4730)(() => {
     let obj = userId(_undefined[11]);
     obj = { type: outer1_7, guild_id: guildId, other_user_id: userId };

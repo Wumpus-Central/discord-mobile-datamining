@@ -5,7 +5,7 @@ import { set } from "../../utils/Durations.tsx";
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = { validations: null, currentUsernameInvalid: false, retryAfterTime: null, suggestions: null };
 obj[0] = new require("priv")({ max: 100, maxAge: 60000 });
-obj[3] = { migration: { suggestion: { username: "Promise" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "Promise" }, source: "ct", fetched: "locomotief" } };
+obj[3] = { migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "r" }, source: "ct", fetched: "locomotief" } };
 class UniqueUsernamesStore extends Store {
 }
 const prototype = UniqueUsernamesStore.prototype;
@@ -83,8 +83,8 @@ obj = {
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
-    obj.suggestions.migration = { suggestion: { username: "Promise" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "Promise" }, source: "ct", fetched: "locomotief" };
+    obj.suggestions.migration = { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false };
+    obj.suggestions.registration = { suggestion: { username: "r" }, source: "ct", fetched: "locomotief" };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

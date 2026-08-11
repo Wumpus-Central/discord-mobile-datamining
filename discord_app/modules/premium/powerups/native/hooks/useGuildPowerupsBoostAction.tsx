@@ -62,7 +62,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               tmp15 = dependencyMap;
               if (dependencyMap > 0) {
                 if (!outer1_5.hasFetched) {
-                  let obj1 = outer1_1(6883);
+                  let obj1 = outer1_1(6885);
                   const items = [obj1.init(), ];
                   let obj2 = outer1_0(4199);
                   items[1] = obj2.fetchGuildBoostSlots();
@@ -122,8 +122,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               const tmpResult = outer2_0(table[10]);
             }
           };
-          const result = outer1_0(6865).launchGuildBoostFlowOrAlert(obj3);
-          const obj6 = outer1_0(6865);
+          const result = outer1_0(6867).launchGuildBoostFlowOrAlert(obj3);
+          const obj6 = outer1_0(6867);
         }
       } catch (tmp50) {
         c3 = tmp;

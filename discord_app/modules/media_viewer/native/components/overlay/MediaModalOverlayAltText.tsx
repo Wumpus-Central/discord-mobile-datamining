@@ -17,7 +17,7 @@ const memoResult = require("noop").memo(function MediaModalOverlayAltTextButton(
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(3974).ViewImageDescriptions;
+  const ViewImageDescriptions = str(3993).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;

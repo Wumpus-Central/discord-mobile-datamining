@@ -13,7 +13,7 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7000);
+      let obj = callback(7003);
       obj = { analyticsLocations: null, analyticsSource: null };
       const items = [callback2(5748).USER_SETTINGS];
       obj[0] = items;

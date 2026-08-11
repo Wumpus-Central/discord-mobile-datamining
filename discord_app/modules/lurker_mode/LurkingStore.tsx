@@ -41,10 +41,10 @@ prototype["isLurking"] = function isLurking(guildId) {
     return Boolean(tmp6);
   }
 };
-prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(arg0) {
+prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(closure_0) {
   let tmp = null;
-  if (null != arg0) {
-    let tmp3 = table2[arg0];
+  if (null != closure_0) {
+    let tmp3 = table2[closure_0];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -91,6 +91,10 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
         obj = { type: null, directoryChannelId: null };
         obj[0] = tmp12.DIRECTORY_ENTRY;
         obj[1] = tmp3;
+        closure_8[guildId] = obj;
+      } else if (tmp12.GAME_COMMUNITY_UPSELL === source) {
+        obj = { type: null };
+        obj[0] = tmp12.GAME_COMMUNITY_UPSELL;
         closure_8[guildId] = obj;
       } else {
         delete tmp2[tmp];

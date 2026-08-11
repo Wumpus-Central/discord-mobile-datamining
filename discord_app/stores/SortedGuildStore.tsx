@@ -347,7 +347,7 @@ function handleGuildFolderDeleteLocal(targetId) {
     if (tmp4) {
       const children = element.children;
       const mapped = children.map((id) => id.id);
-      const found = mapped.filter(tmp2(1351).isNotNullish);
+      const found = mapped.filter(tmp2(1370).isNotNullish);
       const item = found.forEach((arg0) => {
         const node = outer1_13.getNode(arg0);
         if (null != node) {

@@ -4,7 +4,7 @@ import hasFlag from "hasFlag";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { reactParserFor } from "../../discord_common/js/packages/markup/MarkupParser.tsx";
@@ -139,7 +139,7 @@ export default {
                 const intl6 = getSystemLocale.intl;
                 const obj8 = { username: null, threadName: null };
                 obj8[0] = name;
-                obj8[1] = computeChannelName.computeChannelName(isForumPost, authStore, upsertRelationship);
+                obj8[1] = computeChannelName.computeChannelName(isForumPost, authStore, markAllUserIdListsStale);
                 return intl6.formatToPlainString(getSystemLocale.t["B8H+Cl"], obj8);
               } else if (tmp9.ROLE_SUBSCRIPTION_PURCHASE === type) {
                 let astToStringResult2 = null;
@@ -248,13 +248,13 @@ export default {
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
-                        let tmp34Result = tmp34(8094);
+                        let tmp34Result = tmp34(8096);
                         const intl5 = tmp34(1236).intl;
                         const obj14 = { guildName: null };
                         obj14[0] = guild.name;
                         astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(tmp34(1236).t.wt3ZUM, obj14));
-                      } else if (tmp34(8098).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        tmp34Result = tmp34(8094);
+                      } else if (tmp34(8100).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        tmp34Result = tmp34(8096);
                         const intl4 = tmp34(1236).intl;
                         obj15 = { guildName: null };
                         obj15[0] = guild.name;
@@ -263,8 +263,8 @@ export default {
                         const intl3 = tmp34(1236).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(8094).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
-                        const tmp34Result1 = tmp34(8094);
+                        astToStringResult6 = tmp34(8096).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
+                        const tmp34Result1 = tmp34(8096);
                       }
                     }
                   }

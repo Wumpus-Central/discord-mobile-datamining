@@ -69,7 +69,7 @@ let prototype = function GuildOnboardingManager() {
         selfMember = selfMember.getSelfMember(outer1_8);
         let hasFlagResult = null != selfMember;
         if (hasFlagResult) {
-          let obj = applyArgumentsResult(1384);
+          let obj = applyArgumentsResult(1403);
           let num = selfMember.flags;
           if (num == null) {
             num = 0;
@@ -81,8 +81,8 @@ let prototype = function GuildOnboardingManager() {
           if (num2 == null) {
             num2 = 0;
           }
-          hasFlagResult = applyArgumentsResult(1384).hasFlag(num2, constants2.STARTED_ONBOARDING);
-          const obj2 = applyArgumentsResult(1384);
+          hasFlagResult = applyArgumentsResult(1403).hasFlag(num2, constants2.STARTED_ONBOARDING);
+          const obj2 = applyArgumentsResult(1403);
         }
         if (hasFlagResult) {
           obj = { guildId: null };

@@ -26,9 +26,9 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
   if (null != stateFromStores) {
     obj = { channel: null };
     obj[0] = stateFromStores;
-    tmp8 = tmp4(9033)(obj);
+    tmp8 = tmp4(9039)(obj);
   }
-  obj[1] = jsx(voiceState(14531).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelName(stateFromStores) });
+  obj[1] = jsx(voiceState(14539).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelName(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -62,7 +62,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!_isStreaming(activity)) {
-        if (tmp4(9654)(activity)) {
+        if (tmp4(9659)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

@@ -41,15 +41,15 @@ export const useKeyboardTypePrevious = function useKeyboardTypePrevious() {
   return computeEntryState((arg0) => arg0.byAppEntry[closure_0].keyboardTypePrevious);
 };
 export const useKeyboardTypeSharedValue = function useKeyboardTypeSharedValue() {
-  appEntryKey = appEntryKey(1477).useAppEntryKey();
-  const obj = appEntryKey(1477);
+  appEntryKey = appEntryKey(1496).useAppEntryKey();
+  const obj = appEntryKey(1496);
   let tmp = appEntryKey;
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
-    DEFAULT_APP_ENTRY_KEY = tmp(1477).DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = tmp(1496).DEFAULT_APP_ENTRY_KEY;
   }
-  const obj2 = appEntryKey(4036);
-  sharedValue = obj2.useSharedValue(sharedValue(1478).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
+  const obj2 = appEntryKey(4042);
+  sharedValue = obj2.useSharedValue(sharedValue(1497).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
   const items = [appEntryKey, sharedValue];
   const effect = React.useEffect(() => appEntryKey(outer1_2[2]).addKeyboardTypeChangedListener((type) => {
     let tmp = null != arg1;
@@ -63,15 +63,15 @@ export const useKeyboardTypeSharedValue = function useKeyboardTypeSharedValue() 
   return sharedValue;
 };
 export const useKeyboardWillOpenSharedValue = function useKeyboardWillOpenSharedValue() {
-  appEntryKey = appEntryKey(1477).useAppEntryKey();
-  const obj = appEntryKey(1477);
+  appEntryKey = appEntryKey(1496).useAppEntryKey();
+  const obj = appEntryKey(1496);
   let tmp = appEntryKey;
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
-    DEFAULT_APP_ENTRY_KEY = tmp(1477).DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = tmp(1496).DEFAULT_APP_ENTRY_KEY;
   }
-  const obj2 = appEntryKey(4036);
-  sharedValue = obj2.useSharedValue(true === sharedValue(1478).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[appEntryKey(undefined, 1607).KeyboardTypes.SYSTEM].keyboardWillOpen);
+  const obj2 = appEntryKey(4042);
+  sharedValue = obj2.useSharedValue(true === sharedValue(1497).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[appEntryKey(undefined, 1626).KeyboardTypes.SYSTEM].keyboardWillOpen);
   const items = [appEntryKey, sharedValue];
   const effect = React.useEffect(() => appEntryKey(outer1_2[2]).addKeyboardWillOpenChangedListener((arg0, arg1) => {
     let tmp = null != arg1;

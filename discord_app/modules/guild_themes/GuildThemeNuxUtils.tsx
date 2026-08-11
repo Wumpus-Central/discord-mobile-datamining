@@ -46,7 +46,7 @@ function _saveGuildThemeNuxPreference() {
               } else {
                 GUILD = GuildThemeSourcePreference.GUILD;
               }
-              GuildThemeSourcePreference = callback(1355);
+              GuildThemeSourcePreference = callback(1374);
               const result = GuildThemeSourcePreference.setDefaultGuildThemePreference(GUILD);
               c4 = 1;
               c5 = 1;
@@ -61,7 +61,7 @@ function _saveGuildThemeNuxPreference() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              obj1 = callback(1355);
+              obj1 = callback(1374);
               c4 = 2;
               c5 = 1;
               const obj2 = { value: null, done: false };

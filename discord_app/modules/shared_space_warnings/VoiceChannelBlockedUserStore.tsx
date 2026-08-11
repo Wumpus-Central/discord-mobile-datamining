@@ -1,5 +1,5 @@
 // discord_app/modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateVoiceState from "updateVoiceState";
 import { Store } from "initialize";
 import set from "handleChannelSelect";
@@ -79,7 +79,7 @@ class VoiceChannelBlockedUserStore extends Store {
 }
 const prototype = VoiceChannelBlockedUserStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(upsertRelationship, updateVoiceState);
+  this.waitFor(markAllUserIdListsStale, updateVoiceState);
 };
 prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(channelId) {
   let tmp = dependencyMap[channelId];

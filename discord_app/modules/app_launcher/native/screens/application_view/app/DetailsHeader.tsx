@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   let isScreenLandscape;
   let c18;
   let tmp = callback();
-  let obj = sharedValue(8338);
+  let obj = sharedValue(8343);
   let obj1 = importAllResult;
   const ref = importAllResult.useRef(null);
   sharedValue = ref;
@@ -64,9 +64,9 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   importAllResult = tmp9[1];
   closure_5 = importAllResult.useRef(true);
   sharedValue = undefined;
-  let obj2 = sharedValue(4036);
+  let obj2 = sharedValue(4042);
   sharedValue = obj2.useSharedValue(null);
-  let obj3 = sharedValue(4036);
+  let obj3 = sharedValue(4042);
   let fn = function t() {
     return { height: sharedValue.get() };
   };
@@ -74,9 +74,9 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   fn.__workletHash = 23826674246;
   fn.__initData = closure_13;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj4 = sharedValue(8338);
+  let obj4 = sharedValue(8343);
   const sectionName = obj4.getSectionName(application);
-  let obj5 = sharedValue(8338);
+  let obj5 = sharedValue(8343);
   str = obj5.getSectionDescription(application);
   let tmp28Result1 = null != str;
   if (tmp28Result1) {
@@ -99,14 +99,14 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   const memo = obj1.useMemo(() => {
     let result = null;
     if (null != str) {
-      result = sharedValue(9532).parseBioReactWithCachedAST(tmp);
-      const obj = sharedValue(9532);
+      result = sharedValue(9538).parseBioReactWithCachedAST(tmp);
+      const obj = sharedValue(9538);
     }
     return result;
   }, items);
   const tmp6Result1 = first1(obj1.useState(false), 2);
   isScreenLandscape = sharedValue(4849).useIsScreenLandscape();
-  const tmp24 = first(8853)(isScreenLandscape);
+  const tmp24 = first(8859)(isScreenLandscape);
   c18 = tmp24;
   const items1 = [isScreenLandscape, tmp24];
   const effect = obj1.useEffect(() => {
@@ -179,7 +179,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
             outer1_0(outer1_2[6]).runOnJS(closure_14)(true);
           };
           let obj = { runOnJS: null, setShouldLineClamp: null };
-          obj[0] = sharedValue(4036).runOnJS;
+          obj[0] = sharedValue(4042).runOnJS;
           obj[1] = _undefined;
           fn.__closure = obj;
           fn.__workletHash = 6050776164847;
@@ -281,7 +281,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   items5[1] = tmp28Result;
   obj[2] = items5;
   obj[1] = closure_9(closure_5, obj);
-  const children = [num2(first(4036).View, obj), ];
+  const children = [num2(first(4042).View, obj), ];
   let tmp28Result2 = !first2;
   if (!first2) {
     const obj19 = { style: null, onLayout: null, children: null };

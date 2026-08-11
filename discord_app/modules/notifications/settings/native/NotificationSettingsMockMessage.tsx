@@ -30,19 +30,19 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = sharedValue(4146);
+  let obj1 = sharedValue(4148);
   let str = obj1.getName(stateFromStores);
   if (str == null) {
     str = "Roka";
   }
   require = tmp7;
-  let tmp2Result = tmp2(4036);
+  let tmp2Result = tmp2(4042);
   let num = 0;
   if (notificationSetting.notificationSetting === UserNotificationSettings.NO_MESSAGES) {
     num = 0.8;
   }
   sharedValue = tmp2Result.useSharedValue(num);
-  tmp2Result = tmp2(4036);
+  tmp2Result = tmp2(4042);
   const fn = function h() {
     const obj = { opacity: null };
     const value = sharedValue.get();
@@ -86,7 +86,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj5 = { style: tmp.cardContent, children: null };
   const obj6 = { children: null };
   const obj7 = { source: null, size: null };
-  obj7[0] = sharedValue(9836);
+  obj7[0] = sharedValue(9841);
   obj7[1] = Button.AvatarSizes.LARGE_48;
   obj6[0] = tmp12(Button.Avatar, obj7);
   const items4 = [tmp12(View, obj6), ];
@@ -100,7 +100,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   obj5[1] = items4;
   const items6 = [callback2(View, obj5), ];
   const items7 = [animatedStyle, tmp.overlay];
-  items6[1] = tmp12(sharedValue(4036).View, { style: items7 });
+  items6[1] = tmp12(sharedValue(4042).View, { style: items7 });
   obj4[1] = items6;
   return callback2(View, obj4);
 };

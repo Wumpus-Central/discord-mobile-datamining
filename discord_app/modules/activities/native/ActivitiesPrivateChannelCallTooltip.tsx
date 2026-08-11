@@ -41,11 +41,11 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
       return obj;
     }
   }
-  obj = { withRepeat: tmp2(4036).withRepeat, withSequence: tmp2(4036).withSequence, withTiming: tmp2(4304).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG: closure_7 };
+  obj = { withRepeat: tmp2(4042).withRepeat, withSequence: tmp2(4042).withSequence, withTiming: tmp2(4304).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG: closure_7 };
   T.__closure = obj;
   T.__workletHash = 4621705591670;
   T.__initData = closure_9;
-  const animatedStyle = num(4036).useAnimatedStyle(T);
+  const animatedStyle = num(4042).useAnimatedStyle(T);
   obj = { style: items1, children: null };
   items1 = [tmp.tooltipContainer, animatedStyle];
   const obj1 = { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null };

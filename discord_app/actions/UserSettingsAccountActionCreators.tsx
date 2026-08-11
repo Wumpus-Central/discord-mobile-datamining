@@ -182,11 +182,11 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_token = value;
   }
   obj = { headers: null };
-  obj[0] = avatarId(8273).buildHeadersForMd5({ [avatar(8270).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  obj[0] = avatarId(8278).buildHeadersForMd5({ [avatar(8275).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
   const tmp = avatarId;
   tmp11 = null != tmp10 && null != value;
   tmp13 = closure_8;
-  let tmpResult = avatarId(8273);
+  let tmpResult = avatarId(8278);
   return saveProfileAndAccountRequest(obj, obj).then((arg0) => {
     avatarId(outer1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

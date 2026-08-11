@@ -6,7 +6,7 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../intl/SlayerStorefront.messages.js";
 
 const require = arg1;
-let closure_6 = { [arg1(10098).StorefrontPlatform.DESKTOP]: "PC", [arg1(10098).StorefrontPlatform.XBOX]: "Xbox", [arg1(10098).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10098).StorefrontPlatform.SWITCH]: "Switch", [arg1(10098).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10098).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10098).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
+let closure_6 = { [arg1(10103).StorefrontPlatform.DESKTOP]: "PC", [arg1(10103).StorefrontPlatform.XBOX]: "Xbox", [arg1(10103).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10103).StorefrontPlatform.SWITCH]: "Switch", [arg1(10103).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10103).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10103).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
 let items = [require("StorefrontPlatform").StorefrontPlatform.PLAYSTATION];
 const result = require("ME").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 
@@ -85,7 +85,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
       const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
       obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
       obj[1] = arr.length;
-      str2 = intl3.formatToPlainString(tmp4(3222)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(tmp4(3241)["5h8p5P"], obj);
     }
     const obj1 = { platforms_info: null };
     obj1[0] = str2;
@@ -130,13 +130,13 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
       const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
       obj[0] = listFormat.format(arr2.map((arg0) => table[arg0]));
       obj[1] = arr2.length;
-      str2 = intl3.formatToPlainString(tmp3(3222)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(tmp3(3241)["5h8p5P"], obj);
     }
     obj = { platforms_info: null };
     obj[0] = str2;
     items = [format(tmp4.Q0dHYO, obj), ];
     const intl2 = tmp(1236).intl;
-    items[1] = intl2.format(tmp3(3222).Ufm9XX, obj);
+    items[1] = intl2.format(tmp3(3241).Ufm9XX, obj);
     let items1 = items;
   } else {
     items1 = [format(tmp4.Ufm9XX, obj)];
@@ -192,7 +192,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
     obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
     obj[1] = arr.length;
-    str = intl2.formatToPlainString(tmp4(3222)["5h8p5P"], obj);
+    str = intl2.formatToPlainString(tmp4(3241)["5h8p5P"], obj);
   }
   obj[1] = str;
   return intl.format(vyAtfo, obj);

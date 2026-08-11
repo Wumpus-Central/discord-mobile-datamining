@@ -30,7 +30,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   shown = shown.shown;
   ({ blurStyle, style } = shown);
   const tmp = callback();
-  let obj = shown(4036);
+  let obj = shown(4042);
   const fn = function k() {
     let opacity = 0;
     if (shown.get()) {
@@ -47,7 +47,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   fn.__workletHash = 3451055086565;
   fn.__initData = closure_8;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = shown(4036);
+  let obj2 = shown(4042);
   const fn2 = function p() {
     let obj = shown(outer1_2[6]);
     let num = 0;
@@ -79,9 +79,9 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   const items3 = [closure_4(set, { style: tmp.stroke }), ];
   tmp6Result = tmp6(5781);
   const obj3 = { style: tmp.stroke };
-  obj6 = shown(4153);
-  const tmp2Result = tmp2(4153);
-  items3[1] = closure_4(tmp6Result, { style: tmp2(4153).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
+  obj6 = shown(1363);
+  const tmp2Result = tmp2(1363);
+  items3[1] = closure_4(tmp6Result, { style: tmp2(1363).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
   obj2[1] = items3;
   items2[1] = closure_5(tmp6Result, obj2);
   obj1[1] = items2;

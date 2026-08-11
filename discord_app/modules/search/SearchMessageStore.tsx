@@ -1,6 +1,6 @@
 // discord_app/modules/search/SearchMessageStore.tsx
 import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { Store } from "initialize";
 import { V6OrEarlierAPIError } from "../../errors/index.tsx";
 import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
@@ -107,7 +107,7 @@ class SearchMessageStore extends Store {
 }
 const prototype2 = SearchMessageStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, upsertRelationship);
+  this.waitFor(fetchFingerprint, markAllUserIdListsStale);
 };
 prototype2["getMessage"] = function getMessage(arg0) {
   return map1.get(arg0);

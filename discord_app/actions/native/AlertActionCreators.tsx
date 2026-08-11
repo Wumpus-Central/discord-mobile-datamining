@@ -66,7 +66,7 @@ export default {
     let callback;
     c4 = undefined;
     let c5;
-    let obj = confirmText(1348);
+    let obj = confirmText(1367);
     if (obj.isMobileVisualRefreshEnabled("AlertActionCreators")) {
       obj = {};
       let merged1 = Object.assign(merged);

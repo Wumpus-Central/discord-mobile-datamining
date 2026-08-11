@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME";
-import { parse } from "../../../_runtime/01464_parse.js";
+import { parse } from "../../../_runtime/01483_parse.js";
 import { items } from "../../modules/image_upload/AttachmentImageLadder.tsx";
 import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
 import { getAvatarURL } from "../AvatarUtils.tsx";
@@ -80,7 +80,7 @@ function getSrcWithWidthAndHeight(animated) {
   let tmp2Result = tmp2(12);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1464);
+    tmp2Result = tmp2(1483);
     text = `${tmp5}?${obj5.stringify(tmp6)}`;
   }
   return text;

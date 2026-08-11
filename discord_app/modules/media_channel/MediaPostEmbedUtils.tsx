@@ -1,6 +1,6 @@
 // discord_app/modules/media_channel/MediaPostEmbedUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
@@ -74,7 +74,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (flag) {
       flag = !has_media_attachment;
     }
-    let tmp17Result = tmp17(1384);
+    let tmp17Result = tmp17(1403);
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
     if (thumbnail2 != null) {
@@ -122,7 +122,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     let channelName;
     if (null != parentChannel) {
       tmp17Result = tmp17(4494);
-      channelName = tmp17Result.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
+      channelName = tmp17Result.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
     }
     obj[14] = channelName;
     obj[15] = avatarURL;

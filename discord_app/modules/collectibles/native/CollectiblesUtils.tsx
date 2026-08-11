@@ -139,7 +139,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(7013);
+      let tmp7Result = tmp7(7016);
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -174,7 +174,7 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     }
     return tmp7;
   } else {
-    return tmp(7013).extractPriceByPurchaseTypes(googleSkuIds, arg1);
+    return tmp(7016).extractPriceByPurchaseTypes(googleSkuIds, arg1);
   }
   tmp = require;
 };

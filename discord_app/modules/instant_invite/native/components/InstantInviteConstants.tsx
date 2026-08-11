@@ -16,7 +16,7 @@ import showInstantInviteActionSheet from "showInstantInviteActionSheet";
 import showInstantInviteActionSheet from "showInstantInviteActionSheet";
 import showInstantInviteActionSheet from "showInstantInviteActionSheet";
 import set from "ME";
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { getInviteURL } from "../../getInviteURL.tsx";
@@ -30,7 +30,7 @@ const SHARE_URLS = SHARE_APPS_KEY.SHARE_URLS;
 let obj = { SHARE: 0, [0]: "SHARE", COPY: 1, [1]: "COPY", QR_CODE: 2, [2]: "QR_CODE", MESSAGES: 3, [3]: "MESSAGES", MAIL: 4, [4]: "MAIL", FB_MESSENGER: 5, [5]: "FB_MESSENGER", GMAIL: 6, [6]: "GMAIL", TELEGRAM: 7, [7]: "TELEGRAM", TWITTER: 8, [8]: "TWITTER", WHATSAPP: 9, [9]: "WHATSAPP", LINE: 10, [10]: "LINE" };
 obj = {
   type: obj.SHARE,
-  icon: require("module_9090"),
+  icon: require("module_9096"),
   isAvailable: Promise.resolve(true),
   IconComponent: require("registerAsset"),
   backgroundColor: require("Themes").unsafe_rawColors.BRAND_500,
@@ -83,7 +83,7 @@ obj1[5] = function onPress(code) {
   obj[0] = getInviteURL(code);
   obj[1] = _location;
   obj[2] = channel;
-  obj.openLazy(asyncRequireImpl(9097, dependencyMap.paths), combined, obj, "stack");
+  obj.openLazy(asyncRequireImpl(9103, dependencyMap.paths), combined, obj, "stack");
 };
 items[2] = obj1;
 let obj2 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -108,8 +108,8 @@ obj2[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9065).trackOptionClicked(code, channel, constants.SMS, _location);
-  let obj = channel(9065);
+  channel(9071).trackOptionClicked(code, channel, constants.SMS, _location);
+  let obj = channel(9071);
   const tmp = channel;
   if (obj2.isIOS()) {
     code(4271).hideActionSheet();
@@ -166,8 +166,8 @@ obj3[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9065).trackOptionClicked(code, channel, constants.EMAIL, _location);
-  let obj = channel(9065);
+  channel(9071).trackOptionClicked(code, channel, constants.EMAIL, _location);
+  let obj = channel(9071);
   const tmp = channel;
   if (obj2.isIOS()) {
     code(4271).hideActionSheet();

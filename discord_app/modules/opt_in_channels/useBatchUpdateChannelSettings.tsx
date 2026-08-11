@@ -42,13 +42,13 @@ export default function useBatchUpdateChannelSettings(arg0) {
         isCollapsedResult = null != id;
       }
       if (isCollapsedResult) {
-        let obj = callback(11031);
+        let obj = callback(11036);
         obj.categoryExpand(id);
       }
-      let obj1 = callback(11028);
+      let obj1 = callback(11033);
       if (obj1.hasNotSetUpChannelOptIn(closure_0)) {
         if (id === id) {
-          let tmp8Result = tmp8(11028);
+          let tmp8Result = tmp8(11033);
           obj = { include: null };
           const _Set2 = Set;
           const items = [id];
@@ -56,7 +56,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           obj[0] = set;
           const result = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         } else {
-          tmp8Result = tmp8(11028);
+          tmp8Result = tmp8(11033);
           obj = { exclude: null };
           const _Set = Set;
           const items1 = [id];

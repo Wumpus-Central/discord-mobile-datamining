@@ -6,7 +6,7 @@ export default function isOrientationLockSupported() {
   const isIpadOSResult = DCDDeviceManager.isIpadOS();
   let result = !isIpadOSResult;
   if (!isIpadOSResult) {
-    let tmpResult = tmp(1605);
+    let tmpResult = tmp(1624);
     result = !tmpResult.isMetaQuest();
   }
   if (result) {

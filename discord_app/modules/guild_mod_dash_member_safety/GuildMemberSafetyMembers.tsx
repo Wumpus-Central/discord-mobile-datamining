@@ -76,7 +76,7 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
-    ORDER_BY_UNSPECIFIED = tmp(6956).OrderBy.ORDER_BY_UNSPECIFIED;
+    ORDER_BY_UNSPECIFIED = tmp(6959).OrderBy.ORDER_BY_UNSPECIFIED;
   }
   obj.sort = getSortValueForMember.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
   obj.joinedAtTimestamp = joinedAtTimestamp;
@@ -124,7 +124,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(6956).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(6959).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj[6] = tmp9;
   obj[7] = isSpamSupported.isSpammer(userId);

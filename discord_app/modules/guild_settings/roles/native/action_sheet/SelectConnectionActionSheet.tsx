@@ -83,7 +83,7 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(6962);
+  let tmp3Result = tmp3(6965);
   const platforms = tmp3Result.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
@@ -163,7 +163,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const intl4 = tmp3(1236).intl;
     items.push(intl4.string(tmp3(1236).t.y3ZnnU));
   }
-  tmp3Result = tmp3(8956);
+  tmp3Result = tmp3(8962);
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
@@ -182,7 +182,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(9141).SegmentedControl, obj2);
+    obj1[0] = tmp2(tmp3(9147).SegmentedControl, obj2);
     let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;

@@ -16,21 +16,21 @@ let metroImportAll;
 const require = arg1;
 function getStatusSize(arg0) {
   if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
-    if (tmp(12305).AvatarSizes.XSMALL !== arg0) {
-      if (tmp(12305).AvatarSizes.XSMALL_20 !== arg0) {
-        if (tmp(12305).AvatarSizes.SMALL !== arg0) {
-          if (tmp(12305).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
+    if (tmp(12308).AvatarSizes.XSMALL !== arg0) {
+      if (tmp(12308).AvatarSizes.XSMALL_20 !== arg0) {
+        if (tmp(12308).AvatarSizes.SMALL !== arg0) {
+          if (tmp(12308).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
             return closure_7.REFRESH_MEDIUM_10;
           } else {
-            if (tmp(12305).AvatarSizes.NORMAL !== arg0) {
-              if (tmp(12305).AvatarSizes.TABS_22 !== arg0) {
-                if (tmp(12305).AvatarSizes.LARGE !== arg0) {
-                  if (tmp(12305).AvatarSizes.LARGE_48 !== arg0) {
-                    if (tmp(12305).AvatarSizes.XLARGE !== arg0) {
-                      if (tmp(12305).AvatarSizes.XLARGE_72 !== arg0) {
-                        if (tmp(12305).AvatarSizes.XXLARGE !== arg0) {
-                          if (tmp(12305).AvatarSizes.PROFILE !== arg0) {
-                            if (tmp(12305).AvatarSizes.YOUBAR_60 !== arg0) {
+            if (tmp(12308).AvatarSizes.NORMAL !== arg0) {
+              if (tmp(12308).AvatarSizes.TABS_22 !== arg0) {
+                if (tmp(12308).AvatarSizes.LARGE !== arg0) {
+                  if (tmp(12308).AvatarSizes.LARGE_48 !== arg0) {
+                    if (tmp(12308).AvatarSizes.XLARGE !== arg0) {
+                      if (tmp(12308).AvatarSizes.XLARGE_72 !== arg0) {
+                        if (tmp(12308).AvatarSizes.XXLARGE !== arg0) {
+                          if (tmp(12308).AvatarSizes.PROFILE !== arg0) {
+                            if (tmp(12308).AvatarSizes.YOUBAR_60 !== arg0) {
                               return null;
                             }
                           }

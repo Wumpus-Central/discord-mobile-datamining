@@ -46,7 +46,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = callback(result, 2);
-              tmp4(1957)(arr);
+              tmp4(1976)(arr);
               if (Basic !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -594,7 +594,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1351).isNotNullish);
+  found = items.filter(found(1370).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -604,7 +604,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((arg0) => !set.has(arg0))) {
       const dependencyMap = c31;
-      return tmp(1955).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
+      return tmp(1974).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();

@@ -58,14 +58,14 @@ export default function ConnectAccountStep(clientId) {
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
-      let tmp2Result = tmp2(1416);
+      let tmp2Result = tmp2(1435);
       obj = { id: null, icon: null };
       ({ id: obj7[0], icon: obj7[1] } = stateFromStores);
       applicationIconSource = tmp2Result.getApplicationIconSource(obj);
     }
     let userAvatarSource;
     if (null != stateFromStores1) {
-      tmp2Result = tmp2(1416);
+      tmp2Result = tmp2(1435);
       userAvatarSource = tmp2Result.getUserAvatarSource(stateFromStores1);
     }
     let str;
@@ -91,7 +91,7 @@ export default function ConnectAccountStep(clientId) {
     const items4 = [callback(tmp5(1297).Avatar, obj3), , ];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8604).MoreHorizontalIcon, obj4);
+    items4[1] = callback(tmp5(8610).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
     obj5[1] = tmp5(1297).AvatarSizes.XLARGE;
@@ -155,8 +155,8 @@ export default function ConnectAccountStep(clientId) {
     obj[1] = items6;
     return callback2(View, obj);
   } else {
-    let tmp5Result = tmp5(1416);
-    tmp5Result = tmp5(4153);
+    let tmp5Result = tmp5(1435);
+    tmp5Result = tmp5(1363);
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }

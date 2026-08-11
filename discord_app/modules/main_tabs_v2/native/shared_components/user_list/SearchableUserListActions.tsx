@@ -42,7 +42,7 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
   actions = actions.actions;
   const style = actions.style;
   let dependencyMap;
-  const tmp = style(9625)();
+  const tmp = style(9630)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
   return React.useMemo(() => {

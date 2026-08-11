@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/BotUserProfileOverflowMenu.tsx
 import encodeProperties from "encodeProperties";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -17,7 +17,7 @@ let unpackModuleId;
 const require = arg1;
 ({ AnalyticEvents: metroImportAll, ApplicationFlags: c9, ChannelTypesSets: c10, RelationshipTypes: unpackModuleId } = ME);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
-let result = require("upsertRelationship").fileFinishedImporting("modules/user_profile/native/BotUserProfileOverflowMenu.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_profile/native/BotUserProfileOverflowMenu.tsx");
 
 export default function BotUserProfileOverflowMenu(application) {
   let isIgnored;

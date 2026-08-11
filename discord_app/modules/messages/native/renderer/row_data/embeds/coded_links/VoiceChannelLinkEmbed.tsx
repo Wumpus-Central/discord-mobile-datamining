@@ -5,7 +5,7 @@ import { getGuildAcronym } from "GuildNSFWContentLevel";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import { InviteTypes } from "InviteSendStates";
@@ -44,8 +44,8 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
                 icon1 = guild.icon;
               }
               obj[1] = icon1;
-              const guildIconURL = tmp4(1416).getGuildIconURL(obj);
-              const tmp4Result = tmp4(1416);
+              const guildIconURL = tmp4(1435).getGuildIconURL(obj);
+              const tmp4Result = tmp4(1435);
             } else if (null != guild) {
               const tmp8 = getGuildAcronym(guild);
             }
@@ -79,7 +79,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             }
             obj.channelIcon = uri;
             tmp16Result = tmp16(4494);
-            obj.titleText = tmp16Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+            obj.titleText = tmp16Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
             obj.titleColor = colors.titleColor;
             let tmp24;
             if (null != guildIconURL) {

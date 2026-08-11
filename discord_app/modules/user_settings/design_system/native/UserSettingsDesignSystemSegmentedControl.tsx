@@ -61,7 +61,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     }
     return items;
   }, items);
-  let obj = first(8956);
+  let obj = first(8962);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
   obj = { children: null };
   obj = {
@@ -72,7 +72,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     children: null
   };
   const obj1 = { spacing: 24, children: null };
-  let items1 = [callback3(first(9141).SegmentedControl, { state: segmentedControlState }), callback3(first(9562).SegmentedControlPages, { state: segmentedControlState }), ];
+  let items1 = [callback3(first(9147).SegmentedControl, { state: segmentedControlState }), callback3(first(9567).SegmentedControlPages, { state: segmentedControlState }), ];
   const obj2 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
     callback3(first(4714).Button, {

@@ -267,16 +267,22 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
     num = 480;
   }
   if (null != pendingBanner) {
-    return pendingBanner;
+    if (arg1) {
+      let imageUri = pendingBanner.imageUri;
+    } else {
+      imageUri = pendingBanner.staticImageUri;
+      if (imageUri == null) {
+        imageUri = pendingBanner.imageUri;
+      }
+    }
   } else {
-    let self = this;
+    const self = this;
     if (null === pendingBanner) {
       let userBannerURL = null;
       if (self.isUsingGuildMemberBanner()) {
         let obj = { id: null, banner: null, canAnimate: null, size: null };
         obj[0] = self.userId;
-        self = self._userProfile.banner;
-        obj[1] = self;
+        obj[1] = self._userProfile.banner;
         obj[2] = arg1;
         obj[3] = num;
         userBannerURL = getAvatarURL.getUserBannerURL(obj);
@@ -289,6 +295,7 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
       obj[1] = num;
       bannerURL = self.getBannerURL(obj);
     }
+    return bannerURL;
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/SyncContactsNameSetting.tsx
 import { AnalyticEvents } from "ME";
 import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
@@ -16,7 +16,7 @@ const pressable = createToggle.createPressable({
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl(14092, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(14100, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
@@ -32,7 +32,7 @@ let obj = {
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl(14092, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(14100, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

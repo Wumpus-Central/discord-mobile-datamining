@@ -107,7 +107,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
     }
   }
   const tmp = createCacheKey();
-  let obj = markAsDismissed(4013);
+  let obj = markAsDismissed(4031);
   const theme = obj.useThemeContext().theme;
   obj = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
   obj = { title: null, leading: null };
@@ -138,7 +138,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   obj7[0] = intl3.string(markAsDismissed(1236).t.ItuabN);
   const obj8 = { size: "sm", color: null };
   obj8[1] = Themes.colors.WHITE;
-  obj7[1] = callback(markAsDismissed(12233).WindowLaunchIcon, obj8);
+  obj7[1] = callback(markAsDismissed(12236).WindowLaunchIcon, obj8);
   obj7[4] = function onPress() {
     let obj = outer1_1(outer1_2[13]);
     obj.hideActionSheet();
@@ -167,7 +167,7 @@ export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobl
   let fetchingAccounts;
   let hasRoloxAccount;
   const items = [initialize];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(12974).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(589).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(12978).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(React.useState(false), 2);
   const first = tmp2[0];
   const dependencyMap = tmp2[1];
@@ -195,10 +195,10 @@ export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobl
   const items3 = [hasRoloxAccount];
   const effect1 = React.useEffect(() => {
     if (hasRoloxAccount) {
-      let obj = stateFromStores(4123);
+      let obj = stateFromStores(4125);
       obj = { dismissAction: null };
       obj[0] = outer1_12.INDIRECT_ACTION;
-      const result = obj.UNSAFE_markDismissibleContentAsDismissed(stateFromStores(1358).DismissibleContent.ROBLOX_CONNECTION_COACHMARK, obj);
+      const result = obj.UNSAFE_markDismissibleContentAsDismissed(stateFromStores(1377).DismissibleContent.ROBLOX_CONNECTION_COACHMARK, obj);
     }
   }, items3);
   let tmp7 = !fetchingAccounts;

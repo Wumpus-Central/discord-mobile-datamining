@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/InviteCodeUtils.tsx
 import _slicedToArray from "_slicedToArray";
-import { parse } from "../../../_runtime/01464_parse.js";
+import { parse } from "../../../_runtime/01483_parse.js";
 import { getFirstQueryStringValue } from "../../utils/QueryStringUtils.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 

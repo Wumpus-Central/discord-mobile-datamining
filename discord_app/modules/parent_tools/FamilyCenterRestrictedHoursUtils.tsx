@@ -25,13 +25,13 @@ function formatDays(days) {
   const set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = set(1236).intl;
-    return intl3.string(dateTimeFormat(2284).bPjqd1);
+    return intl3.string(dateTimeFormat(2303).bPjqd1);
   } else if (tmp2(set, set)) {
     const intl2 = set(1236).intl;
-    return intl2.string(dateTimeFormat(2284)["4dr9L9"]);
+    return intl2.string(dateTimeFormat(2303)["4dr9L9"]);
   } else if (tmp2(set, set1)) {
     const intl = set(1236).intl;
-    return intl.string(dateTimeFormat(2284)["6lTTJ+"]);
+    return intl.string(dateTimeFormat(2303)["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     dateTimeFormat = new Intl.DateTimeFormat(set(1236).intl.currentLocale, { weekday: "short" });

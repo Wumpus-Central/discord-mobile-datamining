@@ -20,7 +20,7 @@ function getChatInputMaxHeight() {
     systemKeyboardHeight = customKeyboardHeight;
   }
   const obj3 = useKeyboardType;
-  return Math.min(200, Math.max(2 * closure_6, tmp(1474).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200));
+  return Math.min(200, Math.max(2 * closure_6, tmp(1493).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200));
 }
 const result = require("subscribeToKeyboardUIStore").fileFinishedImporting("modules/chat_input/native/useChatInputMaxHeight.tsx");
 
@@ -77,9 +77,9 @@ export const getChatInputHeightAnimationTiming = function getChatInputHeightAnim
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     systemKeyboardHeight = customKeyboardHeight;
   }
-  let tmpResult = tmp(1474);
+  let tmpResult = tmp(1493);
   const bound = Math.min(height, Math.min(200, Math.max(2 * closure_6, tmpResult.getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200)));
   tmpResult = tmp(4304);
-  obj = { duration: tmp(4307).timingFastDuration, easing: tmp(4036).Easing.linear };
+  obj = { duration: tmp(4307).timingFastDuration, easing: tmp(4042).Easing.linear };
   return tmpResult.withTiming(bound, obj);
 };

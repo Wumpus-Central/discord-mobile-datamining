@@ -51,7 +51,7 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
           }
         }
       }
-      tmpResult = tmp(10379);
+      tmpResult = tmp(10384);
     }
   }
 };

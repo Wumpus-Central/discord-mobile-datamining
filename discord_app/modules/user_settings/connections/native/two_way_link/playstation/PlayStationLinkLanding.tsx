@@ -12,7 +12,7 @@ const result = require("ME").fileFinishedImporting("modules/user_settings/connec
 
 export const PlayStationLinkLanding = function PlayStationLinkLanding(platformType) {
   let navigation;
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const tmp = callback();
   const articleURL = combined.getArticleURL(HelpdeskArticles.PS_CONNECTION);
@@ -30,14 +30,14 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj = { label: null, icon: null };
     const intl3 = navigation(1236).intl;
     obj[0] = intl3.string(navigation(1236).t.ZH4QFa);
-    obj[1] = navigation(8762).GameControllerIcon;
+    obj[1] = navigation(8768).GameControllerIcon;
     items[1] = obj;
     return items;
   }, []);
   callback = React.useCallback(() => {
     navigation.push(outer1_4.PRE_CONNECT);
   }, items);
-  const memo1 = React.useMemo(() => ({ uri: callback(10562) }), []);
+  const memo1 = React.useMemo(() => ({ uri: callback(10567) }), []);
   obj = { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1236).intl;
   obj[3] = intl2.string(navigation(1236).t.xAWHOy);
@@ -46,5 +46,5 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj[5] = intl.format(navigation(1236).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(10498).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(10503).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 };

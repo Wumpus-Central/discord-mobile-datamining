@@ -367,7 +367,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       const value = flattenComponents.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
-      } else if (value.type === tmp20(1935).ComponentType.MEDIA_GALLERY) {
+      } else if (value.type === tmp20(1954).ComponentType.MEDIA_GALLERY) {
         if (null == componentMediaIndex) {
           return null;
         } else if (null == value.items[componentMediaIndex]) {
@@ -455,21 +455,21 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(8612);
+    tmp36Result = tmp36(8618);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
       if (true === !reaction.me_burst) {
-        let tmp12Result = tmp12(1926);
+        let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(8613);
+          tmp12Result = tmp12(8619);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7222).ReactionTypes;
+    const ReactionTypes = tmp12(7223).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = tmp12(4272).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
       const tmp12Result2 = tmp12(4272);
@@ -481,12 +481,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7223).removeReaction(obj);
+      tmp12(7224).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7223);
+            const tmp12Result4 = tmp12(7224);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
@@ -500,14 +500,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(8412).openMemberVerificationModal(guildId1);
+          return tmp12(8418).openMemberVerificationModal(guildId1);
         }
       }
     }
-    tmp12Result1 = tmp12(3940);
+    tmp12Result1 = tmp12(3959);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(8613);
+    const tmp12Result7 = tmp12(8619);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);

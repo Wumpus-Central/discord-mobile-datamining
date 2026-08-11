@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import WEB_OPEN from "WEB_OPEN";
 import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../_runtime/08244_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08248_registerAsset.js";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { Linking } from "../../../lib/native/Linking.tsx";
@@ -168,7 +168,7 @@ export const canOpenSpotifyUrl = function canOpenSpotifyUrl() {
   return closure_4.canOpenURL("" + closure_6 + ":");
 };
 export const attributeInstall = function attributeInstall() {
-  let obj = importAll(1606);
+  let obj = importAll(1625);
   const HTTP = sendRequest.HTTP;
   obj = { url: closure_7.INSTALL_ATTRIBUTION(obj.getConstants().Identifier), rejectWithError: true };
   const value = HTTP.get(obj);

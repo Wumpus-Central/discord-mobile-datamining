@@ -1,6 +1,6 @@
 // discord_app/actions/CallActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -62,7 +62,7 @@ export default {
           obj[3] = intl4.string(lib(1236).t.BddRzS);
           obj[4] = function onConfirm() {
             let obj = outer1_1(outer1_2[9]);
-            obj = { userId: upsertRelationship, context: { location: "Call" } };
+            obj = { userId: markAllUserIdListsStale, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
           id(4642).show(obj);

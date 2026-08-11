@@ -40,12 +40,12 @@ function _sendGiftMessage() {
         }
       });
       dependencyMap = callback(4538).getGiftCodeURL(callback);
-      const obj9 = lib(6917);
+      const obj9 = lib(6920);
       const id = lib.id;
       const obj8 = callback(4538);
       const obj4 = { isGiftLinkSentOnBehalfOfUser: true, location: null };
       obj4[1] = constants.GIFTING;
-      return obj9.sendMessage(id, lib(7142).parse(lib, dependencyMap), undefined, obj4);
+      return obj9.sendMessage(id, lib(7143).parse(lib, dependencyMap), undefined, obj4);
     })();
   });
   const _sendGiftMessage = tmp;

@@ -22,7 +22,7 @@ import importDefaultResult10 from "extractColorStringsFromServerColors";
 import importDefaultResult11 from "extractColorStringsFromServerColors";
 import importDefaultResult12 from "combineMarkupRules";
 import importDefaultResult13 from "extractColorStringsFromServerColors";
-import { t } from "../../../_runtime/04000_t.js";
+import { t } from "../../../_runtime/04019_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
@@ -144,8 +144,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNickname.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4146).getName(str);
-        const tmp4Result = tmp4(4146);
+        nickname = tmp4(4148).getName(str);
+        const tmp4Result = tmp4(4148);
       }
       str = nickname;
       const obj2 = getNickname;

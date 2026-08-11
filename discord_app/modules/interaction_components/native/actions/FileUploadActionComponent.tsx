@@ -54,9 +54,9 @@ function File(upload) {
   obj = { uri: upload.item.uri, isImage: upload.isImage, isVideo: upload.isVideo, width: 32, height: 32, defaultPreview: null };
   obj = { style: callback2().defaultAttachmentIconWrapper, children: null };
   const tmp = callback2();
-  obj[1] = callback(upload(9879).AttachmentIcon, { fileName: upload.filename });
+  obj[1] = callback(upload(9884).AttachmentIcon, { fileName: upload.filename });
   obj[5] = callback(View, obj);
-  obj[0] = callback(handleRemoveFile(9879), obj);
+  obj[0] = callback(handleRemoveFile(9884), obj);
   let filename = upload.filename;
   if (filename == null) {
     const intl = tmp3(1236).intl;
@@ -70,7 +70,7 @@ function File(upload) {
   };
   const intl2 = tmp3(1236).intl;
   obj2[4] = intl2.string(upload(1236).t.N86XcP);
-  obj[2] = callback(upload(7751).IconButton, obj2);
+  obj[2] = callback(upload(7753).IconButton, obj2);
   return callback(upload(5374).TableRow, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -282,7 +282,7 @@ export default function FileUploadActionComponent(maxValues) {
               obj.id = componentUploadId;
               obj[2] = obj;
               obj[3] = InteractionModal.InteractionModal;
-              callback2(8357).setFile(obj);
+              callback2(8362).setFile(obj);
               return componentUploadId;
             });
             let tmp37 = outer1_10;
@@ -334,7 +334,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10010).hideMediaKeyboardActionSheet();
+        return InteractionModal(10015).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveKestrelLimit,
       onSelectFiles(arg0) {
@@ -386,8 +386,8 @@ export default function FileUploadActionComponent(maxValues) {
         obj.handleViewAllDialog(obj);
       };
       obj[10] = function onManageLimited() {
-        let obj = InteractionModal(10009);
-        obj = { onDismissKeyboard: InteractionModal(10010).hideMediaKeyboardActionSheet, onRestoreKeyboard: closure_8 };
+        let obj = InteractionModal(10014);
+        obj = { onDismissKeyboard: InteractionModal(10015).hideMediaKeyboardActionSheet, onRestoreKeyboard: closure_8 };
         const result = obj.handleLimitedPickerDialog(obj);
       };
       obj[11] = tmp4(tmp5[29]).hideMediaKeyboardActionSheet;

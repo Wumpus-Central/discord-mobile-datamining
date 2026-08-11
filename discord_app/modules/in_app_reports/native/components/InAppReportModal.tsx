@@ -217,11 +217,11 @@ export default function InAppReportModal(arg0) {
       const obj3 = { headerRight: null, headerTitle: null, fullscreen: true, render: null };
       obj3[0] = function headerRight() {
         const obj = { source: null, onPress: null, accessibilityLabel: null };
-        obj[0] = callback(8027);
+        obj[0] = callback(8029);
         obj[1] = closure_6;
         const intl = _onSubmit(1236).intl;
         obj[2] = intl.string(_onSubmit(1236).t.cpT0Cq);
-        return callback2(_onSubmit(6008).HeaderActionButton, obj);
+        return callback2(_onSubmit(6010).HeaderActionButton, obj);
       };
       obj3[1] = function headerTitle() {
         return null;
@@ -244,7 +244,7 @@ export default function InAppReportModal(arg0) {
         obj.addOnCloseCallback = callback2;
         obj.reportId = noop;
         obj.onNavigate = onNavigate;
-        return callback2(callback(8028), obj);
+        return callback2(callback(8030), obj);
       };
       obj2[c6] = obj3;
       obj[1] = obj2;

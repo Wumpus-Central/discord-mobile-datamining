@@ -20,7 +20,7 @@ export default function useCreateThread(arg0) {
   let analyticsLocations;
   ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
   analyticsLocations = context().analyticsLocations;
-  let obj = analyticsLocations(8354);
+  let obj = analyticsLocations(8359);
   obj = {
     parentChannel,
     parentMessageId,
@@ -78,7 +78,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > c3) {
           obj7.cancel();
-          let obj = outer2_1(8357);
+          let obj = outer2_1(8362);
           obj = { channelId: null, uploads: null, draftType: null, resetState: true };
           obj[0] = guildId.id;
           obj[1] = guildId;
@@ -90,8 +90,8 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
           obj[2] = dependencyMap;
           obj[3] = guildId.getGuildId();
           obj[4] = obj7;
-          outer2_1(8359)(obj);
-          const tmp10 = outer2_1(8359);
+          outer2_1(8364)(obj);
+          const tmp10 = outer2_1(8364);
         }
       });
       let noop = yield obj7.uploadFiles(guildId);

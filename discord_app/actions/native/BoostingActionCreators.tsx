@@ -1,5 +1,5 @@
 // discord_app/actions/native/BoostingActionCreators.tsx
-import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../ModalActionCreators.tsx";
 const PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY = "PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("actions/native/BoostingActionCreators.tsx");

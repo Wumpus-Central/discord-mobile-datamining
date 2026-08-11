@@ -24,7 +24,7 @@ function isChattableChannel(guild_id) {
       tmp = canChannelBeDefaultResult;
     } else {
       const isForumChannelResult = guild_id.isForumChannel();
-      const canEveryoneRole = importAll(3934).canEveryoneRole;
+      const canEveryoneRole = importAll(3953).canEveryoneRole;
       let SEND_MESSAGES_IN_THREADS = closure_12;
       if (isForumChannelResult) {
         SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
@@ -32,7 +32,7 @@ function isChattableChannel(guild_id) {
       } else {
         canEveryoneRoleResult = canEveryoneRole(SEND_MESSAGES_IN_THREADS.SEND_MESSAGES, guild_id);
       }
-      const tmp7 = importAll(3934);
+      const tmp7 = importAll(3953);
     }
     const obj = useCanChannelBeDefault;
   }
@@ -151,10 +151,10 @@ export const isBlockedByOnboarding = function isBlockedByOnboarding(guild, selfM
             if (num == null) {
               num = 0;
             }
-            let hasFlagResult = importAll(1384).hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
+            let hasFlagResult = importAll(1403).hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
             if (hasFlagResult) {
-              hasFlagResult = !importAll(1384).hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
-              const tmp2Result = importAll(1384);
+              hasFlagResult = !importAll(1403).hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
+              const tmp2Result = importAll(1403);
             }
             return hasFlagResult;
           }
@@ -291,7 +291,7 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
       tmp = canChannelBeDefaultResult;
     } else {
       const isForumChannelResult = channel.isForumChannel();
-      const canEveryoneRole = importAll(3934).canEveryoneRole;
+      const canEveryoneRole = importAll(3953).canEveryoneRole;
       let SEND_MESSAGES_IN_THREADS = closure_12;
       if (isForumChannelResult) {
         SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
@@ -299,7 +299,7 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
       } else {
         canEveryoneRoleResult = canEveryoneRole(SEND_MESSAGES_IN_THREADS.SEND_MESSAGES, channel);
       }
-      const tmp7 = importAll(3934);
+      const tmp7 = importAll(3953);
     }
     const obj2 = useCanChannelBeDefault;
   }

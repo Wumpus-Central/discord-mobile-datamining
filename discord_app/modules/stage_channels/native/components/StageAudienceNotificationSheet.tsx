@@ -6,10 +6,10 @@ import { STAGE_AUDIENCE_NOTICE_SHEET_KEY as closure_5 } from "MAX_STAGE_TOPIC_LE
 import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07966_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08001_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08002_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07968_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/08003_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08004_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08005_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -73,7 +73,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl2 = tmp2(1236).intl;
   obj6[3] = intl2.string(channelId(1236).t.sBDfo6);
   obj4[1] = callback(channelId(4299).Text, obj6);
-  const items2 = [callback(channelId(7967).FormRow, obj4), , , ];
+  const items2 = [callback(channelId(7969).FormRow, obj4), , , ];
   const obj7 = { leading: null, label: null };
   const obj8 = { source: null };
   obj8[0] = registerAsset;
@@ -82,7 +82,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl3 = tmp2(1236).intl;
   obj9[3] = intl3.string(channelId(1236).t.x58YtH);
   obj7[1] = callback(channelId(4299).Text, obj9);
-  items2[1] = callback(channelId(7967).FormRow, obj7);
+  items2[1] = callback(channelId(7969).FormRow, obj7);
   const obj10 = { leading: null, label: null };
   const obj11 = { source: null };
   obj11[0] = registerAsset;
@@ -91,19 +91,19 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl4 = tmp2(1236).intl;
   obj12[3] = intl4.string(channelId(1236).t.XtVqla);
   obj10[1] = callback(channelId(4299).Text, obj12);
-  items2[2] = callback(channelId(7967).FormRow, obj10);
+  items2[2] = callback(channelId(7969).FormRow, obj10);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj13 = { leading: null, label: null };
     const obj14 = { source: null };
-    obj14[0] = tmp7(8004);
+    obj14[0] = tmp7(8006);
     obj13[0] = tmp6(BulletIcon, obj14);
     const obj15 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj15[0] = tmp.headerBullet;
     const intl6 = tmp2(1236).intl;
     obj15[3] = intl6.string(tmp2(1236).t.nDsbJg);
     obj13[1] = tmp6(tmp2(4299).Text, obj15);
-    tmp6Result = tmp6(tmp2(7967).FormRow, obj13);
+    tmp6Result = tmp6(tmp2(7969).FormRow, obj13);
   }
   const obj16 = { children: null };
   items2[3] = tmp6Result;

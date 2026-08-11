@@ -50,7 +50,7 @@ function _updatePermission() {
                   c6 = 1;
                   c7 = 1;
                   let obj1 = { value: null, done: false };
-                  obj1[0] = guildId(8999).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
+                  obj1[0] = guildId(9005).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
                   return obj1;
                 }
               }

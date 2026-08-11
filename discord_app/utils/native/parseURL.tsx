@@ -4,8 +4,8 @@ import ME from "ME";
 import items from "items";
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
 import CustomCheckoutFlow from "CustomCheckoutFlow";
-import { parse } from "../../../_runtime/01464_parse.js";
-import { t } from "../../../_runtime/04000_t.js";
+import { parse } from "../../../_runtime/01483_parse.js";
+import { t } from "../../../_runtime/04019_t.js";
 import { getPathsFromURL } from "../../modules/coded_links/findCodedLinks.tsx";
 import { _resolveGiftCode } from "../GiftCodeUtils.tsx";
 
@@ -92,7 +92,7 @@ export default function parseURL(arg0) {
     obj[0] = obj;
     return obj;
   } else {
-    const parsed = uRL(1469).parse(sanitizeUrlResult);
+    const parsed = uRL(1488).parse(sanitizeUrlResult);
     ({ host, pathname, query } = parsed);
     let str = query;
     ({ protocol, hostname } = parsed);
@@ -169,7 +169,7 @@ export default function parseURL(arg0) {
                                   if (tmp5(4292).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
                                     if (tmp5(4292).CodedLinkType.APP_OAUTH2_LINK !== type) {
                                       if (tmp5(4292).CodedLinkType.COLLECTIBLES_SHOP === type) {
-                                        let tmp5Result = tmp5(12221);
+                                        let tmp5Result = tmp5(12224);
                                         const tmp10 = callback(findCodedLinkResult.code.split("-"), 2)[1];
                                         if (tmp5Result.isVirtualCurrencyEnabled().enabled) {
                                           if (tmp9 === constants2.ORBS) {
@@ -236,7 +236,7 @@ export default function parseURL(arg0) {
       obj13[3] = obj14;
       return obj13;
     } else {
-      tmp5Result = tmp5(13197);
+      tmp5Result = tmp5(13205);
       const result = tmp5Result.findRemoteAuthFingerprint(host, pathname);
       if (null != result) {
         if (result.length > 0) {
@@ -253,7 +253,7 @@ export default function parseURL(arg0) {
       }
       if (!uRLResult1.isDiscordHostname(host)) {
         if (!uRLResult2.isDiscordProtocol(protocol)) {
-          const uRLResult3 = uRL(1467);
+          const uRLResult3 = uRL(1486);
         }
         let match;
         if (host != null) {
@@ -366,7 +366,7 @@ export default function parseURL(arg0) {
               if (query == null) {
                 str13 = "";
               }
-              let ad_creative_ids = uRL(1464).parse(str13).ad_creative_ids;
+              let ad_creative_ids = uRL(1483).parse(str13).ad_creative_ids;
               if (ad_creative_ids == null) {
                 ad_creative_ids = [];
               }
@@ -424,7 +424,7 @@ export default function parseURL(arg0) {
                 if (query == null) {
                   str5 = "";
                 }
-                const result1 = tmp5(10510).parseOAuth2AuthorizeProps(str5);
+                const result1 = tmp5(10515).parseOAuth2AuthorizeProps(str5);
                 if (null != result1) {
                   const obj39 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                   obj39[0] = fingerprint;
@@ -439,7 +439,7 @@ export default function parseURL(arg0) {
                   obj39[3] = obj40;
                   return obj39;
                 }
-                const tmp5Result3 = tmp5(10510);
+                const tmp5Result3 = tmp5(10515);
               }
               if (null != pathname.match(closure_17)) {
                 let str12 = query;
@@ -591,8 +591,8 @@ export default function parseURL(arg0) {
                         const obj59 = { type: null, guildId: null, settingsSection: null, settingsSubsection: null };
                         obj59[0] = closure_7.GUILD_SETTINGS;
                         obj59[1] = tmp41[1];
-                        obj59[2] = uRL(13198)(closure_5, tmp41[2]);
-                        obj59[3] = uRL(13198)(closure_6, tmp41[3]);
+                        obj59[2] = uRL(13206)(closure_5, tmp41[2]);
+                        obj59[3] = uRL(13206)(closure_6, tmp41[3]);
                         obj58[3] = obj59;
                         return obj58;
                       } else {
@@ -610,8 +610,8 @@ export default function parseURL(arg0) {
                           obj60[2] = installationId;
                           const obj61 = { type: null, settingsSection: null, settingsSubsection: null, feature: null };
                           obj61[0] = closure_7.GUILD_SETTINGS_PICKER;
-                          obj61[1] = uRL(13198)(closure_5, tmp36[1]);
-                          obj61[2] = uRL(13198)(closure_6, tmp36[2]);
+                          obj61[1] = uRL(13206)(closure_5, tmp36[1]);
+                          obj61[2] = uRL(13206)(closure_6, tmp36[2]);
                           obj61[3] = tmp87(str7).feature;
                           obj60[3] = obj61;
                           return obj60;
@@ -645,8 +645,8 @@ export default function parseURL(arg0) {
         }
         const tmp5Result1 = tmp5(4495);
       }
-      uRLResult1 = uRL(1467);
+      uRLResult1 = uRL(1486);
     }
-    const uRLResult = uRL(1469);
+    const uRLResult = uRL(1488);
   }
 };

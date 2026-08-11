@@ -27,9 +27,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   let first;
   let c5;
   let tmp = createCacheKey();
-  const tmp4 = callback(first.useState(event(8946).ResponseOptions.SERIES), 2);
+  const tmp4 = callback(first.useState(event(8952).ResponseOptions.SERIES), 2);
   first = tmp4[0];
-  let obj = event(8946);
+  let obj = event(8952);
   const existingRsvp = obj.getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
@@ -48,9 +48,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   obj[0] = callback2(event(5396).BottomSheetTitleHeader, { title: stringResult });
   obj = { bottom: true, style: tmp.container, children: null };
   const obj1 = { defaultValue: first, onChange: tmp4[1], hasIcons: false, children: null };
-  const responseOptions = event(8946).getResponseOptions();
+  const responseOptions = event(8952).getResponseOptions();
   obj1[3] = responseOptions.map((value) => callback2(event(table[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
-  const items = [callback2(event(7985).TableRadioGroup, obj1), ];
+  const items = [callback2(event(7987).TableRadioGroup, obj1), ];
   const obj2 = { style: tmp.buttonWrapper, children: null };
   const obj3 = {
     onPress() {

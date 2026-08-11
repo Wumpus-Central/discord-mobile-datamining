@@ -35,7 +35,7 @@ function ProfileEffectAssetPreview(item) {
     obj[0] = tmp.profileEffectContainer;
     obj = { source: null, alt: null, style: null, resizeMode: "cover" };
     obj = { uri: null };
-    obj[0] = tmp2(12141);
+    obj[0] = tmp2(12144);
     obj[0] = obj;
     obj[1] = tmp4.accessibilityLabel;
     obj[2] = tmp.profileEffect;
@@ -66,8 +66,8 @@ function ProfileFrameAssetPreview(arg0) {
     obj[1] = width;
     obj[2] = height;
     obj[3] = tmp(712).colors.BACKGROUND_BASE_LOW;
-    tmp4 = callback(tmp(9395), obj);
-    const tmpResult = tmp(9395);
+    tmp4 = callback(tmp(9401), obj);
+    const tmpResult = tmp(9401);
   }
   return tmp4;
 }
@@ -85,10 +85,10 @@ function BundleAssetPreview(height) {
   let c5;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = width(9374);
+  let obj = width(9380);
   const shopProductItems = obj.useShopProductItems(product);
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
-  let obj1 = width(9394);
+  let obj1 = width(9400);
   bundleWidth = small.small.bundleWidth;
   rounded = bundleWidth;
   if (!obj1.useCollectiblesMobileFlexibleBundlesExperiment("CollectiblesShopCheckoutDetails").enabled) {
@@ -116,7 +116,7 @@ function BundleAssetPreview(height) {
   obj = { style: memo1, children: null };
   const memo2 = bundleWidth.useMemo(() => ({ width, height }), items2);
   obj1 = { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "small", targetSize: memo2, exposureLocation: "CollectiblesShopCheckoutDetails" };
-  obj[1] = callback(height(9375), obj1);
+  obj[1] = callback(height(9381), obj1);
   obj[1] = callback(rounded, obj);
   return callback(rounded, obj);
 }
@@ -153,9 +153,9 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   if (ALL.has(product.skuId)) {
     let obj = { skuId: null, width: null, height: null };
     obj[0] = product.skuId;
-    obj[1] = tmp2(9417).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    obj[2] = tmp2(9417).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    return callback(tmp2(9417).FractionalNitroCoinIllustration, obj);
+    obj[1] = tmp2(9423).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    obj[2] = tmp2(9423).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    return callback(tmp2(9423).FractionalNitroCoinIllustration, obj);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
@@ -165,27 +165,27 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return callback(preload, obj);
   } else {
     const type = product.type;
-    if (tmp2(1930).CollectiblesItemType.AVATAR_DECORATION === type) {
+    if (tmp2(1949).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj2 = { item: null, size: null, avatarSource: null, animate: false };
       obj2[0] = product.items[0];
       obj2[1] = width;
       obj2[2] = userAvatarSource.userAvatarSource;
       return callback(AvatarDecorationSampleV2, obj2);
-    } else if (tmp2(1930).CollectiblesItemType.PROFILE_EFFECT === type) {
+    } else if (tmp2(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj3 = { item: null };
       obj3[0] = product.items[0];
       return callback(ProfileEffectAssetPreview, obj3);
-    } else if (tmp2(1930).CollectiblesItemType.NAMEPLATE === type) {
+    } else if (tmp2(1949).CollectiblesItemType.NAMEPLATE === type) {
       const obj4 = { item: null };
       obj4[0] = product.items[0];
       return callback(NameplateAssetPreview, obj4);
-    } else if (tmp2(1930).CollectiblesItemType.PROFILE_FRAME === type) {
+    } else if (tmp2(1949).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj5 = { item: null, width: null, height: null };
       obj5[0] = product.items[0];
       obj5[1] = width;
       obj5[2] = height;
       return callback(ProfileFrameAssetPreview, obj5);
-    } else if (tmp2(1930).CollectiblesItemType.BUNDLE === type) {
+    } else if (tmp2(1949).CollectiblesItemType.BUNDLE === type) {
       obj = { product: null, width: null, height: null };
       obj[0] = product;
       obj[1] = width;
@@ -325,7 +325,7 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
     tmp4 = tmp;
   }
   let obj = { giftProductContainer: null };
-  obj = { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(712).space.PX_16, backgroundColor: "call" };
+  obj = { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(712).space.PX_16, backgroundColor: "dispatch" };
   obj[0] = obj;
   return obj;
 });
@@ -360,7 +360,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   const tmp = createCacheKey();
   let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj1 = flag2(3947);
+  let obj1 = flag2(3966);
   const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];

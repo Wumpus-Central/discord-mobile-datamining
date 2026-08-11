@@ -99,17 +99,17 @@ IntegrationItem.prototype["render"] = function render() {
   const props = this.props;
   const integration = props.integration;
   ({ onPress: importDefault, styles } = props);
-  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(16647).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
+  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(16659).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(16687).IntegrationTypes.YOUTUBE === type) {
+    if (tmp(16699).IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(16687).IntegrationTypes.TWITCH === type) {
+    } else if (tmp(16699).IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
@@ -160,8 +160,8 @@ IntegrationItem.prototype["render"] = function render() {
       obj1[1] = items;
       return closure_12(tmp(5767).TableRowGroup, obj1);
     } else {
-      let tmpResult = tmp(1416);
-      tmpResult = tmp(4153);
+      let tmpResult = tmp(1435);
+      tmpResult = tmp(1363);
       let icon = value.icon;
       icon = { source: null, style: null };
       icon[0] = tmpResult.makeSource(tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
@@ -196,11 +196,11 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       obj.saveGuild(tmp.id, obj);
     }
   }
-  let obj = platformType(4005);
+  let obj = platformType(4024);
   const token = obj.useToken(closeGuildSettings(712).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = createCacheKey();
   dependencyMap = tmp5;
-  let obj1 = platformType(1480);
+  let obj1 = platformType(1499);
   navigation = obj1.useNavigation();
   let obj3 = platformType(589);
   const items = [guild];
@@ -256,16 +256,16 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       let intl = tmp(1236).intl;
       obj = { connectAction: null, helpdeskArticle: null };
       obj[0] = onConectTap;
-      tmp3Result = tmp3(1974);
+      tmp3Result = tmp3(1993);
       obj[1] = tmp3Result.getArticleURL(onSave.YOUTUBE_INTEGRATION);
       let formatResult = intl.format(tmp(1236).t["4OSAQ9"], obj);
     } else if (tmp10.TWITCH === platformType) {
       const intl2 = tmp(1236).intl;
       obj1 = { connectAction: null, helpdeskArticle: null };
       obj1[0] = onConectTap;
-      obj1[1] = tmp3(1974).getArticleURL(onSave.TWITCH_INTEGRATION);
+      obj1[1] = tmp3(1993).getArticleURL(onSave.TWITCH_INTEGRATION);
       formatResult = intl2.format(tmp(1236).t.ro1jEN, obj1);
-      const tmp3Result1 = tmp3(1974);
+      const tmp3Result1 = tmp3(1993);
     }
     const obj2 = { style: null, contentContainerStyle: null, children: null };
     obj2[0] = tmp5.form;
@@ -297,7 +297,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     items2[1] = closure_11(tmp(4299).Text, obj6);
     obj3[2] = items2;
     obj2[2] = closure_12(tmp(4712).Stack, obj3);
-    const items3 = [closure_11(tmp(7967).Form, obj2), closure_11(tmp(5714).NavScrim, {})];
+    const items3 = [closure_11(tmp(7969).Form, obj2), closure_11(tmp(5714).NavScrim, {})];
     obj5[0] = items3;
     return closure_12(closure_13, obj5);
   }

@@ -29,8 +29,8 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (_crypto.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
-          let tmpResult = tmp(4123);
-          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1358).DismissibleContent.PASSWORDLESS_UPSELL)) {
+          let tmpResult = tmp(4125);
+          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!hasFetchedCredentials.hasFetchedCredentials()) {
               tmpResult = tmp(4158);
               if (!tmpResult.isModalOpen()) {

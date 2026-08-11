@@ -7,7 +7,7 @@ import importDefaultResult1 from "set";
 import importDefaultResult2 from "set";
 import importDefaultResult3 from "set";
 import importDefaultResult4 from "set";
-import { Url } from "../../../_runtime/01469_Url.js";
+import { Url } from "../../../_runtime/01488_Url.js";
 
 const require = arg1;
 function getPathsFromURL(target) {
@@ -351,7 +351,7 @@ function findCodedLinks(str) {
     let combined = items;
     const _default = combined(4293).default;
     const parseToASTResult = combined(4293).default.parseToAST(str, true, { allowLinks: true });
-    combined(8096).walkAst(parseToASTResult, (type) => {
+    combined(8098).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -1100,7 +1100,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     let combined = items1;
     const _default = combined(4293).default;
     const parseToASTResult = combined(4293).default.parseToAST(str, true, { allowLinks: true });
-    combined(8096).walkAst(parseToASTResult, (type) => {
+    combined(8098).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -1619,7 +1619,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     combined = items1.concat(match);
     const result = coerceLinksToCodedLinks(combined);
     items = result.slice(0, 10);
-    let obj = combined(8096);
+    let obj = combined(8098);
   }
   return items[0];
 };

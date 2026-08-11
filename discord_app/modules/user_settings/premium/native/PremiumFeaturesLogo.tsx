@@ -2,8 +2,8 @@
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/06901_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08628_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/06903_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08634_registerAsset.js";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
 const require = arg1;

@@ -2,7 +2,7 @@
 import "noop";
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
 import comparator from "comparator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT";
@@ -75,7 +75,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     if (channel.isThread()) {
       const obj3 = computeChannelName;
       const _HermesInternal6 = HermesInternal;
-      return "#\"" + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
+      return "#\"" + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, markAllUserIdListsStale)) + "\"";
     } else {
       channel2 = type.channel;
       const guildId = channel2.getGuildId();
@@ -87,7 +87,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
             name = tmp16.name;
           }
           if (name == null) {
-            name = computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+            name = computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, markAllUserIdListsStale);
             const obj2 = computeChannelName;
           }
           const _HermesInternal5 = HermesInternal;
@@ -95,7 +95,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
         }
       }
       const _HermesInternal4 = HermesInternal;
-      return "" + closure_11 + computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+      return "" + closure_11 + computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, markAllUserIdListsStale);
     }
   } else if (tmp.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;

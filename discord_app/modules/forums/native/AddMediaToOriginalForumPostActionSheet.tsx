@@ -90,7 +90,7 @@ function _upload2() {
               onResult = dependencyMap;
               onResult = new.target;
               onResult = new.target;
-              onResult = new callback2(7298)();
+              onResult = new callback2(7299)();
               const outer1_5 = onResult;
               onResult = outer1_5;
               onResult = outer1_5.on("start", () => {
@@ -114,7 +114,7 @@ function _upload2() {
                   obj[2] = maxFileSizeResult;
                   obj[3] = tmp3.id;
                   obj[4] = c4;
-                  callback(8359)(obj);
+                  callback(8364)(obj);
                   const obj4 = callback(4271);
                 }
               });
@@ -126,8 +126,8 @@ function _upload2() {
               onResult = outer1_5;
               onResult = outer1_5.on("complete", () => {
                 dependencyMap(false);
-                callback(8357).clearAll(c0, ChannelMessage.ChannelMessage);
-                const obj = callback(8357);
+                callback(8362).clearAll(c0, ChannelMessage.ChannelMessage);
+                const obj = callback(8362);
                 callback(4271).hideActionSheet();
               });
               onResult = store;
@@ -204,7 +204,7 @@ function _upload2() {
               callback2 = HermesBuiltin.arraySpread(dependencyMap, callback2);
               const outer1_6 = items;
               attachments = 2;
-              obj5 = callback2(7224);
+              obj5 = callback2(7225);
               c8 = 6;
               c9 = 1;
               const obj6 = { value: null, done: false };
@@ -218,11 +218,11 @@ function _upload2() {
               dependencyMap(false);
               obj3 = callback2(4271);
               obj3.hideActionSheet();
-              const tmp24 = new callback2(11390)(closure_12);
+              const tmp24 = new callback2(11393)(closure_12);
               store = tmp24;
               if (store.code === closure_11.EXPLICIT_CONTENT) {
-                obj4 = callback2(6917);
-                const result1 = obj4.sendExplicitMediaClydeError(callback, store.attachments, callback(7059).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
+                obj4 = callback2(6920);
+                const result1 = obj4.sendExplicitMediaClydeError(callback, store.attachments, callback(7062).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
               } else {
                 onResult = c5;
                 onResult = callback2;

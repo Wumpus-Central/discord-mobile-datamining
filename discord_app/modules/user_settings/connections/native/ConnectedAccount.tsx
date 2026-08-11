@@ -11,7 +11,7 @@ import jsxProd from "ManaContext";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/08027_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08029_registerAsset.js";
 import { callback } from "../../../../actions/ConnectedAccountsActionCreators.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -172,7 +172,7 @@ const PureComponent = importAllResult.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f110841 = applyArgumentsResult;
+    f110923 = applyArgumentsResult;
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
@@ -219,9 +219,9 @@ class ConnectedAccount extends PureComponent {
       const account = lib.props.account;
       applyArgumentsResult(outer1_2[13]).disconnect(account.type, account.id);
     };
-    f110841 = undefined;
+    f110923 = undefined;
     closure_1 = applyArgumentsResult;
-    f110841 = RowSwitch((arg0) => {
+    f110923 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -279,9 +279,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f110841 = undefined;
+    f110923 = undefined;
     closure_1 = applyArgumentsResult;
-    f110841 = RowSwitch((arg0) => {
+    f110923 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -339,9 +339,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f110841 = undefined;
+    f110923 = undefined;
     closure_1 = applyArgumentsResult;
-    f110841 = RowSwitch((arg0) => {
+    f110923 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -380,9 +380,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f110841 = undefined;
+    f110923 = undefined;
     closure_1 = applyArgumentsResult;
-    f110841 = RowSwitch((arg0) => {
+    f110923 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -513,33 +513,33 @@ prototype["renderMetadata"] = function renderMetadata() {
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(11048);
+    let tmp2Result = tmp2(11053);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
   } else if (tmp6.STEAM === type) {
-    tmp2Result = tmp2(11048);
+    tmp2Result = tmp2(11053);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
     if (tmp6.BLUESKY !== type) {
       if (tmp6.TWITTER !== type) {
         if (tmp6.MASTODON !== type) {
           if (tmp6.EBAY === type) {
-            redditMetadataItems = tmp2(11048).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(11048);
+            redditMetadataItems = tmp2(11053).generateEbayMetadataItems(metadata);
+            const tmp2Result1 = tmp2(11053);
           } else if (tmp6.PAYPAL === type) {
-            redditMetadataItems = tmp2(11048).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(11048);
+            redditMetadataItems = tmp2(11053).generatePaypalMetadataItems(metadata);
+            const tmp2Result2 = tmp2(11053);
           } else {
             redditMetadataItems = [];
             if (tmp6.TIKTOK === type) {
-              redditMetadataItems = tmp2(11048).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(11048);
+              redditMetadataItems = tmp2(11053).generateTikTokMetadataItems(metadata);
+              const tmp2Result3 = tmp2(11053);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11048).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(11048);
+    redditMetadataItems = tmp2(11053).generateTwitterMetadataItems(metadata);
+    const tmp2Result4 = tmp2(11053);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -611,8 +611,8 @@ prototype["renderMetadata"] = function renderMetadata() {
       stringResult = string(tmp2(1236).t["8O0mlf"]);
       obj8[0] = stringResult;
       obj8[3] = function onPress() {
-        const obj = self(3998);
-        return obj.openURL(self(1974).getArticleURL(constants.CONNECTION_DETAILS));
+        const obj = self(4017);
+        return obj.openURL(self(1993).getArticleURL(constants.CONNECTION_DETAILS));
       };
       tmp = tmp23(Button, obj8);
       obj7[1] = tmp;
@@ -640,9 +640,9 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj10[0] = tmp.metadataRefreshIcon;
     obj10[1] = tmp2(1297).Icon.Sizes.SMALL;
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10025);
+      let tmp9Result = tmp9(10030);
     } else {
-      tmp9Result = tmp9(14217);
+      tmp9Result = tmp9(14225);
     }
     obj10[2] = tmp9Result;
     obj9[6] = callback3(tmp2(1297).Icon, obj10);
@@ -729,7 +729,7 @@ prototype["render"] = function render() {
     const intl = getSystemLocale.intl;
     obj = { platformName: null };
     obj[0] = account.name;
-    let name = intl.format(tmp2(2834).Glhokn, obj);
+    let name = intl.format(tmp2(2853).Glhokn, obj);
   } else {
     name = account.name;
   }

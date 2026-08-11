@@ -37,11 +37,11 @@ export const AppStartInfo = {
       items[2] = callback(4165).getAppFirstVisibleTimestamp();
       const dependencyMap = yield Promise.all(items);
       let closure_4 = 5;
-      let closure_5 = 7133;
+      let closure_5 = 7134;
       obj5 = { app_start_type: null, app_launch_scenario: null };
       obj5[0] = c3;
       obj5[1] = closure_4;
-      const mainActivityCreationTime = callback(7133).getMainActivityCreationTime();
+      const mainActivityCreationTime = callback(7134).getMainActivityCreationTime();
       if (null != mainActivityCreationTime) {
         obj5.android_time_creation_to_create_main_activity = mainActivityCreationTime - callback;
       }

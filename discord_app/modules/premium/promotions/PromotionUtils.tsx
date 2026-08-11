@@ -138,7 +138,7 @@ export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPr
   const userContent = handleConnectionClosedOrResumed.settings.userContent;
   let prop;
   if (userContent != null) {
-    const tmp4 = userContent.recurringDismissibleContentStates[require(undefined, 1358) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    const tmp4 = userContent.recurringDismissibleContentStates[require(undefined, 1377) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
     if (tmp4 != null) {
       prop = tmp4.lastDismissedObjectId;
     }
@@ -183,7 +183,7 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   const userContent = handleConnectionClosedOrResumed.settings.userContent;
   let prop;
   if (userContent != null) {
-    const tmp4 = userContent.recurringDismissibleContentStates[require(undefined, 1358) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    const tmp4 = userContent.recurringDismissibleContentStates[require(undefined, 1377) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
     if (tmp4 != null) {
       prop = tmp4.lastDismissedObjectId;
     }

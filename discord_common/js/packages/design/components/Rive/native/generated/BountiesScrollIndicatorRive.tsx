@@ -26,7 +26,7 @@ let closure_9 = {
       startAnimation1 = onDataBindingChange.startAnimation;
     }
     const triggerBinding = BaseRive.useTriggerBinding("startAnimation", instance, startAnimation, startAnimation1, playIfNeeded);
-    let tmpResult = tmp(4030);
+    let tmpResult = tmp(4036);
     let looping;
     if (dataBinding != null) {
       looping = dataBinding.looping;
@@ -36,7 +36,7 @@ let closure_9 = {
       looping1 = onDataBindingChange.looping;
     }
     const booleanBinding = tmpResult.useBooleanBinding("looping", instance, looping, looping1, playIfNeeded);
-    tmpResult = tmp(4030);
+    tmpResult = tmp(4036);
     let color;
     if (dataBinding != null) {
       color = dataBinding.color;

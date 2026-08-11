@@ -9,7 +9,7 @@ const require = arg1;
 function getSavedMessagesForType(arg0) {
   if (SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK === arg0) {
     return store.getMessageBookmarks();
-  } else if (tmp(8381).SavedMessageSortTypes.REMINDER === arg0) {
+  } else if (tmp(8385).SavedMessageSortTypes.REMINDER === arg0) {
     return store.getMessageReminders();
   } else {
     return store.getSavedMessages();
@@ -23,7 +23,7 @@ export default function useSavedMessagesForPage() {
   let c2;
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(8381).SavedMessageSortTypes.ALL;
+    ALL = ALL(8385).SavedMessageSortTypes.ALL;
   }
   let importDefault;
   let dependencyMap;

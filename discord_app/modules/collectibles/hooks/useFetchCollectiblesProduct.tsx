@@ -43,7 +43,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     if (first != null) {
       type = first.type;
     }
-    tmp10 = type === tmp(1930).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1949).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === first.items.length;

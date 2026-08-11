@@ -16,7 +16,7 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
   let callbackState;
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -27,5 +27,5 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
     navigation.push(outer1_3.ERROR);
   }, items1);
   obj = { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 };
-  return jsx(navigation(10507).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 });
+  return jsx(navigation(10512).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 });
 };

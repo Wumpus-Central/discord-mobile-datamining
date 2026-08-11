@@ -1,7 +1,7 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import useSharedSpacesWarningStore from "useSharedSpacesWarningStore";
 import init from "init";
 import "initialize";
@@ -22,9 +22,9 @@ function handleChannelSelect(channelId) {
     if (null != channel) {
       if (channel.isGroupDM()) {
         const recipients = channel.recipients;
-        const found = recipients.filter((arg0) => upsertRelationship.isBlocked(arg0));
+        const found = recipients.filter((arg0) => markAllUserIdListsStale.isBlocked(arg0));
         const recipients1 = channel.recipients;
-        const found1 = recipients1.filter((arg0) => upsertRelationship.isIgnored(arg0));
+        const found1 = recipients1.filter((arg0) => markAllUserIdListsStale.isIgnored(arg0));
         if (tmp) {
           let blockedUserWarningDismissed = channel.blockedUserWarningDismissed;
           if (!blockedUserWarningDismissed) {
@@ -136,7 +136,7 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
   }
 };
 const sharedSpacesWarningManager = new SharedSpacesWarningManager();
-let result = require("upsertRelationship").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
 
 export default sharedSpacesWarningManager;
 export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarningInCooldownForUsers(arg0) {

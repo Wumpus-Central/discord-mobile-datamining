@@ -5,7 +5,7 @@ import { View } from "collectGuildAnalyticsMetadata";
 import { AnalyticEvents } from "ME";
 import jsxProd from "NavigationStack";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08027_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08029_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { HeaderActionButton } from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";

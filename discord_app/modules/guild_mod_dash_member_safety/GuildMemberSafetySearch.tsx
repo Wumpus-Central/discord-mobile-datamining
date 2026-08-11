@@ -15,7 +15,7 @@ function hasStringMatch(str, str2) {
   }
   return hasItem;
 }
-let obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "end", selectedSort: "TypeError" };
+let obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "call", selectedSourceInviteCode: "user", selectedSort: "isArray" };
 let set = new Set();
 obj[5] = set;
 obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
@@ -26,7 +26,7 @@ class GuildMemberSafetySearch {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     obj.guildId = global;
-    obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "end", selectedSort: "TypeError" };
+    obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "call", selectedSourceInviteCode: "user", selectedSort: "isArray" };
     set = new Set();
     obj[5] = set;
     obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
@@ -44,7 +44,7 @@ Object.defineProperty(prototype, "requiresUsernameMatch", {
   set: undefined
 });
 prototype["reset"] = function reset() {
-  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "end", selectedSort: "TypeError" };
+  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "call", selectedSourceInviteCode: "user", selectedSort: "isArray" };
   obj[5] = new Set();
   obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
   obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
@@ -63,7 +63,7 @@ prototype["resetSearchState"] = function resetSearchState() {
   const hasDefaultQuery = this.hasDefaultQuery;
   let flag = !hasDefaultQuery;
   if (!hasDefaultQuery) {
-    const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "end", selectedSort: "TypeError" };
+    const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "call", selectedSourceInviteCode: "user", selectedSort: "isArray" };
     const _Set = Set;
     const set = new Set();
     obj[5] = set;
@@ -246,7 +246,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
 };
 
 export const getDefaultSearchState = function getDefaultSearchState() {
-  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "end", selectedSort: "TypeError" };
+  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "call", selectedSourceInviteCode: "user", selectedSort: "isArray" };
   obj[5] = new Set();
   obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
   obj[7] = { optionId: 0, afterDate: null, beforeDate: null };

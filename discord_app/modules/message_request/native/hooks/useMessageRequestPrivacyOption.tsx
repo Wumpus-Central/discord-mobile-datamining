@@ -8,10 +8,10 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   let id;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(3974).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(3993).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(3974).RestrictedGuildIds;
+  const RestrictedGuildIds = id(3993).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];

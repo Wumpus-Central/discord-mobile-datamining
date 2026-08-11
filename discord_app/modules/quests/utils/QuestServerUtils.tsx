@@ -58,7 +58,7 @@ function _questsEntitlementFromServer(skuId) {
       obj[0] = obj1;
       obj[0] = obj;
       tmp2 = obj;
-    } else if (tmp3(7165).QuestRewardTypes.REWARD_CODE === tag) {
+    } else if (tmp3(7166).QuestRewardTypes.REWARD_CODE === tag) {
       const obj2 = { tag: null, rewardCode: null };
       obj2[0] = quest_rewards.reward.tag;
       const obj3 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };

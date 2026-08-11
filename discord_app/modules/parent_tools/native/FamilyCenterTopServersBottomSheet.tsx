@@ -20,7 +20,7 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7052).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7055).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = stateFromStores.name;
     obj[1] = topUserOrGuildDescription;

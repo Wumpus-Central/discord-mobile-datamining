@@ -78,9 +78,9 @@ export default function ChannelMembersActionSheet(arg0) {
       if (null != sortedGuildRoles) {
         const canResult = getUncachedChannelPermissions.can(constants.MANAGE_ROLES, stateFromStores);
         c5 = canResult;
-        let tmp5Result = tmp5(8997);
+        let tmp5Result = tmp5(9003);
         const existingRolesRows = tmp5Result.getExistingRolesRows(guild, sortedGuildRoles, stateFromStores, stateFromStores.accessPermissions);
-        tmp5Result = tmp5(8997);
+        tmp5Result = tmp5(9003);
         const items5 = [];
         obj = { title: null, data: null };
         const existingMembersRows = tmp5Result.getExistingMembersRows(stateFromStoresArray, stateFromStores, guild, stateFromStores.accessPermissions);
@@ -110,7 +110,7 @@ export default function ChannelMembersActionSheet(arg0) {
           };
           let intl = tmp5(1236).intl;
           obj2[2] = intl.string(tmp5(1236).t.XPDhcc);
-          obj2[3] = tmp29(tmp5(6011).SettingsIcon, {});
+          obj2[3] = tmp29(tmp5(6013).SettingsIcon, {});
           tmp29Result = tmp29(tmp5(4846).PressableOpacity, obj2);
         }
         obj3 = { scrollable: true, header: null, startExpanded: true, children: null };
@@ -125,8 +125,8 @@ export default function ChannelMembersActionSheet(arg0) {
           obj5[1] = function onPress() {
             return outer1_0(_undefined[25]).openAddMembersActionSheet(stateFromStores);
           };
-          obj5[2] = tmp29(tmp5(9721).GroupPlusIcon, {});
-          tmp29Result = tmp29(tmp5(7970).RowButton, obj5);
+          obj5[2] = tmp29(tmp5(9726).GroupPlusIcon, {});
+          tmp29Result = tmp29(tmp5(7972).RowButton, obj5);
         } else {
           const obj6 = { style: null, children: null };
           obj6[0] = tmp.warning;

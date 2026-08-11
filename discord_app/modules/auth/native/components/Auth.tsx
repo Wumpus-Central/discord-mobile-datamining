@@ -6,9 +6,9 @@ import { AuthStates } from "ME";
 import jsxProd from "_initialize";
 import headerTitle from "headerTitle";
 import createCacheKey from "createCacheKey";
-import { KeyboardChatScrollView } from "../../../../../_runtime/01623_KeyboardChatScrollView.js";
+import { KeyboardChatScrollView } from "../../../../../_runtime/01642_KeyboardChatScrollView.js";
 import { createStackNavigator } from "../../../../../_runtime/05785_createStackNavigator.js";
-import { registerAsset } from "../../../../../_runtime/15133_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15142_registerAsset.js";
 import { usePortraitOrientationOnly } from "../useOrientationLock.tsx";
 import { useWideAuthView } from "../useWideAuthView.tsx";
 import { BackgroundImage } from "atoms/BackgroundImage.tsx";
@@ -108,7 +108,7 @@ function NavigatorWithCaptchaHook() {
     obj5[1] = tmp17(tmp(5783).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(8500).WideAuthScrollContext.Provider, obj);
+    let tmp17Result = tmp17(tmp(8506).WideAuthScrollContext.Provider, obj);
     tmpResult = tmp(501);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteName: null, onWillFocus: null, headerStyle: null };
@@ -200,10 +200,10 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15134).initialize();
+    callback2(15143).initialize();
     return () => callback(table[21]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(6934).trackAppUIViewed(), []);
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(6937).trackAppUIViewed(), []);
   usePortraitOrientationOnly();
   let closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(outer1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });

@@ -51,7 +51,7 @@ export default function JoinServerContainer(initialRoute) {
     }
     navigation.setOptions({ headerLeft: headerCloseButton });
   }, items);
-  obj = { top: true, style: items1, children: null };
+  obj = { top: true, left: true, right: true, style: items1, children: null };
   items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp);
   obj = { inviteString: first, error: null, submitting: null, onInviteChange: null, onDone: null };
@@ -89,6 +89,6 @@ export default function JoinServerContainer(initialRoute) {
       _undefined(true);
     }
   };
-  obj[2] = navigation(onClose(location[10]), obj);
+  obj[4] = navigation(onClose(location[10]), obj);
   return navigation(initialRoute(location[9]).SafeAreaPaddingView, obj);
 };

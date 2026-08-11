@@ -66,7 +66,7 @@ function _handleUploadDebugLogSettingPress() {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            let obj1 = callback2(4002);
+            let obj1 = callback2(4021);
             obj1 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: null, content: null };
             obj1[1] = callback(4259).CircleInformationIcon;
             const intl = callback(1236).intl;
@@ -86,9 +86,9 @@ function _handleUploadDebugLogSettingPress() {
             obj2[1] = callback(4259).CircleInformationIcon;
             const intl2 = callback(1236).intl;
             obj2[2] = intl2.string(callback(1236).t.BvyxE7);
-            callback2(4002).open(obj2);
+            callback2(4021).open(obj2);
             c3 = 1;
-            const obj6 = callback2(4002);
+            const obj6 = callback2(4021);
           }
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {

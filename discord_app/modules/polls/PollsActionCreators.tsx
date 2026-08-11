@@ -104,7 +104,7 @@ function handleShowVotesForAnswer(messageId) {
               const _String = String;
               answerId = String(message.poll.answers[0].answer_id);
             }
-            obj = importAll(10284);
+            obj = importAll(10289);
             obj = { message: null, initialAnswerId: null };
             obj[0] = message;
             obj[1] = answerId;
@@ -256,7 +256,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = processMessage;
                     obj[4] = processMessage;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7222).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7223).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -884,7 +884,7 @@ function _createPoll() {
               c5 = 3;
               v0 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(6917).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(6920).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
           } else if (2 === tmp7) {
@@ -1022,7 +1022,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(10289);
+                obj1 = callback3(10294);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

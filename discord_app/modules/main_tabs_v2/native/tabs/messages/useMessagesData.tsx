@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import makeSortedChannel from "makeSortedChannel";
 
 const require = arg1;

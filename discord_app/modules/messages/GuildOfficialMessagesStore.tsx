@@ -2,7 +2,7 @@
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MessageFlags } from "ME";
 import { Store } from "initialize";
@@ -79,11 +79,11 @@ function handleRelationshipUpdate() {
       let tmp12 = tmp6.messages[item10031];
       let obj1 = tmp12;
       if (null != tmp12) {
-        let tmp33 = upsertRelationship;
+        let tmp33 = markAllUserIdListsStale;
         let tmp34 = tmp12;
-        let isBlockedForMessageResult = upsertRelationship.isBlockedForMessage(obj1);
+        let isBlockedForMessageResult = markAllUserIdListsStale.isBlockedForMessage(obj1);
         let tmp36 = isBlockedForMessageResult;
-        let isIgnoredForMessageResult = upsertRelationship.isIgnoredForMessage(obj1);
+        let isIgnoredForMessageResult = markAllUserIdListsStale.isIgnoredForMessage(obj1);
         let tmp15 = obj1.blocked === isBlockedForMessageResult;
         if (tmp15) {
           let tmp13 = tmp12;
@@ -139,7 +139,7 @@ class GuildOfficialMessagesStore extends Store {
 }
 const prototype = GuildOfficialMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, upsertRelationship, mergeGuildAvatar);
+  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, markAllUserIdListsStale, mergeGuildAvatar);
 };
 prototype["getState"] = function getState(arg0) {
   return dependencyMap[arg0];
@@ -373,7 +373,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
         }
         return null != tmp42;
       } else {
-        obj11 = id(1384);
+        obj11 = id(1403);
         let num = message.flags;
         if (num == null) {
           num = 0;

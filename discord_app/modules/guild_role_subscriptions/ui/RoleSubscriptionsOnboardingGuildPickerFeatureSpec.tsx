@@ -27,9 +27,9 @@ export default {
         obj[0] = id;
         obj[3] = callback(5881).isUserInCreatorMonetizationEligibleCountry();
         const obj3 = callback(5881);
-        obj[4] = callback(3922).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
+        obj[4] = callback(3941).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
         result = obj.canSeeGuildRoleSubscriptionSettings(obj);
-        const obj4 = callback(3922);
+        const obj4 = callback(3941);
       }
       return result;
     }, [], initialize.statesWillNeverBeEqual);

@@ -67,7 +67,7 @@ export default function JoinServer(arg0) {
   let navigation;
   ({ error, inviteString, onInviteChange } = arg0);
   const tmp = createCacheKey();
-  let obj = navigation(1480);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const items = [navigation];
   obj = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };

@@ -63,7 +63,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
           if (null != mediaPostEmbedCommonData.authorName) {
             if (null != mediaPostEmbedCommonData.channelName) {
               if (null != user) {
-                const userAuthorWithProcessedColor = tmp(8069).getUserAuthorWithProcessedColor(user, mediaPostEmbedCommonData.postThread);
+                const userAuthorWithProcessedColor = tmp(8071).getUserAuthorWithProcessedColor(user, mediaPostEmbedCommonData.postThread);
                 const intl6 = tmp(1236).intl;
                 obj = { username: null, usernameOnClick: null, channelName: null };
                 obj[0] = mediaPostEmbedCommonData.authorName;
@@ -76,7 +76,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj[1] = formatUsernameOnClick(obj1);
                 obj[2] = mediaPostEmbedCommonData.channelName;
                 let formatToPartsResult = intl6.formatToParts(tmp(1236).t.mCytFr, obj);
-                const tmpResult1 = tmp(8069);
+                const tmpResult1 = tmp(8071);
               }
               if (false === mediaPostEmbedCommonData.canAccess) {
                 let tmp11 = callback(Themes.unsafe_rawColors.TEAL_430);
@@ -97,7 +97,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
               if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
                 const obj2 = {};
                 const merged = Object.assign(mediaPostEmbedCommonData);
-                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(12635)).uri;
+                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(12639)).uri;
                 obj2.footer = formatToPartsResult;
                 obj2.ctaButtonColor = tmp11;
                 return obj2;
@@ -109,11 +109,11 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 if (!value) {
                   value = obj7.get("obscure_blur_effect_self_harm_content_enabled");
                 }
-                const isPendingScanVersionResult = tmp(7059).isPendingScanVersion(mediaPostEmbedCommonData.contentScanVersion);
+                const isPendingScanVersionResult = tmp(7062).isPendingScanVersion(mediaPostEmbedCommonData.contentScanVersion);
                 let result = value;
                 if (value) {
-                  result = tmp(7059).shouldAgeVerifyForExplicitMedia();
-                  const tmpResult4 = tmp(7059);
+                  result = tmp(7062).shouldAgeVerifyForExplicitMedia();
+                  const tmpResult4 = tmp(7062);
                 }
                 let isVerifiedTeenResult = value;
                 if (value) {
@@ -170,7 +170,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj4.obscureHideControls = isVerifiedTeenResult;
                 obj4.obscureIsOpaque = value;
                 obj4.ctaButtonColor = tmp11;
-                const tmpResult3 = tmp(7059);
+                const tmpResult3 = tmp(7062);
               }
               tmp15 = null != mediaPostEmbedCommonData.coverImage && !mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage && isAnimatedImageUrlResult && flag;
             }

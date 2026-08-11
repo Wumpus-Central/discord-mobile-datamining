@@ -151,7 +151,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9247);
+      obj = sourcePage(9253);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: null, field: null, message: null };
@@ -166,14 +166,14 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj2 = { discordTag: null, context: null, errorUxConfig: null, note: null };
         obj2[0] = tmp2;
         obj2[1] = { location: "Search - Add Friend Search" };
-        obj2[2] = sourcePage(9243).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
+        obj2[2] = sourcePage(9249).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj2[3] = tmp9;
-        const obj5 = ref(9243);
-        ref(9243).sendRequest(obj2).then(() => {
+        const obj5 = ref(9249);
+        ref(9249).sendRequest(obj2).then(() => {
           let obj = { validatedText: "", hint: null };
           const intl = sourcePage(1236).intl;
           obj[1] = intl.string(sourcePage(1236).t["6p7Mhh"]);
@@ -184,7 +184,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
           obj = { discordTag: substr };
           obj[1] = intl2.format(sourcePage(1236).t.Rtl1Ep, obj);
           outer1_6(obj);
-          const result = sourcePage(4001).presentAddedFriendToast();
+          const result = sourcePage(4020).presentAddedFriendToast();
           closure_6.dismiss();
         }, (body) => {
           let note;
@@ -216,8 +216,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
             if (num == null) {
               num = -1;
             }
-            obj[2] = sourcePage(9247).humanizeAbortCode(num, substr);
-            obj = sourcePage(9247);
+            obj[2] = sourcePage(9253).humanizeAbortCode(num, substr);
+            obj = sourcePage(9253);
             let num2;
             if (body != null) {
               const body3 = body.body;
@@ -229,12 +229,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
               num2 = -1;
             }
             obj[3] = obj.humanizeAbortCodeForA11y(num2, substr);
-            const obj4 = sourcePage(9247);
+            const obj4 = sourcePage(9253);
             const tmp3 = substr;
           }
           outer1_6(obj);
         });
-        const sendRequestResult = ref(9243).sendRequest(obj2);
+        const sendRequestResult = ref(9249).sendRequest(obj2);
       }
     }
   }
@@ -316,7 +316,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       tmp2 = null != tmp.a11yMessage;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = sourcePage(4014).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = sourcePage(1351).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp.a11yMessage);
     }
   }, items3);
@@ -382,7 +382,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       }
     }
     obj6[6] = str2;
-    items8[1] = tmp17(sourcePage(7976).TextArea, obj6);
+    items8[1] = tmp17(sourcePage(7978).TextArea, obj6);
     if (first1.status !== tmp4.ERROR) {
       const obj7 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
       obj7[0] = tmp.messageFooterText;

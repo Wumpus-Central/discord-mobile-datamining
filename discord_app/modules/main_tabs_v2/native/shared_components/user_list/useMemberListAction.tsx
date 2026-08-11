@@ -4,7 +4,7 @@ import registerAsset from "registerAsset";
 import { View } from "ChatPlusIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { jsx } from "UNSAFE_isDismissibleContentDismissed";
@@ -17,7 +17,7 @@ let closure_12;
 let unpackModuleId;
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "ct" };
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "HermesInternal" };
 let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -63,8 +63,8 @@ export default function useMemberListAction(channel) {
   });
   let canResult = flag3.can(first.MANAGE_ROLES, channel);
   if (canResult) {
-    canResult = channel(8997).isPrivateGuildChannel(channel);
-    const tmp5Result = channel(8997);
+    canResult = channel(9003).isPrivateGuildChannel(channel);
+    const tmp5Result = channel(9003);
   }
   React = canResult;
   let tmp9 = null != channel && !flag;
@@ -151,7 +151,7 @@ export default function useMemberListAction(channel) {
             const intl3 = channel(_undefined2[18]).intl;
             obj[2] = intl3.string(channel(_undefined2[18]).t["LR+Ptf"]);
             obj[3] = function handlePress() {
-              if (null != outer1_6.getChannel(upsertRelationship)) {
+              if (null != outer1_6.getChannel(markAllUserIdListsStale)) {
                 let obj = callback(outer1_2[21]);
                 if (obj.UNSAFE_isDismissibleContentDismissed(callback(outer1_2[22]).DismissibleContent.GDM_INVITE_REMINDER)) {
                   callback3();
@@ -170,7 +170,7 @@ export default function useMemberListAction(channel) {
             const intl2 = channel(_undefined2[18]).intl;
             obj[2] = intl2.string(channel(_undefined2[18]).t.z9Mqln);
             obj[3] = function handlePress() {
-              const channel = outer1_6.getChannel(upsertRelationship);
+              const channel = outer1_6.getChannel(markAllUserIdListsStale);
               if (null != channel) {
                 const result = callback(outer1_2[26]).openChannelMembersActionSheet(channel.id, channel.guild_id);
                 const obj = callback(outer1_2[26]);
@@ -183,7 +183,7 @@ export default function useMemberListAction(channel) {
             const intl = channel(_undefined2[18]).intl;
             obj[2] = intl.string(channel(_undefined2[18]).t["Ab/6S0"]);
             obj[3] = function handlePress() {
-              const channel = outer1_6.getChannel(upsertRelationship);
+              const channel = outer1_6.getChannel(markAllUserIdListsStale);
               if (null != channel) {
                 let obj = callback(outer1_2[27]);
                 const result = obj.dismissGlobalKeyboard();

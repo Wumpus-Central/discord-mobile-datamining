@@ -1,15 +1,15 @@
 // discord_app/modules/search/native/components/layout/SearchBar.tsx
-import importAllResult from "module_11735";
+import importAllResult from "module_11738";
 import { View } from "getFontScale";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import prototype from "prototype";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
 import { SearchTypes } from "ME";
-import { jsx } from "module_11732";
+import { jsx } from "module_11735";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 

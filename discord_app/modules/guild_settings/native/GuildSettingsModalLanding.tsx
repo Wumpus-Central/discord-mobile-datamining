@@ -49,7 +49,7 @@ function SettingsSection(guild) {
     const intl2 = tmp2(1236).intl;
     obj[0] = intl2.string(tmp2(1236).t["5tbTdV"]);
     const obj1 = { IconComponent: null };
-    obj1[0] = tmp2(16606).ModerationIcon;
+    obj1[0] = tmp2(16618).ModerationIcon;
     obj[2] = tmp(tmp2(5374).TableRow.Icon, obj1);
     obj[3] = function onPress() {
       return callback(outer1_12.MODERATION);
@@ -61,7 +61,7 @@ function SettingsSection(guild) {
     const intl3 = tmp2(1236).intl;
     obj2[0] = intl3.string(tmp2(1236).t.SPWLyT);
     const obj3 = { IconComponent: null };
-    obj3[0] = tmp2(8424).ClipboardListIcon;
+    obj3[0] = tmp2(8430).ClipboardListIcon;
     obj2[2] = tmp(tmp2(5374).TableRow.Icon, obj3);
     obj2[3] = function onPress() {
       return callback(outer1_12.AUDIT_LOG);
@@ -71,7 +71,7 @@ function SettingsSection(guild) {
   if (!canManageChannels) {
     let canManageACategoryResult = null != currentUser;
     if (canManageACategoryResult) {
-      let obj6 = importAll(3934);
+      let obj6 = importAll(3953);
       canManageACategoryResult = obj6.canManageACategory(currentUser, guild, categories);
     }
     canManageChannels = canManageACategoryResult;
@@ -81,7 +81,7 @@ function SettingsSection(guild) {
     const intl4 = tmp2(1236).intl;
     obj4[0] = intl4.string(tmp2(1236).t.OGiMXJ);
     const obj5 = { IconComponent: null };
-    obj5[0] = tmp2(16608).ChannelListIcon;
+    obj5[0] = tmp2(16620).ChannelListIcon;
     obj4[2] = tmp(tmp2(5374).TableRow.Icon, obj5);
     obj4[3] = function onPress() {
       guild = outer1_9.initGuild(guild.id);
@@ -101,7 +101,7 @@ function SettingsSection(guild) {
     const intl5 = tmp2(1236).intl;
     obj6[0] = intl5.string(tmp2(1236).t.CIsNZw);
     const obj7 = { IconComponent: null };
-    obj7[0] = tmp2(14201).PuzzlePieceIcon;
+    obj7[0] = tmp2(14209).PuzzlePieceIcon;
     obj6[2] = tmp(tmp2(5374).TableRow.Icon, obj7);
     obj6[3] = function onPress() {
       return callback(outer1_12.INTEGRATIONS);
@@ -113,7 +113,7 @@ function SettingsSection(guild) {
     const intl6 = tmp2(1236).intl;
     obj8[0] = intl6.string(tmp2(1236).t.sMOuuS);
     const obj9 = { IconComponent: null };
-    obj9[0] = tmp2(7655).ReactionIcon;
+    obj9[0] = tmp2(7657).ReactionIcon;
     obj8[2] = tmp(tmp2(5374).TableRow.Icon, obj9);
     obj8[3] = function onPress() {
       return callback(outer1_12.EMOJI);
@@ -123,7 +123,7 @@ function SettingsSection(guild) {
     const intl7 = tmp2(1236).intl;
     obj10[0] = intl7.string(tmp2(1236).t.R5nQkS);
     const obj11 = { IconComponent: null };
-    obj11[0] = tmp2(7706).StickerIcon;
+    obj11[0] = tmp2(7708).StickerIcon;
     obj10[2] = tmp(tmp2(5374).TableRow.Icon, obj11);
     obj10[3] = function onPress() {
       return callback(outer1_12.STICKERS);
@@ -135,20 +135,20 @@ function SettingsSection(guild) {
     const intl8 = tmp2(1236).intl;
     obj12[0] = intl8.string(tmp2(1236).t.xHEzFh);
     const obj13 = { IconComponent: null };
-    obj13[0] = tmp2(11138).StampIcon;
+    obj13[0] = tmp2(11143).StampIcon;
     obj12[2] = tmp(tmp2(5374).TableRow.Icon, obj13);
     obj12[3] = function onPress() {
       return callback(outer1_12.OFFICIAL_MESSAGES);
     };
     items.push(tmp(tmp2(5374).TableRow, obj12, "official-messages"));
   }
-  let tmp2Result = tmp2(9024);
+  let tmp2Result = tmp2(9030);
   if (tmp2Result.canUseMobileServerTagSettings(guild.id)) {
     const obj14 = { label: null, arrow: true, icon: null, onPress: null };
     const intl9 = tmp2(1236).intl;
     obj14[0] = intl9.string(tmp2(1236).t["2QmKZ2"]);
     const obj15 = { IconComponent: null };
-    obj15[0] = tmp2(7730).TagIcon;
+    obj15[0] = tmp2(7732).TagIcon;
     obj14[2] = tmp(tmp2(5374).TableRow.Icon, obj15);
     obj14[3] = function onPress() {
       return callback(outer1_12.TAG);
@@ -160,7 +160,7 @@ function SettingsSection(guild) {
     const intl10 = tmp2(1236).intl;
     obj16[0] = intl10.string(tmp2(1236).t.Am9YHi);
     const obj17 = { IconComponent: null };
-    obj17[0] = tmp2(9006).ShieldUserIcon;
+    obj17[0] = tmp2(9012).ShieldUserIcon;
     obj16[2] = tmp(tmp2(5374).TableRow.Icon, obj17);
     obj16[3] = function onPress() {
       return callback(outer1_12.SECURITY);
@@ -168,7 +168,7 @@ function SettingsSection(guild) {
     items.push(tmp(tmp2(5374).TableRow, obj16, "security"));
   }
   if (isGuildAdmin) {
-    tmp2Result = tmp2(16610);
+    tmp2Result = tmp2(16622);
     isGuildAdmin = tmp2Result.canSeeVanityUrlSettings(guild);
   }
   if (isGuildAdmin) {
@@ -208,7 +208,7 @@ function CommunitySection(pushScreen) {
   if (hasItem) {
     obj[0] = string(t.nRtNqn);
     obj = { IconComponent: null };
-    obj[0] = tmp3(13862).TreehouseIcon;
+    obj[0] = tmp3(13869).TreehouseIcon;
     obj[2] = tmp2(tmp3(5374).TableRow.Icon, obj);
     obj[3] = function onPress() {
       return pushScreen(outer1_12.COMMUNITY, {});
@@ -217,7 +217,7 @@ function CommunitySection(pushScreen) {
   } else {
     obj[0] = string(t.ElKTeb);
     const obj1 = { IconComponent: null };
-    obj1[0] = tmp3(13862).TreehouseIcon;
+    obj1[0] = tmp3(13869).TreehouseIcon;
     obj[2] = tmp2(tmp3(5374).TableRow.Icon, obj1);
     obj[3] = function onPress() {
       return pushScreen(outer1_12.COMMUNITY_INTRO, {});
@@ -248,7 +248,7 @@ function UserManagementSection(pushScreen) {
     const intl2 = tmp2(1236).intl;
     obj[0] = intl2.string(tmp2(1236).t["LPJmL/"]);
     const obj1 = { IconComponent: null };
-    obj1[0] = tmp2(9006).ShieldUserIcon;
+    obj1[0] = tmp2(9012).ShieldUserIcon;
     obj[2] = tmp(tmp2(5374).TableRow.Icon, obj1);
     obj[3] = function onPress() {
       return pushScreen(outer1_12.ROLES);
@@ -272,7 +272,7 @@ function UserManagementSection(pushScreen) {
     const intl4 = tmp2(1236).intl;
     obj4[0] = intl4.string(tmp2(1236).t.ZbeITS);
     const obj5 = { IconComponent: null };
-    obj5[0] = tmp2(10540).HammerIcon;
+    obj5[0] = tmp2(10545).HammerIcon;
     obj4[2] = tmp(tmp2(5374).TableRow.Icon, obj5);
     obj4[3] = function onPress() {
       return pushScreen(outer1_12.BANS);
@@ -301,10 +301,10 @@ function GuildSettingsModalLandingInner(guild) {
   guild = guild.guild;
   const updateErrors = guild.updateErrors;
   let navigation;
-  let obj = guild(4005);
+  let obj = guild(4024);
   const token = obj.useToken(updateErrors(712).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = callback2();
-  let obj1 = guild(1480);
+  let obj1 = guild(1499);
   navigation = obj1.useNavigation();
   let obj2 = guild(589);
   let items = [comparator];
@@ -341,7 +341,7 @@ function GuildSettingsModalLandingInner(guild) {
     updateErrors(outer1_3[9]).trackWithMetadata(outer1_14.SETTINGS_PANE_VIEWED, { settings_type: "guild", origin_pane: outer1_12.LANDING, destination_pane: first });
   }, items2);
   ({ canManageGuild, isGuildAdmin, canManageRoles, canManageBans, canManageGuildExpressions, canManageChannels, canViewAuditLog, canManageWebhooks } = stateFromStoresObject);
-  let obj5 = guild(16611);
+  let obj5 = guild(16623);
   const tmp11 = obj5.useChannelsAllowedToUnlink(guild.id).length > 0;
   const canManageGuildRoleSubscriptions = guild(5880).useCanManageGuildRoleSubscriptions(guild);
   let result = canManageGuild;
@@ -381,7 +381,7 @@ function GuildSettingsModalLandingInner(guild) {
     },
     disabled: !stateFromStoresObject.canManageGuild
   };
-  const items5 = [callback(updateErrors(15924), obj1), callback(SettingsSection, { guild, categories: stateFromStores, isGuildAdmin, canManageGuild, canManageGuildExpressions, canManageChannels, canUnlinkChannelLobbies: tmp11, canViewAuditLog, canManageWebhooks, canConfigureOfficialMessages: result, pushScreen: callback }), , , ];
+  const items5 = [callback(updateErrors(15941), obj1), callback(SettingsSection, { guild, categories: stateFromStores, isGuildAdmin, canManageGuild, canManageGuildExpressions, canManageChannels, canUnlinkChannelLobbies: tmp11, canViewAuditLog, canManageWebhooks, canConfigureOfficialMessages: result, pushScreen: callback }), , , ];
   let tmp17Result = canManageGuild;
   if (canManageGuild) {
     obj3 = { guild: null, pushScreen: null };
@@ -395,14 +395,14 @@ function GuildSettingsModalLandingInner(guild) {
     obj4 = { guild: null, pushScreen: null };
     obj4[0] = guild;
     obj4[1] = callback;
-    tmp17Result = tmp17(tmp3(16612), obj4);
+    tmp17Result = tmp17(tmp3(16624), obj4);
   }
   obj5 = { children: null };
   items5[3] = tmp17Result;
   items5[4] = callback(UserManagementSection, { canManageGuild, canManageRoles, canManageBans, pushScreen: callback });
   obj[2] = items5;
   obj[2] = closure_16(guild(4712).Stack, obj);
-  const items6 = [callback(guild(7967).Form, obj), callback(guild(5714).NavScrim, {})];
+  const items6 = [callback(guild(7969).Form, obj), callback(guild(5714).NavScrim, {})];
   obj5[0] = items6;
   return closure_16(closure_17, obj5);
 }

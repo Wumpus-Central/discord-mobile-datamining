@@ -29,9 +29,9 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   let callback;
-  let obj = bounty(10489);
+  let obj = bounty(10494);
   callback = obj.useGetQuestImpressionId();
-  let obj1 = bounty(4036);
+  let obj1 = bounty(4042);
   const fn = function y() {
     let obj = bounty(outer1_2[5]);
     let num = 0;
@@ -46,7 +46,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   fn.__workletHash = 11417131685254;
   fn.__initData = closure_6;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(14284);
+  bounty(14292);
   if (visible) {
     obj = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -72,7 +72,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     }
     items1[1] = tmp9Result;
     obj[1] = items1;
-    visible = closure_4(visible(4036).View, obj);
+    visible = closure_4(visible(4042).View, obj);
     const tmp7 = closure_4;
     tmp9 = callback;
   }

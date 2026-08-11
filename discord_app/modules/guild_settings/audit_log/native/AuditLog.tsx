@@ -3,7 +3,7 @@ import importAllResult from "nameFromUser";
 import { View } from "getPermissionChanges";
 import importDefaultResult from "handleThemeChange";
 import createdAt from "createdAt";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "fromGuildPropertiesWithAdditionalFields";
@@ -170,7 +170,7 @@ prototype["renderTitle"] = function renderTitle() {
     if (null != subtarget.channel) {
       if (typeof subtarget.channel !== "string") {
         const tmp5Result = tmp5(tmp2[22]);
-        let channel = tmp5Result.computeChannelName(subtarget.channel, mergeGuildAvatar, upsertRelationship, true);
+        let channel = tmp5Result.computeChannelName(subtarget.channel, mergeGuildAvatar, markAllUserIdListsStale, true);
       }
       obj[5] = channel;
       obj[6] = function channelHook(children) {
@@ -461,8 +461,8 @@ prototype["renderChangeSummary"] = function renderChangeSummary() {
   const self = this;
   let renderChangeDetailsResult = null;
   if (this.props.expanded) {
-    renderChangeDetailsResult = self.renderChangeDetails(importAll(16625).getChangeStrings(tmp));
-    const obj = importAll(16625);
+    renderChangeDetailsResult = self.renderChangeDetails(importAll(16637).getChangeStrings(tmp));
+    const obj = importAll(16637);
   }
   return renderChangeDetailsResult;
 };
@@ -479,7 +479,7 @@ prototype["render"] = function render() {
   ({ log, expanded, guildId, channel: require } = props);
   const user = log.user;
   ({ containerStyle, theme } = props);
-  let obj = importAll(16625);
+  let obj = importAll(16637);
   const checkChangesToRenderResult = obj.checkChangesToRender(log);
   const timestampStart = log.timestampStart;
   const calendarResult = timestampStart.calendar();
@@ -523,7 +523,7 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(16634), { action: log.action }), , , ];
+  const items2 = [callback(user(16646), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1236).intl;
   obj4[1] = intl.string(tmp10(1236).t.iXAna6);
@@ -550,9 +550,9 @@ prototype["render"] = function render() {
           if (null != log.options.integration_type) {
             const value = tmp18(5000).get(log.options.integration_type);
             if (null != value) {
-              let tmp9Result = tmp9(4153);
+              let tmp9Result = tmp9(1363);
               const icon = value.icon;
-              tmp9Result = tmp9(1416);
+              tmp9Result = tmp9(1435);
               let source = tmp9Result.makeSource(tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG);
               const tmp25 = tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
             }
@@ -588,7 +588,7 @@ prototype["render"] = function render() {
           const items4 = [tmp.arrow, rotate90];
           obj8[0] = items4;
           obj8[1] = tmp10(1297).Icon.Sizes.CUSTOM;
-          obj8[2] = tmp18(13912);
+          obj8[2] = tmp18(13920);
           tmp17Result = tmp17(tmp10(1297).Icon, obj8);
         }
         items2[3] = tmp17Result;
@@ -606,9 +606,9 @@ prototype["render"] = function render() {
   }
   const obj3 = { action: log.action };
   tmp16 = View;
-  const tmp9Result1 = tmp9(1419);
-  const tmp9Result2 = tmp9(1416);
-  source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1419).getAutomodAvatarURL()));
+  const tmp9Result1 = tmp9(1438);
+  const tmp9Result2 = tmp9(1435);
+  source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1438).getAutomodAvatarURL()));
 };
 AuditLog.contextType = require("ManaContext").ThemeContext;
 let obj5 = { height: 10, width: 10, borderRadius: 5, borderColor: require("Themes").unsafe_rawColors.TRANSPARENT };

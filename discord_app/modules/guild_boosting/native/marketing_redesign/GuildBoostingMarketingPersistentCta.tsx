@@ -39,7 +39,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   let obj = isVisible(647);
   let items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = isVisible(4036);
+  let obj1 = isVisible(4042);
   const fn = function _() {
     let num = -120;
     if (!stateFromStores) {
@@ -81,10 +81,10 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const items4 = [callback2(View, obj3), ];
   const obj5 = { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
   const tmp5 = stateFromStores(5779);
-  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(6864), obj7) });
+  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(6866), obj7) });
   obj2[1] = items4;
   obj1[6] = callback2(View, obj2);
   obj[1] = callback(tmp4, obj1);
-  return callback(stateFromStores(4036).View, obj);
+  return callback(stateFromStores(4042).View, obj);
 };
 export const VISIBILITY_OFFSET = 120;

@@ -15,7 +15,7 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
   if (isAndroidResult) {
     let tmpResult = tmp(4168);
     const keyboardType = tmpResult.getKeyboardType();
-    isAndroidResult = keyboardType === tmp(1607).KeyboardTypes.SYSTEM;
+    isAndroidResult = keyboardType === tmp(1626).KeyboardTypes.SYSTEM;
   }
   if (isAndroidResult) {
     tmpResult = tmp(500);
@@ -125,7 +125,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   } else {
     const obj1 = { value: true, children: null };
     obj1[1] = tmp11;
-    tmp10Result = tmp10(tmp5(8721).PortalKeyboardInModalContext.Provider, obj1);
+    tmp10Result = tmp10(tmp5(8727).PortalKeyboardInModalContext.Provider, obj1);
   }
   return tmp10Result;
 };

@@ -64,7 +64,7 @@ function _handleBoostPress() {
               c4 = 1;
               c5 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback(6865).launchGuildBoostFlowOrAlert(obj1);
+              obj3[0] = callback(6867).launchGuildBoostFlowOrAlert(obj1);
               return obj3;
             }
           } else if (arg0 === 1) {

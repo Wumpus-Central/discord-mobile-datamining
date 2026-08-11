@@ -58,8 +58,8 @@ function DraggableContainer(children) {
   P.__initData = callback;
   let items = [contentHeight, contentWidth, num, tmp4, tmp5];
   callback = contentHeight.useCallback(P, items);
-  const Gesture = _require(contentWidth[9]).Gesture;
-  const tmp = callback3();
+  let obj3 = _require(contentWidth[9]);
+  obj = { onActivate: null, onUpdate: null, onDeactivate: null };
   class C {
     constructor() {
       result = c6.set(closure_0.get());
@@ -68,9 +68,9 @@ function DraggableContainer(children) {
     }
   }
   C.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
-  C.__workletHash = 7165614533762;
-  C.__initData = closure_13;
-  const PanResult = Gesture.Pan();
+  C.__workletHash = 11333606215108;
+  C.__initData = closure_11;
+  obj[0] = C;
   const fn = function f(translationX) {
     const sum = sharedValue.get() + translationX.translationX;
     const point = callback(sum, sharedValue1.get() + translationX.translationY);
@@ -80,7 +80,7 @@ function DraggableContainer(children) {
   fn.__closure = { getClampedPosition: callback, originalX: sharedValue, originalY: sharedValue1, x, y };
   fn.__workletHash = 10056531764801;
   fn.__initData = closure_12;
-  const onStartResult = Gesture.Pan().onStart(C);
+  obj[1] = fn;
   class D {
     constructor() {
       obj = closure_0(contentWidth[6]);
@@ -92,12 +92,13 @@ function DraggableContainer(children) {
       return;
     }
   }
-  obj = { runOnJS: _require(contentWidth[6]).runOnJS, onChangePosition, x, y };
-  D.__closure = obj;
-  D.__workletHash = 12890758993684;
-  D.__initData = closure_11;
-  const onUpdateResult = Gesture.Pan().onStart(C).onUpdate(fn);
-  const onEndResult = Gesture.Pan().onStart(C).onUpdate(fn).onEnd(D);
+  obj1 = { runOnJS: _require(contentWidth[6]).runOnJS, onChangePosition, x, y };
+  D.__closure = obj1;
+  D.__workletHash = 10003102447058;
+  D.__initData = closure_13;
+  obj[2] = D;
+  const panGesture = obj3.usePanGesture(obj);
+  const tmp = callback3();
   class W {
     constructor() {
       value = closure_0.get();
@@ -117,15 +118,15 @@ function DraggableContainer(children) {
       return obj;
     }
   }
-  obj1 = { getClampedPosition: callback, x, y, withSpring: _require(contentWidth[10]).withSpring, springUnclamped: _require(contentWidth[11]).springUnclamped };
-  W.__closure = obj1;
+  const obj7 = _require(contentWidth[6]);
+  W.__closure = { getClampedPosition: callback, x, y, withSpring: _require(contentWidth[10]).withSpring, springUnclamped: _require(contentWidth[11]).springUnclamped };
   W.__workletHash = 6251354551691;
   W.__initData = closure_14;
-  const animatedStyle = _require(contentWidth[6]).useAnimatedStyle(W);
-  let obj2 = { gesture: onEndResult, children: null };
+  const animatedStyle = obj7.useAnimatedStyle(W);
+  obj3 = { gesture: panGesture, children: null };
   const items1 = [tmp.widgetContainer, animatedStyle];
-  obj2[1] = sharedValue(importDefault(contentWidth[6]).View, { style: items1, children: children.children });
-  return sharedValue(_require(contentWidth[9]).GestureDetector, obj2);
+  obj3[1] = sharedValue(importDefault(contentWidth[6]).View, { style: items1, children: children.children });
+  return sharedValue(_require(contentWidth[9]).GestureDetector, obj3);
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
@@ -135,9 +136,9 @@ const merged = Object.assign(require("Themes").shadows.SHADOW_MOBILE_NAVIGATOR_X
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function DevWidgetTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
-let closure_11 = { code: "function DevWidgetTsx2(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
+let closure_11 = { code: "function DevWidgetTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
 let closure_12 = { code: "function DevWidgetTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}" };
-let closure_13 = { code: "function DevWidgetTsx4(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
+let closure_13 = { code: "function DevWidgetTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
 let closure_14 = { code: "function DevWidgetTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
 let closure_16 = importAllResult.memo(() => {
   const obj = {

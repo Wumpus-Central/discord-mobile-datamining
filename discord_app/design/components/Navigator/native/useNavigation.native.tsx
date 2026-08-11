@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigation.native.tsx
-import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 function useNavigation() {
   return createStandardNavigationFactories.useNavigation();
 }

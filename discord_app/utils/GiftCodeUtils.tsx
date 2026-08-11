@@ -169,7 +169,7 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl8.string(v5(1236).t.roztIr);
   } else if (tmp.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
     const intl6 = v5(1236).intl;
-    let obj = v5(3947);
+    let obj = v5(3966);
     const intl7 = v5(1236).intl;
     const string = intl7.string;
     const t = v5(1236).t;
@@ -745,7 +745,7 @@ export const firstLibraryApplicationForGiftCode = function firstLibraryApplicati
     arr = items;
   }
   const mapped = arr.map((arg0) => libraryApplication.getLibraryApplication(applicationId, arg0, true));
-  const found = mapped.filter(v5(1351).isNotNullish);
+  const found = mapped.filter(v5(1370).isNotNullish);
   let first = null;
   if (found.length === arr.length) {
     first = found[0];

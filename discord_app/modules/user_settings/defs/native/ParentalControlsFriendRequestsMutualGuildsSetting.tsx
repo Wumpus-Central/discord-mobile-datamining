@@ -14,8 +14,8 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const selectedTeenId = controlledSetting(7339).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14072).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(7340).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(14080).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return React.useMemo(() => controlledSetting(outer1_2[6]).computeFlags(controlledSetting), items).mutualGuilds;
@@ -26,7 +26,7 @@ createToggle = {
       const ParentalControlledFriendSourceFlags = result.ParentalControlledFriendSourceFlags;
       const controlledSetting = ParentalControlledFriendSourceFlags.getControlledSetting(selectedTeenId);
       const ParentalControlledFriendSourceFlags2 = result.ParentalControlledFriendSourceFlags;
-      const obj = importAll(1384);
+      const obj = importAll(1403);
       if (arg0) {
         let addFlagResult = obj.addFlag(controlledSetting, FriendSourceFlags.MUTUAL_GUILDS);
       } else {

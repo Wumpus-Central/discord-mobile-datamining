@@ -98,21 +98,21 @@ prototype["detectRoleVisibilityChanges"] = function detectRoleVisibilityChanges(
     if (isSubscriptionRoleResult) {
       let tmp = obj;
       let tmp2 = dependencyMap;
-      obj = obj(3920);
+      obj = obj(3939);
       isSubscriptionRoleResult = obj.isSubscriptionRole(tmp18);
     }
     if (isSubscriptionRoleResult) {
       let tmp4 = obj;
       let tmp5 = dependencyMap;
-      let obj2 = obj(3920);
+      let obj2 = obj(3939);
       isSubscriptionRoleResult = obj2.isSubscriptionRoleAvailableForPurchase(tmp18);
     }
     let tmp7 = dependencyMap;
     let tmp6 = obj;
-    let obj3 = obj(3920);
+    let obj3 = obj(3939);
     let isSubscriptionRoleResult1 = obj3.isSubscriptionRole(tmp17);
     if (isSubscriptionRoleResult1) {
-      let tmp6Result = tmp6(3920);
+      let tmp6Result = tmp6(3939);
       isSubscriptionRoleResult1 = tmp6Result.isSubscriptionRoleAvailableForPurchase(tmp17);
     }
     if (!isSubscriptionRoleResult) {

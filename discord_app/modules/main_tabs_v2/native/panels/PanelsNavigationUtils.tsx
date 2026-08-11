@@ -40,7 +40,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
                   const items1 = [coerceMainRouteResult];
                   const routes1 = state.routes;
                   HermesBuiltin.arraySpread(routes1.slice(1), 1);
-                  const CommonActions = tmp(1485).CommonActions;
+                  const CommonActions = tmp(1504).CommonActions;
                   obj = {};
                   const merged1 = Object.assign(state);
                   obj.routes = items1;
@@ -125,7 +125,7 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
               const items1 = [coerceMainRouteResult];
               const routes1 = state.routes;
               HermesBuiltin.arraySpread(routes1.slice(1), 1);
-              const CommonActions = tmp(1485).CommonActions;
+              const CommonActions = tmp(1504).CommonActions;
               const obj2 = {};
               const merged1 = Object.assign(state);
               obj2.routes = items1;

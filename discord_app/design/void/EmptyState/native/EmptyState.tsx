@@ -37,11 +37,11 @@ export default function EmptyState(Illustration) {
     tmp8Result = null;
     if (tmp6) {
       obj = { resizeMode: "contain", source: null, style: null };
-      obj[1] = tmp2(4153).isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource;
+      obj[1] = tmp2(1363).isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource;
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
       obj[2] = items1;
       tmp8Result = callback(closure_3, obj);
-      const tmp2Result = tmp2(4153);
+      const tmp2Result = tmp2(1363);
       const tmp8 = callback;
       const tmp9 = closure_3;
     }

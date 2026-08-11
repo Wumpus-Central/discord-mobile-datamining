@@ -59,11 +59,11 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }
   const items4 = [];
   if (!tmp16) {
-    items4.push(tmp2(1358).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
+    items4.push(tmp2(1377).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp14 = initialize;
   const tmp2Result1 = guild_id(589);
-  const tmp2Result2 = guild_id(6022);
+  const tmp2Result2 = guild_id(6024);
   const items5 = [closure_8];
   const stateFromStoresObject = guild_id(589).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: store2.getRecentMessageMetadata(), recentApplicationCommandMetadata: store2.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
@@ -96,12 +96,12 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result4 = guild_id(589);
-  const result = guild_id(4123).useIsDismissibleContentDismissed_UNSAFE(tmp2(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
-  const tmp2Result5 = guild_id(4123);
-  let result1 = guild_id(4123).useIsDismissibleContentDismissed_UNSAFE(tmp2(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-  const tmp2Result6 = guild_id(4123);
+  const result = guild_id(4125).useIsDismissibleContentDismissed_UNSAFE(tmp2(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  const tmp2Result5 = guild_id(4125);
+  let result1 = guild_id(4125).useIsDismissibleContentDismissed_UNSAFE(tmp2(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  const tmp2Result6 = guild_id(4125);
   let tmp30 = null != stateFromStores4;
-  const result2 = guild_id(4123).useIsDismissibleContentDismissed_UNSAFE(tmp2(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = guild_id(4125).useIsDismissibleContentDismissed_UNSAFE(tmp2(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }
@@ -143,7 +143,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
       obj.canShowOnboarding = true;
       obj.canShowAppsOrActivitiesBanner = true;
     }
-    if (callback(tmp2Result2.useSelectedDismissibleContent(items4), 1)[0] === tmp2(1358).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
+    if (callback(tmp2Result2.useSelectedDismissibleContent(items4), 1)[0] === tmp2(1377).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
       obj.willShowGlobalSearchOnboarding = true;
       obj.canShowOnboarding = true;
     }

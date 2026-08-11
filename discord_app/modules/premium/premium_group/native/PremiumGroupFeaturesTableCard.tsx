@@ -68,7 +68,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[4] = tmp.premiumGroupCard;
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items1 = [callback(tmp2(8626), { width: 181, height: 16 }), callback(BetaPill, {})];
+    const items1 = [callback(tmp2(8632), { width: 181, height: 16 }), callback(BetaPill, {})];
     obj[1] = items1;
     const items2 = [callback2(View, obj), , ];
     const obj1 = { variant: "text-sm/normal", style: null, children: null };

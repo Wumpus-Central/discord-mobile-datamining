@@ -172,7 +172,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   let importDefault;
   const tmp = createCacheKey();
   const tmp4 = usePowerupActiveStatus(guildId, powerup);
-  let obj = isScrollingRef(11880);
+  let obj = isScrollingRef(11883);
   const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp4, false);
   const tmp8 = useGuildPowerupOnShowMore(guildId, powerup);
   importDefault = tmp8;
@@ -204,7 +204,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   const obj2 = { variant: "heading-lg/semibold", children: powerup.title };
   const tmp18 = GuildLevelPowerupHeader;
   const tmp2Result = importDefaultResult1;
-  items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(11885).GuildPowerupsCardFooter, obj4) });
+  items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(11888).GuildPowerupsCardFooter, obj4) });
   obj1[1] = items2;
   items1[1] = closure_11(View, obj1);
   obj[4] = items1;

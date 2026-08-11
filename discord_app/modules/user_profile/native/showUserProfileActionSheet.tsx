@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
 import explicitContentFromProto from "explicitContentFromProto";
-import upsertRelationship from "upsertRelationship";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
@@ -10,8 +10,8 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   const timestamp = Date.now();
   const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
-    const isBlockedResult = upsertRelationship.isBlocked(ignoreBlockedSpeedBump.userId);
-    const isIgnoredResult = upsertRelationship.isIgnored(ignoreBlockedSpeedBump.userId);
+    const isBlockedResult = markAllUserIdListsStale.isBlocked(ignoreBlockedSpeedBump.userId);
+    const isIgnoredResult = markAllUserIdListsStale.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
       let obj = ACTION_SHEET_HEIGHT_HALF;
       const _HermesInternal = HermesInternal;
@@ -24,10 +24,10 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       }
       obj.speedBumpType = str2;
       obj.openedAt = timestamp;
-      obj.openLazy(tmp2(1988)(8784, tmp3.paths), combined, obj);
+      obj.openLazy(tmp2(2007)(8790, tmp3.paths), combined, obj);
     }
   }
-  const tmp15 = asyncRequireImpl(8796, dependencyMap.paths);
+  const tmp15 = asyncRequireImpl(8802, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -35,7 +35,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   ACTION_SHEET_HEIGHT_HALF.openLazy(tmp15, combined1, obj, "replaceAll");
 }
 require("processCallbacks").addPostConnectionCallback;
-const result = require("upsertRelationship").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
 export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(id) {

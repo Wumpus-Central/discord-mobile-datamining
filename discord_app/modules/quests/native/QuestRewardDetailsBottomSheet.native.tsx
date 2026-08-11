@@ -34,14 +34,14 @@ function QuestRewardDetailsBottomSheet(quest) {
   let obj = quest(589);
   const items2 = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  let obj1 = quest(10477);
+  let obj1 = quest(10482);
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
   obj = { direction: "vertical", spacing: null, style: null, children: null };
   obj[1] = memo(712).space.PX_16;
   obj[2] = tmp.wrapper;
   obj = { align: "center", direction: "horizontal", spacing: null, children: null };
   obj[2] = memo(712).space.PX_16;
-  const items3 = [callback(memo(11169), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [callback(memo(11174), { quest, height: 56, width: 56, withAnimation: true }), ];
   obj1 = { direction: "vertical", spacing: null, style: null, children: null };
   obj1[1] = memo(712).space.PX_4;
   obj1[2] = tmp.rewardDetailsCopy;
@@ -81,8 +81,8 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/quests/n
 
 export default function QuestRewardDetailsBottomSheetConnected(questId) {
   const callback = React.useCallback(() => {
-    const result = callback(11166).showQuestUnavailableAlert();
-    const obj = callback(11166);
+    const result = callback(11171).showQuestUnavailableAlert();
+    const obj = callback(11171);
     callback2(4271).hideActionSheet();
   }, []);
   let obj = useQuests;

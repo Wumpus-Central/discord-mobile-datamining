@@ -48,9 +48,9 @@ function retryFailedUsers() {
           obj[10] = guildId(4493).getName(guildId, tmp, user);
           const obj2 = guildId(4493);
           const tmp24 = outer1_8;
-          obj[11] = channelId(8813).getAvatarDecoration(user, guildId);
+          obj[11] = channelId(8819).getAvatarDecoration(user, guildId);
           const result1 = outer1_13.set(user.id, obj);
-          const obj3 = channelId(8813);
+          const obj3 = channelId(8819);
         }
       } else {
         outer1_14.delete(userId);

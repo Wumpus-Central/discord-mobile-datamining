@@ -37,7 +37,7 @@ function _joinOrStartActivityInChannel() {
             callback2 = null;
           }
           let closure_8 = callback2;
-          callback2(10651)(closure_8, channel.location);
+          callback2(10656)(closure_8, channel.location);
           channel = 3;
           return { value: true, done: true };
         }
@@ -47,12 +47,12 @@ function _joinOrStartActivityInChannel() {
       if (length.length > 0) {
         const compositeInstanceId = length[0].compositeInstanceId;
       }
-      let obj2 = callback(10614);
+      let obj2 = callback(10619);
       obj2 = { channelId: null, applicationId: null, isStart: null, embeddedActivitiesManager: null, analyticsLocations: null, customId: null, referrerId: null };
       obj2[0] = callback2;
       obj2[1] = callback;
       obj2[2] = null == compositeInstanceId;
-      obj2[3] = callback2(10600)();
+      obj2[3] = callback2(10605)();
       obj2[4] = dependencyMap;
       obj2[5] = c3;
       obj2[6] = store;

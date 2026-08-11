@@ -52,6 +52,6 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   obj[5] = callback1;
   obj[6] = callback;
   const items2 = [iconStyle, { opacity: 0.5 }];
-  obj[7] = jsx(onBackspace(8778).BackspaceIcon, { style: items2 });
+  obj[7] = jsx(onBackspace(8784).BackspaceIcon, { style: items2 });
   return <Pressable top={NODE_MARGIN} bottom={NODE_MARGIN} right={NODE_MARGIN} left={NODE_MARGIN} />;
 };

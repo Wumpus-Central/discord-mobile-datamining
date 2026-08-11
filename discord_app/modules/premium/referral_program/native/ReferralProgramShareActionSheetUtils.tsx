@@ -1,5 +1,5 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { UserRowModes } from "UserRowModes";
 
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");

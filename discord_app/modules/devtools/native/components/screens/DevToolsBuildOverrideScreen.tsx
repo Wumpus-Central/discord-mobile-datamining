@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo(() => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[first(undefined, 11186).DEVICE_FIELD];
+      tmp = overrides[first(undefined, 11191).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -57,16 +57,16 @@ const memoResult = importAllResult.memo(() => {
     obj1[3] = function onPress() {
       first(5756).copy(first.id);
       const obj = first(5756);
-      const result = first(4001).presentCopiedToClipboard();
+      const result = first(4020).presentCopiedToClipboard();
     };
     const items1 = [tmp7(tmp3(5374).TableRow, obj1), , ];
     let obj3 = { icon: null, label: "Refresh Override", onPress: null, arrow: true };
-    obj3[0] = tmp7(tmp3(13849).RefreshIcon, {});
-    obj3[2] = tmp3(11186).refreshBuildOverride;
+    obj3[0] = tmp7(tmp3(13856).RefreshIcon, {});
+    obj3[2] = tmp3(11191).refreshBuildOverride;
     items1[1] = tmp7(tmp3(5374).TableRow, obj3);
     const obj4 = { icon: null, label: "Clear Override", variant: "danger", onPress: null, arrow: true };
     obj4[0] = tmp7(tmp3(4262).TrashIcon, { color: "text-feedback-critical" });
-    obj4[3] = tmp3(11186).clearBuildOverride;
+    obj4[3] = tmp3(11191).clearBuildOverride;
     items1[2] = tmp7(tmp3(5374).TableRow, obj4);
     obj2[2] = items1;
     tmp10Result = tmp10(tmp3(5767).TableRowGroup, obj2);
@@ -76,7 +76,7 @@ const memoResult = importAllResult.memo(() => {
   if (null != stateFromStores) {
     str = "New";
   }
-  items2[1] = jsx(first(7985).TableRadioGroup, {
+  items2[1] = jsx(first(7987).TableRadioGroup, {
     title: `${str} Override Type`,
     defaultValue: first.type,
     onChange(type) {
@@ -88,7 +88,7 @@ const memoResult = importAllResult.memo(() => {
       let label;
       value = value.value;
       ({ icon, label } = value);
-      return callback(first(7984).TableRadioRow, { value, label, icon }, value);
+      return callback(first(7986).TableRadioRow, { value, label, icon }, value);
     })
   });
   const found1 = items.find((value) => value.value === first.type);
@@ -121,11 +121,11 @@ const memoResult = importAllResult.memo(() => {
       let label;
       value = value.value;
       ({ icon, label } = value);
-      return callback(first(7984).TableRadioRow, { value, label, icon }, value);
+      return callback(first(7986).TableRadioRow, { value, label, icon }, value);
     })
   };
   const tmp8 = ScrollView;
-  obj7[1] = jsx(first(7790).TextInput, {
+  obj7[1] = jsx(first(7792).TextInput, {
     size: "md",
     placeholder: "Enter " + label2,
     onChange(id) {
@@ -147,14 +147,14 @@ const memoResult = importAllResult.memo(() => {
     onPress() {
       const type = first.type;
       if ("branch" === type) {
-        const result = first(11186).setBuildOverrideForBranch(tmp.id);
-        const obj3 = first(11186);
+        const result = first(11191).setBuildOverrideForBranch(tmp.id);
+        const obj3 = first(11191);
       } else if ("id" === type) {
-        const result1 = first(11186).setBuildOverrideForId(tmp.id);
-        const obj2 = first(11186);
+        const result1 = first(11191).setBuildOverrideForId(tmp.id);
+        const obj2 = first(11191);
       } else {
-        first(1351).assertNever(tmp.type);
-        const obj = first(1351);
+        first(1370).assertNever(tmp.type);
+        const obj = first(1370);
       }
     }
   });

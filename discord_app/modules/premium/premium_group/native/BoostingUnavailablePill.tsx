@@ -3,7 +3,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { getPremiumGroupProductName as closure_5 } from "SubscriptionStatusTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -18,7 +18,7 @@ function handlePress() {
   obj = { premiumGroupProductName: null };
   obj[0] = callback();
   obj[0] = intl.formatToPlainString(messagesProxy["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(12788, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(12792, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };

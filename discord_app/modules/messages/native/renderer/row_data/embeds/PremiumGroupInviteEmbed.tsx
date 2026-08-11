@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
-import { registerAsset } from "../../../../../../../_runtime/08155_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08157_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import { getPremiumGroupInviteEmbedText } from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
@@ -56,7 +56,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[3] = backgroundColor;
       obj2[4] = assetUriForEmbed;
       const intl2 = tmp6(1236).intl;
-      const formatToPartsResult = intl.formatToParts(tmp8(2866)["9VTnfI"], obj);
+      const formatToPartsResult = intl.formatToParts(tmp8(2885)["9VTnfI"], obj);
       obj2[5] = intl2.string(tmp6(1236).t.oW0eUd).toUpperCase();
       obj2[6] = betaPillTextColor;
       obj2[7] = betaPillBackgroundColor;

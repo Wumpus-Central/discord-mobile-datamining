@@ -219,7 +219,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(7587);
+                  let obj8 = callback(7589);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;

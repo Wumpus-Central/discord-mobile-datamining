@@ -1,6 +1,6 @@
 // discord_app/modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx
 import noop from "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -11,7 +11,7 @@ export const useUserProfileGameFriendApplicationIds = function useUserProfileGam
   userId = userId.userId;
   let stateFromStores;
   let gameFriendsForUser;
-  const items = [upsertRelationship, mergeGuildAvatar];
+  const items = [markAllUserIdListsStale, mergeGuildAvatar];
   stateFromStores = userId(stateFromStores[3]).useStateFromStores(items, () => {
     let isFriendResult = outer1_3.isFriend(userId);
     if (!isFriendResult) {

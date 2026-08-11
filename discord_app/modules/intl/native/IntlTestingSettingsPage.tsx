@@ -7,7 +7,7 @@ import { setAppLocale } from "_setAppLocale";
 import closure_9 from "_getSystemLocale";
 import jsxProd from "messagesProxy";
 import createCacheKey from "createCacheKey";
-import { t } from "../../../../_runtime/03883_t.js";
+import { t } from "../../../../_runtime/03902_t.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
 import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";

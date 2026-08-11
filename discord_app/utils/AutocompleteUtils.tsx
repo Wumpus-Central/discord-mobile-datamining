@@ -20,7 +20,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import reinjectEphemerals from "reinjectEphemerals";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_35 from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -184,10 +184,10 @@ function queryMemberList(arg0) {
           if (null == str) {
             let items2 = [null, null];
           } else {
-            let tmp16Result = tmp16(1884);
+            let tmp16Result = tmp16(1903);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
             items2 = [stripDiacriticsResult, ];
-            tmp16Result = tmp16(1884);
+            tmp16Result = tmp16(1903);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
           let tmp18 = callback;
@@ -196,10 +196,10 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            let tmp16Result1 = tmp16(1884);
+            let tmp16Result1 = tmp16(1903);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1, ];
-            let tmp16Result2 = tmp16(1884);
+            let tmp16Result2 = tmp16(1903);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
           let tmp18Result = tmp18(items3, 2);
@@ -2101,16 +2101,16 @@ areArraysShallowlyEqual = {
     set = new Set();
     items1 = [];
     closure_5 = items1;
-    const FrecencyUserSettingsActionCreators = flag(1355).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = flag(1374).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     function _loop() {
       if ("" === closure_6) {
         return 1;
       } else {
         const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(1884).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(1903).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(1884);
+        let obj2 = toLocaleLowerCaseResult(1903);
         const _HermesInternal = HermesInternal;
         const regExp = new RegExp("^" + nextResult(4291).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;

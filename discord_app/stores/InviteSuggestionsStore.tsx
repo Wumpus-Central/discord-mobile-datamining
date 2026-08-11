@@ -3,7 +3,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import ME from "ME";
 import { InviteTargetTypes } from "InviteSendStates";
 import { Store } from "initialize";
@@ -29,10 +29,10 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(9067).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9073).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
-    isBlockedOrIgnoredResult = upsertRelationship.isBlockedOrIgnored(mostRecentDMedUser.id);
+    isBlockedOrIgnoredResult = markAllUserIdListsStale.isBlockedOrIgnored(mostRecentDMedUser.id);
   }
   if (!isBlockedOrIgnoredResult) {
     set.add(mostRecentDMedUser.id);
@@ -46,14 +46,14 @@ function _computeRows(query) {
   if (closure_7 === InviteTargetTypes.EMBEDDED_APPLICATION) {
     channelHistory = channelHistory.getChannelHistory();
     const mapped = channelHistory.map((arg0) => channel.getChannel(arg0));
-    const found = mapped.filter(set1(1351).isNotNullish);
+    const found = mapped.filter(set1(1370).isNotNullish);
     const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
     const found2 = found1.filter((arg0) => getUncachedChannelPermissions.can(constants2.SEND_MESSAGES, arg0));
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9067);
-  return set1(9067).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
+  const obj2 = set1(9073);
+  return set1(9073).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
 let set = new Set();
@@ -64,7 +64,7 @@ class InviteSuggestionsStore extends Store {
 }
 const prototype = InviteSuggestionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, getUncachedChannelPermissions, handleConnectionOpen, upsertRelationship, recomputeAffinities);
+  this.waitFor(ensureGuildLoaded, getUncachedChannelPermissions, handleConnectionOpen, markAllUserIdListsStale, recomputeAffinities);
 };
 prototype["getInviteSuggestionRows"] = function getInviteSuggestionRows() {
   return closure_17;
@@ -100,7 +100,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(require("dispatcher"),
       guild = guild.guild;
     }
     const applicationId = guild.applicationId;
-    const blockedOrIgnoredIDs = upsertRelationship.getBlockedOrIgnoredIDs();
+    const blockedOrIgnoredIDs = markAllUserIdListsStale.getBlockedOrIgnoredIDs();
     let obj = isGuildMember;
     obj = { channel, applicationId, inviteTargetType };
     const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);

@@ -28,10 +28,10 @@ export default function showUploadFileSizeError(arg0) {
   let items1;
   ({ baseMaxSize, guildId } = arg0);
   currentUser = currentUser.getCurrentUser();
-  let obj = items(1926);
+  let obj = items(1945);
   const isPremiumExactlyResult = obj.isPremiumExactly(currentUser, TIER_2.TIER_2);
   if (null != file.items) {
-    let tmp2Result = tmp2(7302);
+    let tmp2Result = tmp2(7303);
     let attachmentMimeTypes = tmp2Result.getAttachmentMimeTypes(file.items);
   } else {
     attachmentMimeTypes = [];
@@ -55,8 +55,8 @@ export default function showUploadFileSizeError(arg0) {
   const tmp4 = TIER_2;
   const tmp8 = constants;
   obj = { guildId, channelId: null, userIndividualFileSizeLimit: null, numAttachments: null, preCompressionFileSizes: null, preCompressionAggregateSize: null, postCompressionFileSizes: null, postCompressionAggregateSize: null, attachmentMimeTypes: null, errorType: null, kestrelVariant: null };
-  const tmp2Result2 = items(8360);
-  obj[1] = items(8361).getUploaderChannelId(file);
+  const tmp2Result2 = items(8365);
+  obj[1] = items(8366).getUploaderChannelId(file);
   obj[2] = baseMaxSize;
   obj[3] = file.attachmentsCount;
   obj[4] = items1;
@@ -69,7 +69,7 @@ export default function showUploadFileSizeError(arg0) {
     ERROR_SOURCE_UNKNOWN = FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
   }
   obj[9] = ERROR_SOURCE_UNKNOWN;
-  const tmp2Result3 = items(8361);
+  const tmp2Result3 = items(8366);
   obj[10] = items(4897).getKestrelVariantName(kestrelConfig);
   tmp2Result1.trackWithMetadata(constants.FILE_SIZE_LIMIT_EXCEEDED, tmp2Result2.buildFileSizeLimitEventProperties(obj));
   let num = 0;
@@ -157,6 +157,6 @@ export default function showUploadFileSizeError(arg0) {
     obj6[0] = constants3.UPLOAD_ERROR_UPSELL;
     obj4[3] = obj6;
     obj4[4] = num;
-    const result = items1(8362).handleShowUpsellAlert(obj4);
+    const result = items1(8367).handleShowUpsellAlert(obj4);
   }
 };

@@ -33,7 +33,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   let readableSecureFramesFingerprint;
   ({ title, subtitle, footer, epochAuthenticator } = onShareClick);
   const tmp = createCacheKey();
-  let obj = onShareClick(9216);
+  let obj = onShareClick(9222);
   obj = { fingerprintBase64: epochAuthenticator, chunkSize: closure_5, desiredLength: closure_7 };
   readableSecureFramesFingerprint = obj.useReadableSecureFramesFingerprint(obj);
   const items = [readableSecureFramesFingerprint, onShareClick];
@@ -76,12 +76,12 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   if (tmp7Result) {
     const obj10 = { chunks: null };
     obj10[0] = readableSecureFramesFingerprint;
-    tmp7Result = tmp7(readableSecureFramesFingerprint(9226), obj10);
+    tmp7Result = tmp7(readableSecureFramesFingerprint(9232), obj10);
   }
   obj9[1] = tmp7Result;
   obj9[2] = readableSecureFramesFingerprint;
   obj9[3] = closure_6;
-  items2[1] = callback(readableSecureFramesFingerprint(9223), obj9);
+  items2[1] = callback(readableSecureFramesFingerprint(9229), obj9);
   items2[2] = callback(onShareClick(4299).Text, { style: tmp.footer, variant: "text-xs/normal", color: "text-muted", children: footer });
   obj4[1] = items2;
   obj[2] = callback2(View, obj4);

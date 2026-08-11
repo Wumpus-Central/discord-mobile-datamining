@@ -41,7 +41,7 @@ export default function OrbCheckoutMenu() {
     },
     isClearable: true
   };
-  items1[1] = callback2(first(7790).TextInput, obj);
+  items1[1] = callback2(first(7792).TextInput, obj);
   items1[2] = callback2(first(4299).Text, { style: tmp.title, variant: "text-md/bold", children: "Checkout will open with the orb price of the product, if it exists" });
   items1[3] = callback2(first(4714).Button, { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == first });
   obj[0] = items1;

@@ -1,6 +1,6 @@
 // discord_app/modules/autocompleter/createAutocompleterResultForChannelId.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelTypes } from "ME";
 import { computeChannelName } from "../channel/useChannelName.tsx";
@@ -20,7 +20,7 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, closur
   }
   let tmp = closure_7;
   if (closure_7 === undefined) {
-    tmp = upsertRelationship;
+    tmp = markAllUserIdListsStale;
   }
   const channel = obj.getChannel(arg0);
   if (null == channel) {

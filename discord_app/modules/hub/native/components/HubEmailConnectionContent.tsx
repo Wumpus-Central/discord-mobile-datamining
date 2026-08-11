@@ -6,7 +6,7 @@ import get_ActivityIndicator from "Text";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import HubEmailConnectionSteps from "HubEmailConnectionSteps";
 import { MarketingURLs } from "ME";
-import jsxProd from "module_8465";
+import jsxProd from "module_8471";
 import createCacheKey from "createCacheKey";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -315,7 +315,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = callback2(invite(8465), obj7);
+  items1[3] = callback2(invite(8471), obj7);
   obj2[1] = items1;
   const items2 = [closure_13(ref, obj2), callback2(ref, { style: tmp.growSpacing }), ];
   const obj11 = { style: tmp.buttonContainer, children: null };

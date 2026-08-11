@@ -8,13 +8,13 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   let userId;
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8789);
+  let obj = analyticsLocations(8795);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = {
     channel: selectedChannel,
-    commandType: analyticsLocations(1935).ApplicationCommandType.USER,
+    commandType: analyticsLocations(1954).ApplicationCommandType.USER,
     commandTargetId: userId,
     onClose: showUserProfile,
     onPressAppCommand() {

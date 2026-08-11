@@ -19,11 +19,11 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   _useSelectedDismissibleContent;
   if (tmp2) {
     if (!disabled.disabled) {
-      let items = [tmp3(1358).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+      let items = [tmp3(1377).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
     }
     const tmp7 = callback(tmp5(items), 2);
     _require = tmp8;
-    const tmp9 = tmp7[0] === tmp3(1358).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
+    const tmp9 = tmp7[0] === tmp3(1377).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
     importDefault = tmp9;
     const items1 = [tmp9, tmp7[1]];
     let memo = null;

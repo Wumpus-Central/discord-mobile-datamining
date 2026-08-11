@@ -57,8 +57,8 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
       obj = { user: null, context: null, checkElevated: false };
       obj[0] = contextForPermission.user;
       obj[1] = guild;
-      hasAnyResult = obj2.hasAny(importAll(3934).computePermissions(obj), ReportToModPermissions);
-      const obj3 = importAll(3934);
+      hasAnyResult = obj2.hasAny(importAll(3953).computePermissions(obj), ReportToModPermissions);
+      const obj3 = importAll(3953);
     }
     return hasAnyResult;
   }

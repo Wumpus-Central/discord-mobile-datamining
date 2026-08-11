@@ -17,7 +17,7 @@ import importDefaultResult from "isDiscordProxiedAssetUrl";
 import importDefaultResult1 from "set";
 import importDefaultResult2 from "set";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { Url } from "../../../_runtime/01469_Url.js";
+import { Url } from "../../../_runtime/01488_Url.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
@@ -166,13 +166,13 @@ function _validateSocketApplication() {
               callback2 = outer1_4.getApplication(callback);
               if (typeof dependencyMap === "string") {
                 if (tmp67.transport === outer1_16.POST_MESSAGE) {
-                  const tmp21 = callback(10594)(tmp68);
+                  const tmp21 = callback(10599)(tmp68);
                   if (null != tmp21) {
                     const items = [tmp21];
                   }
                   const obj1 = { closeCode: null };
                   obj1[0] = outer1_21.INVALID_ORIGIN;
-                  const tmp52 = new callback(10737)(obj1, "Invalid Origin");
+                  const tmp52 = new callback(10742)(obj1, "Invalid Origin");
                   throw tmp52;
                 } else {
                   name = 1;
@@ -226,7 +226,7 @@ function _validateSocketApplication() {
               if (!callback3(dependencyMap, rpc_origins.rpc_origins)) {
                 const obj6 = { closeCode: null };
                 obj6[0] = constants.INVALID_ORIGIN;
-                const tmp16 = new callback(10737)(obj6, "Invalid Origin");
+                const tmp16 = new callback(10742)(obj6, "Invalid Origin");
                 throw tmp16;
               }
             }
@@ -299,7 +299,7 @@ function _processSocketThrottlers() {
                 if (tmp36) {
                   num5 = 2;
                 }
-                const tmp24 = new callback(10744)(num5, outer1_25);
+                const tmp24 = new callback(10749)(num5, outer1_25);
                 tmp38[tmp35] = tmp24;
                 obj2 = tmp24;
               }
@@ -314,7 +314,7 @@ function _processSocketThrottlers() {
             c6 = 0;
             obj2 = { closeCode: null };
             obj2[0] = constants.CLOSE_ABNORMAL;
-            const tmp16 = new callback(10737)(obj2, "Socket closed during throttle");
+            const tmp16 = new callback(10742)(obj2, "Socket closed during throttle");
             throw tmp16;
           } else if (arg0 === 1) {
             c7 = 3;

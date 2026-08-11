@@ -42,15 +42,15 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           let obj = useStageHasMedia;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
-              if (getUncachedChannelPermissions.can(tmp5(1380).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
+              if (getUncachedChannelPermissions.can(tmp5(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel: null };
                 obj[0] = channel;
-                ACTION_SHEET_HEIGHT_HALF.openLazy(tmp5(1988)(5147, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ACTION_SHEET_HEIGHT_HALF.openLazy(tmp5(2007)(5147, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
                 const obj3 = ACTION_SHEET_HEIGHT_HALF;
               }
             }
-            tmp5Result = tmp5(9154);
+            tmp5Result = tmp5(9160);
           }
           tmp6 = dependencyMap;
         }

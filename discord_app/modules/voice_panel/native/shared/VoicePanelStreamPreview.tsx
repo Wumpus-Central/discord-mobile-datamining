@@ -4,9 +4,9 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
 import jsxProd from "jsxProd";
-import importDefaultResult from "module_4036";
+import importDefaultResult from "module_4042";
 import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "module_4036";
+import importDefaultResult1 from "module_4042";
 
 let Pressable;
 let c3;
@@ -15,8 +15,8 @@ let error;
 const require = arg1;
 ({ View: c3, Pressable } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = require("module_4036").createAnimatedComponent(Pressable);
-let closure_9 = require("module_4036").createAnimatedComponent(require("Button").Button);
+let closure_8 = require("module_4042").createAnimatedComponent(Pressable);
+let closure_9 = require("module_4042").createAnimatedComponent(require("Button").Button);
 let closure_10 = { duration: 200 };
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 obj = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: require("Themes").colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
@@ -50,7 +50,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10943)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10948)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(589);
   const items = [reset, fetchFingerprint];
   const items1 = [stream];
@@ -65,7 +65,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     }
     return tmp2;
   }, items1);
-  let obj1 = mode(4036);
+  let obj1 = mode(4042);
   class T {
     constructor() {
       obj = mode;
@@ -106,13 +106,13 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     obj2[0] = previewUrl;
     obj1[1] = obj2;
     obj1[2] = tmp.streamPreviewImage;
-    tmp14 = callback(tmp2(4036).Image, obj1);
+    tmp14 = callback(tmp2(4042).Image, obj1);
   }
   const items2 = [tmp14, ];
   const obj3 = { style: animatedStyle, layout, children: null };
   const tmp11 = closure_7;
   const tmp12 = closure_8;
-  const tmp4 = stream(10943);
+  const tmp4 = stream(10948);
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.ownStreamTextContainer;
@@ -132,7 +132,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = tmp16(closure_9, obj6);
   }
   obj3[2] = tmp16Result;
-  items2[1] = callback(stream(8009), obj3);
+  items2[1] = callback(stream(8011), obj3);
   obj[5] = items2;
   return tmp11(tmp12, obj);
 };

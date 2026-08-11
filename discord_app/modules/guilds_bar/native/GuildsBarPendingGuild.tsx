@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarPendingGuild.tsx
-import importAllResult from "module_4036";
+import importAllResult from "module_4042";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import handleConnectionOpen from "handleConnectionOpen";

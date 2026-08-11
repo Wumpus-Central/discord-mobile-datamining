@@ -66,19 +66,19 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   let dependencyMap;
   let importAllResult;
   let closure_4;
-  let obj = onHeightChange(4118);
-  const gradientValue = obj.useGradientValue(onHeightChange(4118).GradientPercentage.END);
+  let obj = onHeightChange(4123);
+  const gradientValue = obj.useGradientValue(onHeightChange(4123).GradientPercentage.END);
   let hexResult = null;
   if (null != gradientValue) {
     let obj1 = n(gradientValue);
     hexResult = obj1.alpha(0.95).hex();
     let alphaResult = obj1.alpha(0.95);
   }
-  let tmpResult = tmp(4005);
+  let tmpResult = tmp(4024);
   const token = tmpResult.useToken(Themes.colors.CARD_BACKGROUND_DEFAULT);
   const obj5 = n(token);
   let hexResult1 = n(token).alpha(0.95).hex();
-  tmpResult = tmp(1348);
+  tmpResult = tmp(1367);
   const enabled = tmpResult.useMobileVisualRefreshConfig({ location: "MediaKeyboardBottomSheetActions" }).enabled;
   const alphaResult1 = n(token).alpha(0.95);
   if (enabled) {
@@ -87,12 +87,12 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   const tmp9Result = closure_8(useSafeAreaInsets().bottom, hexResult1, hexResult, enabled);
   importDefault = tmp9Result;
   const tmp9 = closure_8;
-  tmpResult1 = onHeightChange(4005);
-  dependencyMap = onHeightChange(4005).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
-  const tmpResult2 = onHeightChange(4005);
-  importAllResult = onHeightChange(4005).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-  const tmpResult3 = onHeightChange(4005);
-  closure_4 = onHeightChange(4005).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
+  tmpResult1 = onHeightChange(4024);
+  dependencyMap = onHeightChange(4024).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
+  const tmpResult2 = onHeightChange(4024);
+  importAllResult = onHeightChange(4024).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
+  const tmpResult3 = onHeightChange(4024);
+  closure_4 = onHeightChange(4024).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
   let items = [tmp9Result.gradient.color];
   const memo = importAllResult.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
@@ -114,7 +114,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
     children: null
   };
   obj = { style: tmp9Result.gradient };
-  const tmpResult4 = onHeightChange(4005);
+  const tmpResult4 = onHeightChange(4024);
   const merged = Object.assign(memo);
   obj.pointerEvents = "none";
   const items2 = [callback(LinearGradient, obj), ];

@@ -4,7 +4,7 @@ import loadSavedGuildStickers from "loadSavedGuildStickers";
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
@@ -23,8 +23,8 @@ const require = arg1;
 const result = require("createChannelRecord").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(7306).getChannelIdFromDestinationId);
-  found = mapped.find(found(1351).isNotNullish);
+  const mapped = selectedDestinations.map(found(7307).getChannelIdFromDestinationId);
+  found = mapped.find(found(1370).isNotNullish);
   const items = [ensureGuildLoaded];
   const items1 = [found];
   const stateFromStores = found(589).useStateFromStores(items, () => outer1_8.getChannel(found), items1);
@@ -162,7 +162,7 @@ export const isRatelimitedInChannel = function isRatelimitedInChannel(channel, o
 };
 export const useSelectedDestinationNames = function useSelectedDestinationNames(arg0) {
   const _require = arg0;
-  const items = [mergeGuildAvatar, ensureGuildLoaded, upsertRelationship];
+  const items = [mergeGuildAvatar, ensureGuildLoaded, markAllUserIdListsStale];
   const items1 = [arg0];
   return _initialize.useStateFromStoresArray(items, () => {
     const mapped = lib.map((id) => {
@@ -173,8 +173,8 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = callback2(4146).getName(user);
-            const obj2 = callback2(4146);
+            nickname = callback2(4148).getName(user);
+            const obj2 = callback2(4148);
           }
           tmp13 = nickname;
         }
@@ -218,7 +218,7 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
     });
   }, items1);
   let obj = _initialize;
-  const items2 = [mergeGuildAvatar, upsertRelationship];
+  const items2 = [mergeGuildAvatar, markAllUserIdListsStale];
   const items3 = [stateFromStoresArray];
-  return _initialize.useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)), items3);
+  return _initialize.useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true)), items3);
 };

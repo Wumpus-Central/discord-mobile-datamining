@@ -19,9 +19,9 @@ function setLaunchPadPullTabExclusionRect() {
   }
   let obj = set;
   if (obj.isAndroid()) {
-    let tmp7Result = tmp7(1474);
+    let tmp7Result = tmp7(1493);
     const diff = tmp7Result.getWindowDimensions().width - closure_5;
-    tmp7Result = tmp7(1474);
+    tmp7Result = tmp7(1493);
     const width = tmp7Result.getWindowDimensions().width;
     const sum = tmp + closure_3;
     let left;

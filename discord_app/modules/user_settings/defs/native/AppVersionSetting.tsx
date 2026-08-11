@@ -17,9 +17,9 @@ let obj = {
     const clientInfoString = getClientInfo.getClientInfoString(closure_3.ReleaseChannel);
     const obj = getClientInfo;
     const obj2 = getClientInfo;
-    const clientInfoString1 = obj2.getClientInfoString(importAll(1606).getBuildNumberLabel());
+    const clientInfoString1 = obj2.getClientInfoString(importAll(1625).getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj3 = importAll(1606);
+    const obj3 = importAll(1625);
     const clientInfoString2 = getClientInfo.getClientInfoString(closure_3.Version);
     if (hasItem) {
       let combined = concat(clientInfoString2, " (", clientInfoString, ")");
@@ -41,9 +41,9 @@ const createStaticResult = createToggle.createStatic({
     const clientInfoString = getClientInfo.getClientInfoString(closure_3.ReleaseChannel);
     const obj = getClientInfo;
     const obj2 = getClientInfo;
-    const clientInfoString1 = obj2.getClientInfoString(importAll(1606).getBuildNumberLabel());
+    const clientInfoString1 = obj2.getClientInfoString(importAll(1625).getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj3 = importAll(1606);
+    const obj3 = importAll(1625);
     const clientInfoString2 = getClientInfo.getClientInfoString(closure_3.Version);
     if (hasItem) {
       let combined = concat(clientInfoString2, " (", clientInfoString, ")");

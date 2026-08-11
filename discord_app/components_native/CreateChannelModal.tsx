@@ -7,7 +7,7 @@ import { isGuildOwner } from "GuildNSFWContentLevel";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { RowType } from "RowType";
@@ -237,7 +237,7 @@ class CreateChannel {
       let obj = { headerLeft: null, headerRight: null, headerTitle: null };
       obj[0] = categoryId(createMode[43]).getHeaderCloseButton(outer1_1(createMode[44]).close);
       obj[1] = function headerRight() {
-        if (upsertRelationship) {
+        if (markAllUserIdListsStale) {
           let tmpResult = tmp(outer1_0(outer1_2[43]).HeaderSubmittingIndicator, {});
         } else {
           let tmp5 = closure_15;

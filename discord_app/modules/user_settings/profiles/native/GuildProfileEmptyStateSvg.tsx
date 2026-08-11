@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/profiles/native/GuildProfileEmptyStateSvg.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/07835_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07837_inlineStyles.js";
 
 let c3;
 let c4;

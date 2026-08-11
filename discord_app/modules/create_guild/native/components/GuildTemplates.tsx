@@ -41,7 +41,7 @@ function GuildTemplatesJoinFooter(trigger) {
   const onHeightChange = trigger.onHeightChange;
   let dependencyMap;
   const tmp = createCacheKey();
-  let obj = trigger(1480);
+  let obj = trigger(1499);
   dependencyMap = obj.useNavigation();
   if (trigger === constants2.NUF) {
     const intl2 = tmp2(1236).intl;
@@ -58,7 +58,7 @@ function GuildTemplatesJoinFooter(trigger) {
     }, items),
     children: null
   };
-  items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1609)().bottom }];
+  items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1628)().bottom }];
   obj = { style: tmp.footerContainer, children: null };
   const obj1 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1236).intl;
@@ -93,12 +93,12 @@ function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = { Icon: null, message: null, onPress: null };
-  obj[0] = guildTemplate(12066).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id];
+  obj[0] = guildTemplate(12069).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id];
   obj[1] = guildTemplate.label;
   obj[2] = function onPress() {
     return onGuildTemplatePress(guildTemplate);
   };
-  return callback3(onGuildTemplatePress(11696), obj);
+  return callback3(onGuildTemplatePress(11699), obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ getGuildTemplatesMap: error, GuildTemplateId: metroImportAll } = GuildTemplateId);
@@ -167,7 +167,7 @@ export default function GuildTemplates(trigger) {
   callback = React.useCallback((arg0) => {
     _undefined(arg0);
   }, []);
-  obj = { top: true, style: items1, children: null };
+  obj = { top: true, left: true, right: true, style: items1, children: null };
   items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp);
   obj = { style: tmp.flex, children: null };
@@ -189,6 +189,6 @@ export default function GuildTemplates(trigger) {
   obj1[2] = items2;
   const items5 = [callback4(closure_6, obj1), callback3(GuildTemplatesJoinFooter, { trigger, onHeightChange: callback })];
   obj[1] = items5;
-  obj[2] = callback4(closure_5, obj);
+  obj[4] = callback4(closure_5, obj);
   return callback3(trigger(fromStep[19]).SafeAreaPaddingView, obj);
 };

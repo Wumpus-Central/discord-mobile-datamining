@@ -29,8 +29,8 @@ const result = require("ME").fileFinishedImporting("modules/app_launcher/native/
 export default function LearnMoreAboutAppsSection(visible) {
   const tmp = createCacheKey();
   const callback = React.useCallback(() => {
-    const obj = callback(3998);
-    obj.openURL(callback(1974).getAppsSupportURL(constants.APPS_LEARN_MORE));
+    const obj = callback(4017);
+    obj.openURL(callback(1993).getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);

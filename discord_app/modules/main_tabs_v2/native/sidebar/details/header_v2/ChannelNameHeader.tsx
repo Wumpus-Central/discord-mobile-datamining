@@ -46,7 +46,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    obj = { avatarDecoration: null, user: null, guildId: "Boolean", size: true, status: "done", isMobileOnline: true, isVROnline: null, statusStyle: null };
+    obj = { avatarDecoration: null, user: null, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
     obj[0] = stateFromStores.avatarDecoration;
     obj[1] = stateFromStores;
     obj[3] = tmp2(1297).AvatarSizes.NORMAL;

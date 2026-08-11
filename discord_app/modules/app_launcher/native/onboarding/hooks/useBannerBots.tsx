@@ -13,7 +13,7 @@ export const useBannerBots = function useBannerBots(context) {
   let _require;
   let obj = (function useAppsMap(context) {
     let apps;
-    apps = apps(11454).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+    apps = apps(11457).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
     const items = [apps];
     return React.useMemo(() => {
       const map = new Map();
@@ -29,7 +29,7 @@ export const useBannerBots = function useBannerBots(context) {
   const tmp2 = _require;
   const obj3 = (function useCommandsMap(context) {
     let commands;
-    commands = commands(11454).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
+    commands = commands(11457).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
     const items = [commands];
     return React.useMemo(() => {
       const map = new Map();
@@ -55,7 +55,7 @@ export const useBannerBots = function useBannerBots(context) {
         return outer1_3.getGuild(guild_id);
       })
     };
-    return context(8348).useTopCommands(obj);
+    return context(8353).useTopCommands(obj);
   })({ context });
   let channel = context.channel;
   let guild_id;

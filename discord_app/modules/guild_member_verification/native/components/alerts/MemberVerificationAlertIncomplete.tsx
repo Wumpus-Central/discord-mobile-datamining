@@ -53,7 +53,7 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   }
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = guildId(8434).ListViewIcon;
+  obj.icon = guildId(8440).ListViewIcon;
   obj.header = formatToPlainStringResult;
   const obj1 = { children: null };
   const obj2 = { variant: "secondary", text: null, onPress: null };
@@ -68,5 +68,5 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   items4[1] = callback(guildId(4714).Button, obj3);
   obj1[0] = items4;
   obj.buttons = callback2(closure_6, obj1);
-  return callback(onClose(8423), obj);
+  return callback(onClose(8429), obj);
 };

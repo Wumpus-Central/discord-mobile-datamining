@@ -5,7 +5,7 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import storeThread from "storeThread";
 import { ThreadMemberFlags } from "AbortCodes";
 import ME from "ME";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";

@@ -462,7 +462,7 @@ const result = require("handleInviteData").fileFinishedImporting("utils/GuildDis
 export const AnalyticsContexts = { SEARCH: "Search", RECOMMENDED: "Recommended", POPULAR: "Popular", RECOMMENDED_E3: "Recommended - E3", HEADER: "Header", GLOBAL_DISCOVERY: "Global Discovery", FORWARD_BREADCRUMB: "Forward Breadcrumb" };
 export const IOS_MINIMUM_MEMBER_COUNT = ">1000";
 export const MINIMUM_MEMBER_COUNT = ">200";
-export const startLurking = function startLurking(guildId, c4, arg2, c42) {
+export const startLurking = function startLurking(id, c4, arg2, c42) {
   const self = this;
   const apply = _startLurking.apply;
   if (typeof apply === "unknown") {

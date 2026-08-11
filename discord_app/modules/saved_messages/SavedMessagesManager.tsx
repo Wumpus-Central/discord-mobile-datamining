@@ -1,9 +1,77 @@
 // discord_app/modules/saved_messages/SavedMessagesManager.tsx
+import set from "set";
 import "initialize";
 
 let require = arg1;
+function _refreshSavedMessages() {
+  const self = this;
+  const tmp = callback(function*() {
+    if (c2 === 2) {
+      c2 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const callback = tmp4;
+            let obj2 = outer1_0(8380);
+            if (obj2.isForLaterExperimentOn("saved_messages_manager")) {
+              dependencyMap = 1;
+              c2 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = outer1_0(10279).fetchAndUpdateSavedMessages();
+              return obj1;
+            } else {
+              c2 = 3;
+            }
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          obj = callback(16578);
+          const result = obj.showOverdueRemindersToast();
+        }
+        c2 = 3;
+        obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } catch (tmp13) {
+        c2 = tmp;
+        throw tmp13;
+      }
+    }
+  });
+  const _refreshSavedMessages = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 let prototype = function SavedMessagesManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
@@ -11,16 +79,22 @@ let prototype = function SavedMessagesManager() {
     }
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-    if (obj.isForLaterExperimentOn("saved_messages_manager")) {
-      const andUpdateSavedMessages = applyArgumentsResult(table[1]).fetchAndUpdateSavedMessages();
-      const tmpResult = applyArgumentsResult(table[1]);
-    }
+    !(function refreshSavedMessages() {
+      const self = this;
+      const apply = closure_3.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("initialize").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
+let result = require("_upsertSavedMessage").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
 
 export default prototype;

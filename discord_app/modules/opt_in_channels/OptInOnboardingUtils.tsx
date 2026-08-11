@@ -80,7 +80,7 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (num == null) {
     num = 0;
   }
-  let tmpResult = tmp(1384);
+  let tmpResult = tmp(1403);
   const obj = useOptInEnabledForGuild;
   let tmp7 = !result;
   const hasFlagResult = tmpResult.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
@@ -93,7 +93,7 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (tmp7) {
     optIntoAllChannelsForExistingMember(id);
   } else {
-    tmpResult = tmp(6994);
+    tmpResult = tmp(6997);
     const result1 = tmpResult.isOptInEnabledForGuild(id);
     tmp(5256).setGuildOptIn(id, !result1);
     const tmpResult1 = tmp(5256);

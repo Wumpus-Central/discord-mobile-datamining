@@ -1,7 +1,7 @@
 // discord_app/utils/native/NetworkUtils.tsx
 import { NetworkConnectionTypes } from "ME";
 import importDefaultResult from "configure";
-import { configure } from "../../../_runtime/01456_configure.js";
+import { configure } from "../../../_runtime/01475_configure.js";
 
 function notifyListeners(isConnected) {
   let details;

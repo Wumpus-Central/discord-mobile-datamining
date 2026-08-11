@@ -167,9 +167,9 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDM(channel);
   }
-  let tmpResult = tmp(11780);
+  let tmpResult = tmp(11783);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  tmpResult = tmp(11780);
+  tmpResult = tmp(11783);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
   const tmp4 = importDefault;
   const tmp4Result = apexExperiment;
@@ -177,16 +177,16 @@ export default function ChatInputNotificationNudge(channel) {
   if (tmp5) {
     prop = null;
     if (shouldShowPushNotificationNudgeByPromptType) {
-      prop = tmp(1358).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER;
+      prop = tmp(1377).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER;
     }
   }
   obj = { cooldownDurationMs: c20 };
   const tmp10 = c20;
   const tmp11 = callback;
-  const tmpResult1 = channel(6022);
-  [tmp13, tmp14] = callback(channel(6022).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmpResult1 = channel(6024);
+  [tmp13, tmp14] = callback(channel(6024).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   importDefault = tmp14;
-  const tmp12 = callback(channel(6022).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmp12 = callback(channel(6024).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   let prop1 = null;
   if (tmp5) {
     prop1 = null;
@@ -195,19 +195,19 @@ export default function ChatInputNotificationNudge(channel) {
       if (shouldShowPushNotificationNudgeByPromptType1) {
         prop1 = null;
         if (null == tmp13) {
-          prop1 = tmp(1358).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER;
+          prop1 = tmp(1377).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER;
         }
       }
     }
   }
   obj = { cooldownDurationMs: tmp10 };
-  const tmp11Result = tmp11(channel(6022).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
+  const tmp11Result = tmp11(channel(6024).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
-  const tmpResult2 = channel(6022);
+  const tmpResult2 = channel(6024);
   const tmp18 = callback2(() => _undefined(outer1_12.USER_DISMISS), items1);
-  if (tmp13 === channel(1358).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
+  if (tmp13 === channel(1377).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
     const obj1 = { promptType: null, location: null, surface: null, body: null, onDismiss: null };
     obj1[0] = tmp6.CHANNEL_BANNER;
     obj1[1] = constants.CHANNEL_BANNER;
@@ -218,7 +218,7 @@ export default function ChatInputNotificationNudge(channel) {
     let tmp24 = callback4(ChatInputNotificationNudgeImpl, obj1);
   } else {
     tmp24 = null;
-    if (tmp11Result[0] === tmp(1358).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER) {
+    if (tmp11Result[0] === tmp(1377).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER) {
       const obj2 = { promptType: null, location: null, surface: null, body: null, onDismiss: null };
       obj2[0] = tmp6.POST_REACTION_BANNER;
       obj2[1] = constants.POST_REACTION;

@@ -20,6 +20,7 @@ import { registerAsset } from "../../../_runtime/04782_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04783_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04786_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04788_registerAsset.js";
+import { registerAsset } from "../../../_runtime/04789_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04793_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04799_registerAsset.js";
 import { AnnouncementsIcon } from "../../design/components/Icon/native/redesign/generated/AnnouncementsIcon.tsx";
@@ -680,7 +681,7 @@ export const getChannelIconWithGuild = function getChannelIconWithGuild(channel,
   return getChannelIcon(channel, { isRulesChannel: rulesChannelId === channel.id });
 };
 export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
-
+  return registerAsset;
 };
 export { getChannelIcon };
 export const getChannelIconComponentWithGuild = function getChannelIconComponentWithGuild(channel, guild) {

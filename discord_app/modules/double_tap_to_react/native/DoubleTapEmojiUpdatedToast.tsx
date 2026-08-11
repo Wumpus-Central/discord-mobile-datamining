@@ -86,7 +86,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
   emoji = emoji.emoji;
   let obj = emoji(4700);
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4014).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(1351).AccessibilityAnnouncer;
     const intl = tmp(1236).intl;
     obj = { emojiName: null };
     obj[0] = emoji.name;

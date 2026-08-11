@@ -3,7 +3,7 @@ import recountRelationshipTypes from "recountRelationshipTypes";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
@@ -27,7 +27,7 @@ export default function useCanDM(arg0, arg1) {
   const RestrictedGuildIds = _explicitContentFromProto.RestrictedGuildIds;
   fetchFingerprint = RestrictedGuildIds.useSetting();
   const obj2 = _initialize;
-  const items2 = [upsertRelationship, trackCommunicationDisabled, recountRelationshipTypes];
+  const items2 = [markAllUserIdListsStale, trackCommunicationDisabled, recountRelationshipTypes];
   return _initialize.useStateFromStores(items2, () => {
     let tmp = !gameFriendsForUser;
     if (!gameFriendsForUser) {

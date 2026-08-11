@@ -2,7 +2,7 @@
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/16261_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16275_registerAsset.js";
 import { Button } from "../../../../design/void/native.tsx";
 import { set } from "../../../core/native/NativeView.tsx";
 

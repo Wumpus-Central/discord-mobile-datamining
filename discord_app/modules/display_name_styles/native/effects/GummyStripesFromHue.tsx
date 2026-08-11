@@ -44,7 +44,7 @@ let result = require("jsxProd").fileFinishedImporting("modules/display_name_styl
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1914).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1933).GUMMY_STRIPES;
   obj[0] = GUMMY_STRIPES.map((hueShift) => outer1_4(outer1_8, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: arg1 > 0 }, arg1));
   return callback(closure_5, obj);
 };

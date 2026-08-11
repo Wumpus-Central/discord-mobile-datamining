@@ -1,6 +1,6 @@
 // discord_app/stores/PremiumPromoStore.tsx
 import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { Store } from "initialize";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
@@ -10,7 +10,7 @@ class PremiumPromoStore extends Store {
 }
 const prototype = PremiumPromoStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(upsertRelationship, fetchFingerprint);
+  this.waitFor(markAllUserIdListsStale, fetchFingerprint);
 };
 prototype["isEligible"] = function isEligible() {
   return c5;

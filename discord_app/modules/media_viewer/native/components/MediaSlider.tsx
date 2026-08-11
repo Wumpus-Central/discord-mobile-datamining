@@ -121,9 +121,9 @@ export default function MediaSlider(controls) {
   };
   obj[4] = { top: 8, right: 8, bottom: 8, left: 8 };
   if (paused) {
-    let PauseIcon = tmp16(8855).PlayIcon;
+    let PauseIcon = tmp16(8861).PlayIcon;
   } else {
-    PauseIcon = tmp16(8857).PauseIcon;
+    PauseIcon = tmp16(8863).PauseIcon;
   }
   obj[5] = closure_6(PauseIcon, { size: "md", color: "white" });
   const items4 = [closure_6(controls(4846).PressableOpacity, obj), , , ];
@@ -132,7 +132,7 @@ export default function MediaSlider(controls) {
   const obj1 = { style: tmp.sliderContainer, children: null };
   const obj2 = { pointerEvents: "none", style: tmp.progressSliderContainer, children: null };
   const obj3 = { style: tmp.timelineBackgroundSlider, value: 1, minimumValue: 0, maximumValue: 1, thumbTintColor: null, minimumTrackTintColor: null, maximumTrackTintColor: null };
-  let tmp9Result = tmp9(7989);
+  let tmp9Result = tmp9(7991);
   let obj6 = tmp9(689)("#FFFFFF");
   const tmp5 = callback(React.useState("transparent"), 2);
   obj3[4] = obj6.alpha(0).hex();
@@ -144,7 +144,7 @@ export default function MediaSlider(controls) {
   obj3[6] = paused(689)("#FFFFFF").alpha(0.1).hex();
   const items6 = [closure_6(tmp9Result, obj3), ];
   const obj4 = { style: tmp.downloadProgressSlider, value: tmp4[0], minimumValue: 0, maximumValue: 1, thumbTintColor: null, minimumTrackTintColor: null, maximumTrackTintColor: null };
-  tmp9Result = tmp9(7989);
+  tmp9Result = tmp9(7991);
   const alphaResult2 = paused(689)("#FFFFFF").alpha(0.1);
   const obj14 = paused(689)("#FFFFFF");
   obj4[4] = paused(689)("#FFFFFF").alpha(0).hex();
@@ -157,13 +157,13 @@ export default function MediaSlider(controls) {
   const items7 = [c7(c5, obj2), ];
   const obj5 = { style: tmp.playbackSlider, value: tmp3, thumbImage: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: "transparent", onValueChange: null, onSlidingStart: null, onSlidingComplete: null };
   const alphaResult4 = paused(689)("#FFFFFF").alpha(0.2);
-  obj5[2] = paused(8859);
+  obj5[2] = paused(8865);
   obj5[4] = ref.current;
   obj5[5] = paused(712).unsafe_rawColors.WHITE;
   obj5[7] = tmp11;
   obj5[8] = callback;
   obj5[9] = callback1;
-  items7[1] = closure_6(paused(7989), obj5);
+  items7[1] = closure_6(paused(7991), obj5);
   obj1[1] = items7;
   items4[2] = c7(c5, obj1);
   obj6 = {
@@ -177,7 +177,7 @@ export default function MediaSlider(controls) {
     },
     children: null
   };
-  const tmp9Result1 = paused(7989);
+  const tmp9Result1 = paused(7991);
   obj6[6] = controls(4890).getTimeFormat(ref.current);
   items4[3] = closure_6(controls(4299).Text, obj6);
   obj[1] = items4;

@@ -8,7 +8,7 @@ import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore";
 import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12825_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12829_registerAsset.js";
 import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 
 let c5;
@@ -50,7 +50,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   const tmp2 = usePremiumPlanSelectStore((isPurchasing) => isPurchasing.isPurchasing);
   let obj = React;
   [tmp4, c3] = callback(React.useState(null), 2);
-  let obj1 = productId(6871);
+  let obj1 = productId(6873);
   const premiumBundledItemsFromProductId = obj1.getPremiumBundledItemsFromProductId(productId);
   let obj2 = productId(589);
   let items = [_getSystemLocale];
@@ -83,7 +83,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   if (null == premiumTier || null == orderPriceString) {
     return null;
   } else {
-    let tmp5Result = tmp5(1879);
+    let tmp5Result = tmp5(1898);
     const formatPercentResult = tmp5Result.formatPercent(stateFromStores, closure_10 / 100);
     obj = { onClose: null, noDefaultButtons: true, children: null };
     obj[0] = onClose;
@@ -98,7 +98,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const intl = tmp5(1236).intl;
     obj3 = { discountPercentage: null, planName: null };
     obj3[0] = formatPercentResult;
-    tmp5Result = tmp5(3947);
+    tmp5Result = tmp5(3966);
     obj3[1] = tmp5Result.getPremiumTypeDisplayName(premiumTier);
     obj2[2] = intl.format(tmp5(1236).t.LQCVfK, obj3);
     items2[1] = callback2(tmp5(1297).LegacyText, obj2);

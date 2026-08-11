@@ -11,7 +11,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import closure_17 from "handleConnectionOpen";
 import closure_18 from "handleConnectionOpen";
 import ME from "ME";
@@ -86,7 +86,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     tmp3.subscribeToGuild(tmp11);
-    obj5 = obj(1894);
+    obj5 = obj(1913);
   }
   obj = {};
   set = new Set(initialize.lurkingGuildIds());
@@ -214,7 +214,7 @@ class GuildSubscriptionsStore extends Store {
 }
 const prototype = GuildSubscriptionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, handlePermissionsChange, ensureGuildLoaded, getHash, handleConnectionOpen, trackCommunicationDisabled, createGuildRecordFromRust, initialize, createRTCConnection, upsertRelationship, closure_17, closure_18, upsertAccount);
+  this.waitFor(fetchFingerprint, handlePermissionsChange, ensureGuildLoaded, getHash, handleConnectionOpen, trackCommunicationDisabled, createGuildRecordFromRust, initialize, createRTCConnection, markAllUserIdListsStale, closure_17, closure_18, upsertAccount);
   const items = [upsertAccount];
   this.syncWith(items, handleSpotifyUpdate);
   const items1 = [handlePermissionsChange];

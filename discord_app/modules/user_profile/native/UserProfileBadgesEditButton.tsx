@@ -77,7 +77,7 @@ export default function UserProfileBadgesEditButton(badges) {
       obj4[0] = intl.formatToPlainString(tmp2(1236).t.AdyOTw, obj);
       obj[3] = obj4;
       obj[4] = tmp6;
-      return callback(tmp2(13928).UserProfileEditFormButton, obj);
+      return callback(tmp2(13936).UserProfileEditFormButton, obj);
     }
   }
   return null;

@@ -18,7 +18,7 @@ import { GUILD_SELECTABLE_CHANNELS_KEY as closure_20 } from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import importDefaultResult2 from "mergeGuildAvatar";
 import importDefaultResult3 from "updateVoiceState";
@@ -208,7 +208,7 @@ export default function useHappeningNowData(has, guildId) {
   const items14 = [callback];
   stateFromStores7 = guildId(isFocused[23]).useStateFromStores(items14, () => callback.getUserAffinities());
   const tmp9Result1 = guildId(isFocused[23]);
-  const items15 = [upsertRelationship];
+  const items15 = [markAllUserIdListsStale];
   const stateFromStoresArray = guildId(isFocused[23]).useStateFromStoresArray(items15, () => tmp32.getFriendIDs());
   const tmp9Result2 = guildId(isFocused[23]);
   const items16 = [stateFromStoresArray];
@@ -254,7 +254,7 @@ export default function useHappeningNowData(has, guildId) {
   if (!tmp32) {
     tmp32 = stateFromStores6;
   }
-  upsertRelationship = tmp32;
+  markAllUserIdListsStale = tmp32;
   const ref = obj.useRef({ guildId, hasComputed: false });
   const items24 = [guildId, stateFromStores7, stateFromStores3, hasItem, stateFromStoresArray, stateFromStoresArray1, hasItem5, hasItem2, hasItem1, undefined !== showMultipleActivitiesPerChannel && showMultipleActivitiesPerChannel, hasItem3, hasItem4, has, withoutUserCards, stateFromStores2, stateFromStores4, stateFromStores8, stateFromStoresObject, stateFromStoresArray2];
   const callback3 = obj.useCallback(() => id(isFocused[30]).time("\u{1F3A8}", "computeHappeningNowState", () => {
@@ -466,7 +466,7 @@ export default function useHappeningNowData(has, guildId) {
     items = outer1_16.getRows(set1, num2.id);
   }), items24);
   const tmp35 = callback4(React.useState(() => {
-    if (upsertRelationship) {
+    if (markAllUserIdListsStale) {
       return [];
     } else {
       const arr = callback3();
@@ -540,7 +540,7 @@ export default function useHappeningNowData(has, guildId) {
         }, 50);
         return () => clearTimeout(closure_0);
       }
-    } else if (!upsertRelationship) {
+    } else if (!markAllUserIdListsStale) {
       callback4();
     }
   }, items26);

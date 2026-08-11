@@ -195,7 +195,7 @@ function SKUNameAndDescriptionSection(sku) {
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = sku.name;
     const items = [callback(tmp2(4299).Heading, obj), ];
-    const isNullOrEmptyResult = tmp2(1884).isNullOrEmpty(sku.description);
+    const isNullOrEmptyResult = tmp2(1903).isNullOrEmpty(sku.description);
     let tmp7Result = !isNullOrEmptyResult;
     if (!isNullOrEmptyResult) {
       const obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
@@ -205,7 +205,7 @@ function SKUNameAndDescriptionSection(sku) {
     items[1] = tmp7Result;
     obj[1] = items;
     tmp5Result = closure_16(closure_7, obj);
-    const tmp2Result = tmp2(1884);
+    const tmp2Result = tmp2(1903);
     const tmp5 = closure_16;
     const tmp6 = closure_7;
     tmp7 = callback;
@@ -234,9 +234,9 @@ function ItemDetailsSection(selectedItem) {
   }
   let obj1 = isNullOrEmpty;
   if (obj1.isNullOrEmpty(trimmed)) {
-    let tmp8Result = tmp8(1884);
+    let tmp8Result = tmp8(1903);
     if (tmp8Result.isNullOrEmpty(trimmed1)) {
-      tmp8Result = tmp8(1884);
+      tmp8Result = tmp8(1903);
       let tmp11Result = null;
     }
     return tmp11Result;
@@ -309,8 +309,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   let c16;
   const tmp = callback3();
   dependencyMap = tmp;
-  const rect = analyticsLocations(1609)();
-  let obj = analyticsLocations(7651);
+  const rect = analyticsLocations(1628)();
+  let obj = analyticsLocations(7653);
   storeFront = obj.useNativeIAPPayments().storeFront;
   let obj1 = skuId(589);
   let items = [memo2];
@@ -412,7 +412,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   items6[2] = memo1;
   callback = obj5.useCallback((arg0) => {
     let obj = analyticsLocations(_undefined[32]);
-    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: "LottieAnimationView", location_stack: null };
+    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: null, location_stack: null };
     obj[1] = skuId;
     let applicationId;
     if (stateFromStores != null) {
@@ -539,7 +539,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   const tmp36 = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
   obj = { skuId, sku: stateFromStores, analyticsLoadId: tmp17, analyticsLocations: memo1, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
   let id;
-  tmp2Result = tmp2(10094);
+  tmp2Result = tmp2(10099);
   if (tmp36 != null) {
     id = tmp36.id;
   }
@@ -603,7 +603,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj2 = { style: null, children: null };
     obj2[0] = tmp.header;
     obj3 = { onPress: null, backImage: null, accessibilityLabel: null, displayMode: "minimal" };
-    obj3[0] = tmp4(10089).closeSocialLayerStorefrontProductDetailsModal;
+    obj3[0] = tmp4(10094).closeSocialLayerStorefrontProductDetailsModal;
     obj3[1] = function backImage() {
       return callback1(skuId(_undefined[39]).XSmallIcon, { size: "md", style: _undefined.closeButtonIcon });
     };
@@ -642,7 +642,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       if (tmp42Result) {
         const obj9 = { sku: null };
         obj9[0] = stateFromStores;
-        tmp42Result = tmp42(tmp2(9398), obj9);
+        tmp42Result = tmp42(tmp2(9404), obj9);
       }
     }
     const items17 = [tmp42Result, , ];
@@ -650,7 +650,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     if (exclusive2) {
       const obj10 = { style: null, children: null };
       obj10[0] = tmp.exclusiveBadgeContainer;
-      obj10[1] = tmp42(tmp4(10096).ExclusiveBadge, {});
+      obj10[1] = tmp42(tmp4(10101).ExclusiveBadge, {});
       exclusive2 = tmp42(tmp64, obj10);
     }
     items17[1] = exclusive2;
@@ -701,7 +701,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj19 = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
       obj19[2] = tmp.availabilityCopy;
       const intl2 = tmp4(1236).intl;
-      obj19[3] = intl2.string(tmp2(3222).gndWN7);
+      obj19[3] = intl2.string(tmp2(3241).gndWN7);
       tmp42Result2 = tmp42(tmp4(4299).Text, obj19);
     }
     items20[1] = tmp42Result2;
@@ -721,12 +721,12 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj21[1] = callback1(tmp4(4714).Button, obj22);
     const items21 = [callback1(memo1, obj21), ];
     const obj23 = { icon: null, variant: "primary", size: "lg", disabled: null, accessibilityLabel: null, onPress: null };
-    obj23[0] = tmp2(8183);
+    obj23[0] = tmp2(8185);
     obj23[3] = tmp32;
     const intl3 = tmp4(1236).intl;
     obj23[4] = intl3.string(tmp4(1236).t.QAZA5f);
     obj23[5] = tmp41;
-    items21[1] = callback1(tmp4(7751).IconButton, obj23);
+    items21[1] = callback1(tmp4(7753).IconButton, obj23);
     obj20[1] = items21;
     items20[2] = c16(memo1, obj20);
     if (result) {
@@ -734,10 +734,10 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       obj24[0] = tmp.legalCopy;
       const obj25 = { shouldAppendDisclaimer: null };
       obj25[0] = false === tmp2Result(tmp10).hasAlreadyLinked;
-      const mobileFinePrintMessageForApplication = tmp4(10097).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj25);
+      const mobileFinePrintMessageForApplication = tmp4(10102).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj25);
       obj24[1] = mobileFinePrintMessageForApplication.map((children) => callback1(skuId(_undefined[16]).Text, { variant: "text-xs/normal", color: "text-muted", children }, arg1));
       result = tmp42(tmp64, obj24);
-      const tmp4Result3 = tmp4(10097);
+      const tmp4Result3 = tmp4(10102);
       const tmp60 = getOrFetchApplication;
     }
     items20[3] = result;
@@ -757,7 +757,7 @@ function SocialLayerStorefrontProductDetailsModalWithOrderCTX(skuId) {
     GOOGLE = tmp3.GOOGLE;
     tmp4 = tmp3;
   }
-  const OTPACOMOrderExperiment = tmp(7412).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp(7414).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   obj = { paymentGateway: GOOGLE, orderRequired: null, skuIds: null, isGift: false, activeSubscription: null, onOrderRetryCancellation: null, children: null };
   if (enabled) {

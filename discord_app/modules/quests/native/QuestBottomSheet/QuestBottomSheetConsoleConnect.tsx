@@ -31,7 +31,7 @@ function ConsoleRow(onPress) {
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
     let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(12184).PlaystationNeutralIcon, {});
+    obj[1] = callback(onPress(12187).PlaystationNeutralIcon, {});
     const intl3 = onPress(1236).intl;
     obj[2] = intl3.string(onPress(1236).t.JafL6p);
     let stringResult;
@@ -46,7 +46,7 @@ function ConsoleRow(onPress) {
     return callback(onPress(5374).TableRow, obj);
   } else if (tmp2.XBOX === type) {
     obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(9305).XboxNeutralIcon, {});
+    obj[1] = callback(onPress(9311).XboxNeutralIcon, {});
     const intl = onPress(1236).intl;
     obj[2] = intl.string(onPress(1236).t.Nfvo72);
     let stringResult1;
@@ -87,11 +87,11 @@ export default function QuestBottomSheetConsoleConnect(quest) {
     obj = { questId: quest.id, initialStep: closure_1, sourceQuestContent: closure_2 };
     obj.openLazy(quest(outer1_2[13])(outer1_2[12], outer1_2.paths), "QuestBottomSheet", obj);
   }
-  let obj = quest(10460);
+  let obj = quest(10465);
   xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11172).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11172);
-  closure_5 = quest(10489).useQuestImpressionId();
+  closure_4 = quest(11177).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11177);
+  closure_5 = quest(10494).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(() => {

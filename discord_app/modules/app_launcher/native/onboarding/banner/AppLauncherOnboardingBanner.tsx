@@ -17,9 +17,9 @@ export default function AppLauncherOnboardingBanner(arg0) {
     let obj = { context: null };
     obj[0] = context;
     return jsx(ActivitiesBanner, { context: null });
-  } else if (tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
+  } else if (tmp(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
     return jsx(AppsBaner, {});
-  } else if (tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
+  } else if (tmp(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
     obj = { context: null };
     obj[0] = context;
     return jsx(BotsBanner, { context: null });

@@ -3,14 +3,14 @@ import DismissibleContent from "DismissibleContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import setIndex from "setIndex";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import set from "set";
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
 import { ReadStateTypes } from "ReadStateTypes";
 import set from "setIndex";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { ack } from "../../actions/ReadStateActionCreators.tsx";
@@ -96,7 +96,7 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(gu
 export const getFirstRouteFor = function getFirstRouteFor(getSections) {
   let channel;
   const sections = getSections.getSections(false);
-  if (sections[require(undefined, 6987) /* computeSubtitle */.SECTION_INDEX_GUILD_ACTIONS] > 0) {
+  if (sections[require(undefined, 6990) /* computeSubtitle */.SECTION_INDEX_GUILD_ACTIONS] > 0) {
     const guildActionSection = getSections.getGuildActionSection();
     const row = guildActionSection.getRow(0);
     if (ChannelListGuildActionRow.GUILD_HOME === row) {

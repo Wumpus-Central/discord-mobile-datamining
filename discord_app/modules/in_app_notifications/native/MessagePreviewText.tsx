@@ -161,7 +161,7 @@ PlatformTypes = { width: 4, marginTop: -require("Themes").space.PX_8, marginBott
 createCacheKey[1] = PlatformTypes;
 createCacheKey = { flex: 1, gap: require("Themes").space.PX_4, paddingVertical: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_8 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: require("Themes").radii.xs, overflow: "hidden", height: 60, width: "WireType" };
+createCacheKey[3] = { borderRadius: require("Themes").radii.xs, overflow: "hidden", height: 60, width: "disabled" };
 createCacheKey[4] = { width: "100%", height: "100%" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
@@ -177,7 +177,7 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(9806);
+  let obj = message(9811);
   const previewableMedia = obj.usePreviewableMedia(message);
   let obj1 = message(4532);
   let tmp3 = null;
@@ -185,10 +185,10 @@ export default function MessagePreviewText(message) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(9814);
+  let tmpResult = tmp(9819);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(9815);
+  tmpResult = tmp(9820);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -219,7 +219,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessage(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(9806).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(9811).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -243,15 +243,15 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(9768);
+      tmp(9773);
       if (null != channel) {
         const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
         obj6[0] = channel;
         obj6[1] = message;
-        obj6[3] = tmp(3979).ChannelListLayoutTypes.COZY;
+        obj6[3] = tmp(3998).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(9790).ChannelRowPreview, obj6);
+        return callback(tmp(9795).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };

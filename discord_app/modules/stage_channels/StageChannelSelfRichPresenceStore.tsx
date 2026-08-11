@@ -2,7 +2,7 @@
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
@@ -28,7 +28,7 @@ function handleUpdateActivity() {
       channel = channel.getChannel(voiceChannelId);
       tmp2 = null;
       if (null != channel) {
-        let obj1 = importAll(3934);
+        let obj1 = importAll(3953);
         tmp2 = null;
         if (obj1.canEveryone(constants2.VIEW_CHANNEL, channel)) {
           guild = guild.getGuild(channel.getGuildId());
@@ -73,7 +73,7 @@ function handleUpdateActivity() {
               }
               if (topic == null) {
                 let tmp12Result = tmp12(4494);
-                topic = tmp12Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+                topic = tmp12Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
               }
               obj[1] = topic;
               tmp12Result = tmp12(5135);

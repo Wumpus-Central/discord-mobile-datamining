@@ -61,7 +61,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   items2 = [tmp.container, { paddingBottom: useSafeAreaInsets().bottom }];
   obj = { spacing: null, children: null };
   obj[0] = Themes.space.PX_16;
-  const items3 = [callback(View, { style: tmp.illustration, children: callback(markAsDismissed(6027).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [callback(View, { style: tmp.illustration, children: callback(markAsDismissed(6029).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1236).intl;
   obj2[3] = intl.string(messagesProxy.V3DI1E);

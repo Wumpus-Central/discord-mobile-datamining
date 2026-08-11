@@ -24,12 +24,12 @@ const toggle = createToggle.createToggle({
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(7799).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(7801).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
         const obj2 = openIncodeAgeVerificationModal;
       }
     }
-    const ViewNsfwCommands = tmp(3974).ViewNsfwCommands;
+    const ViewNsfwCommands = tmp(3993).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
@@ -71,12 +71,12 @@ let obj = {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(7799).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(7801).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
         const obj2 = openIncodeAgeVerificationModal;
       }
     }
-    const ViewNsfwCommands = tmp(3974).ViewNsfwCommands;
+    const ViewNsfwCommands = tmp(3993).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {

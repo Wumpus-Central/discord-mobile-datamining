@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/StringUtils.tsx
-import { 01886__ } from "../../../../_runtime/metro/01886__.js";
+import { 01905__ } from "../../../../_runtime/metro/01905__.js";
 const re2 = /[\u0300-\u036f]/g;
 const re3 = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
 if (null == String.prototype.normalize) {
@@ -14,7 +14,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    _require = _01886__;
+    _require = _01905__;
     const dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((arg0) => {

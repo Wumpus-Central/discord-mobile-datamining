@@ -2,7 +2,7 @@
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 
@@ -34,7 +34,7 @@ export default function usePromptHelpText(arg0) {
     return manyRoles;
   }, items1);
   let obj1 = selectedRoleIds(589);
-  const items2 = [id, mergeGuildAvatar, upsertRelationship, getUncachedChannelPermissions];
+  const items2 = [id, mergeGuildAvatar, markAllUserIdListsStale, getUncachedChannelPermissions];
   const stateFromStoresArray1 = obj1.useStateFromStoresArray(items2, () => {
     const mapped = Array.from(closure_1).map((arg0) => channel.getChannel(arg0));
     const found = mapped.filter((arg0) => {
@@ -44,7 +44,7 @@ export default function usePromptHelpText(arg0) {
       }
       return canResult;
     });
-    return found.map((channel) => callback(table[8]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true));
+    return found.map((channel) => callback(table[8]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true));
   });
   let mapped = stateFromStoresArray.map((name) => "@" + name.name);
   let singleSelect;
@@ -134,7 +134,7 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
     return manyRoles;
   }, items1);
   let obj1 = selectedRoleIds(589);
-  const items2 = [id, mergeGuildAvatar, upsertRelationship, getUncachedChannelPermissions];
+  const items2 = [id, mergeGuildAvatar, markAllUserIdListsStale, getUncachedChannelPermissions];
   const stateFromStoresArray1 = obj1.useStateFromStoresArray(items2, () => {
     const mapped = Array.from(closure_1).map((arg0) => channel.getChannel(arg0));
     const found = mapped.filter((arg0) => {
@@ -144,7 +144,7 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
       }
       return canResult;
     });
-    return found.map((channel) => callback(table[8]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true));
+    return found.map((channel) => callback(table[8]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true));
   });
   let mapped = stateFromStoresArray.map((name) => "@" + name.name);
   let singleSelect;

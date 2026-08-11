@@ -5,10 +5,6 @@ import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12694_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12695_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12696_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12697_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12698_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12699_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12700_registerAsset.js";
@@ -21,6 +17,10 @@ import { registerAsset } from "../../../../_runtime/12706_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12707_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12708_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12709_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12710_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12711_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12712_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12713_registerAsset.js";
 import { metadata } from "../../../../discord_assets/assets/images/perks/xbox_game_pass.jpg.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../components_native/common/FastImage.tsx";
@@ -192,25 +192,25 @@ export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
   return getFontScale.useFontScale() > 1 ? frozen[NARROW].scaledFontHeight : frozen[NARROW].height;
 };
 export const usePremiumPerkCard = function usePremiumPerkCard() {
-  let obj = subscriptionPlansLoaded(12693);
+  let obj = subscriptionPlansLoaded(12697);
   subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   let obj1 = subscriptionPlansLoaded(4198);
   const formatSizeResult = obj1.formatSize(closure_6 / 1024, { useKibibytes: true });
   const callback = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6016);
+    let obj = subscriptionPlansLoaded(6018);
     obj = { screen: constants.COLLECTIBLES_SHOP, params: null };
     obj = { analyticsSource: callback(5748).PREMIUM_MARKETING_PERK_CARD };
     obj[1] = obj;
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6016);
+    let obj = subscriptionPlansLoaded(6018);
     obj = { screen: constants.PROFILE_CUSTOMIZATION };
     obj.openUserSettings(obj);
   }, []);
   const items = [subscriptionPlansLoaded];
   const callback2 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6016);
+    let obj = subscriptionPlansLoaded(6018);
     obj = { screen: constants.APPEARANCE_THEME_PICKER };
     obj.openUserSettings(obj);
   }, []);
@@ -223,7 +223,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj = { customProfile: null, clientThemes: null, serverBoosts: null, greyServerBoosts: null, customAppIcons: null, emoji: null, customSounds: null, sticker: null, earlyAccess: null, memberPricing: null, largeUploads: null, hdVideo: null, superReactions: null, entranceSounds: null, badge: null, greyBadge: null, xboxGamePass: null };
   obj = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const callback4 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6016);
+    let obj = subscriptionPlansLoaded(6018);
     obj = { screen: constants.APP_ICONS };
     obj.openUserSettings(obj);
   }, []);

@@ -102,7 +102,7 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   tmp7Result = tmp7(tmp5(5396).BottomSheetTitleHeader, obj1);
   let obj2 = { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: null };
   const items1 = [subscriptionListingsForGuild.length];
-  obj2[4] = closure_6(emoji(8008), {
+  obj2[4] = closure_6(emoji(8010), {
     inActionSheet: true,
     style: tmp.list,
     itemSize: closure_9,

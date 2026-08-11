@@ -54,7 +54,7 @@ export default function GiftCodeRedeemModal(code) {
     obj2[1] = tmp2(5270).getHeaderCloseButton(() => callback(4509).pop());
     obj2[2] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(10432), {});
+      return callback2(callback(10437), {});
     };
     obj[obj.ERROR] = obj2;
     if (null == stateFromStores) {

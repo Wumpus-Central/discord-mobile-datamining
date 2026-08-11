@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/modals/GuildStageChannelSelection.tsx
 import "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -18,7 +18,7 @@ export default function GuildStageChannelSelection(channel) {
     const result = obj.dismissGlobalKeyboard();
     const mapped = channelsUserCanStartStageIn.map((id) => {
       const obj = { value: id.id, label: null };
-      obj[1] = callback(table[6]).computeChannelName(id, mergeGuildAvatar, upsertRelationship, true);
+      obj[1] = callback(table[6]).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale, true);
       return obj;
     });
     obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };

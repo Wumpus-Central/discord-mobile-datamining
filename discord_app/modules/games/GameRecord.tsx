@@ -113,12 +113,6 @@ class GameRecord extends tmp2 {
   }
 }
 const prototype = GameRecord.prototype;
-Object.defineProperty(prototype, "applicationId", {
-  get: function applicationId(renderApplication, arg1) {
-    return this.id;
-  },
-  set: undefined
-});
 prototype["getOfficialApplicationId"] = function getOfficialApplicationId() {
   const linkedApplications = this.linkedApplications;
   let id;
@@ -169,7 +163,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
     artwork = [];
   }
   const mapped = artwork.map((arg0) => outer1_1(outer1_2[3])(self.id, arg0, { keepAspectRatio: true }));
-  return mapped.filter(self(1351).isNotNullish);
+  return mapped.filter(self(1370).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
   let closure_0 = DEVELOPER;

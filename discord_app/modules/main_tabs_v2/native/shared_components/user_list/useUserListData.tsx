@@ -6,7 +6,7 @@ import initialize from "initialize";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import recomputeAffinities from "recomputeAffinities";
 import createdAt from "createdAt";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { RelationshipTypes } from "ME";
 import set from "noop";

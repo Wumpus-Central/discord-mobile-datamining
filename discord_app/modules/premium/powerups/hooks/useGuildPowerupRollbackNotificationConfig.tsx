@@ -36,7 +36,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
         tmp5 = null;
         if (null != cost) {
           obj = { dismissibleContent: null, title: null, description: null };
-          obj[0] = tmp(1358).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
+          obj[0] = tmp(1377).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
           const intl = tmp(1236).intl;
           obj = { dateString: null };
           obj[0] = getGuildPowerupFormattedDateString(storeRemovalDate);

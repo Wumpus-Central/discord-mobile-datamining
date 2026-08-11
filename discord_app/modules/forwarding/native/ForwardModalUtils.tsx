@@ -1,7 +1,7 @@
 // discord_app/modules/forwarding/native/ForwardModalUtils.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { showSearchableDestinationListModal } from "../../share/native/showSearchableDestinationListModal.tsx";
@@ -25,7 +25,7 @@ export const openForwardModal = function openForwardModal(arg0) {
   ({ forwardOptions, customSendHandler } = arg0);
   trackForwardStart.trackForwardStart(message.channel_id, message.id, source);
   const obj = trackForwardStart;
-  showSearchableDestinationListModal(asyncRequireImpl(10238, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
+  showSearchableDestinationListModal(asyncRequireImpl(10243, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {
   ModalActionCreators.popWithKey(c5);

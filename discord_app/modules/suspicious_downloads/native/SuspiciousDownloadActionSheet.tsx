@@ -23,7 +23,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
   items = [tmp.container, { paddingBottom: useSafeAreaInsets().bottom }];
   obj = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [callback(href(6027).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [callback(href(6029).TrafficConeSpotIllustration, {}), , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1236).intl;
   obj1[4] = intl.string(href(1236).t.XtDo9Z);

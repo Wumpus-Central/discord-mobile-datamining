@@ -34,9 +34,9 @@ function ChangeSpendingLimitScreen(teenId) {
       yield outer1_0();
       if (1 === tmp7) {
         dependencyMap = 0;
-        const obj1 = outer1_0(4001);
+        const obj1 = outer1_0(4020);
         const intl = outer1_0(1236).intl;
-        obj1.presentFailedToast(intl.string(v0(2284).Wu8BK2));
+        obj1.presentFailedToast(intl.string(v0(2303).Wu8BK2));
         let c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
@@ -44,13 +44,13 @@ function ChangeSpendingLimitScreen(teenId) {
       } else if (arg0 !== 2) {
         const obj2 = { key: "SPENDING_CONTROLS_CHANGED", content: null, IconComponent: null, iconColor: "status-positive" };
         const intl2 = outer1_0(1236).intl;
-        obj2[1] = intl2.string(v0(2284)["2WKfG1"]);
+        obj2[1] = intl2.string(v0(2303)["2WKfG1"]);
         obj2[2] = outer1_0(4264).CircleCheckIcon;
-        v0(4002).open(obj2);
+        v0(4021).open(obj2);
         let arr = v0(4509);
         arr = arr.pop();
         dependencyMap = 0;
-        const obj6 = v0(4002);
+        const obj6 = v0(4021);
       }
       dependencyMap = 0;
       return arg1;
@@ -81,17 +81,17 @@ function ChangeSpendingLimitScreen(teenId) {
   obj[0] = _handleSave(712).space.PX_16;
   obj = { variant: "text-sm/normal", children: null };
   let intl = tmp2(1236).intl;
-  obj[1] = intl.string(_handleSave(2284).IFguF2);
+  obj[1] = intl.string(_handleSave(2303).IFguF2);
   const items = [callback(_Text.Text, obj), ];
   let obj1 = { spacing: null, children: null };
   obj1[0] = _handleSave(712).space.PX_8;
   let obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl2 = tmp2(1236).intl;
-  obj2[2] = intl2.string(_handleSave(2284)["1fHSu2"]);
+  obj2[2] = intl2.string(_handleSave(2303)["1fHSu2"]);
   const items1 = [callback(_Text.Text, obj2), , ];
   const obj3 = { accessibilityLabel: null, value: null, onChange: null, leadingText: null, placeholder: null, keyboardType: null, isClearable: true };
   const intl3 = tmp2(1236).intl;
-  obj3[0] = intl3.string(_handleSave(2284)["1fHSu2"]);
+  obj3[0] = intl3.string(_handleSave(2303)["1fHSu2"]);
   obj3[1] = amountInput;
   obj3[2] = handleAmountChange;
   let tmp12;
@@ -100,7 +100,7 @@ function ChangeSpendingLimitScreen(teenId) {
   }
   obj3[3] = tmp12;
   const intl4 = tmp2(1236).intl;
-  obj3[4] = intl4.string(_handleSave(2284).DjSv82);
+  obj3[4] = intl4.string(_handleSave(2303).DjSv82);
   let str = "number-pad";
   if (exponent > 0) {
     str = "decimal-pad";
@@ -132,11 +132,11 @@ function ChangeSpendingLimitScreen(teenId) {
     items[1] = tmp8(tmp2(4712).Stack, obj1);
     obj[1] = items;
     obj5[0] = tmp8(tmp2(4712).Stack, obj);
-    const items3 = [tmp9(tmp2(7808).ModalContent, obj5), ];
+    const items3 = [tmp9(tmp2(7810).ModalContent, obj5), ];
     if (isClearingCap) {
       let obj6 = { variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
       const intl8 = tmp2(1236).intl;
-      obj6[1] = intl8.string(tmp10(2284).JZDGJ8);
+      obj6[1] = intl8.string(tmp10(2303).JZDGJ8);
       obj6[2] = handleSave;
       obj6[3] = isSubmitting;
       obj6[4] = isSubmitting;
@@ -164,22 +164,22 @@ function ChangeSpendingLimitScreen(teenId) {
     items4[1] = tmp9(tmp2(4714).Button, obj11);
     obj10[0] = items4;
     obj9[0] = tmp8(tmp2(5150).ButtonGroup, obj10);
-    items3[1] = tmp9(tmp2(11334).ModalFooter, obj9);
+    items3[1] = tmp9(tmp2(11339).ModalFooter, obj9);
     obj8[0] = items3;
-    return tmp8(tmp2(7807).ModalScreen, obj8);
+    return tmp8(tmp2(7809).ModalScreen, obj8);
   } else if (isOverspending) {
     const obj12 = { style: null, children: null };
     obj12[0] = formatToPlainStringResult.warningRow;
     const obj13 = { size: "xs", color: null };
     obj13[1] = tmp10(712).colors.ICON_FEEDBACK_WARNING;
-    const items5 = [tmp9(tmp2(7962).WarningIcon, obj13), ];
+    const items5 = [tmp9(tmp2(7964).WarningIcon, obj13), ];
     const obj14 = { variant: "text-sm/normal", style: null, children: null };
     obj14[1] = formatToPlainStringResult.warningText;
     const intl6 = tmp2(1236).intl;
     const obj15 = { amount: null, date: null };
     obj15[0] = formatPriceResult;
     obj15[1] = renewalDate;
-    formatToPlainStringResult = intl6.formatToPlainString(tmp10(2284).Tk6x4X, obj15);
+    formatToPlainStringResult = intl6.formatToPlainString(tmp10(2303).Tk6x4X, obj15);
     obj14[2] = formatToPlainStringResult;
     items5[1] = tmp9(tmp2(4299).Text, obj14);
     obj12[1] = items5;
@@ -189,7 +189,7 @@ function ChangeSpendingLimitScreen(teenId) {
     const intl5 = tmp2(1236).intl;
     const obj17 = { amount: null };
     obj17[0] = formatPriceResult;
-    obj16[2] = intl5.formatToPlainString(tmp10(2284).pfAlRY, obj17);
+    obj16[2] = intl5.formatToPlainString(tmp10(2303).pfAlRY, obj17);
     tmp9Result = tmp9(tmp2(4299).Text, obj16);
   }
 }
@@ -220,7 +220,7 @@ export default function ChangeSpendingLimitModal(teenId) {
     obj[2] = function headerTitle() {
       const obj = { variant: "text-md/semibold", children: null };
       const intl = callback(1236).intl;
-      obj[1] = intl.string(callback2(2284).xMRO6A);
+      obj[1] = intl.string(callback2(2303).xMRO6A);
       return callback3(callback(4299).Text, obj);
     };
     obj[3] = function render() {
@@ -232,5 +232,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1236).intl;
   obj[2] = intl.string(teenId(1236).t["13/7kX"]);
-  return callback(teenId(11336).Modal, obj);
+  return callback(teenId(11341).Modal, obj);
 };

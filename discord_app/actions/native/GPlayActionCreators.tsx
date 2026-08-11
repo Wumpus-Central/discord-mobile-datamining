@@ -587,7 +587,7 @@ function _subscribe() {
       if (1 === tmp7) {
         c9 = 0;
         message = closure_8;
-        const obj1 = callback(3962);
+        const obj1 = callback(3981);
         const obj2 = { productId: null, oldProductId: null };
         obj2[0] = callback;
         let c5 = callback2;
@@ -732,7 +732,7 @@ function _verifyPurchase() {
           } else if (1 === tmp8) {
             c6 = 0;
             c6 = closure_5;
-            obj3 = lib(3962);
+            obj3 = lib(3981);
             const obj5 = { tags: null };
             let obj6 = { productId: null };
             obj6[0] = lib.productId;
@@ -877,7 +877,7 @@ closure_0 = importDefaultResult(() => {
                   obj3[0] = callback3(SubscriptionProductIds);
                   return obj3;
                 }
-                obj14 = SubscriptionProductIds(3960);
+                obj14 = SubscriptionProductIds(3979);
               }
             }
             c6 = 3;
@@ -1169,7 +1169,7 @@ closure_0 = importDefaultResult(() => {
                   })(IAPProductIds);
                   return obj3;
                 }
-                obj14 = IAPProductIds(3960);
+                obj14 = IAPProductIds(3979);
               }
             }
             c6 = 3;
@@ -1899,7 +1899,7 @@ export const subscribe = function subscribe() {
   }
   return applyArgumentsResult;
 };
-export const verifyPurchase = function verifyPurchase(closure_0, closure_2) {
+export const verifyPurchase = function verifyPurchase() {
   const self = this;
   const apply = _verifyPurchase.apply;
   if (typeof apply === "unknown") {
@@ -1909,8 +1909,8 @@ export const verifyPurchase = function verifyPurchase(closure_0, closure_2) {
   }
   return applyArgumentsResult;
 };
-export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(closure_0) {
-  const tmp = state.getState().analyticsByProductId[closure_0.productId];
+export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(productId) {
+  const tmp = state.getState().analyticsByProductId[productId.productId];
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
     const tmp4 = callback2(tmp, closure_4);
@@ -1920,7 +1920,7 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
     _true(698).track(constants.PAYMENT_FLOW_SUCCEEDED, obj);
-    callback3(closure_0.productId);
+    callback3(productId.productId);
     const obj2 = _true(698);
   }
 };
@@ -1935,7 +1935,7 @@ export const updatePendingDowngrade = function updatePendingDowngrade(closure_0,
         if (null != tmp) {
           if (null != tmp2.billingPeriod) {
             if (null != tmp.billingPeriod) {
-              let obj = callback(3962);
+              let obj = callback(3981);
             }
           }
         }

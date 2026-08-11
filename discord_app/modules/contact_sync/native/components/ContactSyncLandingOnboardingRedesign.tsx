@@ -5,7 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12048_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12051_registerAsset.js";
 import { ContactSyncError } from "ContactSyncError.tsx";
 import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 

@@ -212,7 +212,7 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
   const tmp3 = require;
   const tmp3Result = sendRequest;
   return HTTP.del(obj).then(() => {
-    const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
     const intl = callback(1236).intl;
     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.L3UUha));
   });

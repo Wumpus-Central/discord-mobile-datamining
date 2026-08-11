@@ -18,7 +18,7 @@ export default function useKeyboardIsOpen() {
     flag = false;
   }
   let importDefault;
-  importDefault = flag(1477).useAppEntryKey();
+  importDefault = flag(1496).useAppEntryKey();
   return computeEntryState((arg0) => {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (flag) {

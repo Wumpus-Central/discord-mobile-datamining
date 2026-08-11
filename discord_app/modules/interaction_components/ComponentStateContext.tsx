@@ -16,15 +16,15 @@ const require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
   if (PermissionOverwriteType.ComponentType.BUTTON === type) {
-    return type.style !== tmp(1935).ButtonStyle.LINK;
+    return type.style !== tmp(1954).ButtonStyle.LINK;
   } else {
-    if (tmp(1935).ComponentType.STRING_SELECT !== type) {
-      if (tmp(1935).ComponentType.USER_SELECT !== type) {
-        if (tmp(1935).ComponentType.ROLE_SELECT !== type) {
-          if (tmp(1935).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (tmp(1935).ComponentType.CHANNEL_SELECT !== type) {
-              if (tmp(1935).ComponentType.ACTION_ROW !== type) {
-                const TEXT_INPUT = tmp(1935).ComponentType.TEXT_INPUT;
+    if (tmp(1954).ComponentType.STRING_SELECT !== type) {
+      if (tmp(1954).ComponentType.USER_SELECT !== type) {
+        if (tmp(1954).ComponentType.ROLE_SELECT !== type) {
+          if (tmp(1954).ComponentType.MENTIONABLE_SELECT !== type) {
+            if (tmp(1954).ComponentType.CHANNEL_SELECT !== type) {
+              if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+                const TEXT_INPUT = tmp(1954).ComponentType.TEXT_INPUT;
               }
               return false;
             }
@@ -55,7 +55,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
     }
     return DISABLED;
   } else {
-    if (interaction.data.interactionType !== tmp(1935).InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType !== tmp(1954).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
         LOADING = tmp(4531).ActionComponentState.DISABLED;
       }

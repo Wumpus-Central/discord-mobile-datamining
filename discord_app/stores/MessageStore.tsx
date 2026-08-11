@@ -11,7 +11,7 @@ import comparator from "comparator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_17 from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -99,20 +99,20 @@ function _addPushNotificationMessageIfNotCached() {
               let fetchFingerprint = tmp3;
               let orCreate = tmp28;
               orCreate = undefined;
-              const databaseResult = lib(1936).database();
+              const databaseResult = lib(1955).database();
               const basicChannel = outer1_9.getBasicChannel(closure_0);
               if (null != databaseResult) {
                 if (null != basicChannel) {
                   let c5 = 1;
-                  const obj4 = lib(1936);
+                  const obj4 = lib(1955);
                   c6 = 2;
                   c7 = 1;
                   let obj1 = { value: null, done: false };
-                  obj1[0] = lib(1936).messages(databaseResult).get(basicChannel.guild_id, tmp35, tmp36.id);
+                  obj1[0] = lib(1955).messages(databaseResult).get(basicChannel.guild_id, tmp35, tmp36.id);
                   return obj1;
                 }
               }
-              const obj9 = lib(1936);
+              const obj9 = lib(1955);
               tmp35 = closure_0;
               tmp36 = lib;
             }
@@ -327,7 +327,7 @@ class MessageStore extends Store {
 }
 const prototype = MessageStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_8, ensureGuildLoaded, percentageScrolled, dropChannelIfEmpty, comparator, trackCommunicationDisabled, createGuildRecordFromRust, initialize, _getSystemLocale, getUncachedChannelPermissions, upsertRelationship, handleConnectionOpen, closure_17, mergeGuildAvatar);
+  this.waitFor(closure_8, ensureGuildLoaded, percentageScrolled, dropChannelIfEmpty, comparator, trackCommunicationDisabled, createGuildRecordFromRust, initialize, _getSystemLocale, getUncachedChannelPermissions, markAllUserIdListsStale, handleConnectionOpen, closure_17, mergeGuildAvatar);
   const items = [initialize];
   this.syncWith(items, () => {
 

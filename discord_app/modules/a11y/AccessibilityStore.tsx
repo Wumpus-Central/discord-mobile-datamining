@@ -52,13 +52,53 @@ function maybeApplyNoTextColorForLightCustomTheme() {
   }
   return tmp;
 }
+function handleReducedMotionUpdated() {
+  const obj = {};
+  const merged = Object.assign(obj);
+  let str = "animate-never";
+  let str2 = "animate-never";
+  if ("animate-never" !== obj.youBarNameplateAnimation) {
+    const prefersReducedMotion = obj.prefersReducedMotion;
+    if ("no-preference" === prefersReducedMotion) {
+      let flag = false;
+    } else {
+      flag = true;
+      if ("reduce" !== prefersReducedMotion) {
+        flag = "reduce" === obj.systemPrefersReducedMotion;
+      }
+    }
+    let str5 = "animate-always";
+    if (flag) {
+      str5 = "respect-motion-settings";
+    }
+    str2 = str5;
+  }
+  obj.youBarNameplateAnimation = str2;
+  if (str !== obj.youBarAvatarDecoAnimation) {
+    const prefersReducedMotion2 = obj.prefersReducedMotion;
+    if ("no-preference" === prefersReducedMotion2) {
+      let flag2 = false;
+    } else {
+      flag2 = true;
+      if ("reduce" !== prefersReducedMotion2) {
+        flag2 = "reduce" === obj.systemPrefersReducedMotion;
+      }
+    }
+    let str8 = "animate-always";
+    if (flag2) {
+      str8 = "respect-motion-settings";
+    }
+    str = str8;
+  }
+  obj.youBarAvatarDecoAnimation = str;
+}
 let closure_3 = ["fontScale"];
 const Accessibility = ME.Accessibility;
 const ThemeTypes = ME.ThemeTypes;
 ({ MESSAGE_GROUP_SPACING: c10, DEFAULT_COMPACT_SPACING: unpackModuleId, DEFAULT_COZY_SPACING: closure_12 } = MESSAGE_GROUP_SPACING);
 let obj = { DEFAULT: "default", HIGH: "high" };
 obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
-obj = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true };
+obj = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" };
 let closure_17 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
 class AccessibilityStore extends DeviceSettingsStore {
 }
@@ -87,7 +127,7 @@ prototype["initialize"] = function initialize(arg0) {
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
 };
 Object.defineProperty(prototype, "fontScale", {
-  get: function fontScale(arg0) {
+  get: function fontScale(applicationAccountLinkMarkAsDismissed, arg1, id) {
     return obj.fontSize / Accessibility.FONT_SIZE_DEFAULT * 100;
   },
   set: undefined
@@ -252,12 +292,14 @@ Object.defineProperty(prototype, "useReducedMotion", {
   get: function useReducedMotion() {
     const prefersReducedMotion = obj.prefersReducedMotion;
     if ("no-preference" === prefersReducedMotion) {
-      return false;
-    } else if ("reduce" === prefersReducedMotion) {
-      return true;
+      let flag = false;
     } else {
-      return "reduce" === obj.systemPrefersReducedMotion;
+      flag = true;
+      if ("reduce" !== prefersReducedMotion) {
+        flag = "reduce" === obj.systemPrefersReducedMotion;
+      }
     }
+    return flag;
   },
   set: undefined
 });
@@ -374,6 +416,46 @@ Object.defineProperty(prototype, "isStickerButtonEnabled", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "animateYouBarNameplate", {
+  get: function animateYouBarNameplate() {
+    const youBarNameplateAnimation = obj.youBarNameplateAnimation;
+    if ("animate-never" === youBarNameplateAnimation) {
+      return false;
+    } else if ("animate-always" === youBarNameplateAnimation) {
+      return true;
+    } else if ("respect-motion-settings" === youBarNameplateAnimation) {
+      const self = this;
+      return !this.useReducedMotion;
+    }
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "animateYouBarAvatarDeco", {
+  get: function animateYouBarAvatarDeco() {
+    const youBarAvatarDecoAnimation = obj.youBarAvatarDecoAnimation;
+    if ("animate-never" === youBarAvatarDecoAnimation) {
+      return false;
+    } else if ("animate-always" === youBarAvatarDecoAnimation) {
+      return true;
+    } else if ("respect-motion-settings" === youBarAvatarDecoAnimation) {
+      const self = this;
+      return !this.useReducedMotion;
+    }
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "youBarNameplateAnimation", {
+  get: function youBarNameplateAnimation() {
+    return obj.youBarNameplateAnimation;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "youBarAvatarDecoAnimation", {
+  get: function youBarAvatarDecoAnimation() {
+    return obj.youBarAvatarDecoAnimation;
+  },
+  set: undefined
+});
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
 };
@@ -484,6 +566,13 @@ let items = [
     obj.emojiButtonEnabled = true;
     obj.gifButtonEnabled = true;
     obj.stickerButtonEnabled = true;
+    return obj;
+  },
+  (arg0) => {
+    const obj = {};
+    const merged = Object.assign(arg0);
+    obj.youBarNameplateAnimation = "animate-never";
+    obj.youBarAvatarDecoAnimation = "animate-never";
     return obj;
   }
 ];
@@ -599,6 +688,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
       obj = {};
       const merged = Object.assign(obj);
       obj.systemPrefersReducedMotion = systemPrefersReducedMotion.systemPrefersReducedMotion;
+      handleReducedMotionUpdated();
     }
   },
   ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function handleSystemPrefersCrossfadesChanged(systemPrefersCrossfades) {
@@ -617,6 +707,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
       obj = {};
       const merged = Object.assign(obj);
       obj.prefersReducedMotion = prefersReducedMotion.prefersReducedMotion;
+      handleReducedMotionUpdated();
     }
   },
   ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function handleSetSyncForcedColors(syncForcedColors) {
@@ -725,6 +816,32 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
       tmp12 = obj4;
     }
     const merged6 = Object.assign(tmp12);
+  },
+  ACCESSIBILITY_SET_YOU_BAR_ANIMATIONS: function handleSetYouBarAnimations(animateNameplate) {
+    const obj = {};
+    const merged = Object.assign(obj);
+    animateNameplate = animateNameplate.animateNameplate;
+    let str = "animate-always";
+    let str2 = "animate-always";
+    if (true !== animateNameplate) {
+      str2 = "animate-never";
+      if (false !== animateNameplate) {
+        if (undefined === animateNameplate) {
+          str2 = tmp2;
+        }
+      }
+    }
+    obj.youBarNameplateAnimation = str2;
+    const animateAvatarDeco = animateNameplate.animateAvatarDeco;
+    if (true !== animateAvatarDeco) {
+      str = "animate-never";
+      if (false !== animateAvatarDeco) {
+        if (undefined === animateAvatarDeco) {
+          str = tmp3;
+        }
+      }
+    }
+    obj.youBarAvatarDecoAnimation = str;
   }
 });
 const result = require("handleThemeChange").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");

@@ -39,7 +39,7 @@ export default function useStartEvent() {
         yield "ct";
         callback(true);
         c6 = 1;
-        yield callback2(9054).preStartEventActions(callback, permissionOverwrites);
+        yield callback2(9060).preStartEventActions(callback, permissionOverwrites);
         if (2 === tmp7) {
           c6 = 0;
           const outer1_5 = noop;
@@ -60,7 +60,7 @@ export default function useStartEvent() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            let obj7 = callback2(9054);
+            let obj7 = callback2(9060);
             let c7 = 4;
             c8 = 1;
             let obj4 = { value: null, done: false };
@@ -78,7 +78,7 @@ export default function useStartEvent() {
             obj5[0] = arg1;
             return obj5;
           } else {
-            obj4 = callback(9055);
+            obj4 = callback(9061);
             c7 = 5;
             c8 = 1;
             const obj6 = { value: null, done: false };
@@ -96,7 +96,7 @@ export default function useStartEvent() {
             obj7[0] = arg1;
             return obj7;
           } else {
-            const obj1 = callback(9055);
+            const obj1 = callback(9061);
             c7 = 6;
             c8 = 1;
             const obj8 = { value: null, done: false };

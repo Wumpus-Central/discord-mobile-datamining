@@ -79,7 +79,7 @@ function _setWarningBoosts() {
               obj2[0] = lib.map((id) => id.id);
               let addResult = null;
               if (!dependencyMap) {
-                let obj3 = lib(3883)();
+                let obj3 = lib(3902)();
                 addResult = obj3.add(1, "day");
               }
               obj2[1] = addResult;
@@ -101,7 +101,7 @@ function _setWarningBoosts() {
           } else {
             obj = callback(4199);
             const appliedGuildBoostsForGuild = obj.fetchAppliedGuildBoostsForGuild(callback);
-            obj1 = callback(11849);
+            obj1 = callback(11852);
             const guildBoostEntitlements = obj1.fetchGuildBoostEntitlements(callback, true);
             c6 = 3;
             return { value: "HermesInternal", done: null };

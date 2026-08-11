@@ -4,7 +4,7 @@ import PressableCard from "PressableCard";
 import get_ActivityIndicator from "CheckmarkLargeIcon";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { asyncRequireImpl } from "../../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../../actions/ModalActionCreators.tsx";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -38,7 +38,7 @@ function ActionSheetSelector(arg0) {
   obj2[1] = items.map((type) => {
     let closure_0 = type;
     const obj = { icon: null, label: null, subLabel: null, onPress: null, trailing: null, start: null, end: null };
-    obj[0] = outer1_7(outer1_0(7962).WarningIcon, { size: "md" });
+    obj[0] = outer1_7(outer1_0(7964).WarningIcon, { size: "md" });
     ({ label: obj[1], description: obj[2] } = type);
     obj[3] = function onPress() {
       return outer1_2(closure_0);
@@ -85,7 +85,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return ModalActionCreators.pushLazy(asyncRequireImpl(15044, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreators.pushLazy(asyncRequireImpl(15054, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];

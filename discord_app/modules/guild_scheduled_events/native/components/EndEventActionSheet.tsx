@@ -22,7 +22,7 @@ export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   let activeEvent;
   const tmp = createCacheKey();
-  let obj = channel(9038);
+  let obj = channel(9044);
   activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
@@ -72,6 +72,6 @@ export default function EndEventActionSheet(channel) {
     items[3] = callback(View, obj5);
     obj[1] = items;
     obj[0] = callback2(View, obj);
-    return callback(activeEvent(7965), obj);
+    return callback(activeEvent(7967), obj);
   }
 };

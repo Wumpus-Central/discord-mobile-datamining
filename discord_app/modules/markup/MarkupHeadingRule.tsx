@@ -1,5 +1,5 @@
 // discord_app/modules/markup/MarkupHeadingRule.tsx
-import { t } from "../../../_runtime/04000_t.js";
+import { t } from "../../../_runtime/04019_t.js";
 const require = arg1;
 const re2 = /\n$/;
 let obj = {};

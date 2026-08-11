@@ -1,6 +1,6 @@
 // discord_app/stores/GamePartyStore.tsx
 import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import filterPlayingActivities from "filterPlayingActivities";
 import ME from "ME";
 import { Store } from "initialize";
@@ -61,8 +61,8 @@ function updateParty(closure_6, id, activities, status) {
         tmp19 = obj;
       }
       tmp19[closure_6] = id;
-      if (!upsertRelationship.isBlocked(id)) {
-        if (!upsertRelationship.isIgnored(id)) {
+      if (!markAllUserIdListsStale.isBlocked(id)) {
+        if (!markAllUserIdListsStale.isIgnored(id)) {
           value = map.get(id);
           if (value == null) {
             const _Set = Set;
@@ -121,7 +121,7 @@ function handleLocalPresenceUpdate() {
 }
 function handleRelationshipAddOrUpdate(relationship) {
   relationship = relationship.relationship;
-  if (!upsertRelationship.isBlocked(relationship.id)) {
+  if (!markAllUserIdListsStale.isBlocked(relationship.id)) {
     if (!obj.isIgnored(relationship.id)) {
       return false;
     }
@@ -141,7 +141,7 @@ function handleRelationshipAddOrUpdate(relationship) {
       continue;
     }
   }
-  obj = upsertRelationship;
+  obj = markAllUserIdListsStale;
 }
 ({ StatusTypes: c5, ME: closure_6 } = ME);
 let closure_7 = {};
@@ -152,7 +152,7 @@ const prototype = GamePartyStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [filterPlayingActivities];
   this.syncWith(items, handleLocalPresenceUpdate);
-  this.waitFor(fetchFingerprint, upsertRelationship, filterPlayingActivities);
+  this.waitFor(fetchFingerprint, markAllUserIdListsStale, filterPlayingActivities);
 };
 prototype["getParty"] = function getParty(id) {
   let value = null;

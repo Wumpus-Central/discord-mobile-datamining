@@ -1,6 +1,6 @@
 // discord_app/modules/friend_invites/native/FriendInviteUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 
@@ -12,11 +12,11 @@ export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
   let obj = generateAcceptInviteOptions;
   generateAcceptInviteOptions.revokeFriendInvites().then(() => {
-    let obj = callback2(4002);
+    let obj = callback2(4021);
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = callback(1236).intl;
     obj[1] = intl.string(callback(1236).t.jSHEOQ);
-    obj[2] = callback2(9878);
+    obj[2] = callback2(9883);
     obj.open(obj);
   });
 };

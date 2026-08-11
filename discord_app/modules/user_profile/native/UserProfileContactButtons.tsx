@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileContactButtons.tsx
 import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 import jsxProd from "module_4313";
 import createCacheKey from "createCacheKey";
@@ -43,20 +43,20 @@ function FriendRequestButton(user) {
   let trackUserProfileAction;
   let dependencyMap;
   let stateFromStores;
-  let upsertRelationship;
+  let markAllUserIdListsStale;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8788);
+  let obj = user(8794);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
     newestAnalyticsLocation = trackUserProfileAction(5728)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12340);
+  let tmp3Result = tmp3(12343);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  upsertRelationship = trackUserProfileAction(4146).useName(user);
+  markAllUserIdListsStale = trackUserProfileAction(4148).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -65,7 +65,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12520).UserClockIcon;
+          let UserPlusIcon = tmp3(12524).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4241).UserPlusIcon;
         }
@@ -92,16 +92,16 @@ function FriendRequestButton(user) {
         obj[3] = function onPress() {
           if (stateFromStores === outer1_5.PENDING_OUTGOING) {
             let obj = { userDisplayName: null, onConfirm: null };
-            obj[0] = upsertRelationship;
+            obj[0] = markAllUserIdListsStale;
             obj[1] = function onConfirm() {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(11977).confirmCancelFriendRequest(obj);
-            const obj3 = user(11977);
+            const result = user(11980).confirmCancelFriendRequest(obj);
+            const obj3 = user(11980);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9243);
+            obj = trackUserProfileAction(9249);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;
@@ -124,7 +124,7 @@ createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { flexDirection: "row", gap: require("Themes").space.PX_12 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flexDirection: "row", gap: require("Themes").space.PX_12 };
-let result = require("upsertRelationship").fileFinishedImporting("modules/user_profile/native/UserProfileContactButtons.tsx");
+let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_profile/native/UserProfileContactButtons.tsx");
 
 export default function UserProfileContactButtons(user) {
   let accessibilityHint;
@@ -142,7 +142,7 @@ export default function UserProfileContactButtons(user) {
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp3 = createCacheKey();
   let obj1 = user(fn[11]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_4.getRelationshipType(user.id));
   let obj2 = user(fn[10]);
   const gameFriendsForUser = obj2.useGameFriendsForUser(user.id);

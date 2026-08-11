@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { jsx } from "jsxProd";
@@ -150,6 +150,6 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   }, items5);
   return num(tmp2(tmp[13]).UsersFastList, { sections, getItemProps, getSectionProps, listHeaderSize, renderListHeader, disableStickySections, disableBackgroundOverlay: true, listStyleOverride, disableBottomSafeZone, insetEnd, inActionSheet });
 });
-const result = require("upsertRelationship").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
 
 export default memoResult;

@@ -6,7 +6,7 @@ import addApplication from "addApplication";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { UserRowModes } from "UserRowModes";
 import ME from "ME";
 import jsxProd from "initialize";
@@ -48,9 +48,9 @@ function UserRowSubLabel(arg0) {
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4146).getUserTag(user);
+    obj[3] = tmp(4148).getUserTag(user);
     callback(tmp(4299).Text, obj);
-    const tmpResult = tmp(4146);
+    const tmpResult = tmp(4148);
   }
   if (null == stateFromStores) {
     const obj1 = { style: null };
@@ -204,7 +204,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "Array" };
+      let obj = { accessibilityActions: null, actions: "a" };
       obj[0] = items;
       return obj;
     } else {

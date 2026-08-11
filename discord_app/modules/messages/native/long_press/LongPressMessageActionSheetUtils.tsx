@@ -164,7 +164,7 @@ export const handleCopyMessageLink = function handleCopyMessageLink(channel, mes
   if (null != channelPermalink) {
     let tmp3Result = tmp3(5756);
     tmp3Result.copy(channelPermalink);
-    tmp3Result = tmp3(4001);
+    tmp3Result = tmp3(4020);
     tmp3Result.presentLinkCopied();
   }
 };

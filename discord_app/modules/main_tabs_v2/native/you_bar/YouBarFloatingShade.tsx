@@ -24,11 +24,11 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const youBarTotalHeight = obj.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   require = sum;
-  width = width(1474)().width;
+  width = width(1493)().width;
   if (width(4161)().isChatBesideChannelList) {
     width = tmp7 + GUILD_LIST_WIDTH;
   }
-  let tmp2Result = tmp2(4036);
+  let tmp2Result = tmp2(4042);
   const fn = function t() {
     return { height: closure_0, opacity: 1, width };
   };
@@ -36,8 +36,8 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   fn.__workletHash = 7609004216185;
   fn.__initData = closure_11;
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-  tmp2Result = tmp2(4118);
-  const gradientValue = tmp2Result.useGradientValue(tmp2(4118).GradientPercentage.END);
+  tmp2Result = tmp2(4123);
+  const gradientValue = tmp2Result.useGradientValue(tmp2(4123).GradientPercentage.END);
   const token = map.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
   const tmp2Result1 = map;
   const items = [isSyncedModeThemesEnabled];

@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -36,7 +36,7 @@ export default function FriendRequestNote(styles) {
   const HideFriendRequestNotes = require(analyticsLocation[8]).HideFriendRequestNotes;
   const setting = HideFriendRequestNotes.useSetting();
   let obj = require(analyticsLocation[9]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ note: outer1_6.getNote(closure_0), type: outer1_6.getRelationshipType(closure_0) }));
   note = stateFromStoresObject.note;
   [tmp7, c3] = note(React.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);

@@ -11,10 +11,10 @@ import ME from "ME";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
 import jsxProd from "CollapsingText";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/11501_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11502_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11578_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11579_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11504_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11505_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11581_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11582_registerAsset.js";
 import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
@@ -68,8 +68,8 @@ function AppLauncherCommandViewFooter(arg0) {
       let obj1 = { translateX: null };
       const obj9 = outer1_0(stateFromStores[16]);
       const fn = function e() {
-        const obj = callback(4036);
-        return callback(4036).runOnJS(callback(4272).triggerHapticFeedback)(callback(4272).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = callback(4042);
+        return callback(4042).runOnJS(callback(4272).triggerHapticFeedback)(callback(4272).HapticFeedbackTypes.IMPACT_LIGHT);
       };
       const obj2 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
       obj2[0] = outer1_0(stateFromStores[15]).runOnJS;
@@ -1152,7 +1152,7 @@ function AppLauncherCommandViewInner(command) {
     tmp70Result = callback5(first2, obj18);
   }
   const obj19 = { style: tmp.container, children: null };
-  const items21 = [tmp70Result, tmp67(command(sectionName[13]).AppLauncherCommandViewHeader, { command, onPressBack: callback, scrollOffsetY: sharedValue1, section })];
+  const items21 = [tmp67(command(sectionName[13]).AppLauncherCommandViewHeader, { command, onPressBack: callback, scrollOffsetY: sharedValue1, section }), tmp70Result];
   obj19[1] = items21;
   return callback6(c7, obj19);
 }

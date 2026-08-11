@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
@@ -57,11 +57,11 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_8 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_8 };
-const result = require("upsertRelationship").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
 
 export default function ConnectedBlockedUsersList() {
   let obj = initialize;
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   obj = { userIds: obj.useStateFromStoresArray(items, () => blockedIDs.getBlockedIDs()) };
   return callback(BlockedUsersList, obj);
 };

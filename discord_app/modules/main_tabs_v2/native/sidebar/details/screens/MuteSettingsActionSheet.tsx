@@ -2,7 +2,7 @@
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserNotificationSettings } from "ME";
 import jsxProd from "jsxProd";
@@ -57,7 +57,7 @@ export default function MuteSettings(guildId) {
       const intl = guildId(onOptionPress[8]).intl;
       const obj2 = { name: null };
       const obj8 = guildId(onOptionPress[15]);
-      obj2[0] = obj8.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
+      obj2[0] = obj8.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true);
       obj[1] = intl.format(guildId(onOptionPress[8]).t["eC+9rj"], obj2);
       obj[2] = callback;
       obj[1] = callback(guildId(onOptionPress[12]).TableRow, obj);

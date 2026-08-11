@@ -142,7 +142,7 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = Themes.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14548).CircleMinusIcon, obj);
+    obj[3] = callback2(tmp(14556).CircleMinusIcon, obj);
     return callback2(tmp(4846).PressableOpacity, obj);
   }
   let obj2 = user(589);
@@ -389,7 +389,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(15114), {
+        return callback2(_undefined(15123), {
           handleLogin(login, password, undelete) {
             let obj = callback(5827);
             obj = { login, password, undelete };
@@ -407,7 +407,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(8470), { isMultiAccount: true });
+        return callback2(_undefined(8476), { isMultiAccount: true });
       }
     }),
     callback2(createNativeStackNavigator.Screen, {
@@ -416,7 +416,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15113), { isMultiAccount: true });
+        return callback2(_undefined(15122), { isMultiAccount: true });
       }
     })
   ];

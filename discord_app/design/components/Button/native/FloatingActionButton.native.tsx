@@ -39,7 +39,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   ({ icon, positionBottom } = positionRight);
   positionRight = positionRight.positionRight;
   const merged = Object.assign(positionRight, Object.create(null));
-  let obj = positionBottom(4036);
+  let obj = positionBottom(4042);
   class F {
     constructor() {
       tmp = positionBottom;
@@ -78,7 +78,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
     cloneElementResult = validElement.cloneElement(icon, obj2);
   }
   obj1.icon = cloneElementResult;
-  ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles(positionRight(1348)("FloatingActionButton")));
-  obj[1] = jsx(positionBottom(7752).BaseIconButton, {});
-  return jsx(positionRight(4036).View, { style: animatedStyle, children: null });
+  ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles(positionRight(1367)("FloatingActionButton")));
+  obj[1] = jsx(positionBottom(7754).BaseIconButton, {});
+  return jsx(positionRight(4042).View, { style: animatedStyle, children: null });
 };

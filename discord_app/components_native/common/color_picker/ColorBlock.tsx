@@ -24,7 +24,7 @@ const memoResult = require("noop").memo((color) => {
   const v = obj.int2hsv(color).v;
   if (null != onSelect) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
-    let tmp2Result = tmp2(4151);
+    let tmp2Result = tmp2(4152);
     tmp2Result = tmp2(688);
     obj[1] = tmp2Result.hexToColorName(tmp2Result.int2hex(color), true);
     obj = { selected: null };
@@ -43,7 +43,7 @@ const memoResult = require("noop").memo((color) => {
       let tmp10Result = tmp6(tmp2(4846).PressableOpacity, obj);
     } else {
       const obj2 = { source: null, color: null };
-      obj2[0] = onSelect(11037);
+      obj2[0] = onSelect(11042);
       if (v < 0.5) {
         unsafe_rawColors = tmp8(712).unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -66,7 +66,7 @@ const memoResult = require("noop").memo((color) => {
       tmp10Result = tmp10(tmp11, obj3);
     } else {
       const obj5 = { source: null, color: null };
-      obj5[0] = onSelect(11037);
+      obj5[0] = onSelect(11042);
       if (v < 0.5) {
         let BLACK = tmp3(712).unsafe_rawColors.WHITE;
       } else {

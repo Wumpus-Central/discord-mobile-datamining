@@ -75,7 +75,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   tmp9Result = isCoppa;
   if (isCoppa) {
     const obj2 = { text: null, url: null, onPress: null };
-    let tmp13Result = tmp13(11306);
+    let tmp13Result = tmp13(11311);
     const intl3 = tmp2(1236).intl;
     obj2[0] = intl3.string(tmp2(1236).t["gJs+kf"]);
     obj2[1] = constants.AGE_VERIFICATION_LINK;
@@ -90,7 +90,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   }
   if (isSpam) {
     const obj3 = { text: null, url: null, onPress: null };
-    tmp13Result = tmp13(11306);
+    tmp13Result = tmp13(11311);
     const intl4 = tmp2(1236).intl;
     obj3[0] = intl4.string(tmp2(1236).t.NBsJvm);
     obj3[1] = constants.SPAM_LINK;
@@ -109,8 +109,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj4[2] = function onPress() {
       return callback(outer1_5.ClickLearnMoreLink);
     };
-    tmp9Result1 = tmp9(tmp13(11306), obj4);
-    const tmp13Result1 = tmp13(11306);
+    tmp9Result1 = tmp9(tmp13(11311), obj4);
+    const tmp13Result1 = tmp13(11311);
   }
   items2[4] = tmp9Result1;
   if (isDsaEligible) {

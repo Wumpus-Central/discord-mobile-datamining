@@ -1,6 +1,6 @@
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
 import reinjectEphemerals from "reinjectEphemerals";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { ChannelFlags } from "set";
 import { MessageTypes } from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
@@ -21,7 +21,7 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   if (tmp) {
     recipientId = isDM.getRecipientId();
   }
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
     let isFriendResult = null != recipientId;
     if (isFriendResult) {
@@ -30,7 +30,7 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
     return isFriendResult;
   });
   const obj = _initialize;
-  const items1 = [upsertRelationship];
+  const items1 = [markAllUserIdListsStale];
   const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     let isIgnoredResult = null != recipientId;
     if (isIgnoredResult) {
@@ -61,8 +61,8 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = _resetCache;
-  const tmp9 = recipientId(3883)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3883)(), recipientId(3883)(extractTimestampResult), 1814400000);
+  const tmp9 = recipientId(3902)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3902)(), recipientId(3902)(extractTimestampResult), 1814400000);
   const strangerDangerWarning = _useStrangerDangerWarning.useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;

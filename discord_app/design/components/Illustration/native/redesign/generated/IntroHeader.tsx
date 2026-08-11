@@ -12,13 +12,13 @@ export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16745);
+      return callback(16757);
     },
     darker() {
-      return callback(16746);
+      return callback(16758);
     },
     light() {
-      return callback(16747);
+      return callback(16759);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useIntroHeaderSource = function useIntroHeaderSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16745);
+      return callback(16757);
     },
     darker() {
-      return callback(16746);
+      return callback(16758);
     },
     light() {
-      return callback(16747);
+      return callback(16759);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const IntroHeader = function IntroHeader(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16745);
+      return callback(16757);
     },
     darker() {
-      return callback(16746);
+      return callback(16758);
     },
     light() {
-      return callback(16747);
+      return callback(16759);
     }
   };
   obj = {};

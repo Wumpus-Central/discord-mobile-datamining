@@ -10,7 +10,6 @@ const require = arg1;
 const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
 export const setPendingChanges = function setPendingChanges(guildId) {
-  let bannerOriginalMd5;
   guildId = guildId.guildId;
   const merged = Object.assign(guildId, Object.create(null));
   currentUser = currentUser.getCurrentUser();
@@ -211,34 +210,33 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     }
     if ("banner" in merged) {
       let banner = merged.banner;
-      if (banner == null) {
-        banner = null;
+      let imageUri2;
+      if (banner != null) {
+        imageUri2 = banner.imageUri;
+      }
+      if (imageUri2 == null) {
+        imageUri2 = null;
       }
       if (null != guildId) {
-        let banner1;
+        banner = undefined;
         if (userProfile != null) {
-          banner1 = userProfile.banner;
+          banner = userProfile.banner;
         }
+        if (banner == null) {
+          banner = null;
+        }
+        let banner1 = banner;
+      } else {
+        banner1 = currentUser.banner;
         if (banner1 == null) {
           banner1 = null;
         }
-        let banner2 = banner1;
-      } else {
-        banner2 = currentUser.banner;
-        if (banner2 == null) {
-          banner2 = null;
-        }
       }
-      if (banner === banner2) {
-        obj.pendingBanner = undefined;
-        obj.pendingBannerOriginalMd5 = undefined;
-      } else {
-        ({ banner: obj.pendingBanner, bannerOriginalMd5 } = merged);
-        if (bannerOriginalMd5 == null) {
-          bannerOriginalMd5 = null;
-        }
-        obj.pendingBannerOriginalMd5 = bannerOriginalMd5;
+      let banner2;
+      if (imageUri2 !== banner1) {
+        banner2 = merged.banner;
       }
+      obj.pendingBanner = banner2;
     }
     if ("accentColor" in merged) {
       let accentColor = merged.accentColor;
@@ -252,17 +250,17 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (accentColor1 == null) {
         accentColor1 = null;
       }
-      let tmp35;
+      let tmp36;
       if (accentColor !== accentColor1) {
-        tmp35 = accentColor;
+        tmp36 = accentColor;
       }
-      obj.pendingAccentColor = tmp35;
+      obj.pendingAccentColor = tmp36;
     }
     if ("themeColors" in merged) {
       if (null != guildId) {
         if (null != merged.themeColors) {
           if (null == merged.themeColors[0]) {
-            let tmp36 = null;
+            let tmp37 = null;
           }
           let themeColors;
           if (userProfile != null) {
@@ -271,7 +269,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (isEqual(tmp36, themeColors)) {
+          if (isEqual(tmp37, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -282,7 +280,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (themeColors1 == null) {
         themeColors1 = null;
       }
-      tmp36 = themeColors1;
+      tmp37 = themeColors1;
     }
     if ("bio" in merged) {
       let bio;

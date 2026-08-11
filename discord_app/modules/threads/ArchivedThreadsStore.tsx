@@ -109,7 +109,7 @@ function resortListState(value) {
     const mapped = sorted.map((id) => id.id);
     const tmp7Result = apply(store.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
-  } else if (sortOrder === sortOrder(1381).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(1400).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = generateOldThreadCutoff.lastMessageId(id);
   } else {

@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import getUserAgnosticState from "getUserAgnosticState";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getFpMessageInfo from "getFpMessageInfo";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
@@ -41,7 +41,7 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
   const currentUser = authStore.getCurrentUser();
   if (null != currentUser) {
     if (id !== currentUser.id) {
-      const items = [ensureGuildLoaded, upsertRelationship];
+      const items = [ensureGuildLoaded, markAllUserIdListsStale];
       const tmp10 = getChannelTypeById(channelId, id, items);
       if (null == tmp10) {
         let NONE = ContentHarmType.ContentHarmTypeBitMask.NONE;
@@ -77,7 +77,7 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
             }
             return harmType;
           });
-          NONE = contentHarmTypesToFlags(mapped.filter(tmp12(1351).isNotNullish));
+          NONE = contentHarmTypesToFlags(mapped.filter(tmp12(1370).isNotNullish));
         }
       }
       return NONE;
@@ -170,17 +170,17 @@ function findComponentMedia(components) {
   }
   return obj.flatMap((type) => {
     type = type.type;
-    if (callback(1935).ComponentType.MEDIA_GALLERY === type) {
+    if (callback(1954).ComponentType.MEDIA_GALLERY === type) {
       const items = type.items;
       return items.map((media) => media.media);
-    } else if (tmp(1935).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1954).ComponentType.THUMBNAIL === type) {
       return type.media;
-    } else if (tmp(1935).ComponentType.FILE === type) {
+    } else if (tmp(1954).ComponentType.FILE === type) {
       return type.file;
     } else {
-      if (tmp(1935).ComponentType.SECTION !== type) {
-        if (tmp(1935).ComponentType.ACTION_ROW !== type) {
-          if (tmp(1935).ComponentType.CONTAINER !== type) {
+      if (tmp(1954).ComponentType.SECTION !== type) {
+        if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+          if (tmp(1954).ComponentType.CONTAINER !== type) {
             return [];
           }
         }
@@ -383,14 +383,14 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
     }
     type = type.type;
     if (ContentHarmTypeChannel.ObscuredMediaTypes.Embed === type) {
-      let tmp3Result = tmp3(1384);
+      let tmp3Result = tmp3(1403);
       let num3 = type.media.flags;
       if (num3 == null) {
         num3 = 0;
       }
       return tmp3Result.hasFlag(num3, tmp5.embedFlag);
     } else if (tmp3(5914).ObscuredMediaTypes.Attachment === type) {
-      tmp3Result = tmp3(1384);
+      tmp3Result = tmp3(1403);
       let num2 = type.media.flags;
       if (num2 == null) {
         num2 = 0;
@@ -405,7 +405,7 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
       if (num == null) {
         num = 0;
       }
-      return tmp3(1384).hasFlag(num, tmp5.genericMediaFlag);
+      return tmp3(1403).hasFlag(num, tmp5.genericMediaFlag);
     } else {
       return false;
     }
@@ -654,7 +654,7 @@ export const getEnabledHarmTypesBitmaskForChannelType = function getEnabledHarmT
       }
       return harmType;
     });
-    NONE = contentHarmTypesToFlags(mapped.filter(tmp(1351).isNotNullish));
+    NONE = contentHarmTypesToFlags(mapped.filter(tmp(1370).isNotNullish));
   }
   return NONE;
 };
@@ -682,17 +682,17 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
     }
     const mapped = obj.flatMap((type) => {
       type = type.type;
-      if (callback(1935).ComponentType.MEDIA_GALLERY === type) {
+      if (callback(1954).ComponentType.MEDIA_GALLERY === type) {
         const items = type.items;
         return items.map((media) => media.media);
-      } else if (tmp(1935).ComponentType.THUMBNAIL === type) {
+      } else if (tmp(1954).ComponentType.THUMBNAIL === type) {
         return type.media;
-      } else if (tmp(1935).ComponentType.FILE === type) {
+      } else if (tmp(1954).ComponentType.FILE === type) {
         return type.file;
       } else {
-        if (tmp(1935).ComponentType.SECTION !== type) {
-          if (tmp(1935).ComponentType.ACTION_ROW !== type) {
-            if (tmp(1935).ComponentType.CONTAINER !== type) {
+        if (tmp(1954).ComponentType.SECTION !== type) {
+          if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+            if (tmp(1954).ComponentType.CONTAINER !== type) {
               return [];
             }
           }
@@ -708,20 +708,20 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
       }
       return toUnfurledMediaItemResult;
     });
-    tmp = !mapped.some((loadingState) => loadingState.loadingState === callback(1935).UnfurledMediaLoadingState.LOADING);
+    tmp = !mapped.some((loadingState) => loadingState.loadingState === callback(1954).UnfurledMediaLoadingState.LOADING);
     const flatMapResult = obj.flatMap((type) => {
       type = type.type;
-      if (callback(1935).ComponentType.MEDIA_GALLERY === type) {
+      if (callback(1954).ComponentType.MEDIA_GALLERY === type) {
         const items = type.items;
         return items.map((media) => media.media);
-      } else if (tmp(1935).ComponentType.THUMBNAIL === type) {
+      } else if (tmp(1954).ComponentType.THUMBNAIL === type) {
         return type.media;
-      } else if (tmp(1935).ComponentType.FILE === type) {
+      } else if (tmp(1954).ComponentType.FILE === type) {
         return type.file;
       } else {
-        if (tmp(1935).ComponentType.SECTION !== type) {
-          if (tmp(1935).ComponentType.ACTION_ROW !== type) {
-            if (tmp(1935).ComponentType.CONTAINER !== type) {
+        if (tmp(1954).ComponentType.SECTION !== type) {
+          if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+            if (tmp(1954).ComponentType.CONTAINER !== type) {
               return [];
             }
           }

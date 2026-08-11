@@ -49,7 +49,7 @@ function _installApplicationOnDemandIfNeeded() {
             obj4[0] = Promise.resolve({ isAuthorized: true });
             return obj4;
           }
-          obj11 = callback(10619);
+          obj11 = callback(10624);
         }
       } else if (arg0 === 1) {
         application = 3;
@@ -63,7 +63,7 @@ function _installApplicationOnDemandIfNeeded() {
         obj = arg1;
         application = c3.createFromServer(obj);
       }
-      const USER_INSTALL = callback(9541).ApplicationIntegrationType.USER_INSTALL;
+      const USER_INSTALL = callback(9547).ApplicationIntegrationType.USER_INSTALL;
       if (application != null) {
         const integrationTypesConfig = application.integrationTypesConfig;
         if (integrationTypesConfig != null) {

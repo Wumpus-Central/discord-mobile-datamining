@@ -16,7 +16,7 @@ let THEME_PREFERENCES_WEB_REFRESH;
 let closure_6;
 const require = arg1;
 function handleThemeChange() {
-  const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
+  const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
   let flag = tmp3 !== closure_13;
   if (flag) {
     closure_13 = tmp3;
@@ -132,7 +132,7 @@ obj = {
       });
       const obj = dispatcher;
     }
-    const tmp13 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp13 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp13 !== closure_13;
     if (flag) {
       closure_13 = tmp13;
@@ -147,11 +147,11 @@ obj = {
     isSwitchingAccount = isSwitchingAccount.isSwitchingAccount;
     let tmp = !isSwitchingAccount;
     if (!isSwitchingAccount) {
-      const tmp6 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
-      let flag = tmp6 !== closure_13;
+      const tmp7 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
+      let flag = tmp7 !== closure_13;
       if (flag) {
-        closure_13 = tmp6;
-        tmp2(1354)(closure_13);
+        closure_13 = tmp7;
+        tmp2(1373)(closure_13);
         flag = true;
       }
       tmp = flag;
@@ -161,7 +161,7 @@ obj = {
   },
   OVERLAY_INITIALIZE: handleThemeChange,
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function handleSelectivelySyncedUserSettingsUpdate() {
-    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -175,7 +175,7 @@ obj = {
   RESET_PREVIEW_CLIENT_THEME: handleThemeChange,
   SYSTEM_THEME_CHANGE: function handleSystemThemeChange(systemTheme) {
     systemTheme = systemTheme.systemTheme;
-    const tmp3 = resolveTheme(systemTheme, THEME_PREFERENCES_MOBILE);
+    const tmp3 = resolveTheme(systemTheme, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -188,7 +188,7 @@ obj = {
     const obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(preferences.preferences);
-    const tmp5 = resolveTheme(closure_12, obj);
+    const tmp5 = resolveTheme(closure_12, obj, c15);
     let flag = tmp5 !== closure_13;
     if (flag) {
       closure_13 = tmp5;
@@ -224,7 +224,7 @@ obj = {
     return tmp;
   },
   SET_THEME_OVERRIDE: function handleSetThemeOverride(arg0) {
-    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -234,7 +234,7 @@ obj = {
     return flag;
   },
   CLEAR_THEME_OVERRIDE: function handleClearThemeOverride() {
-    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -244,7 +244,7 @@ obj = {
     return flag;
   },
   REFRESH_THEME: function handleRefresh() {
-    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE);
+    const tmp3 = resolveTheme(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;

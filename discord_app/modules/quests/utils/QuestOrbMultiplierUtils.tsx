@@ -22,10 +22,10 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1921).Perk.MORE_QUEST_ORBS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1940).Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1921).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(tmp4(1940).PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -34,18 +34,18 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
         if (tmp4Result.getIsCrepeEnabled("getQuestOrbMultiplierSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1921).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(tmp4(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(7015);
+        tmp4Result = tmp4(7018);
       }
       return NITRO;
     }
-    tmpResult = tmp(3947);
+    tmpResult = tmp(3966);
   } else {
     return null;
   }

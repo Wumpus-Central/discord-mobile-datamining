@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo((onClose) => {
   let dependencyMap;
   let importAllResult;
   function handleOpenDatePicker(closure_5, arg1) {
-    let obj = first(1872);
+    let obj = first(1891);
     const result = obj.dismissGlobalKeyboard();
     if ("date" === closure_5) {
       const intl2 = onClose(1236).intl;
@@ -44,14 +44,14 @@ const memoResult = importAllResult.memo((onClose) => {
     const obj2 = createReminder(4271);
     const tmp = dependencyMap;
     obj[1] = first.toDate();
-    const tmp6 = tmp3(1988)(8975, dependencyMap.paths);
-    obj[2] = createReminder(3883)().toDate();
+    const tmp6 = tmp3(2007)(8981, dependencyMap.paths);
+    obj[2] = createReminder(3902)().toDate();
     obj[3] = closure_5;
     obj[4] = dependencyMap;
     obj2.openLazy(tmp6, "DatePicker", obj);
   }
   let tmp = callback();
-  const tmp4 = handleOpenDatePicker(importAllResult.useState(() => createReminder(3883)()), 2);
+  const tmp4 = handleOpenDatePicker(importAllResult.useState(() => createReminder(3902)()), 2);
   first = tmp4[0];
   dependencyMap = tmp4[1];
   const items = [createReminder, first, onClose];
@@ -69,12 +69,12 @@ const memoResult = importAllResult.memo((onClose) => {
     const obj = { title: null };
     const intl = onClose(1236).intl;
     obj[0] = intl.string(onClose(1236).t.VKsXpY);
-    return callback(onClose(8382).GenericHeaderTitle, obj);
+    return callback(onClose(8388).GenericHeaderTitle, obj);
   };
   let obj3 = onClose(500);
   let num = 0;
   if (!obj3.isIOS()) {
-    num = createReminder(1609)().top;
+    num = createReminder(1628)().top;
   }
   obj[3] = num + createReminder(712).space.PX_8;
   obj[4] = onClose(5270).getHeaderCloseButton(onClose);

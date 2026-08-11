@@ -33,7 +33,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7349).AnnouncementModalVariant1Properties;
+            return callback(7350).AnnouncementModalVariant1Properties;
           }
     };
     items[2] = {
@@ -42,7 +42,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7353).PremiumTab;
+            return callback(7354).PremiumTab;
           }
     };
     items[3] = {
@@ -51,7 +51,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7354).MarketingPageBanner;
+            return callback(7355).MarketingPageBanner;
           }
     };
     items[4] = {
@@ -60,7 +60,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7355).PaymentModalBanner;
+            return callback(7356).PaymentModalBanner;
           }
     };
     items[5] = {
@@ -69,7 +69,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7356).MobileBottomSheet;
+            return callback(7357).MobileBottomSheet;
           }
     };
     items[6] = {
@@ -78,7 +78,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7357).GiftIcon;
+            return callback(7358).GiftIcon;
           }
     };
     items[7] = {
@@ -87,7 +87,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7359).GiftIconCoachmark;
+            return callback(7360).GiftIconCoachmark;
           }
     };
     items[8] = {
@@ -96,7 +96,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7361).GiftPlanSelectionCardBanner;
+            return callback(7362).GiftPlanSelectionCardBanner;
           }
     };
     items[9] = {
@@ -105,7 +105,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7362).GiftCustomizationBanner;
+            return callback(7363).GiftCustomizationBanner;
           }
     };
     items[10] = {
@@ -114,7 +114,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7363).BillingSettingsNitroGiftBanner;
+            return callback(7364).BillingSettingsNitroGiftBanner;
           }
     };
     items[11] = {
@@ -123,7 +123,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7364).GiftReminderNagbar;
+            return callback(7365).GiftReminderNagbar;
           }
     };
     items[12] = {
@@ -132,7 +132,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7365).GiftReminderCoachmark;
+            return callback(7366).GiftReminderCoachmark;
           }
     };
     items[13] = {
@@ -141,7 +141,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7366).PremiumTabTooltip;
+            return callback(7367).PremiumTabTooltip;
           }
     };
     items[14] = {
@@ -150,7 +150,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7367).PremiumTabPopover;
+            return callback(7368).PremiumTabPopover;
           }
     };
     items[15] = {
@@ -159,7 +159,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7368).Nagbar;
+            return callback(7369).Nagbar;
           }
     };
     items[16] = {
@@ -168,7 +168,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7369).PlanSelectCardBanner;
+            return callback(7370).PlanSelectCardBanner;
           }
     };
     items[17] = {
@@ -177,7 +177,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7370).BillingSettingsBanner;
+            return callback(7371).BillingSettingsBanner;
           }
     };
     obj = { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: null };
@@ -194,7 +194,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7372).AdminEditorTestComponent;
+            return callback(7373).AdminEditorTestComponent;
           }
     };
     items[20] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
@@ -206,7 +206,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { properties: { oneofKind: "Promise" }, contentIdentifier: "", isDefaultBase: false };
+  let obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
@@ -222,9 +222,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.isDefaultBase = pos.bool();
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };

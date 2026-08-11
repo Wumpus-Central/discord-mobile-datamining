@@ -95,7 +95,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
     obj1[0] = tmp.infoText;
     const intl = tmp4(1236).intl;
     obj2 = { helpdeskArticleUrl: null };
-    obj2[0] = tmp2(1974).getArticleURL(constants.CONNECTION_DETAILS);
+    obj2[0] = tmp2(1993).getArticleURL(constants.CONNECTION_DETAILS);
     obj1[3] = intl.format(tmp4(1236).t["Y+TsEV"], obj2);
     const items5 = [callback2(tmp4(4299).Text, obj1), ];
     let obj3 = { style: null, children: null };

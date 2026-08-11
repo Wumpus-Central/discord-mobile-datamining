@@ -169,8 +169,8 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   const obj4 = { style: tmp.guildIcon, icon: guildIconURL, guild: null, selected: false };
   let result;
   if (null == guildIconURL) {
-    result = tmp2(1411).fromGuildDirectoryEntry(entry);
-    const tmp2Result = tmp2(1411);
+    result = tmp2(1430).fromGuildDirectoryEntry(entry);
+    const tmp2Result = tmp2(1430);
   }
   obj4[2] = result;
   const items1 = [closure_10(GuildIconSizes, obj4), ];

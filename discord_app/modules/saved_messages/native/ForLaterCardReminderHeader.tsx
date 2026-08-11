@@ -28,7 +28,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
   }
-  obj = { dueAt, now: throttledNow, type: tmp2(10280).DueInStringTypes.SHORT };
+  obj = { dueAt, now: throttledNow, type: tmp2(10285).DueInStringTypes.SHORT };
   const dueInString = obj.useDueInString(obj);
   const isOverdue = dueInString.isOverdue;
   if (null == savedMessage.saveData.dueAt) {

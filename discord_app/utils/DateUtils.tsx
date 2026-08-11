@@ -2,7 +2,7 @@
 import importDefaultResult from "_getSystemLocale";
 import importDefaultResult1 from "dispatcher";
 import importDefaultResult2 from "dispatcher";
-import { t } from "../../_runtime/03883_t.js";
+import { t } from "../../_runtime/03902_t.js";
 import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
@@ -16,8 +16,8 @@ function syncHourCycleToIntlConfig() {
   const setting = TimestampHourCycle.getSetting();
   let result = setting !== create.TimestampHourCycle.AUTO;
   if (result) {
-    result = tmp4(3988).supportsSystemDateFormatter();
-    const tmp4Result = tmp4(3988);
+    result = tmp4(4007).supportsSystemDateFormatter();
+    const tmp4Result = tmp4(4007);
   }
   const values = Object.values(tmp4(1236).intl.formatConfig.time);
   const iter = values[Symbol.iterator]();
@@ -99,7 +99,7 @@ function differenceInCalendarDays(str, str2) {
 function dateFormat(date, LL, setting) {
   let obj2 = date;
   if (!obj.isMoment(date)) {
-    obj2 = tmp(3883)(date);
+    obj2 = tmp(3902)(date);
   }
   obj = t;
   if (setting == null) {
@@ -109,7 +109,7 @@ function dateFormat(date, LL, setting) {
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
   let tmp7 = table[combined];
   if (null == tmp7) {
-    const tmp9 = tmp(3990)(LL);
+    const tmp9 = tmp(4009)(LL);
     table[combined] = tmp9;
     tmp7 = tmp9;
   }
@@ -192,7 +192,7 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
     }
     let tmp8 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp8 = tmp(3883)(timestamp);
+      tmp8 = tmp(3902)(timestamp);
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
@@ -213,10 +213,10 @@ export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
   } else if (-1 === tmp2Result) {
     let tmp6 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp6 = tmp(3883)(timestamp);
+      tmp6 = tmp(3902)(timestamp);
     }
     let str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
-    tmpResult = tmp(3883);
+    tmpResult = tmp(3902);
   } else {
     str2 = "L";
     if (tmp2Result > -7) {
@@ -255,8 +255,8 @@ export const accessibilityLabelCalendarFormat = function accessibilityLabelCalen
   }
   let str5 = "LLL";
   if ("sameElse" !== str) {
-    str5 = localeDataResult.calendar(str, tmp(3883)(timestamp), tmp(3883)(date));
-    const tmp6 = tmp(3883)(timestamp);
+    str5 = localeDataResult.calendar(str, tmp(3902)(timestamp), tmp(3902)(date));
+    const tmp6 = tmp(3902)(timestamp);
   }
   return dateFormat(timestamp, str5);
 };

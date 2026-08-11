@@ -11,7 +11,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import map from "map";
 import updateInvite from "updateInvite";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -674,7 +674,7 @@ export default {
       obj[1] = arg0;
       tmp(709).dispatch(obj);
       const tmpResult = tmp(709);
-      nextPromise = tmp(9332)(arg0, arg1, arg2).then((arg0) => {
+      nextPromise = tmp(9338)(arg0, arg1, arg2).then((arg0) => {
         let code;
         let invite;
         ({ invite, code } = arg0);
@@ -693,7 +693,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(9332)(arg0, arg1, arg2);
+      const promise = tmp(9338)(arg0, arg1, arg2);
     }
     return nextPromise;
   },
@@ -2010,26 +2010,26 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(12671).onOpenHubInvite(closure_0);
-        const obj6 = obj(12671);
+        obj(12675).onOpenHubInvite(closure_0);
+        const obj6 = obj(12675);
       }
     }
     let num = closure_0.flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = id(1384).hasFlag(num, id(7772).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = id(1403).hasFlag(num, id(7774).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      let tmp6Result = tmp6(1384);
-      hasFlagResult = tmp6Result.hasFlag(num, tmp6(7772).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      let tmp6Result = tmp6(1403);
+      hasFlagResult = tmp6Result.hasFlag(num, tmp6(7774).GuildInviteFlags.IS_APPLICATION_BYPASS);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (closure_0.new_member) {
-          tmp6Result = tmp6(12672);
+          tmp6Result = tmp6(12676);
           if (tmp6Result.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(12672).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result1 = tmp6(12672);
+            const result1 = tmp6(12676).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result1 = tmp6(12676);
           }
         }
       }
@@ -2483,7 +2483,7 @@ export default {
           const _HermesInternal = HermesInternal;
           let combined = "discord://" + substr;
         }
-        tmp7Result = tmp7(12676);
+        tmp7Result = tmp7(12680);
         tmp7Result.launch(combined, (arg0) => {
           let obj = outer1_1(outer1_3[39]);
           if (arg0) {
@@ -2506,7 +2506,7 @@ export default {
       tmp20 = _require;
       const obj4 = _getInviteDynamicLinkTemplate;
     }
-    let tmp20Result = tmp20(12674);
+    let tmp20Result = tmp20(12678);
     const attemptId = tmp20Result.generateAttemptId();
     let str7 = "friend_invite";
     if (2 !== arg4) {

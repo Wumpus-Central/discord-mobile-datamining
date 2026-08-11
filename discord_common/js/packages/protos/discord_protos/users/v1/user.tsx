@@ -2177,7 +2177,7 @@ class Badge$Type extends MessageType14 {
 }
 const prototype14 = Badge$Type.prototype;
 prototype14["create"] = function create(arr) {
-  let obj = { badge: { oneofKind: "Promise" } };
+  let obj = { badge: { oneofKind: "r" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
@@ -4330,7 +4330,7 @@ class PerkConfig$Type extends MessageType27 {
 }
 const prototype27 = PerkConfig$Type.prototype;
 prototype27["create"] = function create(arr) {
-  let obj = { source: [], kind: { oneofKind: "Promise" } };
+  let obj = { source: [], kind: { oneofKind: "r" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);

@@ -28,7 +28,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
   let obj = useUserIdsForLinkStatus;
   obj = { style: tmp.container, children: null };
   const linkTimestampText = obj.useLinkTimestampText(otherUser.id, otherUser.status);
-  obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
+  obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "fatal" };
   obj[4] = otherUser.avatarDecoration;
   const items = [callback(Button.Avatar, obj), ];
   const obj1 = { style: tmp.detailsContainer, children: null };

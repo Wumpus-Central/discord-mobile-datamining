@@ -14,7 +14,7 @@ const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx");
 
 export default function UserSettingsFriendRequests() {
-  let FriendSourceFlagsSetting = setting(3974).FriendSourceFlagsSetting;
+  let FriendSourceFlagsSetting = setting(3993).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = React.useMemo(() => setting(outer1_2[5]).computeFlags(setting), items);

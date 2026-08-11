@@ -2,7 +2,7 @@
 import "noop";
 import participantFromServer from "participantFromServer";
 import reset from "reset";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { jsx } from "jsxProd";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { IconOrPreview } from "HappeningNowCardActivity.tsx";
@@ -29,7 +29,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
   }
   const channelId = voiceState.channelId;
   let obj = channelId(647);
-  const items = [participantFromServer, reset, upsertRelationship];
+  const items = [participantFromServer, reset, markAllUserIdListsStale];
   const items1 = [channelId];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     if (null == channelId) {
@@ -93,7 +93,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
 };
 export const useCallActivityData = function useCallActivityData(channel_id) {
   const _require = channel_id;
-  const items = [participantFromServer, reset, upsertRelationship];
+  const items = [participantFromServer, reset, markAllUserIdListsStale];
   const items1 = [channel_id];
   return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
     if (null == channelId) {

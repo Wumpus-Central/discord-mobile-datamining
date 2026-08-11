@@ -1,7 +1,7 @@
 // discord_app/modules/custom_status/setCustomStatus.tsx
 import { ClearAfterValues } from "StatusTypes";
 import { AnalyticEvents } from "ME";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { getClearAfterDuration } from "utils/getClearAfterDuration.tsx";

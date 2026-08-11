@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09479_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09485_registerAsset.js";
 
 const require = arg1;
 let c3 = importAllResult;
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
   const intl = setMode(1236).intl;
   obj[1] = intl.string(setMode(1236).t.brPQ5U);
   obj[2] = callback;
-  tmp3 = jsx(setMode(7751).IconButton, { icon: null, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
+  tmp3 = jsx(setMode(7753).IconButton, { icon: null, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
 });
 const result = require("ActivityPanelModes").fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
 

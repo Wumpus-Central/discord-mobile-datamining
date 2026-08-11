@@ -262,7 +262,7 @@ export default function CreateGuildContainer(onCreate) {
       }
     }
   }), items);
-  obj = { top: true, style: items1, children: null };
+  obj = { top: true, left: true, right: true, style: items1, children: null };
   items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp2);
   obj = {};
@@ -276,6 +276,6 @@ export default function CreateGuildContainer(onCreate) {
   obj.onStaffOnlyChange = tmp11[1];
   obj.onCreate = callback1;
   obj.autoFocus = flag;
-  obj[2] = first2(guildTemplate(onHubGuildInfoSet[16]), obj);
+  obj[4] = first2(guildTemplate(onHubGuildInfoSet[16]), obj);
   return first2(onCreate(onHubGuildInfoSet[15]).SafeAreaPaddingView, obj);
 };

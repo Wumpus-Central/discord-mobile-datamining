@@ -499,7 +499,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj4[2] = tmp.help;
     const intl3 = stickerId(1236).intl;
     let obj5 = { articleUrl: null };
-    let tmp14Result = tmp14(1974);
+    let tmp14Result = tmp14(1993);
     obj5[0] = tmp14Result.getArticleURL(first.STICKERS_UPLOAD);
     obj4[3] = intl3.format(stickerId(1236).t.UBj0aX, obj5);
     items2[2] = callback(stickerId(4299).Text, obj4);
@@ -531,7 +531,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   if (null != tmp16Result) {
     const obj11 = { sticker: null, size: null, animated: true };
     obj11[0] = tmp16Result;
-    tmp14Result = tmp14(9849);
+    tmp14Result = tmp14(9854);
     obj11[1] = tmp14(712).space.PX_96;
     let tmp32Result = tmp32(tmp14Result, obj11);
   } else if (null != first) {
@@ -542,7 +542,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj12[1] = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj12);
   } else {
-    tmp32Result = tmp32(tmp31(16668).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(16680).StickerPlusIcon, { size: "lg" });
   }
   obj10[5] = tmp32Result;
   items4[1] = callback(stickerId(4846).PressableHighlight, obj10);
@@ -568,14 +568,14 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       const obj17 = { id: null, animated: null, size: null };
       ({ id: obj23[0], animated: obj23[1] } = first1);
       obj17[2] = c12;
-      emojiURL = tmp14(1416).getEmojiURL(obj17);
-      const tmp14Result2 = tmp14(1416);
+      emojiURL = tmp14(1435).getEmojiURL(obj17);
+      const tmp14Result2 = tmp14(1435);
     }
     obj16[2] = emojiURL;
     tmp32Result = tmp32(tmp14(5360), obj16);
     const tmp14Result1 = tmp14(5360);
   } else {
-    tmp32Result = tmp32(tmp31(7655).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(7657).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result, ];
   if (null != first1) {
@@ -605,7 +605,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       current2.scrollToEnd({ animated: true });
     }
   };
-  items4[4] = callback(stickerId(7790).TextInput, obj18);
+  items4[4] = callback(stickerId(7792).TextInput, obj18);
   const obj19 = { ref: ref2, maxLength: 100, label: null, placeholder: null, onChange: null, onFocus: null };
   const intl11 = tmp31(1236).intl;
   obj19[2] = intl11.string(stickerId(1236).t.uGccej);
@@ -613,7 +613,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   obj19[3] = intl12.string(stickerId(1236).t.zwR0fa);
   obj19[4] = tmp8;
   obj19[5] = onFocus;
-  items4[5] = callback(stickerId(7976).TextArea, obj19);
+  items4[5] = callback(stickerId(7978).TextArea, obj19);
   const obj20 = {
     onPress: function handleSave() {
       const self = this;

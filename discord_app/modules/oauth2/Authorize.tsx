@@ -19,10 +19,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(8902).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(8908).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(8902).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(8908).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };
@@ -31,7 +31,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
   let guild_id;
   let obj = keysSorter;
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
-  const NONE = importAll(3934).NONE;
+  const NONE = importAll(3953).NONE;
   try {
     let str2 = "0";
     if (null != parsed.permissions) {

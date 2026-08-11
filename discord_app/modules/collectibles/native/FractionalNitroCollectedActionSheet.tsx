@@ -5,7 +5,7 @@ import { HelpdeskArticles } from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12164_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12167_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { FRACTIONAL_NITRO_COIN_SIZE } from "FractionalNitroCoinIllustration.tsx";
 
@@ -71,7 +71,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   dependencyMap = tmp;
   const tmp4 = consumed(4239)();
   React = tmp4;
-  let obj = skuId(7047);
+  let obj = skuId(7050);
   const fetchFractionalPremiumInfo = obj.useFetchFractionalPremiumInfo();
   isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
   expiresAt = fetchFractionalPremiumInfo.expiresAt;
@@ -137,7 +137,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   if (consumed) {
     obj = { premiumType: null };
     obj[0] = TIER_2.TIER_2;
-    let tmp12Result = tmp12(tmp2(6895), obj);
+    let tmp12Result = tmp12(tmp2(6897), obj);
     let tmp15 = tmp12;
   } else {
     obj = { skuId: null };
@@ -150,7 +150,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   let obj2 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   const obj3 = { style: tmp.questionIcon, color: null };
   obj3[1] = consumed(712).colors.WHITE;
-  obj2[2] = tmp15(skuId(10155).CircleQuestionIcon, obj3);
+  obj2[2] = tmp15(skuId(10160).CircleQuestionIcon, obj3);
   items2[1] = tmp15(skuId(4846).PressableOpacity, obj2);
   obj1[0] = items2;
   const items3 = [closure_10(closure_11, obj1), , ];

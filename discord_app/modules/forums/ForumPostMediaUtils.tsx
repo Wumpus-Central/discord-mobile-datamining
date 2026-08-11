@@ -323,7 +323,7 @@ function useForumPostMediaProperties(firstResult, flag) {
           } else {
             return null;
           }
-        }).filter(tmp(1351).isNotNullish);
+        }).filter(tmp(1370).isNotNullish);
         const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
@@ -566,7 +566,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
           } else {
             return null;
           }
-        }).filter(tmp(1351).isNotNullish);
+        }).filter(tmp(1370).isNotNullish);
         const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
@@ -786,7 +786,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
           } else {
             return null;
           }
-        }).filter(tmp(1351).isNotNullish);
+        }).filter(tmp(1370).isNotNullish);
         const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
@@ -986,7 +986,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
           } else {
             return null;
           }
-        }).filter(tmp(1351).isNotNullish);
+        }).filter(tmp(1370).isNotNullish);
         const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;

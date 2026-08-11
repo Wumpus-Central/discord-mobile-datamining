@@ -36,7 +36,7 @@ export default function useProfileTheme(arg0) {
   }
   let tmp4Result = tmp4(711);
   const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = tmp4(8235);
+  tmp4Result = tmp4(8239);
   callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
@@ -76,19 +76,19 @@ export default function useProfileTheme(arg0) {
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8313).getProfileTheme(first);
+        let profileTheme = tmp4(8318).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = tmp4(8313);
+        const tmp4Result3 = tmp4(8318);
       }
     }
     if (tmp16 !== ThemeTypes.DARK) {
       let isThemeLightResult = tmp16 === tmp18.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = tmp4(4153).isThemeLight(tmp2);
-        const tmp4Result4 = tmp4(4153);
+        isThemeLightResult = tmp4(1363).isThemeLight(tmp2);
+        const tmp4Result4 = tmp4(1363);
       }
       let DARKER = tmp16;
       if (isThemeLightResult) {
@@ -96,7 +96,7 @@ export default function useProfileTheme(arg0) {
       }
     } else {
       DARKER = tmp2;
-      const tmp4Result5 = tmp4(4153);
+      const tmp4Result5 = tmp4(1363);
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

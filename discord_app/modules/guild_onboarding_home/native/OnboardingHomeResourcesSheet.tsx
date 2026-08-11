@@ -11,7 +11,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_onboardin
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
   let importDefault;
-  let obj = guildId(4005);
+  let obj = guildId(4024);
   importDefault = obj.useToken(Themes.modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = { hasIcons: true, children: null };

@@ -24,7 +24,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = createCacheKey();
-  let obj = prop(7804);
+  let obj = prop(7806);
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [prop];
   const effect = React.useEffect(() => {
@@ -73,7 +73,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
       obj3[0] = function handleOnHelpUrlHook() {
         modalSessionId(table[19]).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
       };
-      obj2[1] = intl4.format(modalSessionId(2802).htWh1G, obj3);
+      obj2[1] = intl4.format(modalSessionId(2821).htWh1G, obj3);
       tmp7Result = tmp7(tmp2(4299).Text, obj2);
     }
     const obj4 = { spacing: 8, align: "center", children: null };
@@ -84,13 +84,13 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const obj5 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
   const intl2 = tmp2(1236).intl;
-  obj6[3] = intl2.string(modalSessionId(2802).cR6336);
+  obj6[3] = intl2.string(modalSessionId(2821).cR6336);
   const items3 = [callback(prop(4299).Text, obj6), ];
   const obj7 = { style: tmp.buttonGroup, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1236).intl;
-  obj8[2] = intl3.string(modalSessionId(2802).hDvmYP);
-  obj8[3] = prop(7803).getAgeVerificationMethods;
+  obj8[2] = intl3.string(modalSessionId(2821).hDvmYP);
+  obj8[3] = prop(7805).getAgeVerificationMethods;
   obj7[1] = callback(prop(4714).Button, obj8);
   items3[1] = callback(prop(5150).ButtonGroup, obj7);
   obj5[4] = items3;

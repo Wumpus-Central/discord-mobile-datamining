@@ -16,24 +16,24 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       if (pathname.startsWith("/channels/")) {
-        let tmpResult = tmp(4129);
+        let tmpResult = tmp(4131);
         obj = { path: null };
         let obj4 = Routes;
-        const RouteParam = tmp(4142).RouteParam;
-        const RouteParam2 = tmp(4142).RouteParam;
+        const RouteParam = tmp(4144).RouteParam;
+        const RouteParam2 = tmp(4144).RouteParam;
         const guildIdResult = RouteParam.guildId();
-        const RouteParam3 = tmp(4142).RouteParam;
+        const RouteParam3 = tmp(4144).RouteParam;
         const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }));
-        const RouteParam4 = tmp(4142).RouteParam;
+        const RouteParam4 = tmp(4144).RouteParam;
         const _HermesInternal = HermesInternal;
         obj[0] = "" + CHANNELResult + Routes.VOICE_CHAT_CHANNEL_PARTIAL(RouteParam3.guildId({ name: "voiceGuildId" }), RouteParam4.channelId({ name: "voiceChannelId" }), ":voiceMessageId?");
         if (null != tmpResult.matchPath(pathname, obj)) {
           return true;
         } else {
-          tmpResult = tmp(4129);
+          tmpResult = tmp(4131);
           obj = { path: null };
-          const RouteParam6 = tmp(4142).RouteParam;
-          const RouteParam7 = tmp(4142).RouteParam;
+          const RouteParam6 = tmp(4144).RouteParam;
+          const RouteParam7 = tmp(4144).RouteParam;
           obj[0] = obj4.CHANNEL(RouteParam6.guildId(), RouteParam7.channelId({ optional: true }), ":messageId?");
           const matchPathResult = tmpResult.matchPath(pathname, obj);
           if (null != matchPathResult) {
@@ -126,9 +126,9 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
       }
       if (pathname.startsWith("/member-verification/")) {
         const obj8 = { path: null };
-        const RouteParam5 = tmp(4142).RouteParam;
+        const RouteParam5 = tmp(4144).RouteParam;
         obj8[0] = Routes.GUILD_MEMBER_VERIFICATION(RouteParam5.guildId());
-        const matchPathResult1 = tmp(4129).matchPath(pathname, obj8);
+        const matchPathResult1 = tmp(4131).matchPath(pathname, obj8);
         if (null != matchPathResult1) {
           const result = tmp(4158).navigateToMemberVerification(matchPathResult1.params.guildId, matchPathResult1.params.inviteCode);
           const tmpResult12 = tmp(4158);

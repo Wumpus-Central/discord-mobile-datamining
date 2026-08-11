@@ -17,8 +17,8 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(7339).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14072).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(7340).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(14080).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return React.useMemo(() => controlledSetting(outer1_1[6]).computeFlags(controlledSetting), items).all;

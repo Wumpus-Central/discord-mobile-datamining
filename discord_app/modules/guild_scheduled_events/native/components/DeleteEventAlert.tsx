@@ -46,7 +46,7 @@ export default function DeleteEventAlert(eventException) {
               return obj;
             } else {
               let closure_0 = tmp4;
-              const obj8 = v0(8940);
+              const obj8 = v0(8946);
               if (outer1_4) {
                 v0 = 2;
                 dependencyMap = 1;

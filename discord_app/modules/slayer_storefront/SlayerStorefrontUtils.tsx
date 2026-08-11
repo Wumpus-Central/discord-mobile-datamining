@@ -410,7 +410,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "Array", primaryIconLabel: "ct" };
+          obj = { primaryIconAsset: "Array", primaryIconLabel: "HermesInternal" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -423,7 +423,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "ct" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "HermesInternal" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;

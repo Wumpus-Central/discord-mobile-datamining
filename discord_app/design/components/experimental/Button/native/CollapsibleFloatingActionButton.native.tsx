@@ -14,7 +14,7 @@ function CollapsableButton(arg0) {
   let collapseText;
   collapseText = state.collapseText;
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = collapseText(4036);
+  let obj = collapseText(4042);
   class B {
     constructor() {
       obj = { minWidth: collapseText(outer1_2[2]).FAB_BUTTON_SIZE, minHeight: collapseText(outer1_2[2]).FAB_BUTTON_SIZE, paddingHorizontal: null, paddingVertical: null };
@@ -28,7 +28,7 @@ function CollapsableButton(arg0) {
       return obj;
     }
   }
-  obj = { FAB_BUTTON_SIZE: collapseText(4718).FAB_BUTTON_SIZE, withSpring: collapseText(4713).withSpring, interpolate: collapseText(4036).interpolate, collapseText, FAB_PADDING_HORIZONTAL: 20, FAB_PADDING_VERTICAL: buttonPadding, SUBTLE_SPRING: collapseText(4717).SUBTLE_SPRING };
+  obj = { FAB_BUTTON_SIZE: collapseText(4718).FAB_BUTTON_SIZE, withSpring: collapseText(4713).withSpring, interpolate: collapseText(4042).interpolate, collapseText, FAB_PADDING_HORIZONTAL: 20, FAB_PADDING_VERTICAL: buttonPadding, SUBTLE_SPRING: collapseText(4717).SUBTLE_SPRING };
   B.__closure = obj;
   B.__workletHash = 5958377845220;
   B.__initData = closure_7;
@@ -67,11 +67,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button, ];
   if (positionRight == null) {
-    positionRight = tmp3(8670).DEFAULT_POSITION_OFFSET;
+    positionRight = tmp3(8676).DEFAULT_POSITION_OFFSET;
   }
   obj = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(8670).DEFAULT_POSITION_OFFSET;
+    positionBottom = tmp3(8676).DEFAULT_POSITION_OFFSET;
   }
   obj[2] = positionBottom;
   items[1] = obj;

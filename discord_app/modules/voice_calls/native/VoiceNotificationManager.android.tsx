@@ -7,7 +7,7 @@ import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { InputModes } from "ME";
 import "initialize";
@@ -20,7 +20,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     VoiceNotificationManager = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: true, isPushToTalk: "/assets/.cache/intl/ZGVzaWdu", embeddedActivity: null, isStreaming: "cb459f0e15423e94f710a1580179e829" };
+    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: true, isPushToTalk: "/assets/.cache/intl/ZGVzaWdu", embeddedActivity: null, isStreaming: "ebe1bfed131aed04524ff151e2fd3860" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = outer1_9.getChannelId();
       const state = outer1_9.getState();
@@ -225,7 +225,7 @@ prototype["terminate"] = function terminate() {
 };
 let set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: true, isPushToTalk: "/assets/.cache/intl/ZGVzaWdu", embeddedActivity: null, isStreaming: "cb459f0e15423e94f710a1580179e829" };
+set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: true, isPushToTalk: "/assets/.cache/intl/ZGVzaWdu", embeddedActivity: null, isStreaming: "ebe1bfed131aed04524ff151e2fd3860" };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = outer1_9.getChannelId();
   const state = outer1_9.getState();

@@ -73,7 +73,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj1[3] = tmp13;
           obj1[4] = item.label;
           tmp7 = obj1;
-        } else if (tmp8(1930).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (tmp8(1949).CollectiblesItemType.NAMEPLATE === type) {
           const obj3 = { id: null, type: null, asset: null, assets: null, label: null, palette: null };
           ({ id: obj5[0], type: obj5[1], asset: obj5[2], assets } = item);
           let tmp12;
@@ -85,7 +85,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj3[3] = tmp12;
           ({ label: obj5[4], palette: obj5[5] } = item);
           tmp7 = obj3;
-        } else if (tmp8(1930).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (tmp8(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj5 = { id: null, type: null, title: null, description: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null };
           ({ id: obj4[0], type: obj4[1], title: obj4[2], description: obj4[3], accessibilityLabel: obj4[4], animationType: obj4[5], staticFrameSrc: obj4[6], thumbnailPreviewSrc: obj4[7], reducedMotionSrc: obj4[8], effects } = item);
           let mapped1;
@@ -94,7 +94,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           }
           obj5[9] = mapped1;
           tmp7 = obj5;
-        } else if (tmp8(1930).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (tmp8(1949).CollectiblesItemType.PROFILE_FRAME === type) {
           const obj6 = { id: null, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
           ({ id: obj10[0], type: obj10[1], label: obj10[2], layers: obj10[3], inner_width: obj10[4], overflow_top: obj10[5], overflow_bottom: obj10[6], overflow_horizontal: obj10[7] } = item);
           tmp7 = obj6;

@@ -3,7 +3,7 @@ import frozen from "frozen";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "start";
-import { t } from "../../_runtime/03883_t.js";
+import { t } from "../../_runtime/03902_t.js";
 import { _resolveGiftCode } from "../utils/GiftCodeUtils.tsx";
 
 let c4;

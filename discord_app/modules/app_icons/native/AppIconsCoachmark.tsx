@@ -5,8 +5,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08730_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16000_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08736_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16017_registerAsset.js";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 let c4;

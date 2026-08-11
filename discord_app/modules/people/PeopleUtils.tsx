@@ -1,5 +1,5 @@
 // discord_app/modules/people/PeopleUtils.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { AbortCodes } from "ME";
 import { handleRelationshipAddError } from "../../actions/RelationshipActionCreators.tsx";
 import { showRequestFailedAlert } from "../game_relationships/GameRelationshipActionCreators.tsx";
@@ -73,14 +73,14 @@ export default {
     let AbortCodes;
     let _location2;
     let applicationId2;
-    let upsertRelationship;
+    let markAllUserIdListsStale;
     let closure_5;
     let confirmStrangerRequest;
     let userId2;
     userId = userId.userId;
     const applicationId = userId.applicationId;
     const _location = userId.location;
-    ({ onConfirm: upsertRelationship, onCancel: AbortCodes, onFinally: closure_5 } = userId);
+    ({ onConfirm: markAllUserIdListsStale, onCancel: AbortCodes, onFinally: closure_5 } = userId);
     let obj = userId(_location[4]);
     let result = obj.isSettingTeenByDefault(userId(_location[5]).SettingsDefaultFeature.FRIEND_REQUEST_STRANGER_CONFIRMATION);
     let obj1 = userId(_location[6]);
@@ -108,7 +108,7 @@ export default {
                 obj[2] = obj1;
                 obj.acceptFriendRequest(obj);
               }
-              if (upsertRelationship != null) {
+              if (markAllUserIdListsStale != null) {
                 tmp10();
               }
             };
@@ -150,7 +150,7 @@ export default {
               result3 = obj3.acceptFriendRequest(obj2);
             }
             const nextPromise = result3.then((body) => {
-              obj = { userId: obj, applicationId, location: _location, onConfirm: upsertRelationship, onCancel: closure_4 };
+              obj = { userId: obj, applicationId, location: _location, onConfirm: markAllUserIdListsStale, onCancel: closure_4 };
               let code;
               if (body != null) {
                 body = body.body;
@@ -226,7 +226,7 @@ export default {
               }
             });
             result3.then((body) => {
-              obj = { userId: obj, applicationId, location: _location, onConfirm: upsertRelationship, onCancel: closure_4 };
+              obj = { userId: obj, applicationId, location: _location, onConfirm: markAllUserIdListsStale, onCancel: closure_4 };
               let code;
               if (body != null) {
                 body = body.body;
@@ -301,7 +301,7 @@ export default {
                 }
               }
             }).catch((body) => {
-              obj = { userId: obj, applicationId, location: _location, onConfirm: upsertRelationship, onCancel: closure_4 };
+              obj = { userId: obj, applicationId, location: _location, onConfirm: markAllUserIdListsStale, onCancel: closure_4 };
               let code;
               if (body != null) {
                 body = body.body;
@@ -373,7 +373,7 @@ export default {
               }
             });
             const catchPromise = result3.then((body) => {
-              obj = { userId: obj, applicationId, location: _location, onConfirm: upsertRelationship, onCancel: closure_4 };
+              obj = { userId: obj, applicationId, location: _location, onConfirm: markAllUserIdListsStale, onCancel: closure_4 };
               let code;
               if (body != null) {
                 body = body.body;
@@ -448,7 +448,7 @@ export default {
                 }
               }
             }).catch((body) => {
-              obj = { userId: obj, applicationId, location: _location, onConfirm: upsertRelationship, onCancel: closure_4 };
+              obj = { userId: obj, applicationId, location: _location, onConfirm: markAllUserIdListsStale, onCancel: closure_4 };
               let code;
               if (body != null) {
                 body = body.body;
@@ -536,7 +536,7 @@ export default {
       const obj11 = applicationId(tmp2[3]);
     }
     return result4.then(() => {
-      if (upsertRelationship != null) {
+      if (markAllUserIdListsStale != null) {
         tmp();
       }
       if (closure_5 != null) {

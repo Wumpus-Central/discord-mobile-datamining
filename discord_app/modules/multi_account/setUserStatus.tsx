@@ -81,7 +81,7 @@ function _setUserStatus() {
                 const _HermesInternal = HermesInternal;
                 str = "" + Date.now() + c3;
               }
-              const PreloadedUserSettingsActionCreators = callback(1355).PreloadedUserSettingsActionCreators;
+              const PreloadedUserSettingsActionCreators = callback(1374).PreloadedUserSettingsActionCreators;
               c3 = 2;
               globalStats = 1;
               const obj2 = { value: null, done: false };
@@ -99,7 +99,7 @@ function _setUserStatus() {
                 const UInt64Value = _undefined(_undefined2[8]).UInt64Value;
                 obj = { value: "" + Date.now() };
                 statusCreatedAtMs = UInt64Value.create(obj);
-              }, callback(1355).UserSettingsDelay.INFREQUENT_USER_ACTION);
+              }, callback(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -139,7 +139,7 @@ function _setUserStatus() {
                 return formatToPlainStringResult;
               }
             })(callback, str);
-            const AccessibilityAnnouncer = callback(4122).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = callback(1350).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(constants);
             if (!globalStats) {
               obj = { next_status: null, prev_status: null };

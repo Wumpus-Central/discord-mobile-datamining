@@ -8,7 +8,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import sortActivity from "sortActivity";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";

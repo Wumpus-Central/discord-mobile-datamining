@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import GuildActionSheetMemberCount from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import { View } from "map";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT";
 import jsxProd from "computeChannelName";
@@ -96,9 +96,9 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(9470), obj);
+    let tmp8Result = tmp11(tmp(9476), obj);
     let tmp8 = tmp11;
-    const tmpResult = tmp(9470);
+    const tmpResult = tmp(9476);
   } else {
     tmp8 = closure_9;
     let str = "heading-lg/bold";
@@ -116,7 +116,7 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12552);
+    obj2[0] = tmp(12556);
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(Button.Icon, obj2);
@@ -149,7 +149,7 @@ function UserAvatar(user) {
   let status;
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: "done", isMobileOnline: true, isVROnline: null, style: null, autoStatusCutout: 189.518 };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
   obj[3] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -243,7 +243,7 @@ function ParentChannelSubTitle(channel) {
   const tmp3 = callback3(tmp2);
   const tmp4 = closure_9;
   const tmp5 = require;
-  obj[0] = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  obj[0] = computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   obj[1] = intl.formatToPlainString(getSystemLocale.t.BjYvHO, obj);
   let str = "text-xs/medium";
   if (tmp2) {
@@ -258,7 +258,7 @@ function ParentChannelSubTitle(channel) {
   obj[5] = tmp3.parentChannelName;
   const obj3 = computeChannelName;
   const tmp6 = mergeGuildAvatar;
-  const tmp7 = upsertRelationship;
+  const tmp7 = markAllUserIdListsStale;
   obj[6] = tmp5(4494).computeChannelName(channel, tmp6, tmp7);
   return tmp4(Text.Text, obj);
 }

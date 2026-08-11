@@ -7,7 +7,7 @@ import { Fonts } from "sum";
 import jsxProd from "isRemainingUsersGroup";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../../_runtime/09145_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/09151_registerAsset.js";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../../../design/void/Form/native/index.tsx";
@@ -257,12 +257,12 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9130);
+  let tmp2Result = tmp2(9136);
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    tmp2Result = tmp2(4146);
+    tmp2Result = tmp2(4148);
     nick = tmp2Result.getName(eventUser.user);
   }
   obj1[1] = nick;
@@ -271,7 +271,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj[3] = function onPress() {
     analyticsLocations(outer1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(7967).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(7969).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };

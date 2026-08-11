@@ -1,6 +1,6 @@
 // discord_app/modules/channel_permissions/native/ChannelPermissionsUtils.tsx
 import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -15,12 +15,12 @@ export const openAddMembersActionSheet = function openAddMembersActionSheet(clos
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(9004, dependencyMap.paths), "channel-add-members-" + closure_0.id, obj);
+  obj2.openLazy(asyncRequireImpl(9010, dependencyMap.paths), "channel-add-members-" + closure_0.id, obj);
 };
 export const openChannelMembersActionSheet = function openChannelMembersActionSheet(id, guild_id) {
   let obj = expandEventProperties;
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Manage Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId: id, guildId: guild_id };
-  obj2.openLazy(asyncRequireImpl(11073, dependencyMap.paths), "channel-members-" + id, obj);
+  obj2.openLazy(asyncRequireImpl(11078, dependencyMap.paths), "channel-members-" + id, obj);
 };

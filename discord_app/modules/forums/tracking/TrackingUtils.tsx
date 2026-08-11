@@ -59,11 +59,11 @@ function collectForumAnalyticsMetadata(sessionId) {
       const obj3 = setFilterTagIds;
       obj[7] = setFilterTagIds.getSortOrderAnalytics(channel.id);
       if (sessionId == null) {
-        let tmp8Result = tmp8(7230);
+        let tmp8Result = tmp8(7231);
         sessionId = tmp8Result.getForumChannelSessionId(channel.id);
       }
       obj[8] = sessionId;
-      tmp8Result = tmp8(7231);
+      tmp8Result = tmp8(7232);
       obj[9] = tmp8Result.getLayoutAnalytics(channel.id);
       obj[10] = channel.defaultSortOrder;
       const obj4 = setFilterTagIds;
@@ -84,7 +84,7 @@ export const getForumChannelSessionId = function getForumChannelSessionId(arg0) 
 export const convertSortOrderToReadableString = function convertSortOrderToReadableString(sortOrder) {
   if (set.ThreadSortOrder.CREATION_DATE === sortOrder) {
     return constants.CREATION_DATE;
-  } else if (tmp(1381).ThreadSortOrder.LATEST_ACTIVITY === sortOrder) {
+  } else if (tmp(1400).ThreadSortOrder.LATEST_ACTIVITY === sortOrder) {
     return constants.LATEST_ACTIVITY;
   } else {
     const _Error = Error;
@@ -245,14 +245,14 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
           }
           obj.forum_post_applied_tag_ids = items;
           obj.forum_post_is_pinned = channel.hasFlag(ChannelFlags.PINNED);
-          let tmp8Result = tmp8(7232);
+          let tmp8Result = tmp8(7233);
           const readStateSnapshotAnalytics = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
           let isNew;
           if (readStateSnapshotAnalytics != null) {
             isNew = readStateSnapshotAnalytics.isNew;
           }
           obj.forum_post_is_new = isNew;
-          tmp8Result = tmp8(7232);
+          tmp8Result = tmp8(7233);
           const readStateSnapshotAnalytics1 = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
           let hasUnreads;
           if (readStateSnapshotAnalytics1 != null) {

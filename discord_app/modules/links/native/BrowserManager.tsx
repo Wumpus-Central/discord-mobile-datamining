@@ -138,7 +138,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
         }
         return openInChromeURLResult;
       } else {
-        return tmp2(1351).assertNever(selectedBrowser);
+        return tmp2(1370).assertNever(selectedBrowser);
       }
     }
   }

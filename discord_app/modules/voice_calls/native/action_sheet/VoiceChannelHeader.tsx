@@ -7,7 +7,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09722_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09727_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { id } from "../CallStateHooks.tsx";
 import { OngoingCallStatusLabel } from "../components/OngoingCallStatusLabel.tsx";
@@ -33,7 +33,7 @@ function PrivateChannelSubtitle(channel) {
     tmp6Result = tmp6(tmp7(4299).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13062).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13071).CallStates.CONNECTED;
   if (tmp6Result) {
     const obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;
@@ -47,7 +47,7 @@ function PrivateChannelSubtitle(channel) {
 class VoiceChannelHeader {
   constructor(arg0) {
     channel = global.channel;
-    f91587 = undefined;
+    f91652 = undefined;
     tmp = jsxs();
     tmp2 = channel;
     tmp3 = closure_2;
@@ -55,14 +55,14 @@ class VoiceChannelHeader {
     items = [];
     items[0] = View;
     stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(channel.getGuildId()));
-    tmp5 = f91587;
+    tmp5 = f91652;
     tmp6 = require("useIsVoiceChannelFull")(channel);
     obj2 = require("initialize");
     items1 = [];
     items1[0] = View;
     items2 = [];
     items2[0] = channel;
-    f91587 = obj2.useStateFromStores(items1, () => outer1_4.getSelfEmbeddedActivityForChannel(channel.id), items2);
+    f91652 = obj2.useStateFromStores(items1, () => outer1_4.getSelfEmbeddedActivityForChannel(channel.id), items2);
     name = undefined;
     tmp7 = require("computeChannelName")(channel);
     if (stateFromStores != null) {

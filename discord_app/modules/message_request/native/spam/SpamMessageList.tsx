@@ -202,23 +202,23 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = createCacheKey();
   importDefault = tmp;
   const bottom = useSafeAreaInsets().bottom;
-  let obj = goToMessageRequestPreview(15958);
+  let obj = goToMessageRequestPreview(15975);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequests();
-  let obj1 = goToMessageRequestPreview(15956);
+  let obj1 = goToMessageRequestPreview(15973);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffect(() => {
     let obj = _undefined(698);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(outer1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);
-    obj = { name: goToMessageRequestPreview(7066).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
-    _undefined(7061).increment(obj);
+    obj = { name: goToMessageRequestPreview(7069).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
+    _undefined(7064).increment(obj);
   });
   if (0 === arr.length) {
     obj = { bodyText: null };
     let intl = tmp4(1236).intl;
     obj[0] = intl.string(tmp4(1236).t.hasFPQ);
-    return callback(tmp2(15959), obj);
+    return callback(tmp2(15976), obj);
   } else {
     const items = ["header-section"];
     HermesBuiltin.arraySpread(arr, 1);

@@ -25,7 +25,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === callback(9286).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === callback(9292).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }
@@ -33,8 +33,8 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           const found1 = thirdPartySkus.filter((distributor) => {
             let tmp = distributor.distributor === constants.STEAM;
             if (tmp) {
-              tmp = !callback(1884).isNullOrEmpty(distributor.id);
-              const obj = callback(1884);
+              tmp = !callback(1903).isNullOrEmpty(distributor.id);
+              const obj = callback(1903);
             }
             return tmp;
           });

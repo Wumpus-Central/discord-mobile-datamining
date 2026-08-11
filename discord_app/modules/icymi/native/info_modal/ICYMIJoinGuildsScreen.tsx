@@ -81,7 +81,7 @@ function SelectedServersRow(selectedGuilds) {
       dependencyMap(arr.length);
     }
   }, items1);
-  let obj = selectedGuilds(4036);
+  let obj = selectedGuilds(4042);
   const fn = function _() {
     let obj = selectedGuilds(4304);
     let num = 0;
@@ -123,8 +123,8 @@ function SelectedServersRow(selectedGuilds) {
   obj1[3] = first(712).space.PX_12;
   obj1[4] = callback;
   obj1[6] = tmp8 + first(712).space.PX_12;
-  obj[1] = closure_12(first(8526), obj1);
-  return closure_12(first(4036).View, obj);
+  obj[1] = closure_12(first(8532), obj1);
+  return closure_12(first(4042).View, obj);
 }
 function CutoutGuildBanner(guild) {
   guild = guild.guild;
@@ -148,7 +148,7 @@ function CutoutGuildBanner(guild) {
   obj = { style: tmp.bannerImage, children: null };
   obj = { cutouts: null, children: null };
   obj1 = { shape: null, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
-  obj1[0] = guild(8293).CutoutShape.RoundedRect;
+  obj1[0] = guild(8298).CutoutShape.RoundedRect;
   const items1 = [obj1];
   obj[0] = items1;
   if (null != guild.banner) {
@@ -360,7 +360,7 @@ export default function ICYMIJoinGuildsScreen() {
             v0 = 1;
             dependencyMap = 1;
             let obj1 = { value: null, done: false };
-            obj1[0] = v0(8913).gravityJoinGuild(Array.from(outer1_3), "icymi_info_modal");
+            obj1[0] = v0(8919).gravityJoinGuild(Array.from(outer1_3), "icymi_info_modal");
             return obj1;
           }
         } else if (1 === tmp4) {
@@ -373,25 +373,25 @@ export default function ICYMIJoinGuildsScreen() {
             obj2[0] = arg1;
             return obj2;
           } else if (arg1) {
-            let tmp52Result = tmp52(8913);
+            let tmp52Result = tmp52(8919);
             v0 = 2;
             dependencyMap = 1;
             const obj3 = { value: null, done: false };
             obj3[0] = tmp52Result.fetchDehydrated({ isReloading: true, forceRefresh: true });
             return obj3;
           } else {
-            tmp52Result = tmp52(4002);
+            tmp52Result = tmp52(4021);
             const obj4 = { key: "ICYMIInfoModal", content: null };
             const intl = outer1_0(1236).intl;
             obj4[1] = intl.string(outer1_0(1236).t.CG4Hks);
             tmp52Result.open(obj4);
-            let obj6 = v0(8913);
+            let obj6 = v0(8919);
             const dehydrated = obj6.fetchDehydrated();
-            let obj7 = v0(8913);
+            let obj7 = v0(8919);
             const guildChannelScores = obj7.getGuildChannelScores();
-            const recommendedGuilds = v0(8913).getRecommendedGuilds();
-            const obj9 = v0(8913);
-            v0(4509).popWithKey(outer1_0(15582).ICYMI_INFO_MODAL_KEY);
+            const recommendedGuilds = v0(8919).getRecommendedGuilds();
+            const obj9 = v0(8919);
+            v0(4509).popWithKey(outer1_0(15599).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = undefined;
@@ -407,7 +407,7 @@ export default function ICYMIJoinGuildsScreen() {
             obj6[0] = arg1;
             return obj6;
           } else {
-            obj1 = v0(8913);
+            obj1 = v0(8919);
             v0 = 3;
             dependencyMap = 1;
             obj7 = { value: null, done: false };
@@ -423,11 +423,11 @@ export default function ICYMIJoinGuildsScreen() {
           obj[0] = arg1;
           return obj;
         } else {
-          const guildChannelScores1 = v0(8913).getGuildChannelScores();
-          const obj19 = v0(8913);
-          const recommendedGuilds1 = v0(8913).getRecommendedGuilds();
-          const obj20 = v0(8913);
-          v0(4509).popWithKey(outer1_0(15582).ICYMI_INFO_MODAL_KEY);
+          const guildChannelScores1 = v0(8919).getGuildChannelScores();
+          const obj19 = v0(8919);
+          const recommendedGuilds1 = v0(8919).getRecommendedGuilds();
+          const obj20 = v0(8919);
+          v0(4509).popWithKey(outer1_0(15599).ICYMI_INFO_MODAL_KEY);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

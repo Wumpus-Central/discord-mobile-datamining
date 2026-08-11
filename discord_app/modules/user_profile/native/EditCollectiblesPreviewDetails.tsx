@@ -31,12 +31,12 @@ function EditCollectiblesPreviewDescription(arg0) {
   let obj2 = getItemRecordsFromPurchases;
   let result = obj2.isPremiumCollectiblesProduct(product);
   if (!result) {
-    let tmpResult = tmp(7013);
+    let tmpResult = tmp(7016);
     result = tmpResult.isPremiumCollectiblesPurchase(purchase);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    tmpResult = tmp(7013);
+    tmpResult = tmp(7016);
     result1 = tmpResult.isPremiumCollectiblesPurchase(purchase);
   }
   if (null != purchase) {
@@ -49,8 +49,8 @@ function EditCollectiblesPreviewDescription(arg0) {
       if (null != expiresAt) {
         const _Date = Date;
         const date = new Date();
-        diffAsUnitsResult = tmp(3971).diffAsUnits(date, purchase.expiresAt);
-        const tmpResult1 = tmp(3971);
+        diffAsUnitsResult = tmp(3990).diffAsUnits(date, purchase.expiresAt);
+        const tmpResult1 = tmp(3990);
       }
       let tmp17 = null != diffAsUnitsResult;
       if (tmp17) {

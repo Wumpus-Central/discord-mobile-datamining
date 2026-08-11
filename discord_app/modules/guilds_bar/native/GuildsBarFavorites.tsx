@@ -54,7 +54,7 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   const tmp12 = useCanShowFavoritesGuildOnboarding();
   const favoritesIntroPopoverDismissibleContent = items1.useFavoritesIntroPopoverDismissibleContent(tmp12);
   const shouldShowPopover = favoritesIntroPopoverDismissibleContent.shouldShowPopover;
-  obj = { selected: isFavoritesGuildSelected, circle: null, unread: null, styles: null, cutouts: null, overState: "Boolean", config: "RangeError", label: "prototype", externalChildren: "ReferenceError", expandedChildren: "prototype", children: "RegExp" };
+  obj = { selected: isFavoritesGuildSelected, circle: null, unread: null, styles: null, cutouts: null, overState: "Boolean", config: "private_channels_version", label: null, externalChildren: 16, expandedChildren: 4, children: null };
   let tmp18 = !tmp3;
   const obj4 = items1;
   const tmp14 = closure_8;
@@ -82,7 +82,7 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
     obj2[0] = ref;
     obj2[1] = shouldShowPopover;
     obj2[2] = favoritesIntroPopoverDismissibleContent.markPopoverAsDismissed;
-    tmp16Result = tmp16(tmp(15436), obj2);
+    tmp16Result = tmp16(tmp(15453), obj2);
   }
   children[2] = tmp16Result;
   return tmp14(View, { children });

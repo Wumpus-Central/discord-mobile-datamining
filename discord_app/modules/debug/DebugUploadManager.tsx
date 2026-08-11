@@ -69,9 +69,9 @@ function _uploadDebugLogFiles() {
                 }
               })(closure_2);
             }
-            let obj4 = callback(9169);
+            let obj4 = callback(9175);
             const obj2 = { type: null, underlyingError: null, errorMessage: null };
-            obj2[0] = callback(9169).AVError.DEBUG_LOG_UPLOAD_FAILED;
+            obj2[0] = callback(9175).AVError.DEBUG_LOG_UPLOAD_FAILED;
             obj2[1] = closure_1;
             obj2[2] = outer1_2.message;
             obj4.reportAVError(obj2);
@@ -87,7 +87,7 @@ function _uploadDebugLogFiles() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(9871);
+              obj1 = callback(9876);
               c6 = 3;
               c7 = 1;
               obj4 = { value: null, done: false };

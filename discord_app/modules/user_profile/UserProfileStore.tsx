@@ -17,24 +17,24 @@ const require = arg1;
 function createUserWidgetFromServer(data) {
   const type = data.data.type;
   if (WidgetType.WidgetType.CURRENT_GAMES !== type) {
-    if (tmp(7081).WidgetType.FAVORITE_GAMES !== type) {
-      if (tmp(7081).WidgetType.PLAYED_GAMES !== type) {
-        if (tmp(7081).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-          if (tmp(7081).WidgetType.APPLICATION === type) {
+    if (tmp(7084).WidgetType.FAVORITE_GAMES !== type) {
+      if (tmp(7084).WidgetType.PLAYED_GAMES !== type) {
+        if (tmp(7084).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+          if (tmp(7084).WidgetType.APPLICATION === type) {
             let obj = { id: null, applicationId: null };
             obj[0] = data.id;
             obj[1] = data.data.application_id;
-            const applicationWidget = new tmp(7094).ApplicationWidget(obj);
+            const applicationWidget = new tmp(7095).ApplicationWidget(obj);
             return applicationWidget;
-          } else if (tmp(7081).WidgetType.PERSONAL === type) {
+          } else if (tmp(7084).WidgetType.PERSONAL === type) {
             obj = { id: null, header: null, sections: null };
             obj[0] = data.id;
             const header = data.data.header;
             obj[1] = header;
-            obj[2] = tmp(7089).parsePersonalWidgetSections(data.data.sections);
-            const userProfilePersonalWidget = new tmp(7089).UserProfilePersonalWidget(obj);
+            obj[2] = tmp(7092).parsePersonalWidgetSections(data.data.sections);
+            const userProfilePersonalWidget = new tmp(7092).UserProfilePersonalWidget(obj);
             return userProfilePersonalWidget;
-          } else if (tmp(7081).WidgetType.CLIPS_GALLERY === type) {
+          } else if (tmp(7084).WidgetType.CLIPS_GALLERY === type) {
             obj = { id: null, clips: null };
             obj[0] = data.id;
             const clips = data.data.clips;
@@ -53,8 +53,8 @@ function createUserWidgetFromServer(data) {
               }
               return tmp;
             });
-            obj[1] = mapped.filter(tmp(1351).isNotNullish);
-            const clipsGalleryWidget = new tmp(7088).ClipsGalleryWidget(obj);
+            obj[1] = mapped.filter(tmp(1370).isNotNullish);
+            const clipsGalleryWidget = new tmp(7091).ClipsGalleryWidget(obj);
             return clipsGalleryWidget;
           }
         }
@@ -65,7 +65,7 @@ function createUserWidgetFromServer(data) {
   const mapped1 = games.map((gameId) => ({ gameId: gameId.game_id, comment: gameId.comment, tags: gameId.tags }));
   const obj5 = apply;
   const uniqByResult = apply.uniqBy(mapped1, "gameId");
-  const baseGameWidget = new tmp(7082).BaseGameWidget({ id: data.id, type, games: apply.uniqBy(mapped1, "gameId") });
+  const baseGameWidget = new tmp(7085).BaseGameWidget({ id: data.id, type, games: apply.uniqBy(mapped1, "gameId") });
   return baseGameWidget;
 }
 function checkUserProfileCollectiblesExpiration(id, guild_id) {

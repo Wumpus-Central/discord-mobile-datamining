@@ -8,7 +8,7 @@ import handleTypingStart from "handleTypingStart";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { StatusTypes } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_16056";
+import jsxProd from "module_16073";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
@@ -75,8 +75,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7102).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7102);
+    relativeTimestamp = tmp6(7103).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7103);
   }
   let str = "text-muted";
   if (unread) {
@@ -85,12 +85,12 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16053);
+  tmp2Result = tmp2(16070);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
   const items5 = [callback(UnreadBadge, obj), , ];
-  obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: null, status: false, streaming: false, style: null, size: null, animate: null, typing: null, autoStatusCutout: null };
+  obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==", style: null, size: "e6f53b24f96031dbe38d21f16295a8e6", animate: "hr.messages.e6f53b24f96031dbe38d21f16295a8e6.compiled.messages", typing: "jsona", autoStatusCutout: 200 };
   obj1[2] = isMobileOnline;
   obj1[3] = isVROnline;
   let tmp19 = null;
@@ -120,8 +120,8 @@ function UserResult(user) {
   const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapper;
   if (comparator == null) {
-    comparator = tmp2(4146).getUserTag(user);
-    const tmp2Result3 = tmp2(4146);
+    comparator = tmp2(4148).getUserTag(user);
+    const tmp2Result3 = tmp2(4148);
   }
   obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
   let tmp14Result;
@@ -132,8 +132,8 @@ function UserResult(user) {
       obj3[1] = lastMessage;
       obj3[2] = str;
       obj3[3] = flag;
-      obj3[4] = tmp6(3979).ChannelListLayoutTypes.COMPACT;
-      tmp14Result = tmp14(tmp6(9790).ChannelRowPreview, obj3);
+      obj3[4] = tmp6(3998).ChannelListLayoutTypes.COMPACT;
+      tmp14Result = tmp14(tmp6(9795).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -167,7 +167,7 @@ function UserResultWithChannel(arg0) {
   const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(14553)(channel, { unread });
+  obj.lastMessage = channel(14561)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;

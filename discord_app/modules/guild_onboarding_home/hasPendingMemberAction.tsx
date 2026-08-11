@@ -30,8 +30,8 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
     if (num == null) {
       num = 0;
     }
-    hasItem = !importAll(1384).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
-    const obj = importAll(1384);
+    hasItem = !importAll(1403).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+    const obj = importAll(1403);
   }
   if (hasItem) {
     hasItem = handleSettingsLoadSuccess.hasMemberAction(guild.id, channel.id);

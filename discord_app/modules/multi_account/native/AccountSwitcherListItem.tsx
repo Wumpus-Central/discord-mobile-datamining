@@ -93,7 +93,7 @@ export default function AccountSwitcherListItem(arg0) {
     }
     obj = { selected: null };
     obj[0] = tmp7;
-    const radioA11yNative = tmp2(4019).useRadioA11yNative(obj);
+    const radioA11yNative = tmp2(4032).useRadioA11yNative(obj);
     obj1 = { accessibilityRole: null, accessibilityState: null, accessibilityHint: null, style: null, delayLongPress: null, onPress: null };
     ({ accessibilityRole: obj7[0], accessibilityState: obj7[1] } = radioA11yNative);
     let stringResult;
@@ -109,7 +109,7 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, , ];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "Array" };
+    const obj3 = { user: null, guildId: "a" };
     obj3[0] = obj2;
     const items3 = [callback(tmp2(1297).Avatar, obj3), ];
     const obj4 = { style: null, children: null };
@@ -118,7 +118,7 @@ export default function AccountSwitcherListItem(arg0) {
     obj5[0] = tmp.tagContainer;
     const obj6 = { variant: "text-md/semibold", color: "text-default", style: null, lineClamp: 1, children: null };
     obj6[2] = tmp.username;
-    const tmp2Result = tmp2(4019);
+    const tmp2Result = tmp2(4032);
     let str = "always";
     if (stateFromStores) {
       str = "never";

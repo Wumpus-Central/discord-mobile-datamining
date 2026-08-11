@@ -53,9 +53,9 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   let callback2;
   const tmp = items();
   dependencyMap = tmp;
-  let obj = selectedColors(9473);
+  let obj = selectedColors(9479);
   let tmp5 = selectedColors.length > 0;
-  const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(selectedColors(1916).DisplayNameEffect.GUMMY);
+  const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(selectedColors(1935).DisplayNameEffect.GUMMY);
   if (tmp5) {
     tmp5 = !closure_7.some((items) => selectedColors(_undefined[11]).areArraysShallowEqual(items, selectedColors));
   }
@@ -144,11 +144,11 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   } else {
     const obj7 = { colors: null };
     obj7[0] = first1;
-    tmp16Result = tmp16(onSelectColors(13927), obj7);
+    tmp16Result = tmp16(onSelectColors(13935), obj7);
   }
   const items4 = [tmp16Result, ];
   const obj8 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
-  obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(9672).PencilIcon, { color: "white", size: "sm" }) });
+  obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(9677).PencilIcon, { color: "white", size: "sm" }) });
   items4[1] = callback2(closure_5, obj8);
   obj5[5] = items4;
   obj4[1] = closure_10(first1, obj5);

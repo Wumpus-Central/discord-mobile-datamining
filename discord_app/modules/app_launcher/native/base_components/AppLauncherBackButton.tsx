@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 
 const require = arg1;

@@ -81,7 +81,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         guildId = channel.getGuildId();
       }
       id = message.interaction.user.id;
-      tmp17Result = tmp17(8070);
+      tmp17Result = tmp17(8072);
       const result1 = tmp17Result.isNativeMessageEligibleForEnhancedRoleColors(guildId, id);
       let id1;
       if (tmp25 != null) {
@@ -90,13 +90,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       let processColorStringsResult = null;
       const result2 = processColorStrings.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
       if (result1) {
-        processColorStringsResult = tmp17(8070).processColorStrings(userAuthor.colorStrings);
-        const tmp17Result2 = tmp17(8070);
+        processColorStringsResult = tmp17(8072).processColorStrings(userAuthor.colorStrings);
+        const tmp17Result2 = tmp17(8072);
       }
       let processColorStringsResult1 = null;
       if (result2) {
-        processColorStringsResult1 = tmp17(8070).processColorStrings(userAuthor1.colorStrings);
-        const tmp17Result3 = tmp17(8070);
+        processColorStringsResult1 = tmp17(8072).processColorStrings(userAuthor1.colorStrings);
+        const tmp17Result3 = tmp17(8072);
       }
       let obj = { username: null, usernameOnClick: null };
       const tmp15 = message.type === MessageTypes.CHAT_INPUT_COMMAND || message.type === tmp14.INTERACTION_PREMIUM_UPSELL;
@@ -121,7 +121,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       obj[1] = obj;
       if (tmp) {
         if (!result) {
-          const result3 = tmp17(8337).isActivitiesInTextEnabled(channel);
+          const result3 = tmp17(8342).isActivitiesInTextEnabled(channel);
           const intl = tmp17(1236).intl;
           const formatToParts = intl.formatToParts;
           const t = tmp17(1236).t;
@@ -138,7 +138,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
             const merged1 = Object.assign(obj);
             formatToPartsResult = formatToParts(t.k964Wm, obj3);
           }
-          const tmp17Result5 = tmp17(8337);
+          const tmp17Result5 = tmp17(8342);
         }
         obj4 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
         obj4[0] = message.interaction.user.id;
@@ -154,8 +154,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let result4 = displayName;
       if (result) {
-        result4 = tmp17(8338).formatPrimaryEntryPointCommandName(displayName);
-        const tmp17Result6 = tmp17(8338);
+        result4 = tmp17(8343).formatPrimaryEntryPointCommandName(displayName);
+        const tmp17Result6 = tmp17(8343);
       }
       const intl2 = tmp17(1236).intl;
       obj6 = {};

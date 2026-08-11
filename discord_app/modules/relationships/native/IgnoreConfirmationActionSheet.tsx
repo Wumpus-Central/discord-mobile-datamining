@@ -163,7 +163,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
   let stateFromStores;
   const tmp = callback3();
   [tmp3, c4] = callback(undefined.useState(false), 2);
-  const bottom = channelId(1609)().bottom;
+  const bottom = channelId(1628)().bottom;
   let tmp2 = callback(undefined.useState(false), 2);
   const items = [channelId(5748).IGNORE_CONFIRMATION_ACTION_SHEET];
   let obj = userId(589);
@@ -221,7 +221,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj6[0] = tmp.avatarIconContainer;
     const obj7 = { size: null, source: null };
     obj7[0] = tmp7(1297).Icon.Sizes.MEDIUM;
-    obj7[1] = tmp4(8496);
+    obj7[1] = tmp4(8502);
     obj6[1] = closure_13(tmp7(1297).Icon, obj7);
     items6[1] = closure_13(stateFromStores, obj6);
     obj3[1] = items6;
@@ -252,7 +252,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     const obj14 = { icon: null, label: null, variant: "danger", subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
     const obj15 = { size: null, source: null, color: null };
     obj15[0] = tmp7(1297).Icon.Sizes.MEDIUM;
-    obj15[1] = tmp4(8587);
+    obj15[1] = tmp4(8593);
     obj15[2] = tmp.destructiveIcon.color;
     obj14[0] = closure_13(tmp7(1297).Icon, obj15);
     const intl4 = tmp7(1236).intl;
@@ -310,9 +310,9 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj21[0] = function articleLink() {
       channelId(4271).hideActionSheet();
       const obj = channelId(4271);
-      const articleURL = channelId(1974).getArticleURL(constants3.STEALTH_REMEDIATION_FEATURE_GUIDE);
-      const obj2 = channelId(1974);
-      channelId(3998).openURL(articleURL);
+      const articleURL = channelId(1993).getArticleURL(constants3.STEALTH_REMEDIATION_FEATURE_GUIDE);
+      const obj2 = channelId(1993);
+      channelId(4017).openURL(articleURL);
     };
     obj19[4] = intl8.format(tmp7(1236).t.iX9qtL, obj21);
     items9[1] = closure_13(tmp7(4299).Text, obj19);

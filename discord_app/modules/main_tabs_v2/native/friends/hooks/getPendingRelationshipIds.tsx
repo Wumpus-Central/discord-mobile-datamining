@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/friends/hooks/getPendingRelationshipIds.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 
 function filterFromPending(arg0) {
-  return upsertRelationship.isSpam(arg0) || upsertRelationship.isIgnored(arg0);
+  return markAllUserIdListsStale.isSpam(arg0) || markAllUserIdListsStale.isIgnored(arg0);
 }
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/hooks/getPendingRelationshipIds.tsx");
 
@@ -38,9 +38,9 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
     let tmp15 = value;
     let isSpamResult = tmp5 === tmp6.PENDING_INCOMING;
     if (isSpamResult) {
-      let tmp17 = upsertRelationship;
+      let tmp17 = markAllUserIdListsStale;
       let tmp18 = nextResult;
-      isSpamResult = upsertRelationship.isSpam(tmp3);
+      isSpamResult = markAllUserIdListsStale.isSpam(tmp3);
     }
     if (isSpamResult) {
       let tmp19 = nextResult;
@@ -49,9 +49,9 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
     let tmp21 = value;
     let isIgnoredResult = tmp5 === tmp6.PENDING_INCOMING;
     if (isIgnoredResult) {
-      let tmp23 = upsertRelationship;
+      let tmp23 = markAllUserIdListsStale;
       let tmp24 = nextResult;
-      isIgnoredResult = upsertRelationship.isIgnored(tmp3);
+      isIgnoredResult = markAllUserIdListsStale.isIgnored(tmp3);
     }
     if (isIgnoredResult) {
       let tmp25 = nextResult;

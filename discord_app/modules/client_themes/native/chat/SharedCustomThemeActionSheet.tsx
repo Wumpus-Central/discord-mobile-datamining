@@ -31,7 +31,7 @@ function PrimaryActionButton(onPressApply) {
       const items = [callback(5748).SHARE_CUSTOM_CLIENT_THEME_EMBED];
       obj[1] = items;
       obj[2] = {};
-      callback(6886)(obj);
+      callback(6888)(obj);
     };
     obj[2] = function renderIcon() {
       const style = [tmp.nitroWheelButton];

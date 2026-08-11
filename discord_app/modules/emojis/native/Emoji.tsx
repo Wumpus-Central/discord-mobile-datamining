@@ -46,7 +46,7 @@ export default function Emoji(arg0) {
         obj1[0] = uRL;
         obj[3] = obj1;
         let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(4153);
+        tmpResult = tmp(1363);
       }
       obj[1] = tmp6Result;
       return tmp6(tmp7, obj);

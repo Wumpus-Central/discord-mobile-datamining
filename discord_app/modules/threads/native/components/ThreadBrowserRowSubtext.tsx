@@ -28,7 +28,7 @@ function MessageContent(arg0) {
   c3 = undefined;
   c4 = undefined;
   let maybeApplyNoTextColorForLightCustomTheme;
-  let obj = message(5926);
+  let obj = message(5928);
   const items = [message.author.id];
   const subscribeGuildMembers = obj.useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
   let obj1 = message(589);
@@ -48,9 +48,9 @@ function MessageContent(arg0) {
   let tmp4 = useNullableMessageAuthor(message);
   const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(message.id);
   const obj4 = DISCORD_EPOCH;
-  const timestampString = message(7240).getTimestampString(extractTimestampResult);
-  const obj5 = message(7240);
-  const timestampAccessibilityLabel = message(7240).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(7241).getTimestampString(extractTimestampResult);
+  const obj5 = message(7241);
+  const timestampAccessibilityLabel = message(7241).getTimestampAccessibilityLabel(extractTimestampResult);
   maybeApplyNoTextColorForLightCustomTheme = useHasEnhancedRoleColors(thread.guild_id, stateFromStores.id);
   obj = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
@@ -145,7 +145,7 @@ function Username(usernameColor) {
     }
     return username;
   }, items);
-  let obj = usernameColor(8070);
+  let obj = usernameColor(8072);
   const processColorStringsArray = obj.useProcessColorStringsArray(roleColors);
   let tmp5 = !shouldShowRoleDot;
   if (!shouldShowRoleDot) {
@@ -159,7 +159,7 @@ function Username(usernameColor) {
   }
   const items1 = [shouldShowRoleDot, ];
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", experimental_useNativeText: null, gradientColors: null, style: null, children: null };
-  obj[2] = !usernameColor(4039).isFabric();
+  obj[2] = !usernameColor(4045).isFabric();
   let tmp10;
   if (tmp5) {
     tmp10 = processColorStringsArray;
@@ -280,7 +280,7 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   const items = [updateState];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getMostRecentMessage(id), items1);
-  const lastMessageTimestamp = id(7240).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(7241).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -291,9 +291,9 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
       }
     }
   }
-  let tmpResult = tmp(7240);
+  let tmpResult = tmp(7241);
   const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
-  tmpResult = tmp(7240);
+  tmpResult = tmp(7241);
   obj = { thread, timestamp: timestampString, accessibilityLabel: tmpResult.getTimestampAccessibilityLabel(lastMessageTimestamp) };
   return callback(closure_14, obj);
 };

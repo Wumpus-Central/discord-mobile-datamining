@@ -18,7 +18,7 @@ const result = require("handleUpdateStart").fileFinishedImporting("modules/guild
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9002);
+  let obj = guildId(9008);
   let guildProfile = obj.useGuildProfile(guildId);
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];

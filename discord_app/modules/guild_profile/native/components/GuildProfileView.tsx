@@ -39,10 +39,10 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9257)() * useWindowDimensions().width;
+      obj[2] = tmp3(9263)() * useWindowDimensions().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
-      obj[1] = tmp3(1416).getGuildDiscoverySplashSource(obj);
+      obj[1] = tmp3(1435).getGuildDiscoverySplashSource(obj);
       return callback(closure_5, obj);
     }
   }

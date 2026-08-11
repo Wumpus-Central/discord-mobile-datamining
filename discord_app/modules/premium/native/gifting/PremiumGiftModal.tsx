@@ -71,10 +71,10 @@ export default function PremiumGiftModal(analyticsLocations) {
       }
       return user;
     });
-    let obj2 = recipientUserId(9356);
+    let obj2 = recipientUserId(9362);
     const fetchWishlistAndProfileInfoForUser = obj2.useFetchWishlistAndProfileInfoForUser(recipientUserId);
     ({ wishlist: c1, userProfile: c2, wishlistId: c3, error: c4 } = fetchWishlistAndProfileInfoForUser);
-    let obj3 = recipientUserId(9356);
+    let obj3 = recipientUserId(9362);
     obj = { isGift: true, giftRecipient: null, isSocialLayerStorefrontEnabled: false };
     obj[1] = stateFromStores;
     shouldShowWishlistInDMGifting = obj3.useShouldShowWishlistInDMGifting(obj);
@@ -157,7 +157,7 @@ export default function PremiumGiftModal(analyticsLocations) {
     obj2[obj.SUCCESS] = obj5;
     const obj6 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
     const intl2 = tmp11(1236).intl;
-    obj6[0] = intl2.string(tmp(2380).roVAey);
+    obj6[0] = intl2.string(tmp(2399).roVAey);
     const tmp11Result4 = recipientUserId(5270);
     obj6[1] = recipientUserId(5270).getHeaderCloseButton(callback);
     obj6[3] = { backgroundColor: "transparent", shadowColor: "transparent" };
@@ -165,7 +165,7 @@ export default function PremiumGiftModal(analyticsLocations) {
       return callback(_undefined(_undefined2[16]), {
         currentProgress: currentProgress.currentProgress,
         onSendGift(arg0) {
-          let obj = callback(10034);
+          let obj = callback(10039);
           obj = { analyticsLocations: null };
           const items = [callback2(5748).GIFTING_BADGE_POST_PURCHASE];
           obj[0] = items;
@@ -190,7 +190,7 @@ export default function PremiumGiftModal(analyticsLocations) {
       obj8[6] = order;
       const obj9 = { currentStep: null, children: null };
       obj9[0] = tmp21[0];
-      let tmpResult = tmp(10163);
+      let tmpResult = tmp(10168);
       const obj10 = { initialRouteName: null, screens: null, onStateChange: null };
       obj10[0] = initialRoute;
       obj10[1] = obj2;
@@ -201,11 +201,11 @@ export default function PremiumGiftModal(analyticsLocations) {
       };
       obj9[1] = tmp23(tmp11(5783).Navigator, obj10);
       obj8[7] = tmp23(tmpResult, obj9);
-      obj7[1] = tmp23(tmp11(9611).NativeGiftContextProvider, obj8);
+      obj7[1] = tmp23(tmp11(9616).NativeGiftContextProvider, obj8);
       let tmp23Result = tmp23(tmp11(5728).AnalyticsLocationProvider, obj7);
     } else {
       const obj11 = { title: null };
-      tmpResult = tmp(9579);
+      tmpResult = tmp(9584);
       const intl3 = tmp11(1236).intl;
       obj11[0] = intl3.string(tmp11(1236).t["JCFN/y"]);
       tmp23Result = tmp23(tmpResult, obj11);

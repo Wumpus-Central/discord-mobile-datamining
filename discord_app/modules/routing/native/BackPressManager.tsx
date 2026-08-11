@@ -11,10 +11,10 @@ function handleBackPress() {
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
-    obj[0] = tmp(1607).KeyboardTypes.SYSTEM;
-    tmp(1478).setKeyboardType(obj);
+    obj[0] = tmp(1626).KeyboardTypes.SYSTEM;
+    tmp(1497).setKeyboardType(obj);
     flag = true;
-    const tmpResult = tmp(1478);
+    const tmpResult = tmp(1497);
   }
   return flag;
 }

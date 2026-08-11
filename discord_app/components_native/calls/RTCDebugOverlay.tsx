@@ -227,7 +227,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(709).wait(callback2(10920).close);
+    return () => callback(709).wait(callback2(10925).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

@@ -5,7 +5,7 @@ import importAllResult from "SearchListRow";
 import get_ActivityIndicator from "registerAsset";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import closure_9 from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

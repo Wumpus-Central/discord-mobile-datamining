@@ -41,9 +41,9 @@ function audienceAckRequestToSpeak(channel, suppress) {
   if (!tmp7) {
     objResult = obj(4498);
     obj = {};
-    const merged = Object.assign(obj(7780).getStageChannelMetadata(channel));
+    const merged = Object.assign(obj(7782).getStageChannelMetadata(channel));
     objResult.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj);
-    const objResult1 = obj(7780);
+    const objResult1 = obj(7782);
   }
   const HTTP = obj(530).HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
@@ -103,10 +103,10 @@ function _startStage() {
               let closure_1;
               if ("" !== closure_1) {
                 if (outer1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(7773);
+                  let obj2 = callback(7775);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(7786);
+                const obj4 = callback(7788);
                 c6 = 1;
                 c7 = 1;
                 const obj1 = { value: null, done: false };
@@ -413,7 +413,7 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
   00038__(null != guildId, "Channel cannot be guildless");
-  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3934).NONE, deny: importAll(3934).NONE };
+  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3953).NONE, deny: importAll(3953).NONE };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = importAll(506);
   if (arg2) {

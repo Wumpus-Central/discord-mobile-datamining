@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/MessageRequestModalActionCreators.native.tsx
 import { MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL as closure_3 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";
 import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 import { componentDidMount } from "../../components_native/common/Alert.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -37,5 +37,5 @@ export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirma
   let onCancel;
   let onConfirm;
   ({ onConfirm, onCancel, channel } = arg0);
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11808, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11811, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
 };

@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 import { ErrorScreen } from "../ErrorScreen.tsx";
 
 const require = arg1;
-const result = require("module_11732").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
+const result = require("module_11735").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
 
 export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
@@ -14,6 +14,6 @@ export default function SearchIndexingScreen(searchContext) {
     obj = { searchContext };
     obj.trackSearchIndexing(obj);
   }, items);
-  const text = searchContext(11712).getIndexingErrorText(searchContext);
+  const text = searchContext(11715).getIndexingErrorText(searchContext);
   return jsx(ErrorScreen, { text });
 };

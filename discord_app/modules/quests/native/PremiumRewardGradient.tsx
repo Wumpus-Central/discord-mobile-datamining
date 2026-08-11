@@ -70,16 +70,16 @@ function PremiumRewardGlowGradient(arg0) {
   const tmp = callback3();
   let token;
   let token1;
-  let obj = token(4005);
+  let obj = token(4024);
   token = obj.useToken(token1(712).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
-  let obj1 = token(4005);
+  let obj1 = token(4024);
   token1 = obj1.useToken(token1(712).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
   const memo = React.useMemo(() => {
     const items = [token, token1];
     return items;
   }, items);
-  let obj2 = token(4122);
+  let obj2 = token(1350);
   const isThemeDarkResult = obj2.isThemeDark(token1(4239)());
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, style];

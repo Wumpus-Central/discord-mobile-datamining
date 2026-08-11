@@ -31,8 +31,8 @@ function useApplicationsInContext(allowFetch) {
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  let obj = onlyWithCommands(8344);
-  const items = [onlyWithCommands(1935).ApplicationCommandType.CHAT];
+  let obj = onlyWithCommands(8349);
+  const items = [onlyWithCommands(1954).ApplicationCommandType.CHAT];
   const hasBaseAccessPermissions = obj.usePermissionContext(channel, items).hasBaseAccessPermissions;
   const tmp2 = callback2(context, hasBaseAccessPermissions, flag);
   let tmp3 = callback3(hasBaseAccessPermissions, flag);
@@ -115,7 +115,7 @@ function useApplicationsInContext(allowFetch) {
     includeBuiltIn = allowFetch.includeBuiltIn;
   }
   if (includeBuiltIn) {
-    items2.push(onlyWithCommands(8338).FAKE_BUILT_IN_APP);
+    items2.push(onlyWithCommands(8343).FAKE_BUILT_IN_APP);
   }
   obj = { apps: items2, loading: null };
   let fetching;
@@ -903,7 +903,7 @@ export const useLocalSearchResults = function useLocalSearchResults(context) {
   if ("channel" === context.type) {
     guild_id = context.channel.guild_id;
   }
-  const tmp8Result = flag4(11426)({ guildId: guild_id });
+  const tmp8Result = flag4(11429)({ guildId: guild_id });
   callback3 = tmp8Result;
   let items1 = [flag, commands, commandLimit, context, tmp];
   memo1 = obj2.useMemo(() => {
@@ -1358,7 +1358,7 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
     substr = query.substring(1);
     tmp = substr;
   }
-  const tmp5 = fetches.entrypoint === substr(9549).AppLauncherEntrypoint.VOICE;
+  const tmp5 = fetches.entrypoint === substr(9555).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {

@@ -766,7 +766,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
             const values = callback2(12)(closure_25).values();
             const obj2 = callback2(12)(closure_25);
             const combined = values.concat(callback2(12).values(closure_27));
-            const found = combined.filter(callback(1351).isNotNullish);
+            const found = combined.filter(callback(1370).isNotNullish);
             const obj4 = callback2(12);
             const uniqResult = found.uniq();
             obj[6] = found.uniq().filter((arg0) => {
@@ -796,7 +796,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         const obj9 = callback2(12)(closure_25);
         tmp26 = sessionId.guildId !== guildId && null == sessionId.channelId;
         let combined = values.concat(callback2(12).values(closure_27));
-        let found = combined.filter(callback(1351).isNotNullish);
+        let found = combined.filter(callback(1370).isNotNullish);
         const obj11 = callback2(12);
         let uniqResult = found.uniq();
         obj[6] = found.uniq().filter((arg0) => {
@@ -860,7 +860,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         const obj13 = store;
         const obj3 = callback2(12)(closure_25);
         const combined1 = values.concat(callback2(12).values(closure_27));
-        const found1 = combined1.filter(callback(1351).isNotNullish);
+        const found1 = combined1.filter(callback(1370).isNotNullish);
         const obj5 = callback2(12);
         const uniqResult1 = found1.uniq();
         obj[6] = found1.uniq().filter((arg0) => {

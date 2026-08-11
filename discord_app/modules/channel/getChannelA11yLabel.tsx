@@ -1,6 +1,6 @@
 // discord_app/modules/channel/getChannelA11yLabel.tsx
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -40,7 +40,7 @@ export default function getChannelA11yLabel(mentionCount) {
   }
   const voiceChannelStartTime = mentionCount.voiceChannelStartTime;
   let obj = computeChannelName;
-  const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  const channelName = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   if (isRoleRequired(channel)) {
     const intl = tmp(1236).intl;
     const stringResult = intl.string(tmp(1236).t["4qvAtn"]);
@@ -134,9 +134,9 @@ export default function getChannelA11yLabel(mentionCount) {
         const obj6 = { start: null };
         obj6[0] = voiceChannelStartTime;
         const _Date = Date;
-        obj5[0] = tmp(8238).formatActiveA11yTimestamp(obj6, Date.now());
+        obj5[0] = tmp(8242).formatActiveA11yTimestamp(obj6, Date.now());
         items1.push(intl15.formatToPlainString(tmp(1236).t.JQtsGh, obj5));
-        const tmpResult = tmp(8238);
+        const tmpResult = tmp(8242);
       }
       if (tmp14) {
         const intl7 = tmp(1236).intl;

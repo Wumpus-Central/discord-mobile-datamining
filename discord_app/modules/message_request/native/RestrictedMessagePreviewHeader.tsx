@@ -45,10 +45,10 @@ export default function RestrictedMessagePreviewHeader(channel) {
     obj = {
       user,
       onPressMutualGuild(arg0) {
-        const result = callback(8789).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = callback(8789);
-        callback(5957).transitionToGuild(arg0);
-        const obj2 = callback(5957);
+        const result = callback(8795).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = callback(8795);
+        callback(5959).transitionToGuild(arg0);
+        const obj2 = callback(5959);
         callback2(4271).hideActionSheet();
         const obj3 = callback2(4271);
         callback2(4509).popWithKey(closure_5);

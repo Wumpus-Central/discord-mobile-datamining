@@ -7,7 +7,7 @@ import { GuildFeatures } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
-import { registerAsset } from "../../../../../../_runtime/16732_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16744_registerAsset.js";
 import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
@@ -223,7 +223,7 @@ const result = require("FormStates").fileFinishedImporting("modules/guild_settin
 
 export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(1480);
+  let obj = guildId(1499);
   const navigation = obj.useNavigation();
   const tmp = createCacheKey();
   const tmp2 = guildId;

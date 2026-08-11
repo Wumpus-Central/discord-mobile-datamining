@@ -101,7 +101,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M9 10H8v1h1v-1ZM6 7H5v1h1V7ZM15 5h-1v1h1V5ZM14 6h-1v1h1V6ZM13 7h-1v1h1V7ZM12 8h-1v1h1V8ZM11 0v1h4v4h1V0h-5Z" };
+          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M3 1v1h4V1H3ZM2 2v1h1V2H2ZM1 3v1h1V3H1ZM0 4v5h1V4H0ZM1 9v2h1V9H1ZM2 11v1h1v-1H2ZM3 12v1h2v-1H3ZM5 13v1h2v-1H5Z" };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -112,7 +112,7 @@ function useMediaShareActions(source) {
         }
       } else {
         let obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M9 10H8v1h1v-1ZM6 7H5v1h1V7ZM15 5h-1v1h1V5ZM14 6h-1v1h1V6ZM13 7h-1v1h1V7ZM12 8h-1v1h1V8ZM11 0v1h4v4h1V0h-5Z" };
+        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M3 1v1h4V1H3ZM2 2v1h1V2H2ZM1 3v1h1V3H1ZM0 4v5h1V4H0ZM1 9v2h1V9H1ZM2 11v1h1v-1H2ZM3 12v1h2v-1H3ZM5 13v1h2v-1H5Z" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];

@@ -7,7 +7,7 @@ import addEntitlement from "addEntitlement";
 import closure_8 from "createEmptyPromotionsByType";
 import GuildFeatures from "GuildFeatures";
 import ME from "ME";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { isTablet } from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
@@ -164,11 +164,11 @@ function _isEligibleForBOGOPromotion() {
                   isClaimedResult = currentUser2.isClaimed();
                 }
                 dependencyMap = !isClaimedResult;
-                let obj2 = flag(6881);
+                let obj2 = flag(6883);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(12741);
+                let obj3 = flag(12745);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(12743);
+                let obj4 = flag(12747);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
                 const isMobile = flag(4540).isMobile;
                 let isAndroidResult = !isMobile;
@@ -411,7 +411,7 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     isAndroidResult = tmpResult.isAndroid();
   }
   const tmp11 = useScheduledForcedUpdate;
-  tmpResult = tmp(12743);
+  tmpResult = tmp(12747);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

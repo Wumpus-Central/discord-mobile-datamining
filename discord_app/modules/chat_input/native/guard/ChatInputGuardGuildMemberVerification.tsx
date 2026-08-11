@@ -5,23 +5,23 @@ import { TextAreaCta } from "TextAreaCta";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importAllResult from "module_11820";
-import { registerAsset } from "../../../../../_runtime/11818_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/11819_registerAsset.js";
+import importAllResult from "module_11823";
+import { registerAsset } from "../../../../../_runtime/11821_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11822_registerAsset.js";
 import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
-const memoResult = require("module_11820").memo(function ChatInputGuardGuildMemberVerification(guildId) {
+const memoResult = require("module_11823").memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
-  let obj = guildId(8429);
+  let obj = guildId(8435);
   const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(4127).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  if (guildId(4129).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     let tmp8 = registerAsset;
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.lk30cY);
@@ -32,7 +32,7 @@ const memoResult = require("module_11820").memo(function ChatInputGuardGuildMemb
       obj = { guildId, canWithdraw: false };
       const result = guildId(outer1_2[12]).openMemberVerificationRejectedAlert(obj);
     };
-  } else if (tmp2(4127).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+  } else if (tmp2(4129).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
     tmp8 = registerAsset;
     const intl2 = tmp2(1236).intl;
     stringResult = intl2.string(tmp2(1236).t["5iLvSx"]);
@@ -68,7 +68,7 @@ const memoResult = require("module_11820").memo(function ChatInputGuardGuildMemb
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(11820);
+    obj[1] = tmp2(11823);
     obj[2] = !stateFromStores;
     tmp13Result = tmp13(tmp14(5719), obj);
     const tmp14Result = tmp14(5719);

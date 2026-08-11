@@ -31,7 +31,7 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    let tmpResult = tmp(7052);
+    let tmpResult = tmp(7055);
     return tmpResult.formatTotalTime(num);
   } else if (displayType === tmp3.PURCHASES) {
     const totalSpendAmount = obj2.getTotalSpendAmount();

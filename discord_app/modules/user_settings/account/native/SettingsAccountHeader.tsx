@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountHeader.tsx
 import importAllResult from "noop";
 import { View } from "set";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticsSections } from "ME";
 import { SafetySettingsNoticeType } from "SafetyToastType";
@@ -39,8 +39,8 @@ const memoResult = importAllResult.memo(() => {
   let obj1 = handleOpenEmailVerification;
   const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = callback2();
-  const items1 = [upsertRelationship];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().length > 0);
+  const items1 = [markAllUserIdListsStale];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0);
   const callback = importAllResult.useCallback(() => {
     callback(table[14]).open();
   }, []);
@@ -73,6 +73,6 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp9Result;
 });
-const result = require("upsertRelationship").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
 
 export default memoResult;

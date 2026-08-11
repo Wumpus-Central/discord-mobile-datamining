@@ -1,13 +1,13 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyWarningTypes } from "handleConnectionOpen";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-const result = require("upsertRelationship").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
+const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
 
 export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   channelId = channelId.channelId;

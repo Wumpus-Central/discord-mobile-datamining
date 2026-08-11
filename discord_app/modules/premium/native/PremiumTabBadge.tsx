@@ -8,7 +8,7 @@ import { Gradients } from "items";
 import jsxProd from "DismissibleContent";
 import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../_runtime/04725_LinearGradient.js";
-import { registerAsset } from "../../../../_runtime/14229_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14237_registerAsset.js";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { MarketingComponentType } from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
@@ -124,30 +124,30 @@ export default function PremiumTabBadge() {
   if (stateFromStores != null) {
     trialId = stateFromStores.trialId;
   }
-  tmp2Result = tmp2(6022);
+  tmp2Result = tmp2(6024);
   if (trialId === closure_6) {
     if (!tmp7) {
-      let items1 = [tmp2(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
+      let items1 = [tmp2(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
     }
     [tmp14, r10051] = callback(tmp11(items1, undefined, true), 2);
-    tmp2(6022);
+    tmp2(6024);
     if (!tmp7) {
       if (hasTier2Premium) {
-        let items2 = [tmp2(1358).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD];
+        let items2 = [tmp2(1377).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD];
       }
       let tmp12Result = tmp12(tmp16(items2, undefined, true), 2);
       [tmp18, r10063] = tmp12Result;
-      const isEligibleSenderForReferralProgram = tmp2(8162).useIsEligibleSenderForReferralProgram();
-      const tmp2Result2 = tmp2(8162);
-      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8161).useIsReferralProgramEntrypointBadgeAcknowledged();
-      const tmp2Result3 = tmp2(8161);
-      const promotionMarketingComponent = tmp2(7643).usePromotionMarketingComponent(tmp2(7647).MarketingComponentType.PREMIUM_TAB);
-      const tmp2Result5 = tmp2(6022);
+      const isEligibleSenderForReferralProgram = tmp2(8164).useIsEligibleSenderForReferralProgram();
+      const tmp2Result2 = tmp2(8164);
+      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8163).useIsReferralProgramEntrypointBadgeAcknowledged();
+      const tmp2Result3 = tmp2(8163);
+      const promotionMarketingComponent = tmp2(7645).usePromotionMarketingComponent(tmp2(7649).MarketingComponentType.PREMIUM_TAB);
+      const tmp2Result5 = tmp2(6024);
       let prop = null;
       if (null != promotionMarketingComponent) {
         prop = null;
         if ("premiumTab" === promotionMarketingComponent.properties.properties.oneofKind) {
-          prop = tmp2(1358).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+          prop = tmp2(1377).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
         }
       }
       let str2;
@@ -161,19 +161,19 @@ export default function PremiumTabBadge() {
       if (null != promotionMarketingComponent) {
         if ("premiumTab" === promotionMarketingComponent.properties.properties.oneofKind) {
           obj = { acked: null, badgeCopy: null, ackedBadgeCopy: null, componentId: null };
-          obj[0] = tmp27 !== tmp2(1358).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+          obj[0] = tmp27 !== tmp2(1377).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
           obj[1] = promotionMarketingComponent.properties.properties.premiumTab.badgeLabel;
           obj[2] = promotionMarketingComponent.properties.properties.premiumTab.acknowledgedBadgeLabel;
           obj[3] = promotionMarketingComponent.id;
           return callback2(OfferBadge, obj);
         }
       }
-      if (tmp14 === tmp2(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE) {
+      if (tmp14 === tmp2(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE) {
         const intl2 = tmp2(1236).intl;
         let stringResult = intl2.string(tmp2(1236).t.uO4bXn);
       } else {
         stringResult = null;
-        if (tmp18 === tmp2(1358).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD) {
+        if (tmp18 === tmp2(1377).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD) {
           const intl = tmp2(1236).intl;
           stringResult = intl.string(tmp2(1236).t["jyYgZ+"]);
         }
@@ -281,7 +281,7 @@ export default function PremiumTabBadge() {
           tmp2Result7 = tmp2(500);
         }
       }
-      const tmp2Result4 = tmp2(7643);
+      const tmp2Result4 = tmp2(7645);
     }
     items2 = [];
     const tmp13 = callback(tmp11(items1, undefined, true), 2);

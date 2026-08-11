@@ -3,7 +3,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
 import ME from "ME";
-import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -24,7 +24,7 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9224, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9230, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
@@ -32,7 +32,7 @@ export default {
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9214, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9220, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -78,7 +78,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9227, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9233, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALF;
       }
     }

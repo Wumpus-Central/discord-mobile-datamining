@@ -113,7 +113,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
-  const items = [callback2(trackAnalyticsEvent(6027).SafetyChatSpotIllustration, {}), , ];
+  const items = [callback2(trackAnalyticsEvent(6029).SafetyChatSpotIllustration, {}), , ];
   obj = { style: tmp.warningText, children: null };
   obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1236).intl;

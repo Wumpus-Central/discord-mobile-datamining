@@ -248,9 +248,9 @@ export const setTryItOutProfileEffect = function setTryItOutProfileEffect(profil
   obj = { feature_name: constants4.PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventProperties.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
-export const setTryItOutBanner = function setTryItOutBanner(c5) {
+export const setTryItOutBanner = function setTryItOutBanner(outer1_8) {
   let obj = dispatcher;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: c5 };
+  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: outer1_8 };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_BANNER, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventProperties.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);

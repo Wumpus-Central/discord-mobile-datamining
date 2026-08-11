@@ -17,14 +17,14 @@ const require = arg1;
 function ConnectGuardianShareScreen() {
   const tmp = createCacheKey();
   let obj = getLinkCode(1236);
-  const syncMessages = obj.useSyncMessages(getLinkCode(2284).messagesLoader);
+  const syncMessages = obj.useSyncMessages(getLinkCode(2303).messagesLoader);
   const callback = React.useCallback(() => {
     const intl = getLinkCode(1236).intl;
-    getLinkCode(4001).presentFailedToast(intl.string(getLinkCode(1236).t.R0RpRX));
+    getLinkCode(4020).presentFailedToast(intl.string(getLinkCode(1236).t.R0RpRX));
     let arr = callback(4509);
     arr = arr.pop();
   }, []);
-  let obj1 = getLinkCode(11324);
+  let obj1 = getLinkCode(11329);
   getLinkCode = obj1.useFamilyCenterActions({ onError: callback }).getLinkCode;
   let obj2 = getLinkCode(647);
   const items = [freshTeenActivityWithMap];
@@ -63,7 +63,7 @@ function ConnectGuardianShareScreen() {
       obj5[1] = stateFromStores;
       obj5[2] = stateFromStores1;
       obj5[3] = getLinkCode;
-      let tmp11Result = tmp11(tmp2(14128).ConnectGuardianCard, obj5);
+      let tmp11Result = tmp11(tmp2(14136).ConnectGuardianCard, obj5);
     }
     const obj6 = { children: null };
     const obj7 = { children: null };
@@ -72,8 +72,8 @@ function ConnectGuardianShareScreen() {
     items3[1] = tmp12(getLinkCode(4712).Stack, obj3);
     obj[1] = items3;
     obj7[0] = tmp12(getLinkCode(4712).Stack, obj);
-    obj6[0] = tmp11(getLinkCode(7808).ModalContent, obj7);
-    return tmp11(getLinkCode(7807).ModalScreen, obj6);
+    obj6[0] = tmp11(getLinkCode(7810).ModalContent, obj7);
+    return tmp11(getLinkCode(7809).ModalScreen, obj6);
   }
   const tmp9 = useOnNewPendingRequest;
   tmp11Result = tmp11(View, { style: tmp.loading, children: callback(getLinkCode(5823).ActivityIndicator, {}) });

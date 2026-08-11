@@ -71,7 +71,7 @@ prototype["computeVoiceFlags"] = function computeVoiceFlags() {
     }
     result = null != windowHandle;
   }
-  tmpResult = tmp(1384);
+  tmpResult = tmp(1403);
   if (!isClipsEnabledResult) {
     isClipsEnabledResult = result;
   }

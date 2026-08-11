@@ -14,10 +14,10 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = tmp2(1919).getPerkSource(perks, tmp2(1921).Perk.MONTHLY_ORBS);
+      const perkSource = tmp2(1938).getPerkSource(perks, tmp2(1940).Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
-        hasItem = perkSource.includes(tmp2(1921).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+        hasItem = perkSource.includes(tmp2(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       return hasItem;
     }
@@ -31,18 +31,18 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = tmp(3947);
+    let tmpResult = tmp(3966);
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
-      tmpResult = tmp(1919);
+      tmpResult = tmp(1938);
       let perks;
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      const perkSource = tmpResult.getPerkSource(perks, tmp(1921).Perk.MONTHLY_ORBS);
+      const perkSource = tmpResult.getPerkSource(perks, tmp(1940).Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
-        hasItem = perkSource.includes(tmp(1921).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+        hasItem = perkSource.includes(tmp(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       flag = hasItem;
     }

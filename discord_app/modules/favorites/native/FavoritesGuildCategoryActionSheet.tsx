@@ -10,9 +10,9 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
   let dependencyMap;
-  const tmp3 = onClose(12134)(category);
+  const tmp3 = onClose(12137)(category);
   dependencyMap = tmp3;
-  const DeveloperMode = category(3974).DeveloperMode;
+  const DeveloperMode = category(3993).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   let obj = { header: null, children: null };
   obj[0] = callback(category(5396).BottomSheetTitleHeader, { title: onClose(4494)(category, true) });
@@ -22,7 +22,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     obj = { label: null, icon: null, onPress: null };
     obj[0] = tmp3.label;
     const obj1 = { IconComponent: null };
-    obj1[0] = tmp4(9706).PlusLargeIcon;
+    obj1[0] = tmp4(9711).PlusLargeIcon;
     obj[1] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj1);
     obj[2] = function onPress() {
       _undefined.perform();
@@ -37,7 +37,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   const intl = tmp4(1236).intl;
   obj3[0] = intl.string(category(1236).t.zdPFs9);
   const obj4 = { IconComponent: null };
-  obj4[0] = category(6011).SettingsIcon;
+  obj4[0] = category(6013).SettingsIcon;
   obj3[1] = callback(category(5766).ActionSheetRow.Icon, obj4);
   obj3[2] = function onPress() {
     onClose(_undefined[12])(category.id);
@@ -52,7 +52,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     const intl2 = tmp4(1236).intl;
     obj6[0] = intl2.string(tmp4(1236).t["2visC6"]);
     const obj7 = { IconComponent: null };
-    obj7[0] = tmp4(9546).IdIcon;
+    obj7[0] = tmp4(9552).IdIcon;
     obj6[1] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj7);
     obj6[2] = function onPress() {
       category(_undefined[14]).copy(category.id);

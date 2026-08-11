@@ -4,7 +4,7 @@ import noop from "noop";
 import get_ActivityIndicator from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 import { useNavigationTheme } from "useNavigationTheme.native.tsx";
 
 let StyleSheet;

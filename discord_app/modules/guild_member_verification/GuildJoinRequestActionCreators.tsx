@@ -468,7 +468,7 @@ function _updateGuildJoinRequest() {
               let APPROVED;
               let closure_4;
               if (APPROVED === undefined) {
-                APPROVED = callback(4127).GuildJoinRequestApplicationStatuses.APPROVED;
+                APPROVED = callback(4129).GuildJoinRequestApplicationStatuses.APPROVED;
               }
               updateSubmittedGuildJoinRequestTotal = undefined;
               c7 = 1;
@@ -485,7 +485,7 @@ function _updateGuildJoinRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback(7322);
+              let obj7 = callback(7323);
               const obj2 = { guildId: null, actionType: null, applicationUserId: null };
               obj2[0] = callback;
               obj2[1] = APPROVED;

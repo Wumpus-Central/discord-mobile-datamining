@@ -9,7 +9,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ApplicationStreamStates } from "ME";
@@ -352,7 +352,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       self.cancelIncomingCall(self.currentCall.channelId);
     }
     tmp3 = null != self.currentCall && self.currentCall.channelId !== channelId && self.isPendingIncomingCall(self.currentCall);
-    channelName = _computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    channelName = _computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     let guildId = channel.getGuildId();
     if (guildId == null) {
       guildId = null;
@@ -372,9 +372,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(16580);
-    const reportIncomingCallResult = self(16580).reportIncomingCall(channelId, channelName, tmp19);
-    self(16580).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(16592);
+    const reportIncomingCallResult = self(16592).reportIncomingCall(channelId, channelName, tmp19);
+    self(16592).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         outer1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -383,7 +383,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       outer1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(16580).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(16592).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         outer1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -397,7 +397,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   let closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(16580);
+  obj = self(16592);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -416,8 +416,8 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
   self = this;
   let isEnabledResult = this.isEnabled();
   if (isEnabledResult) {
-    isEnabledResult = self(1605).isMetaQuest();
-    const obj = self(1605);
+    isEnabledResult = self(1624).isMetaQuest();
+    const obj = self(1624);
   }
   if (isEnabledResult) {
     if (null == self.reconcilePromise) {
@@ -885,7 +885,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   let closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(16580);
+  obj = self(16592);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1041,7 +1041,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(16580);
+            obj = self(16592);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

@@ -43,7 +43,7 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSettings, database) {
   if (!userGuildSettings.userGuildSettings.partial) {
-    obj = obj(1936);
+    obj = obj(1955);
     const result = obj.userGuildSettingsTransaction(database);
     result.delete();
   }
@@ -65,7 +65,7 @@ prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpd
   }
 };
 prototype["write"] = function write(arg0, version, database) {
-  obj = obj(1936);
+  obj = obj(1955);
   const result = obj.userGuildSettingsTransaction(database);
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
@@ -88,7 +88,7 @@ prototype["write"] = function write(arg0, version, database) {
     let putResult = result.put(str, tmp9);
     continue;
   }
-  const result1 = obj(1936).nonGuildVersionsTransaction(database);
+  const result1 = obj(1955).nonGuildVersionsTransaction(database);
   obj = { id: "user_guild_settings_version", version };
   result1.put(obj);
 };

@@ -574,7 +574,7 @@ prototype["render"] = function render() {
     items[3] = renderDeleteButtonResult;
     obj6[1] = items;
     obj5[1] = closure_23(tmp24(4712).Stack, obj6);
-    tmp22Result = tmp22(tmp24(7967).Form, obj5);
+    tmp22Result = tmp22(tmp24(7969).Form, obj5);
     const tmp26 = closure_23;
   }
   obj2[1] = tmp22Result;

@@ -642,7 +642,7 @@ function FriendAnniversary() {
   return callback3(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(6911);
+  let obj = premiumTrialOffer(6913);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -725,10 +725,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15013).toggle("force_mock_iap", arg0);
+    callback(15023).toggle("force_mock_iap", arg0);
     getUserAgnosticState.persist();
-    const obj = callback(15013);
-    const result = callback2(11188).checkForUpdateAndReload();
+    const obj = callback(15023);
+    const result = callback2(11193).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

@@ -118,7 +118,7 @@ export default function _default() {
       return tmp(tmp(outer1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(8700);
+  obj5[0] = analyticsLocations(8706);
   obj5[1] = tmp.nitroWheel;
   obj4[0] = callback2(analyticsLocations(5268), obj5);
   const intl3 = getSystemLocale.intl;

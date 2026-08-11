@@ -78,8 +78,8 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4123);
-  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1358).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  tmpResult = tmp(4125);
+  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;
   }

@@ -2,7 +2,7 @@
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "jsxProd";
@@ -44,7 +44,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(589);
-  return channel(12551).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(12555).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: metroImportAll, StatusTypes: c9 } = ME);
@@ -107,7 +107,7 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   }, items3);
   if (null != stateFromStores) {
     let tmp2Result = tmp2(tmp3[12]);
-    let channelName = tmp2Result.computeChannelName(stateFromStores, tmp4, upsertRelationship);
+    let channelName = tmp2Result.computeChannelName(stateFromStores, tmp4, markAllUserIdListsStale);
   } else {
     const intl = tmp2(tmp3[13]).intl;
     channelName = intl.string(tmp2(tmp3[13]).t.ai6Lbr);

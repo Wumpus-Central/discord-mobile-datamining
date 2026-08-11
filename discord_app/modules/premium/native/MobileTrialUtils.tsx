@@ -44,11 +44,11 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscription_trial) {
     return null;
   } else {
-    let tmpResult = tmp(7328);
+    let tmpResult = tmp(7329);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
-      tmpResult = tmp(3947);
+      tmpResult = tmp(3966);
       obj = { intervalType: null, intervalCount: null };
       ({ interval: obj3[0], interval_count: obj3[1] } = subscription_trial);
       const result = tmpResult.formatIntervalDuration(obj);

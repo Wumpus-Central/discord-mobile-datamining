@@ -13,7 +13,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   let obj = { hasIcons: true, children: null };
   obj = { arrow: true, icon: null, label: null, onPress: null };
-  obj[1] = callback(onTaskSelect(12182).ScreenIcon, {});
+  obj[1] = callback(onTaskSelect(12185).ScreenIcon, {});
   const intl = onTaskSelect(1236).intl;
   obj[2] = intl.string(onTaskSelect(1236).t["QXc01+"]);
   obj[3] = function onPress() {
@@ -25,7 +25,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   };
   const items = [callback(onTaskSelect(5374).TableRow, obj), ];
   obj = { arrow: true, icon: null, label: null, onPress: null };
-  obj[1] = callback(onTaskSelect(8762).GameControllerIcon, {});
+  obj[1] = callback(onTaskSelect(8768).GameControllerIcon, {});
   const intl2 = onTaskSelect(1236).intl;
   obj[2] = intl2.string(onTaskSelect(1236).t["8lAfuB"]);
   obj[3] = function onPress() {

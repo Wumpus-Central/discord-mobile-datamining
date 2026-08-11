@@ -40,7 +40,7 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     ensureAvatarSource;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
-        let tmp5Result = tmp5(1416);
+        let tmp5Result = tmp5(1435);
         obj = { userId: null, avatar: null, guildId: null };
         obj[0] = author.id;
         obj[1] = guildMemberAvatar;
@@ -48,7 +48,7 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
         let guildMemberAvatarSource = tmp5Result.getGuildMemberAvatarSource(obj, author);
       }
       obj = { content: null, totalMonthsSubscribed: 0, username: null, avatarURL: null, welcomeLabel: null };
-      tmp5Result = tmp5(8101);
+      tmp5Result = tmp5(8103);
       obj1 = { username: null, usernameOnClickHandler: null, productName: null };
       obj1[0] = messageAuthorWithProcessedColor.nick;
       obj2 = { message: null, author: null, roleStyle: null };

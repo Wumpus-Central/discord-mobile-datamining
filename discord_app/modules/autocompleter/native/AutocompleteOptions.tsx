@@ -235,7 +235,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const obj4 = _private(tmp3[18]);
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(5952).StickerSendability.SENDABLE];
+              const items3 = [_private, (arg0, arg1) => arg1 === callback(5954).StickerSendability.SENDABLE];
               items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
               const tmp2Result = flag(tmp3[14]);
             }
@@ -251,8 +251,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 obj = { id: null, animated: null, size: null };
                 ({ id: obj3[0], animated: obj3[1] } = name);
                 obj[2] = closure_19;
-                let url = callback2(1416).getEmojiURL(obj);
-                const obj2 = callback2(1416);
+                let url = callback2(1435).getEmojiURL(obj);
+                const obj2 = callback2(1435);
               } else {
                 url = name.url;
               }

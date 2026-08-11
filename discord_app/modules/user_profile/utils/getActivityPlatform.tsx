@@ -13,19 +13,19 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionId(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(9654)(session_id)) {
+  } else if (tmp(9659)(session_id)) {
     let tmpResult = tmp(5000);
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8907)(session_id)) {
+  } else if (tmp(8913)(session_id)) {
     tmpResult = tmp(5000);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(12277)(session_id)) {
+  } else if (tmp(12280)(session_id)) {
     return tmp(5000).get(PlatformTypes.XBOX);
-  } else if (tmp(12278)(session_id)) {
+  } else if (tmp(12281)(session_id)) {
     return tmp(5000).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(12294)(session_id)) {
-      if (!tmp(12295)(session_id)) {
+    if (!tmp(12297)(session_id)) {
+      if (!tmp(12298)(session_id)) {
         const found = tmp(5000).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {

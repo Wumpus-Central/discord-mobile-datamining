@@ -1,6 +1,6 @@
 // discord_app/modules/visual_effect_view/native/VisualEffectViewAnimated.tsx
 import animatedComponent from "isBlurDisabled";
-import importDefaultResult from "module_4036";
+import importDefaultResult from "module_4042";
 
 const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewAnimated.tsx");
 

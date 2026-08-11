@@ -2,7 +2,7 @@
 import { CustomCheckoutFlow } from "CustomCheckoutFlow";
 import ME from "ME";
 import { keysSorter } from "../../../../_runtime/05173_keysSorter.js";
-import { _extends } from "../../../../_runtime/metro/04130__extends.js";
+import { _extends } from "../../../../_runtime/metro/04132__extends.js";
 import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
 

@@ -7,7 +7,7 @@ import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import updateVoiceState from "updateVoiceState";
@@ -43,7 +43,7 @@ export default function useGuildMediaState(guild_id) {
   let obj2 = _require(isDontBadgeMutedVcsEnabled[15]);
   const guildActiveEvent = _require(isDontBadgeMutedVcsEnabled[16]).useGuildActiveEvent(guild_id);
   const obj3 = _require(isDontBadgeMutedVcsEnabled[16]);
-  const items1 = [guildActiveEvent, upsertRelationship];
+  const items1 = [guildActiveEvent, markAllUserIdListsStale];
   const stateFromStoresArray = _require(isDontBadgeMutedVcsEnabled[14]).useStateFromStoresArray(items1, () => {
     const embeddedActivitiesForGuild = guildActiveEvent.getEmbeddedActivitiesForGuild(closure_0);
     return embeddedActivitiesForGuild.filter((userIds) => {

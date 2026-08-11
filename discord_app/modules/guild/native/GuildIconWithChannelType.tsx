@@ -51,7 +51,7 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   obj = typeIconSize(4764);
   const channelIcon = obj.getChannelIcon(channel);
   obj = { "aria-label": tmp, shape: null, size: null, gap: null, depthX: null, depthY: null, children: null };
-  obj[1] = typeIconSize(8293).CutoutShape.Circle;
+  obj[1] = typeIconSize(8298).CutoutShape.Circle;
   obj[2] = memo;
   obj[3] = gap;
   obj[4] = sum1;
@@ -66,5 +66,5 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   const items5 = [memo2];
   items3[1] = callback(View, { style: items4, children: callback(typeIconSize(1297).Icon, { style: items5, source: channelIcon }) });
   obj[6] = items3;
-  return callback2(typeIconSize(10270).Pile, obj);
+  return callback2(typeIconSize(10275).Pile, obj);
 };

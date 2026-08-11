@@ -11,7 +11,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import reinjectEphemerals from "reinjectEphemerals";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import closure_19 from "initialize";
 import closure_20 from "initialize";
@@ -62,8 +62,8 @@ function injectItemsIntoList(arr, arr2) {
   return found;
 }
 function injectRecommendedGuildsRow() {
-  items1 = items1.filter((type) => type.type !== callback(7304).ICYMIItemTypes.RECOMMENDED_GUILDS);
-  items = items.filter((type) => type.type !== callback(7304).ICYMIItemTypes.RECOMMENDED_GUILDS);
+  items1 = items1.filter((type) => type.type !== callback(7305).ICYMIItemTypes.RECOMMENDED_GUILDS);
+  items = items.filter((type) => type.type !== callback(7305).ICYMIItemTypes.RECOMMENDED_GUILDS);
   if (0 !== length.length) {
     const guildsArray = store2.getGuildsArray();
     const tmp24 = guildsArray.filter((features) => {
@@ -434,9 +434,9 @@ function getNewUnreadItems(arr9, channelId) {
         let tmp7 = null == store3.getReadTimestamp(tmp2.id);
         if (tmp7) {
           let tmp8 = nextResult;
-          let tmp9 = tmp2.type !== tmp3(7304).ICYMIItemTypes.MESSAGE;
+          let tmp9 = tmp2.type !== tmp3(7305).ICYMIItemTypes.MESSAGE;
           if (!tmp9) {
-            let tmp3Result = tmp3(8912);
+            let tmp3Result = tmp3(8918);
             let tmp10 = nextResult;
             let result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
             if (result) {
@@ -703,7 +703,7 @@ class ICYMIStore extends PersistedStore {
 }
 const prototype = ICYMIStore.prototype;
 prototype["initialize"] = function initialize(dehydratedItems) {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded, map, getHash, initialize, closure_9, createGuildRecordFromRust, closure_19, closure_20, reinjectEphemerals, getUncachedChannelPermissions, generateOldThreadCutoff, upsertRelationship, updateUserGuildSettingsInternal);
+  this.waitFor(fetchFingerprint, ensureGuildLoaded, map, getHash, initialize, closure_9, createGuildRecordFromRust, closure_19, closure_20, reinjectEphemerals, getUncachedChannelPermissions, generateOldThreadCutoff, markAllUserIdListsStale, updateUserGuildSettingsInternal);
   if (null != dehydratedItems) {
     dehydratedItems = dehydratedItems.dehydratedItems;
     if (dehydratedItems == null) {

@@ -103,8 +103,8 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     let result = flag;
   } else {
-    result = tmp(3922).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult1 = tmp(3922);
+    result = tmp(3941).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult1 = tmp(3941);
   }
 };
 export const useShouldRestrictUpdatingCreatorMonetizationSettings = function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
@@ -171,8 +171,8 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
     }
     let result = flag;
   } else {
-    result = tmp(3922).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult1 = tmp(3922);
+    result = tmp(3941).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult1 = tmp(3941);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -239,7 +239,7 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
     }
     return outer1_5.getMonetizationRestrictionsFetchState(tmp2) === outer1_6.FETCHING;
   });
-  obj[0] = stateFromStores(3922).isRestrictedFromMonetizationReapplication(stateFromStoresArray);
+  obj[0] = stateFromStores(3941).isRestrictedFromMonetizationReapplication(stateFromStoresArray);
   obj[1] = stateFromStores1;
   return obj;
 };

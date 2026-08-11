@@ -56,7 +56,7 @@ export default function useExternalPipParticipant() {
       id1 = tmp4.id;
     }
     if (focusedParticipantStreamId.current !== id1) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "ct", focusedParticipantType: null };
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "HermesInternal", focusedParticipantType: null };
       obj[2] = stateFromStores1.current;
     } else {
       let type1;
@@ -250,7 +250,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "HermesInternal" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "accessibilityRole" };
   }, items4);
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {

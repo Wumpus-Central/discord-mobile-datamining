@@ -138,13 +138,13 @@ export default {
   isDiscordUri(arg0) {
     let tmp = null != arg0;
     if (tmp) {
-      const protocol = importAll(1469).parse(arg0).protocol;
+      const protocol = importAll(1488).parse(arg0).protocol;
       let tmp4 = null != protocol;
       if (tmp4) {
         tmp4 = "discord:" === protocol;
       }
       tmp = tmp4;
-      const obj = importAll(1469);
+      const obj = importAll(1488);
     }
     return tmp;
   },
@@ -152,8 +152,8 @@ export default {
     let tmp = null != src;
     if (tmp) {
       const _window = window;
-      tmp = importAll(1469).parse(src).hostname === window.GLOBAL_ENV.CDN_HOST;
-      const obj = importAll(1469);
+      tmp = importAll(1488).parse(src).hostname === window.GLOBAL_ENV.CDN_HOST;
+      const obj = importAll(1488);
     }
     return tmp;
   },
@@ -276,13 +276,13 @@ export default {
     if (!flag) {
       let tmp8 = null != url;
       if (tmp8) {
-        const protocol = importAll(1469).parse(url).protocol;
+        const protocol = importAll(1488).parse(url).protocol;
         let tmp11 = null != protocol;
         if (tmp11) {
           tmp11 = "discord:" === protocol;
         }
         tmp8 = tmp11;
-        const obj2 = importAll(1469);
+        const obj2 = importAll(1488);
       }
       flag = tmp8;
     }
@@ -297,23 +297,23 @@ export default {
     return startsWithResult;
   },
   format(arg0) {
-    return importAll(1469).format(arg0);
+    return importAll(1488).format(arg0);
   },
   formatPathWithQuery(pathname) {
-    let obj = importAll(1469);
+    let obj = importAll(1488);
     obj = { pathname, query: null };
     obj[1] = apply.pickBy(arg1);
     return obj.format(obj);
   },
   formatSearch(arg0) {
-    let obj = importAll(1469);
+    let obj = importAll(1488);
     obj = { query: null };
     obj[0] = apply.pickBy(arg0);
     return obj.format(obj);
   },
   safeParseWithQuery(target) {
     try {
-      return importAll(1469).parse(target, true);
+      return importAll(1488).parse(target, true);
     } catch (err) {
       return null;
     }

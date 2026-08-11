@@ -27,32 +27,32 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   let obj = { text: null, value: null };
   const intl = guildId(1236).intl;
   obj[0] = intl.string(guildId(1236).t["//3pvi"]);
-  obj[1] = guildId(6977).RaidLockdownFeedbackType.DM_SPAM;
+  obj[1] = guildId(6980).RaidLockdownFeedbackType.DM_SPAM;
   let items = [obj, , , , , ];
   obj = { text: null, value: null };
   const intl2 = guildId(1236).intl;
   obj[0] = intl2.string(guildId(1236).t.SdVsip);
-  obj[1] = guildId(6977).RaidLockdownFeedbackType.MENTION_SPAM;
+  obj[1] = guildId(6980).RaidLockdownFeedbackType.MENTION_SPAM;
   items[1] = obj;
   const obj1 = { text: null, value: null };
   const intl3 = guildId(1236).intl;
   obj1[0] = intl3.string(guildId(1236).t.uTiSVL);
-  obj1[1] = guildId(6977).RaidLockdownFeedbackType.CHANNEL_SPAM;
+  obj1[1] = guildId(6980).RaidLockdownFeedbackType.CHANNEL_SPAM;
   items[2] = obj1;
   const obj2 = { text: null, value: null };
   const intl4 = guildId(1236).intl;
   obj2[0] = intl4.string(guildId(1236).t.GQczU8);
-  obj2[1] = guildId(6977).RaidLockdownFeedbackType.SUS_NEW_MEMBERS;
+  obj2[1] = guildId(6980).RaidLockdownFeedbackType.SUS_NEW_MEMBERS;
   items[3] = obj2;
   const obj3 = { text: null, value: null };
   const intl5 = guildId(1236).intl;
   obj3[0] = intl5.string(guildId(1236).t.AAgqy3);
-  obj3[1] = guildId(6977).RaidLockdownFeedbackType.CHANGING_SETTINGS;
+  obj3[1] = guildId(6980).RaidLockdownFeedbackType.CHANGING_SETTINGS;
   items[4] = obj3;
   const obj4 = { text: null, value: null };
   const intl6 = guildId(1236).intl;
   obj4[0] = intl6.string(guildId(1236).t.ryPKb7);
-  obj4[1] = guildId(6977).RaidLockdownFeedbackType.OTHER;
+  obj4[1] = guildId(6980).RaidLockdownFeedbackType.OTHER;
   items[5] = obj4;
   const obj5 = { startExpanded: true, header: null, children: null };
   const obj6 = { title: null };
@@ -79,10 +79,10 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
     };
     obj[1] = first.includes(value);
     obj[2] = value.text;
-    return outer1_6(guildId(8448).TableCheckboxRow, obj, value);
+    return outer1_6(guildId(8454).TableCheckboxRow, obj, value);
   });
   const items1 = [callback(guildId(5767).TableRowGroup, obj8), , ];
-  let hasItem = first.includes(guildId(6977).RaidLockdownFeedbackType.OTHER);
+  let hasItem = first.includes(guildId(6980).RaidLockdownFeedbackType.OTHER);
   if (hasItem) {
     const obj9 = { autoComplete: "off", value: null, placeholder: null, onChange: null };
     obj9[1] = first1;
@@ -91,7 +91,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
     obj9[3] = function onChange(arg0) {
       callback(arg0);
     };
-    hasItem = tmp7(tmp5(7976).TextArea, obj9);
+    hasItem = tmp7(tmp5(7978).TextArea, obj9);
   }
   items1[1] = hasItem;
   const obj10 = {

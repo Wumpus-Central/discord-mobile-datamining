@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08401_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08407_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

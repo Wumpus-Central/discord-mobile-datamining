@@ -2,7 +2,7 @@
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { Easing } from "module_4036";
+import { Easing } from "module_4042";
 import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
 import { useChannelSafeAreaBottomStyles } from "../../main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx";
 

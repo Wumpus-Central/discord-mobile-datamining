@@ -1,5 +1,5 @@
 // discord_app/modules/games/GameStore.tsx
-import applicationId from "applicationId";
+import getOfficialApplicationId from "getOfficialApplicationId";
 import { Store } from "initialize";
 import set from "isDiscordProxiedAssetUrl";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";

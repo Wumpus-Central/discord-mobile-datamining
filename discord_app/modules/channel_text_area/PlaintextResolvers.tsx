@@ -9,7 +9,7 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import { EmojiIntention } from "set";

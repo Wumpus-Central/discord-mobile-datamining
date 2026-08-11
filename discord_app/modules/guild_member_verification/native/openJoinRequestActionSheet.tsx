@@ -1,10 +1,10 @@
 // discord_app/modules/guild_member_verification/native/openJoinRequestActionSheet.tsx
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_member_verification/native/openJoinRequestActionSheet.tsx");
 
 export default function openJoinRequestActionSheet(joinRequest) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { joinRequest };
-  obj.openLazy(asyncRequireImpl(15694, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
+  obj.openLazy(asyncRequireImpl(15711, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
 };

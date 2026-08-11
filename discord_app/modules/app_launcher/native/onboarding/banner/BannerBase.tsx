@@ -5,7 +5,7 @@ import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { 11449__ } from "../../../../../../_runtime/metro/11449__.js";
+import { 11452__ } from "../../../../../../_runtime/metro/11452__.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
@@ -45,7 +45,7 @@ export default function BannerBase(arg0) {
   [tmp3, c0] = callback(React.useState(0), 2);
   let obj = _ReanimatedRexport;
   sharedValue = obj.useSharedValue(false);
-  const diff = sharedValue(1474)().width - 2 * sharedValue(712).space.PX_16;
+  const diff = sharedValue(1493)().width - 2 * sharedValue(712).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
   let obj1 = _hexToRgba;
   let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
@@ -105,7 +105,7 @@ export default function BannerBase(arg0) {
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = _11449__;
+  obj2[1] = _11452__;
   obj2[2] = !stateFromStores;
   const items5 = [callback2(sharedValue(5719), obj2), image];
   obj1[1] = items5;
@@ -114,5 +114,5 @@ export default function BannerBase(arg0) {
   obj4 = { variant: "text-md/semibold", color: "text-overlay-light", style: tmp.bannerText, children: text };
   items4[2] = callback2(View, obj3);
   obj[2] = items4;
-  return closure_8(sharedValue(4036).View, obj);
+  return closure_8(sharedValue(4042).View, obj);
 };

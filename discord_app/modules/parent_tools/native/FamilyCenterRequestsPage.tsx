@@ -32,7 +32,7 @@ function FamilyCenterMaxConnectionsBlurb() {
   const tmp5 = importDefault;
   useAgeSpecificText;
   const intl = tmp2(1236).intl;
-  intl.formatToPlainString(tmp5(2284)["1/PzIj"], { maxConnections: useIsInAdultAgeGroup() ? closure_5 : closure_6 });
+  intl.formatToPlainString(tmp5(2303)["1/PzIj"], { maxConnections: useIsInAdultAgeGroup() ? closure_5 : closure_6 });
   const intl2 = tmp2(1236).intl;
   let tmp10 = null;
   if (hasMaxConnections) {

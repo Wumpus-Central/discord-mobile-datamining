@@ -42,7 +42,7 @@ export default function ContextMenuCommandItem(item) {
     }
     return intl.formatToPlainString(item(outer1_2[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(11602);
+  let obj = item(11605);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;

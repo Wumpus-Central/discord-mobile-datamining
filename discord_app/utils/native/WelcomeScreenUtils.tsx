@@ -4,7 +4,7 @@ import handleInviteData from "handleInviteData";
 import { NO_WELCOME_SCREEN } from "handleInviteData";
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
@@ -74,5 +74,5 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  obj.openLazy(asyncRequireImpl(12014, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
+  obj.openLazy(asyncRequireImpl(12017, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
 };

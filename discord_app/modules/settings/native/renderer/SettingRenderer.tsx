@@ -47,7 +47,7 @@ class GuildSelectDefaultIcon {
 }
 function ForceSwitchIcons(children) {
   let context;
-  context = importAllResult.useContext(context(4020).AccessibilityPreferencesContext);
+  context = importAllResult.useContext(context(1356).AccessibilityPreferencesContext);
   const items = [context];
   const value = importAllResult.useMemo(() => {
     const obj = {};
@@ -55,7 +55,7 @@ function ForceSwitchIcons(children) {
     obj.switchIconsEnabled = true;
     return obj;
   }, items);
-  return callback3(context(4020).AccessibilityPreferencesContext.Provider, { value, children: children.children });
+  return callback3(context(1356).AccessibilityPreferencesContext.Provider, { value, children: children.children });
 }
 function SettingSearchResultBreadcrumbs(breadcrumbs) {
   breadcrumbs = breadcrumbs.breadcrumbs;
@@ -516,7 +516,7 @@ let closure_25 = importAllResult.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14929);
+  let obj = trailing(14939);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();

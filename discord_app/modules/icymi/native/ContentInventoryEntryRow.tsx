@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/ContentInventoryEntryRow.tsx
 import "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { jsx } from "jsxProd";
 import { CustomStatusEntryRow } from "content_inventory/CustomStatusEntryRow.tsx";
 import { items } from "content_inventory/GamingLikeEntryRow.tsx";
@@ -16,14 +16,14 @@ export default function ContentInventoryEntryRow(content) {
   }
   let flag2 = content.visible;
   let obj = content(589);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   if (obj.useStateFromStores(items, () => outer1_3.isBlockedOrIgnored(content.author_id))) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8234).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8234).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8234).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8238).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8238).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8238).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           obj = { content: null, renderForScreenshot: null, visible: null };
           obj[0] = content;
           obj[1] = flag;

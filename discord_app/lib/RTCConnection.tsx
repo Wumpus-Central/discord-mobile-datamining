@@ -648,9 +648,9 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(10698).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(10703).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
-  const WindowVisibilityVideoManager2 = tmp5(10698).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(10703).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
@@ -701,8 +701,8 @@ prototype["shouldSendSpeaking"] = function shouldSendSpeaking(_lastSentSpeakingS
     return true;
   } else {
     const self = this;
-    let tmpResult = tmp(1384);
-    tmpResult = tmp(1384);
+    let tmpResult = tmp(1403);
+    tmpResult = tmp(1403);
     let tmp7 = this._lastSentSSRC !== _lastSentSSRC || tmpResult.hasFlag(_lastSentSpeakingStatus, constants8.PRIORITY) !== tmpResult.hasFlag(this._lastSentSpeakingStatus, constants8.PRIORITY);
     if (tmp7) {
       let tmp8 = undefined !== self._lastSentSSRC || _lastSentSpeakingStatus !== tmp5.NONE;
@@ -1096,7 +1096,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13077).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13086).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -1104,22 +1104,22 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   }
   let tmp8Result = tmp8(500);
   if (tmp8Result.isIOS()) {
-    const mode = tmp3(13078).getConfig({ location: "_chooseExperiments" }).mode;
+    const mode = tmp3(13087).getConfig({ location: "_chooseExperiments" }).mode;
     if ("standard" === mode) {
       items.push("ios_video_stabilization_standard");
     } else if ("low_latency" === mode) {
       items.push("ios_video_stabilization_low_latency");
     }
-    const tmp3Result = tmp3(13078);
+    const tmp3Result = tmp3(13087);
   }
   tmp8Result = tmp8(500);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(10694).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(10694);
+    isAndroidResult = tmp8(10699).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(10699);
   }
   if (isAndroidResult) {
-    items.push(tmp8(10694).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(10699).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -2187,22 +2187,22 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13089).VideoQuality(self._connection);
+      const videoQuality = new self(13098).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13090).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13099).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13090).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13099).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13089).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13098).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {

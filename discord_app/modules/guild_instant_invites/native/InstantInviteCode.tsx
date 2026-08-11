@@ -2,7 +2,7 @@
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -10,7 +10,7 @@ import { Routes } from "ME";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "useMemberActionsForChannel";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11203_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11208_registerAsset.js";
 import { newMemberActionFromServer } from "../GuildOnboardingHomeTypes.tsx";
 import { useMemberActionsForChannel } from "../MemberActionUtils.tsx";
 
@@ -71,7 +71,7 @@ function ChannelActionEmoji(emoji) {
     obj[0] = tmp.emoji;
     const obj1 = { uri: null };
     let tmp5Result = tmp5(5268);
-    tmp5Result = tmp5(1416);
+    tmp5Result = tmp5(1435);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
     obj2[2] = EMOJI_URL_BASE_SIZE;
@@ -81,7 +81,7 @@ function ChannelActionEmoji(emoji) {
   } else {
     tmp2Result = tmp6;
     if (null != name) {
-      const tmp5Result1 = tmp5(3942);
+      const tmp5Result1 = tmp5(3961);
       tmp2Result = tmp6;
       if (null != tmp5Result1.getByName(tmp5Result2.convertSurrogateToName(name, false))) {
         const obj3 = { style: null, variant: "heading-lg/normal", children: null };
@@ -89,7 +89,7 @@ function ChannelActionEmoji(emoji) {
         obj3[2] = name;
         tmp2Result = tmp2(tmp3(4299).Text, obj3);
       }
-      tmp5Result2 = tmp5(3942);
+      tmp5Result2 = tmp5(3961);
     }
   }
   return tmp2Result;

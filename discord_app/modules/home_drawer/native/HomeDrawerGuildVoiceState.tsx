@@ -3,7 +3,7 @@ import apply from "apply";
 import { View } from "useIsHomeDrawerChannelInChannelList";
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import { ChannelTypes } from "ME";
@@ -146,10 +146,10 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
   const id = guild.id;
   let obj = _require(isHomeDrawerChannelInChannelList[17]);
   isHomeDrawerChannelInChannelList = obj.useIsHomeDrawerChannelInChannelList();
-  let items = [stateFromStoresArray1, updateUserGuildSettingsInternal];
+  let items = [stateFromStores1, updateUserGuildSettingsInternal];
   const items1 = [id, isHomeDrawerChannelInChannelList];
   const stateFromStoresArray = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStoresArray(items, () => {
-    const found = stateFromStoresArray1.getChannels(id)[outer1_6].filter((channel) => {
+    const found = stateFromStores1.getChannels(id)[outer1_6].filter((channel) => {
       channel = channel.channel;
       let tmp = channel.type === outer1_10.GUILD_VOICE;
       if (tmp) {
@@ -167,9 +167,9 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
   const items3 = [id];
   const stateFromStores = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items2, () => outer1_9.getVoiceStates(id), items3);
   const obj3 = _require(isHomeDrawerChannelInChannelList[18]);
-  const items4 = [upsertRelationship];
-  stateFromStoresArray1 = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStoresArray(items4, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs());
-  const items5 = [stateFromStoresArray, stateFromStores, guild.afkChannelId, stateFromStoresArray1];
+  const items4 = [markAllUserIdListsStale];
+  stateFromStores1 = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items4, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs());
+  const items5 = [stateFromStoresArray, stateFromStores, guild.afkChannelId, stateFromStores1];
   const items6 = [stateFromStores, guild.afkChannelId, stateFromStoresArray];
   const memo = stateFromStoresArray.useMemo(() => id(isHomeDrawerChannelInChannelList[19]).flatMap(stateFromStoresArray, (arg0) => {
     if (arg0 === afkChannelId.afkChannelId) {

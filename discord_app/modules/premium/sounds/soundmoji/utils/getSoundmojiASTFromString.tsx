@@ -87,8 +87,8 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
       }
       const obj1 = { id: null, animated: false, size: 16 };
       obj1[0] = emojiId2;
-      emojiURL = tmp3(1416).getEmojiURL(obj1);
-      const tmp3Result = tmp3(1416);
+      emojiURL = tmp3(1435).getEmojiURL(obj1);
+      const tmp3Result = tmp3(1435);
     }
     obj[8] = emojiURL;
     return obj;

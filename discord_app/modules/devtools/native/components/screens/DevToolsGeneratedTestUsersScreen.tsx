@@ -108,7 +108,7 @@ function PoolIdInput(onSubmit) {
     }
   }), items);
   let obj = { spacing: 4, style: tmp.inputContainer, children: null };
-  const items1 = [callback3(onSubmit(7790).TextInput, { size: "md", placeholder: "Enter Pool ID", onChange: tmp2[1], autoCapitalize: "none", autoCorrect: false, autoComplete: "off", isClearable: true }), callback3(onSubmit(7790).TextInput, { size: "md", secureTextEntry: true, placeholder: "Enter Password", onChange: tmp4[1], autoCapitalize: "none", autoCorrect: false, autoComplete: "off", isClearable: true }), ];
+  const items1 = [callback3(onSubmit(7792).TextInput, { size: "md", placeholder: "Enter Pool ID", onChange: tmp2[1], autoCapitalize: "none", autoCorrect: false, autoComplete: "off", isClearable: true }), callback3(onSubmit(7792).TextInput, { size: "md", secureTextEntry: true, placeholder: "Enter Password", onChange: tmp4[1], autoCapitalize: "none", autoCorrect: false, autoComplete: "off", isClearable: true }), ];
   let tmp11 = 0 === first.length;
   if (!tmp11) {
     tmp11 = 0 === first1.length;
@@ -131,7 +131,7 @@ function UserActionSheet(pool) {
   fetchFingerprint = React.useCallback((arg0) => {
     usersForPool(4271).hideActionSheet("generated-test-users");
     const obj = usersForPool(4271);
-    pool(13882).loginAsGeneratedUser(pool.id, arg0);
+    pool(13889).loginAsGeneratedUser(pool.id, arg0);
   }, items);
   let obj = { header: null, children: null };
   obj = { title: pool.summary, subtitle: null };
@@ -143,7 +143,7 @@ function UserActionSheet(pool) {
   obj2[2] = usersForPool.map((id) => {
     let closure_0 = id;
     const obj = { icon: null, label: null, subLabel: null, onPress: null, disabled: null, trailing: null, start: null, end: null };
-    obj[0] = outer1_10(pool(11224).UserIcon, { size: "md" });
+    obj[0] = outer1_10(pool(11229).UserIcon, { size: "md" });
     ({ username: obj[1], email: obj[2] } = id);
     obj[3] = function onPress() {
       return outer1_3(id.id);

@@ -70,9 +70,9 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         const intl3 = getSystemLocale.intl;
         obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
         const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8183));
+        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8185));
         const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8184));
+        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8186));
         const intl4 = getSystemLocale.intl;
         obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
         return obj1;

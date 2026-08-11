@@ -20,7 +20,7 @@ let unpackModuleId;
 const require = arg1;
 ({ isGuildScheduledEventActive: error, StaticGuildEventIndexes: metroImportAll } = scheduledEventSort);
 ({ GuildScheduledEventEntityTypes: unpackModuleId, GuildScheduledEventStatus: closure_12 } = GUILD_EVENT_MAX_NAME_LENGTH);
-({ GuildFeatures: map1, Permissions: closure_14 } = ME);
+({ BasicPermissions: map1, GuildFeatures: closure_14 } = ME);
 let closure_15 = [];
 let closure_16 = 15 * require("set").Millis.MINUTE;
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEvents.tsx");
@@ -45,7 +45,12 @@ export default function useGuildEvents(arg0, arg1) {
         if (null == channel_id) {
           return true;
         } else {
-          return getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, channel.getChannel(channel_id));
+          basicChannel = basicChannel.getBasicChannel(channel_id);
+          let canBasicChannelResult = null != basicChannel;
+          if (canBasicChannelResult) {
+            canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+          }
+          return canBasicChannelResult;
         }
       });
     }
@@ -57,26 +62,26 @@ export const useActiveEvent = function useActiveEvent(id) {
   const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [id];
   return _initialize.useStateFromStores(items, () => {
-    const channel = outer1_4.getChannel(closure_0);
-    if (outer1_6.can(outer1_14.VIEW_CHANNEL, channel)) {
-      let guild_id;
-      if (channel != null) {
-        guild_id = channel.guild_id;
-      }
-      if (null == guild_id) {
-        return null;
-      } else {
-        const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_ACTIVE(tmp));
-        let first = null;
-        if (guildScheduledEventsByIndex.length > 0) {
-          first = guildScheduledEventsByIndex[0];
+    const basicChannel = outer1_4.getBasicChannel(closure_0);
+    if (null != basicChannel) {
+      if (outer1_6.canBasicChannel(outer1_13.VIEW_CHANNEL, basicChannel)) {
+        let guild_id;
+        if (basicChannel != null) {
+          guild_id = basicChannel.guild_id;
         }
-        return first;
+        if (null == guild_id) {
+          return null;
+        } else {
+          const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_ACTIVE(closure_0));
+          let first = null;
+          if (guildScheduledEventsByIndex.length > 0) {
+            first = guildScheduledEventsByIndex[0];
+          }
+          return first;
+        }
       }
-    } else {
-      return null;
     }
-    tmp = closure_0;
+    return null;
   }, items1);
 };
 export const useActiveEventsByChannel = function useActiveEventsByChannel(arg0) {
@@ -108,7 +113,12 @@ export const useGuildUpcomingEvents = function useGuildUpcomingEvents(arg0) {
           if (null == entity_type.channel_id) {
             return true;
           } else {
-            return getUncachedChannelPermissions.can(constants3.VIEW_CHANNEL, channel.getChannel(entity_type.channel_id));
+            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
+            let canBasicChannelResult = null != basicChannel;
+            if (canBasicChannelResult) {
+              canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+            }
+            return canBasicChannelResult;
           }
         }
       }
@@ -131,7 +141,12 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
           if (null == entity_type.channel_id) {
             return true;
           } else {
-            return getUncachedChannelPermissions.can(constants3.VIEW_CHANNEL, channel.getChannel(entity_type.channel_id));
+            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
+            let canBasicChannelResult = null != basicChannel;
+            if (canBasicChannelResult) {
+              canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+            }
+            return canBasicChannelResult;
           }
         }
       }
@@ -223,7 +238,12 @@ export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
           if (null == entity_type.channel_id) {
             return true;
           } else {
-            return getUncachedChannelPermissions.can(constants2.VIEW_CHANNEL, channel.getChannel(entity_type.channel_id));
+            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
+            let canBasicChannelResult = null != basicChannel;
+            if (canBasicChannelResult) {
+              canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+            }
+            return canBasicChannelResult;
           }
         }
       }
@@ -277,11 +297,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   return React.useMemo(() => stateFromStores.filter((status) => {
     let endTime;
     let startTime;
-    const eventSchedule = callback(8948).getEventSchedule(status);
+    const eventSchedule = callback(8954).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = callback(8948);
+    const obj = callback(8954);
     let toISOStringResult1;
-    const obj2 = callback(8942);
+    const obj2 = callback(8948);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

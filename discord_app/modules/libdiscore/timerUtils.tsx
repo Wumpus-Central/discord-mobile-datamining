@@ -38,5 +38,5 @@ const tmp2 = new require("debounce")("libdiscore.timers");
 let result = require("expandEventProperties").fileFinishedImporting("modules/libdiscore/timerUtils.tsx");
 
 export const setupLibdiscoreTimersMonitor = function setupLibdiscoreTimersMonitor() {
-  const result = importAll(1902).setTimersMonitorCallback(onTimersDelayCallback);
+  const result = importAll(1921).setTimersMonitorCallback(onTimersDelayCallback);
 };

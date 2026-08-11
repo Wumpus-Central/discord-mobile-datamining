@@ -10,7 +10,7 @@ function noop() {
 const result = require("jsxProd").fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
 export const useModalDismissGuardRefreshControl = function useModalDismissGuardRefreshControl() {
-  isPortalKeyboardInModal = isPortalKeyboardInModal(8721).useIsPortalKeyboardInModal();
+  isPortalKeyboardInModal = isPortalKeyboardInModal(8727).useIsPortalKeyboardInModal();
   const items = [isPortalKeyboardInModal];
   return React.useMemo(() => {
     let tmp;

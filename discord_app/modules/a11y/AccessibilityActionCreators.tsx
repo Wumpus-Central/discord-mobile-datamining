@@ -78,7 +78,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
   const useReducedMotion2 = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
     if (useReducedMotion2) {
-      let tmpResult = tmp(8698);
+      let tmpResult = tmp(8704);
       obj = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       const obj1 = { value: false, reasonKey: null };
       obj1[1] = constants.REDUCED_MOTION;
@@ -97,7 +97,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
     useReducedMotion = !useReducedMotion2;
   }
   if (useReducedMotion) {
-    tmpResult = tmp(8698);
+    tmpResult = tmp(8704);
     const result1 = tmpResult.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
   }
 };
@@ -164,6 +164,12 @@ export const setContrastMode = function setContrastMode(contrastMode) {
 export const setSwitchIconsEnabled = function setSwitchIconsEnabled(switchIconsEnabled) {
   let obj = dispatcher;
   obj = { type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED", switchIconsEnabled };
+  obj.dispatch(obj);
+};
+export const setYouBarAnimations = function setYouBarAnimations(arg0) {
+  let obj = dispatcher;
+  obj = { type: "ACCESSIBILITY_SET_YOU_BAR_ANIMATIONS" };
+  const merged = Object.assign(arg0);
   obj.dispatch(obj);
 };
 export const setChatBarSettings = function setChatBarSettings(arg0) {

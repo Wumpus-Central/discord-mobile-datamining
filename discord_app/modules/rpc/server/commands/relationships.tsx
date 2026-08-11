@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/commands/relationships.tsx
 import _slicedToArray from "_slicedToArray";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import createRPCCommand from "createRPCCommand";

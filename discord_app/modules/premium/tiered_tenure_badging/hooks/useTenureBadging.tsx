@@ -3,7 +3,7 @@ import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import GuildFeatures from "GuildFeatures";
-import { t } from "../../../../../_runtime/03883_t.js";
+import { t } from "../../../../../_runtime/03902_t.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useTieredTenureBadgeForUser } from "useTieredTenureBadgeForUser.tsx";
 
@@ -15,9 +15,9 @@ function usePremiumSince() {
   const stateFromStores = id(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = id(589);
   const tmp = id;
-  const isPremiumExactlyResult = id(1926).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+  const isPremiumExactlyResult = id(1945).isPremiumExactly(stateFromStores, closure_6.TIER_2);
   id = isPremiumExactlyResult;
-  const obj2 = id(1926);
+  const obj2 = id(1945);
   const items1 = [reset];
   const items2 = [isPremiumExactlyResult];
   let stateFromStores1 = id(589).useStateFromStores(items1, () => {
@@ -135,7 +135,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7095);
+        tmpResult = tmp(7096);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -150,7 +150,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9511);
+  let tmpResult = tmp(9517);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -177,8 +177,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7095).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7095);
+        earnedOnDate = tmp(7096).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7096);
       }
     }
   }

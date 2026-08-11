@@ -144,7 +144,7 @@ function _getTaskDetailsForType(arg0) {
     }
     obj[2] = Array.from(includeTaskTypes);
     obj[1] = obj;
-    const result = quest(7158).captureQuestsException(error, obj);
+    const result = quest(7159).captureQuestsException(error, obj);
     return null;
   } else {
     ({ target: target2, target } = floorResult);
@@ -542,7 +542,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
               }
             }
           });
-          const found = sorted.filter(callback(1351).isNotNullish);
+          const found = sorted.filter(callback(1370).isNotNullish);
           const obj3 = found[Symbol.iterator]();
           while (obj3 !== undefined) {
             let tmp5 = callback3;

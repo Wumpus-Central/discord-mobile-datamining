@@ -58,7 +58,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
       if (!flag5) {
         const BLUR = tmp4(1306).ExplicitContentRedaction.BLUR;
       }
-      const ExplicitContentFilter2 = tmp4(3974).ExplicitContentFilter;
+      const ExplicitContentFilter2 = tmp4(3993).ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
       if (flag6) {
         let tmp11 = obj[setting];
@@ -75,7 +75,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag4 = false;
       }
       if (flag3) {
-        const ExplicitContentFilter = tmp4(3974).ExplicitContentFilter;
+        const ExplicitContentFilter = tmp4(3993).ExplicitContentFilter;
         const setting1 = ExplicitContentFilter.getSetting();
         if (flag4) {
           let SHOW = obj[setting1];
@@ -144,7 +144,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     flag2 = false;
   }
   if (flag) {
-    const ExplicitContentFilter = tmp(3974).ExplicitContentFilter;
+    const ExplicitContentFilter = tmp(3993).ExplicitContentFilter;
     const setting = ExplicitContentFilter.getSetting();
     if (flag2) {
       let tmp5 = obj[setting];

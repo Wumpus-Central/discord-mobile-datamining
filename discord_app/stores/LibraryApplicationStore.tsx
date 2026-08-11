@@ -257,8 +257,8 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     }
     let hasFlagResult = null != obj3 && !obj3.isHidden();
     if (hasFlagResult) {
-      hasFlagResult = importAll(1384).hasFlag(flags.flags, LibraryApplicationFlags.HIDDEN);
-      const obj4 = importAll(1384);
+      hasFlagResult = importAll(1403).hasFlag(flags.flags, LibraryApplicationFlags.HIDDEN);
+      const obj4 = importAll(1403);
     }
     if (hasFlagResult) {
       let c14 = true;

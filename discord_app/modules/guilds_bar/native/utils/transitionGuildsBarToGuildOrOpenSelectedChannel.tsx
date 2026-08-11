@@ -45,7 +45,7 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     tmpResult = tmp(4311);
     tmpResult.transitionToChannel(tmp4);
   } else {
-    tmp(5957).transitionToGuild(arg0);
-    const tmpResult1 = tmp(5957);
+    tmp(5959).transitionToGuild(arg0);
+    const tmpResult1 = tmp(5959);
   }
 };

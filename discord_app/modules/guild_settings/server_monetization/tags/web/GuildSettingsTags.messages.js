@@ -1,25 +1,6 @@
 // discord_app/modules/guild_settings/server_monetization/tags/web/GuildSettingsTags.messages.js
 import 01274__ from "../../../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../../../_runtime/metro/01274__.js";
-import { registerAsset } from "../../../../../../_runtime/02221_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02222_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02223_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02224_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02225_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02226_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02227_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02228_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02229_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02230_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02231_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02232_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02233_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02234_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02235_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02236_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02237_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02238_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/02239_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02240_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02241_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02242_registerAsset.js";
@@ -32,6 +13,25 @@ import { registerAsset } from "../../../../../../_runtime/02248_registerAsset.js
 import { registerAsset } from "../../../../../../_runtime/02249_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02250_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02251_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02252_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02253_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02254_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02255_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02256_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02257_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02258_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02259_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02260_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02261_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02262_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02263_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02264_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02265_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02266_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02267_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02268_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02269_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/02270_registerAsset.js";
 import { loadJsonAsset } from "../../../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

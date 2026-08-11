@@ -3,7 +3,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import reactionKey from "reactionKey";
 import reinjectEphemerals from "reinjectEphemerals";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER";
 import ME from "ME";
 import { v1 } from "../../../_runtime/00514_v1.js";
@@ -19,7 +19,7 @@ let unpackModuleId;
 const require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7222).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7223).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -101,7 +101,7 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("reinjectEphemerals").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "ct", localCreationAnswerId: null };
+  const obj = { text: "Array", image: "HermesInternal", localCreationAnswerId: null };
   obj[2] = v1.v4();
   return obj;
 };
@@ -281,8 +281,8 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != closure_8) {
-    truncateTextResult = tmp(1885).truncateText(str, tmp4);
-    const tmpResult = tmp(1885);
+    truncateTextResult = tmp(1904).truncateText(str, tmp4);
+    const tmpResult = tmp(1904);
   }
   const intl = tmp(1236).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
@@ -308,8 +308,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != closure_8) {
-      truncateTextResult = tmp2(1885).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1885);
+      truncateTextResult = tmp2(1904).truncateText(str, tmp5);
+      const tmp2Result = tmp2(1904);
     }
     const intl = tmp2(1236).intl;
     obj = { username: null, title: null };

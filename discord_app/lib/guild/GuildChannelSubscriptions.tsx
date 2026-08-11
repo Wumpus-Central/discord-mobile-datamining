@@ -1,5 +1,5 @@
 // discord_app/lib/guild/GuildChannelSubscriptions.tsx
-import { priv } from "../../../_runtime/01386_priv.js";
+import { priv } from "../../../_runtime/01405_priv.js";
 let result = require("set").fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {
   constructor(arg0) {

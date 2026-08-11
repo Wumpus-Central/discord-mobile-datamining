@@ -85,7 +85,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "accessibilityRole", purchaseType: "mi", storeHasPrice: null };
+    obj = { userPrice: "r", pricesForPurchaseType: "View", purchaseType: "ne", storeHasPrice: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -281,15 +281,15 @@ export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableO
         num = 0;
       }
       if (obj.isIOS()) {
-        let tmpResult = tmp(1384);
+        let tmpResult = tmp(1403);
         let hasFlagResult = tmpResult.hasFlag(num, constants2.AVAILABLE_ON_IOS);
       } else {
         tmpResult = tmp(501);
         const isAndroidResult = tmpResult.isAndroid();
         hasFlagResult = !isAndroidResult;
         if (isAndroidResult) {
-          hasFlagResult = tmp(1384).hasFlag(num, constants2.AVAILABLE_ON_ANDROID);
-          const tmpResult1 = tmp(1384);
+          hasFlagResult = tmp(1403).hasFlag(num, constants2.AVAILABLE_ON_ANDROID);
+          const tmpResult1 = tmp(1403);
         }
       }
       return hasFlagResult;
@@ -387,7 +387,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "accessibilityRole", purchaseType: "mi", storeHasPrice: null };
+    obj = { userPrice: "r", pricesForPurchaseType: "View", purchaseType: "ne", storeHasPrice: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

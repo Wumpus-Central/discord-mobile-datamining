@@ -5,7 +5,7 @@ import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 
 const result = require("create").fileFinishedImporting("modules/client_themes/ClientThemesTypes.tsx");
 
-export const ClientThemeType = require("module_4122").ClientThemeType;
+export const ClientThemeType = require("module_1350").ClientThemeType;
 export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(arg0) {
   const _require = arg0;
   const entries = Object.entries(closure_3);

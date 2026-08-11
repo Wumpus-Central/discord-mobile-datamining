@@ -53,12 +53,12 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   if (tmp5) {
     let result = obj3.isFavoritesIntroPopoverShown();
     if (!result) {
-      let tmpResult = tmp(1894);
+      let tmpResult = tmp(1913);
       let isFavoritesGuildIdResult = tmpResult.isFavoritesGuildId(obj2.getGuildId());
       if (!isFavoritesGuildIdResult) {
         let isFavoritesGuildEnabled = hasAccess;
         if (isFavoritesGuildEnabled) {
-          tmpResult = tmp(9718);
+          tmpResult = tmp(9723);
           isFavoritesGuildEnabled = tmpResult.computeIsFavoritesGuildEnabled(isFreemium, tmp4);
         }
         isFavoritesGuildIdResult = isFavoritesGuildEnabled;

@@ -6,7 +6,7 @@ import hasFetchedCredentials from "hasFetchedCredentials";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import jsxProd from "useAuthSessions";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/13969_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13977_registerAsset.js";
 
 let c10;
 let c5;
@@ -110,7 +110,7 @@ export default function PasskeyInitStep(arg0) {
   } else {
     let navigation;
     let hasFetchedCredentials;
-    let obj = navigation(1480);
+    let obj = navigation(1499);
     navigation = obj.useNavigation();
     let obj1 = navigation(589);
     const items = [hasFetchedCredentials];
@@ -145,6 +145,6 @@ export default function PasskeyInitStep(arg0) {
     obj1[0] = navigation;
     obj[1] = callback2(CredentialList, obj1);
     obj[0] = callback2(closure_6, obj);
-    return callback2(navigation(7967).Form, obj);
+    return callback2(navigation(7969).Form, obj);
   }
 };

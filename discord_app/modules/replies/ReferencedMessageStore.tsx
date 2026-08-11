@@ -6,7 +6,7 @@ import reinjectEphemerals from "reinjectEphemerals";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
-import { priv } from "../../../_runtime/01386_priv.js";
+import { priv } from "../../../_runtime/01405_priv.js";
 import { redactionSettingToRenderedString } from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 

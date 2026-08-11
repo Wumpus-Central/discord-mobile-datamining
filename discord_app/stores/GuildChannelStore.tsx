@@ -8,7 +8,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
@@ -48,7 +48,7 @@ function rebuildGuildChannels(guildId) {
   let importDefault;
   const id = obj.id;
   importDefault = id;
-  let obj1 = obj2(1894);
+  let obj1 = obj2(1913);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
     favoriteChannels = favoriteChannels.getFavoriteChannels();
@@ -207,7 +207,7 @@ function handleGuildRoleUpdate(guildId) {
 function hasElevatedPermissions(user, context) {
   let obj = importAll(506);
   obj = { user, context, checkElevated: false };
-  return obj.hasAny(importAll(3934).computePermissions(obj), closure_20);
+  return obj.hasAny(importAll(3953).computePermissions(obj), closure_20);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_17);

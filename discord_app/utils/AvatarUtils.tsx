@@ -4,9 +4,9 @@ import { AVATAR_DECORATION_SIZE } from "DECORATION_TO_AVATAR_RATIO";
 import set from "set";
 import set from "ensureAvatarSource";
 import { Integer } from "../../_runtime/00014_Integer.js";
-import { parse } from "../../_runtime/01464_parse.js";
-import { Url } from "../../_runtime/01469_Url.js";
-import { registerAsset } from "../../_runtime/01883_registerAsset.js";
+import { parse } from "../../_runtime/01483_parse.js";
+import { Url } from "../../_runtime/01488_Url.js";
+import { registerAsset } from "../../_runtime/01902_registerAsset.js";
 import { parseAvatarDecorationData } from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
 import { ensureAvatarSource } from "native/AvatarUtils.tsx";
@@ -497,7 +497,7 @@ function getChannelIconURL(arg0) {
     tmp5 = getAvatarURL(obj);
     if (tmp5 == null) {
       obj = DISCORD_EPOCH;
-      tmp5 = ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS[obj.extractTimestamp(id) % require(undefined, 1419) /* ensureAvatarSource */.default.DEFAULT_GROUP_DM_AVATARS.length];
+      tmp5 = ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS[obj.extractTimestamp(id) % require(undefined, 1438) /* ensureAvatarSource */.default.DEFAULT_GROUP_DM_AVATARS.length];
       const extractTimestampResult = obj.extractTimestamp(id);
     }
   }
@@ -546,7 +546,7 @@ function getEmojiURL(size) {
     const _HermesInternal = HermesInternal;
     const combined = "size=" + obj.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio(), set);
     try {
-      const enabled = tmp5(1878).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
+      const enabled = tmp5(1897).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
       let str6 = "";
       if (enabled) {
         str6 = "&force_sdr=true";
@@ -703,7 +703,7 @@ function getAvatarDecorationURL(canAnimate) {
   if (null != avatarDecoration) {
     if (!obj4.isAvatarDecorationExpired(avatarDecoration)) {
       try {
-        let tmp13Result = tmp13(1882);
+        let tmp13Result = tmp13(1901);
         ({ CollectiblesItemAssetFormat, getCollectiblesItemAssetUrl } = tmp13Result);
         if (flag) {
           let STATIC = CollectiblesItemAssetFormat.ANIMATED;
@@ -735,9 +735,9 @@ function getAvatarDecorationURL(canAnimate) {
               str2 = new URL("" + location.protocol + GLOBAL_ENV.API_ENDPOINT + result);
             }
             const searchParams = str2.searchParams;
-            tmp13Result = tmp13(1450);
+            tmp13Result = tmp13(1469);
             const _HermesInternal3 = HermesInternal;
-            const result1 = searchParams.set("size", "" + tmp13Result.getBestMediaProxySize(size * tmp13(1450).getDevicePixelRatio(), set));
+            const result1 = searchParams.set("size", "" + tmp13Result.getBestMediaProxySize(size * tmp13(1469).getDevicePixelRatio(), set));
             const searchParams2 = str2.searchParams;
             const _HermesInternal4 = HermesInternal;
             const result2 = searchParams2.set("passthrough", "" + flag);

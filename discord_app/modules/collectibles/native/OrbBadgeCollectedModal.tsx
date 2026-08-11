@@ -29,7 +29,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   if (stateFromStores) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
-    obj1[0] = onPressViewBadge(11178);
+    obj1[0] = onPressViewBadge(11183);
     obj[0] = obj1;
     obj[1] = tmp.background;
     let tmp9Result = tmp9(onPressViewBadge(5268), obj);
@@ -39,11 +39,11 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   } else {
     const obj2 = { source: null, poster: null, style: null, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
     const obj3 = { uri: null };
-    obj3[0] = onPressViewBadge(11179);
+    obj3[0] = onPressViewBadge(11184);
     obj2[0] = obj3;
-    obj2[1] = onPressViewBadge(11178);
+    obj2[1] = onPressViewBadge(11183);
     obj2[2] = tmp.background;
-    tmp9Result = tmp9(tmp2(8870).VideoComponent, obj2);
+    tmp9Result = tmp9(tmp2(8876).VideoComponent, obj2);
     tmp12 = onPressViewBadge;
     tmp13 = tmp9;
   }
@@ -52,7 +52,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { source: null, style: null };
   const obj7 = { uri: null };
-  obj7[0] = tmp12(9416);
+  obj7[0] = tmp12(9422);
   obj6[0] = obj7;
   obj6[1] = tmp.orbBadge;
   const items4 = [tmp13(tmp12(5268), obj6), ];

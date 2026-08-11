@@ -2,9 +2,9 @@
 import { dispatcher } from "../../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileActionCreators.tsx");
 
-export const updateCustomTheme = function updateCustomTheme(customThemeSettings, first1) {
+export const updateCustomTheme = function updateCustomTheme(customThemeSettings, customThemeBaseTheme) {
   let obj = dispatcher;
-  obj = { type: "UPDATE_CUSTOM_THEME", customTheme: customThemeSettings, theme: first1 };
+  obj = { type: "UPDATE_CUSTOM_THEME", customTheme: customThemeSettings, theme: customThemeBaseTheme };
   obj.dispatch(obj);
 };
 export const resetCustomTheme = function resetCustomTheme() {

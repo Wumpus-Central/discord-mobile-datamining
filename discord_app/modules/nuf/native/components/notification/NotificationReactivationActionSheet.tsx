@@ -5,7 +5,7 @@ import { EventActionType } from "EventActionType";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/16535_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16546_registerAsset.js";
 
 let c4;
 let c5;

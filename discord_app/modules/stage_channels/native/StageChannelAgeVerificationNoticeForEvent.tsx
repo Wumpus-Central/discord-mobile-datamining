@@ -74,7 +74,7 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     if (isVerifiedTeen) {
       let WarningIcon = Text(4259).CircleInformationIcon;
     } else {
-      WarningIcon = Text(7962).WarningIcon;
+      WarningIcon = Text(7964).WarningIcon;
     }
     obj = { size: "refresh_sm", color: null, style: null };
     obj[1] = Themes.colors.TEXT_DEFAULT;

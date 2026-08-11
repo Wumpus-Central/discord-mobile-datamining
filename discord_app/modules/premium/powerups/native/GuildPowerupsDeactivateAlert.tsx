@@ -67,7 +67,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null
   };
   const intl3 = tmp5(1236).intl;
-  obj6[2] = intl3.string(tmp2(2316).PYPdl4);
+  obj6[2] = intl3.string(tmp2(2335).PYPdl4);
   items[1] = callback(_getAlertModalItemKey.AlertActionButton, obj6, "deactivate");
   const obj7 = {
     onPress() {

@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuildFolder.tsx
-import importAllResult from "module_4036";
+import importAllResult from "module_4042";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";

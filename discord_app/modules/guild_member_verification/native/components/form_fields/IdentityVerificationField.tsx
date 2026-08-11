@@ -70,7 +70,7 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4127).UserVerificationFieldPlatforms.PHONE === platform) {
+    if (tmp(4129).UserVerificationFieldPlatforms.PHONE === platform) {
       const intl2 = tmp(1236).intl;
       const string = intl2.string;
       const t = tmp(1236).t;
@@ -84,19 +84,19 @@ export default function IdentityVerificationField(arg0) {
       const intl = tmp(1236).intl;
       stringResult1 = intl.string(tmp(1236).t.mhv8BM);
     }
-    if (tmp(4127).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(8548).EnvelopeIcon;
-    } else if (tmp(4127).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(8487).MobilePhoneIcon;
+    if (tmp(4129).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(8554).EnvelopeIcon;
+    } else if (tmp(4129).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(8493).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(8548).EnvelopeIcon;
+      EnvelopeIcon = tmp(8554).EnvelopeIcon;
     }
-    if (tmp(4127).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4129).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         callback2(paths[10]).open();
       };
     } else {
-      fn = tmp(4127).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+      fn = tmp(4129).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
         let obj = callback2(paths[11]);
         obj = { reason: null };
         obj[0] = callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED;

@@ -97,7 +97,7 @@ export default function DevToolsTogglesScreen() {
   let tmp = createCacheKey();
   let tmp3 = callback(React.useState(""), 2);
   const first = tmp3[0];
-  let obj = first(15030);
+  let obj = first(15040);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
   let obj1 = first(589);
   const items = [getUserAgnosticState];
@@ -133,16 +133,16 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(15031).clearAll();
-        const obj = first(15031);
-        first(15013).clearAll();
+        first(15041).clearAll();
+        const obj = first(15041);
+        first(15023).clearAll();
       },
       arrow: true
     }),
 
   ];
   const obj3 = { label: null };
-  obj3[0] = callback2(first(5992).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] });
+  obj3[0] = callback2(first(5994).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] });
   items3[1] = callback2(first(5374).TableRow, obj3);
   obj1[2] = items3;
   const items4 = [callback3(first(5767).TableRowGroup, obj1), , ];

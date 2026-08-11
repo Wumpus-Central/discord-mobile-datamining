@@ -84,7 +84,7 @@ function EmojiItem(emoji) {
     obj2[0] = emojiURL;
     obj1[3] = obj2;
     callback(tmp15, obj1);
-    tmp7Result = tmp7(4153);
+    tmp7Result = tmp7(1363);
   } else {
     const obj3 = { allowFontScaling: false, style: null, children: null };
     obj3[1] = tmp.surrogates;

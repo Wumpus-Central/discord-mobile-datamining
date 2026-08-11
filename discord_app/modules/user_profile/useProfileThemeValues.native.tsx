@@ -9,7 +9,7 @@ export const useProfileThemeValues = function useProfileThemeValues(theme) {
   const _require = theme;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => saturation.saturation);
-  const tmp2 = stateFromStores(1348)("useProfileThemeValues");
+  const tmp2 = stateFromStores(1367)("useProfileThemeValues");
   const dependencyMap = tmp2;
   const items1 = [theme, stateFromStores, tmp2];
   return useMemo(() => {

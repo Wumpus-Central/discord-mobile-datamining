@@ -10,7 +10,7 @@ import items from "items";
 import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
 import ME from "ME";
 import { byteLength } from "../../../_runtime/00206_byteLength.js";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
 import { set } from "../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";

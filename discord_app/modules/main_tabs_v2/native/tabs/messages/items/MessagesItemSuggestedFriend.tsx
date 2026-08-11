@@ -2,11 +2,11 @@
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
 import { View } from "PressableBase";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import ME from "ME";
 import jsxProd from "SendMessageIcon";
 import createCacheKey from "createCacheKey";
-import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15177_toNativeHorizontalOffset.js";
+import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15186_toNativeHorizontalOffset.js";
 import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
@@ -51,7 +51,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     height(suggestedFriend[10])(suggestedFriend[9], suggestedFriend.paths).then((arg0) => arg0.default({ userId: closure_2.user.id, localUser: closure_2.user, location: "Messages Tab User Profile" }));
   }, items1);
   let obj1 = height(suggestedFriend[11]);
-  const items2 = [upsertRelationship];
+  const items2 = [markAllUserIdListsStale];
   if (!addedPressed) {
     addedPressed = obj1.useStateFromStores(items2, () => outer1_6.getRelationshipType(suggestedFriend.user.id) === outer1_8.PENDING_OUTGOING);
   }
@@ -103,7 +103,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     setAddedPressed(true);
   }, items4);
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: 0.3 };
+  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: "ClipPath" };
   obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
   const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };

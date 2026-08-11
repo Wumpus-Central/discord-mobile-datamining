@@ -84,7 +84,7 @@ function fetchMessages(arg0) {
             if (!_handleConnectionOpen.isConnected()) {
               let flag = true;
             }
-            let hasUnreadResult = tmp9(8936)(channelId);
+            let hasUnreadResult = tmp9(8942)(channelId);
             if (hasUnreadResult) {
               hasUnreadResult = generateOldThreadCutoff.hasUnread(channelId);
             }
@@ -135,7 +135,7 @@ function fetchMessages(arg0) {
                     tmp3.log("Jumping to start of thread " + channel.id);
                     const obj1 = { channelId: null, limit: null, jump: null, isPreload: null, skipLocalFetch: null, avoidInitialScroll: null, fetchKey: null };
                     obj1[0] = channelId;
-                    let tmp11Result = tmp11(9747);
+                    let tmp11Result = tmp11(9752);
                     obj1[1] = tmp11Result.getMessageLimit("MessageManager.threadStart");
                     obj2 = { messageId: null, flash: false };
                     obj2[0] = channelId;
@@ -144,7 +144,7 @@ function fetchMessages(arg0) {
                     obj1[4] = skipLocalFetch;
                     obj1[5] = avoidInitialScroll;
                     obj1[6] = fetchKey;
-                    return tmp9(6917).fetchMessages(obj1);
+                    return tmp9(6920).fetchMessages(obj1);
                   }
                 }
                 let isThreadResult1;
@@ -159,7 +159,7 @@ function fetchMessages(arg0) {
                       tmp3.log("Jumping to most recent message in thread " + channel.id + " - " + trackedAckMessageId);
                       const obj3 = { channelId: null, limit: null, jump: null, isPreload: null, skipLocalFetch: null, avoidInitialScroll: null, fetchKey: null };
                       obj3[0] = channelId;
-                      tmp11Result = tmp11(9747);
+                      tmp11Result = tmp11(9752);
                       obj3[1] = tmp11Result.getMessageLimit("MessageManager.threadUnread");
                       const obj4 = { messageId: null, flash: false, offset: 1 };
                       obj4[0] = trackedAckMessageId;
@@ -168,15 +168,15 @@ function fetchMessages(arg0) {
                       obj3[4] = skipLocalFetch;
                       obj3[5] = avoidInitialScroll;
                       obj3[6] = fetchKey;
-                      return tmp9(6917).fetchMessages(obj3);
+                      return tmp9(6920).fetchMessages(obj3);
                     }
                   }
                   obj16 = generateOldThreadCutoff;
                 }
                 const obj5 = { channelId: null, limit: null, isPreload: null, skipLocalFetch: null, jump: null, avoidInitialScroll: null, fetchKey: null };
                 obj5[0] = channelId;
-                const tmp9Result6 = tmp9(6917);
-                obj5[1] = tmp11(9747).getMessageLimit("MessageManager.initialFetch");
+                const tmp9Result6 = tmp9(6920);
+                obj5[1] = tmp11(9752).getMessageLimit("MessageManager.initialFetch");
                 obj5[2] = isPreload;
                 obj5[3] = skipLocalFetch;
                 const obj6 = { jumpType: null };
@@ -193,8 +193,8 @@ function fetchMessages(arg0) {
                 obj7[4] = skipLocalFetch;
                 obj7[5] = tmp3;
                 obj7[6] = avoidInitialScroll;
-                tmp9(6917).jumpToMessage(obj7);
-                const tmp9Result7 = tmp9(6917);
+                tmp9(6920).jumpToMessage(obj7);
+                const tmp9Result7 = tmp9(6920);
               }
               const tmp9Result3 = tmp9(4989);
             }

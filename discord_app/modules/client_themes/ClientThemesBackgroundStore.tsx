@@ -67,11 +67,11 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(1347);
+    let tmpResult = tmp(1366);
     result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
   }
   if (!result) {
-    tmpResult = tmp(4149);
+    tmpResult = tmp(4151);
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -239,7 +239,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
               let c15 = true;
             }
           }
-          tmp6Result = tmp6(4146);
+          tmp6Result = tmp6(4148);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

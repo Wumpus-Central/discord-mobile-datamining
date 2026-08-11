@@ -85,7 +85,7 @@ function shouldShowActivity(flags) {
           result = tmp(4348).shouldShareApplicationActivity(searchGamesByNameResult[0], setLibraryApplications);
           const tmpResult1 = tmp(4348);
         } else {
-          const ShowCurrentGame = tmp(3974).ShowCurrentGame;
+          const ShowCurrentGame = tmp(3993).ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }

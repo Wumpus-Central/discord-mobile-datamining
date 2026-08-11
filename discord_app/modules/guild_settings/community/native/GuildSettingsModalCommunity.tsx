@@ -4,7 +4,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleFormInit from "handleFormInit";
 import { calculateLocaleOptions } from "GuildPrimaryCategory";
@@ -185,7 +185,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       const mapped = found.map((channel) => {
         channel = channel.channel;
         const obj = { value: channel.id, label: null };
-        obj[1] = callback(table[19]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
+        obj[1] = callback(table[19]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true);
         return obj;
       });
       const arr = channels[rulesChannel];
@@ -201,7 +201,7 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.Yr6nGx);
     obj[1] = callback1();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9021);
+      let obj = callback(9027);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
       callback(4271).hideActionSheet();
@@ -221,7 +221,7 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.VqhxxN);
     obj[1] = callback1();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9021);
+      let obj = callback(9027);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
       callback(4271).hideActionSheet();

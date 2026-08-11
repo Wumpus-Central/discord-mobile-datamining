@@ -61,7 +61,7 @@ function _openActivityDMLauncher() {
           return obj6;
         } else {
           c7 = customId;
-          obj6 = callback(12216);
+          obj6 = callback(12219);
           c7 = 4;
           customId = 1;
           const obj7 = { value: null, done: false };
@@ -79,7 +79,7 @@ function _openActivityDMLauncher() {
             const bestActiveInput = obj3.getBestActiveInput();
             if (bestActiveInput != null) {
               const obj8 = { type: null, context: null };
-              obj8[0] = callback(1607).KeyboardTypes.APP_LAUNCHER;
+              obj8[0] = callback(1626).KeyboardTypes.APP_LAUNCHER;
               obj9 = { application: null, initialRouteName: null, customId: null, referrerId: null };
               obj9[0] = bot;
               obj9[1] = flag.APPLICATION_VIEW;
@@ -95,13 +95,13 @@ function _openActivityDMLauncher() {
             obj10[2] = c7;
             const items = [callback2(5748).ACTIVITY_BOOKMARK];
             obj10[3] = items;
-            obj10[4] = callback(6982).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
+            obj10[4] = callback(6985).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
             obj10[5] = callback2;
             obj10[6] = customId;
             c7 = 5;
             customId = 1;
             const obj11 = { value: null, done: false };
-            obj11[0] = callback2(10974)(obj10);
+            obj11[0] = callback2(10979)(obj10);
             return obj11;
           }
         }

@@ -3,7 +3,7 @@ import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
-import importDefaultResult from "module_4036";
+import importDefaultResult from "module_4042";
 import { LinearGradient } from "../../../../../_runtime/04725_LinearGradient.js";
 
 let c4;
@@ -23,7 +23,7 @@ export default function BuyNitroGradient(selectedTier) {
   selectedTier = selectedTier.selectedTier;
   ({ start, end, style } = selectedTier);
   ({ nitroColors, basicColors } = selectedTier);
-  let obj = selectedTier(4036);
+  let obj = selectedTier(4042);
   const fn = function f() {
     let obj = selectedTier(outer1_2[5]);
     let num = 0;

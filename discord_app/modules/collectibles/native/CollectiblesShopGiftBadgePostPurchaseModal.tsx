@@ -36,7 +36,7 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(7000);
+    let obj = callback(7003);
     obj = { analyticsLocations: null, analyticsSource: null };
     const items = [callback2(5748).GIFTING_BADGE_POST_PURCHASE];
     obj[0] = items;

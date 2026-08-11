@@ -19,7 +19,7 @@ export default function CountrySelectModal() {
           return callback(4509).pop();
         },
         onCountrySelected(countryCode) {
-          return callback(8519).setCountryCode(countryCode);
+          return callback(8525).setCountryCode(countryCode);
         }
       });
     };
@@ -27,7 +27,7 @@ export default function CountrySelectModal() {
     return obj;
   }, []);
   const effect = React.useEffect(() => () => {
-    callback(5821).runAfterInteractions(callback(8543).setCountrySelectorClosed, 400);
+    callback(5821).runAfterInteractions(callback(8549).setCountrySelectorClosed, 400);
   }, []);
   return jsx(NavigationStack.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
 };

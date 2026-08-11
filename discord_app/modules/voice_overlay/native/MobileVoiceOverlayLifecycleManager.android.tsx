@@ -5,7 +5,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import importDefaultResult from "_detectH265HardwareDecode";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import importDefaultResult1 from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import anyoneHasFlagInContext from "anyoneHasFlagInContext";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import importDefaultResult2 from "updateVoiceState";
@@ -346,7 +346,7 @@ class MobileVoiceOverlayManager {
       obj.channelSelectorResults = obj.queryChannels(obj).map((record) => {
         record = record.record;
         const obj = { channelId: record.id, guildId: record.guild_id, channelName: null, guildName: null, categoryName: null };
-        obj[2] = lib(table[27]).computeChannelName(record, mergeGuildAvatar, upsertRelationship);
+        obj[2] = lib(table[27]).computeChannelName(record, mergeGuildAvatar, markAllUserIdListsStale);
         guild = guild.getGuild(record.guild_id);
         let str;
         if (guild != null) {
@@ -359,7 +359,7 @@ class MobileVoiceOverlayManager {
         channel = channel.getChannel(record.parent_id);
         let str2 = "";
         if (null != channel) {
-          str2 = lib(table[27]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+          str2 = lib(table[27]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
           const tmpResult = lib(table[27]);
         }
         obj[4] = str2;

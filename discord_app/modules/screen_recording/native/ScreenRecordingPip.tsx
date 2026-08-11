@@ -54,68 +54,66 @@ function DraggableContainer(children) {
   C.__initData = closure_12;
   let items = [contentHeight, contentWidth, num, tmp4, tmp5];
   callback = num.useCallback(C, items);
-  const Gesture = _require(contentWidth[10]).Gesture;
-  const tmp = createCacheKey();
-  class X {
-    constructor() {
-      result = c6.set(closure_0.get());
-      result1 = c7.set(closure_1.get());
-      return;
-    }
-  }
-  X.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
-  X.__workletHash = 7766704092529;
-  X.__initData = closure_15;
-  const PanResult = Gesture.Pan();
-  const fn = function v(translationX) {
+  let obj3 = _require(contentWidth[10]);
+  obj = { onActivate: fn, onUpdate: fn2, onDeactivate: null };
+  fn = function b() {
+    const result = sharedValue.set(store.get());
+    const result1 = sharedValue1.set(store2.get());
+  };
+  fn.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
+  fn.__workletHash = 13009482509687;
+  fn.__initData = closure_13;
+  fn2 = function v(translationX) {
     const sum = sharedValue.get() + translationX.translationX;
     const point = callback(sum, sharedValue1.get() + translationX.translationY);
     const result = store.set(point.x);
     const result1 = store2.set(point.y);
   };
-  fn.__closure = { getClampedPosition: callback, originalX: sharedValue, originalY: sharedValue1, x, y };
-  fn.__workletHash = 3428194988690;
-  fn.__initData = closure_14;
-  const onStartResult = Gesture.Pan().onStart(X);
-  const fn2 = function f() {
+  fn2.__closure = { getClampedPosition: callback, originalX: sharedValue, originalY: sharedValue1, x, y };
+  fn2.__workletHash = 3428194988690;
+  fn2.__initData = closure_14;
+  const fn3 = function f() {
     let obj = store(contentWidth[7]);
     obj = { x: null, y: null };
     obj[0] = store.get();
     obj[1] = store2.get();
     obj.runOnJS(onChangePosition)(obj);
   };
-  obj = { runOnJS: _require(contentWidth[7]).runOnJS, onChangePosition, x, y };
-  fn2.__closure = obj;
-  fn2.__workletHash = 144401388839;
-  fn2.__initData = closure_13;
-  const onUpdateResult = Gesture.Pan().onStart(X).onUpdate(fn);
-  const onEndResult = Gesture.Pan().onStart(X).onUpdate(fn).onEnd(fn2);
-  const fn3 = function b() {
-    let x;
-    let y;
-    const value = store.get();
-    let obj = { transform: null };
-    obj = { translateX: null };
-    ({ x, y } = callback(value, store2.get()));
-    const tmp2 = callback(value, store2.get());
-    obj[0] = store(contentWidth[11]).withSpring(x, store(contentWidth[12]).springUnclamped);
-    const items = [obj, ];
-    obj = { translateY: null };
-    const obj3 = store(contentWidth[11]);
-    obj[0] = store(contentWidth[11]).withSpring(y, store(contentWidth[12]).springUnclamped);
-    items[1] = obj;
-    obj[0] = items;
-    return obj;
-  };
-  obj1 = { getClampedPosition: callback, x, y, withSpring: _require(contentWidth[11]).withSpring, springUnclamped: _require(contentWidth[12]).springUnclamped };
+  obj1 = { runOnJS: _require(contentWidth[7]).runOnJS, onChangePosition, x, y };
   fn3.__closure = obj1;
-  fn3.__workletHash = 5273315246744;
-  fn3.__initData = closure_16;
-  const animatedStyle = _require(contentWidth[7]).useAnimatedStyle(fn3);
-  let obj2 = { gesture: onEndResult, children: null };
+  fn3.__workletHash = 15302036225057;
+  fn3.__initData = closure_15;
+  obj[2] = fn3;
+  const panGesture = obj3.usePanGesture(obj);
+  const tmp = createCacheKey();
+  class X {
+    constructor() {
+      value = closure_0.get();
+      tmp2 = c10(value, closure_1.get());
+      obj = { transform: null };
+      obj = { translateX: null };
+      ({ x, y } = tmp2);
+      obj3 = closure_0(contentWidth[11]);
+      obj[0] = obj3.withSpring(x, closure_0(contentWidth[12]).springUnclamped);
+      items = [, ];
+      items[0] = obj;
+      obj1 = { translateY: null };
+      obj5 = closure_0(contentWidth[11]);
+      obj1[0] = obj5.withSpring(y, closure_0(contentWidth[12]).springUnclamped);
+      items[1] = obj1;
+      obj[0] = items;
+      return obj;
+    }
+  }
+  const obj7 = _require(contentWidth[7]);
+  X.__closure = { getClampedPosition: callback, x, y, withSpring: _require(contentWidth[11]).withSpring, springUnclamped: _require(contentWidth[12]).springUnclamped };
+  X.__workletHash = 5273315246744;
+  X.__initData = closure_16;
+  const animatedStyle = obj7.useAnimatedStyle(X);
+  obj3 = { gesture: panGesture, children: null };
   const items1 = [tmp.widgetContainer, animatedStyle];
-  obj2[1] = sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children });
-  return sharedValue1(_require(contentWidth[10]).GestureDetector, obj2);
+  obj3[1] = sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children });
+  return sharedValue1(_require(contentWidth[10]).GestureDetector, obj3);
 }
 function ScreenRecordingPip(surveyConfig) {
   surveyConfig = surveyConfig.surveyConfig;
@@ -225,9 +223,9 @@ let obj1 = { padding: require("Themes").space.PX_8, borderWidth: 1, borderColor:
 createCacheKey[4] = { padding: require("Themes").space.PX_8 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function ScreenRecordingPipTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
-let closure_13 = { code: "function ScreenRecordingPipTsx2(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
+let closure_13 = { code: "function ScreenRecordingPipTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
 let closure_14 = { code: "function ScreenRecordingPipTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}" };
-let closure_15 = { code: "function ScreenRecordingPipTsx4(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
+let closure_15 = { code: "function ScreenRecordingPipTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
 let closure_16 = { code: "function ScreenRecordingPipTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
 let obj2 = { padding: require("Themes").space.PX_8 };
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingPip.tsx");

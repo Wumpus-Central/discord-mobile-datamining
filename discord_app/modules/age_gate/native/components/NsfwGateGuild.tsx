@@ -36,7 +36,7 @@ export default function NsfwGateGuild(guildId) {
   const stringResult = intl.string(guildId(1236).t.vAymlG);
   const intl3 = guildId(1236).intl;
   let obj = { helpURL: null };
-  let obj1 = currentUser(1974);
+  let obj1 = currentUser(1993);
   obj[0] = obj1.getArticleURL(constants.NSFW_GUILD_GUIDELINES);
   const stringResult1 = intl2.string(guildId(1236).t.Crj6eC);
   currentUser = currentUser.getCurrentUser();
@@ -67,8 +67,8 @@ export default function NsfwGateGuild(guildId) {
     obj.track(outer1_9.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(currentUser(8502), {}), , , , , ];
-  obj = { source: currentUser(8682), style: tmp.image };
+  const items1 = [callback(currentUser(8508), {}), , , , , ];
+  obj = { source: currentUser(8688), style: tmp.image };
   items1[1] = callback(closure_5, obj);
   obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult };
   items1[2] = callback(guildId(4299).Text, obj1);

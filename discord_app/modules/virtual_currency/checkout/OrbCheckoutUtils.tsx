@@ -65,13 +65,13 @@ export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMe
       if (code instanceof tmp(5864).OrderProcessingPendingError) {
         const intl5 = tmp(1236).intl;
         let stringResult = intl5.string(tmp(1236).t["2BmwgV"]);
-      } else if (code.code === tmp(3969).ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
+      } else if (code.code === tmp(3988).ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
         const intl4 = tmp(1236).intl;
         stringResult = intl4.string(tmp(1236).t.keFvXM);
-      } else if (code.code === tmp(3969).ErrorCodes.ALREADY_PURCHASED) {
+      } else if (code.code === tmp(3988).ErrorCodes.ALREADY_PURCHASED) {
         const intl3 = tmp(1236).intl;
         stringResult = intl3.string(tmp(1236).t.m371Mx);
-      } else if (code.code === tmp(3969).ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
+      } else if (code.code === tmp(3988).ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
         const intl2 = tmp(1236).intl;
         stringResult = intl2.string(tmp(1236).t.ZHgEG7);
       } else {

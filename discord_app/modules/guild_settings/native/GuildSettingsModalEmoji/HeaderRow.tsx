@@ -208,7 +208,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [c6, c7] = callback(React.useState(""), 2);
-  let obj = guild(8986);
+  let obj = guild(8992);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1236).intl;
   obj = { id: null, text: null };

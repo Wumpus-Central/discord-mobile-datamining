@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ME } from "ME";
 import set from "ME";
-import { createStandardNavigationFactories } from "../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../_runtime/01500_createStandardNavigationFactories.js";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 import { CREATE_THREAD_SCREEN_KEY } from "../Types.tsx";
@@ -29,7 +29,7 @@ function navigationToRootTabHelper(arg0, resetRoot) {
         const items = [obj];
         const items1 = [];
         HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmpResult.wrapRouteForRootNavigator(items), 0));
-        const CommonActions = tmp(1481).CommonActions;
+        const CommonActions = tmp(1500).CommonActions;
         obj = {};
         const merged = Object.assign(rootState);
         obj.routes = items1;
@@ -293,7 +293,7 @@ export const navigateToChannel = function navigateToChannel(channelId) {
         if (null != tmp5) {
           if (tmp5.params.channelId === channelId) {
             const obj3 = {};
-            const CommonActions = tmp(1481).CommonActions;
+            const CommonActions = tmp(1500).CommonActions;
             const obj4 = { channelId: null, guildId: null, messageId: null };
             obj4[0] = channelId;
             obj4[1] = guildId;
@@ -410,7 +410,7 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   let flag = !tmp;
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
-      const CommonActions = callback(1481).CommonActions;
+      const CommonActions = callback(1500).CommonActions;
       return CommonActions.reset(callback(4160).getInitialAuthState());
     });
     flag = true;

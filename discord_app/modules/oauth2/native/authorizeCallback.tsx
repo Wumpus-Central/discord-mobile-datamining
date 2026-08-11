@@ -1,6 +1,6 @@
 // discord_app/modules/oauth2/native/authorizeCallback.tsx
 import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
-import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { keys } from "../../../ConstantsIOS.tsx";
 import { Linking } from "../../../lib/native/Linking.tsx";
@@ -29,7 +29,7 @@ export default function authorizeCallback(arg0) {
     }
     ({ host, pathname, searchParams } = toURLSafeResult);
     if (null != host) {
-      let tmp8Result = tmp8(1467);
+      let tmp8Result = tmp8(1486);
       if (tmp8Result.isDiscordHostname(host)) {
         if (null != pathname) {
           if (null != pathname.match(closure_5)) {
@@ -37,7 +37,7 @@ export default function authorizeCallback(arg0) {
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl(10623, tmp9.paths), obj, closure_3);
+            tmp8Result.pushLazy(asyncRequireImpl(10628, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
@@ -61,8 +61,8 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl(10521, tmp9.paths), obj, closure_4);
-              const tmp17 = asyncRequireImpl(10521, tmp9.paths);
+              tmp8Result1.pushLazy(asyncRequireImpl(10526, tmp9.paths), obj, closure_4);
+              const tmp17 = asyncRequireImpl(10526, tmp9.paths);
             }
           }
         }
@@ -82,6 +82,6 @@ export default function authorizeCallback(arg0) {
     const tmp8Result2 = Linking;
   } else if (!canceled) {
     obj = ModalActionCreators;
-    obj.pushLazy(asyncRequireImpl(10521, dependencyMap.paths), undefined, closure_4);
+    obj.pushLazy(asyncRequireImpl(10526, dependencyMap.paths), undefined, closure_4);
   }
 };

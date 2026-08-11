@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
@@ -23,7 +23,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: null, threadName: null, threadOnClick: null };
   obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (null != channel) {
-    let content = tmp(4494).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    let content = tmp(4494).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     const tmpResult = tmp(4494);
   } else {
     content = message.content;

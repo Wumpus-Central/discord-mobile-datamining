@@ -3,7 +3,7 @@ import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import get_ActivityIndicator from "handleRelationshipAddError";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 import jsxProd from "RedesignBottomSheetTitleHeaderBase";
 import createCacheKey from "createCacheKey";

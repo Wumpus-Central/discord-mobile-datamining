@@ -30,7 +30,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   let sharedValue;
   ({ threadId, children, style } = arg0);
   const tmp = callback();
-  let obj = sharedValue(4036);
+  let obj = sharedValue(4042);
   sharedValue = obj.useSharedValue(false);
   const items = [sharedValue];
   const memo = importAllResult.useMemo(() => ({

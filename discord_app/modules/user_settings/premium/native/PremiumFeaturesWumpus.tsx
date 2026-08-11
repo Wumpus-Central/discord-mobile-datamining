@@ -18,7 +18,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
   let dependencyMap;
   const tmp = callback2();
-  const tmp2 = premiumType(7641)();
+  const tmp2 = premiumType(7643)();
   dependencyMap = tmp2;
   const items = [premiumType, tmp2];
   const memo = React.useMemo(() => {

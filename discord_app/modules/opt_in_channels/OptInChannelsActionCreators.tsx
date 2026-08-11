@@ -167,18 +167,18 @@ export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, loca
       const result2 = UserNotificationSettings.trackChannelNotificationSettingsUpdate(obj4);
       const obj11 = UserNotificationSettings;
       const result3 = updateUserGuildSettings.updateUserGuildSettings(guildId1, (guildOnboardingProgress) => {
-        let hasFlagResult = callback(1384).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
+        let hasFlagResult = callback(1403).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
         if (hasFlagResult) {
-          let tmpResult = tmp(1384);
+          let tmpResult = tmp(1403);
           hasFlagResult = !tmpResult.hasFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
         }
         let flag = !hasFlagResult;
         if (!hasFlagResult) {
-          tmpResult = tmp(1384);
+          tmpResult = tmp(1403);
           guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
-          guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
+          guildOnboardingProgress.guildOnboardingProgress = tmp(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
           flag = true;
-          const tmpResult1 = tmp(1384);
+          const tmpResult1 = tmp(1403);
         }
         return flag;
       }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -231,7 +231,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       let obj4 = hasFlag;
       obj[0] = obj4.setFlag(setFlagResult, constants.OPT_IN_ENABLED, arg2);
       if (!obj.isOptInEnabled(closure_0)) {
-        let tmp6Result = tmp6(1384);
+        let tmp6Result = tmp6(1403);
         const setFlagResult1 = tmp6Result.setFlag(obj.getGuildFlags(closure_0), constants2.OPT_IN_CHANNELS_ON, true);
         obj = {};
         obj1 = { channel_overrides: null, flags: null };
@@ -260,21 +260,21 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       const result3 = tmp6Result.trackChannelNotificationSettingsUpdate(obj4);
       const obj11 = dispatcher;
       const result4 = updateUserGuildSettings.updateUserGuildSettings(closure_0, (guildOnboardingProgress) => {
-        let hasFlagResult = callback(1384).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
+        let hasFlagResult = callback(1403).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
         if (hasFlagResult) {
-          let tmpResult = tmp(1384);
+          let tmpResult = tmp(1403);
           hasFlagResult = !tmpResult.hasFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
         }
         let flag = !hasFlagResult;
         if (!hasFlagResult) {
-          tmpResult = tmp(1384);
+          tmpResult = tmp(1403);
           guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
-          guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
+          guildOnboardingProgress.guildOnboardingProgress = tmp(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
           flag = true;
-          const tmpResult1 = tmp(1384);
+          const tmpResult1 = tmp(1403);
         }
         return flag;
-      }, tmp6(1355).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }, tmp6(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
       const tmp6Result1 = updateUserGuildSettings;
       const obj5 = {};
       const obj16 = expandEventProperties;
@@ -409,12 +409,12 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
       }
       let setFlagResult = channelIdFlags;
       if (tmp9) {
-        let tmp5Result = tmp5(1384);
+        let tmp5Result = tmp5(1403);
         setFlagResult = tmp5Result.setFlag(channelIdFlags, tmp7.OPT_IN_ENABLED, true);
       }
       const obj3 = NotificationSettingsModalActionCreators;
       obj = { flags: null };
-      tmp5Result = tmp5(1384);
+      tmp5Result = tmp5(1403);
       obj[0] = tmp5Result.setFlag(setFlagResult, constants.FAVORITED, arg2);
       const NotificationLabel = tmp5(5257).NotificationLabel;
       const result = obj3.updateChannelOverrideSettings(guildId1, id, obj, NotificationLabel.favorited(arg2));
@@ -442,30 +442,30 @@ export const setMessagesFavorite = function setMessagesFavorite(id, arg1) {
 };
 export const enableGuildNotice = function enableGuildNotice(closure_0) {
   const result = updateUserGuildSettings.updateUserGuildSettings(closure_0, (guildOnboardingProgress) => {
-    const hasFlagResult = callback(1384).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
+    const hasFlagResult = callback(1403).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
     let flag = !hasFlagResult;
     if (!hasFlagResult) {
-      guildOnboardingProgress.guildOnboardingProgress = tmp(1384).addFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
+      guildOnboardingProgress.guildOnboardingProgress = tmp(1403).addFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
       flag = true;
-      const tmpResult = tmp(1384);
+      const tmpResult = tmp(1403);
     }
     return flag;
   }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const dismissGuildNotice = function dismissGuildNotice(closure_0) {
   const result = updateUserGuildSettings.updateUserGuildSettings(closure_0, (guildOnboardingProgress) => {
-    let hasFlagResult = callback(1384).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
+    let hasFlagResult = callback(1403).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
     if (hasFlagResult) {
-      let tmpResult = tmp(1384);
+      let tmpResult = tmp(1403);
       hasFlagResult = !tmpResult.hasFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN);
     }
     let flag = !hasFlagResult;
     if (!hasFlagResult) {
-      tmpResult = tmp(1384);
+      tmpResult = tmp(1403);
       guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
-      guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
+      guildOnboardingProgress.guildOnboardingProgress = tmp(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, tmp(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
       flag = true;
-      const tmpResult1 = tmp(1384);
+      const tmpResult1 = tmp(1403);
     }
     return flag;
   }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -498,9 +498,9 @@ export const clearGuildNotice = function clearGuildNotice(closure_0) {
     }
   }
   const result2 = _updateUserGuildSettings.updateUserGuildSettings(closure_0, (guildOnboardingProgress) => {
-    guildOnboardingProgress.guildOnboardingProgress = callback(1384).setFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
-    const obj = callback(1384);
-    guildOnboardingProgress.guildOnboardingProgress = callback(1384).setFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED, false);
+    guildOnboardingProgress.guildOnboardingProgress = callback(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
+    const obj = callback(1403);
+    guildOnboardingProgress.guildOnboardingProgress = callback(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED, false);
     return true;
   }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

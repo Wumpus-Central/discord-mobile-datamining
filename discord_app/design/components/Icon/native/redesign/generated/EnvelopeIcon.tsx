@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08549_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08555_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

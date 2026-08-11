@@ -291,7 +291,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   const items1 = [product];
   let obj5 = useIsPremiumSubscriber;
   const isPremiumSubscriber = obj5.useIsPremiumSubscriber(TIER_2.TIER_2);
-  let obj6 = onTrackPress(3947);
+  let obj6 = onTrackPress(3966);
   const canUseShopDiscountsResult = obj6.canUseShopDiscounts(currentUser);
   let obj7 = getItemRecordsFromPurchases;
   const result = obj7.isPremiumCollectiblesProduct(product);
@@ -315,20 +315,20 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     id = tmp16.id;
   }
   obj[3] = id;
-  const tmp17 = onTrackPress(12165);
-  ({ handleBuyNow: c4, isBuying } = onTrackPress(12165)(obj));
-  let tmp5Result = tmp5(12166);
+  const tmp17 = onTrackPress(12168);
+  ({ handleBuyNow: c4, isBuying } = onTrackPress(12168)(obj));
+  let tmp5Result = tmp5(12169);
   handleClaim = tmp5Result.useHandleClaim({ product }).handleClaim;
-  const tmp20 = onTrackPress(12167)({ location: "ProductDetailsActionSheetPurchaseSection", product });
+  const tmp20 = onTrackPress(12170)({ location: "ProductDetailsActionSheetPurchaseSection", product });
   let tmp25Result = tmp20;
   if (tmp20) {
     tmp25Result = !isPurchased;
   }
-  tmp5Result = tmp5(7343);
-  const tmp17Result = onTrackPress(12165)(obj);
+  tmp5Result = tmp5(7344);
+  const tmp17Result = onTrackPress(12168)(obj);
   const tmp23 = tmp5Result.useIsEligibleForBogoOffer() ? closure_15.MONTH : closure_15.YEAR;
-  let canGiftProduct = tmp5(12169).useCanGiftProduct(product);
-  let PX_16 = tmp2(1609)().bottom;
+  let canGiftProduct = tmp5(12172).useCanGiftProduct(product);
+  let PX_16 = tmp2(1628)().bottom;
   const items2 = [tmp.container, , ];
   let containerFramesEA = tmp25Result;
   if (tmp25Result) {
@@ -362,18 +362,18 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     const items4 = [callback2(tmp2Result, obj1), ];
     obj4 = { style: null, preserveAspectRatio: "none", viewBox: "0 0 100 100", pointerEvents: "none", children: null };
     obj4[0] = tmp.gradientOverlay;
-    tmp2Result = tmp2(7835);
+    tmp2Result = tmp2(7837);
     obj5 = { children: null };
     obj6 = { id: "frameEAVignette", cx: "50%", cy: "100%", rx: "100%", ry: "100%", fx: "50%", fy: "100%", children: null };
     obj7 = { offset: "60%", stopColor: null, stopOpacity: 1 };
     obj7[1] = token;
-    const items5 = [callback2(tmp5(7835).Stop, obj7), ];
+    const items5 = [callback2(tmp5(7837).Stop, obj7), ];
     obj8 = { offset: "100%", stopColor: null, stopOpacity: 0 };
     obj8[1] = token;
-    items5[1] = callback2(tmp5(7835).Stop, obj8);
+    items5[1] = callback2(tmp5(7837).Stop, obj8);
     obj6[7] = items5;
-    obj5[0] = tmp25(tmp5(7835).RadialGradient, obj6);
-    const items6 = [callback2(tmp5(7835).Defs, obj5), callback2(tmp5(7835).Rect, { x: "0", y: "0", width: "100", height: "100", fill: "url(#frameEAVignette)" })];
+    obj5[0] = tmp25(tmp5(7837).RadialGradient, obj6);
+    const items6 = [callback2(tmp5(7837).Defs, obj5), callback2(tmp5(7837).Rect, { x: "0", y: "0", width: "100", height: "100", fill: "url(#frameEAVignette)" })];
     obj4[4] = items6;
     items4[1] = tmp25(tmp2Result, obj4);
     obj3[0] = items4;
@@ -382,7 +382,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   }
   const items7 = [tmp25Result, ];
   if (isPurchased) {
-    tmp25Result = product.type !== tmp5(1930).CollectiblesItemType.EXTERNAL_SKU;
+    tmp25Result = product.type !== tmp5(1949).CollectiblesItemType.EXTERNAL_SKU;
     if (tmp25Result) {
       obj9 = { style: null, children: null };
       obj9[0] = tmp.buttonContainer;
@@ -437,20 +437,20 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     const intl8 = tmp5(1236).intl;
     const obj16 = { articleURL: null };
     const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
-    obj16[0] = tmp2(1974).getArticleURL(constants.SHOP_FRAMES_EARLY_ACCESS);
+    obj16[0] = tmp2(1993).getArticleURL(constants.SHOP_FRAMES_EARLY_ACCESS);
     obj15[2] = intl8.format(tmp5(1236).t["3cglst"], obj16);
     const items10 = [callback2(tmp5(4299).Text, obj15), , ];
     const obj17 = { onTrackPress: null, text: null };
     obj17[0] = onTrackPress;
     const intl9 = tmp5(1236).intl;
     obj17[1] = intl9.string(tmp5(1236).t["9wfL34"]);
-    items10[1] = callback2(tmp5(12170).UnlockWithNitroButton, obj17);
+    items10[1] = callback2(tmp5(12173).UnlockWithNitroButton, obj17);
     const obj18 = { variant: "text-xxs/normal", children: null };
     const intl10 = tmp5(1236).intl;
     const obj19 = { paidURL: null, interval: null, ctaText: null };
     obj19[0] = constants2.PAID_TERMS;
-    const tmp2Result1 = tmp2(1974);
-    obj19[1] = tmp2(3947).getIntervalStringAsNoun(tmp23);
+    const tmp2Result1 = tmp2(1993);
+    obj19[1] = tmp2(3966).getIntervalStringAsNoun(tmp23);
     const intl11 = tmp5(1236).intl;
     obj19[2] = intl11.string(tmp5(1236).t["9wfL34"]);
     obj18[1] = intl10.format(tmp49, obj19);
@@ -458,31 +458,31 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     obj14[1] = items10;
     obj13[1] = tmp25(tmp26, obj14);
     tmp25Result2 = callback2(tmp5(5728).AnalyticsLocationProvider, obj13);
-    const tmp2Result2 = tmp2(3947);
+    const tmp2Result2 = tmp2(3966);
   } else {
     if (result) {
       if (!isPremiumSubscriber) {
         if (!result1) {
           const obj20 = { onTrackPress: null };
           obj20[0] = onTrackPress;
-          tmp25Result2 = callback2(tmp5(12170).UnlockWithNitroButton, obj20);
+          tmp25Result2 = callback2(tmp5(12173).UnlockWithNitroButton, obj20);
         }
       }
     }
     if (!result1) {
-      if (product.type === tmp5(1930).CollectiblesItemType.BUNDLE) {
+      if (product.type === tmp5(1949).CollectiblesItemType.BUNDLE) {
         const intl6 = tmp5(1236).intl;
         let stringResult = intl6.string(tmp5(1236).t.V1AWw0);
-      } else if (product.type === tmp5(1930).CollectiblesItemType.PROFILE_EFFECT) {
+      } else if (product.type === tmp5(1949).CollectiblesItemType.PROFILE_EFFECT) {
         const intl5 = tmp5(1236).intl;
         stringResult = intl5.string(tmp5(1236).t.kAeDcK);
-      } else if (product.type === tmp5(1930).CollectiblesItemType.NAMEPLATE) {
+      } else if (product.type === tmp5(1949).CollectiblesItemType.NAMEPLATE) {
         const intl4 = tmp5(1236).intl;
         stringResult = intl4.string(tmp5(1236).t.H3vhqU);
-      } else if (product.type === tmp5(1930).CollectiblesItemType.AVATAR_DECORATION) {
+      } else if (product.type === tmp5(1949).CollectiblesItemType.AVATAR_DECORATION) {
         const intl3 = tmp5(1236).intl;
         stringResult = intl3.string(tmp5(1236).t.AQ0Veg);
-      } else if (product.type === tmp5(1930).CollectiblesItemType.PROFILE_FRAME) {
+      } else if (product.type === tmp5(1949).CollectiblesItemType.PROFILE_FRAME) {
         const intl2 = tmp5(1236).intl;
         stringResult = intl2.string(tmp5(1236).t.BlSW1e);
       } else {

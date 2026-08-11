@@ -38,8 +38,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
         let str3 = "quality=lossless";
         let str5 = "";
         if (null != arg1) {
-          tmp5(1450);
-          tmp5(1450);
+          tmp5(1469);
+          tmp5(1469);
           let str7 = "";
           const text = `size=${tmp9(arg1 * obj3.getDevicePixelRatio())}`;
           if (!set) {

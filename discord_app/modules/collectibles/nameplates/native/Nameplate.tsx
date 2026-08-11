@@ -8,10 +8,8 @@ let c5;
 let closure_6;
 const require = arg1;
 function NameplateInner(isFocused) {
-  let animatedImageUrl;
   let isPressed;
   let nameplate;
-  let staticImageUrl;
   ({ nameplate, isPressed } = isFocused);
   if (isPressed === undefined) {
     isPressed = false;
@@ -49,7 +47,7 @@ function NameplateInner(isFocused) {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = callback2(flag3, isPressed, flag, flag2, flag5);
-  let obj1 = flag6(4036);
+  let obj1 = flag6(4042);
   let num = 1;
   if (flag6) {
     num = 0;
@@ -65,7 +63,7 @@ function NameplateInner(isFocused) {
       const result = sharedValue.set(obj.withTiming(1, obj));
     }
   }, items1);
-  let tmpResult = tmp(4036);
+  let tmpResult = tmp(4042);
   class A {
     constructor() {
       obj = { opacity: c1.get() };
@@ -76,23 +74,27 @@ function NameplateInner(isFocused) {
   A.__workletHash = 15588901070870;
   A.__initData = closure_8;
   const animatedStyle = tmpResult.useAnimatedStyle(A);
-  tmpResult = tmp(1927);
+  tmpResult = tmp(1946);
   const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4239)());
   const tmp6 = sharedValue(4239)();
-  const nameplateAssets = flag6(9391).getNameplateAssets(nameplate);
-  ({ staticImageUrl, animatedImageUrl } = nameplateAssets);
-  if (flag7) {
-    flag7 = !stateFromStores;
+  const nameplateAssets = flag6(9397).getNameplateAssets(nameplate);
+  let str = nameplateAssets.staticImageUrl;
+  let tmp12 = true === flag7;
+  if (tmp12) {
+    tmp12 = !stateFromStores;
   }
-  if (flag7) {
-    staticImageUrl = animatedImageUrl;
+  if (!tmp12) {
+    tmp12 = "always" === flag7;
   }
-  if (staticImageUrl == null) {
-    staticImageUrl = "";
+  if (tmp12) {
+    str = nameplateAssets.animatedImageUrl;
+  }
+  if (str == null) {
+    str = "";
   }
   obj = { style: items2, children: null };
   items2 = [tmp4.container, isFocused.style, animatedStyle];
-  let tmp14Result = null;
+  let tmp15Result = null;
   if (null != backgroundGradientColors) {
     obj = { style: null, start: null, end: null, colors: null };
     obj[0] = tmp4.gradient;
@@ -107,25 +109,25 @@ function NameplateInner(isFocused) {
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj[3] = items3;
-    tmp14Result = callback(tmp5(4725), obj);
-    const tmp14 = callback;
+    tmp15Result = callback(tmp5(4725), obj);
+    const tmp15 = callback;
     const tmp5Result = tmp5(4725);
   }
-  const items4 = [tmp14Result, ];
-  const tmp12 = closure_6;
-  const tmpResult1 = flag6(9391);
+  const items4 = [tmp15Result, ];
+  const tmp13 = closure_6;
+  const tmpResult1 = flag6(9397);
   if (tmpResult2.isAndroid()) {
-    if (flag7) {
+    if (tmp12) {
       const obj2 = { url: null, style: null, autoplay: true };
-      obj2[0] = staticImageUrl;
+      obj2[0] = str;
       obj2[1] = tmp4.img;
-      let tmp16 = callback(tmp(9386).APNGPlayer, obj2);
+      let tmp17 = callback(tmp(9392).APNGPlayer, obj2);
     }
-    items4[1] = tmp16;
+    items4[1] = tmp17;
     obj[1] = items4;
-    return tmp12(tmp5(4036).View, obj);
+    return tmp13(tmp5(4042).View, obj);
   }
-  tmp16 = callback(tmp5(5268), { source: { uri: staticImageUrl }, style: tmp4.img, accessibilityRole: "image" });
+  tmp17 = callback(tmp5(5268), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {

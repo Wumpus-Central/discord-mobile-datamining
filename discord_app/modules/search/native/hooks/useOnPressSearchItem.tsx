@@ -302,7 +302,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
 export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
   let navigation;
-  navigation = searchContext(1480).useNavigation();
+  navigation = searchContext(1499).useNavigation();
   const items = [navigation, searchContext];
   return React.useCallback((channelId) => {
     const searchContext = channelId;
@@ -329,7 +329,7 @@ export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContex
 export const useOnPressDMItem = function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
   let navigation;
-  navigation = searchContext(1480).useNavigation();
+  navigation = searchContext(1499).useNavigation();
   const items = [navigation, searchContext];
   return React.useCallback((userId) => {
     const searchContext = arg1;

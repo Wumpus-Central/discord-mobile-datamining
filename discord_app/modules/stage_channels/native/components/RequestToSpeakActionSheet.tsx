@@ -62,9 +62,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(10795).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(10800).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(10797).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(10802).MicrophoneArrowRightIcon;
   }
   obj = {
     onPress() {
@@ -90,7 +90,7 @@ function ManageSelfSpeakerRow(channel) {
   obj[1] = callback2(MicrophoneArrowRightIcon, {});
   obj[2] = stringResult;
   obj = { source: null };
-  obj[0] = tmp4(10799);
+  obj[0] = tmp4(10804);
   obj[3] = callback2(channel(1297).Icon, obj);
   return callback2(channel(5374).TableRow, obj);
 }
@@ -107,7 +107,7 @@ export default function RequestToSpeakActionSheet(channelId) {
   let dependencyMap;
   let first1;
   let React;
-  let obj = channelId(4005);
+  let obj = channelId(4024);
   const token = obj.useToken(first(712).modules.mobile.TABLE_ROW_PADDING);
   const items = [];
   const tmp3 = first;
@@ -182,13 +182,13 @@ export default function RequestToSpeakActionSheet(channelId) {
     obj11[0] = stateFromStores;
     const _Math = Math;
     obj11[1] = Math.max(first1 - first - 8, 0);
-    items4[1] = callback2(tmp3(10800), obj11);
+    items4[1] = callback2(tmp3(10805), obj11);
     obj2[1] = items4;
     obj1[2] = callback3(tmp(4712).Stack, obj2);
     obj[2] = callback2(tmp(5399).BottomSheetScrollView, obj1);
     obj[1] = callback2(tmp(5397).BottomSheet, obj);
     tmp14 = callback2(tmp(5728).AnalyticsLocationProvider, obj);
-    const tmp3Result = tmp3(10800);
+    const tmp3Result = tmp3(10805);
   }
   return tmp14;
 };

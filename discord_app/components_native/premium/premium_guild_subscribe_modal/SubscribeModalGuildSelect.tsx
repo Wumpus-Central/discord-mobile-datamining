@@ -34,7 +34,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   let memo;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = guildBoostSlots(1480);
+  let obj = guildBoostSlots(1499);
   callback = obj.useNavigation();
   const tmp2 = callback(first.useState(""), 2);
   first = tmp2[0];

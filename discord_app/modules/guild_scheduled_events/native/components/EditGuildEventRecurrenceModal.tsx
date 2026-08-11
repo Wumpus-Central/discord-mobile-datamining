@@ -117,9 +117,9 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   }
   const tmp2 = useEventException(recurrenceId, guildEvent.id);
   dependencyMap = tmp2;
-  let obj = guildEvent(8942);
+  let obj = guildEvent(8948);
   const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj1 = guildEvent(8942);
+  let obj1 = guildEvent(8948);
   scheduleForRecurrenceWithException = obj1.getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp2);
   let tmp = createCacheKey();
   [c5, c6] = callback(React.useState(scheduleForRecurrenceWithException), 2);

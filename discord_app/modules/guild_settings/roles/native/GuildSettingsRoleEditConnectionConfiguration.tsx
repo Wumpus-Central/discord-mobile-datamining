@@ -80,8 +80,8 @@ function Header(arg0) {
       tmp8Result = tmp11;
     }
   } else if (null != platform) {
-    let tmp3Result = tmp3(1416);
-    tmp3Result = tmp3(4153);
+    let tmp3Result = tmp3(1435);
+    tmp3Result = tmp3(1363);
     const icon = platform.icon;
     const obj1 = { source: null, disableColor: true };
     obj1[0] = tmp3Result.makeSource(tmp3Result.isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG);
@@ -214,7 +214,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(16724);
+  let obj = metadataField(16736);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -223,7 +223,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(16724);
+  let tmpResult = tmp(16736);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -645,7 +645,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: "_desired", onRemove: "a", locked: "isArray" };
+      obj = { platform: null, integration: "a", applicationId: "<string:4261413309>", onRemove: "<string:1358955360>", locked: "<string:910274058>" };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

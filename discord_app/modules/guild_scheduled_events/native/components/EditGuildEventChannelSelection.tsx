@@ -2,7 +2,7 @@
 import "Text";
 import { View } from "LocationIcon";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import scheduledEventSort from "scheduledEventSort";
 import ME from "ME";
@@ -35,17 +35,17 @@ export default function EditGuildEventChannelSelection(guild) {
   const guildEventId = guild.guildEventId;
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
   let c5;
-  let upsertRelationship;
+  let markAllUserIdListsStale;
   let mergeGuildAvatar;
   let scheduledEventSort;
   let constants;
   const tmp = createCacheKey();
-  let obj = guild(6000);
+  let obj = guild(6002);
   const inputStyles = obj.useInputStyles({ hasLeadingIcon: true });
   c5 = tmp5;
-  let obj1 = guild(8984);
-  upsertRelationship = obj1.useGetEventChannelsByType(guild.id, channelType);
-  let obj2 = guild(8970);
+  let obj1 = guild(8990);
+  markAllUserIdListsStale = obj1.useGetEventChannelsByType(guild.id, channelType);
+  let obj2 = guild(8976);
   mergeGuildAvatar = obj2.useChannelsUserCanStartStageIn(guild);
   const tmp7 = channel(4494)(channel);
   let obj3 = guild(589);
@@ -59,13 +59,13 @@ export default function EditGuildEventChannelSelection(guild) {
     let tmp2Result = tmp2(4764);
     let channelIcon = tmp2Result.getChannelIcon(channel);
   } else {
-    channelIcon = tmp6(8972);
+    channelIcon = tmp6(8978);
   }
   if (null != channel) {
     tmp2Result = tmp2(4764);
     let LocationIcon = tmp2Result.getChannelIconComponent(channel);
   } else {
-    LocationIcon = tmp2(8973).LocationIcon;
+    LocationIcon = tmp2(8979).LocationIcon;
   }
   let intl = tmp2(1236).intl;
   let string = intl.string;
@@ -91,9 +91,9 @@ export default function EditGuildEventChannelSelection(guild) {
     let obj = guildEventId(outer1_3[21]);
     let result = obj.dismissGlobalKeyboard();
     let tmp4 = null;
-    const mapped = upsertRelationship.map((id) => {
+    const mapped = markAllUserIdListsStale.map((id) => {
       const obj = { value: id.id, label: null };
-      obj[1] = callback(table[13]).computeChannelName(id, mergeGuildAvatar, upsertRelationship, true);
+      obj[1] = callback(table[13]).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale, true);
       return obj;
     });
     if (0 === length.length) {
@@ -126,7 +126,7 @@ export default function EditGuildEventChannelSelection(guild) {
       body: tmp4,
       onItemSelect(arg0) {
         let closure_0 = arg0;
-        const found = upsertRelationship.find((id) => id.id === closure_0);
+        const found = markAllUserIdListsStale.find((id) => id.id === closure_0);
         if (null != found) {
           callback2(found);
         }
@@ -156,7 +156,7 @@ export default function EditGuildEventChannelSelection(guild) {
   obj4 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };
   items6[1] = callback(guild(4299).Text, obj4);
   const obj5 = { source: null };
-  obj5[0] = channel(8969);
+  obj5[0] = channel(8975);
   items6[2] = callback(guild(1297).Icon, obj5);
   obj1[6] = items6;
   items4[1] = closure_12(guild(4846).PressableOpacity, obj1);

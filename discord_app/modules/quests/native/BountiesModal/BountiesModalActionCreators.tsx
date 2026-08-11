@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
@@ -9,7 +9,7 @@ export default {
     let bountyId;
     let sourceQuestContent;
     ({ bountyId, sourceQuestContent } = arg0);
-    ModalActionCreators.pushLazy(asyncRequireImpl(14250, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
+    ModalActionCreators.pushLazy(asyncRequireImpl(14258, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
   },
   hideModal() {
     ModalActionCreators.popWithKey(BOUNTIES_MODAL);

@@ -43,7 +43,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   const tmp3 = context;
   let obj = entrypoint(4168);
   if (overrideParams == null) {
-    overrideParams = obj.useKeyboardContextForType(entrypoint(1607).KeyboardTypes.APP_LAUNCHER);
+    overrideParams = obj.useKeyboardContextForType(entrypoint(1626).KeyboardTypes.APP_LAUNCHER);
   }
   const tmp4 = callback2();
   const accessibilityNativeStackOptions = entrypoint(5783).useAccessibilityNativeStackOptions();
@@ -105,9 +105,9 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   obj[2] = items2;
   obj[1] = closure_9(createNativeStackNavigator.Navigator, obj);
   obj14[0] = closure_8(entrypoint(5728).AnalyticsLocationProvider, obj);
-  obj13[0] = closure_8(entrypoint(1481).NavigationContainer, obj14);
+  obj13[0] = closure_8(entrypoint(1500).NavigationContainer, obj14);
   let tmp19 = "customId" in overrideParams;
-  const children = tmp8(tmp5(1481).NavigationIndependentTree, obj13);
+  const children = tmp8(tmp5(1500).NavigationIndependentTree, obj13);
   if (!tmp19) {
     tmp19 = "referrerId" in overrideParams;
   }
@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     entrypointParams = { customId: null, referrerId: null };
     const obj15 = { customId: null, referrerId: null };
   }
-  return closure_8(entrypoint(9548).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
+  return closure_8(entrypoint(9554).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
 });
 const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");
 

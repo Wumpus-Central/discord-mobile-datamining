@@ -1,5 +1,5 @@
 // discord_app/modules/chat/useTypingUsersIds.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleTypingStart from "handleTypingStart";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -13,7 +13,7 @@ export const useTypingUserIds = function useTypingUserIds(id, arg1) {
     const _Number = Number;
     MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
   }
-  let items = [mergeGuildAvatar, handleTypingStart, upsertRelationship];
+  let items = [mergeGuildAvatar, handleTypingStart, markAllUserIdListsStale];
   const items1 = [id, MAX_SAFE_INTEGER];
   return _require(MAX_SAFE_INTEGER[3]).useStateFromStoresArray(items, () => {
     const currentUser = outer1_4.getCurrentUser();

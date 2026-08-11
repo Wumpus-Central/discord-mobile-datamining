@@ -123,7 +123,7 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
   obj = _initialize;
   const items = [trackCommunicationDisabled];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const obj = callback(1384);
+    const obj = callback(1403);
     const member = outer1_3.getMember(callback, obj);
     let num;
     if (member != null) {

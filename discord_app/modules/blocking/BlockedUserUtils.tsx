@@ -1,5 +1,5 @@
 // discord_app/modules/blocking/BlockedUserUtils.tsx
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
@@ -9,10 +9,11 @@ export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnored
   let closure_0 = closure_5;
   const found = mapped.filter((channel) => callback(table[1]).isNotNullish(channel));
   return found.filter((id) => {
+    id = id.id;
     if (null != closure_0) {
-      let hasItem = closure_0.includes(id.id);
+      let hasItem = closure_0.has(id);
     } else {
-      hasItem = outer1_3.isBlockedOrIgnored(id.id);
+      hasItem = outer1_3.isBlockedOrIgnored(id);
     }
     return !hasItem;
   });
@@ -21,7 +22,7 @@ export const filterOutBlockedOrIgnoredUserIds = function filterOutBlockedOrIgnor
   let closure_0 = arg1;
   return arr.filter((id) => {
     if (null != closure_0) {
-      let hasItem = closure_0.includes(id);
+      let hasItem = closure_0.has(id);
     } else {
       hasItem = outer1_3.isBlockedOrIgnored(id);
     }
@@ -35,7 +36,7 @@ export const hasBlockedOrIgnoredUserIds = function hasBlockedOrIgnoredUserIds(it
   let closure_0 = blockedOrIgnoredIDs;
   return items.some((id) => {
     if (null != closure_0) {
-      let hasItem = closure_0.includes(id);
+      let hasItem = closure_0.has(id);
     } else {
       hasItem = outer1_3.isBlockedOrIgnored(id);
     }

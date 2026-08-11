@@ -99,7 +99,7 @@ function _createSubscriptionInvoicePreview() {
               return obj1;
             } else {
               obj2 = { items: null, payment_source_id: null, trial_id: null, code: null, apply_entitlements: null, currency: null, renewal: null, metadata: null, load_id: null };
-              const result = callback(3947).coerceExistingItemsToNewItemInterval(callback);
+              const result = callback(3966).coerceExistingItemsToNewItemInterval(callback);
               callback = result;
               obj2[0] = result.map((planId) => {
                 const obj = {};
@@ -274,7 +274,7 @@ function _updateSubscriptionInvoicePreview() {
               return obj1;
             } else {
               if (null != callback2) {
-                let obj4 = callback(3947);
+                let obj4 = callback(3966);
                 callback2 = obj4.coerceExistingItemsToNewItemInterval(callback2);
               }
               let mapped;

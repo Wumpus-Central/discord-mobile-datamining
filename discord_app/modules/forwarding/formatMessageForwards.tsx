@@ -3,7 +3,7 @@ import getGuild from "getGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { resetCache } from "../../utils/DateUtils.tsx";
@@ -19,7 +19,7 @@ class MessageForward {
     return obj;
   }
 }
-MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, upsertRelationship, arg3, arg4, maxSettingsForPreset) {
+MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, markAllUserIdListsStale, arg3, arg4, maxSettingsForPreset) {
   let parentMessage;
   let snapshotIndex;
   let obj = arg0;
@@ -30,9 +30,9 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
   if (closure_9 === undefined) {
     tmp = mergeGuildAvatar;
   }
-  let tmp2 = upsertRelationship;
-  if (upsertRelationship === undefined) {
-    tmp2 = upsertRelationship;
+  let tmp2 = markAllUserIdListsStale;
+  if (markAllUserIdListsStale === undefined) {
+    tmp2 = markAllUserIdListsStale;
   }
   let obj1 = arg3;
   if (arg3 === undefined) {

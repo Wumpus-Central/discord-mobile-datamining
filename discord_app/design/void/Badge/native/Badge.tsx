@@ -8,6 +8,7 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import { space } from "Themes";
 import set from "set";
+import set from "set";
 import set from "_getSystemLocale";
 
 let BADGE_PADDING;
@@ -20,104 +21,128 @@ class Badge {
     value = global.value;
     closure_0 = value;
     style = global.style;
-    flag = global.accessibilityElementsHidden;
-    ({ dotStyle, textStyle, accessible, accessibilityLabel } = global);
-    if (flag === undefined) {
-      flag = false;
+    ({ textStyle, accessibilityElementsHidden } = global);
+    ({ dotStyle, accessible, accessibilityLabel } = global);
+    if (accessibilityElementsHidden === undefined) {
+      accessibilityElementsHidden = false;
     }
     str = global.importantForAccessibility;
     if (str === undefined) {
       str = "auto";
     }
-    flag2 = global.hideCount;
-    if (flag2 === undefined) {
-      flag2 = false;
+    flag = global.hideCount;
+    if (flag === undefined) {
+      flag = false;
     }
     num = global.maxValue;
     if (num === undefined) {
       num = Infinity;
     }
-    flag3 = global.unreadIndicator;
+    flag2 = global.unreadIndicator;
+    if (flag2 === undefined) {
+      flag2 = false;
+    }
+    c2 = flag2;
+    flag3 = global.eventsMentionBadge;
     if (flag3 === undefined) {
       flag3 = false;
     }
-    c2 = flag3;
-    flag4 = global.eventsMentionBadge;
+    c3 = flag3;
+    flag4 = global.isMentionLowImportance;
     if (flag4 === undefined) {
       flag4 = false;
     }
-    c3 = flag4;
-    flag5 = global.isMentionLowImportance;
-    if (flag5 === undefined) {
-      flag5 = false;
-    }
-    c4 = flag5;
+    c4 = flag4;
     c5 = undefined;
     items2 = jsx();
     c5 = items2;
-    tmp2 = c2;
     tmp = closure_0;
-    obj = require("initialize");
+    tmp2 = c2;
+    obj = require("AccessibilityAnnouncer");
+    themeContext = obj.useThemeContext();
+    flag5 = undefined;
+    if (themeContext != null) {
+      enabledExperiments = themeContext.enabledExperiments;
+      if (enabledExperiments != null) {
+        str2 = "mana-type-consolidation";
+        flag5 = enabledExperiments.includes("mana-type-consolidation");
+      }
+    }
+    if (flag5 == null) {
+      flag5 = false;
+    }
+    tmpResult = require("initialize");
     items = [];
     items[0] = c5;
+    stateFromStores = tmpResult.useStateFromStores(items, () => items2.locale);
     items1 = [, , , , , ];
     items1[0] = items2;
     items1[1] = style;
-    items1[2] = flag3;
+    items1[2] = flag2;
     items1[3] = value;
-    items1[4] = flag4;
-    items1[5] = flag5;
-    stateFromStores = obj.useStateFromStores(items, () => items2.locale);
+    items1[4] = flag3;
+    items1[5] = flag4;
     if (value > 0) {
-      tmp6 = jsx;
-      tmp7 = c4;
+      tmp7 = jsx;
+      tmp8 = c4;
       obj = { pointerEvents: "none", style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-      obj[1] = tmp4;
+      obj[1] = tmp5;
       obj[2] = accessible;
       obj[3] = accessibilityLabel;
-      obj[4] = flag;
+      obj[4] = accessibilityElementsHidden;
       obj[5] = str;
-      if (flag3) {
-        tmp8 = null;
+      if (flag2) {
+        tmp9 = null;
         if (0 === value) {
           obj[6] = null;
-          tmp6Result = tmp6(tmp7, obj);
+          tmp7Result = tmp7(tmp8, obj);
         }
       }
-      if (flag2) {
+      if (flag) {
         obj1 = { style: null };
         items2 = [, ];
         items2[0] = items2.noCount;
         items2[1] = dotStyle;
         obj1[0] = items2;
-        tmp6Result1 = tmp6(tmp7, obj1);
-      } else {
-        tmp9 = style;
-        obj2 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
+        tmp7Result1 = tmp7(tmp8, obj1);
+      } else if (flag5) {
+        obj2 = { variant: "experimental/body-xs/semibold", color: "none", style: null, lineClamp: 1, allowFontScaling: false, children: null };
         items3 = [, ];
-        items3[0] = items2.badgeText;
+        items3[0] = items2.experimentalBadgeText;
         items3[1] = textStyle;
-        obj2[0] = items3;
-        tmp10 = require("module_7999");
-        tmpResult = require("shortenAndLocalizeNumber");
-        tmp11 = globalThis;
+        obj2[2] = items3;
+        tmpResult1 = require("shortenAndLocalizeNumber");
+        tmp14 = globalThis;
+        _Math2 = Math;
+        obj2[5] = tmpResult1.humanizeValue(Math.min(value, num), stateFromStores);
+        tmp7Result1 = tmp7(require("Text").Text, obj2);
+      } else {
+        tmp10 = style;
+        obj3 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
+        items4 = [, ];
+        items4[0] = items2.badgeText;
+        items4[1] = textStyle;
+        obj3[0] = items4;
+        tmp11 = require("module_8001");
+        tmpResult2 = require("shortenAndLocalizeNumber");
+        tmp12 = globalThis;
         _Math = Math;
-        obj2[3] = tmpResult.humanizeValue(Math.min(value, num), stateFromStores);
-        tmp6Result1 = tmp6(tmp10, obj2);
+        obj3[3] = tmpResult2.humanizeValue(Math.min(value, num), stateFromStores);
+        tmp7Result1 = tmp7(tmp11, obj3);
       }
-      tmp13 = tmp6Result1;
+      tmp15 = tmp7Result1;
     } else {
-      tmp6Result = null;
+      tmp7Result = null;
     }
-    return tmp6Result;
+    return tmp7Result;
   }
 }
 ({ BADGE_MASK_SIZE: closure_6, BADGE_MASK_UNREAD_SIZE: error, BADGE_PADDING, BADGE_SIZE } = PX_16);
 const BADGE_SIZE_UNREAD = PX_16.BADGE_SIZE_UNREAD;
-createCacheKey = { badgeMask: createCacheKey, badge: null, badgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
+createCacheKey = { badgeMask: createCacheKey, badge: null, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 createCacheKey = { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 };
 createCacheKey[1] = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: require("Themes").space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-const obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: require("Themes").colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
+let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: require("Themes").colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
 set = set.isAndroid();
 obj2[3] = set ? space.PX_12 : space.PX_16;
 obj2[4] = require("ME").Fonts.PRIMARY_BOLD;
@@ -127,16 +152,27 @@ if (set.isAndroid()) {
 }
 obj2[6] = str;
 createCacheKey[2] = obj2;
+const obj3 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: require("Themes").colors.WHITE };
+if (set.isAndroid()) {
+  const obj4 = { lineHeight: null, textAlignVertical: "center" };
+  obj4[0] = require("Themes").space.PX_12;
+  set = obj4;
+} else {
+  set = {};
+}
+set = Object.assign(set);
+obj3.textAlign = "center";
+createCacheKey[3] = obj3;
+set = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: require("Themes").colors.WHITE };
+createCacheKey[4] = set;
 let obj1 = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: require("Themes").space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-createCacheKey[3] = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: require("Themes").colors.WHITE };
-const obj3 = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: require("Themes").colors.WHITE };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+createCacheKey[5] = { backgroundColor: require("Themes").colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 set = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-createCacheKey[5] = set;
-set = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
 createCacheKey[6] = set;
-const obj4 = { backgroundColor: require("Themes").colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+const obj7 = { backgroundColor: require("Themes").colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 createCacheKey[7] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
+const obj9 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
+createCacheKey[8] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 

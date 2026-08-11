@@ -1,28 +1,24 @@
 // discord_app/modules/chat_input/native/ChatInputNativeComponent.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "get ActivityIndicator";
+import importAllResult from "noop";
+import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { useTheme } from "../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
-import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 
 const require = arg1;
-let c4 = importAllResult;
 let obj = { style: { flex: 1 }, textColor: null, placeholderColor: null };
 obj = { color: require("Themes").colors.TEXT_DEFAULT };
 obj[1] = obj;
 createCacheKey = { color: require("Themes").colors.TEXT_MUTED };
 obj[2] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) => {
+let closure_5 = createCacheKey.createStyles(obj);
+const forwardRefResult = require("noop").forwardRef((markAsSpoilerTitle, ref) => {
   let accessibilityLabel;
   let customKeyboard;
   let editable;
@@ -43,16 +39,15 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   markAsSpoilerTitle = markAsSpoilerTitle.markAsSpoilerTitle;
   ({ accessibilityLabel, customKeyboard, placeholder, editable } = markAsSpoilerTitle);
   if (markAsSpoilerTitle === undefined) {
-    const intl = _getSystemLocale.intl;
-    markAsSpoilerTitle = intl.string(_getSystemLocale.t["gsI+xC"]);
+    const intl = getSystemLocale.intl;
+    markAsSpoilerTitle = intl.string(getSystemLocale.t["gsI+xC"]);
   }
-  _require = undefined;
   ({ setNoExtractUI, shouldShowCursor, onBeginFocus, onEndBlur, onChangeContentSize, onMaxHeightChanged, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, verticalInset } = markAsSpoilerTitle);
-  const tmp3 = callback2();
-  let obj = _useTheme;
+  const tmp3 = callback();
+  let obj = useTheme;
   const theme = obj.useTheme();
-  const isThemeDarkResult = _AccessibilityAnnouncer.isThemeDark(theme);
-  const obj2 = _AccessibilityAnnouncer;
+  const isThemeDarkResult = AccessibilityAnnouncer.isThemeDark(theme);
+  const obj2 = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
   if (isThemeDarkResult) {
     let PRIMARY_500 = unsafe_rawColors.WHITE;
@@ -65,7 +60,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (null != gradientPreset.gradientPreset) {
     num = 0.8;
   }
-  const obj3 = _hexToRgba;
+  const obj3 = hexToRgba;
   let tmp4Result = tmp4(500);
   let tmp11;
   if (!tmp4Result.isAndroid()) {
@@ -76,30 +71,16 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (!tmp4Result.isAndroid()) {
     tmp12 = customKeyboard;
   }
-  const hexWithOpacityResult = _hexToRgba.hexWithOpacity(PRIMARY_500, num);
+  const hexWithOpacityResult = hexToRgba.hexWithOpacity(PRIMARY_500, num);
   let num2 = 2;
   if (isThemeDarkResult) {
     num2 = 1;
   }
-  const tmp4Result1 = _set;
-  const tmp13 = tmp9(11373)(onMaxHeightChanged);
-  _require = _useShouldUseFabricChatInput.useShouldUseFabricChatInput();
-  obj = { accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp13, onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset };
-  return jsx(callback(importAllResult.useState(() => {
-    if (callback) {
-      let _default = callback(outer1_2[14]).default;
-    } else {
-      _default = outer1_8;
-    }
-    return _default;
-  }), 1)[0], { accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp13, onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset });
+  const tmp4Result1 = set;
+  obj = { accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp9(11378)(onMaxHeightChanged), onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset };
+  return jsx(__INTERNAL_VIEW_CONFIG.default, { accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp9(11378)(onMaxHeightChanged), onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset });
 });
-if (set.isAndroid()) {
-  let _default = require("__INTERNAL_VIEW_CONFIG").default;
-} else {
-  _default = require("get ActivityIndicator").requireNativeComponent("DCDChatInputLegacy");
-}
 forwardRefResult.displayName = "ChatInputNativeComponent";
-const result = set.fileFinishedImporting("modules/chat_input/native/ChatInputNativeComponent.tsx");
+const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/ChatInputNativeComponent.tsx");
 
 export default forwardRefResult;

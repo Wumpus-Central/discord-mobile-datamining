@@ -10,7 +10,7 @@ export default function useBuyNitroListData(selection) {
   let analyticsLocations = setTier;
   let dependencyMap;
   let React;
-  const tmp = analyticsLocations(7654)(selection.tier);
+  const tmp = analyticsLocations(7656)(selection.tier);
   const ref = React.useRef(null);
   dependencyMap = ref;
   React = React.useRef(false);

@@ -23,7 +23,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import checkIdleAFK from "checkIdleAFK";
 import reinjectEphemerals from "reinjectEphemerals";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import importDefaultResult from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -111,7 +111,7 @@ function shouldBadgeMessage(channel_id, id) {
   const channel = store3.getChannel(channel_id.channel_id);
   let tmp = null != channel;
   if (tmp) {
-    const result = upsertRelationship.isBlockedOrIgnoredForMessage(channel_id);
+    const result = markAllUserIdListsStale.isBlockedOrIgnoredForMessage(channel_id);
     let tmp4 = !result;
     if (!result) {
       const obj = { message: null, userId: null, suppressEveryone: null, suppressRoles: null };
@@ -1762,7 +1762,7 @@ prototype2["canBeUnread"] = function canBeUnread() {
           }
         }
       }
-      tmpResult = tmp(6994);
+      tmpResult = tmp(6997);
     }
     return self.canTrackUnreads();
   }
@@ -1779,7 +1779,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
       const result = filterOutMessageRequestsAndSpam.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
-        let result1 = tmp4(6994).isOptInEnabledForGuild(self._guildId);
+        let result1 = tmp4(6997).isOptInEnabledForGuild(self._guildId);
         if (result1) {
           result1 = self._lastMessageTimestamp < c71;
         }
@@ -1788,7 +1788,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
           canTrackUnreadsResult = self.canTrackUnreads();
         }
         tmp9 = canTrackUnreadsResult;
-        const tmp4Result = tmp4(6994);
+        const tmp4Result = tmp4(6997);
       }
       tmp3 = tmp9;
       const obj = filterOutMessageRequestsAndSpam;
@@ -2110,14 +2110,14 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         }
         callback(709).dispatch({ type: "MESSAGE_ACKED" });
         if (dependencyMap) {
-          tmp4(1988)(13190, tmp5.paths).then((arg0) => {
+          tmp4(2007)(13198, tmp5.paths).then((arg0) => {
             let obj = closure_1;
             if (closure_1 == null) {
               obj = {};
             }
             arg0.default(channelId.channelId, obj);
           });
-          const promise = tmp4(1988)(13190, tmp5.paths);
+          const promise = tmp4(2007)(13198, tmp5.paths);
         }
         let obj = callback(709);
         tmp5 = dependencyMap;
@@ -2485,7 +2485,7 @@ const prototype3 = ReadStateStoreClass.prototype;
 prototype3["initialize"] = function initialize() {
   const items = [percentageScrolled, mergeGuildAvatar, createGuildRecordFromRust, handleConnectionOpen, ensureGuildLoaded, closure_32, reinjectEphemerals, getUncachedChannelPermissions, getParticipants, handleThreadCreateOrUpdate, storeThread, handlePermissionsChange, scheduledEventSort, closure_8, isSubscriptionGated, updateUserGuildSettingsInternal, map, _validate, processChannel, handleConnectionClosedOrResumed, closure_12];
   items.push(getState.default);
-  this.waitFor(handleThreadCreateOrUpdate, fetchFingerprint, getParticipants, handlePermissionsChange, ensureGuildLoaded, percentageScrolled, participantFromServer, isSubscriptionGated, handleConnectionOpen, scheduledEventSort, createGuildRecordFromRust, checkIdleAFK, storeThread, reinjectEphemerals, _validate, getUncachedChannelPermissions, upsertRelationship, closure_32, updateUserGuildSettingsInternal, handleConnectionClosedOrResumed, mergeGuildAvatar, map);
+  this.waitFor(handleThreadCreateOrUpdate, fetchFingerprint, getParticipants, handlePermissionsChange, ensureGuildLoaded, percentageScrolled, participantFromServer, isSubscriptionGated, handleConnectionOpen, scheduledEventSort, createGuildRecordFromRust, checkIdleAFK, storeThread, reinjectEphemerals, _validate, getUncachedChannelPermissions, markAllUserIdListsStale, closure_32, updateUserGuildSettingsInternal, handleConnectionClosedOrResumed, mergeGuildAvatar, map);
   const items1 = [handlePermissionsChange];
   this.syncWith(items1, handleChannelSectionStoreUpdate);
 };
@@ -3031,7 +3031,7 @@ obj = {
         const _Map = Map;
         map = new Map();
       }
-      const result = map.set(type.channelId, callback(1385).dangerouslyCast(type, tmp2));
+      const result = map.set(type.channelId, callback(1404).dangerouslyCast(type, tmp2));
       const _readStates2 = tmp2._readStates;
       if (!_readStates2.has(CHANNEL)) {
         const _readStates3 = tmp2._readStates;
@@ -3293,7 +3293,7 @@ obj = {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            let tmp8Result = tmp8(9762);
+            let tmp8Result = tmp8(9767);
             hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
           }
           if (!hasUnreadResult) {
@@ -3303,7 +3303,7 @@ obj = {
         if (!tmp2) {
           value.unreadCount = value.unreadCount + 1;
         }
-        if (!upsertRelationship.isBlockedOrIgnoredForMessage(message)) {
+        if (!markAllUserIdListsStale.isBlockedOrIgnoredForMessage(message)) {
           if (message.type !== constants7.RECIPIENT_REMOVE) {
             if (null != currentUser) {
               tmp8Result = tmp8(4537);
@@ -3359,7 +3359,7 @@ obj = {
                     if (tmp8Result1.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
                       obj6 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result1 = tmp8(9761);
+                    tmp8Result1 = tmp8(9766);
                   } else if (!channel.isVocal()) {
                     if (!obj15.isChannelMuted(channel.guild_id, channel.id)) {
                       if (obj15.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {

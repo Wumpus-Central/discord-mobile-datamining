@@ -87,17 +87,17 @@ function _updateDiscoverability() {
             obj3[0] = typeof name === "string";
             callback2 = phone;
             if (phone == null) {
-              obj = phone(1384);
+              obj = phone(1403);
               callback2 = obj.hasFlag(dependencyMap, constants2.FIND_BY_PHONE);
             }
             obj3[1] = callback2;
             dependencyMap = callback2;
             if (callback2 == null) {
-              obj1 = phone(1384);
+              obj1 = phone(1403);
               dependencyMap = obj1.hasFlag(dependencyMap, constants2.FIND_BY_EMAIL);
             }
             obj3[2] = dependencyMap;
-            obj2 = phone(12035);
+            obj2 = phone(12038);
             obj3[3] = obj2.isContactSyncEnabled(localAccount.getLocalAccount(constants3.CONTACTS));
             callback2(698).track(constants.USER_DISCOVERY_UPDATED, obj3);
             constants2 = 3;

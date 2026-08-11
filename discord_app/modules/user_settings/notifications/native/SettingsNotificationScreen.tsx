@@ -1,11 +1,12 @@
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationScreen.tsx
-import importAllResult from "set";
-import { View } from "prefetchFamilyCenterAgeGroupWhen";
+import importAllResult from "module_13895";
+import { View } from "NotificationPermissionSettingsHeader";
 import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore";
 import { MobileSetting } from "MobileSetting";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import { apexExperiment } from "../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
 import { _requestPushNotificationPermission } from "../../../nuf/native/NotificationPermissionUtil.tsx";
 import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
@@ -17,20 +18,28 @@ let metroImportAll;
 const require = arg1;
 function SystemNotificationsSubLabel() {
   const tmp = callback2();
-  let obj = _requestPushNotificationPermission;
-  let showReactivationPrompt = obj.useShowReactivationPrompt();
-  let obj1 = apexExperiment;
-  let obj2 = hasAndroidNotificationChannels;
-  let result = obj2.hasAndroidNotificationChannels();
+  let obj = apexExperiment;
+  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("SystemNotificationsSubLabel");
+  let obj1 = _requestPushNotificationPermission;
+  let showReactivationPrompt = obj1.useShowReactivationPrompt();
+  let obj2 = apexExperiment;
+  let obj3 = hasAndroidNotificationChannels;
+  let result = obj3.hasAndroidNotificationChannels();
   if (result) {
-    obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+    let str = "text-sm/medium";
+    if (manaTypeConsolidationExperiment) {
+      str = "experimental/body-xs/normal";
+    }
+    obj = { variant: null, color: "text-muted", children: null };
+    obj[0] = str;
     const intl = tmp2(1236).intl;
     obj[2] = intl.string(tmp2(1236).t["/TZX1J"]);
     result = callback(tmp2(4299).Text, obj);
+    const tmp10 = callback;
   }
   const children = [result, ];
   if (showReactivationPrompt) {
-    showReactivationPrompt = obj1.useConfig({ location: "SystemNotificationsSubLabel" }).inHoldout;
+    showReactivationPrompt = obj2.useConfig({ location: "SystemNotificationsSubLabel" }).inHoldout;
   }
   if (showReactivationPrompt) {
     obj = { style: null, children: null };
@@ -38,9 +47,9 @@ function SystemNotificationsSubLabel() {
     obj1 = { border: "none", shadow: "none", children: null };
     obj2 = { style: null, children: null };
     obj2[0] = tmp.cardContent;
-    const obj3 = { color: null };
+    obj3 = { color: null };
     obj3[0] = Themes.unsafe_rawColors.YELLOW_300;
-    const items1 = [callback(tmp2(7793).CircleErrorIcon, obj3), ];
+    const items1 = [callback(tmp2(7795).CircleErrorIcon, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
@@ -49,7 +58,7 @@ function SystemNotificationsSubLabel() {
     obj4[1] = callback(tmp2(4299).Text, obj5);
     items1[1] = callback(View, obj4);
     obj2[1] = items1;
-    obj1[2] = tmp7(View, obj2);
+    obj1[2] = tmp8(View, obj2);
     obj[1] = callback(tmp2(5376).Card, obj1);
     showReactivationPrompt = callback(View, obj);
   }
@@ -65,24 +74,24 @@ obj[1] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[2] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7053).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
-  let obj = isFamilyCenterV3Enabled(7053);
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7056).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  let obj = isFamilyCenterV3Enabled(7056);
   let tmp2 = !apexExperiment.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];
   const node = importAllResult.useMemo(() => {
-    let obj = isFamilyCenterV3Enabled(outer1_2[15]);
+    let obj = isFamilyCenterV3Enabled(outer1_2[16]);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
-    const intl = isFamilyCenterV3Enabled(outer1_2[11]).intl;
-    obj[0] = intl.string(isFamilyCenterV3Enabled(outer1_2[11]).t.clE4PU);
+    const intl = isFamilyCenterV3Enabled(outer1_2[12]).intl;
+    obj[0] = intl.string(isFamilyCenterV3Enabled(outer1_2[12]).t.clE4PU);
     const items = [, ];
     ({ IN_APP_NOTIFICATIONS: arr[0], IN_APP_MESSAGE_SOUNDS: arr[1] } = outer1_6);
     obj[1] = items;
     const items1 = [obj, , , , , , , , , , , , , , , , , , ];
     const obj1 = { label: null, settings: null, subLabel: null };
-    const intl2 = isFamilyCenterV3Enabled(outer1_2[11]).intl;
-    obj1[0] = intl2.string(isFamilyCenterV3Enabled(outer1_2[11]).t["jcHF+3"]);
+    const intl2 = isFamilyCenterV3Enabled(outer1_2[12]).intl;
+    obj1[0] = intl2.string(isFamilyCenterV3Enabled(outer1_2[12]).t["jcHF+3"]);
     const items2 = [outer1_6.SYSTEM_NOTIFICATIONS];
     obj1[1] = items2;
     obj1[2] = outer1_7(outer1_11, {});
@@ -92,20 +101,20 @@ const memoResult = importAllResult.memo(() => {
     const items4 = [outer1_6.IOS_NATIVE_PHONE_INTEGRATION];
     items1[3] = { settings: items4 };
     const obj2 = { label: null, settings: null };
-    const intl3 = isFamilyCenterV3Enabled(outer1_2[11]).intl;
-    obj2[0] = intl3.string(isFamilyCenterV3Enabled(outer1_2[11]).t.a2O7oY);
+    const intl3 = isFamilyCenterV3Enabled(outer1_2[12]).intl;
+    obj2[0] = intl3.string(isFamilyCenterV3Enabled(outer1_2[12]).t.a2O7oY);
     const items5 = [, , ];
     ({ ANDROID_NOTIFICATION_LIGHTS: arr6[0], ANDROID_NOTIFICATION_VIBRATIONS: arr6[1], ANDROID_NOTIFICATION_SOUNDS: arr6[2] } = outer1_6);
     obj2[1] = items5;
     items1[4] = obj2;
     const obj3 = { settings: items6, subLabel: null };
     items6 = [outer1_6.REACTION_NOTIFICATIONS];
-    const intl4 = isFamilyCenterV3Enabled(outer1_2[11]).intl;
-    obj3[1] = intl4.string(isFamilyCenterV3Enabled(outer1_2[11]).t.oWF6eQ);
+    const intl4 = isFamilyCenterV3Enabled(outer1_2[12]).intl;
+    obj3[1] = intl4.string(isFamilyCenterV3Enabled(outer1_2[12]).t.oWF6eQ);
     items1[5] = obj3;
     const obj4 = { label: null, settings: null };
-    const intl5 = isFamilyCenterV3Enabled(outer1_2[11]).intl;
-    obj4[0] = intl5.string(isFamilyCenterV3Enabled(outer1_2[11]).t.EZorjX);
+    const intl5 = isFamilyCenterV3Enabled(outer1_2[12]).intl;
+    obj4[0] = intl5.string(isFamilyCenterV3Enabled(outer1_2[12]).t.EZorjX);
     const items7 = [outer1_6.COMMUNITY_ACTIVITY_ALERTS];
     obj4[1] = items7;
     items1[6] = obj4;
@@ -132,8 +141,8 @@ const memoResult = importAllResult.memo(() => {
     const items18 = [outer1_6.SUMMARY_REMINDER_NOTIFICATIONS];
     items1[17] = { settings: items18 };
     const obj5 = { label: null, settings: null };
-    const intl6 = isFamilyCenterV3Enabled(outer1_2[11]).intl;
-    obj5[0] = intl6.string(isFamilyCenterV3Enabled(outer1_2[11]).t["0YtG+k"]);
+    const intl6 = isFamilyCenterV3Enabled(outer1_2[12]).intl;
+    obj5[0] = intl6.string(isFamilyCenterV3Enabled(outer1_2[12]).t["0YtG+k"]);
     const items19 = [, ];
     ({ SCREEN_DOWNTIME_SCHEDULE_NOTIFICATIONS: arr20[0], SCREEN_DOWNTIME_REMINDER_NOTIFICATIONS: arr20[1] } = outer1_6);
     obj5[1] = items19;
@@ -141,7 +150,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     let tmp2;
     if (tmp2) {
-      tmp2 = tmp2(outer1_2[16]);
+      tmp2 = tmp2(outer1_2[17]);
     }
     obj[1] = tmp2;
     return obj.createList(obj);
@@ -151,7 +160,7 @@ const memoResult = importAllResult.memo(() => {
   }, []);
   let items1 = [isFamilyCenterV3Enabled];
   const effect1 = importAllResult.useEffect(() => {
-    const result = isFamilyCenterV3Enabled(outer1_2[17]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
+    const result = isFamilyCenterV3Enabled(outer1_2[18]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
   }, items1);
   return callback(SettingLayout, { node });
 });

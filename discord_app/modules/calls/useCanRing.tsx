@@ -6,7 +6,7 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
@@ -60,7 +60,7 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  let enabled = tmp4(9235).useExperiment({ guildId: guild_id, location: str }).enabled;
+  let enabled = tmp4(9241).useExperiment({ guildId: guild_id, location: str }).enabled;
   if (stateFromStores != null) {
     const type = stateFromStores.type;
   }
@@ -95,7 +95,7 @@ export const useCanRing = function useCanRing(user, DisconnectedUserRow, selecte
   const items1 = [fetchFingerprint];
   const stateFromStores1 = _require(stateFromStores[10]).useStateFromStores(items1, () => outer1_3.getId() === user.id);
   const obj2 = _require(stateFromStores[10]);
-  const items2 = [upsertRelationship];
+  const items2 = [markAllUserIdListsStale];
   let stateFromStores2 = _require(stateFromStores[10]).useStateFromStores(items2, () => outer1_10.isFriend(user.id));
   const obj3 = _require(stateFromStores[10]);
   const items3 = [sortActivity];

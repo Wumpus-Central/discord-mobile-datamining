@@ -8,9 +8,9 @@ export const isLinkTrusted = function isLinkTrusted(target) {
   } else {
     isLinkTrusted;
     if (null == target.title) {
-      let title = tmp2(8094).astToString(target.content);
+      let title = tmp2(8096).astToString(target.content);
       tmp5(tmp6, title);
-      const tmp2Result = tmp2(8094);
+      const tmp2Result = tmp2(8096);
     }
     title = target.title;
     tmp2 = require;

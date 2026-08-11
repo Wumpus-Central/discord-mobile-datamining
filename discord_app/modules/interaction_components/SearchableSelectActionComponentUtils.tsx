@@ -3,7 +3,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getInteractionComponentStates from "getInteractionComponentStates";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
@@ -61,7 +61,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
       const obj = { type: callback(4531).SelectOptionType.CHANNEL, value: id.id, label: null };
-      obj[2] = callback(4494).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+      obj[2] = callback(4494).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale);
       return obj;
     });
   }
@@ -71,7 +71,7 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   interactionComponentState = interactionComponentState.getInteractionComponentState(containerId, selectActionComponent.id);
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(1935).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(1954).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
@@ -143,23 +143,23 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
         }
       }
     });
-    let found = mapped.filter(tmp2(1351).isNotNullish);
+    let found = mapped.filter(tmp2(1370).isNotNullish);
   }
   let type;
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(1935).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(1954).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(1935).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(1954).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(1935).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(1954).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;
@@ -244,6 +244,6 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
         }
       }
     });
-    return mapped.filter(items(1351).isNotNullish);
+    return mapped.filter(items(1370).isNotNullish);
   }
 };

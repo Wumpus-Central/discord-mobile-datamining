@@ -8,7 +8,7 @@ import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createRTCConnection from "createRTCConnection";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_15 from "handleConnectionOpen";
 import filterPlayingActivities from "filterPlayingActivities";
@@ -72,7 +72,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
         }
         let tmp10 = !tmp8;
         if (!tmp8) {
-          const isBlockedOrIgnoredResult = upsertRelationship.isBlockedOrIgnored(user.id);
+          const isBlockedOrIgnoredResult = markAllUserIdListsStale.isBlockedOrIgnored(user.id);
           let tmp13 = !isBlockedOrIgnoredResult;
           if (!isBlockedOrIgnoredResult) {
             const ignoreStatus = obj.ignoreStatus;
@@ -82,7 +82,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
             }
             let tmp17 = !tmp14;
             if (!tmp14) {
-              const FocusMode = tmp2(3974).FocusMode;
+              const FocusMode = tmp2(3993).FocusMode;
               const setting = FocusMode.getSetting();
               let tmp19 = !setting;
               if (!setting) {
@@ -113,15 +113,15 @@ function renderTitle(channelName, channel, channel) {
   const obj2 = FSI;
   const obj3 = computeChannelName;
   const tmp4 = mergeGuildAvatar;
-  const tmp5 = upsertRelationship;
+  const tmp5 = markAllUserIdListsStale;
   let str = "";
   if (null != channel) {
-    let tmpResult = tmp(7144);
+    let tmpResult = tmp(7145);
     tmpResult = tmp(4494);
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
+  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true)) + str + ")";
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -202,7 +202,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
               }
               obj5 = isChannelCurrentlyVisible;
             }
-            if (upsertRelationship.isBlockedOrIgnoredForMessage(message)) {
+            if (markAllUserIdListsStale.isBlockedOrIgnoredForMessage(message)) {
               return false;
             } else {
               if (undefined !== message.activity_instance) {
@@ -302,7 +302,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
         const hasFlagResult = user.hasFlag(constants7.SPAMMER);
         let tmp12 = !hasFlagResult;
         if (!hasFlagResult) {
-          const result = upsertRelationship.isBlockedOrIgnoredForMessage(type);
+          const result = markAllUserIdListsStale.isBlockedOrIgnoredForMessage(type);
           let tmp15 = !result;
           if (!result) {
             let tmp16 = user.id !== currentUser.id;
@@ -387,7 +387,7 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
     if (tmp10) {
       let tmp11 = null == reactor;
       if (!tmp11) {
-        tmp11 = !upsertRelationship.isBlockedOrIgnored(reactor.id);
+        tmp11 = !markAllUserIdListsStale.isBlockedOrIgnored(reactor.id);
       }
       if (tmp11) {
         let result = !includeSelectedChannel;
@@ -411,8 +411,8 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
       const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(9762).isChannelFocused();
-        const tmp3Result = tmp3(9762);
+        tmp5 = !tmp3(9767).isChannelFocused();
+        const tmp3Result = tmp3(9767);
       }
       flag = tmp5;
       const obj3 = getRootNavigationRef;
@@ -441,7 +441,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 let tmp6 = getGuildId.isManaged() && bot.bot;
                 if (tmp6) {
                   let obj1 = computeChannelName;
-                  tmp6 = name === obj1.computeChannelName(getGuildId, mergeGuildAvatar, upsertRelationship);
+                  tmp6 = name === obj1.computeChannelName(getGuildId, mergeGuildAvatar, markAllUserIdListsStale);
                 }
                 tmp5 = name;
                 if (!tmp6) {
@@ -451,7 +451,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
             }
             content = content.content;
             if (tmp(5890)(content)) {
-              let tmpResult = tmp(8093);
+              let tmpResult = tmp(8095);
               content = tmpResult.stringify(content, getGuildId);
               if (null == content) {
                 const obj15 = new tmp(3)("NotificationTextUtils");
@@ -524,7 +524,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (content.type === constants4.PREMIUM_REFERRAL) {
                 const intl4 = getSystemLocale.intl;
                 obj4 = { username: null };
-                tmpResult = tmp(4146);
+                tmpResult = tmp(4148);
                 obj4[0] = tmpResult.getName(bot);
                 stringResult = intl4.formatToPlainString(getSystemLocale.t.lieTqU, obj4);
                 tmp26 = items;
@@ -563,8 +563,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const tmpResult1 = tmp(7142);
-                ({ content, emoji } = tmp(7142).unparseWithMeta(content, getGuildId.id, true));
+                const tmpResult1 = tmp(7143);
+                ({ content, emoji } = tmp(7143).unparseWithMeta(content, getGuildId.id, true));
                 tmp26 = emoji;
                 stringResult = content;
                 if (0 !== content.length) {
@@ -591,7 +591,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const unparseWithMetaResult = tmp(7142).unparseWithMeta(content, getGuildId.id, true);
+                const unparseWithMetaResult = tmp(7143).unparseWithMeta(content, getGuildId.id, true);
               }
             }
             if (0 === stringResult.length) {

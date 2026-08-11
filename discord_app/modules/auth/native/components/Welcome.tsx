@@ -14,8 +14,8 @@ import { InviteTypes } from "InviteSendStates";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12610_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13211_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12614_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13219_registerAsset.js";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -54,7 +54,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       00038__(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp12 = new createdAt(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -67,7 +67,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp33 = new createdAt(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;

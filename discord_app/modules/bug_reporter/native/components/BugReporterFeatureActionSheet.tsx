@@ -35,9 +35,9 @@ let closure_10 = importAllResult.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(9869);
+  let obj = item(9874);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(9869).getFeatureId(feature);
+  const featureId1 = item(9874).getFeatureId(feature);
   obj = {
     start,
     end,
@@ -49,7 +49,7 @@ let closure_10 = importAllResult.memo((item) => {
     trailing: null
   };
   obj = { selected: featureId === featureId1 };
-  obj[4] = callback(item(7986).FormRadio, obj);
+  obj[4] = callback(item(7988).FormRadio, obj);
   return callback(item(5374).TableRow, obj);
 });
 const obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, justifyContent: "center" };

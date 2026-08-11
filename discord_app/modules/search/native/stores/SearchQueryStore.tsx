@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/stores/SearchQueryStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
@@ -176,7 +176,7 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(4494).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+      channelName = obj(4494).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
       const obj2 = obj(4494);
     }
     if (null == channelName) {
@@ -188,11 +188,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1236).intl;
       const stringResult = intl.string(obj(1236).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj[2] = "" + stringResult + ": " + obj(11712).quoteChannelName(channelName);
+      obj[2] = "" + stringResult + ": " + obj(11715).quoteChannelName(channelName);
       obj[3] = type.channelId;
       obj[4] = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj];
-      const obj4 = obj(11712);
+      const obj4 = obj(11715);
     }
     items = items1;
   }
@@ -203,7 +203,7 @@ class NativeSearchQueryStore extends Store {
 }
 const prototype2 = NativeSearchQueryStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, mergeGuildAvatar, upsertRelationship);
+  this.waitFor(ensureGuildLoaded, mergeGuildAvatar, markAllUserIdListsStale);
 };
 prototype2["getManager"] = function getManager(closure_0) {
   let value = map.get(SearchTokenTypes.getSearchContextId(closure_0));

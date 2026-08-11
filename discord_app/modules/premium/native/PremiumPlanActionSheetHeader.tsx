@@ -54,12 +54,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   const tmp14 = LinearGradient;
   obj[6] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
-    let tmp13Result = tmp13(6897);
+    let tmp13Result = tmp13(6899);
   } else {
     tmp13Result = null;
     if (tmp15.TIER_1 !== premiumType) {
       if (tmp15.TIER_2 === premiumType) {
-        tmp13Result = tmp13(6898);
+        tmp13Result = tmp13(6900);
       }
     }
   }
@@ -69,11 +69,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     obj[0] = tmp.logoContainer;
     tmp13Result = tmp13(5268);
     if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result1 = tmp13(6899);
+      let tmp13Result1 = tmp13(6901);
     } else if (tmp15.TIER_1 === premiumType) {
-      tmp13Result1 = tmp13(6900);
+      tmp13Result1 = tmp13(6902);
     } else if (tmp15.TIER_2 === premiumType) {
-      tmp13Result1 = tmp13(6901);
+      tmp13Result1 = tmp13(6903);
     }
     const obj1 = { source: null, resizeMode: "contain" };
     obj1[0] = tmp13Result1;
@@ -84,7 +84,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
       obj2[0] = tmp.discountPill;
       obj2[1] = trialOffer;
       obj2[2] = premiumType;
-      tmp22Result = tmp22(tmp6(6902).PremiumPill, obj2);
+      tmp22Result = tmp22(tmp6(6904).PremiumPill, obj2);
     }
     items1[1] = tmp22Result;
     tmp22Result = null;
@@ -93,17 +93,17 @@ export default function PremiumPlanActionSheetHeader(arg0) {
       obj3[0] = tmp.discountPill;
       obj3[1] = discountOffer;
       obj3[2] = premiumType;
-      tmp22Result = tmp22(tmp6(6902).PremiumPill, obj3);
+      tmp22Result = tmp22(tmp6(6904).PremiumPill, obj3);
     }
     items1[2] = tmp22Result;
     obj[1] = items1;
     items[1] = tmp12(View, obj);
     if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result3 = tmp13(7329);
+      let tmp13Result3 = tmp13(7330);
     } else if (tmp15.TIER_1 === premiumType) {
-      tmp13Result3 = tmp13(7330);
-    } else if (tmp15.TIER_2 === premiumType) {
       tmp13Result3 = tmp13(7331);
+    } else if (tmp15.TIER_2 === premiumType) {
+      tmp13Result3 = tmp13(7332);
     }
     const obj4 = { source: null, style: null, resizeMode: "contain" };
     obj4[0] = tmp13Result3;
@@ -125,12 +125,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     const tmp21 = View;
   } else {
     if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result5 = tmp13(6897);
+      let tmp13Result5 = tmp13(6899);
     } else {
       tmp13Result5 = null;
       if (tmp15.TIER_1 !== premiumType) {
         if (tmp15.TIER_2 === premiumType) {
-          tmp13Result5 = tmp13(6898);
+          tmp13Result5 = tmp13(6900);
         }
       }
     }

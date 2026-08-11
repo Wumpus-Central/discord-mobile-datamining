@@ -1,7 +1,7 @@
 // discord_app/design/components/LottieIcon/native/generated/CameraLottie.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../../../_runtime/10823_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/10828_registerAsset.js";
 import { LottieIcon } from "../LottieIcon.tsx";
 
 const require = arg1;

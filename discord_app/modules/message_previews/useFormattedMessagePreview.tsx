@@ -1,6 +1,6 @@
 // discord_app/modules/message_previews/useFormattedMessagePreview.tsx
 import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MessageFlags } from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
@@ -377,9 +377,9 @@ function formatMessagePreview(type, isBlocked) {
                 tmp21 = obj50;
               } else if (type.type === tmp4(686).MessageTypes.VOICE_SESSION) {
                 const obj52 = { type: "text", text: null };
-                obj52[1] = tmp4(8171).getVoiceSessionMessageContent(type);
+                obj52[1] = tmp4(8173).getVoiceSessionMessageContent(type);
                 tmp21 = obj52;
-                const tmp4Result = tmp4(8171);
+                const tmp4Result = tmp4(8173);
               }
             }
           }
@@ -415,7 +415,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
   let isIgnored;
   const _require = message;
   let obj = _initialize;
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const items1 = [message.author.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isBlocked: outer1_4.isBlocked(message.author.id), isIgnored: outer1_4.isIgnored(message.author.id) }), items1);
   ({ isBlocked, isIgnored } = stateFromStoresObject);

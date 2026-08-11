@@ -52,7 +52,7 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       const items = [, ];
       [arr[0], tmp6] = callback(src.split("?"), 2);
-      let tmp2Result = tmp2(1464);
+      let tmp2Result = tmp2(1483);
       items[1] = tmp2Result.parse(tmp6);
       const tmp5 = callback(src.split("?"), 2);
       [tmp8, tmp9] = callback(items, 2);
@@ -101,9 +101,9 @@ function getSrcWithWidthAndHeight(quality) {
           obj[1] = height;
           obj[2] = sourceWidth;
           obj[3] = sourceHeight;
-          obj[4] = tmp15(1876).ATTACHMENT_LADDER_MAX_UPSCALE;
-          let size = tmp15(1876).snapAttachmentDimensions(obj);
-          const tmp15Result = tmp15(1876);
+          obj[4] = tmp15(1895).ATTACHMENT_LADDER_MAX_UPSCALE;
+          let size = tmp15(1895).snapAttachmentDimensions(obj);
+          const tmp15Result = tmp15(1895);
         } else {
           size = { width: null, height: null };
           size[0] = width;
@@ -118,7 +118,7 @@ function getSrcWithWidthAndHeight(quality) {
       tmp2Result = tmp2(12);
       let text = tmp8;
       if (!tmp2Result.isEmpty(tmp9)) {
-        tmp2(1464);
+        tmp2(1483);
         text = `${tmp8}?${obj8.stringify(tmp9)}`;
       }
       return text;
@@ -292,7 +292,7 @@ export const loadImage = function loadImage(arg0, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = outer1_4(/* F103305 */ function() { ... });
+                            image.onerror = outer1_4(/* F103386 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = tmp2.url;
                           });

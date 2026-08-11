@@ -7,7 +7,7 @@ import { isEveryoneRole } from "GuildRoleRecordTypeTag";
 import closure_9 from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "TableRowGroupTitle";
@@ -130,7 +130,7 @@ function ChannelPermissionSyncModule(channel) {
     obj.show(obj);
   }, items);
   let obj = channel(4494);
-  const channelName = obj.computeChannelName(category, mergeGuildAvatar, upsertRelationship);
+  const channelName = obj.computeChannelName(category, mergeGuildAvatar, markAllUserIdListsStale);
   obj = { style: createCacheKey().tableRowGroupContainer, children: null };
   let intl = channel(1236).intl;
   const formatToPlainString = intl.formatToPlainString;
@@ -146,7 +146,7 @@ function ChannelPermissionSyncModule(channel) {
   }
   let obj2 = { title: formatToPlainStringResult, hasIcons: true, children: null };
   let obj3 = { icon: null, label: null, onPress: null };
-  obj3[0] = closure_16(channel(13849).RefreshIcon, {});
+  obj3[0] = closure_16(channel(13856).RefreshIcon, {});
   let intl2 = tmp3(1236).intl;
   obj3[1] = intl2.string(channel(1236).t.NVwuHq);
   obj3[2] = callback;
@@ -182,7 +182,7 @@ function AddPermission(isEditing) {
     const intl = tmp2(1236).intl;
     obj[0] = intl.string(tmp2(1236).t.vPHdP5);
     const obj1 = { icon: null, label: null, onPress: null };
-    obj1[0] = callback(tmp2(12108).PlusMediumIcon, {});
+    obj1[0] = callback(tmp2(12111).PlusMediumIcon, {});
     const intl2 = tmp2(1236).intl;
     obj1[1] = intl2.string(tmp2(1236).t.fVWxvT);
     obj1[2] = function onPress() {
@@ -190,7 +190,7 @@ function AddPermission(isEditing) {
     };
     const items = [callback(tmp2(5374).TableRow, obj1), ];
     const obj2 = { icon: null, label: null, onPress: null };
-    obj2[0] = callback(tmp2(12108).PlusMediumIcon, {});
+    obj2[0] = callback(tmp2(12111).PlusMediumIcon, {});
     const intl3 = tmp2(1236).intl;
     obj2[1] = intl3.string(tmp2(1236).t.riesLt);
     obj2[2] = function onPress() {
@@ -224,7 +224,7 @@ function RoleRow(onDelete) {
       obj[0] = Themes.colors.ICON_FEEDBACK_CRITICAL;
       const intl = tmp3(1236).intl;
       obj[1] = intl.string(tmp3(1236).t.N86XcP);
-      tmp2Result = tmp2(tmp3(14548).CircleMinusIcon, obj);
+      tmp2Result = tmp2(tmp3(14556).CircleMinusIcon, obj);
     }
   }
   obj[2] = tmp2Result;
@@ -251,8 +251,8 @@ function RoleOverwrites(guild) {
   obj = {};
   const merged = Object.assign(guild.channel.permissionOverwrites);
   if (null == obj[guild.id]) {
-    obj[guild.id] = importAll(3934).makeEveryoneOverwrite(guild.id);
-    const obj3 = importAll(3934);
+    obj[guild.id] = importAll(3953).makeEveryoneOverwrite(guild.id);
+    const obj3 = importAll(3953);
   }
   const found = stateFromStores.filter((arg0) => {
     let type;
@@ -316,7 +316,7 @@ function MemberOverwrites(channel) {
   const tmp = createCacheKey();
   const found = apply(channel.permissionOverwrites).filter((type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER);
   const mapped = found.map((id) => user.getUser(id.id));
-  const found1 = mapped.filter(guild_id(1351).isNotNullish);
+  const found1 = mapped.filter(guild_id(1370).isNotNullish);
   const arr = apply(channel.permissionOverwrites);
   const valueResult = found1.sortBy((username) => username.username.toLowerCase()).value();
   let tmp4 = null;

@@ -46,7 +46,7 @@ prototype["search"] = function search(str) {
     } else {
       const obj2 = apply;
       const values = apply.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(11740).filterGroupDMs);
+      const found = values.filter(trimmed1(11743).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, trimmed1(outer1_2[3]).matchGroupDM(id, trimmed1), outer1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;
@@ -170,7 +170,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(require("dispatche
       obj.groupDMs = [];
       obj.userIndexes = {};
       obj.results = [];
-      let userSearch = new obj(9622).UserSearch(() => obj.processResults());
+      let userSearch = new obj(9627).UserSearch(() => obj.processResults());
       obj.userSearch = userSearch;
       userSearch = obj.userSearch;
       const subscription = userSearch.subscribe(() => obj.processResults(), true);

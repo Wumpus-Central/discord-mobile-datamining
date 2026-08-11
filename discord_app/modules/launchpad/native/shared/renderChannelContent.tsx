@@ -114,7 +114,7 @@ function ChannelContent(arg0) {
     if (isSubscriptionGated) {
       const obj9 = { locked: null, isInMainTabsExperiment: true };
       obj9[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp9(tmp2(15250), obj9);
+      isSubscriptionGated = tmp9(tmp2(15259), obj9);
     }
     items3[2] = isSubscriptionGated;
     obj5[1] = items3;

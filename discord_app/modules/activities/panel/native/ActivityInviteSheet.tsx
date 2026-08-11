@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import loadInviteSuggestions from "loadInviteSuggestions";
-import { View } from "module_10451";
+import { View } from "module_10456";
 import setSendState from "setSendState";
 import _computeRows from "_computeRows";
 import { ActivityActionTypes } from "ME";
@@ -179,7 +179,7 @@ export default function ActivityInviteSheet(activity) {
   if (null != tmp6) {
     const obj2 = { style: null, Illustration: null, title: null };
     obj2[0] = tmp.emptyState;
-    obj2[1] = tmp11(9082).AppCrash;
+    obj2[1] = tmp11(9088).AppCrash;
     obj2[2] = tmp6;
     let tmp19Result = tmp17(tmp11(1297).EmptyState, obj2);
   } else if (tmp15) {
@@ -189,10 +189,10 @@ export default function ActivityInviteSheet(activity) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.searchAndShareContainer;
     const obj5 = { size: "md", isRound: true, onChange: null, placeholder: null };
-    obj5[2] = tmp11(9080).searchInviteSuggestions;
+    obj5[2] = tmp11(9086).searchInviteSuggestions;
     const intl2 = tmp11(1236).intl;
     obj5[3] = intl2.string(tmp11(1236).t.iI1gMg);
-    obj4[1] = tmp17(tmp11(5992).SearchField, obj5);
+    obj4[1] = tmp17(tmp11(5994).SearchField, obj5);
     obj3[0] = tmp17(View, obj4);
     const items4 = [tmp17(View, obj3), ];
     if (tmp16) {
@@ -208,7 +208,7 @@ export default function ActivityInviteSheet(activity) {
       obj7[2] = callback;
       obj7[3] = callback2;
       obj7[4] = callback1;
-      tmp17Result = tmp17(tmp2(16103), obj7);
+      tmp17Result = tmp17(tmp2(16120), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;

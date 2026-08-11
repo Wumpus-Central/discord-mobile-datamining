@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ThreadAutoArchive.tsx
 import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_3 } from "AbortCodes";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { set } from "../../utils/Durations.tsx";
 

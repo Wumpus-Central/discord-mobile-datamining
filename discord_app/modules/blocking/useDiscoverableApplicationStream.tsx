@@ -1,6 +1,6 @@
 // discord_app/modules/blocking/useDiscoverableApplicationStream.tsx
 import reset from "reset";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
@@ -10,7 +10,7 @@ function getDiscoverableApplicationStream(arg0) {
   let obj2;
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [reset, upsertRelationship];
+    const items = [reset, markAllUserIdListsStale];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -36,7 +36,7 @@ const result = require("ME").fileFinishedImporting("modules/blocking/useDiscover
 
 export default function useDiscoverableApplicationStream(arg0) {
   const _require = arg0;
-  let items = [reset, upsertRelationship];
+  let items = [reset, markAllUserIdListsStale];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
     const items = [outer1_2, outer1_3];

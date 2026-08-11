@@ -71,7 +71,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
         const tmp16 = GuildIconSizes;
       }
     }
-    presentFriendRequestAcceptedToast = tmp6(4001).presentFriendRequestAcceptedToast;
+    presentFriendRequestAcceptedToast = tmp6(4020).presentFriendRequestAcceptedToast;
     const items1 = [presentFriendRequestAcceptedToast];
     const effect = React.useEffect(() => {
       function handleRelationshipAdd(relationship) {

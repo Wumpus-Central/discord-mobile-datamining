@@ -25,7 +25,7 @@ export default function ForumPostMessageContent(senderModifier) {
   }
   const tmp = callback();
   ({ content, style, variant } = useNativeForumPostContent({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier: senderModifier.senderModifier }));
-  const obj = { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null };
+  const obj = { variant, color: null, lineClamp: null, ellipsizeMode: "tail", includeFontPadding: true, style: null, children: null };
   let str = "text-muted";
   if (hasUnreads) {
     str = "text-default";
@@ -33,7 +33,7 @@ export default function ForumPostMessageContent(senderModifier) {
   obj[1] = str;
   obj[2] = num;
   const items = [style, tmp.text];
-  obj[4] = items;
-  obj[5] = content;
-  return jsx(Text.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null });
+  obj[5] = items;
+  obj[6] = content;
+  return jsx(Text.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", includeFontPadding: true, style: null, children: null });
 };

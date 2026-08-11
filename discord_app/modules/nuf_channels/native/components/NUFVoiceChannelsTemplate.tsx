@@ -1,7 +1,7 @@
 // discord_app/modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/13046_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13055_registerAsset.js";
 import { NUFActionSheetTemplate } from "NUFTemplate.tsx";
 
 const require = arg1;

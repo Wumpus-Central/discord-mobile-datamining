@@ -26,7 +26,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(7955).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(7957).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -58,7 +58,7 @@ function AddAppButton(application) {
     obj[5] = <PlusSmallIcon size="sm" color={null} />;
     return jsx(tmp6(4714).Button, { size: "sm", color: null });
   }
-  PlusSmallIcon = application(9432).PlusSmallIcon;
+  PlusSmallIcon = application(9438).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {

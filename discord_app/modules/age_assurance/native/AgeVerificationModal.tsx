@@ -84,7 +84,7 @@ export default function AgeVerificationModal(webviewUrl) {
           const obj = { onPress: handleClose, text: null };
           const intl = callback(1236).intl;
           obj[1] = intl.string(callback(1236).t.cpT0Cq);
-          return outer1_5(callback(6008).HeaderActionButton, obj);
+          return outer1_5(callback(6010).HeaderActionButton, obj);
         },
         render() {
           return outer1_5(outer1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });

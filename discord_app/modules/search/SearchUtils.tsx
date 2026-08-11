@@ -3,13 +3,13 @@ import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import initialize from "initialize";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SearchTabs } from "MessageEmbedTypes";
 import ME from "ME";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03883_t.js";
+import { t } from "../../../_runtime/03902_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getMatch } from "../../lib/QueryTokenizer.tsx";
 import { nameFromUser } from "../../utils/UserUtils.tsx";
@@ -510,7 +510,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       }
     }
     let tmp4;
-    if (currentToken.type === tmp3(11718).NON_TOKEN_TYPE) {
+    if (currentToken.type === tmp3(11721).NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
     obj4 = { type: null, filter: null, token: null };
@@ -636,7 +636,7 @@ export const refreshSearchTokens = function refreshSearchTokens() {
   const result1 = SearchActionCreators.markSearchTokensRefreshed();
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
-  const channelName = computeChannelName.computeChannelName(isDM, mergeGuildAvatar, upsertRelationship);
+  const channelName = computeChannelName.computeChannelName(isDM, mergeGuildAvatar, markAllUserIdListsStale);
   if (isDM.isDM()) {
     const user = mergeGuildAvatar.getUser(isDM.getRecipientId());
     const userTag = nameFromUser.getUserTag(user);
@@ -678,7 +678,7 @@ export const getChannelDisplayName = function getChannelDisplayName(isDM) {
 };
 export const getChannelPlaceholderName = function getChannelPlaceholderName(isGroupDM) {
   if (isGroupDM.isGroupDM()) {
-    return computeChannelName.computeChannelName(isGroupDM, authStore, upsertRelationship);
+    return computeChannelName.computeChannelName(isGroupDM, authStore, markAllUserIdListsStale);
   } else if (isGroupDM.isDM()) {
     const user = authStore.getUser(isGroupDM.getRecipientId());
     return nameFromUser.getUserTag(user);
@@ -689,7 +689,7 @@ export const getChannelPlaceholderName = function getChannelPlaceholderName(isGr
       name = tmp2.name;
     }
     if (name == null) {
-      name = computeChannelName.computeChannelName(isGroupDM, authStore, upsertRelationship);
+      name = computeChannelName.computeChannelName(isGroupDM, authStore, markAllUserIdListsStale);
       const obj = computeChannelName;
     }
     return name;

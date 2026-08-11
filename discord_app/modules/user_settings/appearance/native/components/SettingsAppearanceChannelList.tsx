@@ -77,9 +77,9 @@ export default function ChannelListPreview(useGradientBackground) {
     obj[0] = themes;
     obj[1] = themeIndex;
     obj[3] = tmp4(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(tmp4(14534), obj);
+    obj[1] = callback(tmp4(14542), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = tmp4(14534);
+    const tmp4Result = tmp4(14542);
   }
   const items2 = [tmp7, , ];
   const obj1 = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
@@ -91,7 +91,7 @@ export default function ChannelListPreview(useGradientBackground) {
   obj1[3] = function keyExtractor(id) {
     return id.id;
   };
-  items2[1] = callback(animatedStyles(7745).FlashList, obj1);
+  items2[1] = callback(animatedStyles(7747).FlashList, obj1);
   items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponent, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj[4] = items2;
   return closure_6(ReanimatedRexport.View, obj);

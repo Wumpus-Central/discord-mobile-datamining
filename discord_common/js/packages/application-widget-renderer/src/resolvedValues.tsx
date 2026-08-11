@@ -38,21 +38,21 @@ function resolveFieldValue(image, items, applicationAssets) {
       }
     }
     return tmp10;
-  } else if (image.value_type === tmp19(12359).ApplicationWidgetFieldValueType.CUSTOM_STRING) {
+  } else if (image.value_type === tmp19(12362).ApplicationWidgetFieldValueType.CUSTOM_STRING) {
     let tmp6 = null;
-    if (image.presentation_type === tmp19(12358).ApplicationWidgetFieldPresentationType.TEXT) {
+    if (image.presentation_type === tmp19(12361).ApplicationWidgetFieldPresentationType.TEXT) {
       tmp6 = null;
       if (items.includes(obj.STRING)) {
         const obj1 = { type: null, value: null, presentationType: null };
         obj1[0] = tmp7.STRING;
         obj1[1] = image.value;
-        obj1[2] = tmp19(12358).ApplicationWidgetFieldPresentationType.TEXT;
+        obj1[2] = tmp19(12361).ApplicationWidgetFieldPresentationType.TEXT;
         tmp6 = obj1;
       }
       tmp7 = obj;
     }
     return tmp6;
-  } else if (image.value_type === tmp19(12359).ApplicationWidgetFieldValueType.APPLICATION_ASSET) {
+  } else if (image.value_type === tmp19(12362).ApplicationWidgetFieldValueType.APPLICATION_ASSET) {
     if (items.includes(obj.MEDIA)) {
       const found = applicationAssets.find((key) => key.key === image.value);
       let tmp5 = null;
@@ -64,7 +64,7 @@ function resolveFieldValue(image, items, applicationAssets) {
         obj2[1] = found.metadata.width;
         obj2[2] = found.metadata.height;
         obj[1] = obj2;
-        obj[2] = tmp19(12358).ApplicationWidgetFieldPresentationType.IMAGE;
+        obj[2] = tmp19(12361).ApplicationWidgetFieldPresentationType.IMAGE;
         tmp5 = obj;
       }
       return tmp5;

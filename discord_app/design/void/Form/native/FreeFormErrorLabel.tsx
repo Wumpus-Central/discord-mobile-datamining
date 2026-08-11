@@ -8,7 +8,7 @@ const result = require("getNodeText").fileFinishedImporting("design/void/Form/na
 export default function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(4007).getNodeText(children);
+  nodeText = nodeText(4026).getNodeText(children);
   const items = [nodeText];
   const effect = React.useEffect(() => {
     let tmp2 = null != nodeText;

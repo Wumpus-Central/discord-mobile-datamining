@@ -205,8 +205,8 @@ export const showTabletRequirementAlert = function showTabletRequirementAlert() 
   obj.show(obj);
 };
 export const handleDisconnect = function handleDisconnect(channel) {
-  const result = importAll(1872).dismissGlobalKeyboard();
-  const obj = importAll(1872);
+  const result = importAll(1891).dismissGlobalKeyboard();
+  const obj = importAll(1891);
   const result1 = openChannelCallModal.dismissVoiceChannelScreens(channel, () => {
     const voiceChannel = callback(table[20]).selectVoiceChannel(null);
   });
@@ -251,10 +251,10 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   let obj = isEnabled(589);
   const items = [closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode, handleAudioRouteChanged];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const isVideoMode = isEnabled(10844).isVideoMode(closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode);
+    const isVideoMode = isEnabled(10849).isVideoMode(closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9150).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9150).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9156).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9156).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -287,7 +287,7 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
     }
     dependencyMap(isEnabled);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9171 : 9172) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9177 : 9178) };
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
@@ -322,6 +322,6 @@ export const useImmediateMaskedSpeakerStates = () => {
   const effect = React.useEffect(() => {
     callback(closure_1);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9171 : 9172) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9177 : 9178) };
   return obj;
 };

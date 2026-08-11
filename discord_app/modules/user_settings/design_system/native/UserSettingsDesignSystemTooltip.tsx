@@ -23,7 +23,7 @@ function Content() {
   const tmp4 = first2(React.useState(false), 2);
   first1 = tmp4[0];
   const effect = React.useEffect(() => {
-    const obj = first1(8895);
+    const obj = first1(8901);
     if (first1) {
       obj.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
     } else {
@@ -56,7 +56,7 @@ function Content() {
       }
     };
   }, items1);
-  let obj1 = first1(8654);
+  let obj1 = first1(8660);
   const tooltip = obj1.useTooltip(ref, memo);
   obj = { children: null };
   obj = { style: tmp.container, children: callback2(first1(4714).Button, obj1) };
@@ -98,7 +98,7 @@ export const useCanRotate = function useCanRotate() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   const effect = React.useEffect(() => {
-    const obj = first1(8895);
+    const obj = first1(8901);
     if (first1) {
       obj.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
     } else {

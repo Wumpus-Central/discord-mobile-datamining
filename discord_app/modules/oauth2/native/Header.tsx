@@ -35,7 +35,7 @@ export default function Header(accountScopes) {
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
   if (null != user) {
-    let tmp2Result = tmp2(1416);
+    let tmp2Result = tmp2(1435);
     userAvatarSource = tmp2Result.getUserAvatarSource(user);
   }
   obj = { style: tmp.header, children: null };
@@ -59,10 +59,10 @@ export default function Header(accountScopes) {
     const obj10 = { style: null, verified: null };
     obj10[0] = tmp.botTag;
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(9131);
+    tmp2Result = tmp2(9137);
     if (hasFlagResult) {
-      hasFlagResult = tmp9(1384).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
-      const tmp9Result = tmp9(1384);
+      hasFlagResult = tmp9(1403).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = tmp9(1403);
     }
     obj10[1] = hasFlagResult;
     tmp8Result = tmp8(tmp2Result, obj10);

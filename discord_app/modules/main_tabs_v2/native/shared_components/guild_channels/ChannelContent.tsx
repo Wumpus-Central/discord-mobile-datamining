@@ -100,7 +100,7 @@ function ChannelContentComponent(arg0) {
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(7962).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(7964).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {

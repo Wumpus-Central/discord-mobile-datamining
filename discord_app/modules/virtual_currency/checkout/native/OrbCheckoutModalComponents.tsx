@@ -89,7 +89,7 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   return callback2(closure_4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(12159);
+  let obj = skuId(12162);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = React.useMemo(() => skuId(outer1_2[12]).getOrbCheckoutDisclaimerMessage(skuId), items);
@@ -107,7 +107,7 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   if (orbProductContext != null) {
     const orbPriceAmount = orbProductContext.orbPriceAmount;
   }
-  let tmp3Result = tmp3(4153);
+  let tmp3Result = tmp3(1363);
   let str = "primary";
   if (tmp3Result.isThemeDark(tmp2)) {
     str = "primary-overlay";
@@ -115,7 +115,7 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   obj = { variant: str, size: "lg", text: null, icon: null, iconPosition: "start", loading: null, onPress: null, disabled: null };
   const intl = tmp3(1236).intl;
   obj[2] = intl.string(getSystemLocale.t["zLch/S"]);
-  tmp3Result = tmp3(4153);
+  tmp3Result = tmp3(1363);
   let str2 = "control-primary-text-default";
   if (tmp3Result.isThemeDark(tmp2)) {
     str2 = "control-overlay-primary-text-default";

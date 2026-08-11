@@ -38,7 +38,7 @@ obj[0] = require("metadata");
 obj[1] = require("metadata");
 obj[3] = function getName() {
   const intl = IE3e0y(1236).intl;
-  return intl.string(v3(2186).y33CVg);
+  return intl.string(v3(2205).y33CVg);
 };
 obj = { name: "PC_SEAT_1", getLabel: null, position: null };
 YpJ7QS = 1;
@@ -48,7 +48,7 @@ obj[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][0];
 const items = [obj, , , , , , , , , , , , , , , , , , , , ];
@@ -60,7 +60,7 @@ obj1[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj1[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][1];
 items[1] = obj1;
@@ -72,7 +72,7 @@ obj2[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj2[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][2];
 items[2] = obj2;
@@ -84,7 +84,7 @@ obj3[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj3[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][3];
 items[3] = obj3;
@@ -96,7 +96,7 @@ obj4[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj4[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][4];
 items[4] = obj4;
@@ -108,7 +108,7 @@ obj5[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj5[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][5];
 items[5] = obj5;
@@ -120,7 +120,7 @@ obj6[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj6[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][6];
 items[6] = obj6;
@@ -132,7 +132,7 @@ obj7[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj7[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][7];
 items[7] = obj7;
@@ -144,7 +144,7 @@ obj8[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj8[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][8];
 items[8] = obj8;
@@ -156,7 +156,7 @@ obj9[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj9[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][9];
 items[9] = obj9;
@@ -168,7 +168,7 @@ obj10[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj10[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][10];
 items[10] = obj10;
@@ -180,7 +180,7 @@ obj11[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj11[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][11];
 items[11] = obj11;
@@ -192,7 +192,7 @@ obj12[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj12[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][12];
 items[12] = obj12;
@@ -204,7 +204,7 @@ obj13[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj13[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][13];
 items[13] = obj13;
@@ -216,7 +216,7 @@ obj14[1] = () => {
   obj[0] = intl2.string(IE3e0y);
   const intl3 = IE3e0y(1236).intl;
   obj[1] = intl3.string(v3);
-  return intl.formatToPlainString(v3(2186).LFdLjz, obj);
+  return intl.formatToPlainString(v3(2205).LFdLjz, obj);
 };
 obj14[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][14];
 items[14] = obj14;
@@ -228,7 +228,7 @@ obj15[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj15[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][15];
 items[15] = obj15;
@@ -240,7 +240,7 @@ obj16[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj16[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][16];
 items[16] = obj16;
@@ -252,7 +252,7 @@ obj17[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj17[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][17];
 items[17] = obj17;
@@ -264,7 +264,7 @@ obj18[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj18[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][18];
 items[18] = obj18;
@@ -276,7 +276,7 @@ obj19[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj19[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][19];
 items[19] = obj19;
@@ -288,7 +288,7 @@ obj20[1] = () => {
   const intl2 = IE3e0y(1236).intl;
   obj[0] = intl2.string(IE3e0y);
   obj[1] = v3;
-  return intl.formatToPlainString(v3(2186).crFI7e, obj);
+  return intl.formatToPlainString(v3(2205).crFI7e, obj);
 };
 obj20[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT][20];
 items[20] = obj20;
@@ -297,31 +297,11 @@ const items1 = [{ x: 45.57, y: 50.62 }];
 obj[5] = items1;
 obj[6] = { topLeft: { x: 56.8, y: 16.15 }, topRight: { x: 75.85, y: 23 }, bottomRight: { x: 75.3, y: 41.3 }, bottomLeft: { x: 56.95, y: 33.75 } };
 obj[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT] = obj;
-const result = require("messagesProxy").fileFinishedImporting("modules/guild_rooms/GuildRoomConstants.tsx");
+const result = require("GuildRoomBackgrounds").fileFinishedImporting("modules/guild_rooms/GuildRoomConstants.tsx");
 
 export const GUILD_ROOM_SPATIAL_AUDIO_MODE = "guild-room";
 export const DEFAULT_BACKGROUND_POSITION = { imageOffsetX: 0, imageOffsetY: 0, imageWidth: 0, imageHeight: 0 };
 export const BACKGROUND_BLUR_WIDTH_FACTOR = 0.0228310502283105;
-export const getSeatName = function getSeatName(arg0, arg1) {
-  const IE3e0y = arg0;
-  let closure_1 = arg1;
-  const seats = obj[IE3e0y(undefined, 16450).GuildRoomBackgrounds.DEFAULT].seats;
-  const found = seats.find((position) => {
-    let tmp = position.position.x === closure_0;
-    if (tmp) {
-      tmp = position.position.y === closure_1;
-    }
-    return tmp;
-  });
-  let str;
-  if (found != null) {
-    str = found.name;
-  }
-  if (str == null) {
-    str = "";
-  }
-  return str;
-};
 export const getBlurredBackgroundScale = function getBlurredBackgroundScale(arg0, arg1) {
   let num = 0.045662100456621;
   if (arg1) {

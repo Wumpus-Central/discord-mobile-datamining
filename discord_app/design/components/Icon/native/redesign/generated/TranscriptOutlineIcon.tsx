@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/TranscriptOutlineIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/14274_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/14282_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

@@ -56,7 +56,7 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[1] = price;
     let name = null;
     if (null != teenUserForId) {
-      let tmp2Result = tmp2(4146);
+      let tmp2Result = tmp2(4148);
       name = tmp2Result.getName(teenUserForId);
     }
     obj[2] = name;
@@ -64,10 +64,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = tmp5(14151).getGiftSubtext(obj);
+    const giftSubtext = tmp5(14159).getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = tmp2(14150);
+    tmp2Result = tmp2(14158);
     if (product == null) {
       product = null;
     }

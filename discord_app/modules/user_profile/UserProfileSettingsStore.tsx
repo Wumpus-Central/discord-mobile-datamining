@@ -2,39 +2,38 @@
 import ME from "ME";
 import { Store } from "initialize";
 import set from "ANALYTICS_NAME";
+import { useBioMaxLength } from "experiments/BioMaxLengthExperiment.tsx";
 
-let FormStates;
-let c0;
 let c3;
-let obj1;
+let c4;
 function handleFormOpen() {
   const OPEN = FormStates.OPEN;
-  let closure_12 = {};
+  let closure_13 = {};
 }
 function handleReset() {
-  let closure_8 = {};
-  let closure_12 = {};
-  let closure_9 = obj;
+  let closure_9 = {};
+  let closure_13 = {};
+  let closure_10 = obj;
   const CLOSED = FormStates.CLOSED;
-  closure_12 = {};
+  closure_13 = {};
 }
-({ BIO_MAX_LENGTH: c0, FormStates } = ME);
-({ ME: obj1, UserSettingsSections: c3 } = ME);
-let closure_4 = {};
+const FormStates = ME.FormStates;
+({ ME: c3, UserSettingsSections: c4 } = ME);
+let closure_5 = {};
 let obj = {};
-let closure_6 = {};
+let closure_7 = {};
 let items = [...require("INVITE").PSEUDO_GUILD_IDS, require("date").FAVORITES_RAW_GUILD_ID, require("ANALYTICS_NAME").NOTIFICATIONS_INBOX_RAW_GUILD_ID];
 let set = new Set(items);
-let closure_8 = {};
-let c10;
+let closure_9 = {};
+let c11;
 let CLOSED = FormStates.CLOSED;
-let closure_12 = {};
+let closure_13 = {};
 class UserProfileSettingsStore extends Store {
 }
 const prototype = UserProfileSettingsStore.prototype;
 Object.defineProperty(prototype, "selectedGuildId", {
   get: function selectedGuildId(arg0) {
-    return c10;
+    return c11;
   },
   set: undefined
 });
@@ -44,22 +43,22 @@ prototype["getFormState"] = function getFormState() {
 prototype["getErrors"] = function getErrors(arg0) {
   let tmp = arg0;
   if (arg0 == null) {
-    tmp = closure_2;
+    tmp = closure_3;
   }
-  let tmp3 = closure_12[tmp];
+  let tmp3 = closure_13[tmp];
   if (tmp3 == null) {
-    tmp3 = closure_6;
+    tmp3 = closure_7;
   }
   return tmp3;
 };
 prototype["getPendingChanges"] = function getPendingChanges(closure_0) {
   let tmp = closure_0;
   if (closure_0 == null) {
-    tmp = closure_2;
+    tmp = closure_3;
   }
-  let tmp3 = closure_8[tmp];
+  let tmp3 = closure_9[tmp];
   if (tmp3 == null) {
-    tmp3 = closure_4;
+    tmp3 = closure_5;
   }
   return tmp3;
 };
@@ -71,7 +70,7 @@ prototype["hasTryItOutChanges"] = function hasTryItOutChanges() {
   return values.some((arg0) => undefined !== arg0);
 };
 prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
-  let values = Object.values(closure_8);
+  let values = Object.values(closure_9);
   return values.some((arg0) => {
     const values = Object.values(arg0);
     return values.some((arg0) => undefined !== arg0);
@@ -79,25 +78,25 @@ prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
 };
 prototype["showNotice"] = function showNotice() {
   const self = this;
-  let values = Object.values(this.getPendingChanges(closure_2));
+  let values = Object.values(this.getPendingChanges(closure_3));
   let someResult = values.some((arg0) => undefined !== arg0);
   if (!someResult) {
     const _Object = Object;
-    values = Object.values(self.getPendingChanges(c10));
+    values = Object.values(self.getPendingChanges(c11));
     someResult = values.some((arg0) => undefined !== arg0);
   }
   return someResult;
 };
 prototype["canSubmit"] = function canSubmit() {
   const self = this;
-  const items = [closure_2, c10];
-  for (const item10009 of items) {
-    let pendingChanges = self.getPendingChanges(item10009);
+  useBioMaxLength;
+  const items = [closure_3, c11];
+  for (const item10016 of items) {
+    let pendingChanges = self.getPendingChanges(item10016);
     if (undefined !== pendingChanges.pendingBio) {
-      let tmp3 = pendingChanges;
-      let tmp4 = closure_0;
-      if (tmp2.pendingBio.length > closure_0) {
-        let tmp5 = obj;
+      let tmp5 = pendingChanges;
+      if (tmp4.pendingBio.length > tmp2) {
+        let tmp6 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -116,7 +115,7 @@ obj = {
       return false;
     } else {
       const OPEN = FormStates.OPEN;
-      let closure_12 = {};
+      let closure_13 = {};
     }
   },
   USER_PROFILE_SETTINGS_INIT: function handleInit(guildId) {
@@ -127,9 +126,9 @@ obj = {
         tmp = guildId;
       }
     }
-    let c10 = tmp;
+    let c11 = tmp;
     const OPEN = FormStates.OPEN;
-    let closure_12 = {};
+    let closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SET_GUILD: function handleSetGuild(guildId) {
     guildId = guildId.guildId;
@@ -139,17 +138,17 @@ obj = {
         tmp = guildId;
       }
     }
-    let c10 = tmp;
-    let closure_12 = {};
+    let c11 = tmp;
+    let closure_13 = {};
   },
   USER_PROFILE_SETTINGS_CLOSE: function handleFormClose() {
     const CLOSED = FormStates.CLOSED;
-    let closure_12 = {};
+    let closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: handleReset,
   USER_PROFILE_SETTINGS_SUBMIT: function handleFormSubmit() {
     const SUBMITTING = FormStates.SUBMITTING;
-    let closure_12 = {};
+    let closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function handleFormSubmitSuccess(guildId) {
     guildId = guildId.guildId;
@@ -158,9 +157,9 @@ obj = {
     } else {
       OPEN = tmp.OPEN;
       if (guildId == null) {
-        guildId = closure_2;
+        guildId = closure_3;
       }
-      closure_12[guildId] = closure_6;
+      closure_13[guildId] = closure_7;
     }
   },
   USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(arg0) {
@@ -172,12 +171,12 @@ obj = {
     } else {
       OPEN = tmp.OPEN;
       if (guildId == null) {
-        guildId = closure_2;
+        guildId = closure_3;
       }
       if (errors == null) {
-        errors = closure_6;
+        errors = closure_7;
       }
-      closure_12[guildId] = errors;
+      closure_13[guildId] = errors;
     }
   },
   USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function handleSetPendingChanges(arg0) {
@@ -187,14 +186,14 @@ obj = {
     const merged = Object.assign(arg0, Object.create(null));
     let tmp3 = guildId;
     if (guildId == null) {
-      tmp3 = closure_2;
+      tmp3 = closure_3;
     }
     if (guildId == null) {
-      guildId = closure_2;
+      guildId = closure_3;
     }
-    const merged1 = Object.assign(closure_8[guildId]);
+    const merged1 = Object.assign(closure_9[guildId]);
     const merged2 = Object.assign(merged);
-    closure_8[tmp3] = {};
+    closure_9[tmp3] = {};
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
     const obj = {};
@@ -243,11 +242,11 @@ obj = {
     obj.tryItOutDisplayNameStyles = displayNameStyles;
   },
   USER_PROFILE_SETTINGS_CLEAR_ERRORS: function handleResetErrors() {
-    let closure_12 = {};
+    let closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
-    const entries = Object.entries(closure_8);
-    closure_8 = Object.fromEntries(entries.map((arg0) => {
+    const entries = Object.entries(closure_9);
+    closure_9 = Object.fromEntries(entries.map((arg0) => {
       let tmp;
       let tmp2;
       [tmp, tmp2] = arg0;
@@ -265,8 +264,8 @@ obj = {
     }));
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
-    const entries = Object.entries(closure_8);
-    closure_8 = Object.fromEntries(entries.map((arg0) => {
+    const entries = Object.entries(closure_9);
+    closure_9 = Object.fromEntries(entries.map((arg0) => {
       let tmp;
       let tmp2;
       [tmp, tmp2] = arg0;
@@ -277,7 +276,6 @@ obj = {
       obj.pendingProfileEffect = undefined;
       obj.pendingProfileFrame = undefined;
       obj.pendingBanner = undefined;
-      obj.pendingBannerOriginalMd5 = undefined;
       obj.pendingAccentColor = undefined;
       obj.pendingThemeColors = undefined;
       obj.pendingBio = undefined;
@@ -286,14 +284,14 @@ obj = {
     }));
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: function handleResetPendingChanges() {
-    let closure_8 = {};
-    let closure_12 = {};
+    let closure_9 = {};
+    let closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: function handleResetTryItOutChanges() {
-    let closure_9 = obj;
+    let closure_10 = obj;
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function handleResetPendingLegacyUsernameDisabled() {
-    let obj = dependencyMap[closure_2];
+    let obj = dependencyMap[closure_3];
     if (obj == null) {
       obj = {};
     }
@@ -311,7 +309,7 @@ obj = {
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
-    let obj = dependencyMap[closure_2];
+    let obj = dependencyMap[closure_3];
     if (obj == null) {
       obj = {};
     }
@@ -334,12 +332,12 @@ obj = {
     ({ guildId, errors } = arg0);
     const OPEN = FormStates.OPEN;
     if (guildId == null) {
-      guildId = closure_2;
+      guildId = closure_3;
     }
     if (errors == null) {
-      errors = closure_6;
+      errors = closure_7;
     }
-    closure_12[guildId] = errors;
+    closure_13[guildId] = errors;
   },
   LOGOUT: handleReset
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { registerAsset } from "../../../../../../_runtime/08175_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08177_registerAsset.js";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
@@ -67,10 +67,10 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           }
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
-          tmp15Result = tmp15(8055);
+          tmp15Result = tmp15(8057);
           obj4[1] = tmp15Result.getAssetUriForEmbed(registerAsset);
           obj4[2] = undefined;
-          const merged1 = Object.assign(tmp17(8072)(message));
+          const merged1 = Object.assign(tmp17(8074)(message));
           return obj4;
         }
       }

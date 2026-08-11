@@ -1,14 +1,14 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx
 import _slicedToArray from "_slicedToArray";
 import TableSwitchRow from "TableSwitchRow";
-import { View } from "module_15578";
+import { View } from "module_15595";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import filterStaffGuild from "filterStaffGuild";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15575_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15576_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15577_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15592_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15593_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15594_registerAsset.js";
 import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -88,7 +88,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(8912).ICYMICustomScore.MORE === tmp3) {
+    if (tmp4(8918).ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -130,10 +130,10 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   let obj = id(589);
   const items = [filterStaffGuild];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getCustomGuildScore(id));
-  let obj1 = id(8912);
+  let obj1 = id(8918);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(8912).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(8918).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {

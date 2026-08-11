@@ -36,16 +36,16 @@ function GuildPowerupsRecentActivityRow(row) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmp2Result = tmp2(8070);
+    let tmp2Result = tmp2(8072);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(roleColorStrings);
-    tmp2Result = tmp2(8070);
+    tmp2Result = tmp2(8072);
     const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp2(7695).BoostGemIcon;
+      let BoostGemSlashIcon = tmp2(7697).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp2(11941).BoostTier1Icon;
+      BoostGemSlashIcon = tmp2(11944).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp2(11943).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp2(11946).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp.boostRowContainer;

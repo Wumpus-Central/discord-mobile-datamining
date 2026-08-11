@@ -4,7 +4,7 @@ import initialize from "initialize";
 import recomputeAffinities from "recomputeAffinities";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import hasConsented from "hasConsented";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { Consents } from "ME";
 import { PersistedStore } from "initialize";
 import set from "recomputeAffinities";
@@ -121,18 +121,18 @@ function generateFriendAnniversaries(c15) {
   highAffinity = dependencyMap;
   const set1 = new Set();
   if (obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(3974).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(3993).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       let closure_15 = c15;
       const friendIDs = store.getFriendIDs();
-      const found = friendIDs.filter((arg0) => !upsertRelationship.isIgnored(arg0));
+      const found = friendIDs.filter((arg0) => !markAllUserIdListsStale.isIgnored(arg0));
       const _Set = Set;
       set2 = new Set(found);
       if (null != _null) {
         if (_null.length === c15) {
           _null = sampleSizeResult;
           const item = sampleSizeResult.forEach((userId) => {
-            const since = upsertRelationship.getSince(userId);
+            const since = markAllUserIdListsStale.getSince(userId);
             if (null != since) {
               const _Date = Date;
               const date = new Date(since);
@@ -143,7 +143,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => recomputeAffinities.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8179).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8181).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = recomputeAffinities.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -152,7 +152,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8179);
+          const highestAffinityResult = highestAffinity(8181);
         }
         sampleSizeResult = _null;
       }
@@ -188,7 +188,7 @@ prototype["initialize"] = function initialize(friendsTabBadgeLastDismissedTime) 
     closure_10.lastKnownGiftIntentDismissedAtMs = num;
     const tmp7 = closure_10;
   }
-  const items = [upsertRelationship, recomputeAffinities, hasConsented, getHash, initialize, handleConnectionClosedOrResumed];
+  const items = [markAllUserIdListsStale, recomputeAffinities, hasConsented, getHash, initialize, handleConnectionClosedOrResumed];
   this.syncWith(items, updateFriendAnniversaries);
   let timestamp = c17;
   if (c17 == null) {

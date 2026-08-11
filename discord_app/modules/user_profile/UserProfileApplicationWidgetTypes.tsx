@@ -16,6 +16,9 @@ prototype["toSubmission"] = function toSubmission() {
   obj = { type: this.type, application_id: this.applicationId };
   return obj;
 };
+prototype["isUpdatable"] = function isUpdatable() {
+  return true;
+};
 prototype["isDiscardable"] = function isDiscardable() {
   return false;
 };

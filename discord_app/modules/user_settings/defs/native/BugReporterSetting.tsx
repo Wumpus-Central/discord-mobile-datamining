@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
 import zustandStore from "zustandStore";
 import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { apexExperiment } from "../../../bug_reporter/BugReporterExperiment.tsx";
@@ -20,7 +20,7 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      ModalActionCreators.pushLazy(asyncRequireImpl(9867, dependencyMap.paths));
+      ModalActionCreators.pushLazy(asyncRequireImpl(9872, dependencyMap.paths));
       const obj2 = ModalActionCreators;
     }
   },

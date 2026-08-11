@@ -147,7 +147,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(9714)(limit);
+    tmp(9719)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -430,7 +430,7 @@ function _addFavoriteCategory() {
                     obj[0] = tmp6;
                     let tmp7 = obj;
                   } else {
-                    const favoritesAccess = tmp2(9711).getFavoritesAccess();
+                    const favoritesAccess = tmp2(9716).getFavoritesAccess();
                     const favoriteLimit = favoritesAccess.favoriteLimit;
                     tmp7 = null;
                     if (favoriteLimit > 0) {
@@ -446,12 +446,12 @@ function _addFavoriteCategory() {
                         }
                       }
                     }
-                    const tmp2Result = tmp2(9711);
+                    const tmp2Result = tmp2(9716);
                   }
                   if (null != tmp7) {
                     const limit = tmp7.limit;
                     if (tmp7.canUpsell) {
-                      tmp5(9714)(limit);
+                      tmp5(9719)(limit);
                     } else {
                       tmp5Result = tmp5(4642);
                       const obj1 = { title: null, body: null };
@@ -492,7 +492,7 @@ function _addFavoriteCategory() {
                     obj3[2] = num + 1;
                     obj3[3] = outer1_11;
                     favoriteChannels.favoriteChannels[dependencyMap] = FavoriteChannel.create(obj3);
-                    obj3 = callback(9717);
+                    obj3 = callback(9722);
                     let tmp15 = null;
                     if (callback(1306).FavoriteChannelType.CATEGORY !== callback(1306).FavoriteChannelType.CATEGORY) {
                       const channel = outer1_6.getChannel(tmp24);
@@ -683,7 +683,7 @@ export const setFavoriteChannelNickname = function setFavoriteChannelNickname(ca
   }
 };
 export { addFavoriteCategory };
-export const addFavoriteChannelsToCategory = function addFavoriteChannelsToCategory() {
+export const addFavoriteChannelsToCategory = function addFavoriteChannelsToCategory(arg0) {
   const self = this;
   const apply = _addFavoriteChannelsToCategory.apply;
   if (typeof apply === "unknown") {
@@ -842,7 +842,7 @@ export const setFavoritesGuildVisibilityFromSettings = function setFavoritesGuil
   }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION, onSaveFailed);
   let isFavoritesGuildIdResult = !arg0;
   if (!arg0) {
-    let tmpResult = tmp(1894);
+    let tmpResult = tmp(1913);
     isFavoritesGuildIdResult = tmpResult.isFavoritesGuildId(store2.getGuildId());
   }
   if (isFavoritesGuildIdResult) {

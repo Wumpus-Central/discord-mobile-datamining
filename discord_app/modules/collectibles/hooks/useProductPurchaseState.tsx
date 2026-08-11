@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
 import map from "map";
-import { compact } from "../../../../_runtime/09414_compact.js";
+import { compact } from "../../../../_runtime/09420_compact.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
@@ -26,7 +26,7 @@ function getProductPurchaseState(outer1_5, skuId) {
     obj[0] = tmp;
     obj[1] = tmp3Result.length > 0 && tmp3Result.length < items.length;
     return obj;
-  } else if (tmp5(1930).CollectiblesItemType.VARIANTS_GROUP === type) {
+  } else if (tmp5(1949).CollectiblesItemType.VARIANTS_GROUP === type) {
     const variants = skuId.variants;
     let everyResult;
     if (variants != null) {

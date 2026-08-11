@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx
 import noop from "noop";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import { RelationshipTypes } from "ME";
@@ -17,7 +17,7 @@ export default function SpamRequestsScreen(navigation) {
   let callback;
   analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
   let obj = analyticsLocations(stateFromStoresArray1[8]);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
   obj = { name: null };
   const tmp = stateFromStoresArray1;

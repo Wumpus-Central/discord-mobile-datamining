@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/08688_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08694_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Emoji } from "../../../emojis/native/Emoji.tsx";
 import { useEmojiByIdOrName } from "../../useEmojiByIdOrName.tsx";
@@ -72,8 +72,8 @@ export default function EmojiIcon(size) {
       const obj4 = { id: null, animated: null, size: null };
       ({ id: obj4[0], animated: obj4[1] } = emojiByIdOrName);
       obj4[2] = num;
-      let url = tmp9(1416).getEmojiURL(obj4);
-      const tmp9Result = tmp9(1416);
+      let url = tmp9(1435).getEmojiURL(obj4);
+      const tmp9Result = tmp9(1435);
     } else {
       url = emojiByIdOrName.url;
     }

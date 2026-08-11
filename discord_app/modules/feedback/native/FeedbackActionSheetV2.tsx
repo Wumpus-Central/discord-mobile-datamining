@@ -233,7 +233,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     obj[0] = ratingOptions;
     obj[1] = first2;
     obj[2] = callback;
-    items2[1] = callback2(tmp3(11091), obj);
+    items2[1] = callback2(tmp3(11096), obj);
     let tmp37Result = null;
     if (!hideDontShowAgainCheckbox) {
       obj1 = { start: true, end: true, checked: null, label: null, onPress: null };
@@ -243,7 +243,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       obj1[4] = function onPress() {
         return callback3(!first1);
       };
-      tmp37Result = tmp37(tmp20(8448).TableCheckboxRow, obj1);
+      tmp37Result = tmp37(tmp20(8454).TableCheckboxRow, obj1);
     }
     obj2 = { children: null };
     items2[2] = tmp37Result;
@@ -321,7 +321,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     }
     tmp23 = null != first4 && null == first5;
   }
-  const bottom = tmp3(1609)().bottom;
+  const bottom = tmp3(1628)().bottom;
   let num = 48;
   if (hideDontShowAgainCheckbox) {
     num = 0;

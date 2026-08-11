@@ -12,7 +12,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import initialize from "initialize";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelSettingsAutoFocusElement as closure_21 } from "ChannelSettingsAutoFocusElement";
 import ME from "ME";
@@ -720,8 +720,8 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     stringResult = intl.string(tmp3(1236).t.PVbHDl);
   }
   obj = { ref: self.props.channelNameRef, label: stringResult, accessibilityLabel: stringResult, value: null, onChange: null, onBlur: null, isDisabled: null, maxLength: null, errorMessage: null, enableAndroidSanitizedInputWorkaround: true };
-  const TextInput = tmp3(7790).TextInput;
-  obj[3] = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+  const TextInput = tmp3(7792).TextInput;
+  obj[3] = computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   ({ handleChangeName: obj2[4], handleBlurName: obj2[5] } = self);
   obj[6] = !isChannelNameSettingEditable;
   obj[7] = closure_31;
@@ -749,7 +749,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     obj1[4] = !canManageChannels;
     obj1[6] = channel.isForumLikeChannel() ? closure_40 : closure_39;
     obj1[7] = self.getError("topic");
-    closure_43(tmp3(7976).TextArea, obj1);
+    closure_43(tmp3(7978).TextArea, obj1);
     const obj5 = parseRawEmojiObject;
   }
 };
@@ -881,7 +881,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj[2] = autoArchiveDuration;
       obj[3] = channel;
       obj[4] = this.handleAutoArchiveDurationChange;
-      return closure_43(tmp5(15891).AutoArchiveDurationOptions, obj);
+      return closure_43(tmp5(15908).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1175,7 +1175,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj4[1] = Math.min(channel.userLimit, tmp10);
       obj4[3] = tmp10;
       obj4[4] = this.handleUserLimitChange;
-      items2[1] = closure_43(tmp7(13431).Slider, obj4);
+      items2[1] = closure_43(tmp7(13439).Slider, obj4);
       obj[0] = items2;
       obj[2] = callback4(tmp7(5376).Card, obj);
       items.push(closure_43(tmp7(5767).TableRowGroup, obj, "channel-user-limit"));
@@ -1273,7 +1273,7 @@ prototype["renderPermissions"] = function renderPermissions() {
     }
     obj = { label: null, arrow: true, icon: null, onPress: null };
     obj[0] = stringResult;
-    ShieldUserIcon = ShieldUserIcon(9006).ShieldUserIcon;
+    ShieldUserIcon = ShieldUserIcon(9012).ShieldUserIcon;
     tmp2Result = tmp2(ShieldUserIcon, {});
     obj[2] = tmp2Result;
     obj[3] = function onPress() {
@@ -1303,7 +1303,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     let obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl = channel(1236).intl;
     obj[0] = intl.string(channel(1236).t.h850Ss);
-    obj[2] = callback3(channel(9136).BellIcon, {});
+    obj[2] = callback3(channel(9142).BellIcon, {});
     obj[3] = function onPress() {
       if (channel.isThread()) {
         let result = channel(outer1_2[70]).showThreadNotificationsBottomSheet(channel);
@@ -1360,7 +1360,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     obj = { label: null, trailing: null, arrow: true, icon: null, onPress: null };
     const intl2 = self(1236).intl;
     obj[0] = intl2.string(self(1236).t["kQvoC/"]);
-    if (channel.defaultForumLayout === self(1382).ForumLayout.GRID) {
+    if (channel.defaultForumLayout === self(1401).ForumLayout.GRID) {
       const intl4 = GridSquareIcon(1236).intl;
       let stringResult = intl4.string(GridSquareIcon(1236).t["8RswJG"]);
     } else {
@@ -1370,12 +1370,12 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj1 = { text: null };
     obj1[0] = stringResult;
     obj[1] = closure_43(self(5374).TableRow.TrailingText, obj1);
-    if (channel.defaultForumLayout === GridSquareIcon(1382).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(15892).GridSquareIcon;
+    if (channel.defaultForumLayout === GridSquareIcon(1401).ForumLayout.GRID) {
+      GridSquareIcon = GridSquareIcon(15909).GridSquareIcon;
       obj = {};
       let tmpResult = tmp(GridSquareIcon, obj);
     } else {
-      tmpResult = tmp(GridSquareIcon(8434).ListViewIcon, {});
+      tmpResult = tmp(GridSquareIcon(8440).ListViewIcon, {});
     }
     obj[3] = tmpResult;
     obj[4] = function onPress() {
@@ -1534,7 +1534,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     return closure_44(tmp4, obj3);
   } else {
     obj = { icon: null, label: null, onPress: null };
-    obj[0] = callback3(tmp2(9721).GroupPlusIcon, {});
+    obj[0] = callback3(tmp2(9726).GroupPlusIcon, {});
     const intl = tmp2(1236).intl;
     const string = intl.string;
     let ihLPiO = tmp2(1236).t;
@@ -1659,13 +1659,13 @@ prototype["renderForumTags"] = function renderForumTags() {
         const obj2 = { icon: null, size: "sm", onPress: null, accessibilityLabel: null };
         const obj3 = { size: "sm", color: null };
         obj3[1] = self(712).colors.WHITE;
-        obj2[0] = tmp10(tmp7(9432).PlusSmallIcon, obj3);
+        obj2[0] = tmp10(tmp7(9438).PlusSmallIcon, obj3);
         obj2[2] = function onPress() {
           return self.handlePressTag();
         };
         const intl3 = tmp7(1236).intl;
         obj2[3] = intl3.string(tmp7(1236).t["/jubeD"]);
-        obj1[1] = tmp10(tmp7(7751).IconButton, obj2);
+        obj1[1] = tmp10(tmp7(7753).IconButton, obj2);
         tmp10Result = tmp10(tmp12, obj1);
       }
       const obj4 = { children: null };
@@ -1752,11 +1752,11 @@ prototype["renderCategory"] = function renderCategory() {
         let tmp7 = self;
       } else {
         let obj = self(4494);
-        stringResult = obj.computeChannelName(category, mergeGuildAvatar, upsertRelationship);
+        stringResult = obj.computeChannelName(category, mergeGuildAvatar, markAllUserIdListsStale);
         tmp7 = self;
       }
       obj = { icon: null, label: null, trailing: null, arrow: null, onPress: null };
-      obj[0] = callback3(tmp7(15284).FolderPlusIcon, {});
+      obj[0] = callback3(tmp7(15294).FolderPlusIcon, {});
       const intl2 = tmp7(1236).intl;
       obj[1] = intl2.string(tmp7(1236).t.vHCZwr);
       obj = { text: null };

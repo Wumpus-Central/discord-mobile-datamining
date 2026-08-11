@@ -21,16 +21,16 @@ function connectToStage(channel, flag) {
     const canResult = getUncachedChannelPermissions.can(_Permissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
-      let num = importAll(7774).shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
+      let num = importAll(7776).shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(7774).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(7776).openStageBlockedUsersSheet(channel, () => {
           outer1_11(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(7774);
+        const tmp7Result = tmp7(7776);
       }
       tmp6 = num;
-      const obj2 = importAll(7774);
+      const obj2 = importAll(7776);
       tmp7 = importAll;
     }
     if (tmp6) {
@@ -77,15 +77,15 @@ function connectAndOpen(channel, flag) {
     const obj = _shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
-    result = flag2(7774).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(7776).showChannelChangeConfirmationAlert(channel, () => {
       outer1_11(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(7774);
+    const obj2 = flag2(7776);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(7774).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(7774);
+      flag2(7776).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(7776);
     }
   }
 }
@@ -210,8 +210,8 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
 export { connectToStage };
 export { connectAndOpen };
 export const navigateToStage = function navigateToStage(arg0, arg1) {
-  importAll(7774).navigateToStage(arg0, arg1);
+  importAll(7776).navigateToStage(arg0, arg1);
 };
 export const showUserProfile = function showUserProfile(arg0) {
-  const result = importAll(7774).showPlatformUserProfile(arg0);
+  const result = importAll(7776).showPlatformUserProfile(arg0);
 };

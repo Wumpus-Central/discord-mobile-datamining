@@ -3,7 +3,7 @@ import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionReset from "handleConnectionReset";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import { getComparator } from "getVoiceStatesForGuild";
@@ -166,9 +166,9 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj[5] = getHighestHoistedRole.getHighestHoistedRole(self.guildId, userId);
       obj[6] = speaker.isSpeaker(userId, self.channelId);
       obj[7] = member1;
-      obj[8] = upsertRelationship.isBlocked(user.id);
-      obj[9] = upsertRelationship.isIgnored(user.id);
-      obj[10] = upsertRelationship.isFriend(user.id);
+      obj[8] = markAllUserIdListsStale.isBlocked(user.id);
+      obj[9] = markAllUserIdListsStale.isIgnored(user.id);
+      obj[10] = markAllUserIdListsStale.isFriend(user.id);
       let connectedOn;
       if (first != null) {
         connectedOn = first.connectedOn;

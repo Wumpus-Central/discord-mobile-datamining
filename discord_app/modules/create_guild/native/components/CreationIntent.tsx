@@ -116,7 +116,7 @@ export default function CreationIntent(arg0) {
       const obj = trigger(arr[12]);
     }
   }, items1);
-  obj = { top: true, style: tmp.contentContainer, children: null };
+  obj = { top: true, left: true, right: true, style: tmp.contentContainer, children: null };
   obj = { style: tmp.scrollContainer, children: null };
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -131,7 +131,7 @@ export default function CreationIntent(arg0) {
   const items3 = [callback2(ref, obj1), , ];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
-  const tmp13 = trigger(11696);
+  const tmp13 = trigger(11699);
   const obj6 = { Icon: null, message: null, onPress: null };
   const tmp14 = AccountAgeTier10LargeBadge;
   if (closure_14) {
@@ -143,8 +143,8 @@ export default function CreationIntent(arg0) {
     };
     const items4 = [tmp8(tmp13, obj6), ];
     const obj7 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(11696);
-    obj7[0] = tmp2(6027).WorldIllocon;
+    let tmp12Result = tmp12(11699);
+    obj7[0] = tmp2(6029).WorldIllocon;
     const intl6 = tmp2(1236).intl;
     obj7[1] = intl6.string(tmp2(1236).t.h9Q1lG);
     obj7[2] = function onPress() {
@@ -162,8 +162,8 @@ export default function CreationIntent(arg0) {
     };
     const items5 = [tmp8(tmp13, obj6), ];
     const obj8 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(11696);
-    obj8[0] = tmp2(6027).ChairIllocon;
+    tmp12Result = tmp12(11699);
+    obj8[0] = tmp2(6029).ChairIllocon;
     const intl4 = tmp2(1236).intl;
     obj8[1] = intl4.string(tmp2(1236).t.uE7zcu);
     obj8[2] = function onPress() {
@@ -184,6 +184,6 @@ export default function CreationIntent(arg0) {
   });
   items3[2] = callback(Text.Text, obj9);
   obj[1] = items3;
-  obj[2] = callback2(onPress, obj);
+  obj[4] = callback2(onPress, obj);
   return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

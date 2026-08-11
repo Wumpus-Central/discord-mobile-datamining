@@ -49,7 +49,7 @@ let obj = {
               c0 = undefined;
               c1 = undefined;
               ({ id: c0, name: c1 } = outer1_0);
-              let obj1 = outer1_1(7224);
+              let obj1 = outer1_1(7225);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -178,7 +178,7 @@ let obj = {
             } else {
               let closure_1 = tmp4;
               const id = tmp4;
-              let obj1 = outer1_1(7224);
+              let obj1 = outer1_1(7225);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };

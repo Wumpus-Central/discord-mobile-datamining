@@ -38,7 +38,7 @@ export default function SharePreparingModal(onCancel) {
   obj1[1] = callback(onCancel(5326).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj1[2] = onCancel;
   obj[1] = callback(MediaViewerOverlayButton, obj1);
-  obj[2] = callback(onCancel(8930).MediaModalOverlayHeaderWrapper, obj);
+  obj[2] = callback(onCancel(8936).MediaModalOverlayHeaderWrapper, obj);
   items1[1] = callback(closure_4, obj);
   items1[2] = callback(onCancel(5823).ActivityIndicator, {});
   const obj2 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };

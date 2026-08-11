@@ -1,7 +1,7 @@
 // discord_app/intl/messages/international.messages.js
 import 01274__ from "../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../_runtime/metro/01274__.js";
-import { registerAsset } from "../../../_runtime/13452_registerAsset.js";
+import { registerAsset } from "../../../_runtime/13460_registerAsset.js";
 import { loadJsonAsset } from "../../modules/asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

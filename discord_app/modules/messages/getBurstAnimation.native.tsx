@@ -2,16 +2,11 @@
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7245);
+    return callback(7246);
   }
 };
 const items = [
   obj,
-  {
-    load() {
-      return callback(7246);
-    }
-  },
   {
     load() {
       return callback(7247);
@@ -91,20 +86,20 @@ const items = [
     load() {
       return callback(7262);
     }
+  },
+  {
+    load() {
+      return callback(7263);
+    }
   }
 ];
 obj = {
   load() {
-    return callback(7263);
+    return callback(7264);
   }
 };
 const items1 = [
   obj,
-  {
-    load() {
-      return callback(7264);
-    }
-  },
   {
     load() {
       return callback(7265);
@@ -184,9 +179,14 @@ const items1 = [
     load() {
       return callback(7280);
     }
+  },
+  {
+    load() {
+      return callback(7281);
+    }
   }
 ];
-closure_0 = require("module_7249")((arg0, arg1, arg2) => {
+closure_0 = require("module_7250")((arg0, arg1, arg2) => {
   let closure_0 = arg0;
   let closure_1 = arg1;
   let closure_2 = arg2;
@@ -263,7 +263,7 @@ closure_0 = require("module_7249")((arg0, arg1, arg2) => {
   iter.next();
   return iter;
 });
-const result = require("module_7246").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
+const result = require("module_7247").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
 export const getBurstAnimation = function() {
   const self = this;

@@ -73,7 +73,7 @@ function BountiesCtaHeaderInner(bounties) {
   const items1 = [getOrCreateSet];
   const items2 = [bounties];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !getOrCreateSet.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
-  let obj2 = bounties(10981);
+  let obj2 = bounties(10986);
   const QuestContent = bounties(5164).QuestContent;
   const tmp6 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
   importDefault = tmp6;
@@ -147,7 +147,7 @@ let closure_12 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14322)();
+  const tmp2 = containerRef(14330)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -167,7 +167,7 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     } else {
       const obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
       obj1[0] = closure_8;
-      obj1[1] = tmp7(7188).AdCreativeType.BOUNTY;
+      obj1[1] = tmp7(7189).AdCreativeType.BOUNTY;
       obj1[2] = tmp7(5164).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
       obj1[5] = tmp7(5164).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
@@ -177,7 +177,7 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
         obj.containerRef = containerRef;
         return outer1_10(outer1_14, obj);
       };
-      tmp9Result = tmp9(tmp7(11176).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11181).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_10(_ManaContext.ThemeContextProvider, obj);

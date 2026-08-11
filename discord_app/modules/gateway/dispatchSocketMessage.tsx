@@ -117,9 +117,9 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
   ({ roles, nick, avatar, avatar_decoration_data, flags, premium_since, pending, joined_at, communication_disabled_until, unusual_dm_activity_until } = member);
   ({ collectibles, display_name_styles } = member);
   member = member.getMember(guild_id, author.id);
-  obj = obj(1881);
+  obj = obj(1900);
   const result = obj.parseServerUserCollectibles(collectibles);
-  const result1 = obj(1914).parseServerDisplayNameStyles(display_name_styles);
+  const result1 = obj(1933).parseServerDisplayNameStyles(display_name_styles);
   let isEqualResult = null != member && member.nick === nick && member.avatar === avatar;
   if (isEqualResult) {
     isEqualResult = apply.isEqual(member.roles, roles);
@@ -134,8 +134,8 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
     if (avatar_decoration_data == null) {
       tmp9 = null;
     }
-    isEqualResult = obj(1880).isEqualAvatarDecoration(avatarDecoration, tmp9);
-    const tmp2Result = obj(1880);
+    isEqualResult = obj(1899).isEqualAvatarDecoration(avatarDecoration, tmp9);
+    const tmp2Result = obj(1899);
   }
   if (isEqualResult) {
     isEqualResult = member.premiumSince === premium_since;
@@ -500,7 +500,7 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
 });
 let result1 = definePreloadableDispatch(["READY"], (guilds) => {
   guilds = guilds.guilds;
-  const result = importAll(12947).preloadReadyPayloadData();
+  const result = importAll(12951).preloadReadyPayloadData();
   const found = guilds.filter((unavailable) => {
     unavailable = unavailable.unavailable;
     let tmp = !unavailable;
@@ -530,7 +530,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
     guildIds = Promise.resolve();
   }
   const items = [result, guildIds];
-  const obj = importAll(12947);
+  const obj = importAll(12951);
   return Promise.all(items).then((arg0) => {
     let tmp;
     [tmp] = arg0;
@@ -556,8 +556,8 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
       Emitter.batched(() => {
         const hydrateReady = outer1_1(outer1_3[14]).hydrateReady;
         const measureResult = hydrateReady.measure(() => {
-          const obj = callback(12947);
-          return obj.hydrateReadyPayloadPrioritized(obj, obj(12902).socket.identifyStartTime, closure_1);
+          const obj = callback(12951);
+          return obj.hydrateReadyPayloadPrioritized(obj, obj(12906).socket.identifyStartTime, closure_1);
         });
         let obj = measureResult;
         const private_channels = measureResult.private_channels;
@@ -575,7 +575,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           result = obj.b64ToPreloadedUserSettingsProto(obj.user_settings_proto);
         }
         let closure_4 = result;
-        outer1_1(outer1_3[18])("AllGatewayConnectionStores", () => obj(12948));
+        outer1_1(outer1_3[18])("AllGatewayConnectionStores", () => obj(12952));
         const dispatchReady = tmp(tmp2[14]).dispatchReady;
         dispatchReady.measure(() => {
           obj = { type: "CONNECTION_OPEN", sessionId: obj.session_id, authSessionIdHash: obj.auth_session_id_hash, staticAuthSessionId: obj.static_client_session_id, user: obj.user, users: obj.users, guilds: closure_2, initialPrivateChannels: obj, unavailableGuilds: closure_1, readState: obj.read_state, userGuildSettings: obj.user_guild_settings, tutorial: obj.tutorial, relationships: null, gameRelationships: null, friendSuggestionCount: null, analyticsToken: null, experiments: null, connectedAccounts: null, guildExperiments: null, apexExperiments: null, requiredAction: null, consents: null, sessions: null, pendingPayments: null, countryCode: null, guildJoinRequests: null, userSettingsProto: null, apiCodeVersion: null, auth: null, notificationSettings: null, geoRestrictedGuilds: null, explicitContentScanVersion: null, failedStates: null, linkedUsers: null, regionalFeatureConfig: null };
@@ -697,9 +697,9 @@ defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) =>
   obj.dispatch(obj);
 });
 defineSimpleDispatch(["RESUMED"], () => {
-  const localPresenceState = obj(12902).localPresenceState;
+  const localPresenceState = obj(12906).localPresenceState;
   localPresenceState.forceUpdate();
-  const localVoiceState = obj(12902).localVoiceState;
+  const localVoiceState = obj(12906).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
   const obj2 = dispatcher;
@@ -1110,7 +1110,7 @@ const result13 = definePreloadableDispatch(["GUILD_CREATE"], (data_mode) => {
     });
     const dispatchResult = dispatcher.dispatch(obj);
   } else {
-    obj = importAll(12947);
+    obj = importAll(12951);
     const result = obj.hydratePreviouslyUnavailableGuild(unavailable);
     obj1 = result;
     obj = { type: "GUILD_CREATE", guild: null };
@@ -1384,10 +1384,10 @@ defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
 });
 defineSimpleDispatch(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"], (guildId, type) => {
   const obj = { type, guildId: guildId.guild_id, user: guildId.user, avatar: guildId.avatar, avatarDecoration: guildId.avatar_decoration_data, roles: guildId.roles, nick: guildId.nick, premiumSince: guildId.premium_since, isPending: guildId.pending, joinedAt: guildId.joined_at, communicationDisabledUntil: guildId.communication_disabled_until, unusualDMActivityUntil: guildId.unusual_dm_activity_until, flags: guildId.flags, collectibles: null, displayNameStyles: null };
-  obj[13] = obj(1881).parseServerUserCollectibles(guildId.collectibles);
-  const obj2 = obj(1881);
-  obj[14] = obj(1914).parseServerDisplayNameStyles(guildId.display_name_styles);
-  const obj3 = obj(1914);
+  obj[13] = obj(1900).parseServerUserCollectibles(guildId.collectibles);
+  const obj2 = obj(1900);
+  obj[14] = obj(1933).parseServerDisplayNameStyles(guildId.display_name_styles);
+  const obj3 = obj(1933);
   const obj4 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1887,8 +1887,8 @@ defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
 });
 defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
   const obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: null };
-  obj[1] = obj(8381).savedMessageCreateObjectToClient(body);
-  const obj2 = obj(8381);
+  obj[1] = obj(8385).savedMessageCreateObjectToClient(body);
+  const obj2 = obj(8385);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1899,8 +1899,8 @@ defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
 });
 defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
   const obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: null };
-  obj[1] = obj(8381).savedMessageDeleteObjectToClient(channelId);
-  const obj2 = obj(8381);
+  obj[1] = obj(8385).savedMessageDeleteObjectToClient(channelId);
+  const obj2 = obj(8385);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1954,7 +1954,7 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (cha
   if ("MESSAGE_POLL_VOTE_ADD" === arg1) {
     str = "MESSAGE_REACTION_ADD";
   }
-  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7222).ReactionTypes.VOTE };
+  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7223).ReactionTypes.VOTE };
   obj = { id: channelId.answer_id, name: "" };
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
@@ -2045,8 +2045,8 @@ defineSimpleDispatch(["USER_PAYMENT_SOURCES_UPDATE"], () => {
   }
 });
 defineSimpleDispatch(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-  const currentUser = importAll(8309).fetchCurrentUser();
-  const obj = importAll(8309);
+  const currentUser = importAll(8314).fetchCurrentUser();
+  const obj = importAll(8314);
   const tmp3 = require;
   if (obj2.isUserSettingsOpen()) {
     const subscriptions = tmp3(4623).fetchSubscriptions();
@@ -3080,8 +3080,8 @@ defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (intera
 });
 defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(13024).serverGuildRoomToClient(body);
-  const obj2 = obj(13024);
+  obj[1] = obj(13028).serverGuildRoomToClient(body);
+  const obj2 = obj(13028);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3102,8 +3102,8 @@ defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
 });
 defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(13024).serverGuildRoomToClient(body);
-  const obj2 = obj(13024);
+  obj[1] = obj(13028).serverGuildRoomToClient(body);
+  const obj2 = obj(13028);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3114,8 +3114,8 @@ defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
 });
 defineSimpleDispatch(["HAVEN_CONNECT"], (roomId, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(13026).parseRoom(roomId);
-  const obj2 = obj(13026);
+  obj[1] = obj(13035).parseRoom(roomId);
+  const obj2 = obj(13035);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3136,8 +3136,8 @@ defineSimpleDispatch(["HAVEN_DISCONNECT"], (userId, type) => {
 });
 defineSimpleDispatch(["HAVEN_UPDATE"], (roomId, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(13026).parseRoom(roomId);
-  const obj2 = obj(13026);
+  obj[1] = obj(13035).parseRoom(roomId);
+  const obj2 = obj(13035);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);

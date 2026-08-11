@@ -14,7 +14,7 @@ class PlanSelectCardBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(7360).ThemeAwareAsset;
+            return callback(7361).ThemeAwareAsset;
           }
     };
     items = [, , , ];
@@ -33,7 +33,7 @@ class PlanSelectCardBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7351).HelpArticle;
+            return callback(7352).HelpArticle;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PlanSelectCardBanner", items, T);
@@ -167,7 +167,7 @@ let obj = {
   name: "asset",
   kind: "message",
   T() {
-    return callback(7360).ThemeAwareAsset;
+    return callback(7361).ThemeAwareAsset;
   }
 };
 let items = [obj, { no: 2, name: "body", kind: "scalar", T: 9 }, , ];
@@ -184,7 +184,7 @@ items[3] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(7351).HelpArticle;
+    return callback(7352).HelpArticle;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PlanSelectCardBanner", items, tmp, T, PlanSelectCardBanner$Type, prototype, items);

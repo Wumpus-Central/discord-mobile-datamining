@@ -10,7 +10,7 @@ import { isStaticChannelRoute } from "set";
 import jsxProd from "getChannelDetailsFromRoute";
 import createCacheKey from "createCacheKey";
 import ReanimatedRexport from "../modules/reanimated/ReanimatedRexport.tsx";
-import { createStandardNavigationFactories } from "../../_runtime/01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../_runtime/01500_createStandardNavigationFactories.js";
 import { useNavigationTheme } from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
 import { useTheme } from "../hooks/useTheme.tsx";
 import { _maybeBackfillMissingBreadcrumbsFromTelemetryRing } from "../modules/errors/native/SentryInitUtils.tsx";
@@ -100,7 +100,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(13823).log("Initial Screen: " + name);
+    callback(13831).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -163,7 +163,7 @@ createCacheKey = { flex: { flex: 1 }, rootBackgroundColor: null };
 createCacheKey = { backgroundColor: require("Themes").colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 createCacheKey[1] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = module_4036.configureReanimatedLogger({ level: require("module_4036").ReanimatedLogLevel.error, strict: false });
+let result = module_4042.configureReanimatedLogger({ level: require("module_4042").ReanimatedLogLevel.error, strict: false });
 try {
   require("enableScreens").enableFreeze();
   let obj6 = require("enableScreens");
@@ -175,15 +175,15 @@ try {
   let obj7 = require("designConfig");
   const result1 = require("module_1208").profiledRootComponent(function AppContainer(children) {
     children = children.children;
-    let riveRendererExperiment = children;
+    let riveAppStatePlaybackExperiment = children;
     const appEntryKey = children.appEntryKey;
-    let riveAppStatePlaybackExperiment = appEntryKey;
+    let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = riveAppStatePlaybackExperiment(13824).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(13832).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
-        let obj = riveAppStatePlaybackExperiment(4036);
+        let obj = memo(4042);
         const fn = function e() {
           RNScreensTurboModule.RNScreensTurboModule = RNScreensTurboModule;
         };
@@ -197,7 +197,7 @@ try {
       }
     }, []);
     const effect1 = React.useEffect(() => {
-      let SplashScreenManager = riveAppStatePlaybackExperiment(500).isIOS();
+      let SplashScreenManager = memo(500).isIOS();
       if (SplashScreenManager) {
         SplashScreenManager = closure_6.SplashScreenManager;
       }
@@ -206,49 +206,42 @@ try {
         SplashScreenManager2.hideSplashScreen();
       }
     }, []);
-    riveRendererExperiment = undefined;
     riveAppStatePlaybackExperiment = undefined;
-    memo1 = undefined;
-    let obj = riveAppStatePlaybackExperiment(13824);
-    riveRendererExperiment = riveAppStatePlaybackExperiment(15076).useRiveRendererExperiment("AppContainer");
-    let obj2 = riveAppStatePlaybackExperiment(15076);
-    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(15077).useRiveAppStatePlaybackExperiment("AppContainer");
-    let items = [riveRendererExperiment, riveAppStatePlaybackExperiment];
-    const memo = React.useMemo(() => {
+    memo = undefined;
+    let obj = memo(13832);
+    riveAppStatePlaybackExperiment = memo(15086).useRiveAppStatePlaybackExperiment("AppContainer");
+    let items = [riveAppStatePlaybackExperiment];
+    memo = React.useMemo(() => {
       const items = [];
-      if (riveRendererExperiment) {
-        items.push("rive-mobile-renderer");
-      }
       if (riveAppStatePlaybackExperiment) {
         items.push("rive-app-state-playback");
       }
       return items;
     }, items);
-    memo1 = memo;
     let items1 = [memo];
     memo1 = React.useMemo(() => {
       obj = {
         experiments: obj,
         captureException(arg0, tags) {
-          let obj = callback(table[52]);
+          let obj = callback(table[51]);
           obj = { tags };
           return obj.captureException(arg0, obj);
         }
       };
-      obj = { enabledExperiments: memo1 };
+      obj = { enabledExperiments: memo };
       return obj;
     }, items1);
     const items2 = [appEntryKey, children, memo1];
     return React.useMemo(() => {
       let obj = { profile: null, children: null };
-      obj[0] = riveAppStatePlaybackExperiment(outer1_3[33]).Profiles.AppContainer;
+      obj[0] = memo(outer1_3[33]).Profiles.AppContainer;
       obj = { children: null };
       obj = { children: null };
       const obj1 = { value: memo1, children: null };
       const obj2 = { children: null };
       const tmp = memo1(outer1_3[33]);
-      const obj3 = { value: riveAppStatePlaybackExperiment, children: null };
-      const obj4 = { appEntryKey: riveAppStatePlaybackExperiment, children: null };
+      const obj3 = { value: memo, children: null };
+      const obj4 = { appEntryKey: memo, children: null };
       const obj5 = { children: null };
       const obj6 = { history: null, children: null };
       let obj9 = memo1(outer1_3[41]);
@@ -262,23 +255,23 @@ try {
       const tmp3 = memo1(outer1_3[42]);
       const items = [outer1_14(memo1(outer1_3[46]), {}), ];
       const obj12 = { children: null };
-      const items1 = [riveRendererExperiment, outer1_14(riveAppStatePlaybackExperiment(outer1_3[47]).SafeAreaReporter, {}), outer1_14(memo1(outer1_3[48]), {}), outer1_14(memo1(outer1_3[49]), {})];
+      const items1 = [riveAppStatePlaybackExperiment, outer1_14(memo(outer1_3[47]).SafeAreaReporter, {}), outer1_14(memo1(outer1_3[48]), {}), outer1_14(memo1(outer1_3[49]), {})];
       obj12[0] = items1;
-      items[1] = outer1_15(riveAppStatePlaybackExperiment(outer1_3[47]).SafeAreaProvider, obj12);
+      items[1] = outer1_15(memo(outer1_3[47]).SafeAreaProvider, obj12);
       obj11[0] = items;
       obj10[0] = outer1_15(memo1(outer1_3[45]), obj11);
       obj9[0] = outer1_14(memo1(outer1_3[44]).Component, obj10);
-      obj8[0] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[43]).PortalProvider, obj9);
+      obj8[0] = outer1_14(memo(outer1_3[43]).PortalProvider, obj9);
       obj7[0] = outer1_14(tmp3, obj8);
       obj6[1] = outer1_14(outer1_17, obj7);
-      obj5[0] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[40]).Router, obj6);
-      obj4[1] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[39]).WebViewContextProvider, obj5);
+      obj5[0] = outer1_14(memo(outer1_3[40]).Router, obj6);
+      obj4[1] = outer1_14(memo(outer1_3[39]).WebViewContextProvider, obj5);
       obj3[1] = outer1_14(outer1_21, obj4);
-      obj2[0] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[38]).AppEntryKeyContext.Provider, obj3);
+      obj2[0] = outer1_14(memo(outer1_3[38]).AppEntryKeyContext.Provider, obj3);
       obj1[1] = outer1_14(tmp2, obj2);
-      obj[0] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[36]).ManaContextProvider, obj1);
-      obj[0] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[35]).RootThemeContextProvider, obj);
-      obj[1] = outer1_14(riveAppStatePlaybackExperiment(outer1_3[34]).ReanimatedScreenProvider, obj);
+      obj[0] = outer1_14(memo(outer1_3[36]).ManaContextProvider, obj1);
+      obj[0] = outer1_14(memo(outer1_3[35]).RootThemeContextProvider, obj);
+      obj[1] = outer1_14(memo(outer1_3[34]).ReanimatedScreenProvider, obj);
       return outer1_14(tmp, obj);
     }, items2);
   });

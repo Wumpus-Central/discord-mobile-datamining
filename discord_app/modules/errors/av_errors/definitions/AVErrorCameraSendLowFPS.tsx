@@ -32,11 +32,11 @@ export const AVErrorCameraSendLowFPSDefinition = {
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
               obj = { type: null, userId: null };
-              obj[0] = tmp4(9169).AVError.CAMERA_SEND_LOW_FPS;
+              obj[0] = tmp4(9175).AVError.CAMERA_SEND_LOW_FPS;
               obj[1] = id.getId();
-              const merged = Object.assign(tmp4(16921).getVoiceChannelErrorContext());
+              const merged = Object.assign(tmp4(16933).getVoiceChannelErrorContext());
               const items = [obj];
-              const tmp4Result = tmp4(16921);
+              const tmp4Result = tmp4(16933);
               const tmp8 = items;
             }
             tmp7 = tmp8;

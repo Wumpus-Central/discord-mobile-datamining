@@ -6,7 +6,7 @@ import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import sortActivity from "sortActivity";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { StaticChannelRoute } from "set";
@@ -78,16 +78,16 @@ function ParentChannelSubTitle(parentChannel) {
   const intl = getSystemLocale.intl;
   obj = { channelName: null };
   const tmp = callback3();
-  obj[0] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
+  obj[0] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
   obj[2] = intl.formatToPlainString(getSystemLocale.t.BjYvHO, obj);
   const obj3 = computeChannelName;
-  obj[6] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
+  obj[6] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale, true);
   return callback(Text.Text, obj);
 }
 function DMChannelName(style) {
   const userId = style.userId;
   let obj = userId(589);
-  const items = [mergeGuildAvatar, upsertRelationship];
+  const items = [mergeGuildAvatar, markAllUserIdListsStale];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let str = outer1_10.getNickname(userId);
@@ -338,7 +338,7 @@ const memoResult = importAllResult.memo((threadDraft) => {
       obj16[1] = callback(ChannelTitleContent, obj17);
       return callback(ChannelTitleWrapper, obj16);
     } else {
-      const channelName = tmp2(tmp3[19]).computeChannelName(stateFromStores1, mergeGuildAvatar, upsertRelationship);
+      const channelName = tmp2(tmp3[19]).computeChannelName(stateFromStores1, mergeGuildAvatar, markAllUserIdListsStale);
       const tmp2Result1 = tmp2(tmp3[19]);
       const channelIconWithGuild = tmp2(tmp3[18]).getChannelIconWithGuild(stateFromStores1, stateFromStores2);
       if (stateFromStores1.isDM()) {
@@ -444,7 +444,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   let channelName = null;
   if (null != stateFromStores) {
     tmp2Result = tmp2(4494);
-    channelName = tmp2Result.computeChannelName(stateFromStores, mergeGuildAvatar, upsertRelationship);
+    channelName = tmp2Result.computeChannelName(stateFromStores, mergeGuildAvatar, markAllUserIdListsStale);
   }
   let isDMResult;
   if (stateFromStores != null) {

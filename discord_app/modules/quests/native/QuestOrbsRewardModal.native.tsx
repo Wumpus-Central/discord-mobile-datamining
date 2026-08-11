@@ -205,7 +205,7 @@ let closure_24 = importAllResult.memo((animate) => {
   }
   let aPNGPlayerControls;
   const ref = importAllResult.useRef(null);
-  aPNGPlayerControls = flag(9386).useAPNGPlayerControls(ref);
+  aPNGPlayerControls = flag(9392).useAPNGPlayerControls(ref);
   const items = [flag, aPNGPlayerControls];
   const effect = importAllResult.useEffect(() => {
     if (flag) {
@@ -214,7 +214,7 @@ let closure_24 = importAllResult.memo((animate) => {
       obj.stop();
     }
   }, items);
-  return callback3(flag(9386).APNGPlayer, { ref, url, autoplay: false, style: { width: "100%", height: "100%" }, onLoad });
+  return callback3(flag(9392).APNGPlayer, { ref, url, autoplay: false, style: { width: "100%", height: "100%" }, onLoad });
 });
 let closure_25 = importAllResult.memo((animate) => {
   let onLoad;
@@ -277,7 +277,7 @@ export default function QuestOrbsRewardModal(quest) {
   let obj = num(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = num(9422);
+  let obj1 = num(9428);
   num = obj1.useFetchVirtualCurrencyBalance().balance;
   let obj2 = importAllResult;
   [tmp6, c1] = callback(importAllResult.useState(false), 2);
@@ -295,8 +295,8 @@ export default function QuestOrbsRewardModal(quest) {
     num2 = userStatus.orbQuantityClaimed;
   }
   if (num2 == null) {
-    num2 = tmp2(10477).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmp2Result = tmp2(10477);
+    num2 = tmp2(10482).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmp2Result = tmp2(10482);
   }
   const tmp11 = stateFromStores1 === num(691).AppStates.ACTIVE;
   const effect = obj2.useEffect(() => {

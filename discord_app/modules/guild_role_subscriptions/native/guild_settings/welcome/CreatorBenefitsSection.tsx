@@ -4,12 +4,12 @@ import { View } from "registerAsset";
 import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/16786_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16789_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16790_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16791_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16792_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16793_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16798_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16801_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16802_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16803_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16804_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16805_registerAsset.js";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
@@ -28,7 +28,7 @@ function EarningPreview() {
   items[1] = obj.isThemeDark(tmp3) && tmp4.earningMetricsShadowContainerDarkMode;
   const items1 = [, , ];
   ({ earningMetrics: arr2[0], horizontalContainer: arr2[1] } = tmp4);
-  let tmp7Result = tmp7(4153);
+  let tmp7Result = tmp7(1363);
   obj = { style: null, children: null };
   items1[2] = tmp7Result.isThemeDark(tmp3) ? tmp4.earningMetricsDarkMode : tmp4.earningMetricsLightMode;
   obj[0] = items1;
@@ -36,7 +36,7 @@ function EarningPreview() {
   const intl = tmp7(1236).intl;
   obj1[2] = intl.string(getSystemLocale.t.TXPK7B);
   const items2 = [closure_5(Text.Text, obj1), ];
-  tmp7Result = tmp7(4153);
+  tmp7Result = tmp7(1363);
   const obj2 = { children: null };
   const obj3 = { style: tmp7Result.isThemeDark(tmp3) ? tmp4.greenTextDarkMode : tmp4.greenTextLightMode, variant: "heading-lg/extrabold", children: null };
   const intl2 = tmp7(1236).intl;
@@ -64,9 +64,9 @@ function ConsistentEarningBenefit() {
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
   const tmp3 = useTheme();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(16787);
+    let tmpResult = tmp(16799);
   } else {
-    tmpResult = tmp(16788);
+    tmpResult = tmp(16800);
   }
   const items2 = [callback(BenefitAvatar, { avatarSource: tmpResult }), , ];
   obj4 = AccessibilityAnnouncer;

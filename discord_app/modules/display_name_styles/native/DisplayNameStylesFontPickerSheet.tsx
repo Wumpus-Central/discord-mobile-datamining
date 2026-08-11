@@ -49,17 +49,17 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   let closure_7;
   let tmp = createCacheKey();
   importDefault = tmp;
-  let obj = onSelectFont(7404);
-  let obj1 = onSelectFont(14573);
+  let obj = onSelectFont(7406);
+  let obj1 = onSelectFont(14581);
   const visibleFontOrder = obj1.useVisibleFontOrder();
-  let obj2 = onSelectFont(14575);
+  let obj2 = onSelectFont(14583);
   const displayNameStylesNewFonts = obj2.useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   const tmp5 = callback(first.useState(selectedFontId), 2);
   first = tmp5[0];
   closure_5 = tmp5[1];
-  let tmp14Result = first !== onSelectFont(1917).DisplayNameFont.DEFAULT;
-  let obj3 = onSelectFont(1914);
+  let tmp14Result = first !== onSelectFont(1936).DisplayNameFont.DEFAULT;
+  let obj3 = onSelectFont(1933);
   c6 = tmp9;
   closure_7 = first.useCallback((arg0) => {
     callback(arg0);

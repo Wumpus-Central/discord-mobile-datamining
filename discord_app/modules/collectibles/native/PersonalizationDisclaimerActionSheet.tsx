@@ -26,8 +26,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/collectibles/na
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = createCacheKey();
   const callback = React.useCallback(() => {
-    const obj = callback(3998);
-    obj.openURL(callback(1974).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
+    const obj = callback(4017);
+    obj.openURL(callback(1993).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
   obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };

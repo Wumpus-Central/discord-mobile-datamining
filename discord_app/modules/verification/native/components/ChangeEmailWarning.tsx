@@ -30,7 +30,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   let navigation;
   const tmp = createCacheKey();
-  let obj = changeEmailReason(1480);
+  let obj = changeEmailReason(1499);
   navigation = obj.useNavigation();
   let obj1 = changeEmailReason(589);
   const items = [mergeGuildAvatar];
@@ -41,7 +41,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const items2 = [callback(tmp2(6027).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [callback(tmp2(6029).TrafficConeSpotIllustration, {}), , , ];
     obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.title;
     const intl = tmp2(1236).intl;

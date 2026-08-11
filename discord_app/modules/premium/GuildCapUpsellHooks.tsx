@@ -20,7 +20,7 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   });
   const obj2 = initialize;
   const items2 = [mergeGuildAvatar];
-  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(3947).isPremium(currentUser.getCurrentUser()));
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(3966).isPremium(currentUser.getCurrentUser()));
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }

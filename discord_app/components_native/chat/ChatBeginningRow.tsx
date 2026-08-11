@@ -2,7 +2,7 @@
 import TextIcon from "TextIcon";
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import get_ActivityIndicator from "upsertRelationship";
+import get_ActivityIndicator from "markAllUserIdListsStale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import closure_9 from "participantFromServer";
 import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
@@ -17,7 +17,7 @@ import comparator from "comparator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
+import markAllUserIdListsStale from "markAllUserIdListsStale";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import closure_24 from "mergeGuildAvatar";
 import ME from "ME";
@@ -27,8 +27,8 @@ import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_40 } from "MESSAGE_REQUEST
 import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_41 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/11831_registerAsset.js";
-import { registerAsset } from "../../../_runtime/11955_registerAsset.js";
+import { registerAsset } from "../../../_runtime/11834_registerAsset.js";
+import { registerAsset } from "../../../_runtime/11958_registerAsset.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 import { RowButtonWrapper } from "../../design/components/TableRow/native/RowButton.native.tsx";
@@ -186,7 +186,7 @@ function LinkManageButtons(arg0) {
     obj3[2] = items4;
     const obj4 = { size: "xs", color: null };
     obj4[1] = token;
-    const items5 = [callback2(tmp2(9672).PencilIcon, obj4), ];
+    const items5 = [callback2(tmp2(9677).PencilIcon, obj4), ];
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
     const items6 = [tmp.ctaLabel];
     obj5[0] = items6;
@@ -224,7 +224,7 @@ function ThreadOwner(arg0) {
     str = stateFromStores1.nick;
   }
   if (str == null) {
-    let obj3 = guildId(4146);
+    let obj3 = guildId(4148);
     str = obj3.getName(stateFromStores);
   }
   if (str == null) {
@@ -244,9 +244,9 @@ function ThreadOwner(arg0) {
   if (colorStrings == null) {
     colorStrings = null;
   }
-  let tmp2Result = tmp2(8070);
+  let tmp2Result = tmp2(8072);
   const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-  tmp2Result = tmp2(8070);
+  tmp2Result = tmp2(8072);
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -258,7 +258,7 @@ function ThreadOwner(arg0) {
       tmp16 = obj;
     }
     obj = { experimental_useNativeText: null, gradientColors: null, style: null, variant: "text-md/semibold", color: "text-default", children: null };
-    obj[0] = !tmp2(4039).isFabric();
+    obj[0] = !tmp2(4045).isFabric();
     let tmp18;
     if (tmp12) {
       tmp18 = processColorStringsArray;
@@ -292,7 +292,7 @@ function ThreadOwner(arg0) {
 function ChatBeginningRowThread(channel) {
   channel = channel.channel;
   const tmp = createCacheKey();
-  let obj = channel(8997);
+  let obj = channel(9003);
   const result = obj.isPrivateGuildChannel(channel);
   let obj1 = channel(5893);
   const appliedTags = obj1.useAppliedTags(channel);
@@ -358,7 +358,7 @@ function ChatBeginningRowGuildNonDefaultChannel(channel) {
   const tmp = importDefault;
   const tmp4 = computeChannelName(channel, false);
   const canResult1 = getUncachedChannelPermissions.can(constants2.MANAGE_ROLES, channel);
-  let obj = channel(8997);
+  let obj = channel(9003);
   const result = obj.isPrivateGuildChannel(channel);
   const canResult2 = getUncachedChannelPermissions.can(constants2.READ_MESSAGE_HISTORY, channel);
   const intl = channel(1236).intl;
@@ -390,7 +390,7 @@ function ChatBeginningRowGuildNonDefaultChannel(channel) {
       const obj2 = { channel: null, guild: null };
       obj2[0] = channel;
       obj2[1] = channel.guild;
-      tmp15Result = callback2(tmp(11832), obj2);
+      tmp15Result = callback2(tmp(11835), obj2);
     }
   }
   children[2] = tmp15Result;
@@ -421,7 +421,7 @@ function DMSpamButton(channel) {
   channel = channel.channel;
   const user = channel.user;
   let message;
-  let obj = channel(11951);
+  let obj = channel(11954);
   const dMMessageToReport = obj.useDMMessageToReport(channel, user.id, true === user.bot);
   message = dMMessageToReport.message;
   if (!channel.showingSpamBanner) {
@@ -592,7 +592,7 @@ function ChatBeginningRowDM(channel) {
   if (id == null) {
     id = closure_29;
   }
-  let tmp4Result = user(11959)(id);
+  let tmp4Result = user(11962)(id);
   c4 = tmp4Result;
   let obj = channel(589);
   let items = [recomputeFromAppTokens];
@@ -617,7 +617,7 @@ function ChatBeginningRowDM(channel) {
     return mutualGuilds;
   }, items2);
   let items3 = [user, channel];
-  const tmp4 = user(11959);
+  const tmp4 = user(11962);
   const effect = authorizedAppsFetchState.useEffect(() => {
     let getAvatarURL;
     let id;
@@ -649,9 +649,9 @@ function ChatBeginningRowDM(channel) {
   if (null == user) {
     return null;
   } else {
-    let tmp2Result = tmp2(4146);
+    let tmp2Result = tmp2(4148);
     userTag = tmp2Result.getUserTag(user, { decoration: "never", identifiable: "always" });
-    tmp2Result = tmp2(4146);
+    tmp2Result = tmp2(4148);
     const name = tmp2Result.getName(user);
     let intl6 = tmp7(1236).intl;
     let stringResult = intl6.string(tmp7(1236).t.Rzvnig);
@@ -714,7 +714,7 @@ function ChatBeginningRowDM(channel) {
       let obj8 = { style: null, userId: null, iconSize: 14 };
       obj8[0] = tmp.provisionalAccountExplainer;
       obj8[1] = user.id;
-      tmp15Result = tmp15(tmp7(11984).ChatProvisionalAccountExplainerCard, obj8);
+      tmp15Result = tmp15(tmp7(11987).ChatProvisionalAccountExplainerCard, obj8);
     }
     items5[4] = tmp15Result;
     let tmp18Result;
@@ -730,10 +730,10 @@ function ChatBeginningRowDM(channel) {
             obj = { user: null, onPressMutualGuild: null };
             obj[0] = tmp;
             obj[1] = function onPressMutualGuild(arg0) {
-              const result = callback(8789).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-              const obj = callback(8789);
-              callback(5957).transitionToGuild(arg0);
-              const obj2 = callback(5957);
+              const result = callback(8795).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+              const obj = callback(8795);
+              callback(5959).transitionToGuild(arg0);
+              const obj2 = callback(5959);
               callback2(4271).hideActionSheet();
               const obj3 = callback2(4271);
               callback2(4509).popWithKey(closure_40);
@@ -755,7 +755,7 @@ function ChatBeginningRowDM(channel) {
           obj[1] = channel(_undefined[95]).GuildIconSizes.SMALL;
           return callback(user(_undefined[95]), obj, guild.id);
         });
-        const items6 = [tmp15(tmp7(11975).GuildIconPile, obj10), ];
+        const items6 = [tmp15(tmp7(11978).GuildIconPile, obj10), ];
         let obj11 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
         obj11[0] = tmp.mutualGuildsLabel;
         let intl5 = tmp7(1236).intl;
@@ -960,7 +960,7 @@ function ChatBeginningRowGroupDM(channel) {
   first = tmp4[0];
   dependencyMap = tmp6;
   let obj = channel(589);
-  const items = [upsertRelationship];
+  const items = [markAllUserIdListsStale];
   const stateFromStores = obj.useStateFromStores(items, () => relationshipCount.getRelationshipCount() > 0);
   const items1 = [channel];
   callback = React.useCallback(() => {
@@ -1001,7 +1001,7 @@ function ChatBeginningRowGroupDM(channel) {
               c3 = 3;
             } else {
               dependencyMap(true);
-              let obj2 = outer1_1(7758);
+              let obj2 = outer1_1(7760);
               dependencyMap = 1;
               c3 = 1;
               const obj1 = { value: null, done: false };
@@ -1015,7 +1015,7 @@ function ChatBeginningRowGroupDM(channel) {
         } else if (arg0 !== 2) {
           closure_0 = arg1;
           if (null != closure_0) {
-            obj = outer1_0(9065);
+            obj = outer1_0(9071);
             obj.handleCopy(closure_0, closure_0, outer1_32.GROUP_DM, false);
           }
           dependencyMap(false);
@@ -1055,7 +1055,7 @@ function ChatBeginningRowGroupDM(channel) {
   obj = { style: tmp.centerHeader, children: null };
   obj = { style: tmp.avatarRedesign, channel, size: null, accessible: false };
   obj[2] = channel(1297).AvatarSizes.XXLARGE;
-  const items5 = [callback2(first(9663), obj), , , ];
+  const items5 = [callback2(first(9668), obj), , , ];
   let obj1 = { style: tmp.dmTitle, variant: null, color: "mobile-text-heading-primary", children: null };
   let str = "heading-xxl/extrabold";
   if (null != arr) {
@@ -1086,7 +1086,7 @@ function ChatBeginningRowGroupDM(channel) {
       const obj4 = { style: null, onPress: null, IconComponent: null, iconVariant: "default", title: null };
       obj4[0] = tmp.gdmInviteFriends;
       obj4[1] = callback2;
-      obj4[2] = tmp7(9721).GroupPlusIcon;
+      obj4[2] = tmp7(9726).GroupPlusIcon;
       const intl2 = tmp7(1236).intl;
       obj4[4] = intl2.string(tmp7(1236).t["LR+Ptf"]);
       tmp15Result = tmp15(ChatBeginningRowButton, obj4);
@@ -1116,7 +1116,7 @@ function ChatBeginningRowGroupDM(channel) {
     if (channel.hasFlag(ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) {
       const obj6 = { channelId: null };
       obj6[0] = channel.id;
-      tmp15Result1 = tmp15(first(11988), obj6);
+      tmp15Result1 = tmp15(first(11991), obj6);
     }
     const obj7 = { children: null };
     items6[2] = tmp15Result1;
@@ -1236,8 +1236,8 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
                 let closure_1 = tmp5;
                 let base64 = tmp2;
                 base64 = undefined;
-                outer1_1(9021).init(dependencyMap);
-                const obj7 = outer1_1(9021);
+                outer1_1(9027).init(dependencyMap);
+                const obj7 = outer1_1(9027);
                 let obj1 = { size: null };
                 obj1[0] = outer1_35;
                 dependencyMap = 1;
@@ -1257,9 +1257,9 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
             } else {
               base64 = arg1.base64;
               if (null != base64) {
-                obj = outer1_1(9021);
+                obj = outer1_1(9027);
                 obj.updateIcon(dependencyMap, base64);
-                obj1 = outer1_1(9021);
+                obj1 = outer1_1(9027);
                 obj1.open(dependencyMap, outer1_30.LANDING);
               }
               c3 = 3;

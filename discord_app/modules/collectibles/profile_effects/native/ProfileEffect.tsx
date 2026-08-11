@@ -39,7 +39,7 @@ function StaticEffect(useThumbnail) {
   let obj = thumbnailUrlOverride;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
   [tmp3, c0] = callback(thumbnailUrlOverride.useState(0), 2);
-  const height = reducedMotionSrc(1474)().height;
+  const height = reducedMotionSrc(1493)().height;
   callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -124,7 +124,7 @@ function ProfileEffect(profileEffect) {
   memo = undefined;
   const tmp2 = ref(React.useState(0), 2);
   memo = tmp2[1];
-  const height = memo1(1474)().height;
+  const height = memo1(1493)().height;
   React = tmp2[0];
   accessibilityLabel = profileEffect.accessibilityLabel;
   let items = [profileEffect.effects];
@@ -153,7 +153,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = React.useRef(-memo(9381).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = React.useRef(-memo(9387).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(React.useState([]), 2);
   closure_12 = React.useRef([]);
   closure_13 = React.useRef(false);
@@ -169,7 +169,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(React.useState([]), 2);
-  const tmp9Result = memo1(9384)(React.useCallback((arg0) => {
+  const tmp9Result = memo1(9390)(React.useCallback((arg0) => {
     if (ref.current) {
       if (!ref4.current) {
         tmp.current = true;
