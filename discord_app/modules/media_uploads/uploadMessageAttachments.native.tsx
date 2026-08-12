@@ -55,7 +55,7 @@ function _uploadMessageAttachments() {
               let closure_7;
               c4 = 1;
               set = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -70,11 +70,11 @@ function _uploadMessageAttachments() {
               set = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              const tmp16 = new callback2(7299)();
+              const tmp16 = new callback2(7338)();
               set = tmp16;
               const _HermesInternal = HermesInternal;
               closure_6 = "pending-upload-" + set._file.id;
-              let obj2 = callback(4523);
+              let obj2 = callback(4563);
               obj2 = {};
               const merged = Object.assign(callback2);
               obj2.key = closure_6;

@@ -3,10 +3,11 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04725_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04765_LinearGradient.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import { GuildPowerupCardFooterActive } from "GuildPowerupsCardFooter.tsx";
 
 let c4;
@@ -49,56 +50,75 @@ export default function GuildPowerupsPerkCard(arg0) {
   const tmp2 = createCacheKey();
   let obj = AccessibilityAnnouncer;
   const tmp5 = useTheme();
+  let obj1 = apexExperiment;
+  const manaTypeConsolidationExperiment = obj1.useManaTypeConsolidationExperiment("GuildPowerupsPerkCard");
+  const isThemeDarkResult = obj.isThemeDark(useTheme());
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(11930);
+  let tmp3Result = tmp3(11987);
   if (riveComponent == null) {
-    tmp3Result = tmp3(11887);
+    tmp3Result = tmp3(11944);
     if (imageUrl == null) {
       imageUrl = "";
     }
-    const obj1 = { imageUrl: null, isAnimated: null };
+    obj1 = { imageUrl: null, isAnimated: null };
     obj1[0] = imageUrl;
     obj1[1] = isImageAnimated;
     riveComponent = callback(tmp3Result, obj1);
-    const tmp11 = callback;
+    const tmp13 = callback;
   }
   const items1 = [riveComponent, ];
-  const tmp7 = obj.isThemeDark(useTheme()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
+  const tmp9 = obj.isThemeDark(useTheme()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
   items1[1] = callback(LinearGradient, { colors: obj.isThemeDark(useTheme()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"], style: tmp2.gradient });
   obj[1] = items1;
   const items2 = [closure_5(View, obj), , , ];
   const obj3 = { style: tmp2.contentContainer, children: null };
   const obj4 = { style: tmp2.headerContainer, children: null };
-  const items3 = [callback(Text.Text, { variant: "heading-md/bold", children: title }), callback(Text.Text, { variant: "text-sm/medium", children: description })];
+  let str;
+  if (manaTypeConsolidationExperiment) {
+    str = "text-strong";
+  }
+  const obj5 = { color: str, variant: null, children: null };
+  let str2 = "heading-md/bold";
+  if (manaTypeConsolidationExperiment) {
+    str2 = "experimental/heading-md/semibold";
+  }
+  obj5[1] = str2;
+  obj5[2] = title;
+  const items3 = [callback(Text.Text, obj5), ];
+  let str3 = "text-sm/medium";
+  if (manaTypeConsolidationExperiment) {
+    str3 = "experimental/body-sm/normal";
+  }
+  items3[1] = callback(Text.Text, { variant: str3, children: description });
   obj4[1] = items3;
   const items4 = [closure_5(View, obj4), ];
-  const obj5 = {};
+  const obj6 = {};
   const merged1 = Object.assign(merged);
-  obj5.status = status;
-  items4[1] = callback(GuildPowerupCardFooterActive.GuildPowerupsCardFooter, obj5);
+  obj6.status = status;
+  items4[1] = callback(GuildPowerupCardFooterActive.GuildPowerupsCardFooter, obj6);
   obj3[1] = items4;
   items2[1] = closure_5(View, obj3);
-  let tmp13Result = "new" === badge;
-  if (tmp13Result) {
-    const obj6 = { text: null, style: null };
+  let tmp15Result = "new" === badge;
+  if (tmp15Result) {
+    const obj7 = { text: null, style: null };
     const intl = tmp6(1236).intl;
-    obj6[0] = intl.string(tmp6(1236).t.y2b7CA);
-    obj6[1] = tmp2.badge;
-    tmp13Result = tmp13(tmp6(1297).TextBadge, obj6);
+    obj7[0] = intl.string(tmp6(1236).t.y2b7CA);
+    obj7[1] = tmp2.badge;
+    tmp15Result = tmp15(tmp6(1297).TextBadge, obj7);
   }
-  items2[2] = tmp13Result;
-  tmp13Result = "beta" === badge;
-  if (tmp13Result) {
-    const obj7 = { text: null, color: null, style: null };
+  items2[2] = tmp15Result;
+  tmp15Result = "beta" === badge;
+  if (tmp15Result) {
+    const obj8 = { text: null, color: null, style: null };
     const intl2 = tmp6(1236).intl;
-    obj7[0] = intl2.string(tmp6(1236).t.oW0eUd);
-    obj7[1] = tmp6(1297).BadgeColors.BRAND;
-    obj7[2] = tmp2.badge;
-    tmp13Result = tmp13(tmp6(1297).TextBadge, obj7);
+    obj8[0] = intl2.string(tmp6(1236).t.oW0eUd);
+    obj8[1] = tmp6(1297).BadgeColors.BRAND;
+    obj8[2] = tmp2.badge;
+    tmp15Result = tmp15(tmp6(1297).TextBadge, obj8);
   }
-  items2[3] = tmp13Result;
+  items2[3] = tmp15Result;
   obj[4] = items2;
   return closure_5(tmp3Result, obj);
 };

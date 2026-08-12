@@ -24,7 +24,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1499);
   navigation = obj.useNavigation();
   [tmp5, c2] = callback1(React.useState({ type: "loading" }), 2);
-  let obj1 = modalSessionId(4519);
+  let obj1 = modalSessionId(4559);
   const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   callback = React.useCallback(() => {
@@ -190,18 +190,18 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     let obj2 = { variant: "text-md/medium", color: "text-strong", children: null };
     let intl = tmp(1236).intl;
     obj2[2] = intl.string(navigation(2821).MlFuBI);
-    items3[1] = callback(tmp(4299).Text, obj2);
+    items3[1] = callback(tmp(4340).Text, obj2);
     obj1[3] = items3;
-    obj[0] = callback2(tmp(4712).Stack, obj1);
-    obj[0] = callback(tmp(7810).ModalContent, obj);
-    let tmp14 = callback(tmp(7809).ModalScreen, obj);
+    obj[0] = callback2(tmp(4752).Stack, obj1);
+    obj[0] = callback(tmp(7849).ModalContent, obj);
+    let tmp14 = callback(tmp(7848).ModalScreen, obj);
   } else {
     let obj3 = { children: null };
     let obj4 = { children: null };
     let obj5 = { align: "center", justify: "center", spacing: 16, children: null };
     let obj6 = { variant: "text-md/medium", color: "text-strong", children: null };
     obj6[2] = tmp5.message;
-    const items4 = [callback(tmp(4299).Text, obj6), ];
+    const items4 = [callback(tmp(4340).Text, obj6), ];
     let obj7 = { children: null };
     let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
     let intl2 = tmp(1236).intl;
@@ -210,12 +210,12 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
       const result = modalSessionId(_undefined[18]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(_undefined[18]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, modalSessionId(_undefined[18]).AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj7[0] = callback(tmp(4714).Button, obj8);
-    items4[1] = callback(tmp(5150).ButtonGroup, obj7);
+    obj7[0] = callback(tmp(4754).Button, obj8);
+    items4[1] = callback(tmp(5190).ButtonGroup, obj7);
     obj5[3] = items4;
-    obj4[0] = callback2(tmp(4712).Stack, obj5);
-    obj3[0] = callback(tmp(7810).ModalContent, obj4);
-    tmp14 = callback(tmp(7809).ModalScreen, obj3);
+    obj4[0] = callback2(tmp(4752).Stack, obj5);
+    obj3[0] = callback(tmp(7849).ModalContent, obj4);
+    tmp14 = callback(tmp(7848).ModalScreen, obj3);
   }
   return tmp14;
 };

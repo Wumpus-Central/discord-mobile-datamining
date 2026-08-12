@@ -16,14 +16,14 @@ export function consumeNextFavoritesGuildViewSource() {
   const manual_browsing = "manual_browsing";
   return manual_browsing;
 }
-export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAddToFavorites(closure_1, channel_type, length) {
+export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAddToFavorites(source, type, length) {
   let obj = expandEventProperties;
-  obj = { source: closure_1, channel_type, total_favorites: length };
+  obj = { source, channel_type: type, total_favorites: length };
   obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, obj);
 };
-export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(c3, length) {
+export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(channel_type, length) {
   let obj = expandEventProperties;
-  obj = { channel_type: c3, total_favorites: length };
+  obj = { channel_type, total_favorites: length };
   obj.track(AnalyticEvents.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, obj);
 };
 export const trackFavoritesGuildOrderUpdated = function trackFavoritesGuildOrderUpdated() {

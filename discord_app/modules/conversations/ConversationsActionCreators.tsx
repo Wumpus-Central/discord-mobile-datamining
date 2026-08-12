@@ -77,7 +77,7 @@ function _fetchChannelConversations() {
               let conversations;
               hydrateMessages = 1;
               c8 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -138,7 +138,7 @@ function _fetchChannelConversations() {
                     return obj5;
                   }
                 }
-                obj15 = callback(8560);
+                obj15 = callback(8599);
               }
             } else if (2 === tmp7) {
               c6 = 0;
@@ -313,7 +313,7 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(8560);
+              obj14 = callback(8599);
               tmp52 = callback;
             }
           } else {

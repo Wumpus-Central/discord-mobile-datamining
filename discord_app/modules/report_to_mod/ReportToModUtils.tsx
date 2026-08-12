@@ -57,8 +57,8 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
       obj = { user: null, context: null, checkElevated: false };
       obj[0] = contextForPermission.user;
       obj[1] = guild;
-      hasAnyResult = obj2.hasAny(importAll(3953).computePermissions(obj), ReportToModPermissions);
-      const obj3 = importAll(3953);
+      hasAnyResult = obj2.hasAny(importAll(3994).computePermissions(obj), ReportToModPermissions);
+      const obj3 = importAll(3994);
     }
     return hasAnyResult;
   }
@@ -179,8 +179,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(5909).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5912).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(5909);
+          tmp9 = !tmp10(5948).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5951).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(5948);
         }
         return tmp9;
       } else {

@@ -27,7 +27,7 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
   } else {
     const _Math = Math;
     const rounded = Math.round(time);
-    if (unit === tmp(4379).TimeUnits.HOURS) {
+    if (unit === tmp(4419).TimeUnits.HOURS) {
       const intl2 = tmp(1236).intl;
       obj = { hours: null };
       obj[0] = rounded;

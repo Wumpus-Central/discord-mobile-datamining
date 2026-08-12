@@ -4,7 +4,7 @@ import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalSce
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/10578_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/10619_registerAsset.js";
 import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 
 let c5;
@@ -22,7 +22,7 @@ export default function CrunchyrollLinkLanding() {
     const obj = { label: null, icon: null };
     const intl = navigation(1236).intl;
     obj[0] = intl.string(navigation(1236).t["2TXHQd"]);
-    obj[1] = navigation(8861).PlayIcon;
+    obj[1] = navigation(8900).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -40,5 +40,5 @@ export default function CrunchyrollLinkLanding() {
   obj[5] = combined.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(10503).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: null, imgStyle: null, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(10544).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: null, imgStyle: null, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

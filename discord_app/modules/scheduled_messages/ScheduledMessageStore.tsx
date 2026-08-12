@@ -3,12 +3,13 @@ import { Store } from "initialize";
 import set from "set";
 
 function reset() {
-  let closure_3 = {};
+  let c0 = false;
+  let closure_1 = {};
+  const set = new Set();
 }
 let c0 = false;
 let closure_1 = {};
 let set = new Set();
-let closure_3 = {};
 class ScheduledMessageStore extends Store {
 }
 const prototype = ScheduledMessageStore.prototype;
@@ -18,9 +19,6 @@ prototype["getMessagesPendingDeletion"] = function getMessagesPendingDeletion() 
 prototype["getScheduledMessagesForInbox"] = function getScheduledMessagesForInbox() {
   return closure_1;
 };
-prototype["getPendingScheduledMessage"] = function getPendingScheduledMessage(arg0) {
-  return table[arg0];
-};
 Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return c0;
@@ -29,16 +27,11 @@ Object.defineProperty(prototype, "loading", {
 });
 ScheduledMessageStore.displayName = "scheduledMessageStore";
 const scheduledMessageStore = new ScheduledMessageStore(require("dispatcher"), {
-  SCHEDULED_MESSAGES_CREATE_SUCCESS: function handleScheduledMessageCreateSuccess(arg0) {
-    let channelId;
-    let scheduledMessageSend;
-    ({ channelId, scheduledMessageSend } = arg0);
-    let obj = {};
+  SCHEDULED_MESSAGES_CREATE_SUCCESS: function handleScheduledMessageCreateSuccess(scheduledMessageSend) {
+    scheduledMessageSend = scheduledMessageSend.scheduledMessageSend;
+    const obj = {};
     const merged = Object.assign(obj);
     obj[scheduledMessageSend.scheduledMessageId] = scheduledMessageSend;
-    obj = {};
-    const merged1 = Object.assign(obj);
-    delete tmp[tmp2];
   },
   SCHEDULED_MESSAGES_UPDATE_SUCCESS: function handleScheduledMessageUpdateSuccess(scheduledMessageSend) {
     scheduledMessageSend = scheduledMessageSend.scheduledMessageSend;
@@ -101,17 +94,6 @@ const scheduledMessageStore = new ScheduledMessageStore(require("dispatcher"), {
     } else {
       let c0 = false;
     }
-  },
-  CREATE_PENDING_SCHEDULED_MESSAGE: function handleCreatePendingScheduledMessage(channelId) {
-    channelId = channelId.channelId;
-    const obj = {};
-    const merged = Object.assign(obj);
-    obj[channelId] = { channelId, scheduledTimestamp: channelId.scheduledTimestamp };
-  },
-  DELETE_PENDING_SCHEDULED_MESSAGE: function handleDeletePendingScheduledMessage(arg0) {
-    const obj = {};
-    const merged = Object.assign(obj);
-    delete tmp[tmp2];
   },
   LOGOUT: reset,
   CONNECTION_OPEN: reset

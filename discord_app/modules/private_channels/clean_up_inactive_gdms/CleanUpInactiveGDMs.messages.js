@@ -1,6 +1,8 @@
 // discord_app/modules/private_channels/clean_up_inactive_gdms/CleanUpInactiveGDMs.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03338_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03339_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03340_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03341_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03342_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03365_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03366_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03367_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03368_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03369_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03370_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

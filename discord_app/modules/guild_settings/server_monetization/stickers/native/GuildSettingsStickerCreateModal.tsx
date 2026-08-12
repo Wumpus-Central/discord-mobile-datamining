@@ -14,14 +14,14 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
   let dependencyMap;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(9680)());
-  const tmp2 = stickerId(9680)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(9720)());
+  const tmp2 = stickerId(9720)();
   const tmp3 = c3;
   const intl = getSystemLocale.intl;
   if (null != stickerId) {
   } else {
   }
-  const tmp4 = stickerId(9682);
+  const tmp4 = stickerId(9722);
   return tmp3(tmp4, {
     screenKey: "guild-settings-sticker-create",
     title: intl.string(_3DzNjU),

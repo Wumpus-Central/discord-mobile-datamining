@@ -1,37 +1,37 @@
 // discord_common/js/packages/i18n/i18n.tsx
-import 16327__ from "../../../../_runtime/metro/16327__.js";
-import 16328__ from "../../../../_runtime/metro/16328__.js";
-import 16329__ from "../../../../_runtime/metro/16329__.js";
-import 16330__ from "../../../../_runtime/metro/16330__.js";
-import 16331__ from "../../../../_runtime/metro/16331__.js";
-import 16332__ from "../../../../_runtime/metro/16332__.js";
-import 16333__ from "../../../../_runtime/metro/16333__.js";
-import 16334__ from "../../../../_runtime/metro/16334__.js";
-import 16335__ from "../../../../_runtime/metro/16335__.js";
-import 16336__ from "../../../../_runtime/metro/16336__.js";
-import 16337__ from "../../../../_runtime/metro/16337__.js";
-import 16338__ from "../../../../_runtime/metro/16338__.js";
-import 16339__ from "../../../../_runtime/metro/16339__.js";
-import 16340__ from "../../../../_runtime/metro/16340__.js";
-import 16341__ from "../../../../_runtime/metro/16341__.js";
-import 16342__ from "../../../../_runtime/metro/16342__.js";
-import 16343__ from "../../../../_runtime/metro/16343__.js";
-import 16344__ from "../../../../_runtime/metro/16344__.js";
-import 16345__ from "../../../../_runtime/metro/16345__.js";
-import 16346__ from "../../../../_runtime/metro/16346__.js";
-import 16347__ from "../../../../_runtime/metro/16347__.js";
-import 16348__ from "../../../../_runtime/metro/16348__.js";
-import 16349__ from "../../../../_runtime/metro/16349__.js";
-import 16350__ from "../../../../_runtime/metro/16350__.js";
-import 16351__ from "../../../../_runtime/metro/16351__.js";
-import 16352__ from "../../../../_runtime/metro/16352__.js";
-import 16353__ from "../../../../_runtime/metro/16353__.js";
-import 16354__ from "../../../../_runtime/metro/16354__.js";
+import 16384__ from "../../../../_runtime/metro/16384__.js";
+import 16385__ from "../../../../_runtime/metro/16385__.js";
+import 16386__ from "../../../../_runtime/metro/16386__.js";
+import 16387__ from "../../../../_runtime/metro/16387__.js";
+import 16388__ from "../../../../_runtime/metro/16388__.js";
+import 16389__ from "../../../../_runtime/metro/16389__.js";
+import 16390__ from "../../../../_runtime/metro/16390__.js";
+import 16391__ from "../../../../_runtime/metro/16391__.js";
+import 16392__ from "../../../../_runtime/metro/16392__.js";
+import 16393__ from "../../../../_runtime/metro/16393__.js";
+import 16394__ from "../../../../_runtime/metro/16394__.js";
+import 16395__ from "../../../../_runtime/metro/16395__.js";
+import 16396__ from "../../../../_runtime/metro/16396__.js";
+import 16397__ from "../../../../_runtime/metro/16397__.js";
+import 16398__ from "../../../../_runtime/metro/16398__.js";
+import 16399__ from "../../../../_runtime/metro/16399__.js";
+import 16400__ from "../../../../_runtime/metro/16400__.js";
+import 16401__ from "../../../../_runtime/metro/16401__.js";
+import 16402__ from "../../../../_runtime/metro/16402__.js";
+import 16403__ from "../../../../_runtime/metro/16403__.js";
+import 16404__ from "../../../../_runtime/metro/16404__.js";
+import 16405__ from "../../../../_runtime/metro/16405__.js";
+import 16406__ from "../../../../_runtime/metro/16406__.js";
+import 16407__ from "../../../../_runtime/metro/16407__.js";
+import 16408__ from "../../../../_runtime/metro/16408__.js";
+import 16409__ from "../../../../_runtime/metro/16409__.js";
+import 16410__ from "../../../../_runtime/metro/16410__.js";
+import 16411__ from "../../../../_runtime/metro/16411__.js";
 import { EventEmitter } from "EventEmitter";
 import { format } from "parse.tsx";
 
 let require = arg1;
-global.IntlMessageFormat = require("module_16318");
+global.IntlMessageFormat = require("module_16375");
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -137,11 +137,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(16360);
+        obj = self(16417);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(16360).getMessage(tmp7, tmp);
+          return self(16417).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -170,7 +170,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("module_16359"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("module_16416"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {
@@ -348,7 +348,7 @@ prototype["_fetchMessages"] = function _fetchMessages(outer1_2) {
     return tmp();
   }
 };
-let result = require("module_16328").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
+let result = require("module_16385").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
 export const getSystemLocale = require("getSystemLocale").getSystemLocale;
 export { I18N };

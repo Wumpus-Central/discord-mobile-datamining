@@ -192,7 +192,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   } else {
     let tmp21 = callback(currentTier);
     const tmp27 = callback(nextTier);
-    const giftingBadgeProgressPercent = tmp7(12849).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const giftingBadgeProgressPercent = tmp7(12908).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
     if (null != nextTier) {
       const intl2 = tmp7(1236).intl;
       obj = { count: null, nextTier: null };
@@ -234,13 +234,13 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj5 = { icon: null, size: 36, style: null };
       obj5[0] = currentTier.simple_icon_url;
       obj5[2] = { margin: 4 };
-      tmp14 = callback2(tmp(10046), obj5);
+      tmp14 = callback2(tmp(10087), obj5);
     }
     let items1 = [tmp14, , ];
     const obj6 = { style: null, variant: "text-md/medium", color: "text-strong", children: null };
     obj6[0] = tmp3.progressTitleText;
     obj6[3] = formatToPlainStringResult;
-    items1[1] = callback2(tmp7(4299).Text, obj6);
+    items1[1] = callback2(tmp7(4340).Text, obj6);
     let simple_icon_url1;
     if (nextTier != null) {
       simple_icon_url1 = nextTier.simple_icon_url;
@@ -250,7 +250,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj7 = { icon: null, size: 36, style: null };
       obj7[0] = nextTier.simple_icon_url;
       obj7[2] = { margin: 4 };
-      tmp16Result = tmp16(tmp(10046), obj7);
+      tmp16Result = tmp16(tmp(10087), obj7);
     }
     items1[2] = tmp16Result;
     obj4[1] = items1;
@@ -283,7 +283,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const obj14 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     obj13[1] = tmp21;
     obj14[2] = intl3.format(tmp(2399).iIpfQe, obj13);
-    obj12[1] = callback2(tmp7(4299).Text, obj14);
+    obj12[1] = callback2(tmp7(4340).Text, obj14);
     items4[1] = callback2(closure_6, obj12);
     obj8[1] = items4;
     items2[1] = closure_10(closure_6, obj8);
@@ -292,7 +292,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const obj15 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj16 = { size: "sm", color: null };
     obj16[1] = tmp(712).unsafe_rawColors.WHITE;
-    obj15[1] = callback2(tmp7(9580).GiftIcon, obj16);
+    obj15[1] = callback2(tmp7(9620).GiftIcon, obj16);
     const intl4 = tmp7(1236).intl;
     obj15[2] = intl4.string(tmp(2399).DZnomS);
     obj15[3] = function onPress() {
@@ -300,7 +300,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       obj = { analyticsLocation, analyticsLocations };
       obj.openGiftModal(obj);
     };
-    items5[1] = callback2(tmp7(4714).Button, obj15);
+    items5[1] = callback2(tmp7(4754).Button, obj15);
     const obj17 = { style: null };
     obj17[0] = tmp3.divider;
     items5[2] = callback2(closure_6, obj17);
@@ -312,11 +312,11 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const obj19 = { variant: "text-sm/medium", color: "text-strong", children: null };
     const intl5 = tmp7(1236).intl;
     obj19[2] = intl5.string(tmp(2399).WZ4cXA);
-    const items6 = [callback2(tmp7(4299).Text, obj19), ];
+    const items6 = [callback2(tmp7(4340).Text, obj19), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(12851).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(12910).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(9484).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(9524).ChevronSmallDownIcon;
     }
     const obj20 = { color: null };
     obj20[0] = tmp(712).colors.INTERACTIVE_ICON_DEFAULT;
@@ -364,7 +364,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       obj23[0] = tmp3.footerText;
       const intl6 = tmp7(1236).intl;
       obj23[3] = intl6.string(tmp(2399)["4Yp0mI"]);
-      items7[1] = tmp16(tmp7(4299).Text, obj23);
+      items7[1] = tmp16(tmp7(4340).Text, obj23);
       obj21[0] = items7;
       tmp11Result = tmp11(closure_11, obj21);
     }

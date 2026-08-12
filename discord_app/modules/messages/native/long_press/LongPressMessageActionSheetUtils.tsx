@@ -16,7 +16,7 @@ import { allowChannelAccess } from "../../../../utils/ChannelUtils.tsx";
 import { _copy } from "../../../../utils/ClipboardUtils.native.tsx";
 import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 import { openCreateForumPostModal } from "../../../forums/native/composer/ForumComposerModalActionCreators.tsx";
-import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { createPendingReply } from "../../../replies/PendingReplyActionCreators.tsx";
 import { transitionTo } from "../../../routing/router_utils.tsx";
 import { patchThread } from "../../../threads/ThreadActionCreators.tsx";
@@ -46,7 +46,7 @@ function handleEdit(id, isForumPost, current, source) {
         obj = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
         ({ guild_id: obj9[0], parent_id: obj9[1], id: obj9[2] } = isForumPost);
         obj[3] = id.id;
-        const items = [tmp(5748).FORUM_CHANNEL, tmp(5748).GUILD_CHANNEL];
+        const items = [tmp(5787).FORUM_CHANNEL, tmp(5787).GUILD_CHANNEL];
         obj[5] = items;
         obj = { page: null, section: null, object: null };
         obj[0] = constants3.GUILD_CHANNEL;
@@ -147,8 +147,8 @@ export const handleCreateThread = function handleCreateThread(guild_id, id, Mess
   let result1 = null == id;
   if (!result1) {
     let tmpResult = tmp(11);
-    result1 = navigationToRootTabHelper.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj2 = navigationToRootTabHelper;
+    result1 = coerceMainRoute.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj2 = coerceMainRoute;
   }
   if (!result1) {
     tmpResult = tmp(11);
@@ -162,9 +162,9 @@ export const handleCopyMessageLink = function handleCopyMessageLink(channel, mes
   obj.track(constants.MESSAGE_LINK_COPIED, obj);
   const channelPermalink = allowChannelAccess.getChannelPermalink(channel.guild_id, channel.id, message_id);
   if (null != channelPermalink) {
-    let tmp3Result = tmp3(5756);
+    let tmp3Result = tmp3(5795);
     tmp3Result.copy(channelPermalink);
-    tmp3Result = tmp3(4020);
+    tmp3Result = tmp3(4061);
     tmp3Result.presentLinkCopied();
   }
 };

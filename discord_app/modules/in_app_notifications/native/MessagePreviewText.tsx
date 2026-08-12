@@ -161,7 +161,7 @@ PlatformTypes = { width: 4, marginTop: -require("Themes").space.PX_8, marginBott
 createCacheKey[1] = PlatformTypes;
 createCacheKey = { flex: 1, gap: require("Themes").space.PX_4, paddingVertical: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_8 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: require("Themes").radii.xs, overflow: "hidden", height: 60, width: "disabled" };
+createCacheKey[3] = { borderRadius: require("Themes").radii.xs, overflow: "hidden", height: 60, width: "channel" };
 createCacheKey[4] = { width: "100%", height: "100%" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
@@ -177,18 +177,18 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(9811);
+  let obj = message(9852);
   const previewableMedia = obj.usePreviewableMedia(message);
-  let obj1 = message(4532);
+  let obj1 = message(4572);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(9819);
+  let tmpResult = tmp(9860);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(9820);
+  tmpResult = tmp(9861);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -219,7 +219,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessage(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(9811).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(9852).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -243,15 +243,15 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(9773);
+      tmp(9814);
       if (null != channel) {
         const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
         obj6[0] = channel;
         obj6[1] = message;
-        obj6[3] = tmp(3998).ChannelListLayoutTypes.COZY;
+        obj6[3] = tmp(4039).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(9795).ChannelRowPreview, obj6);
+        return callback(tmp(9836).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };
@@ -270,7 +270,7 @@ export default function MessagePreviewText(message) {
           const obj9 = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
           obj9[2] = closure_7;
           obj9[3] = secondaryText;
-          tmp17Result = callback(tmp(4299).Text, obj9);
+          tmp17Result = callback(tmp(4340).Text, obj9);
         }
         const obj10 = { children: null };
         items2[1] = tmp17Result;
@@ -295,7 +295,7 @@ export default function MessagePreviewText(message) {
       const obj14 = { variant: "redesign/message-preview/medium", color: "text-default", lineClamp: null, children: null };
       obj14[2] = closure_7;
       obj14[3] = message.poll.question.text;
-      items3[1] = callback(tmp(4299).Text, obj14);
+      items3[1] = callback(tmp(4340).Text, obj14);
       obj12[0] = items3;
       return callback2(View, obj12);
     } else {

@@ -3,8 +3,8 @@ import initialize from "initialize";
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
-import { registerAsset } from "../../../_runtime/16009_registerAsset.js";
-import { registerAsset } from "../../../_runtime/16010_registerAsset.js";
+import { registerAsset } from "../../../_runtime/16066_registerAsset.js";
+import { registerAsset } from "../../../_runtime/16067_registerAsset.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
@@ -34,7 +34,7 @@ Suppressed.prototype["render"] = function render() {
     tmp6 = importDefault;
     tmp7 = registerAsset;
   }
-  return jsx(tmp6(4732), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(4772), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
 const result = require("jsxProd").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 

@@ -47,10 +47,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj2.useStateFromStores(items1, () => ref(1363).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11296));
+    let assetSource = resolveAssetSource(tmp11(11350));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11297));
+    assetSource = resolveAssetSource(tmp11(11351));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -162,7 +162,7 @@ export default function ClassificationEvidence(arg0) {
       obj[9] = uri.id;
       return obj;
     });
-    ref(8850).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
+    ref(8889).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
   }, items4);
   const items6 = [first2.attachments];
   const callback1 = obj1.useCallback((arg0) => {
@@ -208,7 +208,7 @@ export default function ClassificationEvidence(arg0) {
     obj = { style: null, children: null };
     obj[0] = attachments.dummyVideoAttachments;
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(4491).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(4531).isVideoFile(filename.filename));
     obj[1] = first2.map((uri) => {
       let closure_0 = uri;
       obj = {
@@ -229,7 +229,7 @@ export default function ClassificationEvidence(arg0) {
         }
       };
       obj = { uri: uri.url };
-      return outer1_18(first(8877), obj, arg1);
+      return outer1_18(first(8916), obj, arg1);
     });
     items8[1] = callback(tmp24, obj);
     obj[0] = items8;
@@ -238,11 +238,11 @@ export default function ClassificationEvidence(arg0) {
     obj1 = { ref: null, onTapImage: null, inverted: false };
     obj1[0] = ref;
     obj1[1] = callback;
-    const items9 = [callback(tmp13(11298), obj1), ];
+    const items9 = [callback(tmp13(11352), obj1), ];
     obj2 = { rowGenerator: null, message: null, modifyRow: null };
     obj2[0] = closure_20;
-    let tmp13Result = tmp13(8595);
-    tmpResult = tmp(4523);
+    let tmp13Result = tmp13(8634);
+    tmpResult = tmp(4563);
     const obj3 = { id: null, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     obj3[0] = first2.id;
     const _Date = Date;

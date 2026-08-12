@@ -22,8 +22,8 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   }
   let name = obj.getName(guild_id, id, user);
   if (name == null) {
-    name = tmp3(4148).getGlobalName(user);
-    const tmp3Result = tmp3(4148);
+    name = tmp3(4189).getGlobalName(user);
+    const tmp3Result = tmp3(4189);
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl18 = getSystemLocale.intl;

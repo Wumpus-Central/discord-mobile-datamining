@@ -17,7 +17,7 @@ function LinkedLobbyFormSection(channel) {
   let importDefault;
   let obj = channel(1499);
   importDefault = obj.useNavigation();
-  let obj1 = channel(5734);
+  let obj1 = channel(5773);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -39,8 +39,8 @@ function LinkedLobbyFormSection(channel) {
     obj[3] = function onPress() {
 
     };
-    obj[2] = callback(tmp(5374).TableRow, obj);
-    tmp5 = callback(tmp(5767).TableRowGroup, obj);
+    obj[2] = callback(tmp(5413).TableRow, obj);
+    tmp5 = callback(tmp(5806).TableRowGroup, obj);
     const obj2 = { id: null, icon: null };
     const obj6 = getAvatarURL;
   }
@@ -80,23 +80,23 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
       obj3[0] = intl.string(tmp(1236).t.jp25Id);
       const intl2 = tmp(1236).intl;
       obj3[1] = intl2.string(tmp(1236).t.mKIOkI);
-      obj3[2] = tmp6(tmp(15823).WebhookIcon, {});
+      obj3[2] = tmp6(tmp(15879).WebhookIcon, {});
       obj3[4] = function onPress() {
         return arr.push(outer1_4.WEBHOOKS);
       };
-      const items1 = [tmp6(tmp(5374).TableRow, obj3), ];
+      const items1 = [tmp6(tmp(5413).TableRow, obj3), ];
       const obj4 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
       const intl3 = tmp(1236).intl;
       obj4[0] = intl3.string(tmp(1236).t.OrV60r);
       const intl4 = tmp(1236).intl;
       obj4[1] = intl4.string(tmp(1236).t.rQREJl);
-      obj4[2] = tmp6(tmp(15929).ChannelsFollowedIcon, {});
+      obj4[2] = tmp6(tmp(15986).ChannelsFollowedIcon, {});
       obj4[4] = function onPress() {
         return arr.push(outer1_4.CHANNELS_FOLLOWED);
       };
-      items1[1] = tmp6(tmp(5374).TableRow, obj4);
+      items1[1] = tmp6(tmp(5413).TableRow, obj4);
       obj2[1] = items1;
-      canManageWebhooks = tmp7(tmp(5767).TableRowGroup, obj2);
+      canManageWebhooks = tmp7(tmp(5806).TableRowGroup, obj2);
     }
     const items2 = [canManageWebhooks, ];
     if (canUnlinkLobby) {
@@ -109,8 +109,8 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     }
     items2[1] = canUnlinkLobby;
     obj[2] = items2;
-    obj[1] = closure_6(tmp(4712).Stack, obj);
-    tmp6Result = tmp6(tmp(7969).Form, obj);
+    obj[1] = closure_6(tmp(4752).Stack, obj);
+    tmp6Result = tmp6(tmp(8008).Form, obj);
   }
   return tmp6Result;
 };

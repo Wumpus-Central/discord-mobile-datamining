@@ -53,53 +53,125 @@ function _loadJsonAsset() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      let asset1 = 0;
-      let uri = tmp2;
-      if (flag === undefined) {
-        flag = true;
-      }
-      yield "ct";
-      if (null != dependencyMap[callback]) {
-        if (flag) {
-          let DCDFileManager = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = dependencyMap[callback];
-          return obj2;
+      if (DCDFileManager === 2) {
+        DCDFileManager = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-      }
-      uri = closure_4.resolveAssetSource(callback).uri;
-      const obj3 = callback(uri[32]);
-      if (obj3.isAndroid()) {
-        const obj4 = flag(uri[33]);
-        let asset;
-        if (obj4 != null) {
-          asset = obj4.readAsset(uri, "utf8");
-        }
-        asset1 = asset;
       } else {
-        DCDFileManager = DCDFileManager.DCDFileManager;
-        asset1 = DCDFileManager.readAsset(uri, "utf8");
-      }
-      if (null == asset1) {
-        const _Error = Error;
-        const error = new Error("RTNFileManager doesn't exist?");
-        throw error;
-      }
-      closure_4 = yield asset1;
-      if (null == closure_4) {
-        return null;
-      }
-      if (null != dependencyMap[callback]) {
-        if (flag) {
-          DCDFileManager = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = dependencyMap[callback];
-          return obj5;
+        try {
+          DCDFileManager = 2;
+          if (0 === closure_4) {
+            if (arg0 === 1) {
+              DCDFileManager = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              DCDFileManager = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let asset1 = 0;
+              let uri = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              uri = undefined;
+              asset1 = undefined;
+              closure_4 = undefined;
+              DCDFileManager = undefined;
+              closure_4 = 1;
+              DCDFileManager = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              DCDFileManager = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              DCDFileManager = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              if (null != dependencyMap[callback]) {
+                if (flag) {
+                  DCDFileManager = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = dependencyMap[callback];
+                  return obj2;
+                }
+              }
+              uri = closure_4.resolveAssetSource(callback).uri;
+              let obj3 = callback(uri[32]);
+              if (obj3.isAndroid()) {
+                let obj4 = flag(uri[33]);
+                let asset;
+                if (obj4 != null) {
+                  asset = obj4.readAsset(uri, "utf8");
+                }
+                asset1 = asset;
+              } else {
+                DCDFileManager = DCDFileManager.DCDFileManager;
+                asset1 = DCDFileManager.readAsset(uri, "utf8");
+              }
+              if (null == asset1) {
+                const _Error = Error;
+                const error = new Error("RTNFileManager doesn't exist?");
+                throw error;
+              } else {
+                closure_4 = 2;
+                DCDFileManager = 1;
+                obj3 = { value: null, done: false };
+                obj3[0] = asset1;
+                return obj3;
+              }
+            }
+          } else if (arg0 === 1) {
+            DCDFileManager = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            DCDFileManager = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            closure_4 = arg1;
+            if (null == closure_4) {
+              DCDFileManager = 3;
+              return { value: null, done: true };
+            } else {
+              if (null != dependencyMap[callback]) {
+                if (flag) {
+                  DCDFileManager = 3;
+                  const obj5 = { value: null, done: true };
+                  obj5[0] = dependencyMap[callback];
+                  return obj5;
+                }
+              }
+              const _JSON = JSON;
+              DCDFileManager = JSON.parse(closure_4);
+              dependencyMap[callback] = DCDFileManager;
+              DCDFileManager = 3;
+              obj = { value: null, done: true };
+              obj[0] = DCDFileManager;
+              return obj;
+            }
+          }
+        } catch (tmp49) {
+          DCDFileManager = tmp;
+          throw tmp49;
         }
       }
-      const _JSON = JSON;
-      dependencyMap[callback] = DCDFileManager;
-      return DCDFileManager;
     })();
     iter.next();
     return iter;

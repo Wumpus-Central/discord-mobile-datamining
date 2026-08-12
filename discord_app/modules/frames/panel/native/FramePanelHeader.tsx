@@ -76,7 +76,7 @@ function FramePanelHeaderContentInner(arg0) {
   items3[1] = tmp18;
   items3[2] = closure_7(LeaveActivityButton, { frame, setMode });
   obj[5] = items3;
-  return closure_8(tmp4(16116).BaseActivityPanelContent, obj);
+  return closure_8(tmp4(16173).BaseActivityPanelContent, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_10 = importAllResult.memo((arg0) => {

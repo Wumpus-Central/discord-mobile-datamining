@@ -22,7 +22,7 @@ function FreezeAfterLayoutPipView() {
   }, []);
   return jsx(ExternalPipViewVideoUnavailable, { onLayout });
 }
-const result = require("module_8868").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
+const result = require("module_8907").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 
 export default function ExternalPipView() {
   let c0;

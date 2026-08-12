@@ -58,7 +58,7 @@ function collectGuildAnalyticsMetadata(guildId) {
       obj[6] = num;
       let NONE = store3.getGuildPermissions(guild);
       if (NONE == null) {
-        NONE = importAll(3953).NONE;
+        NONE = importAll(3994).NONE;
       }
       obj[7] = String(NONE);
       const features = guild.features;
@@ -95,11 +95,11 @@ function collectChannelAnalyticsMetadata(channel) {
       if (null != guildId) {
         let NONE2 = store3.getChannelPermissions(channel);
         if (NONE2 == null) {
-          NONE2 = importAll(3953).NONE;
+          NONE2 = importAll(3994).NONE;
         }
         let NONE = NONE2;
       } else {
-        NONE = importAll(3953).NONE;
+        NONE = importAll(3994).NONE;
       }
       obj[3] = String(NONE);
       obj[4] = false;
@@ -284,7 +284,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj);
       const tmp9Result = obj(12)(store4.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(4501).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(4541).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

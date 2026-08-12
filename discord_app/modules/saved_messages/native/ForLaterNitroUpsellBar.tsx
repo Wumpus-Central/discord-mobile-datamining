@@ -29,18 +29,18 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
   const tmp = createCacheKey();
-  analyticsLocations = analyticsLocations(5728)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5767)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   let obj = { style: tmp.container, children: null };
   const callback = React.useCallback(() => analyticsLocations(outer1_2[8])(isReminder, analyticsLocations), items);
   if (isAtLimit) {
     obj = { color: "text-feedback-warning", style: null };
     obj[1] = tmp.icon;
-    let tmp7Result = tmp7(isReminder(7964).WarningIcon, obj);
+    let tmp7Result = tmp7(isReminder(8003).WarningIcon, obj);
     let tmp10 = tmp7;
   } else {
     obj = { source: null, style: null };
-    obj[0] = tmp2(8736);
+    obj[0] = tmp2(8775);
     obj[1] = tmp.icon;
     tmp7Result = tmp7(closure_4, obj);
     tmp10 = tmp7;
@@ -50,8 +50,8 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   const obj2 = { variant: "text-xs/bold", color: "text-brand", children: null };
   const intl = isReminder(1236).intl;
   obj2[2] = intl.string(isReminder(1236).t.oW0eUd).toUpperCase();
-  const items2 = [tmp10(isReminder(4299).Text, obj2), " \u00B7 ", ];
-  let obj5 = isReminder(3966);
+  const items2 = [tmp10(isReminder(4340).Text, obj2), " \u00B7 ", ];
+  let obj5 = isReminder(4007);
   const premiumTypeDisplayName = obj5.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl2 = isReminder(1236).intl;
   const formatToPlainString = intl2.formatToPlainString;
@@ -66,11 +66,11 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     obj4[0] = premiumTypeDisplayName;
     items2[2] = formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj4);
     obj1[3] = items2;
-    items1[1] = tmp5(isReminder(4299).Text, obj1);
+    items1[1] = tmp5(isReminder(4340).Text, obj1);
     if (isAtLimit) {
-      let Button = tmp2(9518);
+      let Button = tmp2(9558);
     } else {
-      Button = tmp12(4714).Button;
+      Button = tmp12(4754).Button;
     }
     obj5 = { size: "sm", text: null, onPress: null };
     const intl3 = tmp12(1236).intl;

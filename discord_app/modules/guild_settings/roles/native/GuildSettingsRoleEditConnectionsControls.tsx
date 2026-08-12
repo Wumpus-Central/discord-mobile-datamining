@@ -59,8 +59,8 @@ function HeaderSection(arg0) {
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = tmp10(1236).intl;
     obj4[2] = intl3.string(tmp10(1236).t.ntW1cc);
-    obj3[3] = tmp13(tmp10(4299).Text, obj4);
-    tmp13Result = tmp13(tmp10(4846).PressableOpacity, obj3);
+    obj3[3] = tmp13(tmp10(4340).Text, obj4);
+    tmp13Result = tmp13(tmp10(4886).PressableOpacity, obj3);
   }
   const obj5 = { children: null };
   const obj6 = { children: null };
@@ -83,7 +83,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
   let roleConnectionConfigurations;
   ({ locked, roleConnectionConfigurations } = setPendingRoleConfigurations);
   const importDefault = setPendingRoleConfigurations.setPendingRoleConfigurations;
-  if (roleConnectionConfigurations(5124).ConnectionConfigurationRuleOperator.OR === roleConnectionConfigurations(5124).ConnectionConfigurationRuleOperator.AND) {
+  if (roleConnectionConfigurations(5164).ConnectionConfigurationRuleOperator.OR === roleConnectionConfigurations(5164).ConnectionConfigurationRuleOperator.AND) {
     if (0 === roleConnectionConfigurations.length) {
       let items = [];
     } else {
@@ -103,7 +103,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
       callback(roleConnectionConfigurations, arg0);
     };
     obj = { value: null, label: null, disabled: null };
-    obj[0] = tmp(5124).ConnectionConfigurationRuleOperator.OR;
+    obj[0] = tmp(5164).ConnectionConfigurationRuleOperator.OR;
     const intl2 = tmp(1236).intl;
     obj[1] = intl2.string(tmp(1236).t.W3iY58);
     let tmp11 = locked;
@@ -111,15 +111,15 @@ function AndOrRadios(setPendingRoleConfigurations) {
       tmp11 = values.length < 2;
     }
     obj[2] = tmp11;
-    const items2 = [closure_10(tmp(7986).TableRadioRow, obj), ];
+    const items2 = [closure_10(tmp(8025).TableRadioRow, obj), ];
     const obj1 = { value: null, label: null, disabled: null };
-    obj1[0] = tmp(5124).ConnectionConfigurationRuleOperator.AND;
+    obj1[0] = tmp(5164).ConnectionConfigurationRuleOperator.AND;
     const intl3 = tmp(1236).intl;
     obj1[1] = intl3.string(tmp(1236).t.gHXS9A);
     obj1[2] = locked;
-    items2[1] = closure_10(tmp(7986).TableRadioRow, obj1);
+    items2[1] = closure_10(tmp(8025).TableRadioRow, obj1);
     obj[4] = items2;
-    return closure_11(tmp(7987).TableRadioGroup, obj);
+    return closure_11(tmp(8026).TableRadioGroup, obj);
   }
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -393,7 +393,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   obj3 = {
     handleConnectionTapped(connectionType) {
       const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId: "accessible", operator: "d", value: "r" };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId: "accessibilityRole", operator: "guild", value: "Array" };
       obj[2] = arg1;
       items.push(obj);
       if (AND === guild(stateFromStoresArray[9]).ConnectionConfigurationRuleOperator.AND) {

@@ -9,7 +9,7 @@ const result = require("map").fileFinishedImporting("modules/search/native/compo
 
 export default function SearchTabsGradient(state) {
   let token;
-  token = token(4024).useToken(Themes.colors.BACKGROUND_BASE_LOW);
+  token = token(4065).useToken(Themes.colors.BACKGROUND_BASE_LOW);
   let items = [token];
   const colors = React.useMemo(() => {
     const items = [token, token(outer1_2[4]).hexWithOpacity(token, 0)];

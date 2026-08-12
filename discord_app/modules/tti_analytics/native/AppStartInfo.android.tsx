@@ -30,18 +30,18 @@ export const AppStartInfo = {
         const error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");
         throw error;
       }
-      const items = [callback(4165).getAppStartType(), , ];
-      const obj12 = callback(4165);
-      items[1] = callback(4165).getLaunchScenario();
-      const obj13 = callback(4165);
-      items[2] = callback(4165).getAppFirstVisibleTimestamp();
+      const items = [callback(4206).getAppStartType(), , ];
+      const obj12 = callback(4206);
+      items[1] = callback(4206).getLaunchScenario();
+      const obj13 = callback(4206);
+      items[2] = callback(4206).getAppFirstVisibleTimestamp();
       const dependencyMap = yield Promise.all(items);
       let closure_4 = 5;
-      let closure_5 = 7134;
+      let closure_5 = 7173;
       obj5 = { app_start_type: null, app_launch_scenario: null };
       obj5[0] = c3;
       obj5[1] = closure_4;
-      const mainActivityCreationTime = callback(7134).getMainActivityCreationTime();
+      const mainActivityCreationTime = callback(7173).getMainActivityCreationTime();
       if (null != mainActivityCreationTime) {
         obj5.android_time_creation_to_create_main_activity = mainActivityCreationTime - callback;
       }

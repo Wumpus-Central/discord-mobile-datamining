@@ -25,8 +25,8 @@ const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
     }
   }), items);
   const layoutEffect = importAllResult.useLayoutEffect(() => {
-    bountyId(verticalScrollEnabled[6]).lockOrientation("PORTRAIT", true);
-    return bountyId(verticalScrollEnabled[6]).restoreDefaultOrientation;
+    bountyId(verticalScrollEnabled[6]).applyOrientationLock("PORTRAIT");
+    return bountyId(verticalScrollEnabled[6]).restoreDefaultOrientationLock;
   }, []);
   obj = { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } };
   return jsx(bountyId(verticalScrollEnabled[7]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } });

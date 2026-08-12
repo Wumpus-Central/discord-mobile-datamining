@@ -6,7 +6,7 @@ import reset from "reset";
 import addEntitlement from "addEntitlement";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
-import { t } from "../../../../_runtime/03902_t.js";
+import { t } from "../../../../_runtime/03943_t.js";
 import { _createGatewayCheckoutContext } from "../../../utils/BillingUtils.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
@@ -82,17 +82,17 @@ function calculateFractionalPremiumInfo(isFetching) {
         obj2[0] = null != first;
         obj2[1] = tmp7;
         if (null != first) {
-          let tmp11 = tmp2(3902)(first.startsAt);
+          let tmp11 = tmp2(3943)(first.startsAt);
         } else {
-          tmp11 = tmp2(3902)(0);
+          tmp11 = tmp2(3943)(0);
         }
         obj2[2] = tmp11;
         if (null != first) {
           const obj4 = getPremiumPlanItem;
-          let tmp2ResultResult = tmp2(3902)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
-          const tmp2Result = tmp2(3902);
+          let tmp2ResultResult = tmp2(3943)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
+          const tmp2Result = tmp2(3943);
         } else {
-          tmp2ResultResult = tmp2(3902)(0);
+          tmp2ResultResult = tmp2(3943)(0);
         }
         obj2[3] = tmp2ResultResult;
         let str = "";
@@ -101,9 +101,9 @@ function calculateFractionalPremiumInfo(isFetching) {
         }
         obj2[4] = str;
         if (null != first) {
-          let tmp18 = tmp2(3902)(first.endsAt);
+          let tmp18 = tmp2(3943)(first.endsAt);
         } else {
-          tmp18 = tmp2(3902)(0);
+          tmp18 = tmp2(3943)(0);
         }
         obj2[5] = tmp18;
         obj2[6] = unactivatedFractionalPremiumUnits;

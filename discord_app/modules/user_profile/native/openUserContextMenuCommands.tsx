@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/openUserContextMenuCommands.tsx
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
+let result = require("coerceMainRoute").fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
 
 export default function openUserContextMenuCommands(analyticsLocations) {
   let selectedChannel;
@@ -8,7 +8,7 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   let userId;
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8795);
+  let obj = analyticsLocations(8834);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
@@ -23,5 +23,5 @@ export default function openUserContextMenuCommands(analyticsLocations) {
       return obj.trackUserProfileAction(obj);
     }
   };
-  const result1 = analyticsLocations(4158).navigateToContextMenuCommands(obj);
+  const result1 = analyticsLocations(4199).navigateToContextMenuCommands(obj);
 };

@@ -16,10 +16,10 @@ export default function UserProfileMutualGuilds(user) {
   user = user.user;
   let trackUserProfileAction;
   const tmp = callback3();
-  let obj = user(8794);
+  let obj = user(8833);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const mutualGuilds = trackUserProfileAction(11964)(user).mutualGuilds;
-  if (trackUserProfileAction(12272)(user)) {
+  const mutualGuilds = trackUserProfileAction(12021)(user).mutualGuilds;
+  if (trackUserProfileAction(12335)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);
@@ -45,20 +45,20 @@ export default function UserProfileMutualGuilds(user) {
           trackUserProfileAction(outer1_2[8]).openLazy(user(outer1_2[10])(outer1_2[9], outer1_2.paths), "UserProfileMutualGuildsActionSheet", obj, "stack");
         };
         const obj1 = { size: null, totalCount: null, names: null, children: null };
-        obj1[0] = tmp2(5779).GuildIconSizes.XXSMALL;
+        obj1[0] = tmp2(5818).GuildIconSizes.XXSMALL;
         obj1[1] = mapped.length;
         obj1[2] = mapped.map((name) => name.name);
         obj1[3] = mapped.map((guild) => {
           const obj = { guild, size: null };
-          obj[1] = user(5779).GuildIconSizes.XXSMALL;
-          return callback(trackUserProfileAction(5779), obj, guild.id);
+          obj[1] = user(5818).GuildIconSizes.XXSMALL;
+          return callback(trackUserProfileAction(5818), obj, guild.id);
         });
-        const items = [callback(tmp2(11978).GuildIconPile, obj1), ];
+        const items = [callback(tmp2(12035).GuildIconPile, obj1), ];
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
-        obj2[2] = trackUserProfileAction(11965)(mutualGuilds.length);
-        items[1] = callback(tmp2(4299).Text, obj2);
+        obj2[2] = trackUserProfileAction(12022)(mutualGuilds.length);
+        items[1] = callback(tmp2(4340).Text, obj2);
         obj[3] = items;
-        obj[1] = callback2(tmp2(4846).PressableOpacity, obj);
+        obj[1] = callback2(tmp2(4886).PressableOpacity, obj);
         return callback(View, obj);
       }
     }

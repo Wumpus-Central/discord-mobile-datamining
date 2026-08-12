@@ -16,7 +16,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   let closure_1;
   closure_1 = createCacheKey();
-  let obj = onConfirmPress(4519);
+  let obj = onConfirmPress(4559);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1236).intl;
   const format = intl.format;
@@ -72,15 +72,15 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     obj = { style: null, children: null };
     obj[0] = tmp.noticeContainer;
     if (isVerifiedTeen) {
-      let WarningIcon = Text(4259).CircleInformationIcon;
+      let WarningIcon = Text(4300).CircleInformationIcon;
     } else {
-      WarningIcon = Text(7964).WarningIcon;
+      WarningIcon = Text(8003).WarningIcon;
     }
     obj = { size: "refresh_sm", color: null, style: null };
     obj[1] = Themes.colors.TEXT_DEFAULT;
     obj[2] = tmp.icon;
     const items = [closure_5(WarningIcon, obj), ];
-    Text = Text(4299).Text;
+    Text = Text(4340).Text;
     const obj1 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.contentText;
     tmp = StageChannelAgeVerificationNoticeContent;

@@ -8,9 +8,9 @@ let closure_4 = { code: "function useOverlayLayoutDriverTsx2(){const{interpolate
 let result = require("MediaViewerDimensionsProvider").fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(4042).useSharedValue(0);
-  let obj = sharedValue(4042);
-  const mediaViewerDimensions = sharedValue(8871).useMediaViewerDimensions();
+  sharedValue = sharedValue(4083).useSharedValue(0);
+  let obj = sharedValue(4083);
+  const mediaViewerDimensions = sharedValue(8910).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = React.useEffect(() => {

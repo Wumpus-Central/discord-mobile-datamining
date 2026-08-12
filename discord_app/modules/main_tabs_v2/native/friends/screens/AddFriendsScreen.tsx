@@ -82,7 +82,7 @@ function _handleShare() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            obj1 = callback(4020);
+            obj1 = callback(4061);
             const intl = callback(1236).intl;
             obj1.presentError(intl.string(callback(1236).t.R0RpRX));
             c6 = 3;
@@ -105,7 +105,7 @@ function _handleShare() {
             obj3[1] = code;
             const intl2 = callback(1236).intl;
             const obj4 = { link: null };
-            obj4[0] = code(7219)(code);
+            obj4[0] = code(7258)(code);
             obj3[2] = intl2.formatToPlainString(callback(1236).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);
@@ -294,9 +294,9 @@ export default function AddFriendsScreen(navigation) {
     });
     const obj2 = callback(analyticsLocations[26]);
     return callback(analyticsLocations[26]).unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = callback(4148).getName(arg0);
-      const obj = callback(4148);
-      return name.localeCompare(callback(4148).getName(arg1));
+      const name = callback(4189).getName(arg0);
+      const obj = callback(4189);
+      return name.localeCompare(callback(4189).getName(arg1));
     });
   });
   let obj3 = _require(analyticsLocations[25]);
@@ -336,9 +336,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = callback(analyticsLocations[26]);
     return callback(analyticsLocations[26]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4148).getName(user.user);
-      const obj = items1(4148);
-      return name.localeCompare(items1(4148).getName(user2.user));
+      const name = items1(4189).getName(user.user);
+      const obj = items1(4189);
+      return name.localeCompare(items1(4189).getName(user2.user));
     });
   }, items4, areHydratedGameFriendRequestRowStatesEqual);
   let tmp6 = callback(React.useState([]), 2);

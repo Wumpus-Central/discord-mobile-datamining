@@ -42,7 +42,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   obj = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl = guildId(1236).intl;
   obj[3] = intl.string(guildId(1236).t.wRnfnY);
-  const items1 = [callback(guildId(4299).Text, obj), , ];
+  const items1 = [callback(guildId(4340).Text, obj), , ];
   obj = {
     accessibilityRole: "radiogroup",
     style: tmp.grid,
@@ -75,14 +75,14 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     obj3[2] = tmp.upsellText;
     const intl3 = tmp7(1236).intl;
     obj3[3] = intl3.string(tmp7(1236).t.U5p3GZ);
-    items2[1] = tmp8(tmp7(4299).Text, obj3);
+    items2[1] = tmp8(tmp7(4340).Text, obj3);
     const obj4 = { size: "md", color: null };
     obj4[1] = Themes.colors.ICON_SUBTLE;
-    items2[2] = tmp8(tmp7(5778).ChevronSmallRightIcon, obj4);
+    items2[2] = tmp8(tmp7(5817).ChevronSmallRightIcon, obj4);
     obj1[4] = items2;
     tmp6Result = tmp6(closure_4, obj1);
   }
   items1[2] = tmp6Result;
   obj[1] = items1;
-  return closure_8(guildId(4712).Stack, obj);
+  return closure_8(guildId(4752).Stack, obj);
 };

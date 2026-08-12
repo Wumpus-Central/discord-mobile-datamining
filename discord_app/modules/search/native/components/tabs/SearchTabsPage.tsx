@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsPage.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_15799";
-import { View } from "module_15789";
+import importAllResult from "module_15855";
+import { View } from "module_15845";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SearchTabs } from "MessageEmbedTypes";
 import { SearchTypes } from "ME";
-import { jsx } from "module_15806";
+import { jsx } from "module_15862";
 import createCacheKey from "createCacheKey";
 import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
 import { GuildNSFW } from "../../../../../components_native/warnings/GuildNSFW.tsx";
@@ -46,9 +46,9 @@ function SearchTabsPage(selectMediaTab) {
     }
     return outer1_6.getChannel(channelId);
   });
-  let obj1 = searchContext(5946);
+  let obj1 = searchContext(5985);
   const isChannelSpoilerGated = obj1.useIsChannelSpoilerGated(stateFromStores);
-  searchContext(4517);
+  searchContext(4557);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
       if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -105,7 +105,7 @@ function SearchTabsPage(selectMediaTab) {
     } else if (tmp11.THREADS === tab) {
       const obj8 = { searchContext: null };
       obj8[0] = searchContext;
-      return jsx(tmp4(15800).SearchTabsThreadScreen, { searchContext: null });
+      return jsx(tmp4(15856).SearchTabsThreadScreen, { searchContext: null });
     } else if (tmp11.MESSAGES === tab) {
       const obj9 = { tab: null, searchContext: null, isFocused: null };
       obj9[0] = tab;

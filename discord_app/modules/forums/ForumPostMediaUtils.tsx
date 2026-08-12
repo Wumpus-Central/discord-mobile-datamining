@@ -236,10 +236,10 @@ function useForumPostMediaProperties(firstResult, flag) {
     if (tmp4) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4525);
-        const flattenComponentsResult = tmp(4525).flattenComponents(components);
-        const arr = Array.from(tmp(4525).flattenComponents(components).values());
-        items1 = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const tmpResult = tmp(4565);
+        const flattenComponentsResult = tmp(4565).flattenComponents(components);
+        const arr = Array.from(tmp(4565).flattenComponents(components).values());
+        items1 = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -324,7 +324,7 @@ function useForumPostMediaProperties(firstResult, flag) {
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -479,10 +479,10 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
     if (tmp3) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4525);
-        const flattenComponentsResult = tmp(4525).flattenComponents(components);
-        const arr = Array.from(tmp(4525).flattenComponents(components).values());
-        let found = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const tmpResult = tmp(4565);
+        const flattenComponentsResult = tmp(4565).flattenComponents(components);
+        const arr = Array.from(tmp(4565).flattenComponents(components).values());
+        let found = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -567,7 +567,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -699,10 +699,10 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4525);
-        const flattenComponentsResult = tmp(4525).flattenComponents(components);
-        const arr = Array.from(tmp(4525).flattenComponents(components).values());
-        items = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const tmpResult = tmp(4565);
+        const flattenComponentsResult = tmp(4565).flattenComponents(components);
+        const arr = Array.from(tmp(4565).flattenComponents(components).values());
+        items = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -787,7 +787,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -899,10 +899,10 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        let tmpResult = tmp(4525);
-        const flattenComponentsResult = tmp(4525).flattenComponents(components);
-        const arr = Array.from(tmp(4525).flattenComponents(components).values());
-        items = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        let tmpResult = tmp(4565);
+        const flattenComponentsResult = tmp(4565).flattenComponents(components);
+        const arr = Array.from(tmp(4565).flattenComponents(components).values());
+        items = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -987,7 +987,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
             return null;
           }
         }).filter(tmp(1370).isNotNullish);
-        const flatMapResult = Array.from(tmp(4525).flattenComponents(components).values()).flatMap((type) => {
+        const flatMapResult = Array.from(tmp(4565).flattenComponents(components).values()).flatMap((type) => {
           let height;
           let media;
           let spoiler;
@@ -1109,7 +1109,7 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
             let flag = false;
             if (null != filename) {
               ({ height, width } = filename);
-              let tmp3 = callback(4491).isImageFile(filename.filename) && null != height;
+              let tmp3 = callback(4531).isImageFile(filename.filename) && null != height;
               if (tmp3) {
                 tmp3 = height > 0;
               }
@@ -1120,15 +1120,15 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
                 tmp3 = width > 0;
               }
               flag = tmp3;
-              const obj = callback(4491);
+              const obj = callback(4531);
             }
             if (!flag) {
               let tmp4 = null != filename;
               if (tmp4) {
                 let isVideoFileResult = null != filename;
                 if (isVideoFileResult) {
-                  isVideoFileResult = callback(4491).isVideoFile(filename.filename);
-                  const obj2 = callback(4491);
+                  isVideoFileResult = callback(4531).isVideoFile(filename.filename);
+                  const obj2 = callback(4531);
                 }
                 if (isVideoFileResult) {
                   isVideoFileResult = null != filename.proxy_url;

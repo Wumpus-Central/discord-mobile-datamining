@@ -1,11 +1,12 @@
 // discord_app/modules/age_assurance/native/PlayAgeSignals.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
+const require = arg1;
 function _getAgeSignals() {
   const self = this;
   const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
+    if (c0 === 2) {
+      c0 = 3;
       HermesBuiltin.throwTypeError();
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
@@ -19,48 +20,63 @@ function _getAgeSignals() {
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === table) {
+        c0 = 2;
+        if (0 === v0) {
           if (arg0 === 1) {
-            v0 = 3;
+            c0 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            v0 = 3;
+            c0 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            if (null == v0(table[1])) {
+            if (null == v0(outer1_2[1])) {
               const _Error = Error;
               const error = new Error("NativePlayAgeSignalsModule is not available on this platform");
               throw error;
             } else {
-              table = 1;
+              (function applyFakeAgeSignalsScenarioFromExperiment() {
+                let enabled;
+                let scenario;
+                if (null != v1(table[1])) {
+                  const fakePlayAgeSignalsConfig = v3(tmp2[2]).getFakePlayAgeSignalsConfig("PlayAgeSignals.getAgeSignals");
+                  ({ enabled, scenario } = fakePlayAgeSignalsConfig);
+                  const obj = v3(tmp2[2]);
+                  let str2 = "";
+                  if (enabled) {
+                    str2 = scenario;
+                  }
+                  const result = v1(tmp2[1]).setFakeAgeSignalsScenario(str2);
+                  const tmpResult = v1(tmp2[1]);
+                }
+              })();
               v0 = 1;
+              c0 = 1;
               const obj1 = { value: null, done: false };
               obj1[0] = tmp5(tmp6[1]).getAgeSignals();
               return obj1;
             }
             tmp5 = v0;
-            tmp6 = table;
+            tmp6 = outer1_2;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
+          c0 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          v0 = 3;
+          c0 = 3;
           const obj2 = { value: null, done: true };
           obj2[0] = arg1;
           return obj2;
         } else {
-          v0 = 3;
+          c0 = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         }
-      } catch (tmp13) {
-        v0 = tmp;
-        throw tmp13;
+      } catch (tmp14) {
+        c0 = tmp;
+        throw tmp14;
       }
     }
   });
@@ -74,7 +90,7 @@ function _getAgeSignals() {
   return applyArgumentsResult;
 }
 let obj = { VERIFIED: 0, SUPERVISED: 1, SUPERVISED_APPROVAL_PENDING: 2, SUPERVISED_APPROVAL_DENIED: 3, UNKNOWN: 4, DECLARED: 5 };
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");
+let result = require("apexExperiment").fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");
 
 export const AgeSignalsVerificationStatus = obj;
 export const getAgeSignals = function getAgeSignals() {

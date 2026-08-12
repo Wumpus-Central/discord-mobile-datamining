@@ -32,7 +32,7 @@ function isSectionEmpty(type) {
       tmp4 = null == type.image;
     }
     return tmp4;
-  } else if (tmp(7093).PersonalWidgetSectionType.FIELDS === type) {
+  } else if (tmp(7132).PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
     return fields.every(isFieldEmpty);
   }
@@ -224,7 +224,7 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(7093).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (tmp16(7132).PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
           tmp16 = require;
@@ -331,7 +331,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
       let fields;
       let title;
       type = type.type;
-      if (callback(7093).PersonalWidgetSectionType.COVER === type) {
+      if (callback(7132).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2[0], title } = type);
         if (title == null) {
@@ -354,7 +354,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
         }
         obj[3] = tmp5;
         return obj;
-      } else if (tmp(7093).PersonalWidgetSectionType.FIELDS === type) {
+      } else if (tmp(7132).PersonalWidgetSectionType.FIELDS === type) {
         obj = { type: null, fields: null };
         ({ type: obj[0], fields } = type);
         obj[1] = fields.map(closure_8);
@@ -364,7 +364,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     });
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
-  if (!items.some((type) => type.type === callback(7093).PersonalWidgetSectionType.FIELDS)) {
+  if (!items.some((type) => type.type === callback(7132).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
     obj[0] = PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];

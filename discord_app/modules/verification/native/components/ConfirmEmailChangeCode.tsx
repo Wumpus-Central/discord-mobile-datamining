@@ -109,5 +109,5 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj[3] = intl.string(_getSystemLocale.t["2x/2Uo"]);
   const intl2 = _getSystemLocale.intl;
   obj[4] = intl2.string(_getSystemLocale.t.PDTjLN);
-  return jsx(navigation(8470), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
+  return jsx(navigation(8509), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

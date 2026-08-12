@@ -7,6 +7,6 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/favori
 export default function openFavoritesGuildLimitUpsell(limit) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { limit, variant: "limit_reached", source: "limit_reached" };
-  obj.openLazy(asyncRequireImpl(9720, dependencyMap.paths), FavoritesGuildUpsellSheet, obj);
+  obj.openLazy(asyncRequireImpl(9759, dependencyMap.paths), FavoritesGuildUpsellSheet, obj);
 };
 export const FAVORITES_UPSELL_SHEET_KEY = "FavoritesGuildUpsellSheet";

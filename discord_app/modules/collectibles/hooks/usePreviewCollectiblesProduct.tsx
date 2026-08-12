@@ -78,7 +78,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "Array", profileEffect: "flex", nameplate: "y", profileFrame: "HermesInternal" });
+          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "right", profileEffect: "channel", nameplate: "source", profileFrame: "bottom" });
           const obj = outer1_0(outer1_1[8]);
         }
       };

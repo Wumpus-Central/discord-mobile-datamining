@@ -56,29 +56,29 @@ function updateFriendAnniversaries() {
           if (store.isFriend(nextResult)) {
             let tmp22 = userAffinity;
             if (null != userAffinity) {
-              let tmp47 = userAffinity;
+              let tmp23 = userAffinity;
               if (userAffinity.dmProbability > 0) {
-                let tmp23 = since;
+                let tmp24 = since;
                 if (null != since) {
                   let _Date = Date;
-                  let tmp24 = since;
-                  let tmp25 = new.target;
+                  let tmp25 = since;
                   let tmp26 = new.target;
+                  let tmp27 = new.target;
                   let date = new Date(since);
-                  let tmp30 = require;
-                  let tmp31 = dependencyMap;
-                  let tmp28 = date;
+                  let tmp31 = require;
+                  let tmp32 = dependencyMap;
                   let tmp29 = date;
+                  let tmp30 = date;
                   let obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS;
                   if (obj.isFriendAnniversary(date)) {
-                    let tmp32 = arr;
                     let tmp33 = arr;
-                    let tmp34 = nextResult;
+                    let tmp34 = arr;
+                    let tmp35 = nextResult;
                     arr = arr.push(tmp17);
-                    let tmp36 = closure_14;
+                    let tmp37 = closure_14;
                     obj = { friendsSince: null };
-                    let tmp37 = tmp28;
-                    obj[0] = tmp29;
+                    let tmp38 = tmp29;
+                    obj[0] = tmp30;
                     closure_14[tmp17] = obj;
                   }
                 }
@@ -121,7 +121,7 @@ function generateFriendAnniversaries(c15) {
   highAffinity = dependencyMap;
   const set1 = new Set();
   if (obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(3993).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(4034).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       let closure_15 = c15;
       const friendIDs = store.getFriendIDs();
@@ -143,7 +143,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => recomputeAffinities.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8181).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8220).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = recomputeAffinities.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -152,7 +152,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8181);
+          const highestAffinityResult = highestAffinity(8220);
         }
         sampleSizeResult = _null;
       }

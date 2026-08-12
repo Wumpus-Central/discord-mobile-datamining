@@ -48,9 +48,9 @@ function UserRowSubLabel(arg0) {
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4148).getUserTag(user);
-    callback(tmp(4299).Text, obj);
-    const tmpResult = tmp(4148);
+    obj[3] = tmp(4189).getUserTag(user);
+    callback(tmp(4340).Text, obj);
+    const tmpResult = tmp(4189);
   }
   if (null == stateFromStores) {
     const obj1 = { style: null };
@@ -72,7 +72,7 @@ function UserRowSubLabel(arg0) {
     const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
-    items1[1] = callback(tmp(4299).Text, obj5);
+    items1[1] = callback(tmp(4340).Text, obj5);
     obj2[1] = items1;
     closure_15(View, obj2);
     const tmp11 = closure_15;
@@ -384,17 +384,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
             const channel = outer1_8.getChannel(arg0);
             if (null != channel) {
               outer1_1(outer1_2[14])(channel.isPrivate(), "must be a DM");
-              const obj4 = outer1_1(outer1_2[15])(channel, false);
-              if (!obj4.inCall) {
-                obj4.onPress();
+              const obj2 = outer1_1(outer1_2[15])(channel, false);
+              if (!obj2.inCall) {
+                obj2.onPress();
               }
-              const tmp4 = outer1_1;
-              const tmp5 = outer1_2;
-              const tmp6 = outer1_1(outer1_2[14]);
+              const tmp = outer1_1;
+              const tmp2 = outer1_2;
+              const tmp3 = outer1_1(outer1_2[14]);
               const obj = { recipientIds: null };
               obj[0] = current.id;
               outer1_1(outer1_2[13]).openPrivateChannel(obj);
-              const tmp4Result = outer1_1(outer1_2[13]);
+              const tmpResult = outer1_1(outer1_2[13]);
             }
           });
         };
@@ -443,17 +443,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
         const channel = outer1_8.getChannel(arg0);
         if (null != channel) {
           outer1_1(outer1_2[14])(channel.isPrivate(), "must be a DM");
-          const obj4 = outer1_1(outer1_2[15])(channel, false);
-          if (!obj4.inCall) {
-            obj4.onPress();
+          const obj2 = outer1_1(outer1_2[15])(channel, false);
+          if (!obj2.inCall) {
+            obj2.onPress();
           }
-          const tmp4 = outer1_1;
-          const tmp5 = outer1_2;
-          const tmp6 = outer1_1(outer1_2[14]);
+          const tmp = outer1_1;
+          const tmp2 = outer1_2;
+          const tmp3 = outer1_1(outer1_2[14]);
           const obj = { recipientIds: null };
           obj[0] = current.id;
           outer1_1(outer1_2[13]).openPrivateChannel(obj);
-          const tmp4Result = outer1_1(outer1_2[13]);
+          const tmpResult = outer1_1(outer1_2[13]);
         }
       });
     } else if (tmp.MESSAGE === actionName) {

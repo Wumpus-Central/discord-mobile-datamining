@@ -24,7 +24,7 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9230, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9270, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
@@ -32,7 +32,7 @@ export default {
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9220, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9260, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -78,7 +78,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9233, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9273, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALF;
       }
     }

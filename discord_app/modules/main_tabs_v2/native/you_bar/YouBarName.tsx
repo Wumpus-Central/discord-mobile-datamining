@@ -81,8 +81,8 @@ const memoResult = require("noop").memo(function YouName(arg0) {
   const items2 = [tmp10Result, ];
   obj2 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
   if (gameMentionsAsPlainText == null) {
-    gameMentionsAsPlainText = tmp2(4148).humanizeStatus(stateFromStores);
-    const tmp2Result = tmp2(4148);
+    gameMentionsAsPlainText = tmp2(4189).humanizeStatus(stateFromStores);
+    const tmp2Result = tmp2(4189);
   }
   obj2[6] = gameMentionsAsPlainText;
   items2[1] = callback(Text.Text, obj2);

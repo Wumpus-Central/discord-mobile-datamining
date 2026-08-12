@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/10583_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/10624_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../../../design/components/Text/native/Text.tsx";

@@ -1,6 +1,6 @@
 // discord_app/lib/Platforms.tsx
 import { PlatformTypes } from "ME";
-import { ApplicationIdentityAppIds } from "items1";
+import { ApplicationIdentityAppIds } from "items";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";

@@ -103,7 +103,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           disabled: tmp,
           onPress() {
             outer1_1(id.id);
-            outer2_1(4271).hideActionSheet();
+            outer2_1(4312).hideActionSheet();
           },
           children: null
         };
@@ -117,9 +117,9 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             message.message.roleColor = undefined;
             const result = outer2_0(1986).extractColorStringsFromServerColors(id.colors);
             const obj = outer2_0(1986);
-            message.message.roleColors = outer2_0(8072).processColorStrings(result);
+            message.message.roleColors = outer2_0(8111).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = outer2_1(12577);
+            message.message.avatarURL = outer2_1(12636);
           }
         };
         const items1 = [outer1_9(outer1_1(_undefined[16]), obj), ];
@@ -145,20 +145,20 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     let items1 = [, , ];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6[0] = items1;
-    obj6[2] = !tmp4(4045).isFabric();
+    obj6[2] = !tmp4(4086).isFabric();
     const intl4 = tmp4(1236).intl;
     obj6[3] = intl4.string(tmp(2335)["+/IHLl"]);
-    obj5[0] = tmp7(tmp4(4299).Text, obj6);
+    obj5[0] = tmp7(tmp4(4340).Text, obj6);
     obj4[2] = intl3.format(tmp(2335).VpEDJc, obj5);
-    const items2 = [tmp7(tmp4(4299).Text, obj4), ];
+    const items2 = [tmp7(tmp4(4340).Text, obj4), ];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
     const intl5 = tmp4(1236).intl;
     obj7[2] = intl5.string(tmp(2335).FJZeZF);
-    items2[1] = tmp7(tmp4(4299).Text, obj7);
+    items2[1] = tmp7(tmp4(4340).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);
-    const tmp4Result = tmp4(4045);
+    const tmp4Result = tmp4(4086);
   }
   items[1] = tmp8Result;
   obj1[1] = items;

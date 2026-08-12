@@ -34,7 +34,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     applyArgumentsResult.questStatuses = {};
     applyArgumentsResult.chatChannelId = undefined;
     applyArgumentsResult.previousChatChannelId = undefined;
-    applyArgumentsResult.channelsWithChatOpen = {};
+    set = new Set();
+    applyArgumentsResult.channelsWithChatOpen = set;
     applyArgumentsResult.handleVisibleMessagesChanged = function handleVisibleMessagesChanged(payload) {
       let content;
       let id;
@@ -235,8 +236,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(9767).isChannelFocused();
-      applyArgumentsResult(4158);
+      let isChannelFocusedResult = applyArgumentsResult(9808).isChannelFocused();
+      applyArgumentsResult(4199);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }
@@ -541,15 +542,15 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     };
     applyArgumentsResult.handleChannelRTCStoreChanged = function handleChannelRTCStoreChanged() {
       outer1_18();
-      const allChatOpen = outer1_6.getAllChatOpen();
-      const items = [...Object.keys(closure_0.channelsWithChatOpen), ...Object.keys(allChatOpen)];
+      const openChatChannelIds = outer1_6.getOpenChatChannelIds();
+      const items = [...openChatChannelIds];
       const iter = new Set(items)[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp5 = nextResult;
-        let tmp6 = outer1_11;
+        let tmp4 = nextResult;
+        let tmp5 = outer1_11;
         let channel = outer1_11.getChannel(nextResult);
-        let tmp8 = channel;
+        let tmp7 = channel;
         let type;
         if (channel != null) {
           type = channel.type;
@@ -560,62 +561,56 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
           let items1 = [applyArgumentsResult(outer1_2[23]).ChannelTypes.GUILD_STAGE_VOICE, applyArgumentsResult(outer1_2[23]).ChannelTypes.GUILD_VOICE];
           let tmp37 = channel;
           let type1;
-          if (tmp8 != null) {
-            type1 = tmp8.type;
+          if (tmp7 != null) {
+            type1 = tmp7.type;
           }
           if (items1.includes(type1)) {
-            let tmp11 = applyArgumentsResult;
-            let obj = applyArgumentsResult;
-            let tmp12 = nextResult;
-            let flag = applyArgumentsResult.channelsWithChatOpen[tmp5];
-            if (flag == null) {
-              flag = false;
-            }
-            let tmp14 = nextResult;
-            let flag2 = allChatOpen[tmp5];
-            let tmp13 = flag;
-            if (flag2 == null) {
-              flag2 = false;
-            }
-            let tmp16 = flag;
-            if (tmp13 !== flag2) {
-              let tmp17 = flag2;
-              if (tmp15) {
-                let tmp18 = nextResult;
-                let tmp19 = tmp11;
-                if (tmp5 !== obj.chatChannelId) {
-                  let tmp27 = tmp11;
-                  let onChannelChangedResult = obj.onChannelChanged(nextResult);
-                  let tmp29 = iter;
+            let tmp10 = applyArgumentsResult;
+            let obj2 = applyArgumentsResult;
+            let channelsWithChatOpen = applyArgumentsResult.channelsWithChatOpen;
+            let tmp11 = nextResult;
+            let hasItem = channelsWithChatOpen.has(tmp4);
+            let hasItem1 = openChatChannelIds.has(tmp4);
+            if (hasItem !== hasItem1) {
+              let tmp15 = hasItem1;
+              if (tmp14) {
+                let tmp16 = nextResult;
+                let tmp17 = tmp10;
+                if (tmp4 !== obj2.chatChannelId) {
+                  let tmp25 = tmp10;
+                  let onChannelChangedResult = obj2.onChannelChanged(nextResult);
+                  let tmp27 = iter;
                   iter.return();
                   break;
                 }
                 break;
               }
-              if (!flag2) {
-                let tmp20 = tmp11;
-                if (obj.previousChatChannelId !== obj.chatChannelId) {
-                  let tmp21 = tmp11;
-                  let onChannelChangedResult1 = obj.onChannelChanged(obj.previousChatChannelId);
-                  let tmp23 = iter;
+              if (!hasItem1) {
+                let tmp18 = tmp10;
+                if (obj2.previousChatChannelId !== obj2.chatChannelId) {
+                  let tmp19 = tmp10;
+                  let onChannelChangedResult1 = obj2.onChannelChanged(obj2.previousChatChannelId);
+                  let tmp21 = iter;
                   iter.return();
                   break;
                 }
                 break;
               }
-              let tmp24 = tmp11;
-              let checkChatViewableResult = obj.checkChatViewable();
-              let tmp26 = iter;
+              let tmp22 = tmp10;
+              let checkChatViewableResult = obj2.checkChatViewable();
+              let tmp24 = iter;
               iter.return();
               break;
             }
-            let tmp30 = applyArgumentsResult;
-            let tmp31 = applyArgumentsResult;
-            obj = {};
-            let tmp32 = obj;
-            let tmp33 = allChatOpen;
-            let merged = Object.assign(allChatOpen);
-            applyArgumentsResult.channelsWithChatOpen = obj;
+            let tmp28 = applyArgumentsResult;
+            let tmp29 = applyArgumentsResult;
+            let _Set = Set;
+            let tmp30 = new.target;
+            let tmp31 = new.target;
+            let tmp32 = openChatChannelIds;
+            let set1 = new Set(openChatChannelIds);
+            let tmp34 = set1;
+            applyArgumentsResult.channelsWithChatOpen = set1;
           }
         }
         continue;

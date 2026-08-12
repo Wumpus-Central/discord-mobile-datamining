@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModal.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_14408";
+import importAllResult from "module_14465";
 import get_ActivityIndicator from "SafeAreaPaddingView";
 import { AnalyticEvents } from "ME";
 import jsxProd from "useQuests";
@@ -16,27 +16,35 @@ let c4 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 let obj = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-obj = { wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
-let obj1 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj1.borderRadius = require("Themes").radii.lg;
-obj1.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOWEST;
-obj[2] = obj1;
-obj[3] = { zIndex: 2 };
+obj = { root: null, pillarboxed: null, wrapper: null, contentWrapper: null, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
+obj[0] = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM };
+obj[1] = { alignSelf: "center" };
+obj[2] = { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 };
+obj[3] = { flex: 1 };
 createCacheKey = {};
-const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderRadius = require("Themes").radii.lg;
-createCacheKey.flex = 1;
-createCacheKey.overflow = "hidden";
-createCacheKey.pointerEvents = "none";
-createCacheKey.zIndex = 1;
+createCacheKey.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOWEST;
 obj[4] = createCacheKey;
+obj[5] = { zIndex: 2 };
+let obj3 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj3.borderRadius = require("Themes").radii.lg;
+obj3.flex = 1;
+obj3.overflow = "hidden";
+obj3.pointerEvents = "none";
+obj3.zIndex = 1;
+obj[6] = obj3;
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function VideoQuestModalTsx1(){const{withSpring,clamp,postWatchAnimationState,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG,interpolate,CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y}=this.__closure;return{opacity:withSpring(clamp(postWatchAnimationState.get(),0,1),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG),transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}]};}" };
 let closure_13 = { code: "function VideoQuestModalTsx2(){const{withSpring,interpolate,postWatchAnimationState,safeAreaInsets,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG}=this.__closure;return{transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[safeAreaInsets.top,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}],opacity:withSpring(postWatchAnimationState.get(),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)};}" };
 let closure_14 = importAllResult.memo((sourceQuestContent) => {
+  let closure_7;
+  let height;
   let initialStep;
   let onClose;
+  let tmp12;
+  let width;
   ({ onClose, initialStep } = sourceQuestContent);
   sourceQuestContent = sourceQuestContent.sourceQuestContent;
   let obj = initialStep(quest[7]);
@@ -53,15 +61,14 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     const tmp9 = videoSessionId(importAllResult.useState(initialStep), 2);
     const first = tmp9[0];
     let closure_6 = tmp9[1];
-    const tmp11 = videoSessionId(obj1.useState(false), 2);
-    let callback = tmp11[1];
+    [tmp12, closure_7] = videoSessionId(obj1.useState(false), 2);
     let items = [quest.id, videoSessionId, sourceQuestContent];
-    callback = obj1.useCallback((arg0) => {
-      const lockOrientation = initialStep(quest[8]).lockOrientation;
+    const callback = obj1.useCallback((arg0) => {
+      const applyOrientationLock = initialStep(quest[8]).applyOrientationLock;
       if (arg0) {
-        lockOrientation("LANDSCAPE", true);
+        applyOrientationLock("LANDSCAPE");
       } else {
-        lockOrientation("PORTRAIT", true);
+        applyOrientationLock("PORTRAIT");
       }
       callback2(arg0);
       let obj = initialStep(quest[9]);
@@ -69,72 +76,100 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       obj = { video_session_id: videoSessionId };
       obj.trackQuestEvent(obj);
     }, items);
-    const tmp14 = callback2();
-    const height = sourceQuestContent(tmp2[11])(obj1.useContext(tmp(tmp2[10]).QuestDockGestureContext).windowDimensions).height;
-    let items1 = [tmp5, initialStep];
+    const tmp15 = sharedValue();
+    let closure_9 = tmp15;
+    const tmp17 = sourceQuestContent(tmp2[11])(obj1.useContext(tmp(tmp2[10]).QuestDockGestureContext).windowDimensions);
+    ({ width, height } = tmp17);
+    let bound = null;
+    if (tmp17.landscape) {
+      bound = null;
+      if (!tmp12) {
+        const _Math = Math;
+        const _Math2 = Math;
+        bound = Math.min(width, Math.floor(0.5625 * height));
+      }
+    }
+    let items1 = [bound, tmp15.pillarboxed];
+    const items2 = [tmp5, initialStep];
+    const memo = obj1.useMemo(() => {
+      let tmp2 = null;
+      if (null != bound) {
+        const items = [tmp15.pillarboxed, ];
+        const obj = { width: null };
+        obj[0] = tmp;
+        items[1] = obj;
+        tmp2 = items;
+      }
+      return tmp2;
+    }, items1);
     const layoutEffect = obj1.useLayoutEffect(() => {
       let tmp = closure_4;
       if (closure_4) {
         tmp = null == initialStep;
       }
       if (tmp) {
-        callback(tmp24.POST_WATCH_VIDEO);
+        callback(bound.POST_WATCH_VIDEO);
       }
-    }, items1);
-    const items2 = [callback];
-    const callback1 = obj1.useCallback(() => {
-      callback(tmp24.WATCH_VIDEO);
-    }, []);
-    callback2 = obj1.useCallback(() => {
-      callback(false);
-      callback(tmp24.POST_WATCH_VIDEO);
     }, items2);
+    const items3 = [callback];
+    const callback1 = obj1.useCallback(() => {
+      callback(bound.WATCH_VIDEO);
+    }, []);
+    const callback2 = obj1.useCallback(() => {
+      callback(false);
+      callback(bound.POST_WATCH_VIDEO);
+    }, items3);
     let tmpResult = tmp(tmp2[12]);
-    let num2 = 0;
-    if (first === obj.POST_WATCH_VIDEO) {
-      num2 = 1;
+    let num3 = 0;
+    if (first === bound.POST_WATCH_VIDEO) {
+      num3 = 1;
     }
-    const sharedValue = tmpResult.useSharedValue(num2);
+    sharedValue = tmpResult.useSharedValue(num3);
     tmpResult = tmp(tmp2[12]);
-    const fn = function y() {
-      let obj = { opacity: null, transform: null };
-      const obj2 = initialStep(quest[13]);
-      obj[0] = obj2.withSpring(initialStep(quest[12]).clamp(sharedValue.get(), 0, 1), sharedValue);
-      obj = { translateY: null };
-      const obj3 = initialStep(quest[12]);
-      const obj5 = initialStep(quest[13]);
-      obj[0] = obj5.withSpring(initialStep(quest[12]).interpolate(sharedValue.get(), [0, 1], [-100, 0]), sharedValue);
-      const items = [obj];
-      obj[1] = items;
-      return obj;
-    };
+    class L {
+      constructor() {
+        obj = { opacity: null, transform: null };
+        obj2 = initialStep(quest[13]);
+        obj3 = initialStep(quest[12]);
+        obj[0] = obj2.withSpring(obj3.clamp(POST_WATCH_VIDEO.get(), 0, 1), outer1_9);
+        obj = { translateY: null };
+        obj5 = initialStep(quest[13]);
+        obj6 = initialStep(quest[12]);
+        obj[0] = obj5.withSpring(obj6.interpolate(POST_WATCH_VIDEO.get(), [0, 1], [-100, 0]), outer1_9);
+        items = [];
+        items[0] = obj;
+        obj[1] = items;
+        return obj;
+      }
+    }
     obj = { withSpring: null, clamp: null, postWatchAnimationState: null, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null, interpolate: null, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100 };
     obj[0] = tmp(tmp2[13]).withSpring;
     obj[1] = tmp(tmp2[12]).clamp;
     obj[2] = sharedValue;
-    obj[3] = sharedValue;
+    obj[3] = closure_9;
     obj[4] = tmp(tmp2[12]).interpolate;
-    fn.__closure = obj;
-    fn.__workletHash = 11571705142399;
-    fn.__initData = closure_12;
-    const animatedStyle = tmpResult.useAnimatedStyle(fn);
-    const tmp24 = sourceQuestContent(tmp2[14])();
-    obj = tmp24;
-    class M {
+    L.__closure = obj;
+    L.__workletHash = 11571705142399;
+    L.__initData = closure_12;
+    const animatedStyle = tmpResult.useAnimatedStyle(L);
+    const tmp29 = sourceQuestContent(tmp2[14])();
+    closure_12 = tmp29;
+    const tmp11 = videoSessionId(obj1.useState(false), 2);
+    class U {
       constructor() {
         obj = { transform: null, opacity: null };
         obj = { translateY: null };
         obj3 = initialStep(quest[13]);
         obj4 = initialStep(quest[12]);
         items = [, ];
-        items[0] = closure_10.top;
+        items[0] = closure_12.top;
         items[1] = 0;
-        obj[0] = obj3.withSpring(obj4.interpolate(POST_WATCH_VIDEO.get(), [0, 1], items), POST_WATCH_VIDEO);
+        obj[0] = obj3.withSpring(obj4.interpolate(POST_WATCH_VIDEO.get(), [0, 1], items), outer1_9);
         items1 = [];
         items1[0] = obj;
         obj[0] = items1;
         obj5 = initialStep(quest[13]);
-        obj[1] = obj5.withSpring(POST_WATCH_VIDEO.get(), POST_WATCH_VIDEO);
+        obj[1] = obj5.withSpring(POST_WATCH_VIDEO.get(), outer1_9);
         return obj;
       }
     }
@@ -142,86 +177,94 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     obj[0] = tmp(tmp2[13]).withSpring;
     obj[1] = tmp(tmp2[12]).interpolate;
     obj[2] = sharedValue;
-    obj[3] = tmp24;
-    obj[4] = sharedValue;
-    M.__closure = obj;
-    M.__workletHash = 9769051401109;
-    M.__initData = closure_13;
-    const items3 = [sharedValue, first];
-    const animatedStyle1 = tmp(tmp2[12]).useAnimatedStyle(M);
+    obj[3] = tmp29;
+    obj[4] = closure_9;
+    U.__closure = obj;
+    U.__workletHash = 9769051401109;
+    U.__initData = closure_13;
+    const items4 = [sharedValue, first];
+    const animatedStyle1 = tmp(tmp2[12]).useAnimatedStyle(U);
     const effect = obj1.useEffect(() => {
       let num = 0;
-      if (first === tmp24.POST_WATCH_VIDEO) {
+      if (first === bound.POST_WATCH_VIDEO) {
         num = 1;
       }
       const result = sharedValue.set(num);
-    }, items3);
+    }, items4);
     obj1 = { style: null, children: null };
-    obj1[0] = tmp14.modalContentWrapper;
+    obj1[0] = tmp15.root;
     let obj2 = { style: null, children: null };
-    const items4 = [tmp14.backgroundWrapper, ];
-    let obj3 = { height: null };
-    obj3[0] = height;
-    items4[1] = obj3;
-    obj2[0] = items4;
-    let tmp15Result = tmp15(tmp2[15]);
-    let obj4 = { style: null };
-    const items5 = [tmp14.contentBackground, ];
-    let obj5 = { top: null };
-    obj5[0] = tmp24.top;
-    items5[1] = obj5;
-    obj4[0] = items5;
-    const items6 = [callback(sourceQuestContent(tmp2[15]), obj4), , ];
-    const obj6 = { style: null };
-    const items7 = [tmp14.contentBackground, animatedStyle1];
-    obj6[0] = items7;
-    items6[1] = callback(sourceQuestContent(tmp2[15]), obj6);
-    const obj7 = { style: null, children: null };
-    obj7[0] = animatedStyle;
-    tmp15Result = tmp15(tmp2[15]);
-    obj7[1] = callback(sourceQuestContent(tmp2[16]), { align: "top" });
-    items6[2] = callback(tmp15Result, obj7);
-    obj2[1] = items6;
-    const items8 = [callback(first, obj2), ];
-    const obj8 = { top: true, style: null, children: null };
-    const items9 = [tmp14.wrapper, ];
-    const obj9 = { height: null };
-    obj9[0] = height;
-    items9[1] = obj9;
-    obj8[1] = items9;
-    const obj10 = { style: null, children: null };
-    obj10[0] = tmp14.contentWrapper;
-    let tmp28Result = first === tmp19.WATCH_VIDEO;
-    if (tmp28Result) {
-      const obj11 = { isFullscreen: null, onNavigateToPostWatchVideo: null, onClose: null, onEnd: null, setIsFullscreen: null, sourceQuestContent: null };
-      obj11[0] = tmp11[0];
-      obj11[1] = callback2;
-      obj11[2] = onClose;
-      obj11[3] = callback2;
-      obj11[4] = callback;
-      obj11[5] = sourceQuestContent;
-      tmp28Result = tmp28(tmp15(tmp2[18]), obj11);
+    const items5 = [tmp15.modalContentWrapper, memo];
+    obj2[0] = items5;
+    let obj3 = { style: null, children: null };
+    const items6 = [tmp15.backgroundWrapper, ];
+    let obj4 = { height: null };
+    obj4[0] = height;
+    items6[1] = obj4;
+    obj3[0] = items6;
+    let tmp16Result = tmp16(tmp2[15]);
+    let obj5 = { style: null };
+    const items7 = [tmp15.contentBackground, ];
+    const obj6 = { top: null };
+    obj6[0] = tmp29.top;
+    items7[1] = obj6;
+    obj5[0] = items7;
+    const items8 = [callback(sourceQuestContent(tmp2[15]), obj5), , ];
+    const obj7 = { style: null };
+    const items9 = [tmp15.contentBackground, animatedStyle1];
+    obj7[0] = items9;
+    items8[1] = callback(sourceQuestContent(tmp2[15]), obj7);
+    const obj8 = { style: null, children: null };
+    obj8[0] = animatedStyle;
+    tmp16Result = tmp16(tmp2[15]);
+    obj8[1] = callback(sourceQuestContent(tmp2[16]), { align: "top" });
+    items8[2] = callback(tmp16Result, obj8);
+    obj3[1] = items8;
+    const items10 = [callback(first, obj3), ];
+    const obj9 = { top: true, style: null, children: null };
+    const items11 = [tmp15.wrapper, ];
+    const obj10 = { height: null };
+    obj10[0] = height;
+    items11[1] = obj10;
+    obj9[1] = items11;
+    const obj11 = { style: null, children: null };
+    obj11[0] = tmp15.contentWrapper;
+    let tmp33Result = first === tmp24.WATCH_VIDEO;
+    if (tmp33Result) {
+      if (bound == null) {
+        bound = width;
+      }
+      const obj12 = { contentWidth: null, isFullscreen: null, onNavigateToPostWatchVideo: null, onClose: null, onEnd: null, setIsFullscreen: null, sourceQuestContent: null };
+      obj12[0] = bound;
+      obj12[1] = tmp12;
+      obj12[2] = callback2;
+      obj12[3] = onClose;
+      obj12[4] = callback2;
+      obj12[5] = callback;
+      obj12[6] = sourceQuestContent;
+      tmp33Result = tmp33(tmp16(tmp2[18]), obj12);
+      const tmp16Result1 = tmp16(tmp2[18]);
     }
-    const items10 = [tmp28Result, ];
-    tmp28Result = first === tmp19.POST_WATCH_VIDEO;
-    if (tmp28Result) {
-      const obj12 = { onClose: null, onRestartVideo: null, sourceQuestContent: null };
-      obj12[0] = onClose;
-      obj12[1] = callback1;
-      obj12[2] = sourceQuestContent;
-      tmp28Result = tmp28(tmp15(tmp2[19]), obj12);
+    const items12 = [tmp33Result, ];
+    tmp33Result = first === tmp24.POST_WATCH_VIDEO;
+    if (tmp33Result) {
+      const obj13 = { onClose: null, onRestartVideo: null, sourceQuestContent: null };
+      obj13[0] = onClose;
+      obj13[1] = callback1;
+      obj13[2] = sourceQuestContent;
+      tmp33Result = tmp33(tmp16(tmp2[19]), obj13);
     }
-    const obj13 = { children: null };
-    items10[1] = tmp28Result;
-    obj10[1] = items10;
-    obj8[2] = callback(first, obj10);
-    items8[1] = callback(tmp(tmp2[17]).SafeAreaPaddingView, obj8);
-    obj1[1] = items8;
-    obj13[0] = callback(tmp15Result, obj1);
-    return callback(first, obj13);
+    items12[1] = tmp33Result;
+    obj11[1] = items12;
+    obj9[2] = callback(first, obj11);
+    items10[1] = callback(tmp(tmp2[17]).SafeAreaPaddingView, obj9);
+    obj2[1] = items10;
+    obj1[1] = callback(tmp16Result, obj2);
+    return callback(first, obj1);
   }
 });
 const watch_mobile_video_quest = "watch_mobile_video_quest";
+let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM };
 const memoResult = importAllResult.memo(function VideoQuestModal(questContentPosition) {
   questContentPosition = questContentPosition.questContentPosition;
   const onClose = questContentPosition.onClose;
@@ -266,8 +309,8 @@ const memoResult = importAllResult.memo(function VideoQuestModal(questContentPos
     return tmp;
   }, items1);
   const layoutEffect = sourceQuestContent.useLayoutEffect(() => {
-    questContentPosition(videoSessionId[8]).lockOrientation("PORTRAIT", true);
-    return questContentPosition(videoSessionId[8]).restoreDefaultOrientation;
+    questContentPosition(videoSessionId[8]).applyOrientationLock("PORTRAIT");
+    return questContentPosition(videoSessionId[8]).restoreDefaultOrientationLock;
   }, []);
   let tmp7 = null;
   if (null != nonNullableQuest) {

@@ -8,7 +8,7 @@ import createCacheKey from "createCacheKey";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
-keys = keys.create(() => ({ controls: "ct", paused: "Array" }));
+keys = keys.create(() => ({ controls: "ct", paused: true }));
 let closure_8 = createCacheKey.createStyles({ slider: { marginBottom: 8 } });
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
@@ -74,7 +74,7 @@ export default function useVideoControls(arg0, portal) {
 export const useVideoStateStore = keys;
 export const initVideoStateStore = function initVideoStateStore() {
   batchUpdates.batchUpdates(() => {
-    state.setState({ controls: "ct", paused: "Array" });
+    state.setState({ controls: "ct", paused: true });
   });
 };
 export const setMuted = function setMuted(arg0) {

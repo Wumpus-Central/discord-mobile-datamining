@@ -1,6 +1,8 @@
 // discord_app/modules/premium/logitech_3pp/Logitech3PP.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03112_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03113_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03114_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03115_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03116_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03139_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03140_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03141_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03142_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03143_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03144_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

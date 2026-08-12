@@ -9,10 +9,10 @@ import { subscribeToSafeAreaInsets } from "subscribeToSafeAreaInsets.native.tsx"
 let obj = { main: null, share: null };
 obj = {};
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj[0] = module_4042.makeMutable(obj);
+obj[0] = module_4083.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj[1] = module_4042.makeMutable(obj);
+obj[1] = module_4083.makeMutable(obj);
 function _loop(iter) {
   let closure_0 = iter;
   subscribeToSafeAreaInsets((arg0) => {

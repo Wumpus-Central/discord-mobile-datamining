@@ -5,7 +5,7 @@ import { Consents } from "ME";
 import { DeviceSettingsStore } from "initialize";
 
 let object = arg1;
-let closure_6 = { detected: false, lastScannedAt: "r" };
+let closure_6 = { detected: false, lastScannedAt: "Array" };
 let closure_7 = { apps: {} };
 class LocalAppDetectionStore extends DeviceSettingsStore {
   constructor() {
@@ -54,7 +54,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
   const items = [];
-  const iter = object(12978).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
+  const iter = object(13037).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -72,8 +72,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     continue;
   }
   if (items.length > 0) {
-    object(12979).detectLocalApps(items);
-    const obj = object(12979);
+    object(13038).detectLocalApps(items);
+    const obj = object(13038);
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {

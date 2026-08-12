@@ -143,7 +143,7 @@ class Video extends PureComponent {
 const prototype = Video.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
-  this._renderTask = self(5821).runAfterInteractions(() => {
+  this._renderTask = self(5860).runAfterInteractions(() => {
     self.setState({ postponeRender: false });
   });
 };
@@ -244,8 +244,8 @@ const obj1 = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BRA
 const result = require("get ActivityIndicator").fileFinishedImporting("components_native/common/Video.tsx");
 
 export default Video;
-export const createVideoControls = function createVideoControls(ref1) {
-  let closure_0 = ref1;
+export const createVideoControls = function createVideoControls(NOOP) {
+  let closure_0 = NOOP;
   const ref = importAllResult.createRef();
   let c5 = 0;
   let c6 = 0;
@@ -262,7 +262,7 @@ export const createVideoControls = function createVideoControls(ref1) {
       }
     },
     pause(arg0) {
-      callback(arg0);
+      NOOP(arg0);
       if (closure_8 !== arg0) {
         closure_8 = arg0;
         if (_slicedToArray != null) {

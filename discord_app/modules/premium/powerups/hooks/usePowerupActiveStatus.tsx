@@ -114,7 +114,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
             obj1[3] = levelPowerup;
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: "ClipPath" };
+            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: "<string:1056964609>" };
             obj2[0] = tmp11.TIER_OVERRIDE_ACTIVATED;
             obj2[1] = skuId;
             obj2[3] = skuId;
@@ -134,7 +134,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
     }
   });
   if (mapped.length <= 0) {
-    obj = { type: null, sourceEntitlement: "Array", sourcePowerup: "options" };
+    obj = { type: null, sourceEntitlement: "Array", sourcePowerup: "accessibilityRole" };
     obj[0] = constants.INACTIVE;
     let first = obj;
   } else {
@@ -241,7 +241,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
             obj1[3] = levelPowerup;
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: "ClipPath" };
+            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: "<string:1056964609>" };
             obj2[0] = tmp11.TIER_OVERRIDE_ACTIVATED;
             obj2[1] = skuId;
             obj2[3] = skuId;

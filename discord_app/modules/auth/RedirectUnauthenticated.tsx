@@ -3,7 +3,7 @@ import "noop";
 import { Routes } from "ME";
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
 import { jsx } from "jsxProd";
-import { _extends } from "../../../_runtime/metro/04137__extends.js";
+import { _extends } from "../../../_runtime/metro/04178__extends.js";
 import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 
 const require = arg1;

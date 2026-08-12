@@ -53,7 +53,7 @@ function _getFromCacheOrFallback2() {
               let closure_5;
               c2 = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -135,28 +135,94 @@ function _getEmojiDominantColors() {
     const iter = (function*(arg0) {
       let c0;
       let closure_1;
-      let closure_2 = tmp2;
-      ({ emoji: c0, emojiSource: closure_1 } = c0);
-      yield "ct";
-      const obj2 = { cache: null, cacheKey: null, fallbackParam: null, fallbackFunc: null };
-      obj2[0] = closure_2;
-      obj2[1] = callback(c0);
-      obj2[2] = ImageManager;
-      obj2[3] = ImageManager.ImageManager.getDominantColors;
-      ImageManager = yield (function _getFromCacheOrFallback(arg0) {
-        const self = this;
-        const apply = c4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          applyArgumentsResult = apply(self, arguments);
+          return { value: "HermesInternal", done: null };
         }
-        return applyArgumentsResult;
-      })(obj2);
-      if (arg1 == null) {
-        ImageManager = [];
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback = tmp5;
+              let closure_2 = tmp2;
+              c0 = undefined;
+              let ImageManager;
+              ({ emoji: c0, emojiSource: closure_1 } = c0);
+              c4 = 1;
+              c5 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const obj2 = { cache: null, cacheKey: null, fallbackParam: null, fallbackFunc: null };
+              obj2[0] = closure_2;
+              obj2[1] = callback(c0);
+              obj2[2] = ImageManager;
+              obj2[3] = ImageManager.ImageManager.getDominantColors;
+              c4 = 2;
+              c5 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = (function _getFromCacheOrFallback(arg0) {
+                const self = this;
+                const apply = c4.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            ImageManager = arg1;
+            if (arg1 == null) {
+              ImageManager = [];
+            }
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = ImageManager;
+            return obj;
+          }
+        } catch (tmp15) {
+          c5 = tmp;
+          throw tmp15;
+        }
       }
-      return ImageManager;
     })();
     iter.next();
     return iter;

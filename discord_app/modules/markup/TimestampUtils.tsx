@@ -1,5 +1,5 @@
 // discord_app/modules/markup/TimestampUtils.tsx
-import { t } from "../../../_runtime/03902_t.js";
+import { t } from "../../../_runtime/03943_t.js";
 import { resetCache } from "../../utils/DateUtils.tsx";
 import { set } from "../../utils/Durations.tsx";
 let obj = {
@@ -40,18 +40,18 @@ let obj = {
     const obj5 = t;
     const result5 = t.relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = tmp(3902);
+      let tmpResult = tmp(3943);
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = tmp(3902);
+      tmpResult = tmp(3943);
       const result6 = tmpResult.relativeTimeThreshold("s", result);
       const tmpResultResult = tmpResult(toDate.toDate());
-      const result7 = tmp(3902).relativeTimeThreshold("ss", result2);
-      const tmpResult1 = tmp(3902);
-      const result8 = tmp(3902).relativeTimeThreshold("m", result4);
+      const result7 = tmp(3943).relativeTimeThreshold("ss", result2);
+      const tmpResult1 = tmp(3943);
+      const result8 = tmp(3943).relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = tmp(3902);
-        fromNowResult = tmp(3902)(toDate.toDate()).fromNow();
-        const tmpResult4Result = tmp(3902)(toDate.toDate());
+        const tmpResult3 = tmp(3943);
+        fromNowResult = tmp(3943)(toDate.toDate()).fromNow();
+        const tmpResult4Result = tmp(3943)(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {

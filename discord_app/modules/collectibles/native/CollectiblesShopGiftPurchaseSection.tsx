@@ -8,7 +8,7 @@ import { useNativeCheckoutStore } from "context";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import { PaymentGateways } from "sum";
-import jsxProd from "module_4643";
+import jsxProd from "module_4683";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { NativeCheckoutStoreProvider } from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
@@ -201,8 +201,8 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   let product;
   ({ product, onGiftModalDismiss } = arg0);
   ({ isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin } = arg0);
-  const GiftACOMOrderExperiment = onGiftModalDismiss(7414).GiftACOMOrderExperiment;
-  let obj = onGiftModalDismiss(9442);
+  const GiftACOMOrderExperiment = onGiftModalDismiss(7453).GiftACOMOrderExperiment;
+  let obj = onGiftModalDismiss(9482);
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled({ location: "WrappedCollectiblesShopGiftPurchaseSection" });
   if (obj2.isIOS()) {
     let GOOGLE = tmp4.APPLE_ADVANCED_COMMERCE;
@@ -215,8 +215,8 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   if (!tmp6) {
     let result = GOOGLE === tmp5.GOOGLE;
     if (result) {
-      result = tmp(3979).isGooglePlayBillingSupported();
-      const tmpResult = tmp(3979);
+      result = tmp(4020).isGooglePlayBillingSupported();
+      const tmpResult = tmp(4020);
     }
     if (result) {
       result = androidShopOrdersEnabled;
@@ -237,5 +237,5 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   const tmp8 = useCollectiblesExternalGatewayFacet(product);
   obj[7] = callback2(CollectiblesShopGiftPurchaseSection, { product, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin });
   obj[2] = callback2(NativeCheckoutStoreProvider, obj, product.skuId);
-  return callback2(onGiftModalDismiss(9576).NativePaymentContextProvider, obj);
+  return callback2(onGiftModalDismiss(9616).NativePaymentContextProvider, obj);
 };

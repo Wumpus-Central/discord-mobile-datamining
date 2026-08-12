@@ -41,7 +41,7 @@ export default function ChannelAccessInfo(guild) {
     id = guild.id;
   }
   memberIds = memberIds.getMemberIds(id);
-  const existingMembers = guild(9003).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+  const existingMembers = guild(9042).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
   let tmp8 = 0 === stateFromStoresArray.length;
   if (tmp8) {
     tmp8 = 1 === existingMembers.length;
@@ -53,7 +53,7 @@ export default function ChannelAccessInfo(guild) {
   if (tmp8) {
     first = existingMembers[0];
   }
-  const items2 = [callback(guild(4299).Text, { variant: "eyebrow", children: stringResult }), ];
+  const items2 = [callback(guild(4340).Text, { variant: "eyebrow", children: stringResult }), ];
   obj = {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
@@ -75,11 +75,11 @@ export default function ChannelAccessInfo(guild) {
     let obj3 = { children: null };
     let obj4 = { variant: "text-sm/semibold", children: null };
     obj4[1] = first.tag;
-    const items4 = [tmp13(tmp2(4299).Text, obj4), ];
+    const items4 = [tmp13(tmp2(4340).Text, obj4), ];
     let obj5 = { variant: "text-xs/medium", children: null };
     let intl2 = tmp2(1236).intl;
     obj5[1] = intl2.string(tmp2(1236).t.rt0ERW);
-    items4[1] = tmp13(tmp2(4299).Text, obj5);
+    items4[1] = tmp13(tmp2(4340).Text, obj5);
     obj3[0] = items4;
     items3[1] = tmp11(tmp14, obj3);
     obj1[0] = items3;
@@ -144,22 +144,22 @@ export default function ChannelAccessInfo(guild) {
     }
     obj6 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(11834);
-    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(4817).GroupIcon), ];
+    channel(11891);
+    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(4857).GroupIcon), ];
     const ROLES = constants.ROLES;
-    channel(9014);
-    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9012).ShieldUserIcon);
+    channel(9053);
+    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9051).ShieldUserIcon);
     obj6[0] = items5;
   }
   const obj7 = { children: null };
   obj[1] = closure_9(closure_10, obj6);
   const items6 = [callback(View, obj), ];
   const obj8 = { source: null, size: null };
-  obj8[0] = channel(10822);
+  obj8[0] = channel(10875);
   obj8[1] = guild(1297).Icon.Sizes.SMALL;
   items6[1] = callback(guild(1297).Icon, obj8);
   obj[4] = items6;
-  items2[1] = closure_9(guild(4846).PressableOpacity, obj);
+  items2[1] = closure_9(guild(4886).PressableOpacity, obj);
   obj7[0] = items2;
   return closure_9(closure_10, obj7);
 };

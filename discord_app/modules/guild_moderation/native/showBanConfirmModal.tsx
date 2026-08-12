@@ -7,5 +7,5 @@ const result = require("BanConfirmModal").fileFinishedImporting("modules/guild_m
 export default function showBanConfirmModal(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ModalActionCreators.pushLazy(asyncRequireImpl(11263, dependencyMap.paths), closure_0);
+  ModalActionCreators.pushLazy(asyncRequireImpl(11317, dependencyMap.paths), closure_0);
 };

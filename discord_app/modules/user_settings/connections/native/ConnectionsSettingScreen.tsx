@@ -6,14 +6,14 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionShe
 
 const require = arg1;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14212, dependencyMap.paths), "AddConnection");
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14269, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1499).useStackNavigation();
   let obj = stackNavigation(1499);
   const tmp = stackNavigation;
-  const params = stackNavigation(6880).useSettingNavigationRoute().params;
+  const params = stackNavigation(6919).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -27,11 +27,11 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
         obj.onPress = closure_5;
         const intl = callback(1236).intl;
         obj.label = intl.string(callback(1236).t.OYkgVk);
-        return callback2(callback(8388).HeaderTextButton, obj);
+        return callback2(callback(8427).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(14213).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14270).UserSettingsConnections, { selectedPlatformType });
 });
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 

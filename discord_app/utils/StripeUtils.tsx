@@ -3,7 +3,7 @@ import _typeof from "_typeof";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
-import { _typeof } from "../../_runtime/metro/04630__typeof.js";
+import { _typeof } from "../../_runtime/metro/04670__typeof.js";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 let closure_6;

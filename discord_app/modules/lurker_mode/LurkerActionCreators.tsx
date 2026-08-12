@@ -69,7 +69,7 @@ function _stopLurkingAll() {
                     let c6 = 0;
                     let c7 = 0;
                     let c5 = 0;
-                    return (/* F120104 */ function*() { ... })();
+                    return (/* F120354 */ function*() { ... })();
                   });
                   return function() {
                     const self = this;
@@ -159,7 +159,7 @@ function _stopLurking() {
               table = undefined;
               c3 = 1;
               guildId = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else {
             if (1 === tmp4) {

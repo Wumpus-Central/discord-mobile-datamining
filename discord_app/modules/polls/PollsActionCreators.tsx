@@ -104,7 +104,7 @@ function handleShowVotesForAnswer(messageId) {
               const _String = String;
               answerId = String(message.poll.answers[0].answer_id);
             }
-            obj = importAll(10289);
+            obj = importAll(10330);
             obj = { message: null, initialAnswerId: null };
             obj[0] = message;
             obj[1] = answerId;
@@ -210,7 +210,7 @@ function _optimisticallySetAnswers() {
               let ensureGuildLoaded;
               c4 = 1;
               c5 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -256,7 +256,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = processMessage;
                     obj[4] = processMessage;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7223).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7262).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -321,192 +321,250 @@ function _handlePollSubmitVote() {
     const iter = (function*(arg0) {
       let c0;
       let closure_1;
-      let items = tmp3;
-      let throwTypeErrorResult = callback;
-      ({ channelId: c0, messageId: closure_1 } = callback);
-      yield "ct";
-      if (1 === tmp7) {
-        if (arg0 === 1) {
-          let c9 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+      if (c9 === 2) {
+        c9 = 3;
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      } else {
+        throwTypeErrorResult = arg1;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp5;
+        throwTypeErrorResult = null;
+        if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          throwTypeErrorResult = handleChanged;
-          throwTypeErrorResult = items;
-          throwTypeErrorResult = channel;
-          throwTypeErrorResult = callback;
-          let message = channel.getChannel(callback);
-          throwTypeErrorResult = message;
-          if (null != message) {
-            throwTypeErrorResult = handleChanged;
-            throwTypeErrorResult = items;
-            throwTypeErrorResult = items;
-            throwTypeErrorResult = message;
-            throwTypeErrorResult = handleChanged;
-            throwTypeErrorResult = items;
-            if (items.isLurking(message.guild_id)) {
-              let obj2 = { guildId: null, title: null, body: null };
-              throwTypeErrorResult = message;
-              obj2[0] = message.guild_id;
-              throwTypeErrorResult = callback;
-              throwTypeErrorResult = selectedAnswerIds;
-              const intl7 = callback(selectedAnswerIds[13]).intl;
-              throwTypeErrorResult = callback;
-              throwTypeErrorResult = selectedAnswerIds;
-              obj2[1] = intl7.string(callback(selectedAnswerIds[13]).t.Qic1FD);
-              throwTypeErrorResult = callback;
-              throwTypeErrorResult = selectedAnswerIds;
-              const intl8 = callback(selectedAnswerIds[13]).intl;
-              throwTypeErrorResult = callback;
-              throwTypeErrorResult = selectedAnswerIds;
-              obj2[2] = intl8.string(callback(selectedAnswerIds[13]).t["5sHHoy"]);
-              throwTypeErrorResult = callback5(obj2);
-            } else if (recomputeGuild.canChatInGuild(message.guild_id)) {
-              selectedAnswerIds = callback3(callback, callback2);
-              callback2(selectedAnswerIds[11])(null != selectedAnswerIds, "Must not be able to vote without existing state!");
-              const obj3 = { channelId: null, messageId: null };
-              obj3[0] = callback;
-              obj3[1] = callback2;
-              handleChanged = callback6(obj3);
-              let c7 = 1;
-              selectedAnswerIds = 0;
-              selectedAnswerIds = selectedAnswerIds.selectedAnswerIds;
-              items = [];
-              selectedAnswerIds = HermesBuiltin.arraySpread(selectedAnswerIds.values(), selectedAnswerIds);
-              callback4(callback, callback2, (arg0) => {
-                callback(table[11])(null != arg0, "Must not be able to vote without existing state!");
-                const obj = {};
-                const merged = Object.assign(arg0);
-                obj.submitting = true;
-                obj.editing = false;
+          try {
+            c9 = 2;
+            if (0 === channel) {
+              if (arg0 === 1) {
+                c9 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c9 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
                 return obj;
-              });
-              const obj4 = { channelId: null, messageId: null, answerIds: null };
-              obj4[0] = callback;
-              obj4[1] = callback2;
-              obj4[2] = items;
-              channel = 3;
-              c9 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = callback7(obj4);
-              return obj5;
+              } else {
+                let items = tmp3;
+                let handleChanged = tmp7;
+                let callback;
+                let callback2;
+                throwTypeErrorResult = callback;
+                ({ channelId: c0, messageId: closure_1 } = callback);
+                let message;
+                let selectedAnswerIds;
+                handleChanged = undefined;
+                items = undefined;
+                channel = 1;
+                c9 = 1;
+                return { value: "ct", done: true };
+              }
             } else {
-              let obj10 = callback2(selectedAnswerIds[12]);
-              let obj6 = { title: null, body: null };
-              const intl5 = callback(selectedAnswerIds[13]).intl;
-              obj6[0] = intl5.string(callback(selectedAnswerIds[13]).t.p245wu);
-              const intl6 = callback(selectedAnswerIds[13]).intl;
-              obj6[1] = intl6.string(callback(selectedAnswerIds[13]).t["U/uodt"]);
-              obj10.show(obj6);
+              if (1 === tmp7) {
+                if (arg0 === 1) {
+                  c9 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c9 = 3;
+                  const obj1 = { value: null, done: true };
+                  obj1[0] = arg1;
+                  return obj1;
+                } else {
+                  throwTypeErrorResult = handleChanged;
+                  throwTypeErrorResult = items;
+                  throwTypeErrorResult = channel;
+                  throwTypeErrorResult = callback;
+                  message = channel.getChannel(callback);
+                  throwTypeErrorResult = message;
+                  if (null != message) {
+                    throwTypeErrorResult = handleChanged;
+                    throwTypeErrorResult = items;
+                    throwTypeErrorResult = items;
+                    throwTypeErrorResult = message;
+                    throwTypeErrorResult = handleChanged;
+                    throwTypeErrorResult = items;
+                    if (items.isLurking(message.guild_id)) {
+                      let obj2 = { guildId: null, title: null, body: null };
+                      throwTypeErrorResult = message;
+                      obj2[0] = message.guild_id;
+                      throwTypeErrorResult = callback;
+                      throwTypeErrorResult = selectedAnswerIds;
+                      const intl7 = callback(selectedAnswerIds[13]).intl;
+                      throwTypeErrorResult = callback;
+                      throwTypeErrorResult = selectedAnswerIds;
+                      obj2[1] = intl7.string(callback(selectedAnswerIds[13]).t.Qic1FD);
+                      throwTypeErrorResult = callback;
+                      throwTypeErrorResult = selectedAnswerIds;
+                      const intl8 = callback(selectedAnswerIds[13]).intl;
+                      throwTypeErrorResult = callback;
+                      throwTypeErrorResult = selectedAnswerIds;
+                      obj2[2] = intl8.string(callback(selectedAnswerIds[13]).t["5sHHoy"]);
+                      throwTypeErrorResult = callback5(obj2);
+                    } else if (recomputeGuild.canChatInGuild(message.guild_id)) {
+                      selectedAnswerIds = callback3(callback, callback2);
+                      callback2(selectedAnswerIds[11])(null != selectedAnswerIds, "Must not be able to vote without existing state!");
+                      const obj3 = { channelId: null, messageId: null };
+                      obj3[0] = callback;
+                      obj3[1] = callback2;
+                      handleChanged = callback6(obj3);
+                      let c7 = 1;
+                      selectedAnswerIds = 0;
+                      selectedAnswerIds = selectedAnswerIds.selectedAnswerIds;
+                      items = [];
+                      selectedAnswerIds = HermesBuiltin.arraySpread(selectedAnswerIds.values(), selectedAnswerIds);
+                      callback4(callback, callback2, (arg0) => {
+                        callback(table[11])(null != arg0, "Must not be able to vote without existing state!");
+                        const obj = {};
+                        const merged = Object.assign(arg0);
+                        obj.submitting = true;
+                        obj.editing = false;
+                        return obj;
+                      });
+                      const obj4 = { channelId: null, messageId: null, answerIds: null };
+                      obj4[0] = callback;
+                      obj4[1] = callback2;
+                      obj4[2] = items;
+                      channel = 3;
+                      c9 = 1;
+                      const obj5 = { value: null, done: false };
+                      obj5[0] = callback7(obj4);
+                      return obj5;
+                    } else {
+                      let obj10 = callback2(selectedAnswerIds[12]);
+                      let obj6 = { title: null, body: null };
+                      const intl5 = callback(selectedAnswerIds[13]).intl;
+                      obj6[0] = intl5.string(callback(selectedAnswerIds[13]).t.p245wu);
+                      const intl6 = callback(selectedAnswerIds[13]).intl;
+                      obj6[1] = intl6.string(callback(selectedAnswerIds[13]).t["U/uodt"]);
+                      obj10.show(obj6);
+                    }
+                  }
+                  c9 = 3;
+                }
+              } else if (2 === tmp7) {
+                c7 = 0;
+                obj6 = callback2(selectedAnswerIds[12]);
+                const obj7 = { title: null, body: null };
+                const intl3 = callback(selectedAnswerIds[13]).intl;
+                obj7[0] = intl3.string(callback(selectedAnswerIds[13]).t.iufib1);
+                const getAnyErrorMessage = throwTypeErrorResult.getAnyErrorMessage;
+                let anyErrorMessage;
+                if (getAnyErrorMessage != null) {
+                  anyErrorMessage = getAnyErrorMessage();
+                }
+                message = anyErrorMessage;
+                if (anyErrorMessage == null) {
+                  message = throwTypeErrorResult.message;
+                }
+                callback2 = message;
+                if (message == null) {
+                  const intl4 = callback(selectedAnswerIds[13]).intl;
+                  callback2 = intl4.string(callback(selectedAnswerIds[13]).t.eAn6z2);
+                }
+                obj7[1] = callback2;
+                obj6.show(obj7);
+                const obj8 = { channelId: null, messageId: null, answerIds: null };
+                obj8[0] = callback;
+                obj8[1] = callback2;
+                obj8[2] = handleChanged;
+                channel = 5;
+                c9 = 1;
+                const obj9 = { value: null, done: false };
+                obj9[0] = callback7(obj8);
+                return obj9;
+              } else if (3 === tmp7) {
+                if (arg0 === 1) {
+                  c9 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  c9 = 3;
+                  obj10 = { value: null, done: true };
+                  obj10[0] = arg1;
+                  return obj10;
+                } else {
+                  obj2 = message(selectedAnswerIds[22]);
+                  const obj11 = { channelId: null, messageId: null, answerIds: null };
+                  obj11[0] = callback;
+                  obj11[1] = callback2;
+                  obj11[2] = items;
+                  channel = 4;
+                  c9 = 1;
+                  const obj12 = { value: null, done: false };
+                  obj12[0] = obj2.submitPollVote(obj11);
+                  return obj12;
+                }
+              } else if (4 === tmp7) {
+                if (arg0 === 1) {
+                  c9 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  c9 = 3;
+                  const obj13 = { value: null, done: true };
+                  obj13[0] = arg1;
+                  return obj13;
+                } else {
+                  throwTypeErrorResult = handleChanged;
+                  throwTypeErrorResult = items;
+                  throwTypeErrorResult = callback4;
+                  throwTypeErrorResult = callback;
+                  throwTypeErrorResult = callback2;
+                  throwTypeErrorResult = callback4(callback, callback2, () => {
+
+                  });
+                  throwTypeErrorResult = callback;
+                  throwTypeErrorResult = selectedAnswerIds;
+                  const AccessibilityAnnouncer = callback(selectedAnswerIds[23]).AccessibilityAnnouncer;
+                  throwTypeErrorResult = items;
+                  if (0 === items.length) {
+                    const intl2 = callback(selectedAnswerIds[13]).intl;
+                    let stringResult = intl2.string(callback(selectedAnswerIds[13]).t["xcvy+3"]);
+                  } else {
+                    const intl = callback(selectedAnswerIds[13]).intl;
+                    stringResult = intl.string(callback(selectedAnswerIds[13]).t.o20GSo);
+                  }
+                  AccessibilityAnnouncer.announce(stringResult);
+                  c7 = 0;
+                }
+              } else if (arg0 === 1) {
+                c9 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                callback4(callback, callback2, (arg0) => {
+                  if (null != arg0) {
+                    const obj = {};
+                    const merged = Object.assign(arg0);
+                    obj.submitting = false;
+                    obj.editing = false;
+                    return obj;
+                  }
+                });
+              }
+              c9 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (throwTypeErrorResult) {
+            throwTypeErrorResult = c7;
+            if (tmp4 === c7) {
+              throwTypeErrorResult = tmp2;
+              c9 = tmp2;
+              throw throwTypeErrorResult;
+            } else {
+              channel = throwTypeErrorResult;
             }
           }
-          c9 = 3;
         }
-      } else if (2 === tmp7) {
-        c7 = 0;
-        obj6 = callback2(selectedAnswerIds[12]);
-        const obj7 = { title: null, body: null };
-        const intl3 = callback(selectedAnswerIds[13]).intl;
-        obj7[0] = intl3.string(callback(selectedAnswerIds[13]).t.iufib1);
-        const getAnyErrorMessage = throwTypeErrorResult.getAnyErrorMessage;
-        let anyErrorMessage;
-        if (getAnyErrorMessage != null) {
-          anyErrorMessage = getAnyErrorMessage();
-        }
-        message = anyErrorMessage;
-        if (anyErrorMessage == null) {
-          message = throwTypeErrorResult.message;
-        }
-        callback2 = message;
-        if (message == null) {
-          const intl4 = callback(selectedAnswerIds[13]).intl;
-          callback2 = intl4.string(callback(selectedAnswerIds[13]).t.eAn6z2);
-        }
-        obj7[1] = callback2;
-        obj6.show(obj7);
-        const obj8 = { channelId: null, messageId: null, answerIds: null };
-        obj8[0] = callback;
-        obj8[1] = callback2;
-        obj8[2] = handleChanged;
-        channel = 5;
-        c9 = 1;
-        const obj9 = { value: null, done: false };
-        obj9[0] = callback7(obj8);
-        return obj9;
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c7 = 0;
-          c9 = 3;
-          obj10 = { value: null, done: true };
-          obj10[0] = arg1;
-          return obj10;
-        } else {
-          obj2 = message(selectedAnswerIds[22]);
-          const obj11 = { channelId: null, messageId: null, answerIds: null };
-          obj11[0] = callback;
-          obj11[1] = callback2;
-          obj11[2] = items;
-          channel = 4;
-          c9 = 1;
-          const obj12 = { value: null, done: false };
-          obj12[0] = obj2.submitPollVote(obj11);
-          return obj12;
-        }
-      } else if (4 === tmp7) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c7 = 0;
-          c9 = 3;
-          const obj13 = { value: null, done: true };
-          obj13[0] = arg1;
-          return obj13;
-        } else {
-          throwTypeErrorResult = handleChanged;
-          throwTypeErrorResult = items;
-          throwTypeErrorResult = callback4;
-          throwTypeErrorResult = callback;
-          throwTypeErrorResult = callback2;
-          throwTypeErrorResult = callback4(callback, callback2, () => {
-
-          });
-          throwTypeErrorResult = callback;
-          throwTypeErrorResult = selectedAnswerIds;
-          const AccessibilityAnnouncer = callback(selectedAnswerIds[23]).AccessibilityAnnouncer;
-          throwTypeErrorResult = items;
-          if (0 === items.length) {
-            const intl2 = callback(selectedAnswerIds[13]).intl;
-            let stringResult = intl2.string(callback(selectedAnswerIds[13]).t["xcvy+3"]);
-          } else {
-            const intl = callback(selectedAnswerIds[13]).intl;
-            stringResult = intl.string(callback(selectedAnswerIds[13]).t.o20GSo);
-          }
-          AccessibilityAnnouncer.announce(stringResult);
-          c7 = 0;
-        }
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        callback4(callback, callback2, (arg0) => {
-          if (null != arg0) {
-            const obj = {};
-            const merged = Object.assign(arg0);
-            obj.submitting = false;
-            obj.editing = false;
-            return obj;
-          }
-        });
       }
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -529,45 +587,108 @@ function _handleClearPollVote() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      c1 = 0;
-      ({ channelId: c0, messageId: c1 } = callback);
-      yield "ct";
-      const channel2 = channel.getChannel(callback);
-      if (null != channel2) {
-        if (lurking.isLurking(channel2.guild_id)) {
-          const obj2 = { guildId: null, title: null, body: null };
-          obj2[0] = channel2.guild_id;
-          const intl = callback(1236).intl;
-          obj2[1] = intl.string(callback(1236).t.B9QnBp);
-          const intl2 = callback(1236).intl;
-          obj2[2] = intl2.string(callback(1236).t.BVZCTn);
-          callback3(obj2);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          callback2(callback, c1, (showResults) => {
-            const obj = { channelId: c0, selectedAnswerIds: null, submitting: false, editing: false, showResults: null };
-            obj[1] = new Set();
-            let flag;
-            if (showResults != null) {
-              flag = showResults.showResults;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let channel2 = tmp4;
+              c1 = 0;
+              let callback;
+              c1 = undefined;
+              ({ channelId: c0, messageId: c1 } = callback);
+              channel2 = undefined;
+              dependencyMap = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
             }
-            if (flag == null) {
-              flag = false;
+          } else if (1 === tmp4) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              channel2 = channel.getChannel(callback);
+              if (null != channel2) {
+                if (lurking.isLurking(channel2.guild_id)) {
+                  const obj2 = { guildId: null, title: null, body: null };
+                  obj2[0] = channel2.guild_id;
+                  const intl = callback(1236).intl;
+                  obj2[1] = intl.string(callback(1236).t.B9QnBp);
+                  const intl2 = callback(1236).intl;
+                  obj2[2] = intl2.string(callback(1236).t.BVZCTn);
+                  callback3(obj2);
+                } else {
+                  callback2(callback, c1, (showResults) => {
+                    const obj = { channelId: c0, selectedAnswerIds: null, submitting: false, editing: false, showResults: null };
+                    obj[1] = new Set();
+                    let flag;
+                    if (showResults != null) {
+                      flag = showResults.showResults;
+                    }
+                    if (flag == null) {
+                      flag = false;
+                    }
+                    obj[4] = flag;
+                    return obj;
+                  });
+                  const obj3 = { channelId: null, messageId: null };
+                  obj3[0] = callback;
+                  obj3[1] = c1;
+                  dependencyMap = 2;
+                  c4 = 1;
+                  const obj4 = { value: null, done: false };
+                  obj4[0] = callback4(obj3);
+                  return obj4;
+                }
+              }
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
             }
-            obj[4] = flag;
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = arg1;
+            return obj5;
+          } else {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
             return obj;
-          });
-          const obj3 = { channelId: null, messageId: null };
-          obj3[0] = callback;
-          obj3[1] = c1;
-          const dependencyMap = 2;
-          let c4 = 1;
-          const obj4 = { value: null, done: false };
-          obj4[0] = callback4(obj3);
-          return obj4;
+          }
+        } catch (tmp18) {
+          c4 = tmp;
+          throw tmp18;
         }
       }
-      yield "HermesInternal";
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -625,7 +746,7 @@ function _handlePollActionTapped() {
               ({ channelId: c0, messageId: c1, type: c2 } = c0);
               table = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -813,7 +934,7 @@ function _createPoll() {
               let obj2;
               c5 = 1;
               v0 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -884,16 +1005,16 @@ function _createPoll() {
               c5 = 3;
               v0 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(6920).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(6959).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
           } else if (2 === tmp7) {
             c4 = 0;
             let recomputeGuild = dependencyMap;
-            if (recomputeGuild instanceof lib(4202).APIError) {
+            if (recomputeGuild instanceof lib(4243).APIError) {
               let aPIError = recomputeGuild;
             } else {
-              aPIError = new lib(4202).APIError(recomputeGuild);
+              aPIError = new lib(4243).APIError(recomputeGuild);
             }
             if ("poll" === aPIError.getAnyErrorMessage()) {
               if (null != recomputeGuild.text) {
@@ -988,7 +1109,7 @@ function _endPollEarly() {
               ({ channelId: c0, messageId: c1 } = callback);
               dependencyMap = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -1008,7 +1129,7 @@ function _endPollEarly() {
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(4642).confirm(obj2);
+              obj3[0] = callback2(4682).confirm(obj2);
               return obj3;
             }
           } else {
@@ -1022,7 +1143,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(10294);
+                obj1 = callback3(10335);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

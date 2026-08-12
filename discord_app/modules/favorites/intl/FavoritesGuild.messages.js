@@ -1,6 +1,8 @@
 // discord_app/modules/favorites/intl/FavoritesGuild.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03048_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03049_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03050_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03051_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03052_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03075_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03076_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03077_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03078_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03079_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03080_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

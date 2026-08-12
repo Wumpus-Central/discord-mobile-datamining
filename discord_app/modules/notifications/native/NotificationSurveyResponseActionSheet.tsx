@@ -5,7 +5,7 @@ import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../_runtime/11116_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11169_registerAsset.js";
 import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -47,8 +47,8 @@ export default function NotificationSurveyResponseActionSheet(header) {
     obj[0] = header;
     obj = { onPress: null };
     obj[0] = onClose;
-    obj[1] = callback(tmp3(5765).ActionSheetCloseButton, obj);
-    tmp5 = callback(tmp3(5396).BottomSheetTitleHeader, obj);
+    obj[1] = callback(tmp3(5804).ActionSheetCloseButton, obj);
+    tmp5 = callback(tmp3(5435).BottomSheetTitleHeader, obj);
   }
   obj = { children: null };
   const items = [tmp5, ];

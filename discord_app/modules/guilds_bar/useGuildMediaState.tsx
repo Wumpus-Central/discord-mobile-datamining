@@ -218,12 +218,12 @@ export default function useGuildMediaState(guild_id) {
       tmp10 = null != guildHasVoice.getActiveStreamForUser(id, tmp4);
     }
     const someResult = keys.some((arg0) => {
-      channel = channel.getChannel(arg0);
-      let canResult = null != channel;
-      if (canResult) {
-        canResult = getUncachedChannelPermissions.can(callback(table[21]).JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+      basicChannel = basicChannel.getBasicChannel(arg0);
+      let tmp2 = null != basicChannel;
+      if (tmp2) {
+        tmp2 = callback(table[21])(basicChannel, getUncachedChannelPermissions);
       }
-      return canResult;
+      return tmp2;
     });
     let result = guild_id(tmp7[17]).filterOutStreamsByBlockedOwner(guildHasVoice.getAllApplicationStreams());
     const obj5 = guild_id(tmp7[17]);

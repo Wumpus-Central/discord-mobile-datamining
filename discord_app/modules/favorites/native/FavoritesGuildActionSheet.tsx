@@ -38,22 +38,22 @@ function FavoritesGuildActionSheet() {
       const intl2 = tmp4(1236).intl;
       obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
       const obj3 = { IconComponent: null };
-      obj3[0] = tmp4(11542).ArrowsUpDownIcon;
-      obj2[1] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj3);
+      obj3[0] = tmp4(11599).ArrowsUpDownIcon;
+      obj2[1] = tmp7(tmp4(5805).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
-        tmp3(4271).hideActionSheet(closure_6);
-        tmp3(15281)();
+        tmp3(4312).hideActionSheet(closure_6);
+        tmp3(15338)();
       };
-      obj1[1] = tmp7(tmp4(5766).ActionSheetRow, obj2);
-      tmp7Result = tmp7(tmp4(5766).ActionSheetRow.Group, obj1);
+      obj1[1] = tmp7(tmp4(5805).ActionSheetRow, obj2);
+      tmp7Result = tmp7(tmp4(5805).ActionSheetRow.Group, obj1);
     }
   }
   const items1 = [tmp7Result, ];
   const obj4 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
-    let EyeSlashIcon = tmp4(5326).XSmallIcon;
+    let EyeSlashIcon = tmp4(5365).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp4(8501).EyeSlashIcon;
+    EyeSlashIcon = tmp4(8540).EyeSlashIcon;
   }
   obj4[2] = callback(ActionSheetRowIcon.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
@@ -71,13 +71,13 @@ function FavoritesGuildActionSheet() {
     const obj5 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj9[0], subLabel: obj9[1] } = tmp3);
     const obj6 = { IconComponent: null };
-    obj6[0] = tmp4(4262).TrashIcon;
-    obj5[2] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj6);
+    obj6[0] = tmp4(4303).TrashIcon;
+    obj5[2] = tmp7(tmp4(5805).ActionSheetRow.Icon, obj6);
     obj5[4] = function onPress() {
       tmp3(outer1_2[12]).hideActionSheet(outer1_6);
       tmp3.perform();
     };
-    tmp7Result = tmp7(tmp4(5766).ActionSheetRow, obj5);
+    tmp7Result = tmp7(tmp4(5805).ActionSheetRow, obj5);
   }
   items2[1] = tmp7Result;
   items1[1] = closure_5(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: items2 });

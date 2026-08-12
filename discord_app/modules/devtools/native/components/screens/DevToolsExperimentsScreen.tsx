@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx
 import Background from "Background";
-import importAllResult from "module_8532";
+import importAllResult from "module_8571";
 import { View } from "getNoResultsSource";
 import getHash from "getHash";
 import fetchFingerprint from "fetchFingerprint";
@@ -77,7 +77,7 @@ function UserExperimentDebugView(id) {
   if (null == experimentServerAssignment) {
     str4 = "Warning: Server did not send any experiment config. You may need to check the \"Send to Client\" box in the admin UI.";
   }
-  obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5374).TableRow, obj) };
+  obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5413).TableRow, obj) };
   obj[1] = str4;
   const items = [closure_11(TableRowGroupTitle.TableRowGroup, obj1), closure_11(Button.Spacer, { size: 16 }), , , , , ];
   let str5 = "None";
@@ -86,7 +86,7 @@ function UserExperimentDebugView(id) {
     const _JSON = JSON;
     str6 = JSON.stringify(experimentServerAssignment, undefined, 2);
   }
-  obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5374).TableRow, { label: str6 }) };
+  obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5413).TableRow, { label: str6 }) };
   items[2] = closure_11(TableRowGroupTitle.TableRowGroup, obj2);
   items[3] = closure_11(Button.Spacer, { size: 16 });
   let json = str5;
@@ -94,7 +94,7 @@ function UserExperimentDebugView(id) {
     const _JSON2 = JSON;
     json = JSON.stringify(override.originalDescriptor, undefined, 2);
   }
-  obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5374).TableRow, { label: json }) };
+  obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5413).TableRow, { label: json }) };
   items[4] = closure_11(TableRowGroupTitle.TableRowGroup, obj3);
   items[5] = closure_11(Button.Spacer, { size: 16 });
   if (0 !== mapped.length) {
@@ -180,12 +180,12 @@ function GuildExperimentDebugView(arg0) {
   const tmp17 = closure_12;
   const tmp18 = View;
   obj1[1] = str;
-  const items1 = [closure_11(obj(5767).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj(5374).TableRow, obj1) }), closure_11(obj(1297).Spacer, { size: 16 }), , , , , , , ];
+  const items1 = [closure_11(obj(5806).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj(5413).TableRow, obj1) }), closure_11(obj(1297).Spacer, { size: 16 }), , , , , , , ];
   obj3 = { title: "Guild Assignments", hasIcons: false, children: null };
   const obj4 = { label: null };
   obj4[0] = items.join("\n");
-  obj3[2] = closure_11(obj(5374).TableRow, obj4);
-  items1[2] = closure_11(obj(5767).TableRowGroup, obj3);
+  obj3[2] = closure_11(obj(5413).TableRow, obj4);
+  items1[2] = closure_11(obj(5806).TableRowGroup, obj3);
   items1[3] = closure_11(obj(1297).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -193,25 +193,25 @@ function GuildExperimentDebugView(arg0) {
     const _JSON = JSON;
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
-  const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(5374).TableRow, obj1) };
-  items1[4] = closure_11(obj(5767).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(5374).TableRow, { label: str3 }) });
+  const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(5413).TableRow, obj1) };
+  items1[4] = closure_11(obj(5806).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(5413).TableRow, { label: str3 }) });
   items1[5] = closure_11(obj(1297).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
   }
-  const obj5 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(5374).TableRow, { label: str3 }) };
-  items1[6] = closure_11(obj(5767).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj(5374).TableRow, { label: str2 }) });
+  const obj5 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(5413).TableRow, { label: str3 }) };
+  items1[6] = closure_11(obj(5806).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj(5413).TableRow, { label: str2 }) });
   items1[7] = closure_11(obj(1297).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    mapped = tmp19(tmp20(5374).TableRow, { label: "none" });
+    mapped = tmp19(tmp20(5413).TableRow, { label: "none" });
   } else {
     mapped = mapped.map((label) => {
       const obj = { label, labelLineClamp: 1 };
       return callback(obj(table[23]).TableRow, obj, label);
     });
   }
-  items1[8] = closure_11(obj(5767).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped });
+  items1[8] = closure_11(obj(5806).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped });
   obj[1] = items1;
   return tmp17(tmp18, obj);
 }

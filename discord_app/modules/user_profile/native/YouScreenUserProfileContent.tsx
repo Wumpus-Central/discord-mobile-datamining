@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/YouScreenUserProfileContent.tsx
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled";
-import DismissibleContent from "DismissibleContent";
+import useBadges from "useBadges";
+import apexExperiment from "apexExperiment";
 import get_ActivityIndicator from "UserProfileAnalyticsProvider";
 import { useIsContentShown } from "withContent";
 import filterPlayingActivities from "filterPlayingActivities";
@@ -8,7 +8,7 @@ import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
 import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "UserProfileTextButtonGroup";
+import jsxProd from "useSelectedDismissibleContent";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { OpenableUserProfileAvatar } from "UserProfileAvatar.tsx";
 import { useSharedStyles } from "UserProfileSharedStyles.tsx";
@@ -23,9 +23,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15887).trackYouTabAvatarPress();
-    const obj = callback(15887);
-    const result1 = callback(15505).showYouAccountActionSheet();
+    const result = callback(15943).trackYouTabAvatarPress();
+    const obj = callback(15943);
+    const result1 = callback(15561).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -65,56 +65,70 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
 }
 function EditSection(navigateToProfileCustomization) {
   navigateToProfileCustomization = navigateToProfileCustomization.navigateToProfileCustomization;
+  let hasBadges = navigateToProfileCustomization.isProfileLoaded;
   let trackUserProfileAction;
-  let dependencyMap;
+  let first;
   let callback;
-  let obj = navigateToProfileCustomization(8794);
+  let obj = navigateToProfileCustomization(first[17]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = React;
   const ref = React.useRef(null);
-  let obj2 = navigateToProfileCustomization(9243);
+  let obj2 = navigateToProfileCustomization(first[18]);
   const isDisplayNameStylesFlywheelSettersEnabled = obj2.useIsDisplayNameStylesFlywheelSettersEnabled("YouScreenUserProfileContent");
-  const tmp3 = trackUserProfileAction(8841)();
-  navigateToProfileCustomization(6024);
-  if (isDisplayNameStylesFlywheelSettersEnabled) {
-    if (!tmp7) {
-      let items = [tmp4(1377).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK];
-    }
-    const tmp11 = callback(tmp9(items), 2);
-    dependencyMap = tmp12;
-    const tmp13 = tmp11[0] === tmp4(1377).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK;
-    callback = tmp13;
-    const items1 = [navigateToProfileCustomization, trackUserProfileAction, tmp13, tmp11[1]];
-    obj = { children: null };
-    callback = obj1.useCallback(() => {
-      trackUserProfileAction({ action: "EDIT_PROFILE" });
-      const result = navigateToProfileCustomization(_undefined[10]).trackYouTabEditProfilePress();
-      navigateToProfileCustomization();
-      if (c3) {
-        _undefined(outer1_12.TAKE_ACTION);
-      }
-    }, items1);
-    obj = { style: null, secondaryButton: null };
-    obj[0] = tmp3.primaryButtons;
-    obj1 = { ref: null, variant: "primary", icon: null, text: null, onPress: null, grow: true };
-    obj1[0] = ref;
-    obj2 = { size: "sm", color: null };
-    obj2[1] = tmp(712).colors.WHITE;
-    obj1[2] = callback2(tmp4(9677).PencilIcon, obj2);
-    const intl = tmp4(1236).intl;
-    obj1[3] = intl.string(tmp4(1236).t.AAjhgi);
-    obj1[4] = callback;
-    obj[1] = callback2(tmp4(4714).Button, obj1);
-    const items2 = [callback2(tmp(12274), obj), ];
-    const obj3 = { targetRef: null, visible: null, markAsDismissed: null };
-    obj3[0] = ref;
-    obj3[1] = tmp13;
-    obj3[2] = tmp11[1];
-    items2[1] = callback2(tmp(15895), obj3);
-    obj[0] = items2;
-    return callback3(closure_15, obj);
+  let obj3 = navigateToProfileCustomization(first[19]);
+  const isBadgeManagementEnabled = obj3.useIsBadgeManagementEnabled({ location: "YouScreenUserProfileContent" });
+  let tmp9 = hasBadges;
+  const tmp3 = trackUserProfileAction(first[14])();
+  if (hasBadges) {
+    tmp9 = isDisplayNameStylesFlywheelSettersEnabled;
   }
-  items = [];
+  if (tmp9) {
+    tmp9 = !tmp8;
+  }
+  const items = [];
+  if (tmp9) {
+    items.push(tmp4(tmp2[20]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK);
+  }
+  if (hasBadges) {
+    hasBadges = isBadgeManagementEnabled;
+  }
+  if (hasBadges) {
+    hasBadges = navigateToProfileCustomization.hasBadges;
+  }
+  if (hasBadges) {
+    items.push(tmp4(tmp2[20]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK);
+  }
+  tmp8 = useIsContentShown(navigateToProfileCustomization(first[20]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS);
+  const tmp12 = callback(navigateToProfileCustomization(first[21]).useSelectedDismissibleContent(items), 2);
+  first = tmp12[0];
+  callback = tmp14;
+  const items1 = [navigateToProfileCustomization, trackUserProfileAction, first, tmp12[1]];
+  obj = { children: null };
+  callback = obj1.useCallback(() => {
+    trackUserProfileAction({ action: "EDIT_PROFILE" });
+    const result = navigateToProfileCustomization(first[10]).trackYouTabEditProfilePress();
+    navigateToProfileCustomization();
+    if (null != first) {
+      _undefined(outer1_12.TAKE_ACTION);
+    }
+  }, items1);
+  obj = { style: tmp3.primaryButtons, secondaryButton: null };
+  const tmp4Result = navigateToProfileCustomization(first[21]);
+  obj1 = { ref, variant: "primary", icon: null, text: null, onPress: null, grow: true };
+  obj2 = { size: "sm", color: null };
+  obj2[1] = trackUserProfileAction(first[25]).colors.WHITE;
+  obj1[2] = callback2(navigateToProfileCustomization(first[24]).PencilIcon, obj2);
+  const intl = tmp4(tmp2[26]).intl;
+  obj1[3] = intl.string(navigateToProfileCustomization(first[26]).t.AAjhgi);
+  obj1[4] = callback;
+  obj[1] = callback2(navigateToProfileCustomization(first[23]).Button, obj1);
+  const items2 = [callback2(trackUserProfileAction(first[22]), obj), , ];
+  obj3 = { targetRef: ref, visible: first === tmp4(tmp2[20]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, markAsDismissed: tmp14 };
+  items2[1] = callback2(trackUserProfileAction(first[27]), obj3);
+  const tmpResult = trackUserProfileAction(first[22]);
+  items2[2] = callback2(trackUserProfileAction(first[28]), { targetRef: ref, visible: first === navigateToProfileCustomization(first[20]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK, markAsDismissed: tmp12[1], onTryItOut: navigateToProfileCustomization });
+  obj[0] = items2;
+  return callback3(closure_15, obj);
 }
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -133,7 +147,7 @@ export default function YouScreenUserProfileContent(user) {
   let statusBackground;
   let style;
   let theme;
-  let tmp17;
+  let tmp16;
   user = user.user;
   const navigateToFriends = user.navigateToFriends;
   const navigateToPremium = user.navigateToPremium;
@@ -174,77 +188,77 @@ export default function YouScreenUserProfileContent(user) {
   let closure_32;
   const tmp3 = navigateToFriends(navigateToPremium[14])();
   c5 = tmp3;
-  let obj = user(navigateToPremium[27]);
+  let obj = user(navigateToPremium[29]);
   navigation = obj.useNavigation();
   let obj1 = user(navigateToPremium[17]);
   trackUserProfileAction = obj1.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let tmp6 = navigateToFriends(navigateToPremium[28])(user.id);
+  let tmp6 = navigateToFriends(navigateToPremium[30])(user.id);
   c8 = tmp6;
-  let obj2 = user(navigateToPremium[29]);
+  let obj2 = user(navigateToPremium[31]);
   customStatusActivity = obj2.useCustomStatusActivity();
-  let obj3 = user(navigateToPremium[31]);
+  const arr = navigateToFriends(navigateToPremium[32])(tmp6);
+  let obj3 = user(navigateToPremium[33]);
   let items = [c8];
   const stateFromStores = obj3.useStateFromStores(items, () => _undefined2.getStatus());
-  const tmp10 = navigateToFriends(navigateToPremium[32])("YouScreenUserProfileContent");
-  UserProfileSections = tmp10;
-  const tmp11 = navigateToFriends(navigateToPremium[33])({ user, displayProfile: tmp6 });
-  const primaryColor = tmp11.primaryColor;
-  UserProfileThemeTypes = tmp12;
-  ({ theme, secondaryColor } = tmp11);
-  let obj4 = user(navigateToPremium[34]);
+  const tmp9 = navigateToFriends(navigateToPremium[34])("YouScreenUserProfileContent");
+  UserProfileSections = tmp9;
+  const tmp10 = navigateToFriends(navigateToPremium[35])({ user, displayProfile: tmp6 });
+  const primaryColor = tmp10.primaryColor;
+  UserProfileThemeTypes = tmp11;
+  ({ theme, secondaryColor } = tmp10);
+  let obj4 = user(navigateToPremium[36]);
   const userProfileColors = obj4.useUserProfileColors({ theme, primaryColor, secondaryColor });
   containerBackground = userProfileColors.containerBackground;
   containerBorderColor = userProfileColors.containerBorderColor;
   let obj5 = initialTab;
   ({ avatarBackground, statusBackground } = userProfileColors);
   let items1 = [trackUserProfileAction];
-  let tmp8 = navigateToFriends(navigateToPremium[30])(tmp6);
   const callback = initialTab.useCallback(() => {
     trackUserProfileAction({ action: "PRESS_SET_STATUS" });
     const result = user(navigateToPremium[11]).showYouAccountActionSheet();
   }, items1);
-  let obj6 = user(navigateToPremium[35]);
+  let obj6 = user(navigateToPremium[37]);
   enabled = obj6.useVirtualCurrencyMobileEnabled().enabled;
   const ref = initialTab.useRef(null);
-  [obj8, tmp17] = navigateToShop(initialTab.useState(null), 2);
-  c15 = tmp17;
-  obj8 = user(navigateToPremium[36]);
+  [obj8, tmp16] = navigateToShop(initialTab.useState(null), 2);
+  c15 = tmp16;
+  obj8 = user(navigateToPremium[38]);
   shouldShowExpiringTrialOfferCard = obj8.useShouldShowExpiringTrialOfferCard();
-  let obj9 = user(navigateToPremium[31]);
+  let obj9 = user(navigateToPremium[33]);
   let items2 = [customStatusActivity];
   stateFromStores1 = obj9.useStateFromStores(items2, () => customStatusActivity.getFirstWishlistId(user.id));
-  let obj10 = user(navigateToPremium[37]);
-  let tmp20 = obj10.useDisplayableBoardWidgets(user.id).length > 0;
-  c18 = tmp20;
-  const tmp16 = navigateToShop(initialTab.useState(null), 2);
-  const profileTabIndices = user(navigateToPremium[38]).useProfileTabIndices(tmp20, true);
+  let obj10 = user(navigateToPremium[39]);
+  const tmp19 = obj10.useDisplayableBoardWidgets(user.id).length > 0;
+  c18 = tmp19;
+  let obj11 = user(navigateToPremium[40]);
+  const profileTabIndices = obj11.useProfileTabIndices(tmp19, true);
   boardTabIndex = profileTabIndices.boardTabIndex;
   wishlistTabIndex = profileTabIndices.wishlistTabIndex;
-  const tmp22 = navigateToShop(initialTab.useState(0), 2);
-  first = tmp22[0];
-  closure_22 = tmp22[1];
+  const tmp21 = navigateToShop(initialTab.useState(0), 2);
+  first = tmp21[0];
+  closure_22 = tmp21[1];
   const callback1 = initialTab.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const obj12 = user(navigateToPremium[38]);
-  const pageHeights = user(navigateToPremium[39]).usePageHeights();
+  let tmp15 = navigateToShop(initialTab.useState(null), 2);
+  const pageHeights = user(navigateToPremium[41]).usePageHeights();
   handlePageContentSize = pageHeights.handlePageContentSize;
   const items3 = [trackUserProfileAction];
   const callback2 = initialTab.useCallback((section) => {
     trackUserProfileAction({ action: "PRESS_SECTION", section });
   }, items3);
-  const obj13 = user(navigateToPremium[39]);
-  const profileSectionTabs = user(navigateToPremium[38]).useProfileSectionTabs({ initialUserProfileSection: initialTab, wishlistTabIndex, boardTabIndex, onTabChange: callback2 });
+  const obj13 = user(navigateToPremium[41]);
+  const profileSectionTabs = user(navigateToPremium[40]).useProfileSectionTabs({ initialUserProfileSection: initialTab, wishlistTabIndex, boardTabIndex, onTabChange: callback2 });
   activeProfileTabSection = profileSectionTabs.activeProfileTabSection;
   setActiveProfileTabSection = profileSectionTabs.setActiveProfileTabSection;
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
-  c27 = tmp28;
-  const items4 = [customStatusActivity, tmp17];
+  c27 = tmp27;
+  const items4 = [customStatusActivity, tmp16];
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
   callback3 = initialTab.useCallback(() => {
     let tmp2 = null;
     if (null == customStatusActivity) {
-      tmp2 = navigateToFriends(navigateToPremium[40])();
+      tmp2 = navigateToFriends(navigateToPremium[42])();
     }
     c15(tmp2);
   }, items4);
@@ -258,7 +272,7 @@ export default function YouScreenUserProfileContent(user) {
   if (null != obj7) {
     labelResult = obj7.label();
   }
-  const items6 = [containerBackground, containerBorderColor, tmp10, tmp3, navigateToPremium, shouldShowExpiringTrialOfferCard, navigateToShop, null != primaryColor, enabled, user, tmp6, navigateToFriends];
+  const items6 = [containerBackground, containerBorderColor, tmp9, tmp3, navigateToPremium, shouldShowExpiringTrialOfferCard, navigateToShop, null != primaryColor, enabled, user, tmp6, navigateToFriends];
   callback4 = obj5.useCallback(() => {
     const items = [_undefined.card, ];
     if (c10) {
@@ -278,27 +292,27 @@ export default function YouScreenUserProfileContent(user) {
     obj = { style: items1, children: null };
     items1 = [, ];
     ({ cards: arr2[0], profileContent: arr2[1] } = tmp4);
-    const items2 = [containerBorderColor(navigateToFriends(navigateToPremium[41]), { navigateToPremium, style: tmp5 }), , , , , , , , , ];
+    const items2 = [containerBorderColor(navigateToFriends(navigateToPremium[43]), { navigateToPremium, style: tmp5 }), , , , , , , , , ];
     let tmp10Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj2 = { navigateToPremium: null, navigateToShop: null, hasCustomProfileTheme: null };
       obj2[0] = navigateToPremium;
       obj2[1] = navigateToShop;
       obj2[2] = c11;
-      tmp10Result = tmp10(tmp11(tmp12[42]), obj2);
+      tmp10Result = tmp10(tmp11(tmp12[44]), obj2);
     }
     items2[1] = tmp10Result;
     tmp10Result = enabled;
     if (enabled) {
       const obj3 = { style: null };
       obj3[0] = tmp5;
-      tmp10Result = tmp10(tmp11(tmp12[43]), obj3);
+      tmp10Result = tmp10(tmp11(tmp12[45]), obj3);
     }
     items2[2] = tmp10Result;
-    items2[3] = containerBorderColor(navigateToFriends(navigateToPremium[44]), { user, currentUser: user, style: tmp5 });
+    items2[3] = containerBorderColor(navigateToFriends(navigateToPremium[46]), { user, currentUser: user, style: tmp5 });
     const obj5 = { userId: user.id, displayProfile: c8, style: null };
     let tmp20;
-    let tmp11Result = tmp11(tmp12[45]);
+    let tmp11Result = tmp11(tmp12[47]);
     if (!c10) {
       tmp20 = tmp5;
     }
@@ -306,7 +320,7 @@ export default function YouScreenUserProfileContent(user) {
     items2[4] = containerBorderColor(tmp11Result, obj5);
     let tmp10Result1 = tmp;
     if (c10) {
-      tmp10Result1 = tmp10(tmp11(tmp12[46]), {});
+      tmp10Result1 = tmp10(tmp11(tmp12[48]), {});
     }
     items2[5] = tmp10Result1;
     const obj6 = { userId: user.id, style: null };
@@ -315,18 +329,18 @@ export default function YouScreenUserProfileContent(user) {
       tmp23 = tmp5;
     }
     obj6[1] = tmp23;
-    items2[6] = containerBorderColor(user(navigateToPremium[47]).UserProfileAccountConnectionsCard, obj6);
+    items2[6] = containerBorderColor(user(navigateToPremium[49]).UserProfileAccountConnectionsCard, obj6);
     const obj7 = { userId: user.id, style: null };
     let tmp24;
     if (!c10) {
       tmp24 = tmp5;
     }
     obj7[1] = tmp24;
-    items2[7] = containerBorderColor(user(navigateToPremium[47]).UserProfileApplicationRoleConnectionsCard, obj7);
-    items2[8] = containerBorderColor(navigateToFriends(navigateToPremium[48]), { userId: user.id, navigateToFriends, style: tmp5 });
+    items2[7] = containerBorderColor(user(navigateToPremium[49]).UserProfileApplicationRoleConnectionsCard, obj7);
+    items2[8] = containerBorderColor(navigateToFriends(navigateToPremium[50]), { userId: user.id, navigateToFriends, style: tmp5 });
     const obj9 = { userId: user.id, style: null };
     let tmp26;
-    tmp11Result = tmp11(tmp12[49]);
+    tmp11Result = tmp11(tmp12[51]);
     if (!c10) {
       tmp26 = tmp5;
     }
@@ -339,7 +353,7 @@ export default function YouScreenUserProfileContent(user) {
   callback5 = obj5.useCallback(() => {
     let obj = { style: _undefined.profileContent, children: null };
     if (null == stateFromStores1) {
-      let tmp4Result = containerBorderColor(user(navigateToPremium[50]).WishlistEmptyState, {});
+      let tmp4Result = containerBorderColor(user(navigateToPremium[52]).WishlistEmptyState, {});
       let tmp6 = navigateToPremium;
       let tmp4 = containerBorderColor;
     } else {
@@ -353,8 +367,8 @@ export default function YouScreenUserProfileContent(user) {
       }
       obj[1] = tmp8;
       obj[2] = c27;
-      tmp4Result = tmp4(navigateToFriends(navigateToPremium[50]), obj);
-      const tmp7 = navigateToFriends(navigateToPremium[50]);
+      tmp4Result = tmp4(navigateToFriends(navigateToPremium[52]), obj);
+      const tmp7 = navigateToFriends(navigateToPremium[52]);
     }
     const items = [tmp4Result, ];
     obj = { userId: user.id, wishlistId: tmp3, containerWidth: null };
@@ -363,15 +377,15 @@ export default function YouScreenUserProfileContent(user) {
       tmp15 = first;
     }
     obj[2] = tmp15;
-    items[1] = tmp4(navigateToFriends(tmp6[51]), obj);
+    items[1] = tmp4(navigateToFriends(tmp6[53]), obj);
     obj[1] = items;
     return enabled(navigation, obj);
   }, items7);
-  const items8 = [callback4, callback5, handlePageContentSize, tmp20, boardTabIndex, wishlistTabIndex, user.id, activeProfileTabSection, tmp10, containerBackground, containerBorderColor];
+  const items8 = [callback4, callback5, handlePageContentSize, tmp19, boardTabIndex, wishlistTabIndex, user.id, activeProfileTabSection, tmp9, containerBackground, containerBorderColor];
   const memo = obj5.useMemo(() => {
     let obj = { id: "main", label: null, page: null };
-    const intl = user(navigateToPremium[25]).intl;
-    obj[1] = intl.string(user(navigateToPremium[25]).t.LXw470);
+    const intl = user(navigateToPremium[26]).intl;
+    obj[1] = intl.string(user(navigateToPremium[26]).t.LXw470);
     obj = {
       scrollEnabled: false,
       onContentSizeChange(arg0, arg1) {
@@ -383,8 +397,8 @@ export default function YouScreenUserProfileContent(user) {
     const items = [obj];
     if (c18) {
       obj = { id: "board", label: null, page: null };
-      const intl2 = tmp(tmp2[25]).intl;
-      obj[1] = intl2.string(tmp(tmp2[25]).t.laViwx);
+      const intl2 = tmp(tmp2[26]).intl;
+      obj[1] = intl2.string(tmp(tmp2[26]).t.laViwx);
       const obj1 = { scrollEnabled: false, onContentSizeChange: null, children: null };
       obj1[1] = function onContentSizeChange(arg0, arg1) {
         return callback(closure_19, arg0, arg1);
@@ -400,8 +414,8 @@ export default function YouScreenUserProfileContent(user) {
       items.push(obj);
     }
     const obj3 = { id: "wishlist", label: null, page: null };
-    const intl3 = tmp(tmp2[25]).intl;
-    obj3[1] = intl3.string(user(navigateToPremium[25]).t["7lZ31J"]);
+    const intl3 = tmp(tmp2[26]).intl;
+    obj3[1] = intl3.string(user(navigateToPremium[26]).t["7lZ31J"]);
     obj3[2] = containerBorderColor(c5, {
       scrollEnabled: false,
       onContentSizeChange(arg0, arg1) {
@@ -412,26 +426,26 @@ export default function YouScreenUserProfileContent(user) {
     items.push(obj3);
     return items;
   }, items8);
-  let tmp4Result = tmp4(tmp2[52]);
-  obj = { pageWidth: first, defaultIndex: activeProfileTabSectionIndex, itemSpacing: tmp(tmp2[24]).space.PX_24, items: memo, onPageChange: handleTabChange };
+  let tmp4Result = tmp4(tmp2[54]);
+  obj = { pageWidth: first, defaultIndex: activeProfileTabSectionIndex, itemSpacing: tmp(tmp2[25]).space.PX_24, items: memo, onPageChange: handleTabChange };
   segmentedControlState = tmp4Result.useSegmentedControlState(obj);
-  tmp4Result = tmp4(tmp2[39]);
+  tmp4Result = tmp4(tmp2[41]);
   const pagerFillHeight = tmp4Result.usePagerFillHeight();
   const items9 = [segmentedControlState, restoreActiveIndex];
   ({ pagerRef, fillHeight, measureFill } = pagerFillHeight);
   const layoutEffect = obj5.useLayoutEffect(() => {
     restoreActiveIndex(segmentedControlState);
   }, items9);
-  const obj14 = user(navigateToPremium[38]);
-  const pagesHeightStyle = user(navigateToPremium[39]).usePagesHeightStyle(segmentedControlState, pageHeights.pageHeights, fillHeight);
+  const obj14 = user(navigateToPremium[40]);
+  const pagesHeightStyle = user(navigateToPremium[41]).usePagesHeightStyle(segmentedControlState, pageHeights.pageHeights, fillHeight);
   closure_32 = obj5.useRef(segmentedControlState.setActiveIndex);
   const items10 = [segmentedControlState];
   const effect1 = obj5.useEffect(() => {
     closure_32.current = segmentedControlState.setActiveIndex;
   }, items10);
-  const tmp4Result1 = user(navigateToPremium[39]);
+  const tmp4Result1 = user(navigateToPremium[41]);
   const items11 = [initialTab, navigation, wishlistTabIndex, setActiveProfileTabSection];
-  const focusEffect = user(navigateToPremium[27]).useFocusEffect(obj5.useCallback(() => {
+  const focusEffect = user(navigateToPremium[29]).useFocusEffect(obj5.useCallback(() => {
     if (undefined !== initialTab) {
       let num = 0;
       if (tmp === _undefined3.WISHLIST) {
@@ -441,7 +455,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         outer1_25(outer1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
         outer1_32.current(num, false, true);
-        outer1_6.setParams({ initialTab: "r" });
+        outer1_6.setParams({ initialTab: "Array" });
       }, 80);
     }
     return () => {
@@ -468,52 +482,54 @@ export default function YouScreenUserProfileContent(user) {
   obj1 = { style: items12, children: null };
   items12 = [tmp3.profileContentWrapper, { paddingTop: 0 }];
   const items13 = [containerBorderColor(shouldShowExpiringTrialOfferCard, { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag }), , , ];
-  obj2 = { ref, customStatusActivity, hasCustomProfileTheme: tmp12, style: items14, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true, placeholderText: labelResult, prompt: obj7 };
+  obj2 = { ref, customStatusActivity, hasCustomProfileTheme: tmp11, style: items14, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true, placeholderText: labelResult, prompt: obj7 };
   items14 = [, ];
-  ({ customStatusBubble: arr15[0], customStatusBubbleInset: arr15[1] } = tmp3);
-  items13[1] = containerBorderColor(navigateToFriends(navigateToPremium[55]), obj2);
+  ({ customStatusBubble: arr16[0], customStatusBubbleInset: arr16[1] } = tmp3);
+  items13[1] = containerBorderColor(navigateToFriends(navigateToPremium[57]), obj2);
   obj3 = { style: items15, children: null };
   items15 = [, ];
-  ({ primaryInfo: arr16[0], profileContent: arr16[1] } = tmp3);
+  ({ primaryInfo: arr17[0], profileContent: arr17[1] } = tmp3);
   obj4 = { user, pronouns: null, badges: null, badgeContainerBackground: null, onPressDisplayName: null, displayNameAccessibilityHint: null, themeType: null, showChevron: true };
   let pronouns;
-  const tmp4Result2 = user(navigateToPremium[27]);
+  const tmp4Result2 = user(navigateToPremium[29]);
   if (tmp6 != null) {
     pronouns = tmp6.pronouns;
   }
   obj4[1] = pronouns;
-  obj4[2] = tmp8;
+  obj4[2] = arr;
   obj4[3] = containerBackground;
   obj4[4] = callback;
-  let intl = tmp4(tmp2[25]).intl;
+  let intl = tmp4(tmp2[26]).intl;
   obj5 = { status: null };
-  const tmpResult = navigateToFriends(navigateToPremium[56]);
-  obj5[0] = user(navigateToPremium[57]).getStatusLabel(stateFromStores);
-  const tmp4Result3 = user(navigateToPremium[57]);
-  let intl2 = tmp4(tmp2[25]).intl;
-  obj4[5] = "" + intl.formatToPlainString(user(navigateToPremium[25]).t["er+FRD"], obj5) + ", " + intl2.string(user(navigateToPremium[25]).t.C6COaT);
+  const tmpResult = navigateToFriends(navigateToPremium[58]);
+  obj5[0] = user(navigateToPremium[59]).getStatusLabel(stateFromStores);
+  const tmp4Result3 = user(navigateToPremium[59]);
+  let intl2 = tmp4(tmp2[26]).intl;
+  obj4[5] = "" + intl.formatToPlainString(user(navigateToPremium[26]).t["er+FRD"], obj5) + ", " + intl2.string(user(navigateToPremium[26]).t.C6COaT);
   obj4[6] = UserProfileThemeTypes.YOU_SCREEN;
-  const items16 = [containerBorderColor(tmpResult, obj4), containerBorderColor(c18, { navigateToProfileCustomization })];
+  const items16 = [containerBorderColor(tmpResult, obj4), ];
+  obj6 = { navigateToProfileCustomization, hasBadges: arr.length > 0, isProfileLoaded: null != tmp6 };
+  items16[1] = containerBorderColor(c18, obj6);
   obj3[1] = items16;
   items13[2] = enabled(navigation, obj3);
-  obj6 = { style: { flex: 1 }, onLayout: callback1, children: null };
-  obj7 = { style: tmp3.profileTablist, children: null };
-  obj8 = { state: segmentedControlState, variant: null };
+  obj7 = { style: { flex: 1 }, onLayout: callback1, children: null };
+  obj8 = { style: tmp3.profileTablist, children: null };
+  obj9 = { state: segmentedControlState, variant: null };
   let str;
   if (null != primaryColor) {
     str = "gradient-background";
   }
-  obj9 = { children: null };
-  obj8[1] = str;
-  obj7[1] = containerBorderColor(user(navigateToPremium[58]).Tabs, obj8);
-  const items17 = [containerBorderColor(navigation, obj7), ];
-  obj10 = { ref: pagerRef, onLayout: measureFill, style: pagesHeightStyle, children: null };
-  obj10[3] = containerBorderColor(user(navigateToPremium[59]).SegmentedControlPages, { state: segmentedControlState });
-  items17[1] = containerBorderColor(navigateToFriends(navigateToPremium[53]).View, obj10);
-  obj6[2] = items17;
-  items13[3] = enabled(navigation, obj6);
+  obj10 = { children: null };
+  obj9[1] = str;
+  obj8[1] = containerBorderColor(user(navigateToPremium[60]).Tabs, obj9);
+  const items17 = [containerBorderColor(navigation, obj8), ];
+  obj11 = { ref: pagerRef, onLayout: measureFill, style: pagesHeightStyle, children: null };
+  obj11[3] = containerBorderColor(user(navigateToPremium[61]).SegmentedControlPages, { state: segmentedControlState });
+  items17[1] = containerBorderColor(navigateToFriends(navigateToPremium[55]).View, obj11);
+  obj7[2] = items17;
+  items13[3] = enabled(navigation, obj7);
   obj1[1] = items13;
-  obj9[0] = enabled(navigation, obj1);
-  obj[1] = containerBorderColor(user(navigateToPremium[54]).LayerScope, obj9);
-  return containerBorderColor(navigateToFriends(navigateToPremium[53]).View, obj);
+  obj10[0] = enabled(navigation, obj1);
+  obj[1] = containerBorderColor(user(navigateToPremium[56]).LayerScope, obj10);
+  return containerBorderColor(navigateToFriends(navigateToPremium[55]).View, obj);
 };

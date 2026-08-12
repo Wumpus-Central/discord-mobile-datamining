@@ -96,11 +96,11 @@ export default function FormCTA(arg0) {
     obj1[4] = jsx(FormRow.Label, { style: null, text: null });
     obj1[5] = tmp9Result;
     if (completed) {
-      FormCheckbox = FormCheckbox(7971).FormCheckbox;
+      FormCheckbox = FormCheckbox(8010).FormCheckbox;
       obj4 = { checked: true };
       trailing = tmp16(FormCheckbox, obj4);
     } else if (trailing == null) {
-      trailing = tmp16(tmp17(5367).Arrow, {});
+      trailing = tmp16(tmp17(5406).Arrow, {});
     }
     obj1[6] = trailing;
     obj1[7] = tmp3Result;

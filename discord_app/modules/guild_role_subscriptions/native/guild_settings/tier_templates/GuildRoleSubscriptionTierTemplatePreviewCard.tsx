@@ -4,7 +4,7 @@ import get_ActivityIndicator from "_getTemplates";
 import ME from "ME";
 import jsxProd from "GuildRoleSubscriptionTierTemplateBasicInfo";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/05718_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/05757_registerAsset.js";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";

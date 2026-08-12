@@ -49,7 +49,7 @@ export const BackgroundBlurFill = function BackgroundBlurFill(arg0) {
   if (tintColor == null) {
     tintColor = obj2.useMemo(() => "light" === blurTheme ? outer1_6 : outer1_8, items1);
   }
-  obj = blurTheme(4031);
+  obj = blurTheme(4072);
   obj2 = React;
   const tmp = blurTheme;
   if (android_fallbackColor == null) {
@@ -70,7 +70,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   let tintColor;
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor, animatedProps } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
-  let obj = blurTheme(4031);
+  let obj = blurTheme(4072);
   if (blurTheme == null) {
     blurTheme = obj.useThemeContext().theme;
   }
@@ -98,7 +98,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   const tmp = blurTheme;
   const tmp3 = importDefault;
   const tmp4 = jsx;
-  tmpResult = blurTheme(4024);
+  tmpResult = blurTheme(4065);
   if (tmp6) {
     obj = { animatedProps: null };
     obj[0] = animatedProps;
@@ -118,7 +118,7 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
   let token1;
   let c5;
   const merged = Object.assign(style, Object.create(null));
-  let obj = blurTheme(4031);
+  let obj = blurTheme(4072);
   if (blurTheme == null) {
     blurTheme = obj.useThemeContext().theme;
   }
@@ -134,13 +134,13 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
     }
     return str;
   }, items);
-  let tmp2Result = tmp2(4024);
+  let tmp2Result = tmp2(4065);
   token = tmp2Result.useToken(Themes.colors.BACKGROUND_SCRIM, blurTheme);
-  tmp2Result = tmp2(4024);
+  tmp2Result = tmp2(4065);
   token1 = tmp2Result.useToken(Themes.colors.BACKGROUND_SCRIM_LIGHTBOX, blurTheme);
-  const isBlurDisabledResult = blurTheme(4704).isBlurDisabled(merged);
+  const isBlurDisabledResult = blurTheme(4744).isBlurDisabled(merged);
   c5 = isBlurDisabledResult;
-  const tmp2Result1 = blurTheme(4704);
+  const tmp2Result1 = blurTheme(4744);
   class B {
     constructor() {
       obj = { backgroundColor: null };
@@ -154,12 +154,12 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
       return obj;
     }
   }
-  obj = { withSpring: tmp2(4713).withSpring, interpolateColor: tmp2(4042).interpolateColor, pressed, fallbackColor: token, fallbackColorPressed: token1, ON_PRESS_SPRING: tmp2(4717).ON_PRESS_SPRING };
+  obj = { withSpring: tmp2(4753).withSpring, interpolateColor: tmp2(4083).interpolateColor, pressed, fallbackColor: token, fallbackColorPressed: token1, ON_PRESS_SPRING: tmp2(4757).ON_PRESS_SPRING };
   B.__closure = obj;
   B.__workletHash = 10497618157620;
   B.__initData = closure_10;
-  let animatedStyle = blurTheme(4042).useAnimatedStyle(B);
-  const tmp2Result2 = blurTheme(4042);
+  let animatedStyle = blurTheme(4083).useAnimatedStyle(B);
+  const tmp2Result2 = blurTheme(4083);
   class C {
     constructor() {
       withSpringResult = undefined;
@@ -181,15 +181,15 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
       return { tintColor: withSpringResult };
     }
   }
-  obj = { shouldUseFallback: isBlurDisabledResult, withSpring: tmp2(4713).withSpring, interpolateColor: tmp2(4042).interpolateColor, pressed, restingTint: tmp6, pressedTint: tmp7, ON_PRESS_SPRING: tmp2(4717).ON_PRESS_SPRING };
+  obj = { shouldUseFallback: isBlurDisabledResult, withSpring: tmp2(4753).withSpring, interpolateColor: tmp2(4083).interpolateColor, pressed, restingTint: tmp6, pressedTint: tmp7, ON_PRESS_SPRING: tmp2(4757).ON_PRESS_SPRING };
   C.__closure = obj;
   C.__workletHash = 11987567486157;
   C.__initData = closure_11;
-  const animatedProps = blurTheme(4042).useAnimatedProps(C);
+  const animatedProps = blurTheme(4083).useAnimatedProps(C);
   const obj1 = { blurTheme, blurStyle: memo, style: null };
   const items1 = [token1.absoluteFill, style.style, ];
   const tmp12 = c5;
-  const tmp2Result3 = blurTheme(4042);
+  const tmp2Result3 = blurTheme(4083);
   if (!isBlurDisabledResult) {
     animatedStyle = {};
   }

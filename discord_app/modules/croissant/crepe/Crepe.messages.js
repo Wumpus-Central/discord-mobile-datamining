@@ -1,6 +1,8 @@
 // discord_app/modules/croissant/crepe/Crepe.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03176_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03177_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03178_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03179_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03180_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03203_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03204_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03205_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03206_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03207_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03208_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

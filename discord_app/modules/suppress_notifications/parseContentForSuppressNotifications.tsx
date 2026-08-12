@@ -15,4 +15,5 @@ export default function parseContentForSuppressNotifications(str) {
   }
   return items2;
 };
+export const SILENT_SENTINEL = "@silent";
 export const SILENT_RE = regExp;

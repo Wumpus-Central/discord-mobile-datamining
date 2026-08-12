@@ -109,7 +109,7 @@ function _guildRoomConnect() {
                 fetchFingerprint = arg1;
                 let tmp47 = callback;
                 let tmp48 = dependencyMap;
-                let obj12 = callback(13028);
+                let obj12 = callback(13087);
                 let tmp49 = fetchFingerprint;
                 users = obj12.serverGuildRoomToClient(fetchFingerprint.body);
                 let tmp50 = callback2;
@@ -130,7 +130,7 @@ function _guildRoomConnect() {
                   let tmp59 = items;
                   let tmp60 = callback;
                   let tmp61 = dependencyMap;
-                  let obj16 = callback(16464);
+                  let obj16 = callback(16521);
                   let obj6 = { guildId: null, channelId: null };
                   let tmp62 = callback;
                   obj6[0] = callback;
@@ -139,10 +139,10 @@ function _guildRoomConnect() {
                   let result = obj16.trackGuildRoomUserConnected(obj6);
                   let tmp65 = callback;
                   let tmp66 = dependencyMap;
-                  let obj18 = callback(8565);
+                  let obj18 = callback(8604);
                   let tmp67 = callback;
                   let tmp68 = dependencyMap;
-                  let fireSurveyActionResult = obj18.fireSurveyAction(callback(8572).SurveyActionTypes.GUILD_ROOM_JOINED);
+                  let fireSurveyActionResult = obj18.fireSurveyAction(callback(8611).SurveyActionTypes.GUILD_ROOM_JOINED);
                   let tmp70 = users;
                   users = users.users;
                   let tmp71 = fetchFingerprint;
@@ -176,7 +176,7 @@ function _guildRoomConnect() {
                       c8 = tmp10;
                       let tmp13 = callback;
                       let tmp14 = dependencyMap;
-                      obj = callback(16464);
+                      obj = callback(16521);
                       let obj10 = { channelId: null, update: null };
                       let tmp15 = callback2;
                       obj10[0] = callback2;
@@ -190,7 +190,7 @@ function _guildRoomConnect() {
                     let tmp19 = items;
                     let tmp20 = callback;
                     let tmp21 = dependencyMap;
-                    obj2 = callback(16464);
+                    obj2 = callback(16521);
                     let obj11 = { guildId: null, channelId: null, actualSeatPosition: null, targetSeatPosition: null };
                     let tmp22 = callback;
                     obj11[0] = callback;
@@ -491,7 +491,7 @@ function _createGuildRoomNote() {
       outer1_15(callback2);
       let c7 = 1;
       const obj1 = { object_type: null, content: null, position: null };
-      obj1[0] = callback(13034).GuildRoomObjectTypes.NOTE;
+      obj1[0] = callback(13093).GuildRoomObjectTypes.NOTE;
       obj1[1] = dependencyMap;
       obj1[2] = serverGuildRoomObjectToClient;
       yield outer1_10(callback, callback2, obj1);
@@ -507,7 +507,7 @@ function _createGuildRoomNote() {
         throw arg1;
       } else if (arg0 !== 2) {
         if (callback2 !== callback) {
-          const obj = callback(16464);
+          const obj = callback(16521);
           const obj4 = { interactionType: "note_created", guildId: null, channelId: null };
           obj4[1] = callback;
           obj4[2] = callback2;
@@ -570,7 +570,7 @@ function _deleteGuildRoomNote() {
               let fetchFingerprint = tmp5;
               let serverGuildRoomObjectToClient = tmp2;
               const obj1 = { object_type: null };
-              obj1[0] = callback(13034).GuildRoomObjectTypes.NOTE;
+              obj1[0] = callback(13093).GuildRoomObjectTypes.NOTE;
               c5 = 1;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -587,7 +587,7 @@ function _deleteGuildRoomNote() {
             return obj3;
           } else {
             if (closure_1 !== callback) {
-              obj = callback(16464);
+              obj = callback(16521);
               const obj4 = { interactionType: "note_deleted", guildId: null, channelId: null };
               obj4[1] = callback;
               obj4[2] = closure_1;
@@ -669,8 +669,8 @@ function _fetchGuildRoom() {
             return obj;
           } else {
             lib = arg1;
-            dependencyMap = callback(13028).serverGuildRoomToClient(lib.body);
-            const obj5 = callback(13028);
+            dependencyMap = callback(13087).serverGuildRoomToClient(lib.body);
+            const obj5 = callback(13087);
             const obj3 = { type: "GUILD_ROOM_FETCH_SUCCESS", guildId: null, room: null };
             obj3[1] = callback;
             obj3[2] = dependencyMap;
@@ -787,7 +787,7 @@ export const deleteGuildRoomNote = function deleteGuildRoomNote() {
   }
   return applyArgumentsResult;
 };
-export const fetchGuildRoom = function fetchGuildRoom() {
+export const fetchGuildRoom = function fetchGuildRoom(c7, c6) {
   const self = this;
   const apply = _fetchGuildRoom.apply;
   if (typeof apply === "unknown") {

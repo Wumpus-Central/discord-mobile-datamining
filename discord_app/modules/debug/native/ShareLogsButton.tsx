@@ -11,7 +11,7 @@ const memoResult = require("noop").memo(function ShareLogsButton() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["Aw+09z"]);
   obj[1] = function onPress() {
-    let obj = callback(8929);
+    let obj = callback(8968);
     obj = { message: null };
     obj[0] = callback(7).stringify();
     return obj.showShareActionSheet(obj, "Debug Logs");

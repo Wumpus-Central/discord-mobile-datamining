@@ -68,7 +68,7 @@ function _navigateToGuild() {
               let obj2;
               dependencyMap = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -83,7 +83,7 @@ function _navigateToGuild() {
               obj2 = {};
               const merged = Object.assign(c5);
               obj2.loadId = c0;
-              let obj4 = callback2(5958);
+              let obj4 = callback2(5997);
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };

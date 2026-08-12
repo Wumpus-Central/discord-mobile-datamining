@@ -1,16 +1,22 @@
 // discord_app/modules/quests/native/QuestAccessSuspendedBottomSheet.tsx
 import noop from "noop";
+import { UserSettingsSections } from "ME";
+import { AccountSettingsTabs } from "AccountSettingsTabs";
 import { jsx } from "jsxProd";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
-const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
+const result = require("AccountSettingsTabs").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {
-    callback2(4271).hideActionSheet(callback(14368).ACTION_SHEET_KEY);
+    let obj = callback2(4312);
+    obj.hideActionSheet(callback(14425).ACTION_SHEET_KEY);
+    obj = { screen: constants.ACCOUNT, params: obj };
+    obj = { initialTab: constants2.STANDING };
+    callback(6057).openUserSettings(obj);
   }, []);
   let obj = { title: null, description: null, actions: null };
   const intl = getSystemLocale.intl;

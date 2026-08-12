@@ -5,7 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import set from "set";
 import { AnalyticEvents } from "ME";
-import jsxProd from "module_4509";
+import jsxProd from "module_4549";
 import createCacheKey from "createCacheKey";
 import set from "ensureGuildLoaded";
 import { 00038__ } from "../../../../_runtime/metro/00038__.js";
@@ -51,7 +51,7 @@ function NotificationBody(channel) {
   let obj1 = channel(589);
   const items1 = [ensureGuildLoaded];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_5.getChannel(channel.parent_id));
-  let obj2 = channel(9773);
+  let obj2 = channel(9814);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(692).ChannelTypes.DM;
   let num = 1;
@@ -59,7 +59,7 @@ function NotificationBody(channel) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(9773).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(9814).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel: null, parentChannel: null, guild: null, author: null };
     obj[0] = channel;
@@ -73,10 +73,10 @@ function NotificationBody(channel) {
       obj = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
       obj[0] = channel;
       obj[1] = message;
-      obj[3] = tmp(3998).ChannelListLayoutTypes.COZY;
+      obj[3] = tmp(4039).ChannelListLayoutTypes.COZY;
       obj[4] = messagePreviewTextVariant;
       obj[6] = num;
-      let tmp14 = callback(tmp(9795).ChannelRowPreview, obj);
+      let tmp14 = callback(tmp(9836).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -134,5 +134,5 @@ export default importAllResult.memo(function ReminderNotification(notification) 
   obj = { icon: callback(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: null, children: null };
   obj[4] = callback(closure_16, { message });
   obj[5] = callback(NotificationBody, { channel, message });
-  return callback(notification(9857).NotificationPressable, obj);
+  return callback(notification(9898).NotificationPressable, obj);
 });

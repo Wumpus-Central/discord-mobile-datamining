@@ -226,11 +226,11 @@ function _fetchAndUpdateSavedMessages() {
               callback = results.map((message) => {
                 let messageRecord = null;
                 if (null != message.message) {
-                  let obj = callback(4523);
+                  let obj = callback(4563);
                   messageRecord = obj.createMessageRecord(message.message);
                 }
                 obj = { message: messageRecord, saveData: null };
-                obj[1] = callback(8385).savedMessageDataToClient(message.save_data);
+                obj[1] = callback(8424).savedMessageDataToClient(message.save_data);
                 return obj;
               });
               let obj5 = callback(709);

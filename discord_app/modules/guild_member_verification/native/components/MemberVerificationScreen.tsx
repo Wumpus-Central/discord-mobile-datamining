@@ -4,7 +4,7 @@ import { View } from "useSafeAreaInsets";
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import { Routes } from "ME";
+import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import makeAuthenticated from "makeAuthenticated";
@@ -13,6 +13,8 @@ import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.ts
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { MemberVerificationModal } from "MemberVerificationModal.tsx";
 
+let c10;
+let c9;
 const require = arg1;
 function Loading() {
   return <View style={createCacheKey().flexLoading}>{jsx(ActivityIndicator.ActivityIndicator, {})}</View>;
@@ -72,7 +74,7 @@ function ExistingJoinRequestHandler(guildId) {
     if (null != stateFromStores) {
       if (null != guildId) {
         if (null != stateFromStores1) {
-          stateFromStores(stateFromStores1[15]).transitionTo(outer1_9.CHANNEL(tmp, tmp2));
+          stateFromStores(stateFromStores1[15]).transitionTo(outer1_10.CHANNEL(tmp, tmp2));
           const obj = stateFromStores(stateFromStores1[15]);
         }
       }
@@ -94,6 +96,7 @@ function ExistingJoinRequestHandler(guildId) {
   }
   return <Loading />;
 }
+({ ME: c9, Routes: c10 } = ME);
 createCacheKey = { flex: { flex: 1 }, flexLoading: null };
 createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
@@ -105,24 +108,25 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
   const callback = React.useCallback(() => {
     let index;
     let routes;
+    let obj = navigation;
     const state = navigation.getState();
     ({ routes, index } = state);
     if (routes.length > 1) {
       let name;
       if (routes[index - 1] != null) {
-        name = tmp5.name;
+        name = tmp6.name;
       }
       if ("member-verification" !== name) {
-        navigation.goBack();
+        obj.goBack();
       } else {
         let diff = index;
         if (index >= 0) {
           while (null != routes[diff]) {
-            if ("member-verification" !== tmp9.name) {
-              let tmp11 = navigation;
-              let tmp12 = outer1_3;
-              let obj3 = navigation(outer1_3[16]);
-              let popScreensResult = obj3.popScreens(index - diff);
+            if ("member-verification" !== tmp10.name) {
+              let tmp12 = navigation;
+              let tmp13 = outer1_3;
+              let obj4 = navigation(outer1_3[16]);
+              let popScreensResult = obj4.popScreens(index - diff);
               break;
             } else {
               diff = diff - 1;
@@ -138,7 +142,9 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
         }
       }
     } else {
-      navigation(outer1_3[16]).navigateToRootTab({ screen: "messages" });
+      obj = { screen: "guilds", guildId: null };
+      obj[1] = outer1_9;
+      navigation(outer1_3[16]).navigateToRootTab(obj);
       const obj2 = navigation(outer1_3[16]);
     }
   }, items);

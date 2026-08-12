@@ -7,5 +7,5 @@ const result = require("GuildSettingsStickerCreateModal").fileFinishedImporting(
 export default function showGuildSettingsStickerCreateModal(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ModalActionCreators.pushLazy(asyncRequireImpl(16677, dependencyMap.paths), closure_0, "guild-settings-sticker-create", { presentation: "modal" });
+  ModalActionCreators.pushLazy(asyncRequireImpl(16735, dependencyMap.paths), closure_0, "guild-settings-sticker-create", { presentation: "modal" });
 };

@@ -20,9 +20,9 @@ function getVoiceInviteEmbedRenderInfo(state) {
           if (obj5.getInviteType(state) !== InviteTypes.GUILD) {
             return null;
           } else {
-            let tmp7Result = tmp7(7196);
+            let tmp7Result = tmp7(7235);
             const guildInviteExtendedType = tmp7Result.getGuildInviteExtendedType(state);
-            if (guildInviteExtendedType !== tmp7(7196).GuildInviteExtendedType.VOICE_CHANNEL) {
+            if (guildInviteExtendedType !== tmp7(7235).GuildInviteExtendedType.VOICE_CHANNEL) {
               return null;
             } else {
               const guild = state.guild;
@@ -32,13 +32,13 @@ function getVoiceInviteEmbedRenderInfo(state) {
               }
               let tmp4 = null;
               if (null != id) {
-                tmp7Result = tmp7(10995);
+                tmp7Result = tmp7(11048);
                 let obj = { guildId: null, location: "mobile_invite_embed_impression" };
                 obj[0] = id;
                 let enabled = tmp7Result.getVoiceChannelListInviteExperiment(obj).enabled;
                 if (enabled) {
-                  enabled = tmp7(10996).canShowVoiceChannelListInviteEmbed(state);
-                  const tmp7Result1 = tmp7(10996);
+                  enabled = tmp7(11049).canShowVoiceChannelListInviteEmbed(state);
+                  const tmp7Result1 = tmp7(11049);
                 }
                 obj = { treatmentRendered: null };
                 obj[0] = enabled;

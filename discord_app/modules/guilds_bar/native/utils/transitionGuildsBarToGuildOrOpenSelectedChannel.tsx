@@ -15,7 +15,7 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
   }
   let tmp4;
   if (true === isReadyResult) {
-    let tmpResult = tmp(4158);
+    let tmpResult = tmp(4199);
     const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
     let drawerOpen;
     if (coerceGuildsRouteResult != null) {
@@ -42,10 +42,10 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     }
   }
   if (null != tmp4) {
-    tmpResult = tmp(4311);
+    tmpResult = tmp(4352);
     tmpResult.transitionToChannel(tmp4);
   } else {
-    tmp(5959).transitionToGuild(arg0);
-    const tmpResult1 = tmp(5959);
+    tmp(5998).transitionToGuild(arg0);
+    const tmpResult1 = tmp(5998);
   }
 };

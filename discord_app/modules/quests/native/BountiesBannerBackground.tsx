@@ -3,7 +3,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
-import { LinearGradient } from "../../../../_runtime/04725_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { VideoComponent } from "../../../components_native/common/Video.tsx";
 

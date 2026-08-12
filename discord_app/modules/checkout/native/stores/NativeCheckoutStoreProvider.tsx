@@ -24,7 +24,7 @@ function NativeCheckoutStoreProvider(children) {
   let closure_6;
   let first;
   let closure_8;
-  closure_6 = order(5716)(() => {
+  closure_6 = order(5755)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -159,7 +159,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
               closure_2 = undefined;
               v0 = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

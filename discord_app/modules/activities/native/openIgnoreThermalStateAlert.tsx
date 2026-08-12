@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 
 const require = arg1;
-const result = require("module_4643").fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
+const result = require("module_4683").fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   let closure_0 = arg0;

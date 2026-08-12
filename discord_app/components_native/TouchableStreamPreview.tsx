@@ -1,6 +1,6 @@
 // discord_app/components_native/TouchableStreamPreview.tsx
 import transitionToStream from "transitionToStream";
-import get_ActivityIndicator from "module_5129";
+import get_ActivityIndicator from "module_5169";
 import set from "set";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

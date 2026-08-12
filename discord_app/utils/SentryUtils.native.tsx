@@ -186,7 +186,7 @@ let obj = {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: 0, timestamp: true, level: true, tags: null };
+                let obj = { type: "y", event_id: 0.8, timestamp: null, level: 0.3, tags: null };
                 obj[1] = timestamp.event_id;
                 obj[2] = result;
                 obj[3] = formatted;

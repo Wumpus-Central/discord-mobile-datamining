@@ -32,7 +32,7 @@ export default function ResendEmail() {
   let obj2 = navigation(589);
   const items1 = [handleRequiredAction];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => action.getAction());
-  let obj3 = verified(8465);
+  let obj3 = verified(8504);
   const result = obj3.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = callback(React.useState(false), 2);
@@ -56,11 +56,11 @@ export default function ResendEmail() {
   callback = React.useCallback(() => {
     navigation.push(outer1_8.ENTER_EMAIL);
   }, items3);
-  const items4 = [callback2(navigation(6029).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [callback2(navigation(6068).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1236).intl;
   obj[4] = intl.string(navigation(1236).t.fUtddV);
-  items4[1] = callback2(navigation(4299).Text, obj);
+  items4[1] = callback2(navigation(4340).Text, obj);
   obj1 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1236).intl;
   if (tmp10) {
@@ -71,7 +71,7 @@ export default function ResendEmail() {
     formatResult = intl2.string(tmp2(1236).t.tSXg8O);
   }
   obj1[3] = formatResult;
-  items4[2] = callback2(navigation(4299).Text, obj1);
+  items4[2] = callback2(navigation(4340).Text, obj1);
   obj3 = { style: tmp.resend, children: null };
   const obj4 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1236).intl;
@@ -85,7 +85,7 @@ export default function ResendEmail() {
     obj[1] = intl.string(navigation(outer1_2[15]).t["84yeoz"]);
     verified(outer1_2[18]).open(obj);
   };
-  obj3[1] = callback2(navigation(4714).Button, obj4);
+  obj3[1] = callback2(navigation(4754).Button, obj4);
   items4[3] = callback2(View, obj3);
   if (!result) {
     const obj5 = { style: null, children: null };
@@ -94,7 +94,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1236).intl;
     obj6[0] = intl4.string(tmp2(1236).t.Vm8akB);
     obj6[2] = callback;
-    obj5[1] = tmp16(tmp2(4714).Button, obj6);
+    obj5[1] = tmp16(tmp2(4754).Button, obj6);
     tmp16Result = tmp16(tmp15, obj5);
   }
   items4[4] = tmp16Result;

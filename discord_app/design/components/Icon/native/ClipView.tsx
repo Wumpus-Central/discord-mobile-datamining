@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import animatedComponent from "__INTERNAL_VIEW_CONFIG";
-import importDefaultResult from "module_4042";
+import importDefaultResult from "module_4083";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../../discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx";
 import { useCutoutBackgroundColor } from "CutoutBackgroundContext.tsx";
 

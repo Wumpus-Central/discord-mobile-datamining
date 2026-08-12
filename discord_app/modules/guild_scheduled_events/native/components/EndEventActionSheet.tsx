@@ -22,7 +22,7 @@ export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   let activeEvent;
   const tmp = createCacheKey();
-  let obj = channel(9044);
+  let obj = channel(9083);
   activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
@@ -44,14 +44,14 @@ export default function EndEventActionSheet(channel) {
     obj2[0] = tmp.subtitle;
     const intl2 = tmp2(1236).intl;
     obj2[3] = intl2.string(tmp2(1236).t["0I0B8f"]);
-    items[1] = callback(tmp2(4299).Text, obj2);
+    items[1] = callback(tmp2(4340).Text, obj2);
     let obj3 = { style: null, children: null };
     obj3[0] = tmp.cancelButtonContainer;
     const obj4 = { text: null, grow: true, onPress: null };
     const intl3 = tmp2(1236).intl;
     obj4[0] = intl3.string(tmp2(1236).t.P60OAX);
     obj4[2] = handleClose;
-    obj3[1] = callback(tmp2(4714).Button, obj4);
+    obj3[1] = callback(tmp2(4754).Button, obj4);
     items[2] = callback(View, obj3);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.confirmButtonContainer;
@@ -68,10 +68,10 @@ export default function EndEventActionSheet(channel) {
         const obj3 = channel(outer1_2[9]);
       }
     };
-    obj5[1] = callback(tmp2(4714).Button, obj6);
+    obj5[1] = callback(tmp2(4754).Button, obj6);
     items[3] = callback(View, obj5);
     obj[1] = items;
     obj[0] = callback2(View, obj);
-    return callback(activeEvent(7967), obj);
+    return callback(activeEvent(8006), obj);
   }
 };

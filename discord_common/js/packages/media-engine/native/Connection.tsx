@@ -72,7 +72,6 @@ class Connection extends tmp4 {
     tmp.vadUseKrisp = true;
     tmp.vadLeading = 5;
     tmp.vadTrailing = 25;
-    tmp.vadDuringPreProcess = false;
     tmp.pttReleaseDelay = 20;
     tmp.soundshareActive = false;
     tmp.soundshareId = null;
@@ -82,6 +81,7 @@ class Connection extends tmp4 {
     tmp.automaticGainControl = { enabled: true };
     tmp.noiseCancellation = false;
     tmp.noiseCancellationDuringProcessing = false;
+    tmp.noiseCancellationConsecutiveFailures = 0;
     tmp.echoReferenceMode = "mix";
     tmp.attenuationFactor = 0.5;
     tmp.attenuateWhileSpeakingSelf = false;
@@ -531,7 +531,7 @@ prototype["initialize"] = function initialize(address) {
   let items = [{ type: constants2.AUDIO, ssrc: this.audioSSRC, rid: "", maxBitrate: 64000, soundshare: this.context === constants5.STREAM }, ...this.videoStreamParameters];
   address.streamParameters = items;
   address.context = this.context;
-  const voiceEngine = createVoiceConnection(4353).getVoiceEngine();
+  const voiceEngine = createVoiceConnection(4394).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
     if (self.context !== tmp3.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
@@ -662,7 +662,7 @@ prototype["initialize"] = function initialize(address) {
               if (outer1_2.setVideoCodecErrorCallback != null) {
                 const result6 = setVideoCodecErrorCallback(obj.handleVideoCodecError);
               }
-              obj = { builtInEchoCancellation: true, echoCancellation: obj.echoCancellation, noiseSuppression: obj.noiseSuppression, automaticGainControl: obj.automaticGainControl.enabled, automaticGainControlConfig: obj.automaticGainControl, noiseCancellation: obj.noiseCancellation, noiseCancellationDuringProcessing: obj.noiseCancellationDuringProcessing };
+              obj = { builtInEchoCancellation: true, echoCancellation: obj.echoCancellation, noiseSuppression: obj.noiseSuppression, automaticGainControl: obj.automaticGainControl.enabled, automaticGainControlConfig: obj.automaticGainControl, noiseCancellation: obj.noiseCancellation, noiseCancellationDuringProcessing: obj.noiseCancellationDuringProcessing, noiseCancellationConsecutiveFailures: obj.noiseCancellationConsecutiveFailures };
               outer1_3.setTransportOptions(obj);
               outer1_3.setNoInputThreshold(-100);
               outer1_3.setNoInputCallback(obj.handleNoInput);
@@ -722,12 +722,12 @@ prototype["initialize"] = function initialize(address) {
               obj.mergeUsers(userOptions);
               obj.emit(protocol(port[6]).BaseConnectionEvent.RemoteStreamsReady, userOptions.length);
               const keys = Object.keys(obj.localSpeakingFlags);
-              for (const item10172 of keys) {
-                let tmp52 = item10172;
+              for (const item10173 of keys) {
+                let tmp52 = item10173;
                 let obj5 = outer1_4;
-                if (item10172 !== outer1_4.userId) {
+                if (item10173 !== outer1_4.userId) {
                   let tmp53 = outer1_4;
-                  let tmp54 = item10172;
+                  let tmp54 = item10173;
                   let setSpeakingFlagsResult = obj5.setSpeakingFlags(tmp52, obj5.localSpeakingFlags[tmp52]);
                 }
                 continue;
@@ -829,13 +829,13 @@ prototype["getStats"] = function getStats() {
         const obj = self(outer1_2[4]);
       }
     });
-    let obj = self(4460);
-    resolved = self(4460).timeout(promise, self(4409).STATS_INTERVAL).catch((arg0) => {
+    let obj = self(4500);
+    resolved = self(4500).timeout(promise, self(4449).STATS_INTERVAL).catch((arg0) => {
       if (!(arg0 instanceof self(table[8]).TimeoutError)) {
         throw arg0;
       }
     });
-    const timeoutResult = self(4460).timeout(promise, self(4409).STATS_INTERVAL);
+    const timeoutResult = self(4500).timeout(promise, self(4449).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1214,6 +1214,13 @@ prototype["setNoiseCancellationDuringProcessing"] = function setNoiseCancellatio
   obj = { noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing };
   voiceEngine.setTransportOptions(obj);
 };
+prototype["setNoiseCancellationCpuDisablement"] = function setNoiseCancellationCpuDisablement(consecutiveFailures) {
+  this.noiseCancellationConsecutiveFailures = consecutiveFailures;
+  let obj = inject;
+  const voiceEngine = obj.getVoiceEngine();
+  obj = { noiseCancellationConsecutiveFailures: this.noiseCancellationConsecutiveFailures };
+  voiceEngine.setTransportOptions(obj);
+};
 prototype["setEchoReferenceMode"] = function setEchoReferenceMode(echoReferenceMode) {
   this.echoReferenceMode = echoReferenceMode;
   let obj = inject;
@@ -1239,7 +1246,7 @@ prototype["setInputMode"] = function setInputMode(inputMode, pttReleaseDelay) {
   if (constants3.PUSH_TO_TALK === inputMode) {
     self.pttReleaseDelay = pttReleaseDelay.pttReleaseDelay;
   } else if (tmp.VOICE_ACTIVITY === inputMode) {
-    ({ vadThreshold: self.vadThreshold, vadAutoThreshold: self.vadAutoThreshold, vadUseKrisp: self.vadUseKrisp, vadLeading: self.vadLeading, vadTrailing: self.vadTrailing, vadKrispActivationThreshold: self.vadKrispActivationThreshold, vadDuringPreProcess: self.vadDuringPreProcess } = pttReleaseDelay);
+    ({ vadThreshold: self.vadThreshold, vadAutoThreshold: self.vadAutoThreshold, vadUseKrisp: self.vadUseKrisp, vadLeading: self.vadLeading, vadTrailing: self.vadTrailing, vadKrispActivationThreshold: self.vadKrispActivationThreshold } = pttReleaseDelay);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -1393,7 +1400,7 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
         const _performance = performance;
         self.overrideCodecResetAt = performance.now();
       }
-      self.emit(set(4400).BaseConnectionEvent.VideoEncoderFallback, self.codecs);
+      self.emit(set(4440).BaseConnectionEvent.VideoEncoderFallback, self.codecs);
     }
   }
 };
@@ -1598,7 +1605,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(resu
         obj1[2] = calcMaxBitrateFuncResult;
         videoQualityManager2.setGoliveQuality(obj1);
         if (self.videoStreamParameters.length <= num5) {
-          const Video = tmp9(4400).BaseConnectionEvent.Video;
+          const Video = tmp9(4440).BaseConnectionEvent.Video;
           ({ userId, audioSSRC } = self);
           const ssrc = self.videoStreamParameters[num5].ssrc;
           const ssrc2 = self.videoStreamParameters[num5].ssrc;
@@ -1768,7 +1775,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         lib(error);
-        return { v: "r" };
+        return { v: "Array" };
       } else {
         const items = [];
         if (!callback(self[11])(lib.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
@@ -1878,11 +1885,11 @@ prototype["createInputModeOptions"] = function createInputModeOptions() {
   const self = this;
   const inputMode = this.inputMode;
   if (constants3.VOICE_ACTIVITY === inputMode) {
-    let obj = { vadThreshold: null, vadAutoThreshold: null, vadUseKrisp: null, vadLeading: null, vadTrailing: null, vadKrispActivationThreshold: null, vadDuringPreProcess: null };
+    let obj = { vadThreshold: null, vadAutoThreshold: null, vadUseKrisp: null, vadLeading: null, vadTrailing: null, vadKrispActivationThreshold: null };
     obj[0] = self.vadThreshold;
     const VADAggressiveness = VADAggressiveness.VADAggressiveness;
     obj[1] = self.vadAutoThreshold ? VADAggressiveness.VERY_AGGRESSIVE : VADAggressiveness.DISABLED;
-    ({ vadUseKrisp: obj2[2], vadLeading: obj2[3], vadTrailing: obj2[4], vadKrispActivationThreshold: obj2[5], vadDuringPreProcess: obj2[6] } = self);
+    ({ vadUseKrisp: obj2[2], vadLeading: obj2[3], vadTrailing: obj2[4], vadKrispActivationThreshold: obj2[5] } = self);
     return obj;
   } else if (tmp.PUSH_TO_TALK === inputMode) {
     obj = { pttReleaseDelay: null };
@@ -2001,7 +2008,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, closure_0) {
       tmp7.params["hardware-h264"] = "1";
       let experimentFlags5 = self.experimentFlags;
       if (experimentFlags5.has(tmp8.USE_LIBOPENH264_DECODER)) {
-        let tmp25Result = tmp25(4353);
+        let tmp25Result = tmp25(4394);
         let openH264LibraryPath = tmp25Result.getOpenH264LibraryPath();
         if (null != openH264LibraryPath) {
           let tmp16 = obj;

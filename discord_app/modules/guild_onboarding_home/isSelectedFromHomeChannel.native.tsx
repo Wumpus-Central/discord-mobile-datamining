@@ -2,7 +2,7 @@
 import "handlePermissionsChange";
 import "handleConnectionOpen";
 import { isGuildHomeChannel } from "set";
-import { navigationToRootTabHelper } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const require = arg1;
@@ -17,7 +17,7 @@ export default function isSelectedFromHomeChannel(id) {
       if (null == rootState) {
         return false;
       } else {
-        const coerceMainRouteResult = navigationToRootTabHelper.coerceMainRoute(rootState.routes[rootState.index]);
+        const coerceMainRouteResult = coerceMainRoute.coerceMainRoute(rootState.routes[rootState.index]);
         if (null == coerceMainRouteResult) {
           return false;
         } else {
@@ -33,11 +33,11 @@ export default function isSelectedFromHomeChannel(id) {
                 if (null != tmp4) {
                   let tmp6 = require;
                   let tmp7 = dependencyMap;
-                  let obj3 = navigationToRootTabHelper;
+                  let obj3 = coerceMainRoute;
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
-                      let tmp6Result = tmp6(4158);
+                      let tmp6Result = tmp6(4199);
                       coerceChannelRouteResult1 = tmp6Result.coerceChannelRoute(state.routes[index - 1]);
                       if (null != coerceChannelRouteResult1) {
                         break;
@@ -56,7 +56,7 @@ export default function isSelectedFromHomeChannel(id) {
             return false;
           }
         }
-        const tmpResult = navigationToRootTabHelper;
+        const tmpResult = coerceMainRoute;
       }
     }
   }

@@ -297,11 +297,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   return React.useMemo(() => stateFromStores.filter((status) => {
     let endTime;
     let startTime;
-    const eventSchedule = callback(8954).getEventSchedule(status);
+    const eventSchedule = callback(8993).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = callback(8954);
+    const obj = callback(8993);
     let toISOStringResult1;
-    const obj2 = callback(8948);
+    const obj2 = callback(8987);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

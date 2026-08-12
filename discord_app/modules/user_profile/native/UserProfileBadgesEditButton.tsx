@@ -48,7 +48,7 @@ export default function UserProfileBadgesEditButton(badges) {
       obj1[4] = callback;
       const intl3 = tmp2(1236).intl;
       obj1[5] = intl3.string(tmp2(1236).t.XMDvpN);
-      obj[1] = callback(tmp2(4299).Text, obj1);
+      obj[1] = callback(tmp2(4340).Text, obj1);
       const obj2 = { style: null, "aria-hidden": true, children: null };
       obj2[0] = tmp.content;
       const items = [
@@ -68,7 +68,7 @@ export default function UserProfileBadgesEditButton(badges) {
         const obj3 = { variant: "text-md/normal", children: null };
         const _HermesInternal = HermesInternal;
         obj3[1] = "+" + diff;
-        tmp11Result = tmp11(tmp2(4299).Text, obj3);
+        tmp11Result = tmp11(tmp2(4340).Text, obj3);
       }
       items[1] = tmp11Result;
       obj2[2] = items;
@@ -77,7 +77,7 @@ export default function UserProfileBadgesEditButton(badges) {
       obj4[0] = intl.formatToPlainString(tmp2(1236).t.AdyOTw, obj);
       obj[3] = obj4;
       obj[4] = tmp6;
-      return callback(tmp2(13936).UserProfileEditFormButton, obj);
+      return callback(tmp2(13993).UserProfileEditFormButton, obj);
     }
   }
   return null;

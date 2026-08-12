@@ -4,9 +4,9 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12879_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12881_registerAsset.js";
-import { 12880__ } from "../../../../../_runtime/metro/12880__.js";
+import { registerAsset } from "../../../../../_runtime/12938_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12940_registerAsset.js";
+import { 12939__ } from "../../../../../_runtime/metro/12939__.js";
 import { play } from "../../../../components_native/common/LottieAnimationView.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -52,7 +52,7 @@ let items = [
     },
     getGraphic(arg0) {
       const obj = { source: null, autoPlay: null, style: null };
-      obj[0] = 12880__;
+      obj[0] = 12939__;
       obj[1] = !useReducedMotion.useReducedMotion;
       obj[2] = arg0;
       return callback(play, obj);

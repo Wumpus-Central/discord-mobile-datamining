@@ -34,7 +34,7 @@ function GuildInfoHeader(bannerHeight) {
   let scrollPosition;
   ({ guild, scrollPosition } = bannerHeight);
   bannerHeight = bannerHeight.bannerHeight;
-  let obj = scrollPosition(4042);
+  let obj = scrollPosition(4083);
   const fn = function s() {
     let obj = { transform: null };
     obj = { translateY: Math.max(0, scrollPosition.get() - bannerHeight) };
@@ -46,7 +46,7 @@ function GuildInfoHeader(bannerHeight) {
   fn.__workletHash = 6302330113586;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj1 = scrollPosition(4042);
+  let obj1 = scrollPosition(4083);
   const fn2 = function u() {
     let obj = { transform: null };
     obj = { translateY: Math.min(0, scrollPosition.get() - bannerHeight) };
@@ -64,10 +64,10 @@ function GuildInfoHeader(bannerHeight) {
   items = [animatedStyle, { overflow: "hidden" }];
   const tmp = callback5();
   obj = { style: animatedStyle1, children: null };
-  const tmp5 = bannerHeight(4043);
-  obj[1] = callback(bannerHeight(4848), { absolute: true, tall: true });
-  const items1 = [callback(bannerHeight(4043), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15277), obj2) };
+  const tmp5 = bannerHeight(4084);
+  obj[1] = callback(bannerHeight(4888), { absolute: true, tall: true });
+  const items1 = [callback(bannerHeight(4084), obj), ];
+  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15334), obj2) };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
@@ -261,15 +261,15 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   if (isThemeDarkResult) {
     num = 1;
   }
-  let tmp7Result = tmp7(4024);
+  let tmp7Result = tmp7(4065);
   let num2 = 0;
   const token = tmp7Result.useToken(tmp(712).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
-    num2 = tmp7(4718).SMALL_BUTTON_HEIGHT + closure_11;
+    num2 = tmp7(4758).SMALL_BUTTON_HEIGHT + closure_11;
   }
   let num3 = 0;
   if (tmp11) {
-    num3 = 8 + tmp7(4718).MEDIUM_BUTTON_HEIGHT + 8;
+    num3 = 8 + tmp7(4758).MEDIUM_BUTTON_HEIGHT + 8;
   }
   let num5 = 16;
   if (isFavoritesGuildIdResult) {
@@ -277,13 +277,13 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num6 = 0;
   if (tmp9) {
-    tmp7Result = tmp7(9458);
+    tmp7Result = tmp7(9498);
     num6 = tmp7Result.scaleTextLineHeight(token, fontScale);
   }
   let bound = scaleTextLineHeightResult;
   if (isFavoritesGuildIdResult) {
     const _Math = Math;
-    bound = Math.max(scaleTextLineHeightResult, tmp7(4718).SMALL_BUTTON_HEIGHT);
+    bound = Math.max(scaleTextLineHeightResult, tmp7(4758).SMALL_BUTTON_HEIGHT);
   }
   return t(16 + bound + num6 + num2 + num3 + num5 + num);
 };

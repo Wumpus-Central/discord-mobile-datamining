@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
-import getSystemLocale from "getSystemLocale";
+import messagesProxy from "messagesProxy";
 import { jsx } from "jsxProd";
 import { StarIcon } from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import { StarOutlineIcon } from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
@@ -41,11 +41,10 @@ function _addChannelToFavorites() {
               return obj;
             } else {
               let closure_1 = tmp2;
-              outer1_1(paths[2])();
               paths = 1;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback(paths[4])(paths[3], paths.paths);
+              obj1[0] = callback(paths[3])(paths[2], paths.paths);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -64,9 +63,9 @@ function _addChannelToFavorites() {
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp14) {
+        } catch (tmp12) {
           c3 = tmp;
-          throw tmp14;
+          throw tmp12;
         }
       }
     })();
@@ -117,7 +116,7 @@ function _removeChannelFromFavorites() {
               paths = 1;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback(paths[4])(paths[3], paths.paths);
+              obj1[0] = callback(paths[3])(paths[2], paths.paths);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -149,7 +148,7 @@ function _removeChannelFromFavorites() {
   }
   return applyArgumentsResult;
 }
-let result = require("showFavoritesGuildAddedToast").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
+let result = require("getNextPositionFromChannels").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 
 export default function buildFavoritesSectionButtons(hasFavoritesAccess) {
   let importDefault;

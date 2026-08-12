@@ -27,13 +27,13 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     const intl = onPress(1236).intl;
     obj[1] = intl.string(onPress(1236).t["4WNcpu"]);
     obj[2] = !canStartThreads;
-    obj[3] = onPress(11611).ThreadPlusIcon;
+    obj[3] = onPress(11668).ThreadPlusIcon;
     obj[4] = function onPress(arg0) {
       return onPress(arg0, outer1_5.THREAD);
     };
     obj[5] = styleButton;
-    let tmpResult = tmp(tmp2(11613), obj);
-    const tmp2Result = tmp2(11613);
+    let tmpResult = tmp(tmp2(11670), obj);
+    const tmp2Result = tmp2(11670);
   } else {
     obj = { accessible: null, channel: null, onPress: null, style: null, styleButton: null };
     obj[0] = accessible;
@@ -41,7 +41,7 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     obj[2] = onPress;
     obj[3] = styleButtonWrapper;
     obj[4] = styleButton;
-    tmpResult = tmp(tmp2(11622), obj);
+    tmpResult = tmp(tmp2(11679), obj);
   }
   obj[2] = tmpResult;
   return jsx(FadeTransitionItem, { cleanup, state, children: null }, arg0);

@@ -33,12 +33,12 @@ export default function LeaveServerAlert(guild) {
   };
   const intl3 = tmp2(1236).intl;
   obj1[2] = intl3.string(guild(1236).t.p89ACt);
-  const items = [closure_4(guild(4647).AlertActionButton, obj1, "confirm"), ];
+  const items = [closure_4(guild(4687).AlertActionButton, obj1, "confirm"), ];
   const obj2 = { variant: "secondary", text: null };
   const intl4 = tmp2(1236).intl;
   obj2[1] = intl4.string(guild(1236).t.gm1Vej);
-  items[1] = closure_4(guild(4647).AlertActionButton, obj2, "cancel");
+  items[1] = closure_4(guild(4687).AlertActionButton, obj2, "cancel");
   obj[0] = items;
-  obj[2] = callback(guild(4647).AlertActions, obj);
-  return closure_4(guild(4647).AlertModal, obj);
+  obj[2] = callback(guild(4687).AlertActions, obj);
+  return closure_4(guild(4687).AlertModal, obj);
 };

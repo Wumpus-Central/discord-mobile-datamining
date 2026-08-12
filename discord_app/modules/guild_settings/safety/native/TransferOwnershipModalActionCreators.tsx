@@ -9,7 +9,7 @@ export default {
   open(guild, toUser) {
     let obj = ModalActionCreators;
     obj = { guild, toUser };
-    obj.pushLazy(asyncRequireImpl(11250, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(11304, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
     dispatcher.wait(() => {

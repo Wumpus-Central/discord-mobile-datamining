@@ -9,7 +9,7 @@ import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY";
 import ME from "ME";
 import jsxProd from "QUICK_SWITCHER";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08793_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08832_registerAsset.js";
 
 let c10;
 let closure_12;
@@ -42,7 +42,7 @@ function InformationTable(speedBumpType) {
     obj[3] = icon.text;
     return outer1_12(items(outer1_2[14]).TableRow, obj, arg1);
   });
-  return callback2(items(5767).TableRowGroup, obj);
+  return callback2(items(5806).TableRowGroup, obj);
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: unpackModuleId } = ME);

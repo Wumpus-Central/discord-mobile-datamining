@@ -75,7 +75,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
     const intl2 = tmp6(1236).intl;
     obj8[1] = intl2.string(tmp6(1236).t["5Wxrcd"]);
     obj8[2] = onDontAllow;
-    obj7[1] = tmp4(tmp6(4714).Button, obj8);
+    obj7[1] = tmp4(tmp6(4754).Button, obj8);
     flag = tmp4(tmp5, obj7);
   }
   const obj9 = { children: null };

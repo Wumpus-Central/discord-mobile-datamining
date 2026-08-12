@@ -92,34 +92,41 @@ class GuildPowerupCardFooterStatus {
 class GuildPowerupCardFooterCost {
   constructor(arg0) {
     ({ cost, costDecorator } = global);
-    tmp3Result = null;
+    tmp2 = closure_0;
+    tmp3 = closure_2;
+    tmp = jsxs();
+    tmp4 = require("apexExperiment");
+    tmp7Result = null;
     if (null != cost) {
       obj = { style: null, children: null };
       obj[0] = tmp.inline;
-      tmp6 = closure_0;
-      tmp7 = closure_2;
-      tmp3 = jsxs;
-      tmp4 = View;
-      tmp5 = jsx;
+      tmp7 = jsxs;
+      tmp8 = View;
+      tmp9 = jsx;
       obj = { size: "sm", color: null };
-      tmp8 = closure_1;
+      tmp10 = closure_1;
       obj[1] = require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK;
       items = [, ];
       items[0] = jsx(require("BoostGemIcon").BoostGemIcon, obj);
+      str = "heading-sm/semibold";
+      if (tmp5) {
+        str = "experimental/body-sm/semibold";
+      }
+      obj1 = { variant: null, color: "text-subtle", children: null };
+      obj1[0] = str;
       intl = require("getSystemLocale").intl;
-      obj1 = { required: null, decorator: null };
-      obj1[0] = cost;
+      obj2 = { required: null, decorator: null };
+      obj2[0] = cost;
       if (costDecorator == null) {
         costDecorator = "";
       }
-      obj2 = { variant: "heading-sm/semibold", color: "text-subtle", children: null };
-      obj1[1] = costDecorator;
-      obj2[2] = intl.formatToPlainString(require("getSystemLocale").t.t2Wbo1, obj1);
-      items[1] = tmp5(require("Text").Text, obj2);
+      obj2[1] = costDecorator;
+      obj1[2] = intl.formatToPlainString(require("getSystemLocale").t.t2Wbo1, obj2);
+      items[1] = tmp9(require("Text").Text, obj1);
       obj[1] = items;
-      tmp3Result = tmp3(tmp4, obj);
+      tmp7Result = tmp7(tmp8, obj);
     }
-    return tmp3Result;
+    return tmp7Result;
   }
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);

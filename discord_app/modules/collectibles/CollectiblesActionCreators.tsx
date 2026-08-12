@@ -687,8 +687,8 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5956);
-            const aPIError = new callback(4202).APIError(callback);
+            obj2 = callback(5995);
+            const aPIError = new callback(4243).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             return { value: false, done: true };
@@ -783,8 +783,8 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5956);
-            const aPIError = new callback(4202).APIError(callback);
+            obj2 = callback(5995);
+            const aPIError = new callback(4243).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             const obj4 = { value: null, done: true };
@@ -835,45 +835,108 @@ function _fetchCollectiblesMarketings() {
     let c6 = 0;
     let c4 = 0;
     const iter = (function*(arg0) {
-      let body = tmp3;
-      PROD = PROD.release;
-      if (PROD === undefined) {
-        PROD = callback(outer1_2[26]).CollectiblesMarketingReleaseType.PROD;
-      }
-      yield "ct";
-      obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-      obj2 = { platform: null };
-      obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
-      if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
-        obj2.release = PROD;
-      }
-      let c4 = 1;
-      const HTTP = PROD(body[21]).HTTP;
-      let obj3 = { url: null, query: null, rejectWithError: true };
-      obj3[0] = constants.COLLECTIBLES_MARKETING;
-      obj3[1] = obj2;
-      yield HTTP.get(obj3);
-      if (2 === tmp7) {
-        c4 = 0;
-        obj3 = PROD(body[23]);
-        const aPIError = new PROD(body[22]).APIError(map);
-        const result = obj3.captureOrIgnoreApiError(aPIError);
-        const obj4 = obj2(body[17]);
-        obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
-        let c6 = 3;
-      } else if (arg0 === 1) {
+      if (c6 === 2) {
         c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        body = arg1;
-        const obj = obj2(body[17]);
-        const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
-        obj5[1] = closure_11.fromServer(body.body);
-        obj.dispatch(obj5);
-        c4 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp3;
+              let obj2 = tmp7;
+              let PROD;
+              PROD = PROD.release;
+              if (PROD === undefined) {
+                PROD = callback(outer1_2[26]).CollectiblesMarketingReleaseType.PROD;
+              }
+              obj2 = undefined;
+              body = undefined;
+              c5 = 1;
+              c6 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+              obj2 = { platform: null };
+              obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
+              if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
+                obj2.release = PROD;
+              }
+              let c4 = 1;
+              const HTTP = PROD(body[21]).HTTP;
+              let obj3 = { url: null, query: null, rejectWithError: true };
+              obj3[0] = constants.COLLECTIBLES_MARKETING;
+              obj3[1] = obj2;
+              c5 = 3;
+              c6 = 1;
+              let obj4 = { value: null, done: false };
+              obj4[0] = HTTP.get(obj3);
+              return obj4;
+            }
+          } else {
+            if (2 === tmp7) {
+              c4 = 0;
+              obj3 = PROD(body[23]);
+              const aPIError = new PROD(body[22]).APIError(map);
+              const result = obj3.captureOrIgnoreApiError(aPIError);
+              obj4 = obj2(body[17]);
+              obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              body = arg1;
+              obj = obj2(body[17]);
+              const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
+              obj5[1] = closure_11.fromServer(body.body);
+              obj.dispatch(obj5);
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = arg1;
+            return obj6;
+          }
+        } catch (tmp44) {
+          map = tmp44;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp44;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -1132,74 +1195,124 @@ function _maybeFetchCollectiblesShopTabLayout() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      let layoutFetchError = tmp3;
-      ({ tab: c0, abortSignal: c1 } = callback);
-      yield "ct";
-      if (1 === tmp7) {
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          let c6 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (!items.isFetchingLayout(callback)) {
-            layoutFetchError = items.getLayoutFetchError(callback);
-            let status;
-            if (layoutFetchError != null) {
-              status = layoutFetchError.status;
-            }
-            if (404 !== status) {
-              let status1;
-              if (layoutFetchError != null) {
-                status1 = layoutFetchError.status;
-              }
-              if (429 !== status1) {
-                let c4 = 1;
-                const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
-                obj2[1] = callback;
-                callback2(layoutFetchError[17]).dispatch(obj2);
-                const HTTP = callback(layoutFetchError[21]).HTTP;
-                let obj3 = { url: null, rejectWithError: true, signal: null };
-                obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
-                obj3[2] = callback2;
-                let c5 = 3;
-                c6 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = HTTP.get(obj3);
-                return obj4;
-              }
-            }
-          }
-          c6 = 3;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        c5 = body;
-        const aPIError = new callback(layoutFetchError[22]).APIError(c5);
-        c4 = aPIError;
-        obj3 = callback2(layoutFetchError[17]);
-        const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
-        obj5[1] = callback;
-        obj5[2] = c4;
-        obj3.dispatch(obj5);
-        throw c4;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        body = arg1;
-        const obj = callback2(layoutFetchError[17]);
-        const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
-        obj6[1] = callback;
-        obj6[2] = body.body.layout_id;
-        obj.dispatch(obj6);
-        c4 = 0;
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let layoutFetchError = tmp3;
+              let callback2 = tmp7;
+              let callback;
+              callback2 = undefined;
+              ({ tab: c0, abortSignal: c1 } = callback);
+              layoutFetchError = undefined;
+              let body;
+              let c4;
+              c5 = 1;
+              c6 = 1;
+              return { value: "ct", done: true };
+            }
+          } else {
+            if (1 === tmp7) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                if (!items.isFetchingLayout(callback)) {
+                  layoutFetchError = items.getLayoutFetchError(callback);
+                  let status;
+                  if (layoutFetchError != null) {
+                    status = layoutFetchError.status;
+                  }
+                  if (404 !== status) {
+                    let status1;
+                    if (layoutFetchError != null) {
+                      status1 = layoutFetchError.status;
+                    }
+                    if (429 !== status1) {
+                      c4 = 1;
+                      const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
+                      obj2[1] = callback;
+                      callback2(layoutFetchError[17]).dispatch(obj2);
+                      const HTTP = callback(layoutFetchError[21]).HTTP;
+                      let obj3 = { url: null, rejectWithError: true, signal: null };
+                      obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
+                      obj3[2] = callback2;
+                      c5 = 3;
+                      c6 = 1;
+                      const obj4 = { value: null, done: false };
+                      obj4[0] = HTTP.get(obj3);
+                      return obj4;
+                    }
+                  }
+                }
+                c6 = 3;
+              }
+            } else if (2 === tmp7) {
+              c4 = 0;
+              c5 = body;
+              const aPIError = new callback(layoutFetchError[22]).APIError(c5);
+              c4 = aPIError;
+              obj3 = callback2(layoutFetchError[17]);
+              const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
+              obj5[1] = callback;
+              obj5[2] = c4;
+              obj3.dispatch(obj5);
+              throw c4;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              body = arg1;
+              obj = callback2(layoutFetchError[17]);
+              const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
+              obj6[1] = callback;
+              obj6[2] = body.body.layout_id;
+              obj.dispatch(obj6);
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = arg1;
+            return obj7;
+          }
+        } catch (tmp39) {
+          body = tmp39;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp39;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -1220,7 +1333,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4159).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4200).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

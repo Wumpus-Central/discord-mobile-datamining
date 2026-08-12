@@ -1,5 +1,5 @@
 // discord_app/modules/markup/MarkupSubtextRule.tsx
-import { t } from "../../../_runtime/04019_t.js";
+import { t } from "../../../_runtime/04060_t.js";
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!-#)[^\n]+)(?:\n|$)/;
 let obj = {

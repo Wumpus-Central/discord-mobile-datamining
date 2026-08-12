@@ -8,8 +8,8 @@ import { GuildFeatures } from "ME";
 import jsxProd from "fromGuildPropertiesWithAdditionalFields";
 import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
-import { registerAsset } from "../../../../../_runtime/09271_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09274_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09311_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09314_registerAsset.js";
 
 let c10;
 let c4;
@@ -23,10 +23,10 @@ function CommunityPill(guildVisibility) {
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
   let tmp4Result = registerAsset;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(9267).GuildVisibility.PUBLIC) {
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(9307).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
-    GlobeEarthIcon = tmp2(10541).GlobeEarthIcon;
+    GlobeEarthIcon = tmp2(10582).GlobeEarthIcon;
     tmp4Result = registerAsset;
   }
   let obj = {
@@ -44,9 +44,9 @@ function CommunityPill(guildVisibility) {
   obj = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1236).intl;
   obj[3] = intl3.string(GlobeEarthIcon(1236).t.K7iRig);
-  items[1] = callback(GlobeEarthIcon(4299).Text, obj);
+  items[1] = callback(GlobeEarthIcon(4340).Text, obj);
   obj[3] = items;
-  return callback2(GlobeEarthIcon(4846).PressableOpacity, obj);
+  return callback2(GlobeEarthIcon(4886).PressableOpacity, obj);
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

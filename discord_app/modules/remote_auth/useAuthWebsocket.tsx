@@ -154,7 +154,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   let c8;
                   RemoteAuthStep = 1;
                   catchPromise = 1;
-                  return { value: "ct", done: "Array" };
+                  return { value: "ct", done: true };
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {

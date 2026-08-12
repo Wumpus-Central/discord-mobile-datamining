@@ -1,6 +1,8 @@
 // discord_app/modules/slayer_storefront/intl/SlayerStorefront.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03240_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03241_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03242_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03243_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03244_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03267_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03268_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03269_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03270_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03271_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03272_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

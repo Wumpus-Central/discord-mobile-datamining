@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult1 from "createRules";
-import { t } from "../../../_runtime/04019_t.js";
+import { t } from "../../../_runtime/04060_t.js";
 import { Text } from "../../design/components/Text/native/Text.tsx";
 import { apexExperiment } from "../../modules/design/ManaTypeConsolidationExperiment.tsx";
 
@@ -105,10 +105,10 @@ function ChangeLogStrong(arg0) {
     }
     obj = { variant: "experimental/body-sm/semibold", color: null, children: null };
     obj[1] = str;
-    obj[2] = tmp(8198).smartOutput(node, output, state);
-    let reactResult = jsx(tmp(4299).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
+    obj[2] = tmp(8237).smartOutput(node, output, state);
+    let reactResult = jsx(tmp(4340).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
     const tmp5 = jsx;
-    const tmpResult = tmp(8198);
+    const tmpResult = tmp(8237);
   } else {
     const strong = rules.strong;
     reactResult = strong.react(node, output, state);

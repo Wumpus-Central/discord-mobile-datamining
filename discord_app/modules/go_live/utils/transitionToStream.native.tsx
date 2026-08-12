@@ -5,7 +5,7 @@ import { openChannelCallModal } from "../../../utils/native/PrivateChannelCallUt
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
-const result = require("module_4509").fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");
+const result = require("module_4549").fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");
 
 export default function transitionToStream(channelId) {
   channel = channel.getChannel(channelId.channelId);

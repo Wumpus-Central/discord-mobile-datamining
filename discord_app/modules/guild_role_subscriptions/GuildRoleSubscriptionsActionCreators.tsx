@@ -40,7 +40,7 @@ function _fetchSubscriptionsSettings() {
               let closure_2 = tmp5;
               const callback = tmp2;
               let closure_0;
-              let obj3 = outer1_2(5876);
+              let obj3 = outer1_2(5915);
               dependencyMap = 1;
               c4 = 1;
               const obj1 = { value: null, done: false };
@@ -221,7 +221,7 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               c11 = 1;
               let num7 = 1;
               c12 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -250,7 +250,7 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               let _Promise = Promise;
               let tmp69 = lib;
               let tmp70 = dependencyMap;
-              let obj15 = lib(5876);
+              let obj15 = lib(5915);
               let tmp71 = callback;
               let obj4 = { includeSoftDeleted: null, countryCode: null };
               let tmp72 = flag;
@@ -259,16 +259,16 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               obj4[1] = lib;
               let items = [obj15.getGuildRoleSubscriptionGroupListingsForGuild(callback, obj4), , , ];
               let tmp74 = dependencyMap;
-              let obj17 = lib(5876);
+              let obj17 = lib(5915);
               let tmp75 = callback;
               items[1] = obj17.getGuildRoleSubscriptionsSettings(callback);
               let tmp76 = dependencyMap;
-              let obj18 = lib(5876);
+              let obj18 = lib(5915);
               let tmp77 = callback;
               items[2] = obj18.getGuildRoleSubscriptionTrials(callback);
               let tmp78 = callback;
               let tmp79 = dependencyMap;
-              let obj19 = callback(4623);
+              let obj19 = callback(4663);
               items[3] = obj19.fetchSubscriptions();
               c11 = 3;
               let num17 = 1;
@@ -919,18 +919,84 @@ function _fetchGuildRoleSubscriptionGroupListing() {
     let c5 = 0;
     let c6 = 0;
     const iter = (function*(arg0, arg1) {
-      let dependencyMap = tmp2;
-      if (obj1 === undefined) {
-        obj1 = {};
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let _slicedToArray = tmp5;
+              let dependencyMap = tmp2;
+              let obj1;
+              if (obj1 === undefined) {
+                obj1 = {};
+              }
+              dependencyMap = undefined;
+              c5 = 1;
+              c6 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              let obj4 = obj1(5915);
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = obj4.getGuildRoleSubscriptionGroupListing(closure_0, callback, obj1);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            dependencyMap = arg1;
+            obj = callback(709);
+            const obj5 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
+            obj5[1] = dependencyMap;
+            obj.dispatch(obj5);
+            c6 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = dependencyMap;
+            return obj6;
+          }
+        } catch (tmp21) {
+          c6 = tmp;
+          throw tmp21;
+        }
       }
-      yield "ct";
-      const obj4 = obj1(5876);
-      dependencyMap = yield obj4.getGuildRoleSubscriptionGroupListing(closure_0, callback, obj1);
-      const obj = callback(709);
-      const obj5 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
-      obj5[1] = dependencyMap;
-      obj.dispatch(obj5);
-      return dependencyMap;
     })();
     iter.next();
     return iter;
@@ -956,28 +1022,113 @@ function _createSubscriptionListing() {
       let c2;
       let c3;
       let c4;
-      const callback2 = tmp2;
-      ({ guildId: c0, groupListingId: c1, data: c2, analyticsContext: c3, onBeforeDispatchNewListing: c4 } = callback);
-      yield "ct";
-      const obj6 = callback3(c3[3]);
-      const id = yield obj6.createGuildRoleSubscriptionListing(callback, callback2, callback3);
-      const obj4 = { role_subscription_listing_id: null, role_subscription_group_listing_id: null, template_name: null, has_change_from_template: null };
-      obj4[0] = id.id;
-      obj4[1] = callback2;
-      obj4[2] = c3.templateCategory;
-      obj4[3] = c3.hasChangeFromTemplate;
-      const obj12 = callback2(c3[7]);
-      const merged = Object.assign(callback(c3[8]).collectGuildAnalyticsMetadata(callback));
-      obj12.track(constants.ROLE_SUBSCRIPTION_LISTING_CREATED, obj4);
-      yield callback4(callback, callback2, { includeArchivedListings: true });
-      if (c4 != null) {
-        tmp7(id);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let callback3 = tmp5;
+              let callback2 = tmp2;
+              let callback;
+              callback2 = undefined;
+              callback3 = undefined;
+              c3 = undefined;
+              c4 = undefined;
+              ({ guildId: c0, groupListingId: c1, data: c2, analyticsContext: c3, onBeforeDispatchNewListing: c4 } = callback);
+              let id;
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let obj6 = callback3(c3[3]);
+              c3 = 2;
+              c4 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj6.createGuildRoleSubscriptionListing(callback, callback2, callback3);
+              return obj2;
+            }
+          } else if (2 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            } else {
+              id = arg1;
+              const obj4 = { role_subscription_listing_id: null, role_subscription_group_listing_id: null, template_name: null, has_change_from_template: null };
+              obj4[0] = id.id;
+              obj4[1] = callback2;
+              obj4[2] = c3.templateCategory;
+              obj4[3] = c3.hasChangeFromTemplate;
+              const obj12 = callback2(c3[7]);
+              const merged = Object.assign(callback(c3[8]).collectGuildAnalyticsMetadata(callback));
+              obj12.track(constants.ROLE_SUBSCRIPTION_LISTING_CREATED, obj4);
+              c3 = 3;
+              c4 = 1;
+              const obj5 = { value: null, done: false };
+              obj5[0] = callback4(callback, callback2, { includeArchivedListings: true });
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj6 = { value: null, done: true };
+            obj6[0] = arg1;
+            return obj6;
+          } else {
+            if (c4 != null) {
+              tmp7(id);
+            }
+            obj = callback2(c3[4]);
+            const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
+            obj7[1] = id;
+            obj.dispatch(obj7);
+            c4 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = id;
+            return obj8;
+          }
+        } catch (tmp26) {
+          c4 = tmp;
+          throw tmp26;
+        }
       }
-      const obj = callback2(c3[4]);
-      const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
-      obj7[1] = id;
-      obj.dispatch(obj7);
-      return id;
     })();
     iter.next();
     return iter;
@@ -1002,17 +1153,101 @@ function _updateSubscriptionListing() {
       let c1;
       let c2;
       let c3;
-      const callback = tmp2;
-      ({ guildId: c0, listingId: c1, groupListingId: c2, data: c3 } = c0);
-      yield "ct";
-      const obj6 = callback2(5876);
-      let c4 = yield obj6.updateGuildRoleSubscriptionListing(c0, callback2, callback, dependencyMap);
-      const obj2 = callback(709);
-      const obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
-      obj4[1] = c4;
-      obj2.dispatch(obj4);
-      yield callback3(c0, callback2, { includeArchivedListings: true });
-      return c4;
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let callback2 = tmp5;
+              let callback = tmp2;
+              c0 = undefined;
+              callback = undefined;
+              callback2 = undefined;
+              dependencyMap = undefined;
+              ({ guildId: c0, listingId: c1, groupListingId: c2, data: c3 } = c0);
+              c4 = undefined;
+              dependencyMap = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let obj6 = callback2(5915);
+              dependencyMap = 2;
+              c4 = 1;
+              let obj2 = { value: null, done: false };
+              obj2[0] = obj6.updateGuildRoleSubscriptionListing(c0, callback2, callback, dependencyMap);
+              return obj2;
+            }
+          } else if (2 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            } else {
+              c4 = arg1;
+              obj2 = callback(709);
+              const obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
+              obj4[1] = c4;
+              obj2.dispatch(obj4);
+              dependencyMap = 3;
+              c4 = 1;
+              const obj5 = { value: null, done: false };
+              obj5[0] = callback3(c0, callback2, { includeArchivedListings: true });
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj6 = { value: null, done: true };
+            obj6[0] = arg1;
+            return obj6;
+          } else {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = c4;
+            return obj;
+          }
+        } catch (tmp26) {
+          c4 = tmp;
+          throw tmp26;
+        }
+      }
     })();
     iter.next();
     return iter;
@@ -1074,7 +1309,7 @@ function _fetchMonetizationRestrictions() {
               restrictions = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -1102,7 +1337,7 @@ function _fetchMonetizationRestrictions() {
               }
             } else if (2 === tmp7) {
               let c6 = 0;
-              let obj4 = callback(4379);
+              let obj4 = callback(4419);
               c7 = 3;
               c8 = 1;
               obj4 = { value: null, done: false };
@@ -1162,7 +1397,7 @@ function _fetchMonetizationRestrictions() {
               const obj10 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS", guildId: null };
               obj10[1] = callback;
               dispatch(obj10);
-              obj9 = callback2(5876);
+              obj9 = callback2(5915);
               const obj11 = { signal: null };
               obj11[0] = signal;
               c7 = 4;

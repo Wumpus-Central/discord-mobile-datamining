@@ -111,7 +111,7 @@ function handleChannelDelete(arg0) {
   return false;
 }
 let closure_7 = require("ME").MAX_MESSAGE_LENGTH_PREMIUM + 500;
-let obj = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal" };
+let obj = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
 let closure_9 = {};
 class DraftStore extends PersistedStore {
 }
@@ -274,6 +274,22 @@ prototype["getThreadSettings"] = function getThreadSettings(channelId) {
     let tmp7 = null;
     if (null != tmp3[channelId]) {
       tmp7 = tmp6[obj.ThreadSettings];
+    }
+    return tmp7;
+  }
+};
+prototype["getScheduledMessage"] = function getScheduledMessage(arg0) {
+  const id = store.getId();
+  if (null != id) {
+    let tmp3 = dependencyMap[id];
+    if (null == tmp3) {
+      const obj = {};
+      dependencyMap[id] = obj;
+      tmp3 = obj;
+    }
+    let tmp7;
+    if (tmp3[arg0] != null) {
+      tmp7 = tmp6[obj.ScheduledMessage];
     }
     return tmp7;
   }
@@ -517,6 +533,53 @@ obj = {
       obj.parentChannelId = channelId;
       tmp5[obj.ThreadSettings] = obj;
     }
+  },
+  SCHEDULED_MESSAGE_DRAFT_CHANGE: function handleScheduledMessageDraftChanged(arg0) {
+    let channelId;
+    let draft;
+    ({ channelId, draft } = arg0);
+    const id = store.getId();
+    if (null != id) {
+      let tmp3 = dependencyMap[id];
+      if (null == tmp3) {
+        let obj = {};
+        dependencyMap[id] = obj;
+        tmp3 = obj;
+      }
+      let tmp5 = tmp3[channelId];
+      if (null == tmp5) {
+        obj = {};
+        tmp3[channelId] = obj;
+        tmp5 = obj;
+      }
+      obj = {};
+      const merged = Object.assign(tmp5[obj.ScheduledMessage]);
+      const merged1 = Object.assign(draft);
+      const _Date = Date;
+      obj.timestamp = Date.now();
+      tmp5[obj.ScheduledMessage] = obj;
+    }
+  },
+  SCHEDULED_MESSAGES_CREATE_SUCCESS: function handleScheduledMessageCreateSuccess(arg0) {
+    const id = store.getId();
+    let flag = false;
+    if (null != id) {
+      let tmp7 = dependencyMap[id];
+      if (null == tmp7) {
+        const obj = {};
+        dependencyMap[id] = obj;
+        tmp7 = obj;
+      }
+      flag = false;
+      if (null != tmp7[arg0.channelId]) {
+        delete tmp4[tmp3];
+        if (obj2.isEmpty(tmp9)) {
+          delete tmp[tmp2];
+        }
+        obj2 = apply;
+      }
+    }
+    return flag;
   }
 };
 const draftStore = new DraftStore(require("dispatcher"), obj);

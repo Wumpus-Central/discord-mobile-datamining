@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import { t } from "../../../../_runtime/03902_t.js";
+import { t } from "../../../../_runtime/03943_t.js";
 import { useInterval } from "../../../hooks/useInterval.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../intl/SlayerStorefront.messages.js";

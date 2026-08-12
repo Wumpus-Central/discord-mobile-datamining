@@ -17,24 +17,24 @@ const require = arg1;
 function createUserWidgetFromServer(data) {
   const type = data.data.type;
   if (WidgetType.WidgetType.CURRENT_GAMES !== type) {
-    if (tmp(7084).WidgetType.FAVORITE_GAMES !== type) {
-      if (tmp(7084).WidgetType.PLAYED_GAMES !== type) {
-        if (tmp(7084).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-          if (tmp(7084).WidgetType.APPLICATION === type) {
+    if (tmp(7123).WidgetType.FAVORITE_GAMES !== type) {
+      if (tmp(7123).WidgetType.PLAYED_GAMES !== type) {
+        if (tmp(7123).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+          if (tmp(7123).WidgetType.APPLICATION === type) {
             let obj = { id: null, applicationId: null };
             obj[0] = data.id;
             obj[1] = data.data.application_id;
-            const applicationWidget = new tmp(7095).ApplicationWidget(obj);
+            const applicationWidget = new tmp(7134).ApplicationWidget(obj);
             return applicationWidget;
-          } else if (tmp(7084).WidgetType.PERSONAL === type) {
+          } else if (tmp(7123).WidgetType.PERSONAL === type) {
             obj = { id: null, header: null, sections: null };
             obj[0] = data.id;
             const header = data.data.header;
             obj[1] = header;
-            obj[2] = tmp(7092).parsePersonalWidgetSections(data.data.sections);
-            const userProfilePersonalWidget = new tmp(7092).UserProfilePersonalWidget(obj);
+            obj[2] = tmp(7131).parsePersonalWidgetSections(data.data.sections);
+            const userProfilePersonalWidget = new tmp(7131).UserProfilePersonalWidget(obj);
             return userProfilePersonalWidget;
-          } else if (tmp(7084).WidgetType.CLIPS_GALLERY === type) {
+          } else if (tmp(7123).WidgetType.CLIPS_GALLERY === type) {
             obj = { id: null, clips: null };
             obj[0] = data.id;
             const clips = data.data.clips;
@@ -54,7 +54,7 @@ function createUserWidgetFromServer(data) {
               return tmp;
             });
             obj[1] = mapped.filter(tmp(1370).isNotNullish);
-            const clipsGalleryWidget = new tmp(7091).ClipsGalleryWidget(obj);
+            const clipsGalleryWidget = new tmp(7130).ClipsGalleryWidget(obj);
             return clipsGalleryWidget;
           }
         }
@@ -65,7 +65,56 @@ function createUserWidgetFromServer(data) {
   const mapped1 = games.map((gameId) => ({ gameId: gameId.game_id, comment: gameId.comment, tags: gameId.tags }));
   const obj5 = apply;
   const uniqByResult = apply.uniqBy(mapped1, "gameId");
-  const baseGameWidget = new tmp(7085).BaseGameWidget({ id: data.id, type, games: apply.uniqBy(mapped1, "gameId") });
+  const baseGameWidget = new tmp(7124).BaseGameWidget({ id: data.id, type, games: apply.uniqBy(mapped1, "gameId") });
+  return baseGameWidget;
+}
+function createUserWidgetFromSnapshot(type) {
+  let applicationId;
+  let clips;
+  let games;
+  let header;
+  let id;
+  let id2;
+  let id3;
+  let id4;
+  let sections;
+  let type3;
+  type = type.type;
+  if (WidgetType.WidgetType.CURRENT_GAMES !== type) {
+    if (tmp(7123).WidgetType.FAVORITE_GAMES !== type) {
+      if (tmp(7123).WidgetType.PLAYED_GAMES !== type) {
+        if (tmp(7123).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+          if (tmp(7123).WidgetType.APPLICATION === type) {
+            ({ id: id3, applicationId } = type);
+            let obj = { id: null, applicationId: null };
+            obj[0] = id3;
+            obj[1] = applicationId;
+            const applicationWidget = new tmp(7134).ApplicationWidget(obj);
+            return applicationWidget;
+          } else if (tmp(7123).WidgetType.PERSONAL === type) {
+            ({ id: id2, header, sections } = type);
+            obj = { id: null, header: null, sections: null };
+            obj[0] = id2;
+            obj[1] = header;
+            obj[2] = sections;
+            const userProfilePersonalWidget = new tmp(7131).UserProfilePersonalWidget(obj);
+            return userProfilePersonalWidget;
+          } else if (tmp(7123).WidgetType.CLIPS_GALLERY === type) {
+            ({ id, clips } = type);
+            obj = { id: null, clips: null };
+            obj[0] = id;
+            obj[1] = clips;
+            const clipsGalleryWidget = new tmp(7130).ClipsGalleryWidget(obj);
+            return clipsGalleryWidget;
+          } else {
+            const type2 = type.type;
+          }
+        }
+      }
+    }
+  }
+  ({ id: id4, type: type3, games } = type);
+  const baseGameWidget = new tmp(7124).BaseGameWidget({ id: id4, type: type3, games });
   return baseGameWidget;
 }
 function checkUserProfileCollectiblesExpiration(id, guild_id) {
@@ -132,7 +181,7 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
           }
           const _Math = Math;
           outer1_15[id][tmp2][expiresAt.skuId].start(Math.min(outer1_9, diff), () => {
-            outer1_24(closure_0, closure_1);
+            outer1_25(closure_0, closure_1);
           });
           const obj2 = outer1_15[id][tmp2][expiresAt.skuId];
         }
@@ -178,7 +227,7 @@ function handleLogout() {
   map3.clear();
   map4.clear();
   map5.clear();
-  let c22 = false;
+  let c23 = false;
 }
 function handleMutualFriendsFetchStart(userId) {
   set.add(userId.userId);
@@ -501,7 +550,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   value = map1.get(userId);
   if (value == null) {
-    const obj = { connectedAccounts: null, applicationRoleConnections: null, premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId: null, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "call" };
+    const obj = { connectedAccounts: null, applicationRoleConnections: null, premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId: null, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "channel" };
     obj[0] = [];
     obj[1] = [];
     obj[6] = userId;
@@ -535,7 +584,7 @@ function handleProfileFetchFailure(arg0) {
   }
 }
 function handleProfileUpdateStart() {
-  let c22 = true;
+  let c23 = true;
 }
 function handleProfileUpdateSuccess(guild_id) {
   let accent_color;
@@ -553,7 +602,7 @@ function handleProfileUpdateSuccess(guild_id) {
   let theme_colors;
   let theme_colors2;
   let userId;
-  let c22 = false;
+  let c23 = false;
   if (null != guild_id.guild_id) {
     ({ userId, guild_id } = guild_id);
     ({ accent_color, banner, bio, pronouns, popout_animation_particle_type, theme_colors, collectibles } = guild_id);
@@ -601,7 +650,7 @@ function handleProfileUpdateSuccess(guild_id) {
   }
 }
 function handleProfileUpdateFailure() {
-  let c22 = false;
+  let c23 = false;
 }
 function handleWidgetsUpdateSuccess(arg0) {
   let userId;
@@ -716,8 +765,8 @@ const map4 = new Map();
 const map5 = new Map();
 let closure_19 = [];
 let closure_20 = [];
-let c22 = false;
-let c23 = null;
+let c23 = false;
+let c24 = null;
 let UserProfileStore;
 class UserProfileStore extends tmp2 {
   constructor() {
@@ -753,7 +802,7 @@ class UserProfileStore extends tmp2 {
     // ThrowIfThisInitialized (0x7c)
     c0 = tmp;
     tmp.loadCache = function loadCache() {
-      const snapshot = _undefined.readSnapshot(outer1_44.LATEST_SNAPSHOT_VERSION);
+      const snapshot = _undefined.readSnapshot(outer1_45.LATEST_SNAPSHOT_VERSION);
       if (null != snapshot) {
         const item = snapshot.forEach((arg0) => {
           let profile;
@@ -761,7 +810,16 @@ class UserProfileStore extends tmp2 {
           ({ userId, profile } = arg0);
           if (null != userId) {
             if (null != profile) {
-              const result = map.set(userId, profile);
+              const obj = {};
+              const merged = Object.assign(profile);
+              const widgets = profile.widgets;
+              let found;
+              if (widgets != null) {
+                const mapped = widgets.map(closure_22);
+                found = mapped.filter(callback(table[14]).isNotNullish);
+              }
+              obj.widgets = found;
+              const result = map.set(userId, obj);
             } else {
               map.delete(userId);
             }
@@ -795,7 +853,7 @@ prototype["isFetchingFriends"] = function isFetchingFriends(id) {
 };
 Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
-    return c22;
+    return c23;
   },
   set: undefined
 });

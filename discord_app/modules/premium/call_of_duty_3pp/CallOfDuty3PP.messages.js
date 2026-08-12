@@ -1,6 +1,8 @@
 // discord_app/modules/premium/call_of_duty_3pp/CallOfDuty3PP.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03080_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03081_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03082_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03083_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03084_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03107_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03108_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03109_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03110_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03111_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03112_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

@@ -2,19 +2,20 @@
 import "noop";
 import { View as _default } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import isFabric from "isFabric";
-import { isFabric } from "../../../utils/native/FabricUtils.tsx";
+import set from "set";
+import set from "jsxProd";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
-if (isFabric.isIosFabric()) {
+if (set.isIOS()) {
   _default = require("__INTERNAL_VIEW_CONFIG").default;
 }
-const result = require("jsxProd").fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
+const result = set.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
 
 export default function PortalAccessibilityWorkaroundView(arg0) {
-  let obj = isFabric;
+  let obj = set;
   obj = null;
-  if (obj.isIosFabric()) {
+  if (obj.isIOS()) {
     obj = { accessibilityLabel: " ", accessible: false };
   }
   obj = {};

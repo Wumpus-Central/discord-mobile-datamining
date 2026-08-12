@@ -7,7 +7,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { PersistedStore } from "initialize";
 import set from "getUncachedChannelPermissions";
-import { t } from "../../_runtime/03902_t.js";
+import { t } from "../../_runtime/03943_t.js";
 import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 import { overrideSurvey } from "../actions/SurveyActionCreators.tsx";
 

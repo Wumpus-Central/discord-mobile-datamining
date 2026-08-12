@@ -47,12 +47,12 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(13040).resetAgeVerification();
+              obj1[0] = outer1_0(13097).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            let obj2 = outer1_0(4020);
+            let obj2 = outer1_0(4061);
             const intl = outer1_0(1236).intl;
             obj2.presentError(intl.string(outer1_0(1236).t.fEptJP));
             const _Error = Error;
@@ -68,7 +68,7 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4644);
+            obj = outer1_0(4684);
             obj.dismissAlert(outer1_6);
             navigation.goBack();
             dependencyMap = 0;

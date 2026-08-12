@@ -38,7 +38,7 @@ prototype["update"] = function update(current) {
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
   if (nowResult === undefined) {
-    let obj = RTC_DISCONNECTED(4379);
+    let obj = RTC_DISCONNECTED(4419);
     nowResult = obj.now();
   }
   const stateDurations = this.getStateDurations(nowResult);

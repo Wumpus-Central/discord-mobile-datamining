@@ -21,7 +21,7 @@ export const areClipsAvailable = function areClipsAvailable() {
     if (currentUser != null) {
       premiumType = currentUser.premiumType;
     }
-    let enableClips = tmp(3966).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+    let enableClips = tmp(4007).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
     if (!enableClips) {
       enableClips = apexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
     }

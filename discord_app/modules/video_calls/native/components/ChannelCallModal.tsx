@@ -30,7 +30,7 @@ class ChannelCallCameraPreview {
     tmp5 = useChannelCallStore((focus) => focus.focus);
     obj2 = require("useRevealProviderValue");
     revealProviderValue = obj2.useRevealProviderValue(tmp5, channel);
-    tmp7 = require("navigationToRootTabHelper");
+    tmp7 = require("coerceMainRoute");
     tmp9 = null;
     if (isConnectedToVoiceChannel) {
       tmp10 = jsx;
@@ -51,7 +51,7 @@ class ChannelCallModal {
   constructor(arg0) {
     channel = global.channel;
     obj = { channelId: channel.id, guildId: channel.guild_id };
-    return jsx(f49624, obj);
+    return jsx(f49755, obj);
   }
 }
 let c4 = importAllResult;
@@ -67,10 +67,10 @@ let closure_18 = importAllResult.memo((arg0) => {
     if (null != first) {
       outer1_1(outer1_2[13]).initialize(tmp);
       return () => {
-        callback2(10759).terminate();
-        const obj = callback2(10759);
-        callback2(7750).setHidden(false);
-        const obj2 = callback2(7750);
+        callback2(10812).terminate();
+        const obj = callback2(10812);
+        callback2(7789).setHidden(false);
+        const obj2 = callback2(7789);
         if (!obj3.isModalOpen(closure_31)) {
           callback3();
         }

@@ -22,43 +22,39 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
   let obj = useFavoritesGuildConfig;
   const favoritesGuildConfig = obj.useFavoritesGuildConfig({ location: str });
   ({ enabled, isFreemium } = favoritesGuildConfig);
-  let tmp4 = undefined !== isFreemium;
-  if (tmp4) {
-    tmp4 = isFreemium;
-  }
   const items = [mergeGuildAvatar];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmpResult = initialize;
+  const obj2 = initialize;
+  const tmp = require;
   const isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2);
-  let tmp7 = enabled;
+  let tmp6 = enabled;
   if (enabled) {
-    let tmp8 = isPremiumExactlyResult;
+    let tmp7 = isPremiumExactlyResult;
     if (!isPremiumExactlyResult) {
-      tmp8 = tmp4;
+      tmp7 = isFreemium;
     }
-    tmp7 = tmp8;
+    tmp6 = tmp7;
   }
-  if (!tmp7) {
-    obj = { hasAccess: null, isExperimentEnabled: null, isFreemium: null, hasHigherPrivileges: null, favoriteLimit: null, canUpsellFavoriteLimit: null };
-    obj[0] = tmp7;
+  if (!tmp6) {
+    obj = { hasAccess: null, isExperimentEnabled: null, isFreemium: null, favoriteLimit: null, canUpsellFavoriteLimit: null };
+    obj[0] = tmp6;
     obj[1] = enabled;
-    obj[2] = tmp4;
-    obj[3] = favoritesGuildConfig.hasHigherPrivileges;
-    obj[4] = 0;
+    obj[2] = isFreemium;
+    obj[3] = 0;
     if (enabled) {
-      enabled = tmp4;
+      enabled = isFreemium;
     }
     if (enabled) {
       enabled = !isPremiumExactlyResult;
     }
-    obj[5] = enabled;
+    obj[4] = enabled;
     return obj;
   } else if (isPremiumExactlyResult) {
     let num = MAX_FAVORITE_CHANNELS;
   } else {
     num = 0;
-    if (tmp4) {
-      num = tmp(9717).FREE_FAVORITE_LIMIT;
+    if (isFreemium) {
+      num = tmp(9756).FREE_FAVORITE_LIMIT;
     }
   }
 }
@@ -71,39 +67,34 @@ export const getFavoritesAccess = function getFavoritesAccess() {
   let obj = useFavoritesGuildConfig;
   const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
-  let tmp4 = undefined !== isFreemium;
-  if (tmp4) {
-    tmp4 = isFreemium;
-  }
   const isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(currentUser.getCurrentUser(), PremiumTypes.TIER_2);
-  let tmp6 = enabled;
+  let tmp5 = enabled;
   if (enabled) {
-    let tmp7 = isPremiumExactlyResult;
+    let tmp6 = isPremiumExactlyResult;
     if (!isPremiumExactlyResult) {
-      tmp7 = tmp4;
+      tmp6 = isFreemium;
     }
-    tmp6 = tmp7;
+    tmp5 = tmp6;
   }
-  if (!tmp6) {
-    obj = { hasAccess: null, isExperimentEnabled: null, isFreemium: null, hasHigherPrivileges: null, favoriteLimit: null, canUpsellFavoriteLimit: null };
-    obj[0] = tmp6;
+  if (!tmp5) {
+    obj = { hasAccess: null, isExperimentEnabled: null, isFreemium: null, favoriteLimit: null, canUpsellFavoriteLimit: null };
+    obj[0] = tmp5;
     obj[1] = enabled;
-    obj[2] = tmp4;
-    obj[3] = favoritesGuildConfig.hasHigherPrivileges;
-    obj[4] = 0;
+    obj[2] = isFreemium;
+    obj[3] = 0;
     if (enabled) {
-      enabled = tmp4;
+      enabled = isFreemium;
     }
     if (enabled) {
       enabled = !isPremiumExactlyResult;
     }
-    obj[5] = enabled;
+    obj[4] = enabled;
     return obj;
   } else if (isPremiumExactlyResult) {
     let num = MAX_FAVORITE_CHANNELS;
   } else {
     num = 0;
-    if (tmp4) {
+    if (isFreemium) {
       num = FREE_FAVORITE_LIMIT.FREE_FAVORITE_LIMIT;
     }
   }

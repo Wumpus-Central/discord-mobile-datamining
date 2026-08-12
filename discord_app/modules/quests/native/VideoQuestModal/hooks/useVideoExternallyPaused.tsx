@@ -4,17 +4,17 @@ import { initialize } from "../../../../../../discord_common/js/packages/flux/in
 import { useAlertStore } from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { updateContextMenuState } from "../../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import { set } from "../../../../../utils/PlatformUtils.tsx";
-import { navigationToRootTabHelper } from "../../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { getVideoQuestWatchCtaText } from "../../../utils/VideoQuestUtils.tsx";
 
 const require = arg1;
-const result = require("navigationToRootTabHelper").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
+const result = require("coerceMainRoute").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
 
 export const useVideoExternallyPaused = function useVideoExternallyPaused(id, arg1) {
   const activeContextMenu = updateContextMenuState.useActiveContextMenu();
   const obj = updateContextMenuState;
-  const openModalKey = navigationToRootTabHelper.useOpenModalKey();
-  const obj2 = navigationToRootTabHelper;
+  const openModalKey = coerceMainRoute.useOpenModalKey();
+  const obj2 = coerceMainRoute;
   const videoQuestModalKey = getVideoQuestWatchCtaText.getVideoQuestModalKey(id);
   const obj3 = getVideoQuestWatchCtaText;
   const items = [setContent];

@@ -6,6 +6,7 @@ import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BoostGemIcon } from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import { getGuildPowerupsBoostInfoText } from "../utils/getGuildPowerupsBoostInfoText.tsx";
 
 let c5;
@@ -23,8 +24,10 @@ export default function GuildPowerupsBoostInfo(arg0) {
   let type;
   ({ count, type } = arg0);
   const tmp = callback();
-  let obj = getGuildPowerupsBoostInfoText;
-  const guildPowerupsBoostInfoText = obj.getGuildPowerupsBoostInfoText(count, type);
+  let obj = apexExperiment;
+  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsBoostInfo");
+  let obj1 = getGuildPowerupsBoostInfoText;
+  const guildPowerupsBoostInfoText = obj1.getGuildPowerupsBoostInfoText(count, type);
   obj = { style: tmp.container, accessible: true, accessibilityLabel: "" + count + ", " + guildPowerupsBoostInfoText, children: null };
   obj = { style: tmp.headerContainer, importantForAccessibility: "no-hide-descendants", accessible: false, children: null };
   if (type === BoostInfoType.AVAILABLE) {
@@ -33,11 +36,18 @@ export default function GuildPowerupsBoostInfo(arg0) {
     TEXT_MUTED = Themes.colors.TEXT_MUTED;
   }
   const items = [closure_5(BoostGemIcon.BoostGemIcon, { size: "sm", color: TEXT_MUTED }), ];
-  let str = "text-subtle";
-  if (type === BoostInfoType.AVAILABLE) {
-    str = "text-strong";
+  let str = "text-lg/medium";
+  if (manaTypeConsolidationExperiment) {
+    str = "experimental/body-lg/semibold";
   }
-  items[1] = closure_5(Text.Text, { variant: "text-lg/medium", color: str, importantForAccessibility: "no-hide-descendants", children: count });
+  obj1 = { variant: str, color: null, importantForAccessibility: "no-hide-descendants", children: null };
+  let str2 = "text-subtle";
+  if (type === BoostInfoType.AVAILABLE) {
+    str2 = "text-strong";
+  }
+  obj1[1] = str2;
+  obj1[3] = count;
+  items[1] = closure_5(Text.Text, obj1);
   obj[3] = items;
   const items1 = [closure_6(View, obj), closure_5(Text.Text, { variant: "text-md/normal", color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText })];
   obj[3] = items1;

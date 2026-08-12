@@ -14,32 +14,98 @@ function _fetchAppliedGuildBoostsForGuild() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0, body) {
-      let dependencyMap = tmp2;
-      let obj1 = flag;
-      if (flag === undefined) {
-        obj1 = {};
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              let sendRequest = tmp5;
+              let dependencyMap = tmp2;
+              let flag;
+              let obj1 = flag;
+              if (flag === undefined) {
+                obj1 = {};
+              }
+              flag = obj1.includeEnded;
+              if (flag === undefined) {
+                flag = false;
+              }
+              dependencyMap = undefined;
+              c4 = 1;
+              c5 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = body;
+              return obj2;
+            } else {
+              let obj4;
+              const HTTP = callback(530).HTTP;
+              const obj3 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
+              obj3[0] = closure_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
+              if (flag) {
+                obj4 = { include_ended: true };
+              }
+              obj3[2] = obj4;
+              c4 = 2;
+              c5 = 1;
+              const obj5 = { value: null, done: false };
+              obj5[0] = HTTP.get(obj3);
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = body;
+            return obj6;
+          } else {
+            body = body.body;
+            dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
+            obj = flag(709);
+            const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
+            obj7[1] = callback;
+            obj7[2] = dependencyMap;
+            obj.dispatch(obj7);
+            c5 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = dependencyMap;
+            return obj8;
+          }
+        } catch (tmp14) {
+          c5 = tmp;
+          throw tmp14;
+        }
       }
-      flag = obj1.includeEnded;
-      if (flag === undefined) {
-        flag = false;
-      }
-      yield "ct";
-      const HTTP = callback(530).HTTP;
-      const obj3 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
-      obj3[0] = closure_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
-      if (flag) {
-        const obj4 = { include_ended: true };
-      }
-      obj3[2] = obj4;
-      yield HTTP.get(obj3);
-      body = body.body;
-      dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
-      const obj = flag(709);
-      const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
-      obj7[1] = callback;
-      obj7[2] = dependencyMap;
-      obj.dispatch(obj7);
-      return dependencyMap;
     })();
     iter.next();
     return iter;
@@ -60,25 +126,90 @@ function _fetchAppliedGuildBoostsForUser() {
     let c3 = 0;
     let c4 = 0;
     const iter = (function*(arg0, body) {
-      let callback = tmp2;
-      if (flag === undefined) {
-        flag = false;
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const dependencyMap = tmp5;
+              let callback = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = false;
+              }
+              callback = undefined;
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = body;
+              return obj1;
+            } else {
+              const HTTP = flag(530).HTTP;
+              const obj2 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
+              obj2[0] = constants.USER_APPLIED_GUILD_BOOSTS;
+              const obj3 = { paused: null };
+              obj3[0] = flag;
+              obj2[2] = obj3;
+              c3 = 2;
+              c4 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.get(obj2);
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = body;
+            return obj5;
+          } else {
+            body = body.body;
+            callback = body.map((arg0) => c4.createFromServer(arg0));
+            obj = callback(709);
+            const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
+            obj6[1] = callback;
+            obj.dispatch(obj6);
+            c4 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = callback;
+            return obj7;
+          }
+        } catch (tmp18) {
+          c4 = tmp;
+          throw tmp18;
+        }
       }
-      yield "ct";
-      const HTTP = flag(530).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
-      obj2[0] = constants.USER_APPLIED_GUILD_BOOSTS;
-      const obj3 = { paused: null };
-      obj3[0] = flag;
-      obj2[2] = obj3;
-      yield HTTP.get(obj2);
-      body = body.body;
-      callback = body.map((arg0) => c4.createFromServer(arg0));
-      const obj = callback(709);
-      const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
-      obj6[1] = callback;
-      obj.dispatch(obj6);
-      return callback;
     })();
     iter.next();
     return iter;
@@ -183,7 +314,7 @@ function _fetchAppliedBoostsCooldown() {
             c5 = 3;
             return { value: null, done: true };
           } else {
-            const appliedGuildBoostError = new ends_at(4202).AppliedGuildBoostError(lib);
+            const appliedGuildBoostError = new ends_at(4243).AppliedGuildBoostError(lib);
             throw appliedGuildBoostError;
           }
         } else if (arg0 === 1) {
@@ -274,7 +405,7 @@ function _applyToGuild() {
               let appliedGuildBoostError;
               c7 = 1;
               c8 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -417,7 +548,7 @@ function _unapplyFromGuild() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = createFromServer;
-            appliedGuildBoostError = new callback(4202).AppliedGuildBoostError(dependencyMap);
+            appliedGuildBoostError = new callback(4243).AppliedGuildBoostError(dependencyMap);
             let obj3 = appliedGuildBoostError(709);
             obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
             obj3[1] = appliedGuildBoostError;

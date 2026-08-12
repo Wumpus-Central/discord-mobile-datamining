@@ -7,7 +7,7 @@ import { ThemeTypes } from "sum";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/14518_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/14575_registerAsset.js";
 import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -63,9 +63,9 @@ function DefaultThemeBackground(item) {
   } else {
     theme = item.theme;
   }
-  let tmpResult = tmp(4024);
+  let tmpResult = tmp(4065);
   const token = tmpResult.useToken(Themes.colors.BACKGROUND_BASE_LOWER, theme);
-  tmpResult = tmp(4024);
+  tmpResult = tmp(4065);
   const token1 = tmpResult.useToken(Themes.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
   obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };

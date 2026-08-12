@@ -77,7 +77,7 @@ function _fetchGuildJoinRequests() {
               let closure_9;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -468,12 +468,12 @@ function _updateGuildJoinRequest() {
               let APPROVED;
               let closure_4;
               if (APPROVED === undefined) {
-                APPROVED = callback(4129).GuildJoinRequestApplicationStatuses.APPROVED;
+                APPROVED = callback(4170).GuildJoinRequestApplicationStatuses.APPROVED;
               }
               updateSubmittedGuildJoinRequestTotal = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -485,7 +485,7 @@ function _updateGuildJoinRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback(7323);
+              let obj7 = callback(7362);
               const obj2 = { guildId: null, actionType: null, applicationUserId: null };
               obj2[0] = callback;
               obj2[1] = APPROVED;
@@ -511,7 +511,7 @@ function _updateGuildJoinRequest() {
                   body = body.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
                 }
                 if (body) {
-                  let obj = callback2(4642);
+                  let obj = callback2(4682);
                   obj = { title: null, body: null };
                   const intl = callback(1236).intl;
                   obj[0] = intl.string(callback(1236).t.DxJj4e);
@@ -767,25 +767,92 @@ function _createOrEnterJoinRequestInterview() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      let body = tmp2;
-      if (flag === undefined) {
-        flag = true;
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let user = tmp5;
+              let body = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              body = undefined;
+              user = undefined;
+              v0 = 1;
+              c5 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const HTTP = callback(body[7]).HTTP;
+              const obj2 = { url: null, rejectWithError: null };
+              obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
+              obj2[1] = callback(body[7]).rejectWithMigratedError();
+              v0 = 2;
+              c5 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            body = arg1;
+            user = v0(body.body);
+            const obj5 = { type: "CHANNEL_CREATE", channel: null };
+            obj5[1] = user;
+            flag(body[6]).dispatch(obj5);
+            if (flag) {
+              obj = flag(body[11]);
+              const privateChannel = obj.selectPrivateChannel(user.id);
+            }
+            c5 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = user.id;
+            return obj6;
+          }
+        } catch (tmp15) {
+          c5 = tmp;
+          throw tmp15;
+        }
       }
-      yield "ct";
-      const HTTP = callback(body[7]).HTTP;
-      const obj2 = { url: null, rejectWithError: null };
-      obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
-      obj2[1] = callback(body[7]).rejectWithMigratedError();
-      body = yield HTTP.post(obj2);
-      const user = v0(body.body);
-      const obj5 = { type: "CHANNEL_CREATE", channel: null };
-      obj5[1] = user;
-      flag(body[6]).dispatch(obj5);
-      if (flag) {
-        const obj = flag(body[11]);
-        const privateChannel = obj.selectPrivateChannel(user.id);
-      }
-      return user.id;
     })();
     iter.next();
     return iter;

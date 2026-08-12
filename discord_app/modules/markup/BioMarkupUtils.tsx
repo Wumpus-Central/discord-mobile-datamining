@@ -5,7 +5,7 @@ import importDefaultResult1 from "get defaultRules";
 import importAllResult1 from "reactParserFor";
 import importDefaultResult2 from "combineMarkupRules";
 import importDefaultResult3 from "apply";
-import { t } from "../../../_runtime/04019_t.js";
+import { t } from "../../../_runtime/04060_t.js";
 
 const items = [require("parseLink").PROFILE_BIO_RULES, require("MarkupText")({ enableBuildOverrides: false, mustConfirmExternalLink: true })];
 const importDefaultResultResult = require("combineMarkupRules")(items);

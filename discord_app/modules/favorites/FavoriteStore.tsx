@@ -179,33 +179,6 @@ prototype["getCategoryRecord"] = function getCategoryRecord(categoryId) {
   }
   return tmp;
 };
-prototype["getCategoryIdByName"] = function getCategoryIdByName(closure_1) {
-  const trimmed = closure_1.trim();
-  for (const key10009 in closure_8) {
-    let tmp4 = key10009;
-    let tmp5 = dependencyMap;
-    let tmp6 = dependencyMap[key10009];
-    let tmp7 = require;
-    let tmp8 = dependencyMap;
-    if (tmp6.type !== create.FavoriteChannelType.CATEGORY) {
-      continue;
-    } else {
-      let str = tmp6.nickname;
-      let formatted;
-      if (str != null) {
-        let str2 = str.trim();
-        formatted = str2.toLowerCase();
-      }
-      if (formatted !== tmp2) {
-        continue;
-      } else {
-        return key10009;
-      }
-    }
-    continue;
-  }
-  return null;
-};
 prototype["getNickname"] = function getNickname(categoryId) {
   const favorite = this.getFavorite(categoryId);
   let nickname;

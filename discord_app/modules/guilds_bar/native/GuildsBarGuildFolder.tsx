@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuildFolder.tsx
-import importAllResult from "module_4042";
+import importAllResult from "module_4083";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -50,7 +50,7 @@ function MiniGuildIcon(arg0) {
   if (!selected) {
     prop = tmp4.guildPreviewIconUnselected;
   }
-  obj = { style: items1, guild: stateFromStores, size: tmp(5779).GuildIconSizes.XXSMALL, selected };
+  obj = { style: items1, guild: stateFromStores, size: tmp(5818).GuildIconSizes.XXSMALL, selected };
   items1[1] = prop;
   items1[2] = guildPreview3;
   return tmp6(GuildIconSizes, obj, "" + selected);

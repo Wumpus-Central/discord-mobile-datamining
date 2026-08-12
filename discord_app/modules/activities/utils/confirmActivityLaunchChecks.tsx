@@ -26,36 +26,111 @@ function _getOrFetchApplicationForLaunch() {
       let c0;
       let c1;
       let c2;
-      let ensureGuildLoaded = tmp3;
-      ({ applicationId: c0, channelId: c1, guildId: c2 } = callback);
-      yield "ct";
-      let c6 = 1;
-      yield callback2(10635)(callback, callback2);
-      c6 = 0;
-      ensureGuildLoaded = participantFromServer;
-      if (null != dependencyMap) {
-        let PRIVATE_CHANNEL = callback(10620).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+      if (c8 === 2) {
+        c8 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        PRIVATE_CHANNEL = callback(10620).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+        try {
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let ensureGuildLoaded = tmp3;
+              let PRIVATE_CHANNEL = tmp7;
+              let callback;
+              let callback2;
+              let dependencyMap;
+              ({ applicationId: c0, channelId: c1, guildId: c2 } = callback);
+              PRIVATE_CHANNEL = undefined;
+              c7 = 1;
+              c8 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let c6 = 1;
+              c7 = 3;
+              c8 = 1;
+              let obj2 = { value: null, done: false };
+              obj2[0] = callback2(10688)(callback, callback2);
+              return obj2;
+            }
+          } else if (2 === tmp7) {
+            c6 = 0;
+            ensureGuildLoaded = participantFromServer;
+            if (null != dependencyMap) {
+              PRIVATE_CHANNEL = callback(10673).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+            } else {
+              PRIVATE_CHANNEL = callback(10673).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+            }
+            obj2 = callback2(709);
+            const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
+            obj3[2] = callback;
+            if (callback2 == null) {
+              callback2 = null;
+            }
+            obj3[3] = callback2;
+            if (dependencyMap == null) {
+              dependencyMap = null;
+            }
+            obj3[4] = dependencyMap;
+            const aPIError = new callback(4243).APIError(ensureGuildLoaded);
+            obj3[5] = aPIError;
+            obj3[6] = PRIVATE_CHANNEL;
+            obj2.dispatch(obj3);
+            c8 = 3;
+            return { value: "HermesInternal", done: null };
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 0;
+            c8 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            c6 = 0;
+            c8 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp46) {
+          participantFromServer = tmp46;
+          if (tmp4 === c6) {
+            c8 = tmp2;
+            throw tmp46;
+          } else {
+            c7 = tmp;
+          }
+        }
       }
-      const obj2 = callback2(709);
-      const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
-      obj3[2] = callback;
-      if (callback2 == null) {
-        callback2 = null;
-      }
-      obj3[3] = callback2;
-      if (dependencyMap == null) {
-        dependencyMap = null;
-      }
-      obj3[4] = dependencyMap;
-      const aPIError = new callback(4202).APIError(ensureGuildLoaded);
-      obj3[5] = aPIError;
-      obj3[6] = PRIVATE_CHANNEL;
-      obj2.dispatch(obj3);
-      yield "HermesInternal";
-      c6 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -79,63 +154,103 @@ function _confirmActivityChange() {
       let c0;
       let c1;
       let c2;
-      c1 = tmp2;
-      ({ currentEmbeddedApplication: c0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1, onConfirmActivityLaunchChecksAlertOpen: c2 } = c0);
-      yield "ct";
-      if (1 === tmp5) {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          let c3 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c3 = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        } else if (null != c0) {
-          const promise = new Promise((arg0) => {
-            const _undefined = arg0;
-            const selfEmbeddedActivities = outer1_5.getSelfEmbeddedActivities();
-            const value = selfEmbeddedActivities.get(_undefined.id);
-            const _undefined2 = value;
-            let _location;
-            if (value != null) {
-              _location = value.location;
-            }
-            const channel = outer1_4.getChannel(_undefined(3938).getEmbeddedActivityLocationChannelId(_location));
-            if (null != value) {
-              if (null != channel) {
-                if (dependencyMap != null) {
-                  dependencyMap();
-                }
-                _undefined2(10637)(tmp, channel, () => {
-                  let obj = value(table[10])();
-                  obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
-                  obj.leaveActivity(obj);
-                  lib(true);
-                }, () => lib(false));
-              }
-            }
-            arg0(true);
-          });
-          c2 = 2;
-          c3 = 1;
-          const obj2 = { value: null, done: false };
-          obj2[0] = promise;
-          return obj2;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c3 = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else if (!arg1) {
-        c3 = 3;
-        return { value: false, done: true };
+      } else {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c1 = tmp2;
+              c0 = undefined;
+              c1 = undefined;
+              c2 = undefined;
+              ({ currentEmbeddedApplication: c0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1, onConfirmActivityLaunchChecksAlertOpen: c2 } = c0);
+              c2 = 1;
+              c3 = 1;
+              return { value: "ct", done: true };
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                c3 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else if (null != c0) {
+                const promise = new Promise((arg0) => {
+                  const _undefined = arg0;
+                  const selfEmbeddedActivities = outer1_5.getSelfEmbeddedActivities();
+                  const value = selfEmbeddedActivities.get(_undefined.id);
+                  const _undefined2 = value;
+                  let _location;
+                  if (value != null) {
+                    _location = value.location;
+                  }
+                  const channel = outer1_4.getChannel(_undefined(3979).getEmbeddedActivityLocationChannelId(_location));
+                  if (null != value) {
+                    if (null != channel) {
+                      if (dependencyMap != null) {
+                        dependencyMap();
+                      }
+                      _undefined2(10690)(tmp, channel, () => {
+                        let obj = value(table[10])();
+                        obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
+                        obj.leaveActivity(obj);
+                        lib(true);
+                      }, () => lib(false));
+                    }
+                  }
+                  arg0(true);
+                });
+                c2 = 2;
+                c3 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = promise;
+                return obj2;
+              }
+            } else if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else if (!arg1) {
+              c3 = 3;
+              return { value: false, done: true };
+            }
+            c3 = 3;
+            return { value: true, done: true };
+          }
+        } catch (tmp16) {
+          c3 = tmp;
+          throw tmp16;
+        }
       }
-      return true;
     })();
     iter.next();
     return iter;
@@ -198,7 +313,7 @@ function _confirmActivityAgeGate() {
               obj = undefined;
               obj = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -335,92 +450,137 @@ function _confirmExternalAppLaunch() {
       let c2;
       let c3;
       let closure_1;
-      c3 = tmp2;
-      ({ application: c0, applicationId: closure_1, channel: c2, onConfirmActivityLaunchChecksAlertOpen: c3 } = callback);
-      yield "ct";
-      if (1 === tmp5) {
+      if (constants === 2) {
+        constants = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          let constants = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          constants = 3;
-          let obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          closure_1 = callback;
-          if (callback == null) {
-            const obj2 = { applicationId: null, channelId: null, guildId: null };
-            obj2[0] = closure_1;
-            let id;
-            if (id != null) {
-              id = id.id;
-            }
-            obj2[1] = id;
-            const obj4 = id;
-            let guildId;
-            if (id != null) {
-              guildId = obj4.getGuildId();
-            }
-            id = guildId;
-            if (guildId == null) {
-              id = undefined;
-            }
-            obj2[2] = id;
-            let c5 = 2;
-            constants = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = closure_7(obj2);
-            return obj3;
-          }
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        constants = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        constants = 3;
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
       } else {
-        closure_1 = arg1;
-      }
-      const isVerified = closure_1;
-      let tmp10 = null != isVerified;
-      if (tmp10) {
-        obj1 = callback(id[12]);
-        const hasApplicationFlagResult = obj1.hasApplicationFlag(isVerified, constants.EMBEDDED_RELEASED);
-        let tmp18 = !hasApplicationFlagResult;
-        if (!hasApplicationFlagResult) {
-          tmp18 = !isVerified.isVerified;
-        }
-        let tmp21 = !tmp18;
-        if (tmp18) {
-          let result = c5.hasActivityEverBeenLaunched(closure_1);
-          if (!result) {
-            result = new Promise((arg0) => {
-              let closure_0 = arg0;
-              if (c3 != null) {
-                tmp();
-              }
-              let obj = _undefined(_undefined2[13]);
-              obj = {
-                application: ensureGuildLoaded,
-                onConfirm() {
-                  return callback(true);
-                },
-                onCancel() {
-                  return callback(false);
+        try {
+          constants = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let isVerified = tmp5;
+              c3 = tmp2;
+              let callback;
+              closure_1 = undefined;
+              let id;
+              c3 = undefined;
+              ({ application: c0, applicationId: closure_1, channel: c2, onConfirmActivityLaunchChecksAlertOpen: c3 } = callback);
+              isVerified = undefined;
+              c5 = 1;
+              constants = 1;
+              return { value: "ct", done: true };
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                constants = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                constants = 3;
+                let obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                closure_1 = callback;
+                if (callback == null) {
+                  const obj2 = { applicationId: null, channelId: null, guildId: null };
+                  obj2[0] = closure_1;
+                  id = undefined;
+                  if (id != null) {
+                    id = id.id;
+                  }
+                  obj2[1] = id;
+                  let obj4 = id;
+                  let guildId;
+                  if (id != null) {
+                    guildId = obj4.getGuildId();
+                  }
+                  id = guildId;
+                  if (guildId == null) {
+                    id = undefined;
+                  }
+                  obj2[2] = id;
+                  c5 = 2;
+                  constants = 1;
+                  const obj3 = { value: null, done: false };
+                  obj3[0] = closure_7(obj2);
+                  return obj3;
                 }
-              };
-              const result = obj.confirmExternalAppLaunchAlert(obj);
-            });
+              }
+            } else if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = arg1;
+            }
+            isVerified = closure_1;
+            let tmp10 = null != isVerified;
+            if (tmp10) {
+              obj1 = callback(id[12]);
+              const hasApplicationFlagResult = obj1.hasApplicationFlag(isVerified, constants.EMBEDDED_RELEASED);
+              let tmp18 = !hasApplicationFlagResult;
+              if (!hasApplicationFlagResult) {
+                tmp18 = !isVerified.isVerified;
+              }
+              let tmp21 = !tmp18;
+              if (tmp18) {
+                let result = c5.hasActivityEverBeenLaunched(closure_1);
+                if (!result) {
+                  result = new Promise((arg0) => {
+                    let closure_0 = arg0;
+                    if (c3 != null) {
+                      tmp();
+                    }
+                    let obj = _undefined(_undefined2[13]);
+                    obj = {
+                      application: ensureGuildLoaded,
+                      onConfirm() {
+                        return callback(true);
+                      },
+                      onCancel() {
+                        return callback(false);
+                      }
+                    };
+                    const result = obj.confirmExternalAppLaunchAlert(obj);
+                  });
+                }
+                tmp21 = result;
+              }
+              tmp10 = tmp21;
+            }
+            constants = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = tmp10;
+            return obj4;
           }
-          tmp21 = result;
+        } catch (tmp40) {
+          constants = tmp;
+          throw tmp40;
         }
-        tmp10 = tmp21;
       }
-      return tmp10;
     })();
     iter.next();
     return iter;

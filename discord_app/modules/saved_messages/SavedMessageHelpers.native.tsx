@@ -11,120 +11,164 @@ function _addOrUpdateSavedMessage() {
     let c3 = 0;
     let c4 = 0;
     const iter = (function*(arg0) {
-      let lib = tmp2;
-      displayToast = displayToast.displayToast;
-      lib = Object.assign(displayToast, Object.create(null));
-      yield "ct";
-      if (1 === tmp5) {
+      if (savedMessage === 2) {
+        savedMessage = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          let savedMessage = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          savedMessage = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (null == savedMessage.getSavedMessage(lib.channelId, lib.messageId)) {
-            if (!obj10.hasForLaterAccess("addOrUpdateSavedMessage")) {
-              let items = [lib(5748).FOR_LATER_ROADBLOCK];
-              lib(8375)(displayToast(8378).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          savedMessage = 2;
+          if (0 === BookmarkIcon) {
+            if (arg0 === 1) {
               savedMessage = 3;
-              const tmp36 = lib(8375);
-            }
-            obj10 = displayToast(8380);
-          }
-          let obj3 = displayToast(10279);
-          let BookmarkIcon = 2;
-          savedMessage = 1;
-          obj3 = { value: null, done: false };
-          obj3[0] = obj3.upsertSavedMessage(lib).catch((body) => {
-            let code;
-            if (body != null) {
-              body = body.body;
-              if (body != null) {
-                code = body.code;
-              }
-            }
-            if (code === outer1_5.TOO_MANY_SAVED_MESSAGES) {
-              const displayToast = tmp5;
-              let obj = displayToast(_undefined[3]);
-              if (obj.isForLaterLimitUpgradable("addOrUpdateSavedMessage")) {
-                let tmp8Result = tmp8(tmp7[8]);
-                const items = [tmp8(tmp7[6]).FOR_LATER_ROADBLOCK];
-                tmp8Result(tmp5, items);
-              } else {
-                tmp8Result = tmp8(tmp7[9]);
-                obj = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
-                const intl2 = tmp6(tmp7[10]).intl;
-                obj[0] = intl2.string(tmp6(tmp7[10]).t.mlbiZW);
-                const intl3 = tmp6(tmp7[10]).intl;
-                const t = tmp6(tmp7[10]).t;
-                obj = { max: null };
-                obj[0] = tmp6(tmp7[3]).getForLaterLimit("addOrUpdateSavedMessage", tmp5);
-                obj[1] = intl3.formatToPlainString(tmp5 ? t.Anr1Dg : t["1zVbEG"], obj);
-                const intl4 = tmp6(tmp7[10]).intl;
-                obj[2] = intl4.string(tmp6(tmp7[10]).t.BddRzS);
-                const intl5 = tmp6(tmp7[10]).intl;
-                obj[3] = intl5.string(tmp6(tmp7[10]).t.ZGbTcy);
-                obj[4] = function onCancel() {
-                  const SavedMessageSortTypes = tmp5(outer1_2[12]).SavedMessageSortTypes;
-                  return tmp5(outer1_2[11]).showForLaterModal(tmp5 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
-                };
-                tmp8Result.show(obj);
-                const tmp6Result = tmp6(tmp7[3]);
-                const tmp9 = tmp5 ? t.Anr1Dg : t["1zVbEG"];
-              }
-              return null;
+              throw arg1;
+            } else if (arg0 === 2) {
+              savedMessage = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              const obj1 = { key: "SAVED_MESSAGE_CREATE_ERROR", IconComponent: null, content: null };
-              obj1[1] = displayToast(_undefined[14]).CircleErrorIcon;
-              let message;
-              if (body != null) {
-                const body2 = body.body;
-                if (body2 != null) {
-                  message = body2.message;
+              let dependencyMap = tmp5;
+              let lib = tmp2;
+              let displayToast;
+              lib = undefined;
+              displayToast = displayToast.displayToast;
+              lib = Object.assign(displayToast, Object.create(null));
+              dependencyMap = undefined;
+              BookmarkIcon = undefined;
+              BookmarkIcon = 1;
+              savedMessage = 1;
+              return { value: "ct", done: true };
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                savedMessage = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                savedMessage = 3;
+                const obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                if (null == savedMessage.getSavedMessage(lib.channelId, lib.messageId)) {
+                  if (!obj10.hasForLaterAccess("addOrUpdateSavedMessage")) {
+                    let items = [lib(5787).FOR_LATER_ROADBLOCK];
+                    lib(8414)(displayToast(8417).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
+                    savedMessage = 3;
+                    const tmp36 = lib(8414);
+                  }
+                  obj10 = displayToast(8419);
+                }
+                let obj3 = displayToast(10320);
+                BookmarkIcon = 2;
+                savedMessage = 1;
+                obj3 = { value: null, done: false };
+                obj3[0] = obj3.upsertSavedMessage(lib).catch((body) => {
+                  let code;
+                  if (body != null) {
+                    body = body.body;
+                    if (body != null) {
+                      code = body.code;
+                    }
+                  }
+                  if (code === outer1_5.TOO_MANY_SAVED_MESSAGES) {
+                    const displayToast = tmp5;
+                    let obj = displayToast(_undefined[3]);
+                    if (obj.isForLaterLimitUpgradable("addOrUpdateSavedMessage")) {
+                      let tmp8Result = tmp8(tmp7[8]);
+                      const items = [tmp8(tmp7[6]).FOR_LATER_ROADBLOCK];
+                      tmp8Result(tmp5, items);
+                    } else {
+                      tmp8Result = tmp8(tmp7[9]);
+                      obj = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
+                      const intl2 = tmp6(tmp7[10]).intl;
+                      obj[0] = intl2.string(tmp6(tmp7[10]).t.mlbiZW);
+                      const intl3 = tmp6(tmp7[10]).intl;
+                      const t = tmp6(tmp7[10]).t;
+                      obj = { max: null };
+                      obj[0] = tmp6(tmp7[3]).getForLaterLimit("addOrUpdateSavedMessage", tmp5);
+                      obj[1] = intl3.formatToPlainString(tmp5 ? t.Anr1Dg : t["1zVbEG"], obj);
+                      const intl4 = tmp6(tmp7[10]).intl;
+                      obj[2] = intl4.string(tmp6(tmp7[10]).t.BddRzS);
+                      const intl5 = tmp6(tmp7[10]).intl;
+                      obj[3] = intl5.string(tmp6(tmp7[10]).t.ZGbTcy);
+                      obj[4] = function onCancel() {
+                        const SavedMessageSortTypes = tmp5(outer1_2[12]).SavedMessageSortTypes;
+                        return tmp5(outer1_2[11]).showForLaterModal(tmp5 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+                      };
+                      tmp8Result.show(obj);
+                      const tmp6Result = tmp6(tmp7[3]);
+                      const tmp9 = tmp5 ? t.Anr1Dg : t["1zVbEG"];
+                    }
+                    return null;
+                  } else {
+                    const obj1 = { key: "SAVED_MESSAGE_CREATE_ERROR", IconComponent: null, content: null };
+                    obj1[1] = displayToast(_undefined[14]).CircleErrorIcon;
+                    let message;
+                    if (body != null) {
+                      const body2 = body.body;
+                      if (body2 != null) {
+                        message = body2.message;
+                      }
+                    }
+                    if (message == null) {
+                      const intl = tmp15(tmp14[10]).intl;
+                      message = intl.string(tmp15(tmp14[10]).t.R0RpRX);
+                    }
+                    obj1[2] = message;
+                    lib(_undefined[13]).open(obj1);
+                    return null;
+                  }
+                });
+                return obj3;
+              }
+            } else if (arg0 === 1) {
+              savedMessage = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              if (null != arg1) {
+                if (displayToast) {
+                  if (null != lib.dueAt) {
+                    let intl2 = displayToast(1236).intl;
+                    let stringResult = intl2.string(displayToast(1236).t.i1IsOy);
+                  } else {
+                    let intl = displayToast(1236).intl;
+                    stringResult = intl.string(displayToast(1236).t.DQjes4);
+                  }
+                  dependencyMap = stringResult;
+                  if (null != lib.dueAt) {
+                    BookmarkIcon = displayToast(4308).ClockIcon;
+                  } else {
+                    BookmarkIcon = displayToast(10322).BookmarkIcon;
+                  }
+                  obj = lib(4062);
+                  const obj4 = { key: "SAVED_MESSAGE_CREATE_SUCCESS", IconComponent: null, content: null };
+                  obj4[1] = BookmarkIcon;
+                  obj4[2] = dependencyMap;
+                  obj.open(obj4);
                 }
               }
-              if (message == null) {
-                const intl = tmp15(tmp14[10]).intl;
-                message = intl.string(tmp15(tmp14[10]).t.R0RpRX);
-              }
-              obj1[2] = message;
-              lib(_undefined[13]).open(obj1);
-              return null;
             }
-          });
-          return obj3;
-        }
-      } else if (arg0 === 1) {
-        savedMessage = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        if (null != arg1) {
-          if (displayToast) {
-            if (null != lib.dueAt) {
-              let intl2 = displayToast(1236).intl;
-              let stringResult = intl2.string(displayToast(1236).t.i1IsOy);
-            } else {
-              let intl = displayToast(1236).intl;
-              stringResult = intl.string(displayToast(1236).t.DQjes4);
-            }
-            const dependencyMap = stringResult;
-            if (null != lib.dueAt) {
-              BookmarkIcon = displayToast(4267).ClockIcon;
-            } else {
-              BookmarkIcon = displayToast(10281).BookmarkIcon;
-            }
-            let obj = lib(4021);
-            const obj4 = { key: "SAVED_MESSAGE_CREATE_SUCCESS", IconComponent: null, content: null };
-            obj4[1] = BookmarkIcon;
-            obj4[2] = dependencyMap;
-            obj.open(obj4);
+            savedMessage = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = arg1;
+            return obj5;
           }
+        } catch (tmp50) {
+          savedMessage = tmp;
+          throw tmp50;
         }
       }
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -184,7 +228,7 @@ function _removeSavedMessage() {
               c4 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -201,8 +245,8 @@ function _removeSavedMessage() {
               c4 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = obj3.deleteSavedMessage(closure_2).catch((body) => {
-                let obj = _undefined2(4021);
-                obj = { key: "SAVED_MESSAGE_REMOVE_ERROR", IconComponent: _undefined(7795).CircleErrorIcon, content: null };
+                let obj = _undefined2(4062);
+                obj = { key: "SAVED_MESSAGE_REMOVE_ERROR", IconComponent: _undefined(7834).CircleErrorIcon, content: null };
                 let message;
                 if (body != null) {
                   body = body.body;

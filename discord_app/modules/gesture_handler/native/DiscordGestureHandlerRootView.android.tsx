@@ -2,7 +2,7 @@
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { LegacyBaseButton } from "../../../../_runtime/05427_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../_runtime/05466_LegacyBaseButton.js";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx";
 
 let StyleSheet;

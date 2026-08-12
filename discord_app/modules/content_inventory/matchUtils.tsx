@@ -16,13 +16,13 @@ function isMatchingListeningActivity(closure_0, party) {
         provider = media.provider;
       }
     }
-    let isTopArtistEntryResult = provider === tmp(8912).ContentInventoryListenedMediaProvider.SPOTIFY;
+    let isTopArtistEntryResult = provider === tmp(8951).ContentInventoryListenedMediaProvider.SPOTIFY;
   } else {
-    isTopArtistEntryResult = tmp(8910).isTopArtistEntry(closure_0);
+    isTopArtistEntryResult = tmp(8949).isTopArtistEntry(closure_0);
     if (isTopArtistEntryResult) {
-      isTopArtistEntryResult = closure_0.extra.media.provider === tmp(8912).ContentInventoryListenedMediaProvider.SPOTIFY;
+      isTopArtistEntryResult = closure_0.extra.media.provider === tmp(8951).ContentInventoryListenedMediaProvider.SPOTIFY;
     }
-    const tmpResult = tmp(8910);
+    const tmpResult = tmp(8949);
   }
   let tmp9Result = isTopArtistEntryResult;
   if (tmp9Result) {
@@ -48,13 +48,13 @@ export const isSpotifyEntry = function isSpotifyEntry(extra) {
         provider = media.provider;
       }
     }
-    let isTopArtistEntryResult = provider === tmp(8912).ContentInventoryListenedMediaProvider.SPOTIFY;
+    let isTopArtistEntryResult = provider === tmp(8951).ContentInventoryListenedMediaProvider.SPOTIFY;
   } else {
-    isTopArtistEntryResult = tmp(8910).isTopArtistEntry(extra);
+    isTopArtistEntryResult = tmp(8949).isTopArtistEntry(extra);
     if (isTopArtistEntryResult) {
-      isTopArtistEntryResult = extra.extra.media.provider === tmp(8912).ContentInventoryListenedMediaProvider.SPOTIFY;
+      isTopArtistEntryResult = extra.extra.media.provider === tmp(8951).ContentInventoryListenedMediaProvider.SPOTIFY;
     }
-    const tmpResult = tmp(8910);
+    const tmpResult = tmp(8949);
   }
   return isTopArtistEntryResult;
 };
@@ -104,7 +104,7 @@ export const findMatchingEntry = function findMatchingEntry(entries, activity) {
   const _require = activity;
   const found = entries.filter(_calculateTimestampDurations.isEntryActive);
   if (activity.type === ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(8910).isGamingLikeEntry);
+    const found1 = found.filter(tmp(8949).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -123,10 +123,10 @@ export const findMatchingEntry = function findMatchingEntry(entries, activity) {
       return tmp;
     });
   } else if (activity.type === tmp3.LISTENING) {
-    const found3 = found.filter(tmp(8910).isListenedSessionEntry);
+    const found3 = found.filter(tmp(8949).isListenedSessionEntry);
     found2 = found3.find((arg0) => outer1_6(arg0, closure_0));
   } else if (activity.type === tmp3.WATCHING) {
-    const found4 = entries.filter(tmp(8910).isWatchedMediaEntry);
+    const found4 = entries.filter(tmp(8949).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = outer1_1(outer1_2[5])(activity);
       let tmp4 = !tmp3;

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_messages/native/components/VoiceMessageButton.tsx
 import getState from "getState";
 import getSystemLocale from "getSystemLocale";
-import importAllResult from "module_4042";
+import importAllResult from "module_4083";
 import get_ActivityIndicator from "openChannelCallModal";
 import setContent from "setContent";
 import closure_9 from "getState";
@@ -14,13 +14,13 @@ import { NativePermissionTypes } from "NativePermissionStatus";
 import { jsx } from "useGradientBottom";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { LegacyBaseButton } from "../../../../../_runtime/05427_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../../_runtime/05466_LegacyBaseButton.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
 import { XSmallBoldIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
-import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { _startAudioRecording } from "../VoiceMessageUtils.tsx";
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   setContent = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp11 = sharedValue1(11001)();
+  const tmp11 = sharedValue1(11054)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     let closure_0 = arg0;
@@ -171,7 +171,7 @@ const memoResult = importAllResult.memo((disabled) => {
               let sendMessageOptionsForReply;
               data = 1;
               startTimeMillis = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -346,7 +346,7 @@ const memoResult = importAllResult.memo((disabled) => {
   }, items4);
   let obj4 = _ReanimatedRexport;
   const items5 = [first, tmp7[2], channelId];
-  const isModalOpen = _navigationToRootTabHelper.useIsModalOpen();
+  const isModalOpen = _coerceMainRoute.useIsModalOpen();
   const effect4 = importAllResult.useEffect(() => {
     function cancel() {
       const self = this;
@@ -609,9 +609,9 @@ const memoResult = importAllResult.memo((disabled) => {
         items[0] = obj.get()[1];
         items[1] = disabled;
         result = obj.set(items);
-        tmp2 = f109380;
+        tmp2 = f109608;
         tmp3 = c2;
-        obj2 = f109380(c2[19]);
+        obj2 = f109608(c2[19]);
         tmp4 = outer1_29;
         tmp5 = obj2.runOnJS(outer1_29)();
       }
@@ -649,8 +649,8 @@ const memoResult = importAllResult.memo((disabled) => {
       const obj = callback(_undefined[18]);
     }
   }, items9);
-  let obj5 = _navigationToRootTabHelper;
-  const tmp23 = sharedValue1(9019);
+  let obj5 = _coerceMainRoute;
+  const tmp23 = sharedValue1(9058);
   let intl = _getSystemLocale.intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
@@ -820,7 +820,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   obj = { gesture: memo, children: null };
-  obj1 = { ref: sharedValue1(11632)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
+  obj1 = { ref: sharedValue1(11689)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
   const tmp23Result = tmp23(sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -888,7 +888,7 @@ const memoResult = importAllResult.memo((disabled) => {
     tmp30 = clientThemesOverride;
   }
   obj1[7] = tmp30;
-  obj[1] = jsx(sharedValue1(11613), { ref: sharedValue1(11632)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
+  obj[1] = jsx(sharedValue1(11670), { ref: sharedValue1(11689)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
   return jsx(_LegacyBaseButton.GestureDetector, { gesture: memo, children: null });
 });
 let result = require("noop").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");

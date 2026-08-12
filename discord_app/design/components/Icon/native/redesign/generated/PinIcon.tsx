@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PinIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/09729_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09770_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

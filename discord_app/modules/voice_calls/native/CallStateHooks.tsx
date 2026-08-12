@@ -12,7 +12,7 @@ let metroImportAll;
 let require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: metroImportAll } = ME);
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "r" });
+const merged = Object.assign({ initialized: false, callId: "Array" });
 obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const result = require("callConnect").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
@@ -60,7 +60,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10773)();
+  const tmp3 = id(10826)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = initialize.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

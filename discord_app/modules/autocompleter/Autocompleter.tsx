@@ -4,7 +4,7 @@ import fromPath from "fromPath";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { t } from "../../../_runtime/04019_t.js";
+import { t } from "../../../_runtime/04060_t.js";
 import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 import { getGuildNameSuggestion } from "../../utils/GuildUtils.tsx";
 import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
@@ -371,8 +371,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5159).getBoosterMap(tmp);
-      const obj2 = blacklist(5159);
+      let boosterMap = blacklist(5199).getBoosterMap(tmp);
+      const obj2 = blacklist(5199);
     } else {
       boosterMap = {};
     }
@@ -421,8 +421,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5159).getBoosterMap(tmp);
-      const obj2 = blacklist(5159);
+      let boosterMap = blacklist(5199).getBoosterMap(tmp);
+      const obj2 = blacklist(5199);
     } else {
       boosterMap = {};
     }
@@ -529,8 +529,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5159).getBoosterMap(tmp);
-      const obj2 = blacklist(5159);
+      let boosterMap = blacklist(5199).getBoosterMap(tmp);
+      const obj2 = blacklist(5199);
     } else {
       boosterMap = {};
     }
@@ -606,7 +606,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = fromPath.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(5159);
+      let tmp3Result = tmp3(5199);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -633,7 +633,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = fromPath.fromPath(pathname);
-              tmp3Result = tmp3(5159);
+              tmp3Result = tmp3(5199);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

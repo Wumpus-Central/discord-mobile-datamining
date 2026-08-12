@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx
-import { View } from "set";
+import get_ActivityIndicator from "set";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -10,22 +10,25 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 import { getContextualEntrypointHeading } from "../../utils/QuestCopyUtils.tsx";
 
-let c5;
+let c3;
+let c4;
 let closure_6;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: null, illustration: null, closeButton: null, targetList: null, targetItem: null, lastTargetItem: null, disclosureText: null };
-obj = { flex: 1, padding: require("Themes").space.PX_24, gap: require("Themes").space.PX_16, maxWidth: 480 };
-obj[0] = obj;
-obj[1] = { alignSelf: "center", marginBottom: require("Themes").space.PX_8 };
+let error;
+({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
+({ jsx: closure_6, jsxs: error } = jsxProd);
+let obj = { container: { flex: 1, width: "100%", maxWidth: 480, alignSelf: "center" }, contentContainer: null, illustration: null, closeButton: null, targetList: null, targetItem: null, lastTargetItem: null, disclosureText: null };
+obj = { flexGrow: 1, padding: require("Themes").space.PX_24, gap: require("Themes").space.PX_16 };
+obj[1] = obj;
+obj[2] = { alignSelf: "center", marginBottom: require("Themes").space.PX_8 };
 let obj1 = { alignSelf: "center", marginBottom: require("Themes").space.PX_8 };
-obj[2] = { marginTop: "auto", paddingHorizontal: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24 };
-obj[3] = { padding: 0 };
+obj[3] = { marginTop: "auto", paddingHorizontal: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24 };
+obj[4] = { padding: 0 };
 let obj2 = { marginTop: "auto", paddingHorizontal: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24 };
-obj[4] = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-obj[5] = { borderBottomWidth: 0 };
+obj[5] = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
+obj[6] = { borderBottomWidth: 0 };
 let obj3 = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-obj[6] = { flex: 1, paddingVertical: require("Themes").space.PX_12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-let closure_7 = createCacheKey.createStyles(obj);
+obj[7] = { flex: 1, paddingVertical: require("Themes").space.PX_12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
+let closure_8 = createCacheKey.createStyles(obj);
 let obj4 = { flex: 1, paddingVertical: require("Themes").space.PX_12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
 const result = require("jsxProd").fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx");
 
@@ -45,34 +48,36 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj[0] = tmp5(tmp2(9709).ServerIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(9749).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1236).intl;
     obj[1] = intl4.string(tmp2(1236).t["2bL0wT"]);
     let items = [obj];
     let tmp6 = tmp5;
     items1 = items;
   } else {
-    obj[0] = tmp5(tmp2(10541).GlobeEarthIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(10582).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1236).intl;
     obj[1] = intl.string(tmp2(1236).t.xQSdPv);
     items1 = [obj, , ];
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(11229).UserIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(11283).UserIcon, { size: "xs" });
     const intl2 = tmp2(1236).intl;
     obj[1] = intl2.string(tmp2(1236).t.mYt7hQ);
     items1[1] = obj;
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(8768).GameControllerIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(8807).GameControllerIcon, { size: "xs" });
     const intl3 = tmp2(1236).intl;
     obj[1] = intl3.string(tmp2(1236).t.XAsWxQ);
     items1[2] = obj;
     tmp6 = tmp5;
   }
-  const obj1 = { style: tmp.container, children: null };
-  const items2 = [tmp6(View, { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) }), , , , ];
+  const obj1 = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
+  const items2 = [tmp6(closure_4, { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) }), , , , ];
   const obj3 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
   const obj2 = { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) };
-  const tmp7 = closure_6;
+  const tmp7 = closure_7;
+  const tmp8 = closure_3;
+  const tmp9 = closure_4;
   obj3[2] = _getContextualEntrypointHeading.getDisclosureText({ gamePublisher, gameTitle, isTargetedDisclosure, isContextualDisclosure: setting, cosponsorName, isVideoQuest });
   items2[1] = tmp6(_Text.Text, obj3);
   if (isTargetedDisclosure) {
@@ -88,11 +93,11 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
       }
       obj = { style: items1, children: tmp3(_undefined(outer1_2[12]).Text, { variant: "text-md/semibold", children: children.text }) };
       items1[1] = lastTargetItem;
-      items[1] = outer1_5(outer1_3, obj);
+      items[1] = outer1_6(outer1_4, obj);
       obj[1] = items;
-      return outer1_6(outer1_3, obj, arg1);
+      return outer1_7(outer1_4, obj, arg1);
     });
-    isTargetedDisclosure = tmp6(tmp2(5376).Card, obj4);
+    isTargetedDisclosure = tmp6(tmp2(5415).Card, obj4);
   }
   items2[2] = isTargetedDisclosure;
   const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
@@ -108,7 +113,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   obj8[3] = intl6.string(_getSystemLocale.t.cpT0Cq);
   obj8[4] = onClose;
   obj7[1] = tmp6(_Button.Button, obj8);
-  items2[4] = tmp6(View, obj7);
-  obj1[1] = items2;
-  return tmp7(View, obj1);
+  items2[4] = tmp6(tmp9, obj7);
+  obj1[2] = items2;
+  return tmp7(tmp8, obj1);
 };

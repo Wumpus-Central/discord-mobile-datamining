@@ -1,11 +1,11 @@
 // discord_app/modules/favorites/native/modal/FavoritesGuildAddChannelModal.tsx
 import UserRowModes from "UserRowModes";
 import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { View } from "openFavoritesGuildAddChannelModal";
+import SearchableDestinationListHeader from "SearchableDestinationListHeader";
+import { View } from "useWindowDimensions";
 import { MAX_FAVORITES_ADD_CHANNEL_COUNT as closure_7 } from "date";
 import { UserRowModes } from "UserRowModes";
-import jsxProd from "messagesProxy";
+import jsxProd from "getMixedGradientColor";
 import createCacheKey from "createCacheKey";
 
 let c10;
@@ -24,7 +24,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   let dependencyMap;
   let height;
   const tmp = createCacheKey();
-  first(12141)(parentId.source);
+  first(12198)(parentId.source);
   const tmp4 = callback(React.useState([]), 2);
   first = tmp4[0];
   dependencyMap = tmp4[1];
@@ -79,8 +79,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
         } else {
           length = arg1.filter(outer1_0(outer1_2[12]).isNotNullish);
           if (0 !== length.length) {
-            outer1_1(outer1_2[15])();
-            obj1 = outer1_0(outer1_2[16]);
+            obj1 = outer1_0(outer1_2[15]);
             let obj3 = { channelIds: null, parentId: null, source: "modal" };
             obj3[0] = length;
             length = outer1_0;
@@ -89,7 +88,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
             }
             obj3[1] = length;
             obj1.addFavoriteChannels(obj3);
-            obj3 = outer1_0(outer1_2[17]);
+            obj3 = outer1_0(outer1_2[16]);
             const result = obj3.closeFavoritesGuildAddChannelModal();
           } else {
             obj = outer1_0(outer1_2[13]);
@@ -98,9 +97,9 @@ export default function FavoritesGuildAddChannelModal(parentId) {
           }
           c4 = 3;
         }
-      } catch (tmp34) {
+      } catch (tmp31) {
         c4 = tmp;
-        throw tmp34;
+        throw tmp31;
       }
     }
   }), items);
@@ -114,19 +113,19 @@ export default function FavoritesGuildAddChannelModal(parentId) {
     children: null
   };
   obj = { title: null, onClose: null };
-  const tmp2 = first(12140)();
+  const tmp2 = first(12197)();
   let intl = parentId(1236).intl;
-  obj[0] = intl.string(first(3049).Rp35U1);
-  obj[1] = parentId(12138).closeFavoritesGuildAddChannelModal;
-  const items2 = [callback2(first(10250), obj), ];
+  obj[0] = intl.string(first(3047).Rp35U1);
+  obj[1] = parentId(12195).closeFavoritesGuildAddChannelModal;
+  const items2 = [callback2(first(10291), obj), ];
   obj = { style: tmp.container, children: null };
-  const items3 = [callback2(first(4848), { absolute: true }), callback2(first(10251), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 }), ];
+  const items3 = [callback2(first(4888), { absolute: true }), callback2(first(10292), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 }), ];
   let obj2 = { isVisible: first.length > 0, floatingBackgroundColor: tmp.container.backgroundColor, text: null, onPress: null };
   let obj1 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 };
-  const tmp7 = first(10250);
-  obj2[2] = parentId(12142).getFavoritesAddButtonLabel(first.length);
+  const tmp7 = first(10291);
+  obj2[2] = parentId(12199).getFavoritesAddButtonLabel(first.length);
   obj2[3] = callback1;
-  items3[2] = callback2(parentId(10270).ModalFloatingAction, obj2);
+  items3[2] = callback2(parentId(10311).ModalFloatingAction, obj2);
   obj[1] = items3;
   items2[1] = callback3(View, obj);
   obj[1] = items2;

@@ -3,7 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../_runtime/07837_inlineStyles.js";
+import { inlineStyles } from "../../../../_runtime/07876_inlineStyles.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
 

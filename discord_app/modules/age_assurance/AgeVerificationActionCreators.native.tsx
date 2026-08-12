@@ -48,13 +48,13 @@ function openIncodeAgeVerificationModal(arg0) {
       let closure_1 = tmp3;
       let closure_0 = tmp3;
       let dependencyMap = 1;
-      yield outer1_1(4861).requestPermission(outer1_10.CAMERA, { showAuthorizationError: true });
+      yield outer1_1(4901).requestPermission(outer1_10.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        outer1_1(7786).showFailedToast(outer1_11.TIGGER_PAWTECT_ERROR);
+        outer1_1(7825).showFailedToast(outer1_11.TIGGER_PAWTECT_ERROR);
         outer1_0();
         let c4 = 3;
-        const obj5 = outer1_1(7786);
+        const obj5 = outer1_1(7825);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
@@ -66,7 +66,7 @@ function openIncodeAgeVerificationModal(arg0) {
           obj2[0] = arg1;
           return obj2;
         } else {
-          const obj1 = outer1_1(4509);
+          const obj1 = outer1_1(4549);
           const v0 = 3;
           c4 = 1;
           const obj3 = { value: null, done: false };
@@ -146,14 +146,14 @@ export default {
     let currentUser;
     let obj = entryPoint(1624);
     if (obj.isMetaQuest()) {
-      let tmpResult = tmp(4644);
-      tmpResult.openAlert(closure_7, jsx(onClose(7820), {}), onClose);
+      let tmpResult = tmp(4684);
+      tmpResult.openAlert(closure_7, jsx(onClose(7859), {}), onClose);
     } else {
-      tmpResult = tmp(4519);
+      tmpResult = tmp(4559);
       let isAgeVerifiedResult = tmpResult.isAgeVerified();
       if (isAgeVerifiedResult) {
-        isAgeVerifiedResult = tmp(3999).hasAgeGatedFeatures();
-        const tmpResult1 = tmp(3999);
+        isAgeVerifiedResult = tmp(4040).hasAgeGatedFeatures();
+        const tmpResult1 = tmp(4040);
       }
       dependencyMap = isAgeVerifiedResult;
       if (tmpResult2.isAgeVerificationIncodeEnabled(entryPoint)) {
@@ -187,7 +187,7 @@ export default {
         }
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
-          onClose(4509).pushLazy(prop(function*() {
+          onClose(4549).pushLazy(prop(function*() {
             let closure_0 = tmp2;
             yield outer1_0(paths[10])(paths[21], paths.paths);
             closure_0 = arg1.default;
@@ -202,21 +202,21 @@ export default {
               }
             });
           }), {}, closure_6);
-          const obj8 = onClose(4509);
+          const obj8 = onClose(4549);
         } else {
-          currentUser = tmp(7952).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
-          const tmpResult4 = tmp(7952);
-          onClose(4509).pushLazy(prop(function*() {
+          currentUser = tmp(7991).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
+          const tmpResult4 = tmp(7991);
+          onClose(4549).pushLazy(prop(function*() {
             let closure_0 = tmp2;
             yield outer1_0(paths[10])(paths[23], paths.paths);
             closure_0 = arg1.default;
             return () => outer2_12(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: outer1_4 });
           }), {}, closure_6);
-          const obj7 = onClose(4509);
+          const obj7 = onClose(4549);
         }
-        tmpResult3 = tmp(7823);
+        tmpResult3 = tmp(7862);
       }
-      tmpResult2 = tmp(7821);
+      tmpResult2 = tmp(7860);
     }
   },
   openUrl(arg0) {

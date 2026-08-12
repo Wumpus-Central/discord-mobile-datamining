@@ -34,7 +34,7 @@ export default function useBurstToggleCoachmark(targetRef) {
   } else {
     items2 = [];
   }
-  let tmpResult = tmp(6024);
+  let tmpResult = tmp(6063);
   const tmp5 = callback(tmpResult.useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   const importDefault = tmp7;
@@ -54,7 +54,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj[5] = first === outer1_9;
     return obj;
   }, items3);
-  tmpResult = tmp(8659);
+  tmpResult = tmp(8698);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 };

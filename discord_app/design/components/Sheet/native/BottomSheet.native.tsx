@@ -6,7 +6,7 @@ import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO";
 import jsxProd from "NavScrim";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { isFabric } from "../../../../utils/native/FabricUtils.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 
 let Platform;
 let c10;
@@ -74,9 +74,9 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   }
   obj1[3] = num2;
   obj[3] = obj1;
-  let obj4 = isFabric;
+  let obj4 = set;
   let str2;
-  if (obj4.isIosFabric()) {
+  if (obj4.isIOS()) {
     str2 = "hidden";
   }
   obj[4] = { height: "100%", overflow: str2, borderTopLeftRadius: closure_14, borderTopRightRadius: closure_14 };
@@ -453,7 +453,7 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   if (backgroundComponent != null) {
     obj = { ref: null, accessible: null, accessibilityRole: "none", accessibilityLabel: "", startHeight: null, contentHeight: null, maxHeight: null, containerHeight: null, startExpanded: null, hasEverExpanded: null, windowDimensions: null, wrapperStyle: null, onExpand: null, enablePanDownToClose: true, containerStyle: null, backgroundStyle: null, topInset: null, keyboardBehavior: null, keyboardBlurBehavior: "restore", keyboardShouldPersistTaps: null, animationConfigs: null, overrideReduceMotion: null, handleIndicatorStyle: null, handleComponent: null, backdropComponent: null, backgroundComponent: null, renderFooter: null, animatedIndex: null, onAnimate: null, onClose: null, borderGradient: null, extraContent: null, children: null };
     obj[0] = ref;
-    const isIOSResult = tmp8(tmp3[24]).isIOS();
+    const isIOSResult = tmp8(tmp3[7]).isIOS();
     obj[1] = !isIOSResult;
     obj[4] = startHeight;
     obj[5] = contentHeight;
@@ -513,7 +513,7 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
     items11[1] = closure_16(transitionState, obj4);
     obj1[1] = items11;
     obj3[0] = closure_17(transitionState, obj1);
-    obj[32] = closure_16(tmp8(tmp3[25]).LayerScope, obj3);
+    obj[32] = closure_16(tmp8(tmp3[24]).LayerScope, obj3);
     tmp26Result = tmp26(tmp23, obj);
     let tmp26Result1 = tmp26Result;
     if (showGradient) {
@@ -524,7 +524,7 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
       const obj5 = { gradient: null, children: null };
       obj5[0] = tmp35;
       obj5[1] = tmp26Result;
-      tmp26Result1 = tmp26(tmp8(tmp3[26]).ThemeContextProvider, obj5);
+      tmp26Result1 = tmp26(tmp8(tmp3[25]).ThemeContextProvider, obj5);
     }
     return tmp26Result1;
   }

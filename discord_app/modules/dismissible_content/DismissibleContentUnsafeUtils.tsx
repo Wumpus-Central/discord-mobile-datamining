@@ -124,40 +124,81 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      const dependencyMap = tmp2;
-      if (obj1 === undefined) {
-        obj1 = {};
-      }
-      yield "ct";
-      if (1 === tmp5) {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          let c5 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c5 = 3;
-          let obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else if (callback2(callback, { bypassNewUserCheck: true })) {
-          c5 = 3;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          obj2 = callback(1379);
-          const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-          let obj3 = callback(1374);
-          let c4 = 2;
-          c5 = 1;
-          obj3 = { value: null, done: false };
-          obj3[0] = obj3.addDismissedContent(callback);
-          return obj3;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        const obj = callback(1379);
-        const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let isSingleUseDismissibleContent = tmp5;
+              const dependencyMap = tmp2;
+              let obj1;
+              if (obj1 === undefined) {
+                obj1 = {};
+              }
+              c4 = 1;
+              c5 = 1;
+              return { value: "ct", done: true };
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                let obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else if (callback2(callback, { bypassNewUserCheck: true })) {
+                c5 = 3;
+              } else {
+                obj2 = callback(1379);
+                const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
+                let obj3 = callback(1374);
+                c4 = 2;
+                c5 = 1;
+                obj3 = { value: null, done: false };
+                obj3[0] = obj3.addDismissedContent(callback);
+                return obj3;
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              obj = callback(1379);
+              const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
+            }
+            c5 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          }
+        } catch (tmp24) {
+          c5 = tmp;
+          throw tmp24;
+        }
       }
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -214,7 +255,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
               }
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

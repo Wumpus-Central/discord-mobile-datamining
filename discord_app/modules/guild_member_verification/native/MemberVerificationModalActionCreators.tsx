@@ -19,7 +19,7 @@ export default {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, obj);
     const obj2 = expandEventProperties;
     obj = { guildId, onClose: connect };
-    ModalActionCreators.pushLazy(asyncRequireImpl(8420, dependencyMap.paths), obj, closure_4);
+    ModalActionCreators.pushLazy(asyncRequireImpl(8459, dependencyMap.paths), obj, closure_4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

@@ -5,7 +5,7 @@ import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/14047_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/14104_registerAsset.js";
 import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
@@ -29,7 +29,7 @@ createCacheKey[7] = { fontSize: 14, textAlign: "center", marginTop: 4, marginHor
 let obj2 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: require("Themes").colors.TEXT_STRONG };
 createCacheKey[8] = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+let obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
 const result = require("noop").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
 
 export default function TwoFASetupSuccess() {
@@ -52,27 +52,88 @@ export default function TwoFASetupSuccess() {
         const iter = (function*(arg0) {
           let c0;
           let c1;
-          let closure_2 = tmp3;
-          c1 = tmp5;
-          ({ ticket: c0, credential: c1 } = c0);
-          yield "ct";
-          let c4 = 1;
-          const intl = callback(outer2_2[8]).intl;
-          yield callback(outer2_2[7]).finishRegisterWebAuthnCredential(intl.string(callback(outer2_2[8]).t["8H5RmH"]), callback, outer2_1);
-          if (2 === tmp8) {
-            c4 = 0;
-            outer1_1(body.body.message);
-            let c6 = 3;
-          } else if (arg0 === 1) {
+          if (c6 === 2) {
             c6 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            const obj = outer2_1(outer2_2[9]);
-            obj.close();
-            c4 = 0;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp7 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c6 = 2;
+              if (0 === c5) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  let closure_2 = tmp3;
+                  c1 = tmp5;
+                  c0 = undefined;
+                  c1 = undefined;
+                  ({ ticket: c0, credential: c1 } = c0);
+                  c5 = 1;
+                  c6 = 1;
+                  return { value: "ct", done: true };
+                }
+              } else if (1 === tmp8) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  const obj1 = { value: null, done: true };
+                  obj1[0] = arg1;
+                  return obj1;
+                } else {
+                  let c4 = 1;
+                  const intl = callback(outer2_2[8]).intl;
+                  c5 = 3;
+                  c6 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = callback(outer2_2[7]).finishRegisterWebAuthnCredential(intl.string(callback(outer2_2[8]).t["8H5RmH"]), callback, outer2_1);
+                  return obj2;
+                }
+              } else {
+                if (2 === tmp8) {
+                  c4 = 0;
+                  outer1_1(body.body.message);
+                  c6 = 3;
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw arg1;
+                } else if (arg0 !== 2) {
+                  obj = outer2_1(outer2_2[9]);
+                  obj.close();
+                  c4 = 0;
+                }
+                c4 = 0;
+                c6 = 3;
+                const obj3 = { value: null, done: true };
+                obj3[0] = arg1;
+                return obj3;
+              }
+            } catch (tmp19) {
+              body = tmp19;
+              if (tmp4 === c4) {
+                c6 = tmp2;
+                throw tmp19;
+              } else {
+                c5 = tmp;
+              }
+            }
           }
-          c4 = 0;
-          return arg1;
         })();
         iter.next();
         return iter;
@@ -109,11 +170,11 @@ export default function TwoFASetupSuccess() {
   const items = [callback2(closure_6, obj), , , , , , , ];
   obj = { source: registerAsset, style: tmp.image };
   items[1] = callback2(closure_7, obj);
-  const obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t.Awk3Gw);
   items[2] = callback2(Text.Text, obj1);
-  const obj2 = { style: tmp.successBody, children: null };
+  let obj2 = { style: tmp.successBody, children: null };
   const intl2 = getSystemLocale.intl;
   obj2[1] = intl2.string(getSystemLocale.t["0d1bXM"]);
   items[3] = callback2(Button.LegacyText, obj2);

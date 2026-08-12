@@ -41,11 +41,11 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(7018);
+        tmp4Result = tmp4(7057);
       }
       return NITRO;
     }
-    tmpResult = tmp(3966);
+    tmpResult = tmp(4007);
   } else {
     return null;
   }

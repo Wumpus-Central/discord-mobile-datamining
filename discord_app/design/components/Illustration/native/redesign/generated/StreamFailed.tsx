@@ -12,10 +12,10 @@ export const getStreamFailedSource = function getStreamFailedSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(10696);
+      return callback(10749);
     },
     darker() {
-      return callback(10697);
+      return callback(10750);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,10 +24,10 @@ export const useStreamFailedSource = function useStreamFailedSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10696);
+      return callback(10749);
     },
     darker() {
-      return callback(10697);
+      return callback(10750);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -36,10 +36,10 @@ export const StreamFailed = function StreamFailed(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10696);
+      return callback(10749);
     },
     darker() {
-      return callback(10697);
+      return callback(10750);
     }
   };
   obj = {};

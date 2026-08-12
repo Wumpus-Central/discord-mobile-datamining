@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/FavoritesGuildSuggestedChannels.tsx
 import closure_3 from "hairlineWidth";
-import Button from "Button";
-import { View } from "getNextPositionFromChannels";
+import set from "set";
+import { View } from "SearchableDestinationListRow";
 import items from "items";
 import { NOOP } from "ME";
 import hairlineWidth from "hairlineWidth";
@@ -101,14 +101,13 @@ export default function FavoritesGuildSuggestedChannels() {
           } else {
             callback = arg1;
             if (null != callback) {
-              outer1_1(outer1_2[16])();
               const obj2 = { channelIds: null, categoryName: null, source: "suggestions" };
               const items = [callback];
               obj2[0] = items;
               const intl = callback(outer1_2[11]).intl;
               obj2[1] = intl.string(callback(outer1_2[11]).t.k8fFjp);
-              const result = callback(outer1_2[17]).addFavoriteChannelsToCategory(obj2);
-              const obj6 = callback(outer1_2[17]);
+              const result = callback(outer1_2[16]).addFavoriteChannelsToCategory(obj2);
+              const obj6 = callback(outer1_2[16]);
             }
             c4 = 3;
             return { value: "HermesInternal", done: null };
@@ -144,7 +143,7 @@ export default function FavoritesGuildSuggestedChannels() {
     obj1[0] = tmp.rows;
     obj1[1] = arr.map((result) => {
       const lib = result;
-      let obj = { style: Button, children: null };
+      let obj = { style: set, children: null };
       obj = { result, onPressDestination: closure_5, onLongPress: outer1_8, start: 0 === arg1, end: arg1 === lib.length - 1, trailing: null };
       obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
       const intl = lib(dismiss[11]).intl;
@@ -152,8 +151,8 @@ export default function FavoritesGuildSuggestedChannels() {
       obj[4] = function onPress() {
         return outer1_5(callback(dismiss[15]).getDestinationIdFromResult(callback));
       };
-      obj[5] = outer1_11(lib(dismiss[19]).Button, obj);
-      obj[1] = outer1_11(canDismiss(dismiss[18]), obj);
+      obj[5] = outer1_11(lib(dismiss[18]).Button, obj);
+      obj[1] = outer1_11(canDismiss(dismiss[17]), obj);
       return outer1_11(closure_5, obj, "" + result.type + "-" + result.record.id);
     });
     items2[1] = callback5(closure_5, obj1);

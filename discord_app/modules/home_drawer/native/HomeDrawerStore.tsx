@@ -30,12 +30,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[6] = function updateMaxX(width, left) {
     callback({ maxX: width.width - left.left - left.right - outer1_2 - 8 + 8 });
   };
-  obj[7] = function noteInteraction() {
+  obj[7] = function noteInteraction(arg0, arg1) {
     callback2().lastInteractionAt.current = Date.now();
   };
   return obj;
 }, require("isIterable").shallow);
-let result = require("module_4042").fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
+let result = require("module_4083").fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;
 export const computeMaxX = function computeMaxX(width, left) {

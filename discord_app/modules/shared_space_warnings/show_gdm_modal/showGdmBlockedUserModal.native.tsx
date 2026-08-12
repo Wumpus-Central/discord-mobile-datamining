@@ -8,5 +8,5 @@ export const showGdmBlockedUserModal = function showGdmBlockedUserModal(arg0) {
   let channelId;
   let ignoredUserIds;
   ({ channelId, blockedUserIds, ignoredUserIds } = arg0);
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(13004, dependencyMap.paths), "gdm_blocked_user_action_sheet", { channelId, blockedUserIds, ignoredUserIds });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(13063, dependencyMap.paths), "gdm_blocked_user_action_sheet", { channelId, blockedUserIds, ignoredUserIds });
 };

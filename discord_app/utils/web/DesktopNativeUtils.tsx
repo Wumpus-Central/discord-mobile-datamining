@@ -626,7 +626,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(500);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5353).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5392).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(500);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -951,7 +951,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(outer1_0, contentType) {
   if (null != outer1_0) {
     if (set.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5354).decideFileExtension(outer1_0, contentType);
+      const decideFileExtensionResult = tmp(5393).decideFileExtension(outer1_0, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -1390,7 +1390,7 @@ obj.canCopyImage = function canCopyImage(outer1_0) {
       return false;
     } else {
       if (null != tmp) {
-        const decideFileExtensionResult = tmp2(5354).decideFileExtension(tmp, undefined);
+        const decideFileExtensionResult = tmp2(5393).decideFileExtension(tmp, undefined);
         if (null != decideFileExtensionResult) {
           if (!set.has(decideFileExtensionResult)) {
             if (!set1.has(decideFileExtensionResult)) {
@@ -1398,7 +1398,7 @@ obj.canCopyImage = function canCopyImage(outer1_0) {
             }
           }
         }
-        const tmp2Result = tmp2(5354);
+        const tmp2Result = tmp2(5393);
       }
       return true;
     }
@@ -1731,7 +1731,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5353).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5392).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }

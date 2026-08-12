@@ -35,5 +35,16 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9441, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9481, tmp2.paths), c3, obj, stack);
+};
+export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
+  let analyticsLocations;
+  let initialVariantIndex;
+  let shopAnalyticsContext;
+  skuId = skuId.skuId;
+  ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext } = skuId);
+  let obj = openCollectiblesShop;
+  obj.productDetailsOpened(skuId);
+  obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext };
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9481, dependencyMap.paths), c3, obj, stack);
 };

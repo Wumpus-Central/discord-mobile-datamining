@@ -10,7 +10,7 @@ import { MAIN_SURFACE } from "FrameLayoutModes";
 import { ThemeTypes } from "sum";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { AdCreativeType } from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { getFocusedChannelId } from "../../panels/isChannelFocused.native.tsx";
 import { useIsWindowLarge } from "../../screen/native/useIsWindowLarge.tsx";
 import { apexExperiment } from "../experiments/NewAdRequestBehaviorExperiment.tsx";
@@ -26,22 +26,22 @@ function useDeliveredDockCreative() {
   let obj = apexExperiment;
   const tmp2 = adDecisionForPlacement;
   const items = [initializeState];
-  const stateFromStores = adDecisionForPlacement(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(adDecisionForPlacement(5164).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = adDecisionForPlacement(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(adDecisionForPlacement(5204).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = adDecisionForPlacement(589);
   const items1 = [initializeState];
   let stateFromStores1 = adDecisionForPlacement(589).useStateFromStores(items1, () => {
     let questToDeliverForPlacement;
     let quests;
     ({ quests, questToDeliverForPlacement } = initializeState);
-    let questForPlacement = adDecisionForPlacement(7159).getQuestForPlacement(quests, questToDeliverForPlacement, adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    let questForPlacement = adDecisionForPlacement(7198).getQuestForPlacement(quests, questToDeliverForPlacement, adDecisionForPlacement(5204).AdPlacement.MOBILE_HOME_DOCK_AREA);
     if (questForPlacement == null) {
       questForPlacement = null;
     }
     return questForPlacement;
   });
   const obj3 = adDecisionForPlacement(589);
-  adDecisionForPlacement = adDecisionForPlacement(14365).useAdDecisionForPlacement(adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
-  const obj4 = adDecisionForPlacement(14365);
+  adDecisionForPlacement = adDecisionForPlacement(14422).useAdDecisionForPlacement(adDecisionForPlacement(5204).AdPlacement.MOBILE_HOME_DOCK_AREA);
+  const obj4 = adDecisionForPlacement(14422);
   const items2 = [initializeState];
   const items3 = [adDecisionForPlacement];
   if (obj.useConfig({ location: "QuestMobileDock" }).enableNewRequestBehavior) {
@@ -68,7 +68,7 @@ function useDeliveredDockCreative() {
     if (!tmp2Result.isQuestExpired(stateFromStores1)) {
       tmp6 = stateFromStores1;
     }
-    tmp2Result = tmp2(7159);
+    tmp2Result = tmp2(7198);
   }
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
@@ -100,8 +100,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7159);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5164).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7198);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5204).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -110,14 +110,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10465);
+  tmpResult = tmp(10506);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7189).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7189).AdCreativeType.QUEST === type) {
+    if (tmp(7228).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7228).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;
@@ -151,10 +151,10 @@ export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVi
   let tmp = isMobileQuestDockRenderedBase;
   const isChannelFocused = _getFocusedChannelId.useIsChannelFocused();
   const obj = _getFocusedChannelId;
-  const currentNavigationRouteName = _navigationToRootTabHelper.useCurrentNavigationRouteName();
-  const obj2 = _navigationToRootTabHelper;
-  let tmp4 = null != _navigationToRootTabHelper.coerceGuildsRoute({ name: currentNavigationRouteName });
-  const obj3 = _navigationToRootTabHelper;
+  const currentNavigationRouteName = _coerceMainRoute.useCurrentNavigationRouteName();
+  const obj2 = _coerceMainRoute;
+  let tmp4 = null != _coerceMainRoute.coerceGuildsRoute({ name: currentNavigationRouteName });
+  const obj3 = _coerceMainRoute;
   const items = [initializeState];
   let stateFromStores = _initialize.useStateFromStores(items, () => {
     const type = mobileQuestDock.type;

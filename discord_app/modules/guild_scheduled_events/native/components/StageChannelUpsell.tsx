@@ -1,15 +1,15 @@
 // discord_app/modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx
 import _slicedToArray from "_slicedToArray";
 import "asyncRequireImpl";
-import get_ActivityIndicator from "module_4509";
+import get_ActivityIndicator from "module_4549";
 import { createChannelRecord } from "createChannelRecord";
 import { useStageChannelUpsellCardStore as closure_7 } from "useStageChannelUpsellCardStore";
 import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "CREATE_GUILD_EVENT_MODAL_KEY";
 import { ChannelTypes } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08029_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08997_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09036_registerAsset.js";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";

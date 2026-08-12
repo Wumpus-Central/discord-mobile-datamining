@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/navigateToLastChannel.tsx
 import { transitionToChannel } from "../../routing/transitionToChannel.tsx";
-import { navigationToRootTabHelper } from "../helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../helpers/NavigationRouteUtils.native.tsx";
 import { getNavigatorCurrentRoute } from "../navigator/getNavigatorCurrentRoute.tsx";
 const result = require("transitionToChannel").fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {
-  const coerceGuildsRouteResult = navigationToRootTabHelper.coerceGuildsRoute(getNavigatorCurrentRoute());
+  const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(getNavigatorCurrentRoute());
   let tmp4 = null != coerceGuildsRouteResult;
   if (tmp4) {
     const params = coerceGuildsRouteResult.params;

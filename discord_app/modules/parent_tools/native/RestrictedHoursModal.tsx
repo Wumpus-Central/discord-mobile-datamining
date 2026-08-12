@@ -217,18 +217,18 @@ export default function RestrictedHoursModal() {
     if (!tmp4.current) {
       tmp.current = true;
       callback(true);
-      const obj = tmp4(5827);
-      tmp4(5827).logout("restricted_hours").finally(() => {
+      const obj = tmp4(5866);
+      tmp4(5866).logout("restricted_hours").finally(() => {
         if (ref.current) {
           closure_1.current = false;
           callback(false);
         }
       });
-      const logoutResult = tmp4(5827).logout("restricted_hours");
+      const logoutResult = tmp4(5866).logout("restricted_hours");
     }
   }, []);
   importDefault = tmp4;
-  let obj = callback(5783);
+  let obj = callback(5822);
   const items = [callback, tmp4];
   const items1 = [tmp];
   const navigatorScreens = obj.useNavigatorScreens(() => ({
@@ -246,11 +246,11 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(16379).closeRestrictedHoursModal();
-      const obj = callback(16379);
+      const result = callback(16436).closeRestrictedHoursModal();
+      const obj = callback(16436);
     }
   }, items1);
   useBackPressHandler(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
-  return callback2(callback(11341).Modal, obj);
+  return callback2(callback(11395).Modal, obj);
 };

@@ -167,7 +167,7 @@ export const useSpeakerTileStyles = styles;
 export const getSizeStyle = function getSizeStyle(size, speakerTileStyles) {
   if (StageTileSize.StageTileSize.FULL === size) {
     return speakerTileStyles.full;
-  } else if (tmp(10933).StageTileSize.HALF === size) {
+  } else if (tmp(10986).StageTileSize.HALF === size) {
     return speakerTileStyles.half;
   } else {
     return speakerTileStyles.third;

@@ -1,5 +1,6 @@
 // discord_app/lib/VideoQualityStats.tsx
 import _slicedToArray from "_slicedToArray";
+import set from "getStats";
 
 const require = arg1;
 function parseEncoder(encoderImplementationName) {
@@ -44,11 +45,13 @@ let closure_4 = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000
 let closure_5 = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
 let closure_6 = [720, 480, 360];
 let closure_7 = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
+let set = new Set(["passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount"]);
+let closure_9 = ["bytes", "packets", "framesNetwork", "framesCodec"];
 let obj = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
 obj = { NVIDIA_CUDA: "nvidia_cuda", NVIDIA_DIRECT_3D: "nvidia_direct_3d", NVIDIA_VULKAN: "nvidia_vulkan", OPENH264: "openh264", VIDEOTOOLBOX: "videotoolbox", AMD_DIRECT_3D: "amd_direct_3d", AMD_VAAPI: "amd_vaapi", INTEL: "intel", INTEL_DIRECT_3D: "intel_direct_3d", INTEL_VAAPI: "intel_vaapi", VP8_LIBVPX: "vp8_libvpx", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", WMF_SW: "wmf_sw", WMF_HW: "wmf_hw", WMF_DIRECT_3D: "wmf_direct_3d", WMF_DIRECT_3D_INTEL: "wmf_direct_3d_intel", WMF_DIRECT_3D_NVIDIA: "wmf_direct_3d_nvidia", WMF_DIRECT_3D_AMD: "wmf_direct_3d_amd", WMF_CHROME: "wmf_chrome", UNCATEGORIZED: "uncategorized", UNKNOWN: "unknown" };
 obj = { VIDEOTOOLBOX: "videotoolbox", VP8_LIBVPX: "vp8_libvpx", ELECTRON: "electron", FFMPEG: "ffmpeg", DAV1D: "dav1d", WEBRTC: "WebRTC", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", UNCATEGORIZED: "uncategorized", D3D11VIDEODECODER: "d3d11videodecoder", ANDROID: "android", UNKNOWN: "unknown" };
-let closure_11 = Object.freeze({ "mediafoundation direct3d intel": obj.WMF_DIRECT_3D_INTEL, "mediafoundation direct3d nvidia": obj.WMF_DIRECT_3D_NVIDIA, "mediafoundation direct3d amd": obj.WMF_DIRECT_3D_AMD, mediafoundationvideoencodeaccelerator: obj.WMF_CHROME, "nvidia: cuda": obj.NVIDIA_CUDA, "nvidia: direct3d": obj.NVIDIA_DIRECT_3D, "nvidia: vulkan": obj.NVIDIA_VULKAN, "amd: direct3d": obj.AMD_DIRECT_3D, "amd: vaapi": obj.AMD_VAAPI, "intel: direct3d": obj.INTEL_DIRECT_3D, "intel: vaapi": obj.INTEL_VAAPI, intel: obj.INTEL, videotoolbox: obj.VIDEOTOOLBOX, openh264: obj.OPENH264, libvpx: obj.VP8_LIBVPX, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, "mediafoundation sw": obj.WMF_SW, "mediafoundation hw": obj.WMF_HW, "mediafoundation direct3d": obj.WMF_DIRECT_3D });
-let closure_12 = Object.freeze({ videotoolbox: obj.VIDEOTOOLBOX, libvpx: obj.VP8_LIBVPX, electron: obj.ELECTRON, ffmpeg: obj.FFMPEG, dav1d: obj.DAV1D, webrtc: obj.WEBRTC, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, d3d11videodecoder: obj.D3D11VIDEODECODER, "c2.android": obj.ANDROID, "omx.google": obj.ANDROID });
+let closure_13 = Object.freeze({ "mediafoundation direct3d intel": obj.WMF_DIRECT_3D_INTEL, "mediafoundation direct3d nvidia": obj.WMF_DIRECT_3D_NVIDIA, "mediafoundation direct3d amd": obj.WMF_DIRECT_3D_AMD, mediafoundationvideoencodeaccelerator: obj.WMF_CHROME, "nvidia: cuda": obj.NVIDIA_CUDA, "nvidia: direct3d": obj.NVIDIA_DIRECT_3D, "nvidia: vulkan": obj.NVIDIA_VULKAN, "amd: direct3d": obj.AMD_DIRECT_3D, "amd: vaapi": obj.AMD_VAAPI, "intel: direct3d": obj.INTEL_DIRECT_3D, "intel: vaapi": obj.INTEL_VAAPI, intel: obj.INTEL, videotoolbox: obj.VIDEOTOOLBOX, openh264: obj.OPENH264, libvpx: obj.VP8_LIBVPX, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, "mediafoundation sw": obj.WMF_SW, "mediafoundation hw": obj.WMF_HW, "mediafoundation direct3d": obj.WMF_DIRECT_3D });
+let closure_14 = Object.freeze({ videotoolbox: obj.VIDEOTOOLBOX, libvpx: obj.VP8_LIBVPX, electron: obj.ELECTRON, ffmpeg: obj.FFMPEG, dav1d: obj.DAV1D, webrtc: obj.WEBRTC, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, d3d11videodecoder: obj.D3D11VIDEODECODER, "c2.android": obj.ANDROID, "omx.google": obj.ANDROID });
 const obj3 = { None: 0, [0]: "None", ClientSideDisableVideo: 1, [1]: "ClientSideDisableVideo", SenderStopped: 2, [2]: "SenderStopped" };
 let RawVideoStats;
 class RawVideoStats {
@@ -361,14 +364,19 @@ class InboundStats {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    values = Object.values(__esModule);
+    values = Object.values(Set);
     obj.decoderBuckets = Object.fromEntries(values.map((arg0) => {
       const items = [arg0, 0];
       return items;
     }));
     obj.codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
     obj.statsWindow = [];
-    obj.hasSeededAggregation = false;
+    tmp2 = RawVideoStats;
+    if (typeof RawVideoStats !== "function") {
+      str = "Trying to call a non-function";
+      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+    }
+    obj.previousAggregationStats = Object.create(tmp2.prototype);
     histogram = new require("getSamples").Histogram();
     obj.fpsHistogram = histogram;
     histogram1 = new require("getSamples").Histogram();
@@ -379,8 +387,8 @@ class InboundStats {
     obj.resolutionHistogram = histogram3;
     histogram4 = new require("getSamples").Histogram();
     obj.localWantHistogram = histogram4;
-    tmp7 = new require("getStats")();
-    obj.systemResources = tmp7;
+    tmp8 = new require("getStats")();
+    obj.systemResources = tmp8;
     obj.decoderCodec = Object.UNKNOWN;
     obj.aggregatedProperties = { framesCodec: 0, framesNetwork: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, framesCodecError: 0, bytes: 0, nackCount: 0, pliCount: 0, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, keyframes: 0, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, screenshareFramesUnique: 0 };
     obj.aggregationDuration = 0;
@@ -425,36 +433,48 @@ Object.defineProperty(prototype, "videoStoppedDuration", {
   },
   set: undefined
 });
-prototype["collectAggregationStats"] = function collectAggregationStats(timestamp, timestamp2) {
+prototype["collectAggregationStats"] = function collectAggregationStats(parseInboundStatsResult, previousAggregationStats) {
   const self = this;
+  let closure_0 = parseInboundStatsResult;
+  let closure_1 = previousAggregationStats;
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = nextResult;
-    let tmp4 = timestamp[nextResult];
-    let tmp5 = tmp4;
-    if (null === tmp4) {
-      continue;
-    } else {
-      let tmp6 = nextResult;
-      let num = timestamp2[tmp3];
+    let tmp4 = nextResult;
+    let tmp5 = parseInboundStatsResult[nextResult];
+    let tmp6 = tmp5;
+    if (null !== tmp5) {
+      let tmp7 = nextResult;
+      let num = previousAggregationStats[tmp4];
       if (num == null) {
         num = 0;
       }
-      let aggregatedProperties = self.aggregatedProperties;
-      let tmp8 = nextResult;
-      let tmp9 = tmp4;
-      if (num > tmp5) {
-        let diff = tmp4;
-      } else {
-        let tmp10 = tmp4;
-        let tmp11 = num;
-        diff = tmp5 - tmp7;
+      let tmp8 = num;
+      if (someResult) {
+        let tmp9 = set;
+        let tmp10 = nextResult;
+        if (!set.has(tmp4)) {
+          let aggregatedProperties = self.aggregatedProperties;
+          let tmp11 = nextResult;
+          let tmp12 = tmp5;
+          aggregatedProperties[tmp4] = aggregatedProperties[tmp4] + tmp6;
+        }
       }
-      aggregatedProperties[tmp3] = aggregatedProperties[tmp3] + diff;
+      let tmp13 = nextResult;
+      let tmp15 = num;
+      let tmp16 = tmp5;
+      if (tmp8 <= tmp6) {
+        let tmp18 = tmp5;
+        let tmp19 = num;
+        let diff = tmp6 - tmp8;
+        self.aggregatedProperties[tmp4] = tmp14 + diff;
+      } else {
+        let tmp17 = nextResult;
+      }
+      diff = tmp5;
     }
+    continue;
   }
-  self.aggregationDuration = self.aggregationDuration + (timestamp.timestamp - timestamp2.timestamp);
 };
 prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
   const self = this;
@@ -490,53 +510,44 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
   if (!this.isVideoStopped) {
     const statsWindow = self.statsWindow;
     statsWindow.push(parseInboundStatsResult);
-    if (self.statsWindow.length < 2) {
-      if (!self.hasSeededAggregation) {
-        self.hasSeededAggregation = true;
-        if (typeof RawVideoStats !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const obj = Object.create(RawVideoStats.prototype);
-        obj.timestamp = parseInboundStatsResult.timestamp;
-        const result = self.collectAggregationStats(parseInboundStatsResult, obj);
-        const tmp15 = RawVideoStats;
+    const result = self.collectAggregationStats(parseInboundStatsResult, self.previousAggregationStats);
+    self.previousAggregationStats = parseInboundStatsResult;
+    let tmp5 = null == self.cryptorFailureBeforeSuccessCount;
+    if (tmp5) {
+      tmp5 = parseInboundStatsResult.cryptorSuccessCount > 0;
+    }
+    if (tmp5) {
+      let num2 = self.aggregatedProperties.cryptorFailureCount;
+      if (num2 == null) {
+        num2 = 0;
       }
-    } else {
-      const result1 = self.collectAggregationStats(tmp19, tmp20);
-      let tmp3 = null == self.cryptorFailureBeforeSuccessCount;
-      if (tmp3) {
-        tmp3 = parseInboundStatsResult.cryptorSuccessCount > 0;
-      }
-      if (tmp3) {
-        let num3 = self.aggregatedProperties.cryptorFailureCount;
-        if (num3 == null) {
-          num3 = 0;
-        }
-        self.cryptorFailureBeforeSuccessCount = num3;
-      }
+      self.cryptorFailureBeforeSuccessCount = num2;
+    }
+    if (self.statsWindow.length >= 2) {
+      self.aggregationDuration = self.aggregationDuration + (self.statsWindow[self.statsWindow.length - 1].timestamp - self.statsWindow[self.statsWindow.length - 2].timestamp);
       ({ timestamp, resolution } = self.statsWindow[self.statsWindow.length - 1]);
       ({ encoder, decoder, codecType } = self.statsWindow[self.statsWindow.length - 1]);
-      const result2 = (timestamp - tmp20.timestamp) / 1000;
-      self.intervalTotal = self.intervalTotal + result2;
-      self.resolutionTotal = self.resolutionTotal + resolution * result2;
-      self.minorResolutionTotal = self.minorResolutionTotal + self.statsWindow[self.statsWindow.length - 1].minorResolution * result2;
-      self.majorResolutionTotal = self.majorResolutionTotal + self.statsWindow[self.statsWindow.length - 1].majorResolution * result2;
-      const _Math = Math;
+      const result1 = (timestamp - tmp16.timestamp) / 1000;
+      self.intervalTotal = self.intervalTotal + result1;
+      self.resolutionTotal = self.resolutionTotal + resolution * result1;
+      self.minorResolutionTotal = self.minorResolutionTotal + self.statsWindow[self.statsWindow.length - 1].minorResolution * result1;
+      self.majorResolutionTotal = self.majorResolutionTotal + self.statsWindow[self.statsWindow.length - 1].majorResolution * result1;
+      const _Math2 = Math;
       ({ bytes, framesCodec, localWant } = self.statsWindow[self.statsWindow.length - 1]);
       self.cryptorMaxAttempts = Math.max(self.cryptorMaxAttempts, self.statsWindow[self.statsWindow.length - 1].cryptorMaxAttempts);
       if (null != encoder) {
         if (null != codecType) {
           if ("encoderBuckets" in self) {
             const encoderBuckets = self.encoderBuckets;
-            encoderBuckets[encoder] = encoderBuckets[encoder] + result2;
+            encoderBuckets[encoder] = encoderBuckets[encoder] + result1;
             const codecBuckets = self.codecBuckets;
-            codecBuckets[codecType] = codecBuckets[codecType] + result2;
-            let tmp6 = null != tmp19.codecType;
+            codecBuckets[codecType] = codecBuckets[codecType] + result1;
+            let tmp6 = null != tmp15.codecType;
             if (tmp6) {
-              tmp6 = tmp19.codecType !== obj.UNKNOWN;
+              tmp6 = tmp15.codecType !== obj.UNKNOWN;
             }
             if (tmp6) {
-              self.encoderCodec = tmp19.codecType;
+              self.encoderCodec = tmp15.codecType;
             }
             let tmp8 = null != parseInboundStatsResult.vmafScore;
             if (tmp8) {
@@ -566,7 +577,7 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
               self.outboundSinkWantNum = self.outboundSinkWantNum + 1;
               self.outboundSinkWantSum = self.outboundSinkWantSum + parseInboundStatsResult.outboundSinkWant;
             }
-            const _Math2 = Math;
+            const _Math = Math;
             self.consecutiveStaticColorFramesMax = Math.max(self.consecutiveStaticColorFramesMax, parseInboundStatsResult.consecutiveStaticColorFrames);
           }
         }
@@ -575,15 +586,15 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
         if (null != codecType) {
           if ("decoderBuckets" in self) {
             const decoderBuckets = self.decoderBuckets;
-            decoderBuckets[decoder] = decoderBuckets[decoder] + result2;
+            decoderBuckets[decoder] = decoderBuckets[decoder] + result1;
             const codecBuckets2 = self.codecBuckets;
-            codecBuckets2[codecType] = codecBuckets2[codecType] + result2;
-            let tmp13 = null != tmp19.codecType;
+            codecBuckets2[codecType] = codecBuckets2[codecType] + result1;
+            let tmp13 = null != tmp15.codecType;
             if (tmp13) {
-              tmp13 = tmp19.codecType !== obj.UNKNOWN;
+              tmp13 = tmp15.codecType !== obj.UNKNOWN;
             }
             if (tmp13) {
-              self.decoderCodec = tmp19.codecType;
+              self.decoderCodec = tmp15.codecType;
             }
           }
         }
@@ -593,30 +604,30 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
         const item = closure_6.forEach((arg0) => {
           if (resolution <= arg0) {
             const resolutionBuckets = self.resolutionBuckets;
-            resolutionBuckets[arg0] = resolutionBuckets[arg0] + result2;
+            resolutionBuckets[arg0] = resolutionBuckets[arg0] + result1;
           }
         });
-        const result3 = (timestamp - timestamp2) / 1000;
-        const result4 = 8 * (bytes - bytes2) / result3;
-        const result5 = (framesCodec - framesCodec2) / result3;
+        const result2 = (timestamp - timestamp2) / 1000;
+        const result3 = 8 * (bytes - bytes2) / result2;
+        const result4 = (framesCodec - framesCodec2) / result2;
         const item1 = self.forEach((arg0) => {
-          if (result4 <= arg0) {
+          if (result3 <= arg0) {
             const bitrateBuckets = self.bitrateBuckets;
-            bitrateBuckets[arg0] = bitrateBuckets[arg0] + result2;
+            bitrateBuckets[arg0] = bitrateBuckets[arg0] + result1;
           }
         });
         const item2 = closure_5.forEach((arg0) => {
-          if (result5 <= arg0) {
+          if (result4 <= arg0) {
             const fpsBuckets = self.fpsBuckets;
-            fpsBuckets[arg0] = fpsBuckets[arg0] + result2;
+            fpsBuckets[arg0] = fpsBuckets[arg0] + result1;
           }
         });
         const resolutionHistogram = self.resolutionHistogram;
         resolutionHistogram.addSample(resolution);
         const bitrateHistogram = self.bitrateHistogram;
-        bitrateHistogram.addSample(result4);
+        bitrateHistogram.addSample(result3);
         const fpsHistogram = self.fpsHistogram;
-        fpsHistogram.addSample(result5);
+        fpsHistogram.addSample(result4);
         const localWantHistogram = self.localWantHistogram;
         localWantHistogram.addSample(localWant);
         const statsWindow1 = self.statsWindow;
@@ -651,7 +662,7 @@ prototype["getCodecsUsed"] = function getCodecsUsed() {
   }
   return set;
 };
-let result = require("getStats").fileFinishedImporting("lib/VideoQualityStats.tsx");
+let result = set.fileFinishedImporting("lib/VideoQualityStats.tsx");
 class OutboundStats extends InboundStats {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

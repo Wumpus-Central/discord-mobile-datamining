@@ -22,8 +22,8 @@ function getHighestHoistedRole(arg0, arg1) {
         const member = obj2.getMember(guild.id, arg1);
         let highestHoistedRole = null;
         if (null != member) {
-          highestHoistedRole = importAll(3953).getHighestHoistedRole(guild, member);
-          const obj3 = importAll(3953);
+          highestHoistedRole = importAll(3994).getHighestHoistedRole(guild, member);
+          const obj3 = importAll(3994);
         }
         return highestHoistedRole;
       }

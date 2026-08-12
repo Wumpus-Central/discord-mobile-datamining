@@ -6,6 +6,7 @@ import reset from "reset";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PremiumTypes } from "GuildFeatures";
 import { EntitlementTypes } from "ME";
+import { SubscriptionTypes } from "sum";
 import "initialize";
 import { fetchActivePromotions } from "PromotionsActionCreators.tsx";
 
@@ -54,14 +55,14 @@ class PromotionsManager extends tmp2 {
             } else {
               const currentUser = outer1_5.getCurrentUser();
               if (!obj6.isPremiumExactly(currentUser, outer1_8.TIER_2)) {
-                let obj1 = v0(tmp15[10]);
+                let obj1 = v0(tmp15[11]);
                 v02 = 1;
                 v0 = 1;
                 obj1 = { value: null, done: false };
                 obj1[0] = obj1.maybeFetchActiveBogoPromotion();
                 return obj1;
               }
-              obj6 = v02(outer1_2[9]);
+              obj6 = v02(outer1_2[10]);
               tmp15 = outer1_2;
             }
           } else if (arg0 === 1) {
@@ -128,7 +129,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(outer1_2[8]);
+            let obj1 = v0(outer1_2[9]);
             const result = obj1.maybeFetchActivePromotions();
             c1 = 1;
             v0 = 1;
@@ -161,7 +162,8 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
   if (null != subscriptions) {
     const _Object = Object;
     const values = Object.values(subscriptions);
-    let mapped = values.map((items) => {
+    const found = values.filter((type) => type.type === constants.PREMIUM);
+    let mapped = found.map((items) => {
       items = items.items;
       const mapped = items.map((planId) => planId.planId);
       const sorted = mapped.sort();
@@ -173,7 +175,7 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
   const self = this;
   if (str !== this.lastSubscriptionStateSignature) {
     self.lastSubscriptionStateSignature = str;
-    if (null != createEmptyPromotionsByType.lastFetchedActivePromotions) {
+    if (!tmp3) {
       if (createEmptyPromotionsByType.isFetchingActivePromotions) {
         self.hasPendingSubscriptionRefetch = true;
       } else {

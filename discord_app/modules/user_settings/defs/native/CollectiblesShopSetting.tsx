@@ -13,11 +13,11 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7003);
+      let obj = callback(7042);
       obj = { analyticsLocations: null, analyticsSource: null };
-      const items = [callback2(5748).USER_SETTINGS];
+      const items = [callback2(5787).USER_SETTINGS];
       obj[0] = items;
-      obj[1] = callback2(5748).USER_SETTINGS;
+      obj[1] = callback2(5787).USER_SETTINGS;
       const result = obj.openCollectiblesShopMobile(obj);
       return false;
     };

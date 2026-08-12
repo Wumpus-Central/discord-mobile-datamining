@@ -3,9 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
 
 let c4;
 let c5;
@@ -27,40 +25,51 @@ export default function GuildPowerupsWarning(warnings) {
   let powerupNames;
   warnings = warnings.warnings;
   let _require;
+  let manaTypeConsolidationExperiment;
   ({ guildId, powerupNames } = warnings);
   const tmp = createCacheKey();
   _require = tmp;
-  let tmp8Result = null;
-  if (tmp4.shouldShow) {
-    let obj = { style: null, children: null };
+  let obj = _apexExperiment;
+  manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsWarning");
+  let tmp10Result = null;
+  if (tmp6.shouldShow) {
+    obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.contentContainer;
-    obj = { color: null, size: "md" };
-    obj[0] = Themes.colors.TEXT_FEEDBACK_WARNING;
-    let items = [callback(_CircleErrorIcon.CircleErrorIcon, obj), , , ];
-    const obj1 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
-    obj1[2] = tmp.text;
-    obj1[3] = tmp5;
-    items[1] = callback(_Text.Text, obj1);
-    const obj2 = { variant: "text-sm/medium", style: null, children: null };
-    obj2[1] = tmp.text;
-    obj2[2] = tmp6;
-    items[2] = callback(_Text.Text, obj2);
+    const obj1 = { color: null, size: "md" };
+    obj1[0] = manaTypeConsolidationExperiment(712).colors.TEXT_FEEDBACK_WARNING;
+    let items = [callback(tmp2(7834).CircleErrorIcon, obj1), , , ];
+    const obj2 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
+    obj2[2] = tmp.text;
+    obj2[3] = tmp7;
+    items[1] = callback(tmp2(4340).Text, obj2);
+    let str = "text-sm/medium";
+    if (manaTypeConsolidationExperiment) {
+      str = "experimental/body-sm/normal";
+    }
+    const obj3 = { variant: null, style: null, children: null };
+    obj3[0] = str;
+    obj3[1] = tmp.text;
+    obj3[2] = tmp8;
+    items[2] = callback(tmp2(4340).Text, obj3);
     let mapped;
     if (warnings != null) {
       mapped = warnings.map((children) => {
+        let str = "text-sm/medium";
+        if (manaTypeConsolidationExperiment) {
+          str = "experimental/body-sm/normal";
+        }
         const items = [, ];
         ({ warningText: arr[0], text: arr[1] } = _undefined);
-        return outer1_4(_undefined(outer1_2[7]).Text, { variant: "text-sm/medium", color: "text-feedback-warning", style: items, children }, "warning-" + arg1);
+        return outer1_4(_undefined(outer1_2[8]).Text, { variant: str, color: "text-feedback-warning", style: items, children }, "warning-" + arg1);
       });
     }
     items[3] = mapped;
     obj[1] = items;
     obj[1] = closure_5(View, obj);
-    tmp8Result = callback(tmp9, obj);
-    const tmp10 = closure_5;
-    const tmp8 = callback;
+    tmp10Result = tmp10(tmp11, obj);
+    const tmp12 = closure_5;
   }
-  return tmp8Result;
+  return tmp10Result;
 };

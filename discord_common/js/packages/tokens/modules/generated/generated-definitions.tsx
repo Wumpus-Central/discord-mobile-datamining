@@ -55,6 +55,44 @@ obj = {
   }
 };
 set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 2147483647;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 2147483647;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
   resolve() {
     return 0.15;
   }
@@ -1743,6 +1781,18 @@ export const _private = {
         }
       }
     },
+    menu: {
+      BORDER_WIDTH: {
+        resolve() {
+          return 1;
+        }
+      },
+      SCROLLER_BLOCK_PADDING: {
+        resolve() {
+          return 8;
+        }
+      }
+    },
     mobile: {
       BOUNTY_TILE_BORDER_RADIUS: {
         resolve(enabledExperiments) {
@@ -3136,44 +3186,8 @@ export const _private = {
           }
         }
       },
-      GUILD_FOLDER_BACKGROUND_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 2147483647;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                let tmp4 = iter;
-                iter.return();
-                let num = 16;
-                return 16;
-              }
-            }
-            return 2147483647;
-          }
-        }
-      },
-      GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                let tmp4 = iter;
-                iter.return();
-                let num = 8;
-                return 8;
-              }
-            }
-            return 0;
-          }
-        }
-      },
+      GUILD_FOLDER_BACKGROUND_RADIUS: set,
+      GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET: set,
       GUILD_FOLDER_COLOR_OPACITY: set,
       GUILD_FOLDER_PADDING: set,
       GUILD_FOLDER_PREVIEW_ICON_MARGIN: set,

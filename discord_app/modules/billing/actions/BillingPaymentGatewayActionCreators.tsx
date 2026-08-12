@@ -117,10 +117,10 @@ function _createCardToken() {
             token = lib.token;
             error = lib.error;
             if (null != error) {
-              obj2 = lib(4624);
+              obj2 = lib(4664);
               throw obj2.dispatchConfirmationError(error);
             } else if (null == token) {
-              obj1 = lib(4624);
+              obj1 = lib(4664);
               throw obj1.dispatchConfirmationError("token not available with successful stripe call");
             } else {
               c5 = 3;
@@ -166,20 +166,20 @@ function _confirmEPS() {
       name = 0;
       c4 = tmp2;
       if (null == lib) {
-        throw lib(4624).dispatchConfirmationError("Stripe not loaded");
+        throw lib(4664).dispatchConfirmationError("Stripe not loaded");
       }
       if (null == tmp62) {
-        throw lib(4624).dispatchConfirmationError("Bank required for EPS");
+        throw lib(4664).dispatchConfirmationError("Bank required for EPS");
       }
       ({ email: c4, name } = tmp63);
       ({ line1: c6, line2: c7, city: c8, state: c9, postalCode: c10, country: c11 } = tmp63);
       if (null == name) {
-        let obj9 = lib(4624);
+        let obj9 = lib(4664);
         throw obj9.dispatchConfirmationError("Name required for EPS");
       }
       let obj6 = callback(709);
       obj6.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-      const obj7 = lib(4624);
+      const obj7 = lib(4664);
       let closure_12 = yield obj7.validatePaymentSourceBillingAddress(tmp63);
       const obj3 = { type: "eps", eps: null, billing_details: null };
       const obj4 = { bank: null };
@@ -201,14 +201,14 @@ function _confirmEPS() {
       const paymentMethod = closure_13.paymentMethod;
       const error = closure_13.error;
       if (null != error) {
-        const obj2 = lib(4624);
+        const obj2 = lib(4664);
         throw obj2.dispatchConfirmationError(error);
       }
       if (null == paymentMethod) {
-        const obj1 = lib(4624);
+        const obj1 = lib(4664);
         throw obj1.dispatchConfirmationError("paymentMethod not available with successful stripe call");
       }
-      const obj15 = lib(4624);
+      const obj15 = lib(4664);
       obj9 = { billingAddressToken: null, analyticsLocation: null, bank: null };
       obj9[0] = closure_12;
       obj9[1] = dependencyMap;
@@ -274,14 +274,14 @@ function _confirmIdeal() {
       const paymentMethod = closure_12.paymentMethod;
       const error = closure_12.error;
       if (null != error) {
-        obj4 = lib(4624);
+        obj4 = lib(4664);
         throw obj4.dispatchConfirmationError(error);
       }
       if (null == paymentMethod) {
-        obj3 = lib(4624);
+        obj3 = lib(4664);
         throw obj3.dispatchConfirmationError("paymentMethod not available with successful stripe call");
       }
-      const obj = lib(4624);
+      const obj = lib(4664);
       obj8 = { billingAddressToken: null, analyticsLocation: null };
       obj8[0] = closure_11;
       obj8[1] = closure_2;
@@ -317,17 +317,17 @@ function _confirmPrzelewy() {
       c5 = 0;
       let email = tmp2;
       if (null == lib) {
-        throw lib(4624).dispatchConfirmationError("Stripe not loaded");
+        throw lib(4664).dispatchConfirmationError("Stripe not loaded");
       }
       email = tmp62.email;
       ({ name: c5, line1: c6, line2: c7, city: c8, state: c9, postalCode: c10, country: c11 } = tmp62);
       if (null == email) {
-        let obj9 = lib(4624);
+        let obj9 = lib(4664);
         throw obj9.dispatchConfirmationError("Email required for Przelewy24");
       }
       let obj6 = lib2(709);
       obj6.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-      const obj7 = lib(4624);
+      const obj7 = lib(4664);
       let closure_12 = yield obj7.validatePaymentSourceBillingAddress(tmp62);
       const p24Bank = lib2.p24Bank;
       const obj3 = { type: "p24", p24: null, billing_details: null };
@@ -350,14 +350,14 @@ function _confirmPrzelewy() {
       const paymentMethod = closure_14.paymentMethod;
       const error = closure_14.error;
       if (null != error) {
-        const obj2 = lib(4624);
+        const obj2 = lib(4664);
         throw obj2.dispatchConfirmationError(error);
       }
       if (null == paymentMethod) {
-        const obj1 = lib(4624);
+        const obj1 = lib(4664);
         throw obj1.dispatchConfirmationError("paymentMethod not available with successful stripe call");
       }
-      const obj14 = lib(4624);
+      const obj14 = lib(4664);
       obj9 = { billingAddressToken: null, analyticsLocation: null, bank: null };
       obj9[0] = closure_12;
       obj9[1] = dependencyMap;
@@ -525,16 +525,84 @@ function _createExpressCheckoutPaymentMethod() {
       let c0;
       let c1;
       let c2;
-      c1 = tmp2;
-      ({ stripePaymentMethodId: c0, billingAddress: c1, analyticsLocation: c2 } = callback);
-      yield "ct";
-      let obj4 = callback(4624);
-      const dependencyMap = yield obj4.validatePaymentSourceBillingAddress(c1);
-      const obj = callback(4624);
-      obj4 = { billingAddressToken: null, analyticsLocation: null };
-      obj4[0] = dependencyMap;
-      obj4[1] = c2;
-      return obj.createPaymentSource(constants.STRIPE, callback, c1, obj4);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c2 = tmp5;
+              c1 = tmp2;
+              let callback;
+              c1 = undefined;
+              c2 = undefined;
+              ({ stripePaymentMethodId: c0, billingAddress: c1, analyticsLocation: c2 } = callback);
+              dependencyMap = undefined;
+              dependencyMap = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let obj4 = callback(4664);
+              dependencyMap = 2;
+              c4 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj4.validatePaymentSourceBillingAddress(c1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
+          } else {
+            dependencyMap = arg1;
+            obj = callback(4664);
+            obj4 = { billingAddressToken: null, analyticsLocation: null };
+            obj4[0] = dependencyMap;
+            obj4[1] = c2;
+            c4 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = obj.createPaymentSource(constants.STRIPE, callback, c1, obj4);
+            return obj5;
+          }
+        } catch (tmp23) {
+          c4 = tmp;
+          throw tmp23;
+        }
+      }
     })();
     iter.next();
     return iter;
@@ -555,49 +623,437 @@ function _confirmPaymentElementSource() {
     let c12 = 0;
     let c13 = 0;
     let c11 = 0;
-    const iter = (function*() {
-      if (c13 === 2) {
-        c13 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+    let iter = (function*(arg0, paymentMethod) {
+      let closure_2;
+      let closure_3;
+      let getSystemLocale;
+      let closure_5;
+      if (v0 === 2) {
+        v0 = 3;
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        try {
+        throwTypeErrorResult = paymentMethod;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp6;
+        throwTypeErrorResult = null;
+        if (tmp7 === 3) {
           if (arg0 === 1) {
-            c13 = 3;
-            throw arg1;
+            throw paymentMethod;
           } else if (arg0 === 2) {
-            c13 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            let obj = { value: null, done: true };
+            obj[0] = paymentMethod;
             return obj;
           } else {
-            obj = { redirect: "if_required", clientSecret: null, elements: null };
-            obj[1] = c12;
-            obj[2] = closure_1;
-            c12 = 11;
-            c13 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = closure_0.confirmSetup(obj);
-            return obj1;
+            return { value: "HermesInternal", done: null };
           }
-        } catch (tmp11) {
-          let closure_10 = tmp11;
-          if (tmp4 === c11) {
-            c13 = tmp3;
-            throw tmp11;
-          } else if (tmp2 === tmp13) {
-            c12 = tmp2;
-          } else {
-            c12 = tmp;
+        } else {
+          try {
+            v0 = 2;
+            switch (client_secret) {
+              case 0:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = paymentMethod;
+                  return obj;
+                } else {
+                  let payment_method = tmp4;
+                  let closure_8 = tmp8;
+                  let lib;
+                  let lib2;
+                  closure_2 = undefined;
+                  let dependencyMap;
+                  let ref;
+                  let callback;
+                  let closure_6;
+                  throwTypeErrorResult = lib;
+                  closure_2 = lib;
+                  throwTypeErrorResult = lib;
+                  const iter2 = lib[Symbol.iterator]();
+                  throwTypeErrorResult = lib;
+                  closure_2 = lib;
+                  lib2 = iter2;
+                  dependencyMap = undefined;
+                  ref = undefined;
+                  throwTypeErrorResult = iter2;
+                  lib2 = iter2;
+                  let tmp93 = iter2 === undefined;
+                  dependencyMap = tmp93;
+                  if (!tmp93) {
+                    ref = iter2.next();
+                  }
+                  lib = ref;
+                  ref = undefined;
+                  let iter = throwTypeErrorResult;
+                  if (!tmp93) {
+                    lib2 = iter3;
+                    dependencyMap = tmp92;
+                    tmp93 = tmp92;
+                    iter = iter3;
+                    if (iter3 !== undefined) {
+                      ref = iter3.next();
+                      tmp93 = tmp92;
+                      iter = iter3;
+                    }
+                  }
+                  lib2 = ref;
+                  let c11 = 0;
+                  ref = undefined;
+                  if (!tmp93) {
+                    lib2 = iter;
+                    dependencyMap = tmp97;
+                    if (iter !== undefined) {
+                      ref = iter.next();
+                    }
+                  }
+                  c11 = 2;
+                  ({ billingAddress: closure_2, paymentSourceType: closure_3, lastConfirmedSetupIntentRef: getSystemLocale, createSetupIntent: closure_5 } = ref);
+                  c11 = 0;
+                  ref = undefined;
+                  let tmp99 = dependencyMap;
+                  if (!dependencyMap) {
+                    throwTypeErrorResult = closure_2;
+                    throwTypeErrorResult = lib2;
+                    throwTypeErrorResult = lib2 === undefined;
+                    dependencyMap = throwTypeErrorResult;
+                    tmp99 = throwTypeErrorResult;
+                    if (!throwTypeErrorResult) {
+                      ref = lib2.next();
+                      tmp99 = throwTypeErrorResult;
+                    }
+                  }
+                  throwTypeErrorResult = ref;
+                  closure_6 = ref;
+                  if (!tmp99) {
+                    throwTypeErrorResult = lib2;
+                    lib2.return();
+                  }
+                  let closure_7;
+                  closure_8 = undefined;
+                  payment_method = undefined;
+                  let closure_10;
+                  c11 = undefined;
+                  client_secret = undefined;
+                  v0 = undefined;
+                  paymentMethod = undefined;
+                  let billing_details;
+                  client_secret = 3;
+                  v0 = 1;
+                  return { value: "ct", done: true };
+                }
+              break;
+              case 1:
+                c11 = 0;
+                callback = closure_10;
+                if (!dependencyMap) {
+                  lib2.return();
+                }
+                throw callback;
+              case 2:
+                c11 = 0;
+                callback = closure_10;
+              break;
+              case 3:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj1 = { value: null, done: true };
+                  obj1[0] = paymentMethod;
+                  return obj1;
+                } else {
+                  throwTypeErrorResult = closure_8;
+                  throwTypeErrorResult = lib;
+                  if (null == lib) {
+                    throw v0("Stripe not loaded", true);
+                  } else {
+                    throwTypeErrorResult = closure_8;
+                    throwTypeErrorResult = lib2;
+                    if (null == lib2) {
+                      throw v0("Stripe Elements not loaded", true);
+                    } else {
+                      let obj18 = lib2(709);
+                      obj18.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
+                      let obj19 = lib(4664);
+                      client_secret = 4;
+                      v0 = 1;
+                      const obj2 = { value: null, done: false };
+                      obj2[0] = obj19.validatePaymentSourceBillingAddress(closure_2);
+                      return obj2;
+                    }
+                  }
+                }
+              break;
+              case 4:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj3 = { value: null, done: true };
+                  obj3[0] = paymentMethod;
+                  return obj3;
+                } else {
+                  throwTypeErrorResult = closure_8;
+                  throwTypeErrorResult = payment_method;
+                  closure_7 = paymentMethod;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = closure_10;
+                  if (dependencyMap !== closure_10.PAYMENT_REQUEST) {
+                    client_secret = 5;
+                    v0 = 1;
+                    const obj4 = { value: null, done: false };
+                    obj4[0] = callback3(lib2);
+                    return obj4;
+                  } else {
+                    payment_method = null;
+                    if (set.has(dependencyMap)) {
+                      const current = ref.current;
+                      closure_6 = current;
+                      if (current == null) {
+                        closure_6 = undefined;
+                      }
+                      c11 = closure_6;
+                      if (null != c11) {
+                        if (dependencyMap === closure_10.PAYMENT_REQUEST) {
+                          closure_7 = c11;
+                          if (c11 == null) {
+                            closure_7 = undefined;
+                          }
+                          const obj5 = { setupIntent: null, error: "a" };
+                          obj5[0] = closure_7;
+                          closure_10 = obj5;
+                          if ((function shouldRecreateSetupIntentForPaymentElement(error) {
+                            let tmp = null != error;
+                            if (tmp) {
+                              tmp = "setup_intent_unexpected_state" === error.code;
+                            }
+                            if (tmp) {
+                              tmp = null != error.setup_intent;
+                            }
+                            if (tmp) {
+                              let tmp2 = "succeeded" === error.setup_intent.status;
+                              if (!tmp2) {
+                                tmp2 = "canceled" === error.setup_intent.status;
+                              }
+                              tmp = tmp2;
+                            }
+                            return tmp;
+                          })(closure_10.error)) {
+                            if (dependencyMap !== closure_10.PAYMENT_REQUEST) {
+                              throwTypeErrorResult = closure_8;
+                              throwTypeErrorResult = callback;
+                              client_secret = 7;
+                              v0 = 1;
+                              const obj6 = { value: null, done: false };
+                              obj6[0] = callback();
+                              return obj6;
+                            }
+                          }
+                          throwTypeErrorResult = closure_8;
+                          throwTypeErrorResult = payment_method;
+                          throwTypeErrorResult = callback2;
+                          throwTypeErrorResult = closure_10;
+                          throwTypeErrorResult = closure_10;
+                          v0 = callback2(closure_10.setupIntent, closure_10.error, (error) => {
+                            const intl = closure_0(closure_3[5]).intl;
+                            let obj = closure_0(closure_3[6]);
+                            obj = { tags: { source: "payment_elements" } };
+                            return obj.dispatchConfirmationError(error, true, intl.string(closure_0(closure_3[5]).t.khEaRI), obj);
+                          }).setupIntent;
+                          throwTypeErrorResult = ref;
+                          throwTypeErrorResult = v0;
+                          ref.current = v0;
+                          throwTypeErrorResult = v0;
+                          payment_method = v0.payment_method;
+                          throwTypeErrorResult = closure_8;
+                          throwTypeErrorResult = payment_method;
+                          throwTypeErrorResult = lib;
+                          throwTypeErrorResult = outer1_3;
+                          const obj24 = lib(outer1_3[6]);
+                          throwTypeErrorResult = outer1_6;
+                          throwTypeErrorResult = payment_method;
+                          throwTypeErrorResult = closure_2;
+                          const obj7 = { billingAddressToken: null, analyticsLocation: null, pix: null };
+                          throwTypeErrorResult = closure_7;
+                          obj7[0] = closure_7;
+                          throwTypeErrorResult = closure_6;
+                          obj7[1] = closure_6;
+                          throwTypeErrorResult = closure_8;
+                          obj7[2] = closure_8;
+                          throwTypeErrorResult = obj24;
+                          throwTypeErrorResult = obj7;
+                          throwTypeErrorResult = obj24.createPaymentSource(outer1_6.STRIPE, payment_method, closure_2, obj7);
+                          v0 = 3;
+                          throw v0("Missing PIX tax_id from Payment Element", true);
+                        }
+                      }
+                      let hasCreatedPaymentMethod = dependencyMap === closure_10.CARD;
+                      if (hasCreatedPaymentMethod) {
+                        hasCreatedPaymentMethod = obj.hasCreatedPaymentMethod;
+                      }
+                      if (hasCreatedPaymentMethod) {
+                        client_secret = 8;
+                        v0 = 1;
+                        const obj8 = { value: null, done: false };
+                        obj8[0] = callback4(lib, lib2);
+                        return obj8;
+                      } else {
+                        const obj9 = { redirect: "if_required", elements: null };
+                        obj9[1] = lib2;
+                        client_secret = 9;
+                        v0 = 1;
+                        const obj10 = { value: null, done: false };
+                        obj10[0] = lib.confirmSetup(obj9);
+                        return obj10;
+                      }
+                    } else {
+                      client_secret = 6;
+                      v0 = 1;
+                      const obj11 = { value: null, done: false };
+                      obj11[0] = callback4(lib, lib2);
+                      return obj11;
+                    }
+                  }
+                }
+              break;
+              case 5:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj12 = { value: null, done: true };
+                  obj12[0] = paymentMethod;
+                  return obj12;
+                }
+              break;
+              case 6:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj13 = { value: null, done: true };
+                  obj13[0] = paymentMethod;
+                  return obj13;
+                } else {
+                  throwTypeErrorResult = closure_8;
+                  throwTypeErrorResult = payment_method;
+                  paymentMethod = paymentMethod.paymentMethod;
+                  throwTypeErrorResult = paymentMethod;
+                  payment_method = paymentMethod.id;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = closure_10;
+                  if (dependencyMap === closure_10.PIX) {
+                    throwTypeErrorResult = closure_8;
+                    throwTypeErrorResult = paymentMethod;
+                    billing_details = paymentMethod.billing_details;
+                    let tax_id;
+                    if (billing_details != null) {
+                      tax_id = billing_details.tax_id;
+                    }
+                    if (null != tax_id) {
+                      if ("" !== billing_details.tax_id) {
+                        const obj14 = { taxId: null };
+                        obj14[0] = billing_details.tax_id;
+                        closure_8 = obj14;
+                      }
+                    }
+                  }
+                }
+              break;
+              case 7:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj15 = { value: null, done: true };
+                  obj15[0] = paymentMethod;
+                  return obj15;
+                } else {
+                  client_secret = paymentMethod.client_secret;
+                  client_secret = 10;
+                  v0 = 1;
+                  const obj16 = { value: null, done: false };
+                  obj16[0] = callback3(lib2);
+                  return obj16;
+                }
+              break;
+              case 8:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj17 = { value: null, done: true };
+                  obj17[0] = paymentMethod;
+                  return obj17;
+                }
+              break;
+              case 9:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  obj18 = { value: null, done: true };
+                  obj18[0] = paymentMethod;
+                  return obj18;
+                } else {
+                  closure_10 = paymentMethod;
+                }
+              break;
+              case 10:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  obj19 = { value: null, done: true };
+                  obj19[0] = paymentMethod;
+                  return obj19;
+                } else {
+                  obj = { redirect: "if_required", clientSecret: null, elements: null };
+                  obj[1] = client_secret;
+                  obj[2] = lib2;
+                  client_secret = 11;
+                  v0 = 1;
+                  const obj20 = { value: null, done: false };
+                  obj20[0] = lib.confirmSetup(obj);
+                  return obj20;
+                }
+              break;
+              default:
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw paymentMethod;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  const obj21 = { value: null, done: true };
+                  obj21[0] = paymentMethod;
+                  return obj21;
+                } else {
+                  throwTypeErrorResult = closure_8;
+                  closure_10 = paymentMethod;
+                }
+            }
+          } catch (throwTypeErrorResult) {
+            closure_10 = throwTypeErrorResult;
+            if (tmp5 === c11) {
+              throwTypeErrorResult = tmp3;
+              v0 = tmp3;
+              throw throwTypeErrorResult;
+            } else if (tmp2 === throwTypeErrorResult) {
+              client_secret = tmp2;
+            } else {
+              client_secret = throwTypeErrorResult;
+            }
           }
         }
       }
@@ -664,7 +1120,7 @@ function _confirmCardPaymentSource() {
                   obj8.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
                   c4 = null;
                   closure_7 = 1;
-                  let obj9 = lib(4628);
+                  let obj9 = lib(4668);
                   setupIntent = 3;
                   c9 = 1;
                   const obj1 = { value: null, done: false };
@@ -672,12 +1128,12 @@ function _confirmCardPaymentSource() {
                   return obj1;
                 }
               }
-              throw lib(4624).dispatchConfirmationError("Stripe or token not loaded");
+              throw lib(4664).dispatchConfirmationError("Stripe or token not loaded");
             }
           } else if (1 === tmp7) {
             closure_7 = 0;
             c9 = constants;
-            let obj7 = lib(4624);
+            let obj7 = lib(4664);
             throw obj7.dispatchConfirmationError(c9);
           } else if (2 === tmp7) {
             if (arg0 === 1) {
@@ -690,7 +1146,7 @@ function _confirmCardPaymentSource() {
               return obj2;
             } else {
               closure_5 = client_secret;
-              constants = callback2(4629).parseBillingAddressInfoToStripeBillingDetails(callback2);
+              constants = callback2(4669).parseBillingAddressInfoToStripeBillingDetails(callback2);
               const obj3 = { payment_method: null };
               const obj4 = { card: null, billing_details: null };
               const obj5 = { token: null };
@@ -717,7 +1173,7 @@ function _confirmCardPaymentSource() {
             } else {
               const outer1_4 = client_secret.client_secret;
               closure_7 = 0;
-              obj2 = lib(4624);
+              obj2 = lib(4664);
               setupIntent = 2;
               c9 = 1;
               obj8 = { value: null, done: false };
@@ -735,7 +1191,7 @@ function _confirmCardPaymentSource() {
           } else {
             closure_7 = client_secret;
             setupIntent = callback3(closure_7.setupIntent, closure_7.error, (error) => callback(table[6]).dispatchConfirmationError(error)).setupIntent;
-            const obj15 = lib(4624);
+            const obj15 = lib(4664);
             const obj10 = { billingAddressToken: null, analyticsLocation: null };
             obj10[0] = closure_5;
             obj10[1] = dependencyMap;
@@ -778,9 +1234,9 @@ function _createStripePaymentSource() {
       let name = 0;
       let getSystemLocale = tmp2;
       if (null == lib) {
-        throw lib(4624).dispatchConfirmationError("Stripe not loaded");
+        throw lib(4664).dispatchConfirmationError("Stripe not loaded");
       }
-      let obj8 = lib(4624);
+      let obj8 = lib(4664);
       getSystemLocale = yield obj8.validatePaymentSourceBillingAddress(tmp68);
       name = lib2.name;
       const city = lib2.city;
@@ -806,14 +1262,14 @@ function _createStripePaymentSource() {
       const paymentMethod = closure_13.paymentMethod;
       const error = closure_13.error;
       if (null != error) {
-        obj4 = lib(4624);
+        obj4 = lib(4664);
         throw obj4.dispatchConfirmationError(error);
       }
       if (null == paymentMethod) {
-        obj3 = lib(4624);
+        obj3 = lib(4664);
         throw obj3.dispatchConfirmationError("stripePaymentMethod not available with successful stripe call");
       }
-      const obj = lib(4624);
+      const obj = lib(4664);
       obj8 = { billingAddressToken: null, analyticsLocation: null };
       obj8[0] = getSystemLocale;
       obj8[1] = dependencyMap;
@@ -913,7 +1369,7 @@ function _createAdyenVaultablePaymentSource() {
               adyen_redirect_url = undefined;
               c12 = 1;
               c13 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -1507,7 +1963,7 @@ export const confirmCardPaymentSource = function confirmCardPaymentSource() {
 };
 export const createPaymentRequestPaymentSource = function createPaymentRequestPaymentSource(billing_details, closure_2, analyticsLocation) {
   let billingAddressInfo = closure_2;
-  let obj = importAll(4629);
+  let obj = importAll(4669);
   const result = obj.parseStripePaymentMethod(billing_details);
   if (closure_2 == null) {
     billingAddressInfo = result.billingAddressInfo;

@@ -30,13 +30,13 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   obj = { style: tmp.text, variant: "text-sm/normal", children: null };
   const intl = onHeightChange(1236).intl;
   obj[2] = intl.string(onHeightChange(1236).t["5g7NcN"]);
-  const items2 = [callback(onHeightChange(4299).Text, obj), ];
+  const items2 = [callback(onHeightChange(4340).Text, obj), ];
   obj = { style: tmp.button, children: null };
   const obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
   const intl2 = onHeightChange(1236).intl;
   obj1[2] = intl2.string(onHeightChange(1236).t.JuXTi6);
   obj1[3] = onHeightChange.onPress;
-  obj[1] = callback(onHeightChange(4714).Button, obj1);
+  obj[1] = callback(onHeightChange(4754).Button, obj1);
   items2[1] = callback(View, obj);
   obj[2] = items2;
   return closure_5(View, obj);

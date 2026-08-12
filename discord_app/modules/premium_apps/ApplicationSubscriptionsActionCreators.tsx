@@ -185,7 +185,7 @@ function _fetchSubscriptionListingForPlan() {
               set = undefined;
               c7 = 1;
               v0 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {

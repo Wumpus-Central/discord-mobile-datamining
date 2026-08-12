@@ -31,16 +31,6 @@ export function isFavoritesGuildId(guildId) {
 export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(closure_0) {
   return "" !== closure_0.trim();
 };
-export const canFavoriteChannelType = function canFavoriteChannelType(record, hasHigherPrivileges) {
-  const isCategoryResult = record.isCategory();
-  let tmp2 = !isCategoryResult;
-  if (!isCategoryResult) {
-    const isThreadResult = record.isThread();
-    let tmp4 = !isThreadResult;
-    if (isThreadResult) {
-      tmp4 = hasHigherPrivileges;
-    }
-    tmp2 = tmp4;
-  }
-  return tmp2;
+export const isFavoritableChannel = function isFavoritableChannel(record) {
+  return !record.isCategory();
 };

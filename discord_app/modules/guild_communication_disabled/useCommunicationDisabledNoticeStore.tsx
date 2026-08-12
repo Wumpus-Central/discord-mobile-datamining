@@ -4,7 +4,7 @@ import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "getFri
 import keys from "keys";
 import { Storage } from "Storage";
 import { identity } from "../../../_runtime/00700_identity.js";
-import { isIterable } from "../../../_runtime/03933_isIterable.js";
+import { isIterable } from "../../../_runtime/03974_isIterable.js";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 

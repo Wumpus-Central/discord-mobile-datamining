@@ -73,7 +73,7 @@ function _validatePurchase() {
               ({ productId: c0, premiumSubscription: c1, offerId: c2, currency: c3, price: c4, isGift: c5 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -110,7 +110,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(7336)(c6);
+            const tmp18 = new lib(7375)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -267,7 +267,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 let c21;
                 c6 = 1;
                 c7 = 1;
-                return { value: "ct", done: "Array" };
+                return { value: "ct", done: true };
               }
             } else {
               if (1 === tmp10) {

@@ -19,7 +19,7 @@ const items3 = [...set1];
 obj[obj.INVALID_ANCHOR] = "invalid anchor (expected: " + items3.join(", ") + ")";
 obj[obj.INVALID_RESPONSIVE] = "invalid suffix (expected '" + "responsive" + "')";
 obj[obj.BORDER_HAS_ANCHOR] = "border layers must omit the anchor";
-let closure_8 = { [arg1(8809).ProfileFrameLayerOrder.FRONT]: 0, [arg1(8809).ProfileFrameLayerOrder.BACK]: 1 };
+let closure_8 = { [arg1(8848).ProfileFrameLayerOrder.FRONT]: 0, [arg1(8848).ProfileFrameLayerOrder.BACK]: 1 };
 const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
 
 export const PREVIEW_FILENAME = "preview";
@@ -63,7 +63,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
               const _Number2 = Number;
               obj3[0] = Number(tmp19);
               obj3[1] = tmp20;
-              obj3[2] = tmp4(8811).ProfileFrameLayerAnchor.CENTER;
+              obj3[2] = tmp4(8850).ProfileFrameLayerAnchor.CENTER;
               obj3[3] = 1 === substr.length;
               obj2[0] = obj3;
               return obj2;
@@ -90,7 +90,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
                   obj7[0] = Number(tmp19);
                   obj7[1] = tmp20;
                   obj7[2] = first;
-                  obj7[3] = 2 === substr.length || tmp20 === tmp4(8810).ProfileFrameLayerType.RAIL;
+                  obj7[3] = 2 === substr.length || tmp20 === tmp4(8849).ProfileFrameLayerType.RAIL;
                   obj6[0] = obj7;
                   return obj6;
                 }

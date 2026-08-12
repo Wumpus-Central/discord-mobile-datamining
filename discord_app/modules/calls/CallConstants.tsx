@@ -1,6 +1,6 @@
 // discord_app/modules/calls/CallConstants.tsx
 let obj = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
-obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW", HAVEN: 2, [2]: "HAVEN" };
+obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
 const result = require("set").fileFinishedImporting("modules/calls/CallConstants.tsx");
 
 export const ParticipantTypes = obj;
@@ -38,9 +38,9 @@ export const isActivityParticipant = function isActivityParticipant(type) {
   return type === obj.ACTIVITY;
 };
 export const PictureInPictureTypes = obj;
-export const DEFAULT_PIP_WIDTH = { [obj.VIDEO]: 320, [obj.CAMERA_PREVIEW]: 160, [obj.HAVEN]: 320 };
-export const MAX_PIP_WIDTH = { [obj.VIDEO]: 960, [obj.CAMERA_PREVIEW]: 480, [obj.HAVEN]: 960 };
-export const MIN_PIP_WIDTH = { [obj.VIDEO]: 200, [obj.CAMERA_PREVIEW]: 160, [obj.HAVEN]: 200 };
+export const DEFAULT_PIP_WIDTH = { [obj.VIDEO]: 320, [obj.CAMERA_PREVIEW]: 160 };
+export const MAX_PIP_WIDTH = { [obj.VIDEO]: 960, [obj.CAMERA_PREVIEW]: 480 };
+export const MIN_PIP_WIDTH = { [obj.VIDEO]: 200, [obj.CAMERA_PREVIEW]: 160 };
 export const EMOJI_PICKER_EMOJI_TO_SHOW_COUNT = 8;
 export const MIN_CALL_WIDTH = 550;
 export const MIN_CALL_HEIGHT = 230;

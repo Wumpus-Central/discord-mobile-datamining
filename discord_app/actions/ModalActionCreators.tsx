@@ -1,12 +1,12 @@
 // discord_app/actions/ModalActionCreators.tsx
 import { AppContext } from "ME";
-import { uniqueId } from "../../_runtime/04510_uniqueId.js";
+import { uniqueId } from "../../_runtime/04550_uniqueId.js";
 import { dispatcher } from "../Dispatcher.tsx";
-import { navigationToRootTabHelper } from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import { getDeprecatedModalData } from "../utils/getDeprecatedModalData.tsx";
 
-const result = require("navigationToRootTabHelper").fileFinishedImporting("actions/ModalActionCreators.tsx");
+const result = require("coerceMainRoute").fileFinishedImporting("actions/ModalActionCreators.tsx");
 
 export default {
   push(modal, props) {
@@ -18,7 +18,7 @@ export default {
     if (arg4 === undefined) {
       APP = AppContext.APP;
     }
-    let obj = navigationToRootTabHelper;
+    let obj = coerceMainRoute;
     obj = { modal: getDeprecatedModalData(modal, {}, props, tmp) };
     const merged = Object.assign(arg3);
     obj.pushModal(obj);
@@ -59,22 +59,22 @@ export default {
     obj.dispatch(obj);
   },
   pop() {
-    navigationToRootTabHelper.popModal();
-    const obj = navigationToRootTabHelper;
+    coerceMainRoute.popModal();
+    const obj = coerceMainRoute;
     dispatcher.dispatch({ type: "MODAL_POP" });
   },
   popWithKey(c3, onExited) {
-    let obj = navigationToRootTabHelper;
+    let obj = coerceMainRoute;
     obj.popModal(c3, onExited);
     obj = { type: "MODAL_POP", key: c3, onExited };
     dispatcher.dispatch(obj);
   },
   popAboveKey(voiceChannelKey) {
-    return navigationToRootTabHelper.popModalsAboveKey(voiceChannelKey);
+    return coerceMainRoute.popModalsAboveKey(voiceChannelKey);
   },
   popAll() {
-    navigationToRootTabHelper.popAllModals();
-    const obj = navigationToRootTabHelper;
+    coerceMainRoute.popAllModals();
+    const obj = coerceMainRoute;
     dispatcher.dispatch({ type: "MODAL_POP_ALL" });
     const obj2 = dispatcher;
     dispatcher.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" });

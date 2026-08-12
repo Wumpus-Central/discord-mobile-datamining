@@ -49,33 +49,33 @@ function YouStatusRadioGroup() {
   const memo = importAllResult.useMemo(() => {
     let obj = { icon: null, value: null };
     obj = { source: null, variant: "text-status-online" };
-    obj[0] = callback(13373);
-    obj[0] = callback2(setting(5380).TableRowIcon, obj);
+    obj[0] = callback(13430);
+    obj[0] = callback2(setting(5419).TableRowIcon, obj);
     obj[1] = constants.ONLINE;
     const items = [obj, , , ];
     obj = { icon: null, value: null };
     const obj1 = { source: null, variant: "text-status-idle" };
-    obj1[0] = callback(13370);
-    obj[0] = callback2(setting(5380).TableRowIcon, obj1);
+    obj1[0] = callback(13427);
+    obj[0] = callback2(setting(5419).TableRowIcon, obj1);
     obj[1] = constants.IDLE;
     items[1] = obj;
     const obj2 = { icon: null, value: null };
     const obj3 = { source: null, variant: "text-status-dnd" };
-    obj3[0] = callback(13371);
-    obj2[0] = callback2(setting(5380).TableRowIcon, obj3);
+    obj3[0] = callback(13428);
+    obj2[0] = callback2(setting(5419).TableRowIcon, obj3);
     obj2[1] = constants.DND;
     items[2] = obj2;
     const obj4 = { icon: null, value: null };
     const obj5 = { source: null, variant: "text-status-offline" };
-    obj5[0] = callback(13372);
-    obj4[0] = callback2(setting(5380).TableRowIcon, obj5);
+    obj5[0] = callback(13429);
+    obj4[0] = callback2(setting(5419).TableRowIcon, obj5);
     obj4[1] = constants.INVISIBLE;
     items[3] = obj4;
     return items;
   }, []);
-  const StatusSetting = setting(3993).StatusSetting;
+  const StatusSetting = setting(4034).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(3993).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(4034).StatusExpiresAtSetting;
   let closure_1 = StatusExpiresAtSetting.useSetting();
   let items = [setting];
   const callback = importAllResult.useCallback((nextStatus) => {
@@ -108,7 +108,7 @@ function YouStatusRadioGroup() {
     obj.subLabel = formatToPlainStringResult;
     return outer1_19(setting(outer1_3[23]).TableRadioRow, obj, value.value);
   });
-  return callback(setting(7987).TableRadioGroup, obj);
+  return callback(setting(8026).TableRadioGroup, obj);
 }
 function ThemeRadioGroup() {
   const tmp2 = useIsMobileVisualRefreshExperimentEnabled("ThemeRadioGroup");
@@ -116,11 +116,11 @@ function ThemeRadioGroup() {
   const items = [handleThemeChange];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   const callback = importAllResult.useCallback((arg0) => {
-    const result = callback(14427).resetBackgroundGradientPreset();
-    const obj = callback(14427);
-    callback(11360).resetCustomTheme();
-    const obj2 = callback(11360);
-    callback2(8704).updateTheme(arg0);
+    const result = callback(14484).resetBackgroundGradientPreset();
+    const obj = callback(14484);
+    callback(11414).resetCustomTheme();
+    const obj2 = callback(11414);
+    callback2(8743).updateTheme(arg0);
   }, []);
   obj = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
   const intl = getSystemLocale.intl;
@@ -136,11 +136,11 @@ function ThemeRadioGroup() {
   let tmp6Result = tmp2;
   if (tmp2) {
     const obj1 = { icon: null, label: null, value: null };
-    obj1[0] = tmp6(tmp3(15508).ThemeGrayIcon, {});
+    obj1[0] = tmp6(tmp3(15564).ThemeGrayIcon, {});
     let tmp3Result = tmp3(1347);
     obj1[1] = tmp3Result.getThemeName(tmp9.DARK, true);
     obj1[2] = tmp9.DARK;
-    tmp6Result = tmp6(tmp3(7986).TableRadioRow, obj1);
+    tmp6Result = tmp6(tmp3(8025).TableRadioRow, obj1);
   }
   let obj2 = { children: null };
   items1[1] = tmp6Result;
@@ -165,7 +165,7 @@ function YouAccountRadioGroup() {
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   multiAccountUsers = stateFromStores;
-  let obj1 = multiAccountUsers(15097);
+  let obj1 = multiAccountUsers(15154);
   multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   let stateFromStores1 = multiAccountUsers;
   stateFromStores1 = undefined;
@@ -188,7 +188,7 @@ function YouAccountRadioGroup() {
       str2 = "never";
     }
     obj = { label: outer1_1(outer1_3[35]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    obj = { user: obj, guildId: "Array", size: "Array" };
+    obj = { user: obj, guildId: "Array", size: -1 };
     obj[2] = outer1_0(outer1_3[36]).AvatarSizes.REFRESH_MEDIUM_32;
     obj[3] = outer1_19(outer1_0(outer1_3[36]).Avatar, obj);
     return obj;
@@ -207,7 +207,7 @@ function YouAccountRadioGroup() {
     obj[0] = tmp3.manage;
     obj1 = { onPress: null, children: null };
     obj1[0] = function onPress() {
-      return stateFromStores1(15510)();
+      return stateFromStores1(15566)();
     };
     let str = "text-link";
     if (tmp2) {
@@ -217,8 +217,8 @@ function YouAccountRadioGroup() {
     obj2[1] = str;
     const intl = tmp4(1236).intl;
     obj2[2] = intl.string(tmp4(1236).t.HxrBOZ);
-    obj1[1] = closure_19(tmp4(4299).Text, obj2);
-    obj[1] = closure_19(tmp4(4846).PressableOpacity, obj1);
+    obj1[1] = closure_19(tmp4(4340).Text, obj2);
+    obj[1] = closure_19(tmp4(4886).PressableOpacity, obj1);
     const items4 = [closure_19(closure_5, obj), ];
     const obj3 = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
     const intl2 = tmp4(1236).intl;
@@ -227,9 +227,9 @@ function YouAccountRadioGroup() {
     obj3[2] = stateFromStores.id;
     obj3[4] = memo.map((value) => {
       const merged = Object.assign(value);
-      return callback(multiAccountUsers(7986).TableRadioRow, {}, value.value);
+      return callback(multiAccountUsers(8025).TableRadioRow, {}, value.value);
     });
-    items4[1] = closure_19(tmp4(7987).TableRadioGroup, obj3);
+    items4[1] = closure_19(tmp4(8026).TableRadioGroup, obj3);
     obj[1] = items4;
     tmp10Result = closure_20(tmp11, obj);
     const tmp10 = closure_20;
@@ -253,16 +253,16 @@ function FocusModeSetting() {
     tmp5Result[1] = intl2.string(currentLocale(1236).t.wCxBOc);
     let obj = { style: null };
     obj[0] = tmp.leadingIcon;
-    tmp5Result[2] = callback(currentLocale(9736).BellSlashIcon, obj);
+    tmp5Result[2] = callback(currentLocale(9777).BellSlashIcon, obj);
     tmp5Result[3] = function onValueChange(arg0) {
       if (arg0) {
         let obj = { onSelect: null };
         obj[0] = function onSelect(quiet_mode_enabled) {
-          callback(9768).setFocusMode(quiet_mode_enabled, arg1);
-          const obj = callback(9768);
-          callback2(4271).hideActionSheet();
-          const obj2 = callback2(4271);
-          const result = callback(15505).showYouAccountActionSheet();
+          callback(9809).setFocusMode(quiet_mode_enabled, arg1);
+          const obj = callback(9809);
+          callback2(4312).hideActionSheet();
+          const obj2 = callback2(4312);
+          const result = callback(15561).showYouAccountActionSheet();
         };
         callback2(paths[20]).openLazy(callback(paths[49])(paths[48], paths.paths), "FocusModeOptionsActionSheet", obj);
         let obj2 = callback2(paths[20]);
@@ -279,9 +279,9 @@ function FocusModeSetting() {
       let stringResult = intl4.string(currentLocale(1236).t.i0nsoY);
       const obj1 = { hasIcons: true, children: null };
       tmp5Result[6] = stringResult;
-      tmp5Result = tmp5(currentLocale(5768).TableSwitchRow, tmp5Result);
+      tmp5Result = tmp5(currentLocale(5807).TableSwitchRow, tmp5Result);
       obj1[1] = tmp5Result;
-      tmp5Result = tmp5(currentLocale(5767).TableRowGroup, obj1);
+      tmp5Result = tmp5(currentLocale(5806).TableRowGroup, obj1);
     }
     const intl5 = currentLocale(1236).intl;
     let obj2 = { endTime: null };
@@ -316,14 +316,14 @@ function CustomStatus() {
     }
     tmp8 = null != emoji;
   }
-  let tmp2Result = tmp2(9457);
+  let tmp2Result = tmp2(9497);
   let state1;
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
   let gameMentionsAsPlainText = tmp2Result.useGameMentionsAsPlainText(state1);
   const tmp12 = useIsMobileVisualRefreshExperimentEnabled("CustomStatus");
-  tmp2Result = tmp2(4024);
+  tmp2Result = tmp2(4065);
   const token1 = tmp2Result.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
   const token2 = map.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_COLOR);
   obj = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
@@ -355,12 +355,12 @@ function CustomStatus() {
   }
   obj[3] = formatToPlainStringResult;
   obj[4] = function onPress() {
-    let obj = callback2(4271);
+    let obj = callback2(4312);
     obj.hideActionSheet();
     obj = { analyticsLocations: null };
-    const items = [callback2(5748).YOU_ACCOUNT_ACTION_SHEET];
+    const items = [callback2(5787).YOU_ACCOUNT_ACTION_SHEET];
     obj[0] = items;
-    const result = callback(9460).openEditCustomStatusModal(obj);
+    const result = callback(9500).openEditCustomStatusModal(obj);
   };
   let emoji1;
   if (customStatusActivity != null) {
@@ -370,11 +370,11 @@ function CustomStatus() {
     const obj2 = { emoji: null, size: null };
     obj2[0] = customStatusActivity.emoji;
     obj2[1] = token;
-    let tmp15Result = tmp15(tmp5(9529), obj2);
+    let tmp15Result = tmp15(tmp5(9569), obj2);
   } else {
     const obj3 = { size: "md", style: null };
     obj3[1] = tmp.leadingIcon;
-    tmp15Result = tmp15(tmp2(7657).ReactionIcon, obj3);
+    tmp15Result = tmp15(tmp2(7696).ReactionIcon, obj3);
   }
   let items = [tmp15Result, ];
   let str3 = "text-md/semibold";
@@ -401,16 +401,16 @@ function CustomStatus() {
     const obj5 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
     obj5[0] = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
-      callback2(9467)();
+      callback2(9507)();
     };
     const intl4 = tmp2(1236).intl;
     obj5[2] = intl4.string(tmp2(1236).t.wfYTHe);
     obj5[3] = tmp.customStatusRemoveButton;
     const obj6 = { style: null, source: null };
     obj6[0] = tmp.trailingIcon;
-    obj6[1] = tmp5(8062);
+    obj6[1] = tmp5(8101);
     obj5[4] = tmp15(closure_6, obj6);
-    tmp15Result = tmp15(tmp2(4846).PressableOpacity, obj5);
+    tmp15Result = tmp15(tmp2(4886).PressableOpacity, obj5);
   }
   const tmp2Result1 = map;
   items1[1] = tmp15Result;

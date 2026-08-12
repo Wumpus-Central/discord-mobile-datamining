@@ -90,8 +90,8 @@ export const RoleDot = function RoleDot(background) {
         obj5[2] = { x: 1, y: 0 };
         const items6 = [tmp.dot, obj1];
         obj5[3] = items6;
-        let tmp12Result = tmp12(tmp5(4725), obj5);
-        const tmp5Result = tmp5(4725);
+        let tmp12Result = tmp12(tmp5(4765), obj5);
+        const tmp5Result = tmp5(4765);
       }
       items4[1] = tmp12Result;
       obj3[1] = items4;

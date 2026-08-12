@@ -5,7 +5,7 @@ import fetchFingerprint from "fetchFingerprint";
 import { jsx } from "jsxProd";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useGlobalStatusIndicatorState } from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
-import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { componentDidMount } from "StatusBar.android.tsx";
 
 const require = arg1;
@@ -15,8 +15,8 @@ export default function ThemedStatusBar() {
   let obj = initialize;
   const items = [fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => authenticated.isAuthenticated());
-  const isModalOpen = navigationToRootTabHelper.useIsModalOpen();
-  const obj2 = navigationToRootTabHelper;
+  const isModalOpen = coerceMainRoute.useIsModalOpen();
+  const obj2 = coerceMainRoute;
   const items1 = [handleThemeChange];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => callback(table[6]).isThemeDark(theme.theme));
   const obj3 = initialize;

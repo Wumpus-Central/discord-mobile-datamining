@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
-import { registerAsset } from "../../../../../../../_runtime/08157_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08196_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import { getPremiumGroupInviteEmbedText } from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";

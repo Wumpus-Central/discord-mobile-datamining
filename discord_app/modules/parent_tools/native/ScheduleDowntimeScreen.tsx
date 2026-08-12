@@ -569,9 +569,9 @@ export default function ScheduleDowntimeScreen() {
     obj10[1] = callback2(tmp2(stringResult[14]).Text, obj11);
     obj10[3] = function handleStartTimePress() {
       const intl = tmp(rule[15]).intl;
-      const f110894 = (first1) => {
+      const f111124 = (first1) => {
         callback(first1);
-        let obj = f110894(outer1_2[19]);
+        let obj = f111124(outer1_2[19]);
         const result = (obj.timeToMinutes(first1) + 540) % 1440;
         obj = { hours: Math.floor(result / 60), minutes: result % 60 };
         callback2(obj);

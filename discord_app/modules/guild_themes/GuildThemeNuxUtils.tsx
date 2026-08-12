@@ -40,7 +40,7 @@ function _saveGuildThemeNuxPreference() {
             } else {
               let handleConnectionClosedOrResumed = tmp5;
               let asyncGeneratorStep = tmp2;
-              let GuildThemeSourcePreference = callback(4235).GuildThemeSourcePreference;
+              let GuildThemeSourcePreference = callback(4276).GuildThemeSourcePreference;
               if (dependencyMap) {
                 let GUILD = GuildThemeSourcePreference.PERSONAL;
               } else {
@@ -101,9 +101,9 @@ let result = require("GuildThemeSourcePreference").fileFinishedImporting("module
 export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
   defaultGuildThemePreference = defaultGuildThemePreference.getDefaultGuildThemePreference();
   if (defaultGuildThemePreference === GuildThemeSourcePreference.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = tmp2(4235).GuildThemeSourcePreference.PERSONAL;
+    let GUILD = tmp2(4276).GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = tmp2(4235).GuildThemeSourcePreference.GUILD;
+    GUILD = tmp2(4276).GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };

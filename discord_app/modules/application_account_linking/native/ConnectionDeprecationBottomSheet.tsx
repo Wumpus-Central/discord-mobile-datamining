@@ -28,7 +28,7 @@ function ConnectionIcon(arg0) {
   const source = getAvatarURL.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
   const obj2 = getAvatarURL;
-  obj[0] = tmp2(4716).IconSizes.CUSTOM;
+  obj[0] = tmp2(4756).IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
   obj[1] = callback(IconSizes, obj);
@@ -214,7 +214,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(5734).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(5773).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorize(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

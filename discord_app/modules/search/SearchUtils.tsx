@@ -9,7 +9,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { SearchTabs } from "MessageEmbedTypes";
 import ME from "ME";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03902_t.js";
+import { t } from "../../../_runtime/03943_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getMatch } from "../../lib/QueryTokenizer.tsx";
 import { nameFromUser } from "../../utils/UserUtils.tsx";
@@ -510,7 +510,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       }
     }
     let tmp4;
-    if (currentToken.type === tmp3(11721).NON_TOKEN_TYPE) {
+    if (currentToken.type === tmp3(11778).NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
     obj4 = { type: null, filter: null, token: null };

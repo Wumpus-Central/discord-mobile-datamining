@@ -37,7 +37,7 @@ class WishlistEmptyState {
     tmp2 = closure_2;
     obj = require("useIsMobileWishlistSuggestionsEnabled");
     isMobileWishlistSuggestionsEnabled = obj.useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
-    tmp4 = f54586(isMobileWishlistSuggestionsEnabled);
+    tmp4 = f54759(isMobileWishlistSuggestionsEnabled);
     obj2 = require("ManaContext");
     obj3 = require("AccessibilityAnnouncer");
     str = "mobile-text-heading-primary";
@@ -165,11 +165,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
   let stateFromStores;
   let c7;
   let stateFromStores5;
+  let isShopStandalonePdpMobileEnabled;
   let isEligibleForSocialLayerStorefrontMobilePurchasing;
   let memo1;
   let stateFromStoresArray;
   let memo2;
-  let addSku;
+  let createUserWidgetFromServer;
   ({ containerWidth, maxWidth, isVisible } = wishlistId);
   let tmp = callback2();
   ({ cardWidth: c1, rowWidth } = importDefault(context[32])({ containerWidth, maxWidth }));
@@ -200,7 +201,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
   const stateFromStores3 = obj6.useStateFromStores(items3, () => {
     let wishlistSettings = null;
     if (null != stateFromStores) {
-      wishlistSettings = outer1_14.getWishlistSettings(tmp.userId, closure_0);
+      wishlistSettings = wishlistSettings.getWishlistSettings(tmp.userId, closure_0);
     }
     return wishlistSettings;
   }, items4);
@@ -209,8 +210,8 @@ export default function UserProfileWishlistGrid(wishlistId) {
     visibility = stateFromStores3.visibility;
   }
   let tmp6Result = tmp6(tmp3[35]);
-  let items5 = [memo2];
-  const stateFromStores4 = tmp6Result.useStateFromStores(items5, () => memo2.getCurrentUser());
+  let items5 = [stateFromStoresArray];
+  const stateFromStores4 = tmp6Result.useStateFromStores(items5, () => stateFromStoresArray.getCurrentUser());
   let id;
   if (stateFromStores4 != null) {
     id = stateFromStores4.id;
@@ -219,15 +220,15 @@ export default function UserProfileWishlistGrid(wishlistId) {
   if (stateFromStores != null) {
     userId = stateFromStores.userId;
   }
-  let tmp41Result = id === userId;
-  c7 = tmp41Result;
+  let tmp42Result = id === userId;
+  c7 = tmp42Result;
   tmp6Result = tmp6(tmp3[35]);
-  let items6 = [memo2];
+  let items6 = [stateFromStoresArray];
   let items7 = [stateFromStores];
   stateFromStores5 = tmp6Result.useStateFromStores(items6, () => {
     let user = null;
     if (null != stateFromStores) {
-      user = memo2.getUser(tmp.userId);
+      user = stateFromStoresArray.getUser(tmp.userId);
     }
     return user;
   }, items7);
@@ -235,6 +236,9 @@ export default function UserProfileWishlistGrid(wishlistId) {
     const nsfwAllowed = stateFromStores5.nsfwAllowed;
   }
   let tmp19 = visibility === tmp6(tmp3[36]).WishlistVisibility.PRIVATE;
+  const tmp13 = stateFromStoresArray;
+  let tmp4 = importDefault(context[32])({ containerWidth, maxWidth });
+  isShopStandalonePdpMobileEnabled = _require(context[37]).useIsShopStandalonePdpMobileEnabled("product_details_action_sheet");
   let intl = tmp6(tmp3[28]).intl;
   const string = intl.string;
   const t = tmp6(tmp3[28]).t;
@@ -243,18 +247,17 @@ export default function UserProfileWishlistGrid(wishlistId) {
   } else {
     stringResult = string(t.d78ChW);
   }
-  const tmp13 = memo2;
-  let tmp4 = importDefault(context[32])({ containerWidth, maxWidth });
-  isEligibleForSocialLayerStorefrontMobilePurchasing = _require(context[37]).useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "user_profile_wishlist_grid" });
-  let obj10 = analyticsLocations;
-  const items8 = [stateFromStores, tmp41Result, isEligibleForSocialLayerStorefrontMobilePurchasing];
+  const tmp6Result1 = _require(context[37]);
+  isEligibleForSocialLayerStorefrontMobilePurchasing = _require(context[38]).useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "user_profile_wishlist_grid" });
+  let obj11 = analyticsLocations;
+  let items8 = [stateFromStores, tmp42Result, isEligibleForSocialLayerStorefrontMobilePurchasing];
   const memo = analyticsLocations.useMemo(() => {
     let found;
     if (stateFromStores != null) {
       const items = stateFromStores.items;
       found = items.filter((sku) => {
-        let obj = outer1_0(outer1_2[38]);
-        obj = { isWishlistOwner: initialize, isSocialLayerStorefrontMobilePurchasingEnabled: closure_9 };
+        let obj = outer1_0(outer1_2[39]);
+        obj = { isWishlistOwner: initialize, isSocialLayerStorefrontMobilePurchasingEnabled: closure_10 };
         return obj.isEligibleWishlistItemOnMobile(sku, obj);
       });
     }
@@ -268,14 +271,14 @@ export default function UserProfileWishlistGrid(wishlistId) {
     let found;
     if (stateFromStores != null) {
       const items = stateFromStores.items;
-      found = items.filter(isEligibleForSocialLayerStorefrontMobilePurchasing);
+      found = items.filter(isShopStandalonePdpMobileEnabled);
     }
     if (found == null) {
       found = [];
     }
     return found;
   }, items9);
-  const tmp6Result1 = _require(context[37]);
+  const tmp6Result2 = _require(context[38]);
   const items10 = [c7];
   const items11 = [memo1, stateFromStores5];
   stateFromStoresArray = _require(context[35]).useStateFromStoresArray(items10, () => {
@@ -289,14 +292,14 @@ export default function UserProfileWishlistGrid(wishlistId) {
   }, items11);
   const items12 = [stateFromStoresArray];
   memo2 = analyticsLocations.useMemo(() => new Set(stateFromStoresArray), items12);
-  const items13 = [isEligibleForSocialLayerStorefrontMobilePurchasing, stateFromStores, tmp41Result];
+  const items13 = [isEligibleForSocialLayerStorefrontMobilePurchasing, stateFromStores, tmp42Result];
   const memo3 = analyticsLocations.useMemo(() => {
     let tmp = !isEligibleForSocialLayerStorefrontMobilePurchasing;
     if (!isEligibleForSocialLayerStorefrontMobilePurchasing) {
       let flag;
       if (stateFromStores != null) {
         const items = stateFromStores.items;
-        flag = items.some(memo1);
+        flag = items.some(isEligibleForSocialLayerStorefrontMobilePurchasing);
       }
       if (flag) {
         flag = c7;
@@ -309,12 +312,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
     return tmp;
   }, items13);
   obj = { wishlistId, onAction: trackUserProfileWishlistAction, productLines: null, isVisible: null };
-  let tmp27 = null;
-  tmp2Result = tmp2(tmp3[39]);
+  let tmp28 = null;
+  tmp2Result = tmp2(tmp3[40]);
   if (null != stateFromStores) {
-    tmp27 = stateFromStoresArray(stateFromStores);
+    tmp28 = memo1(stateFromStores);
   }
-  obj[2] = tmp27;
+  obj[2] = tmp28;
   obj[3] = isVisible;
   tmp2Result(obj);
   _require = undefined;
@@ -377,7 +380,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                 throwTypeErrorResult = outer1_3(obj1);
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = context;
-                const rootNavigationRef = lib(context[40]).getRootNavigationRef();
+                const rootNavigationRef = lib(context[41]).getRootNavigationRef();
                 if (null != rootNavigationRef) {
                   if (rootNavigationRef.isReady()) {
                     if (throwTypeErrorResult.skuProductLine !== outer2_18.PREMIUM) {
@@ -385,9 +388,9 @@ export default function UserProfileWishlistGrid(wishlistId) {
                         if (!c7) {
                           if (null != outer1_8) {
                             if (!throwTypeErrorResult.isOwned) {
-                              if (!outer1_12.has(throwTypeErrorResult.skuId)) {
-                                callback(context[24]).hideAllActionSheets();
-                                const obj19 = callback(context[24]);
+                              if (!outer1_13.has(throwTypeErrorResult.skuId)) {
+                                let obj18 = callback(context[24]);
+                                obj18.hideAllActionSheets();
                                 if (obj20.isCollectibleGiftingSupported()) {
                                   const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null, onNavigateAway: null };
                                   const items1 = [callback(context[26]).USER_PROFILE_WISHLIST];
@@ -395,7 +398,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   obj2[1] = callback(context[26]).USER_PROFILE_WISHLIST;
                                   obj2[2] = outer2_19.FEATURED_PAGE;
                                   obj2[3] = function onNavigateAway(arg0) {
-                                    callback(8789)({ userId: user.id, initialSection: outer1_16.WISHLIST });
+                                    callback(8828)({ userId: user.id, initialSection: outer1_16.WISHLIST });
                                   };
                                   const result = lib(context[25]).openCollectiblesShopMobile(obj2);
                                   const obj23 = lib(context[25]);
@@ -405,7 +408,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   obj3[1] = items2;
                                   obj3[2] = tmp69;
                                   obj3[3] = outer2_20.USER_PROFILE_WISHLIST;
-                                  lib(context[50]).openShopGiftModal(obj3);
+                                  lib(context[51]).openShopGiftModal(obj3);
                                   c7 = 3;
                                   let obj4 = { value: null, done: true };
                                   obj4[0] = undefined;
@@ -417,73 +420,85 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   c6 = 3;
                                   c7 = 1;
                                   const obj5 = { value: null, done: false };
-                                  obj5[0] = callback(context[51]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
+                                  obj5[0] = callback(context[52]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
                                   return obj5;
                                 }
-                                obj20 = lib(context[49]);
+                                obj20 = lib(context[50]);
                               }
                             }
                           }
                         }
-                        if (obj28.isCollectiblesShopOpen()) {
-                          throwTypeErrorResult = stateFromStores;
-                          product = stateFromStores.getProduct(throwTypeErrorResult.skuId);
-                          throwTypeErrorResult = product;
-                          if (null == product) {
-                            throwTypeErrorResult = lib;
-                            throwTypeErrorResult = context;
-                            c6 = 1;
-                            c7 = 1;
-                            const obj6 = { value: null, done: false };
-                            obj6[0] = lib(context[25]).maybeFetchCollectiblesProduct(throwTypeErrorResult.skuId);
-                            return obj6;
-                          } else {
-                            throwTypeErrorResult = closure_2;
-                            throwTypeErrorResult = product;
-                            if (null != product) {
-                              throwTypeErrorResult = closure_2;
-                              throwTypeErrorResult = get;
-                              throwTypeErrorResult = lib;
-                              throwTypeErrorResult = context;
-                              let obj7 = { product: null, analyticsLocations: null };
-                              throwTypeErrorResult = product;
-                              obj7[0] = product;
-                              throwTypeErrorResult = callback;
-                              throwTypeErrorResult = context;
-                              const items3 = [callback(context[26]).USER_PROFILE_WISHLIST];
-                              obj7[1] = items3;
-                              throwTypeErrorResult = lib(context[53]).openProductDetailsActionSheet(obj7, "stack");
-                              const obj32 = lib(context[53]);
-                            } else {
-                              throwTypeErrorResult = get;
-                              throwTypeErrorResult = callback;
-                              throwTypeErrorResult = context;
-                              throwTypeErrorResult = callback(context[24]).hideAllActionSheets();
-                              const obj31 = callback(context[24]);
-                            }
-                            c7 = 3;
-                          }
-                        } else {
-                          const obj8 = { analyticsLocations: null, analyticsSource: null, initialProductSkuId: null, screen: null };
-                          const items4 = [callback(context[26]).USER_PROFILE_WISHLIST];
-                          obj8[0] = items4;
+                        if (outer1_9) {
+                          let tmp95Result = tmp95(tmp96[54]);
+                          const obj6 = { skuId: null, analyticsLocations: null };
+                          obj6[0] = throwTypeErrorResult.skuId;
                           throwTypeErrorResult = callback;
                           throwTypeErrorResult = context;
-                          obj8[1] = callback(context[26]).USER_PROFILE_WISHLIST;
-                          obj8[2] = throwTypeErrorResult.skuId;
-                          throwTypeErrorResult = outer2_19;
-                          obj8[3] = outer2_19.SHOP_ALL;
-                          throwTypeErrorResult = lib(context[25]).openCollectiblesShopMobile(obj8);
-                          const obj29 = lib(context[25]);
+                          const items3 = [callback(context[26]).USER_PROFILE_WISHLIST];
+                          obj6[1] = items3;
+                          throwTypeErrorResult = tmp95Result.openProductDetailsActionSheetForSku(obj6, "stack");
+                        } else {
+                          tmp95Result = tmp95(tmp96[25]);
+                          if (tmp95Result.isCollectiblesShopOpen()) {
+                            throwTypeErrorResult = stateFromStores;
+                            product = stateFromStores.getProduct(throwTypeErrorResult.skuId);
+                            throwTypeErrorResult = product;
+                            if (null == product) {
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = context;
+                              c6 = 1;
+                              c7 = 1;
+                              let obj7 = { value: null, done: false };
+                              obj7[0] = lib(context[25]).maybeFetchCollectiblesProduct(throwTypeErrorResult.skuId);
+                              return obj7;
+                            } else {
+                              throwTypeErrorResult = closure_2;
+                              throwTypeErrorResult = product;
+                              if (null != product) {
+                                throwTypeErrorResult = closure_2;
+                                throwTypeErrorResult = get;
+                                throwTypeErrorResult = lib;
+                                throwTypeErrorResult = context;
+                                const obj8 = { product: null, analyticsLocations: null };
+                                throwTypeErrorResult = product;
+                                obj8[0] = product;
+                                throwTypeErrorResult = callback;
+                                throwTypeErrorResult = context;
+                                const items4 = [callback(context[26]).USER_PROFILE_WISHLIST];
+                                obj8[1] = items4;
+                                throwTypeErrorResult = lib(context[54]).openProductDetailsActionSheet(obj8, "stack");
+                                const obj32 = lib(context[54]);
+                              } else {
+                                throwTypeErrorResult = get;
+                                throwTypeErrorResult = callback;
+                                throwTypeErrorResult = context;
+                                throwTypeErrorResult = callback(context[24]).hideAllActionSheets();
+                                const obj31 = callback(context[24]);
+                              }
+                              c7 = 3;
+                            }
+                          } else {
+                            let obj9 = { analyticsLocations: null, analyticsSource: null, initialProductSkuId: null, screen: null };
+                            throwTypeErrorResult = context;
+                            const items5 = [callback(context[26]).USER_PROFILE_WISHLIST];
+                            obj9[0] = items5;
+                            throwTypeErrorResult = callback;
+                            throwTypeErrorResult = context;
+                            obj9[1] = callback(context[26]).USER_PROFILE_WISHLIST;
+                            obj9[2] = throwTypeErrorResult.skuId;
+                            throwTypeErrorResult = outer2_19;
+                            obj9[3] = outer2_19.SHOP_ALL;
+                            throwTypeErrorResult = lib(context[25]).openCollectiblesShopMobile(obj9);
+                            const obj29 = lib(context[25]);
+                          }
                         }
-                        obj28 = lib(context[25]);
                       } else {
                         const sku = throwTypeErrorResult.sku;
                         product = sku;
                         if (sku == null) {
-                          product = addSku.get(throwTypeErrorResult.skuId);
+                          product = memo2.get(throwTypeErrorResult.skuId);
                         }
-                        let obj11 = lib(context[44]);
+                        let obj11 = lib(context[45]);
                         let isAndroidResult = obj11.isAndroid();
                         if (isAndroidResult) {
                           isAndroidResult = null != tmp48;
@@ -492,16 +507,16 @@ export default function UserProfileWishlistGrid(wishlistId) {
                           isAndroidResult = null == tmp48.googleSkuIds;
                         }
                         if (isAndroidResult) {
-                          let obj12 = lib(context[45]);
+                          let obj12 = lib(context[46]);
                           country = undefined;
                           if (country != null) {
                             country = country.country;
                           }
-                          let obj9 = { withGoogleSkuIds: true, countryCode: null };
-                          obj9[1] = country;
-                          const socialLayerStorefrontSkuForApplication = obj12.fetchSocialLayerStorefrontSkuForApplication(tmp48.applicationId, throwTypeErrorResult.skuId, obj9);
+                          let obj10 = { withGoogleSkuIds: true, countryCode: null };
+                          obj10[1] = country;
+                          const socialLayerStorefrontSkuForApplication = obj12.fetchSocialLayerStorefrontSkuForApplication(tmp48.applicationId, throwTypeErrorResult.skuId, obj10);
                         }
-                        let obj14 = lib(context[46]);
+                        let obj14 = lib(context[47]);
                         if (!c7) {
                           if (obj14.isSlayerSkuAvailableOnThisPlatform(tmp48)) {
                             if (null != outer1_8) {
@@ -510,39 +525,39 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = callback(context[24]).hideAllActionSheets();
                               throwTypeErrorResult = lib;
                               throwTypeErrorResult = context;
-                              const obj44 = callback(context[24]);
-                              let obj10 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null, onGiftModalDismiss: null };
-                              obj10[0] = throwTypeErrorResult.skuId;
+                              const obj46 = callback(context[24]);
+                              obj11 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null, onGiftModalDismiss: null };
+                              obj11[0] = throwTypeErrorResult.skuId;
                               throwTypeErrorResult = callback;
                               throwTypeErrorResult = context;
-                              const items5 = [callback(context[26]).USER_PROFILE_WISHLIST];
-                              obj10[1] = items5;
-                              obj10[2] = tmp59;
+                              const items6 = [callback(context[26]).USER_PROFILE_WISHLIST];
+                              obj11[1] = items6;
+                              obj11[2] = tmp59;
                               throwTypeErrorResult = outer2_20;
-                              obj10[3] = outer2_20.USER_PROFILE_WISHLIST;
-                              obj10[4] = function onGiftModalDismiss(validateRecipient, arg1) {
-                                callback(8789)({ userId: user.id, initialSection: outer1_16.WISHLIST });
+                              obj11[3] = outer2_20.USER_PROFILE_WISHLIST;
+                              obj11[4] = function onGiftModalDismiss(validateRecipient, arg1) {
+                                callback(8828)({ userId: user.id, initialSection: outer1_16.WISHLIST });
                               };
-                              throwTypeErrorResult = lib(context[47]).openSocialLayerStorefrontGiftModal(obj10);
-                              const obj45 = lib(context[47]);
+                              throwTypeErrorResult = lib(context[48]).openSocialLayerStorefrontGiftModal(obj11);
+                              const obj47 = lib(context[48]);
                             }
                           }
                         }
                         let obj15 = callback(context[24]);
                         obj15.hideAllActionSheets();
-                        let obj16 = lib(context[47]);
-                        obj11 = { skuId: null, analyticsLocations: null };
-                        obj11[0] = throwTypeErrorResult.skuId;
-                        const items6 = [callback(context[26]).USER_PROFILE_WISHLIST];
-                        obj11[1] = items6;
-                        const result1 = obj16.openSocialLayerStorefrontProductDetailsModal(obj11);
+                        let obj16 = lib(context[48]);
+                        obj12 = { skuId: null, analyticsLocations: null };
+                        obj12[0] = throwTypeErrorResult.skuId;
+                        const items7 = [callback(context[26]).USER_PROFILE_WISHLIST];
+                        obj12[1] = items7;
+                        const result1 = obj16.openSocialLayerStorefrontProductDetailsModal(obj12);
                       }
                     } else {
                       throwTypeErrorResult = c7;
                       if (c7) {
                         obj9 = callback(context[24]);
                         obj9.hideAllActionSheets();
-                        obj10 = lib(context[42]);
+                        obj10 = lib(context[43]);
                         const result2 = obj10.navigateToPremiumHomePage();
                       } else if (null != outer1_8) {
                         throwTypeErrorResult = callback;
@@ -550,27 +565,27 @@ export default function UserProfileWishlistGrid(wishlistId) {
                         throwTypeErrorResult = callback(context[24]).hideAllActionSheets();
                         throwTypeErrorResult = lib;
                         throwTypeErrorResult = context;
-                        const obj41 = callback(context[24]);
-                        obj12 = { recipientUserId: null, premiumType: null, analyticsLocations: null };
-                        obj12[0] = tmp40.id;
+                        const obj43 = callback(context[24]);
+                        const obj13 = { recipientUserId: null, premiumType: null, analyticsLocations: null };
+                        obj13[0] = tmp40.id;
                         throwTypeErrorResult = outer2_21;
-                        obj12[1] = outer2_21[throwTypeErrorResult.skuId];
+                        obj13[1] = outer2_21[throwTypeErrorResult.skuId];
                         throwTypeErrorResult = callback;
                         throwTypeErrorResult = context;
-                        const items7 = [callback(context[26]).USER_PROFILE_WISHLIST];
-                        obj12[2] = items7;
-                        throwTypeErrorResult = lib(context[43]).openGiftModal(obj12);
-                        const obj42 = lib(context[43]);
+                        const items8 = [callback(context[26]).USER_PROFILE_WISHLIST];
+                        obj13[2] = items8;
+                        throwTypeErrorResult = lib(context[44]).openGiftModal(obj13);
+                        const obj44 = lib(context[44]);
                       }
                     }
                   }
                 }
-                obj7 = callback(context[41]);
-                const obj13 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
+                obj7 = callback(context[42]);
+                obj14 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
                 const intl2 = lib(context[28]).intl;
-                obj13[1] = intl2.string(lib(context[28]).t["rTU7/z"]);
-                obj7.open(obj13);
-                const obj39 = lib(context[40]);
+                obj14[1] = intl2.string(lib(context[28]).t["rTU7/z"]);
+                obj7.open(obj14);
+                const obj41 = lib(context[41]);
               }
             } else if (1 === tmp8) {
               if (arg0 === 1) {
@@ -578,9 +593,9 @@ export default function UserProfileWishlistGrid(wishlistId) {
                 throw arg1;
               } else if (arg0 === 2) {
                 c7 = 3;
-                obj14 = { value: null, done: true };
-                obj14[0] = arg1;
-                return obj14;
+                obj15 = { value: null, done: true };
+                obj15[0] = arg1;
+                return obj15;
               } else {
                 product = stateFromStores.getProduct(lib.skuId);
               }
@@ -591,17 +606,17 @@ export default function UserProfileWishlistGrid(wishlistId) {
                 const _JSON = JSON;
                 const _HermesInternal = HermesInternal;
                 outer2_25.error("Error performing web handoff: " + JSON.stringify(closure_2));
-                obj1 = lib(context[52]);
-                obj15 = { tags: null };
-                obj16 = { source: "UserProfileWishlistGrid", skuId: null };
-                obj16[1] = lib.skuId;
-                obj15[0] = obj16;
-                const result3 = obj1.captureBillingException(closure_2, obj15);
-                obj4 = callback(context[41]);
-                const obj17 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
+                obj1 = lib(context[53]);
+                obj16 = { tags: null };
+                const obj17 = { source: "UserProfileWishlistGrid", skuId: null };
+                obj17[1] = lib.skuId;
+                obj16[0] = obj17;
+                const result3 = obj1.captureBillingException(closure_2, obj16);
+                obj4 = callback(context[42]);
+                obj18 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
                 const intl = lib(context[28]).intl;
-                obj17[1] = intl.string(lib(context[28]).t["rTU7/z"]);
-                obj4.open(obj17);
+                obj18[1] = intl.string(lib(context[28]).t["rTU7/z"]);
+                obj4.open(obj18);
               } else if (arg0 === 1) {
                 c7 = 3;
                 throw arg1;
@@ -630,13 +645,14 @@ export default function UserProfileWishlistGrid(wishlistId) {
       }
     })();
   });
-  const items14 = [wishlistId, trackUserProfileWishlistAction, tmp41Result, stateFromStores5, memo2, ];
+  const items14 = [wishlistId, trackUserProfileWishlistAction, tmp42Result, stateFromStores5, memo2, , ];
   let country;
   if (storeFront != null) {
     country = storeFront.country;
   }
   items14[5] = country;
-  addSku = obj10.useCallback(function() {
+  items14[6] = isShopStandalonePdpMobileEnabled;
+  createUserWidgetFromServer = obj11.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -648,18 +664,18 @@ export default function UserProfileWishlistGrid(wishlistId) {
   }, items14);
   const items15 = [wishlistId, context, analyticsLocations, trackUserProfileWishlistAction, stateFromStores];
   const items16 = [trackUserProfileWishlistAction, wishlistId];
-  const callback = obj10.useCallback(() => {
+  const callback = obj11.useCallback(() => {
     let obj = { action: outer1_15.PRESS_EDIT_WISHLIST, wishlistId: callback, productLines: null };
     let tmp4;
     if (null != stateFromStores) {
-      tmp4 = stateFromStoresArray(tmp3);
+      tmp4 = memo1(tmp3);
     }
     obj[2] = tmp4;
     trackUserProfileWishlistAction(obj);
     obj = { wishlistId: callback, analyticsContext: context, analyticsLocations };
-    _undefined(context[24]).openLazy(callback(context[55])(context[54], context.paths), "EditWishlistActionSheet", obj, "stack");
+    _undefined(context[24]).openLazy(callback(context[56])(context[55], context.paths), "EditWishlistActionSheet", obj, "stack");
   }, items15);
-  const callback1 = obj10.useCallback(() => {
+  const callback1 = obj11.useCallback(() => {
     let obj = { action: outer1_15.PRESS_ADD_WISHLIST_ITEM, wishlistId: callback, productLines: null };
     const items = [outer1_18.COLLECTIBLES];
     obj[2] = new Set(items);
@@ -687,13 +703,13 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj[0] = memo3;
     return callback(WishlistEmptyState, obj);
   } else {
-    if (tmp41Result) {
+    if (tmp42Result) {
       if (!tmp19) {
         tmp19 = false === nsfwAllowed;
       }
-      tmp41Result = tmp19;
+      tmp42Result = tmp19;
     }
-    if (tmp41Result) {
+    if (tmp42Result) {
       obj1 = { style: null, children: null };
       const items17 = [, ];
       ({ disclaimer: arr19[0], disclaimerTop: arr19[1] } = tmp);
@@ -703,9 +719,9 @@ export default function UserProfileWishlistGrid(wishlistId) {
       obj2[2] = stringResult;
       items18[1] = callback(tmp6(tmp3[27]).Text, obj2);
       obj1[1] = items18;
-      tmp41Result = tmp41(storeFront, obj1);
+      tmp42Result = tmp42(storeFront, obj1);
     }
-    const items19 = [tmp41Result, , , ];
+    const items19 = [tmp42Result, , , ];
     obj3 = { style: null, children: null };
     obj3[0] = tmp.headerRow;
     obj4 = { variant: "text-sm/semibold", color: "text-muted", children: null };
@@ -714,32 +730,32 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj5[0] = memo.length;
     obj4[2] = intl2.formatToPlainString(tmp6(tmp3[28]).t.r6Y1Lg, obj5);
     const items20 = [callback(tmp6(tmp3[27]).Text, obj4), ];
-    if (tmp41Result) {
+    if (tmp42Result) {
       obj6 = { style: null, children: null };
       obj6[0] = tmp.headerButtons;
       let obj7 = { size: "sm", variant: "secondary", icon: null, text: null, onPress: null };
-      obj7[2] = tmp37(tmp6(tmp3[30]).PlusMediumIcon, { size: "xs" });
+      obj7[2] = tmp38(tmp6(tmp3[30]).PlusMediumIcon, { size: "xs" });
       const intl3 = tmp6(tmp3[28]).intl;
       obj7[3] = intl3.string(tmp6(tmp3[28]).t.SDUwM0);
       obj7[4] = callback1;
-      const items21 = [tmp37(tmp6(tmp3[29]).Button, obj7), ];
+      const items21 = [tmp38(tmp6(tmp3[29]).Button, obj7), ];
       let obj8 = { size: "sm", variant: "secondary", icon: null, onPress: null, accessibilityLabel: null };
       let obj9 = { size: "sm", color: null };
       obj9[1] = tmp2(tmp3[19]).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
-      obj8[2] = tmp37(tmp6(tmp3[57]).PencilIcon, obj9);
+      obj8[2] = tmp38(tmp6(tmp3[58]).PencilIcon, obj9);
       obj8[3] = callback;
       const intl4 = tmp6(tmp3[28]).intl;
       obj8[4] = intl4.string(tmp6(tmp3[28]).t.bt75uw);
-      items21[1] = tmp37(tmp6(tmp3[56]).IconButton, obj8);
+      items21[1] = tmp38(tmp6(tmp3[57]).IconButton, obj8);
       obj6[1] = items21;
-      tmp41Result = tmp41(tmp36, obj6);
+      tmp42Result = tmp42(tmp37, obj6);
     }
-    items20[1] = tmp41Result;
+    items20[1] = tmp42Result;
     obj3[1] = items20;
     items19[1] = closure_23(storeFront, obj3);
-    obj10 = { style: null, children: null };
+    let obj10 = { style: null, children: null };
     obj10[0] = tmp.gridWrapper;
-    let obj11 = { style: null, children: null };
+    obj11 = { style: null, children: null };
     const items22 = [tmp.itemsContainer, tmp5];
     obj11[0] = items22;
     obj11[1] = memo.map((sku) => {
@@ -749,7 +765,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
         const obj = { sku: null, isOwned: null, onPress: null, size: null, wishlistOwnerId: null };
         ({ sku: obj[0], isOwned: obj[1] } = sku);
         obj[2] = function onPress() {
-          return outer1_13(closure_0);
+          return outer1_14(closure_0);
         };
         obj[3] = _undefined;
         let id;
@@ -757,33 +773,33 @@ export default function UserProfileWishlistGrid(wishlistId) {
           id = stateFromStores5.id;
         }
         obj[4] = id;
-        tmp = outer1_22(_undefined(context[58]), obj, sku.skuId);
+        tmp = outer1_22(_undefined(context[59]), obj, sku.skuId);
         const tmp2 = outer1_22;
-        const tmp5 = _undefined(context[58]);
+        const tmp5 = _undefined(context[59]);
       }
       return tmp;
     });
     obj10[1] = callback(storeFront, obj11);
     items19[2] = callback(storeFront, obj10);
-    let tmp41Result1 = memo3;
+    let tmp42Result1 = memo3;
     if (memo3) {
       let obj12 = { style: null, children: null };
       const items23 = [, ];
       ({ disclaimer: arr25[0], disclaimerBottom: arr25[1] } = tmp);
       obj12[0] = items23;
-      const items24 = [tmp37(tmp6(tmp3[31]).CircleInformationIcon, { size: "sm" }), ];
+      const items24 = [tmp38(tmp6(tmp3[31]).CircleInformationIcon, { size: "sm" }), ];
       let obj13 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl5 = tmp6(tmp3[28]).intl;
       obj13[2] = intl5.string(tmp6(tmp3[28]).t.Wp9bEl);
-      items24[1] = tmp37(tmp6(tmp3[27]).Text, obj13);
+      items24[1] = tmp38(tmp6(tmp3[27]).Text, obj13);
       obj12[1] = items24;
-      tmp41Result1 = tmp41(tmp36, obj12);
+      tmp42Result1 = tmp42(tmp37, obj12);
     }
     let obj14 = { children: null };
-    items19[3] = tmp41Result1;
+    items19[3] = tmp42Result1;
     obj14[0] = items19;
     return closure_23(closure_24, obj14);
   }
-  const tmp6Result2 = _require(context[35]);
+  const tmp6Result3 = _require(context[35]);
 };
 export { WishlistEmptyState };

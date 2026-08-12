@@ -1,6 +1,6 @@
 // discord_app/lib/Frecency.tsx
 import { apply } from "../../_runtime/00012_apply.js";
-import { t } from "../../_runtime/03902_t.js";
+import { t } from "../../_runtime/03943_t.js";
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
   return Math.ceil(arg0 * (arg1 / numOfRecentUses.numOfRecentUses));
 }

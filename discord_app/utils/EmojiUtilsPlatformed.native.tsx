@@ -145,9 +145,9 @@ obj[1] = function filterUnsupportedEmojis(emojis) {
   if (!obj.isAndroid()) {
     found = apply.filter(emojis, (unicodeVersion) => {
       unicodeVersion = unicodeVersion.unicodeVersion;
-      const systemVersionMajor = callback(4283).getSystemVersionMajor();
-      const obj = callback(4283);
-      const systemVersionMinor = callback(4283).getSystemVersionMinor();
+      const systemVersionMajor = callback(4324).getSystemVersionMajor();
+      const obj = callback(4324);
+      const systemVersionMinor = callback(4324).getSystemVersionMinor();
       let flag = true;
       if (unicodeVersion > 8) {
         if (9 === unicodeVersion) {

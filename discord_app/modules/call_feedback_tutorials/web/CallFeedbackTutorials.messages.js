@@ -1,6 +1,8 @@
 // discord_app/modules/call_feedback_tutorials/web/CallFeedbackTutorials.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/03016_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03017_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03018_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03019_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03020_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../../_runtime/03043_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03044_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03045_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03046_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03047_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/03048_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

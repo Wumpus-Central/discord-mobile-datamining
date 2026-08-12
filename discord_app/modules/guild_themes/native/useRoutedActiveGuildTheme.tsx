@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ME } from "ME";
-import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import { resolveSavedActiveGuildTheme } from "../GuildThemeResolver.tsx";
 import { context } from "GuildThemeGuildIdOverrideContext.tsx";
@@ -84,7 +84,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
         if (rootState != null) {
           routes = rootState.routes;
           if (routes != null) {
-            const mapped = routes.map(navigationToRootTabHelper.coerceMainRoute);
+            const mapped = routes.map(coerceMainRoute.coerceMainRoute);
             found = mapped.find((arg0) => null != arg0);
           }
         }

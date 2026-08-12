@@ -12,13 +12,13 @@ export const getNoMutualFriendsSource = function getNoMutualFriendsSource(theme)
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(11973);
+      return callback(12030);
     },
     darker() {
-      return callback(11974);
+      return callback(12031);
     },
     light() {
-      return callback(11975);
+      return callback(12032);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useNoMutualFriendsSource = function useNoMutualFriendsSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(11973);
+      return callback(12030);
     },
     darker() {
-      return callback(11974);
+      return callback(12031);
     },
     light() {
-      return callback(11975);
+      return callback(12032);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const NoMutualFriends = function NoMutualFriends(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(11973);
+      return callback(12030);
     },
     darker() {
-      return callback(11974);
+      return callback(12031);
     },
     light() {
-      return callback(11975);
+      return callback(12032);
     }
   };
   obj = {};

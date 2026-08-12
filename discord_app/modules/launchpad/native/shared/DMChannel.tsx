@@ -24,10 +24,10 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = callback();
-  let obj = channel(15481);
+  let obj = channel(15537);
   const baseChannelUnreadBadgeState = obj.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(14561)(channel, { unread });
+  const tmp7 = flag(14618)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     let tmp2Result = tmp2(11);
@@ -40,9 +40,9 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const tmp4 = flag(16069)();
-  const fontScale = channel(4720).useFontScale();
-  tmp2Result = tmp2(16070);
+  const tmp4 = flag(16126)();
+  const fontScale = channel(4760).useFontScale();
+  tmp2Result = tmp2(16127);
   obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { onPress: null, onLongPress: null };
@@ -56,8 +56,8 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   obj[1] = importAllResult.useCallback(() => channel(outer1_2[4]).openChannelLongPressActionSheet(channel.id), items2);
   const merged = Object.assign(obj);
   const obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
-  const tmp5Result = channel(4720);
-  obj1[5] = jsx(flag(16073), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp5Result = channel(4760);
+  obj1[5] = jsx(flag(16130), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
     const obj3 = { channel: null, message: null, color: null, muted: null, layout: null };
@@ -65,15 +65,15 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     obj3[1] = tmp7;
     obj3[2] = str;
     obj3[3] = muted;
-    obj3[4] = tmp5(3998).ChannelListLayoutTypes.COMPACT;
-    tmp11Result = tmp11(tmp5(9795).ChannelRowPreview, obj3);
+    obj3[4] = tmp5(4039).ChannelListLayoutTypes.COMPACT;
+    tmp11Result = tmp11(tmp5(9836).ChannelRowPreview, obj3);
   }
   obj1[6] = tmp11Result;
   obj1[7] = extractTimestampResult;
-  obj1[8] = flag(4494)(channel);
+  obj1[8] = flag(4534)(channel);
   obj1[9] = fontScale;
-  obj.children = flag(16082)(obj1);
-  return tmp2Result(jsx(channel(4846).PressableHighlight, { onPress: null, onLongPress: null }));
+  obj.children = flag(16139)(obj1);
+  return tmp2Result(jsx(channel(4886).PressableHighlight, { onPress: null, onLongPress: null }));
 });
 const result = require("jsxProd").fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
 

@@ -2,7 +2,7 @@
 import checkForNewerBuild from "checkForNewerBuild";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
-import { t } from "../../../../../_runtime/03902_t.js";
+import { t } from "../../../../../_runtime/03943_t.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 
@@ -15,9 +15,9 @@ createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [checkForNewerBuild];
     if (obj.useStateFromStores(items, () => null !== checkForNewerBuild.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4253).DownloadIcon;
+      let RefreshIcon = tmp(4294).DownloadIcon;
     } else {
-      RefreshIcon = tmp(13856).RefreshIcon;
+      RefreshIcon = tmp(13913).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -54,8 +54,8 @@ createToggle = {
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
-      importAll(13263).openBuildInstaller(newBuild);
-      const obj2 = importAll(13263);
+      importAll(13320).openBuildInstaller(newBuild);
+      const obj2 = importAll(13320);
     } else {
       checkForNewerBuild.checkForNewerBuild();
     }

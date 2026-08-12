@@ -2,7 +2,7 @@
 import emitChanges from "emitChanges";
 import fetchFingerprint from "fetchFingerprint";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/07707_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07746_registerAsset.js";
 import { createReferralTrialEmbedRedeemable } from "../row_data/embeds/ReferralTrialEmbed.tsx";
 import { createReferralTrialEmbedRedesign } from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
@@ -35,7 +35,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessage(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = createCacheKey(theme);
-        obj.iconUrl = tmp8(8057).getAssetUriForEmbed(registerAsset);
+        obj.iconUrl = tmp8(8096).getAssetUriForEmbed(registerAsset);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
@@ -50,7 +50,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessage(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = createCacheKey(theme);
-        obj.iconUrl = tmp23(8057).getAssetUriForEmbed(registerAsset);
+        obj.iconUrl = tmp23(8096).getAssetUriForEmbed(registerAsset);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

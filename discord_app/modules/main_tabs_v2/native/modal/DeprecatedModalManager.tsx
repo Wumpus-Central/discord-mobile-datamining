@@ -11,7 +11,7 @@ import { isEligibleForSafetyFlowsExperiment } from "../../../safety_flows/Safety
 import { handleTouch } from "../../../user_required_action/native/NewTermsModal.tsx";
 import { PhoneThenEmailInterstitial } from "../../../verification/native/components/VerificationModal.tsx";
 import { UserRequiredActions } from "../../../verification/VerificationUtils.tsx";
-import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../helpers/NavigationRouteUtils.native.tsx";
 import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
 const require = arg1;
@@ -25,7 +25,7 @@ function handlePushedModal(arg0) {
   }
 }
 function handlePoppedModal() {
-  navigationToRootTabHelper.popModal();
+  coerceMainRoute.popModal();
 }
 function pushFirstOpenModal(arg0, arg1) {
   const iter = arg0[Symbol.iterator]();
@@ -122,15 +122,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(closure_16)) {
-          let tmp5Result = tmp5(4158);
+          let tmp5Result = tmp5(4199);
           tmp5Result.popModal(tmp7);
         }
-        tmp5Result = tmp5(4158);
+        tmp5Result = tmp5(4199);
         if (tmp5Result.isModalOpen(closure_14)) {
-          tmp5(4158).popModal(tmp9);
-          const tmp5Result1 = tmp5(4158);
+          tmp5(4199).popModal(tmp9);
+          const tmp5Result1 = tmp5(4199);
         }
-        obj = callback(4158);
+        obj = callback(4199);
         tmp7 = closure_16;
         tmp9 = closure_14;
       } else {
@@ -154,7 +154,7 @@ let prototype = function DeprecatedModalManager() {
     store: handleFormInit,
     closable: false,
     getComponent() {
-      return callback(16616).default;
+      return callback(16674).default;
     }
   };
   obj = {
@@ -162,7 +162,7 @@ let prototype = function DeprecatedModalManager() {
     store: FormStates,
     closable: false,
     getComponent() {
-      return callback(16890).default;
+      return callback(16948).default;
     }
   };
   applyArgumentsResult.actions = obj;

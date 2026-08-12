@@ -2,7 +2,7 @@
 import noop from "noop";
 
 const require = arg1;
-let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
+let result = require("coerceMainRoute").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
 
 export default {
   useForumChannelSeenManager(guildId) {

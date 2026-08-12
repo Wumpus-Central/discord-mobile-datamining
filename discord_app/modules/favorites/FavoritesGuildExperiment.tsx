@@ -1,14 +1,24 @@
 // discord_app/modules/favorites/FavoritesGuildExperiment.tsx
 import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
 
-const obj = { 1: null, 2: { enabled: true, hasHigherPrivileges: true }, 3: { enabled: true, hasHigherPrivileges: false } };
-obj[3] = { enabled: true, hasHigherPrivileges: true, isFreemium: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false, hasHigherPrivileges: false }, variations: obj });
+let obj = { 1: null, 2: { enabled: true } };
+obj[2] = { enabled: true };
+let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+obj = { 1: null };
+obj[1] = { enabled: true };
+let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
 const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
 export const useFavoritesGuildConfig = function useFavoritesGuildConfig(location) {
-  return closure_0.useConfig({ location: location.location });
+  const _location = location.location;
+  const config = closure_1.useConfig({ location: _location });
+  const tmp2 = config.enabled || closure_0.useConfig({ location: _location }).enabled;
+  return { enabled: config.enabled || closure_0.useConfig({ location: _location }).enabled, isFreemium: config.enabled };
 };
 export const getFavoritesGuildConfig = function getFavoritesGuildConfig(location) {
-  return closure_0.getConfig({ location: location.location });
+  const _location = location.location;
+  const config = closure_1.getConfig({ location: _location });
+  const tmp2 = config.enabled || closure_0.getConfig({ location: _location }).enabled;
+  return { enabled: config.enabled || closure_0.getConfig({ location: _location }).enabled, isFreemium: config.enabled };
 };

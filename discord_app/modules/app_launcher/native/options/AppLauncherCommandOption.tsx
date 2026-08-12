@@ -246,8 +246,8 @@ export default function AppLauncherCommandOption(option) {
           obj6[1] = function onPress() {
             return onDismiss(name);
           };
-          obj6[2] = tmp13(tmp2(5998).CircleXIcon, { size: "md" });
-          items[1] = tmp13(tmp2(4846).PressableOpacity, obj6);
+          obj6[2] = tmp13(tmp2(6037).CircleXIcon, { size: "md" });
+          items[1] = tmp13(tmp2(4886).PressableOpacity, obj6);
           obj4[1] = items;
           tmp62 = callback(View, obj4);
         }
@@ -299,7 +299,7 @@ export default function AppLauncherCommandOption(option) {
     obj8[3] = command;
     obj8[4] = optionValues;
     let first6;
-    let tmp64Result = tmp64(11561);
+    let tmp64Result = tmp64(11618);
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -332,7 +332,7 @@ export default function AppLauncherCommandOption(option) {
     obj9[1] = name;
     obj9[2] = channel.guild_id;
     let first7;
-    tmp64Result = tmp64(11563);
+    tmp64Result = tmp64(11620);
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

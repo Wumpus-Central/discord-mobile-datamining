@@ -25,11 +25,11 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   if (wasStream) {
     obj = { style: null };
     obj[0] = tmp.unavaiableImage;
-    let tmp4Result = tmp4(tmp5(10692).StreamEnded, obj);
+    let tmp4Result = tmp4(tmp5(10745).StreamEnded, obj);
     let tmp8 = tmp4;
     let tmp10 = tmp5;
   } else {
-    tmp4Result = tmp4(tmp5(4259).CircleInformationIcon, {});
+    tmp4Result = tmp4(tmp5(4300).CircleInformationIcon, {});
     tmp8 = tmp4;
     tmp10 = tmp5;
   }
@@ -42,7 +42,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
     result = intl.string(tmp10(1236).t.Nzo5nz);
   }
   obj[3] = result;
-  items[1] = tmp8(tmp10(4299).Text, obj);
+  items[1] = tmp8(tmp10(4340).Text, obj);
   obj[1] = items;
   return closure_12(closure_6, obj);
 }

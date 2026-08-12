@@ -30,43 +30,43 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   let rect;
   let derivedValue;
   let derivedValue1;
-  let obj = gestureSpecs(8397);
+  let obj = gestureSpecs(8436);
   const gradientTop = obj.useGradientTop();
-  const context = importAllResult.useContext(setControlsMode(11648));
+  const context = importAllResult.useContext(setControlsMode(11705));
   setControlsMode = context.setControlsMode;
   ({ channelId: c2, safeArea, windowDimensions } = context);
-  const tmp4 = setControlsMode(8738)(windowDimensions);
+  const tmp4 = setControlsMode(8777)(windowDimensions);
   importAllResult = tmp4;
-  rect = setControlsMode(8738)(safeArea);
+  rect = setControlsMode(8777)(safeArea);
   let obj1 = gestureSpecs(589);
   const items = [rect];
   const stateFromStores = obj1.useStateFromStores(items, () => rect.getChannel(c2));
   setControlsMode(38)(null != stateFromStores, "channel should not be null");
   const tmp = callback3();
   const items1 = [setControlsMode];
-  const controlsDrawerOpenWidth = gestureSpecs(11655).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
+  const controlsDrawerOpenWidth = gestureSpecs(11712).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
   const callback = importAllResult.useCallback(() => {
     const ComponentDispatch = gestureSpecs(_undefined[12]).ComponentDispatch;
     ComponentDispatch.dispatch(derivedValue1.SELECT_ACTIVITY);
     setControlsMode({ mode: derivedValue.HIDDEN });
   }, items1);
-  const obj3 = gestureSpecs(11655);
-  const appLauncherChatInputRefDummy = gestureSpecs(9554).useAppLauncherChatInputRefDummy({ noop: true });
-  const obj4 = gestureSpecs(9554);
-  const ref = importAllResult.useRef(gestureSpecs(9554).AppLauncherKeyboardCloseReason.DISMISSED);
+  const obj3 = gestureSpecs(11712);
+  const appLauncherChatInputRefDummy = gestureSpecs(9594).useAppLauncherChatInputRefDummy({ noop: true });
+  const obj4 = gestureSpecs(9594);
+  const ref = importAllResult.useRef(gestureSpecs(9594).AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = importAllResult.useRef(undefined);
-  const sharedValue = gestureSpecs(4042).useSharedValue(0);
-  const obj5 = gestureSpecs(4042);
-  const sharedValue1 = gestureSpecs(4042).useSharedValue(0);
-  const obj6 = gestureSpecs(4042);
+  const sharedValue = gestureSpecs(4083).useSharedValue(0);
+  const obj5 = gestureSpecs(4083);
+  const sharedValue1 = gestureSpecs(4083).useSharedValue(0);
+  const obj6 = gestureSpecs(4083);
   const fn = function y() {
     return gestureSpecs.get().active;
   };
   fn.__closure = { gestureSpecs };
   fn.__workletHash = 1130089519653;
   fn.__initData = closure_11;
-  derivedValue = gestureSpecs(4042).useDerivedValue(fn);
-  const obj7 = gestureSpecs(4042);
+  derivedValue = gestureSpecs(4083).useDerivedValue(fn);
+  const obj7 = gestureSpecs(4083);
   class E {
     constructor() {
       return gestureSpecs.get().isDrawer;
@@ -75,8 +75,8 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   E.__closure = { gestureSpecs };
   E.__workletHash = 13970291088135;
   E.__initData = closure_12;
-  derivedValue1 = gestureSpecs(4042).useDerivedValue(E);
-  const obj8 = gestureSpecs(4042);
+  derivedValue1 = gestureSpecs(4083).useDerivedValue(E);
+  const obj8 = gestureSpecs(4083);
   class L {
     constructor() {
       if (c5.get()) {
@@ -94,17 +94,17 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   L.__workletHash = 3671157204025;
   L.__initData = closure_13;
   obj = { children: null };
-  const animatedStyle = gestureSpecs(4042).useAnimatedStyle(L);
+  const animatedStyle = gestureSpecs(4083).useAnimatedStyle(L);
   obj = { style: items2, children: null };
   items2 = [tmp.container, gradientTop, animatedStyle];
-  const items3 = [callback(setControlsMode(11471), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(9555).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
+  const items3 = [callback(setControlsMode(11528), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(9595).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
   obj1 = { title: null, disablePill: true };
-  const obj9 = gestureSpecs(4042);
+  const obj9 = gestureSpecs(4083);
   const intl = gestureSpecs(1236).intl;
   obj1[0] = intl.string(gestureSpecs(1236).t.shUONg);
-  items3[1] = callback(setControlsMode(11656), obj1);
+  items3[1] = callback(setControlsMode(11713), obj1);
   obj[1] = items3;
-  obj[0] = callback2(setControlsMode(4042).View, obj);
+  obj[0] = callback2(setControlsMode(4083).View, obj);
   return callback(closure_9, obj);
 });
 const result = require("VoicePanelControlsModes").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");

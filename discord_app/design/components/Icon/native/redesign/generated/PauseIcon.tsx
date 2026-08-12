@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PauseIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08864_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08903_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

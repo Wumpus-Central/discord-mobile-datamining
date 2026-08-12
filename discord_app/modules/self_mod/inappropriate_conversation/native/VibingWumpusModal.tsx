@@ -21,11 +21,11 @@ const require = arg1;
 class VibingWumpusScreen {
   constructor() {
     tmp = Fragment();
-    tmp2 = _slicedToArray(module_4509.useState(false), 2);
+    tmp2 = _slicedToArray(module_4549.useState(false), 2);
     first = tmp2[0];
     useState = first;
     closure_1 = tmp2[1];
-    ref = module_4509.useRef(null);
+    ref = module_4549.useRef(null);
     closure_2 = ref;
     tmp5 = useState;
     tmp6 = closure_2;
@@ -34,7 +34,7 @@ class VibingWumpusScreen {
     items[0] = View;
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     _slicedToArray = stateFromStores;
-    effect = module_4509.useEffect(() => {
+    effect = module_4549.useEffect(() => {
       let date = new Date();
       let obj = date(ref[11]);
       let result = obj.playVibingWumpusMusic();
@@ -62,7 +62,7 @@ class VibingWumpusScreen {
     obj1 = { style: tmp.container, children: null };
     obj2 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
     tmp14 = require("play");
-    obj2[0] = require("module_10392");
+    obj2[0] = require("module_10433");
     obj2[1] = ref;
     obj2[2] = !stateFromStores;
     obj2[4] = tmp.wumpus;

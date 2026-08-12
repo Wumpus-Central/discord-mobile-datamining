@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { t } from "../../../../_runtime/03902_t.js";
+import { t } from "../../../../_runtime/03943_t.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 import { getAccessibilityLabelFormatter } from "../../threads/ThreadUtils.tsx";

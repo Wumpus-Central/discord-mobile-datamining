@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
 import { AnalyticsLocations } from "ME";
-import { getMigratedApplicationIdentityConnectionsScreenApplications as closure_4 } from "items1";
+import { getMigratedApplicationIdentityConnectionsScreenApplications as closure_4 } from "items";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
@@ -18,10 +18,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5731)(application));
-  const tmp2 = analyticsLocations(5731)(application);
-  analyticsLocations = analyticsLocations(5728)(analyticsLocations(5748).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5728);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5770)(application));
+  const tmp2 = analyticsLocations(5770)(application);
+  analyticsLocations = analyticsLocations(5767)(analyticsLocations(5787).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5767);
   let obj = _Button;
   const iconSource = application.getIconSource(obj.getIconSize(_Button.IconSizes.LARGE));
   obj = {

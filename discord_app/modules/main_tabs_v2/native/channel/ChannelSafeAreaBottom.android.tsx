@@ -2,10 +2,10 @@
 import apexExperiment from "apexExperiment";
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = require("module_12003");
+  let importDefaultResult = require("module_12060");
 } else {
-  importDefaultResult = require("module_12004");
+  importDefaultResult = require("module_12061");
 }
-const result = require("module_12004").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
+const result = require("module_12061").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 
 export default importDefaultResult;

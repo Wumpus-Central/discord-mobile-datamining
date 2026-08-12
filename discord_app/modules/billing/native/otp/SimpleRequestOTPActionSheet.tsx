@@ -149,12 +149,12 @@ function GiftPurchaseSKUView(selectedSkuId) {
   dependencyMap = tmp4[1];
   currentUser = memo1.getCurrentUser();
   callback = React.useRef({});
-  let obj1 = selectedSkuId(9616);
+  let obj1 = selectedSkuId(9656);
   const giftStyle = obj1.useNativeGiftContext().giftStyle;
   let obj2 = selectedSkuId(589);
   let items = [closure_8];
   const stateFromStores = obj2.useStateFromStores(items, () => closure_8.get(selectedSkuId));
-  let obj3 = selectedSkuId(10119);
+  let obj3 = selectedSkuId(10160);
   const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   React = product;
@@ -162,8 +162,8 @@ function GiftPurchaseSKUView(selectedSkuId) {
   const items1 = [selectedSkuId];
   const effect = React.useEffect(() => {
     if (null != selectedSkuId) {
-      const collectiblesProduct = selectedSkuId(7003).fetchCollectiblesProduct(tmp);
-      const obj = selectedSkuId(7003);
+      const collectiblesProduct = selectedSkuId(7042).fetchCollectiblesProduct(tmp);
+      const obj = selectedSkuId(7042);
     }
   }, items1);
   const items2 = [product, currentUser, selectedSkuId];
@@ -306,7 +306,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   obj = {
     product: tmp14,
     onPurchaseComplete() {
-      first(4271).hideActionSheet();
+      first(4312).hideActionSheet();
     },
     onPurchaseError() {
       logger.error("Purchase error occurred");
@@ -316,16 +316,16 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(12147)(obj);
+  closure_8 = tmp(12204)(obj);
   const items5 = [product];
   [tmp16, tmp17] = callback(obj.useMemo(() => {
     if (null == c5) {
       let items = ["Loading...", "Loading..."];
     } else {
-      items = [selectedSkuId(7016).getFormattedPriceForCollectiblesProduct(tmp, true, true), ];
-      const obj = selectedSkuId(7016);
-      items[1] = selectedSkuId(7016).getFormattedPriceForCollectiblesProduct(tmp, false, true);
-      const obj2 = selectedSkuId(7016);
+      items = [selectedSkuId(7055).getFormattedPriceForCollectiblesProduct(tmp, true, true), ];
+      const obj = selectedSkuId(7055);
+      items[1] = selectedSkuId(7055).getFormattedPriceForCollectiblesProduct(tmp, false, true);
+      const obj2 = selectedSkuId(7055);
     }
     return items;
   }, items5), 2);
@@ -351,20 +351,20 @@ function GiftPurchaseSKUView(selectedSkuId) {
     }
   }
   items6[14] = str;
-  const items7 = [closure_11(selectedSkuId(4299).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }), , ];
+  const items7 = [closure_11(selectedSkuId(4340).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }), , ];
   let str4 = "Send Gift";
   if (isFetching) {
     str4 = "Loading...";
   }
-  obj3 = { children: tmp21(tmp7(4714).Button, obj4) };
-  items7[1] = closure_12(selectedSkuId(5376).Card, obj3);
+  obj3 = { children: tmp21(tmp7(4754).Button, obj4) };
+  items7[1] = closure_12(selectedSkuId(5415).Card, obj3);
   const obj5 = { children: null };
   const items8 = ["Select style: ", giftStyle];
-  const items9 = [closure_11(selectedSkuId(4299).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), closure_12(first(9589), {})];
+  const items9 = [closure_11(selectedSkuId(4340).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), closure_12(first(9629), {})];
   obj5[0] = items9;
-  items7[2] = closure_11(selectedSkuId(5376).Card, obj5);
+  items7[2] = closure_11(selectedSkuId(5415).Card, obj5);
   obj1[2] = items7;
-  return closure_11(selectedSkuId(4712).Stack, obj1);
+  return closure_11(selectedSkuId(4752).Stack, obj1);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
   let giftRecipientId;
@@ -392,12 +392,12 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         obj[1] = giftRecipientId;
         obj[2] = giftMessage.giftMessage;
         obj[3] = callback2(GiftPurchaseSKUView, obj);
-        let tmp6Result = callback2(tmp(9616).NativeGiftContextProvider, obj);
+        let tmp6Result = callback2(tmp(9656).NativeGiftContextProvider, obj);
         let tmp8 = callback2;
       }
       const obj1 = { children: null };
       obj1[0] = tmp6Result;
-      return tmp8(tmp(5397).BottomSheet, obj1);
+      return tmp8(tmp(5436).BottomSheet, obj1);
     }
   }
   tmp8 = callback2;

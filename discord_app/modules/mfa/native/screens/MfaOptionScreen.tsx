@@ -45,14 +45,14 @@ export default function MFAOptionScreen(arg0) {
   if (tmp10Result) {
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
     obj2[2] = subtitle;
-    tmp10Result = tmp10(tmp8(4299).Text, obj2);
+    tmp10Result = tmp10(tmp8(4340).Text, obj2);
   }
   items[2] = tmp10Result;
   tmp10Result = null != error;
   if (tmp10Result) {
     const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     obj3[2] = error;
-    tmp10Result = tmp10(tmp8(4299).Text, obj3);
+    tmp10Result = tmp10(tmp8(4340).Text, obj3);
   }
   let tmp10Result1 = type === mfaMethod;
   const obj4 = { children: null };
@@ -66,7 +66,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp10Result1) {
     const obj6 = { props: null };
     obj6[0] = screenProps;
-    tmp10Result1 = tmp10(tmp(15005), obj6);
+    tmp10Result1 = tmp10(tmp(15063), obj6);
   }
   items3[1] = tmp10Result1;
   obj5[1] = items3;

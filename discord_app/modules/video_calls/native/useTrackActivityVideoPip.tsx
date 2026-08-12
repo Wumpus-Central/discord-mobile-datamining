@@ -11,9 +11,9 @@ export default function useTrackActivityPip(arg0) {
   const _require = arg0;
   const items = [initialize];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
-  let tmp2 = stateFromStores(8859)(stateFromStores);
+  let tmp2 = stateFromStores(8898)(stateFromStores);
   const dependencyMap = tmp2;
-  const tmp3 = stateFromStores(10724)();
+  const tmp3 = stateFromStores(10777)();
   const React = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = React.useEffect(() => {

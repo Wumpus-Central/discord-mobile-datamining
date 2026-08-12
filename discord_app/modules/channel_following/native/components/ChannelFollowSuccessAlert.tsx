@@ -65,10 +65,10 @@ export default function ChannelFollowSuccessAlert(arg0) {
   let obj = AccessibilityAnnouncer;
   const tmp6 = obj.isThemeDark(useTheme()) ? items1 : items;
   require = tmp6;
-  let tmp5Result = tmp5(6906);
+  let tmp5Result = tmp5(6945);
   items = [tmp6];
   const stableMemo = tmp5Result.useStableMemo(() => outer1_1(outer1_2[14]).sample(closure_0), items);
-  tmp5Result = tmp5(6906);
+  tmp5Result = tmp5(6945);
   const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
   obj = {};
   const tmp2 = importDefault;

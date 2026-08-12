@@ -7,7 +7,7 @@ import closure_7 from "handleConnectionOpen";
 import { ME } from "ME";
 import { isStaticChannelRoute } from "set";
 import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
-import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../helpers/NavigationRouteUtils.native.tsx";
 import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
 const require = arg1;
@@ -59,7 +59,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
   }
 }
 function resolveBackgroundScreen(index) {
-  let obj = navigationToRootTabHelper;
+  let obj = coerceMainRoute;
   const coerceTabsRouteResult = obj.coerceTabsRoute(index.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
@@ -68,7 +68,7 @@ function resolveBackgroundScreen(index) {
     if (null == tmp11) {
       return [];
     } else {
-      const coerceGuildsRouteResult = navigationToRootTabHelper.coerceGuildsRoute(tmp11);
+      const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(tmp11);
       if (null == coerceGuildsRouteResult) {
         return [];
       } else {
@@ -108,7 +108,7 @@ function resolveBackgroundScreen(index) {
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
         }
       }
-      const tmpResult = navigationToRootTabHelper;
+      const tmpResult = coerceMainRoute;
     }
   }
 }
@@ -117,7 +117,7 @@ function resolveChannelScreens(index, isChatLockedOpen) {
   for (let num = 0; num <= index.index; num = num + 1) {
     let tmp = arr2;
     let tmp2 = dependencyMap;
-    let obj = arr2(4158);
+    let obj = arr2(4199);
     let coerceChannelRouteResult = obj.coerceChannelRoute(index.routes[num]);
     let tmp4 = num;
     if (null != coerceChannelRouteResult) {
@@ -243,18 +243,18 @@ export default function useChannelScreensFromNavigation(arg0) {
 export const ChannelScreenType = obj;
 export { getActiveTabsRoute };
 export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
-  const coerceTabsRouteResult = navigationToRootTabHelper.coerceTabsRoute(state.routes[0]);
+  const coerceTabsRouteResult = coerceMainRoute.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return false;
   } else {
     const tmp5 = getActiveTabsRoute(coerceTabsRouteResult);
     let tmp6 = null != tmp5;
     if (tmp6) {
-      tmp6 = null != tmp(4158).coerceGuildsRoute(tmp5);
-      const tmpResult = tmp(4158);
+      tmp6 = null != tmp(4199).coerceGuildsRoute(tmp5);
+      const tmpResult = tmp(4199);
     }
     return tmp6;
   }
-  const obj = navigationToRootTabHelper;
+  const obj = coerceMainRoute;
   tmp = require;
 };

@@ -2,7 +2,7 @@
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate";
 import { Store } from "initialize";
-import { t } from "../../../_runtime/03902_t.js";
+import { t } from "../../../_runtime/03943_t.js";
 import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
 import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 
@@ -14,7 +14,7 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
         const result = map.set(guildId, t());
       }
-      if (applicationStatus === tmp12(4129).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4170).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
         const result1 = map.set(guildId, t());

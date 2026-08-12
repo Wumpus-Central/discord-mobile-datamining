@@ -1,21 +1,18 @@
 // discord_app/modules/activities/native/applyActivityOrientationLock.tsx
 import { OrientationLockState } from "items3";
-import { handleOrientationChange } from "../../device/native/DeviceOrientation.tsx";
-import { isOrientationLockSupported } from "../../device/native/isOrientationLockSupported.tsx";
+import { applyOrientationLock } from "../../device/native/applyOrientationLock.tsx";
 
-const result = require("handleOrientationChange").fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");
 
 export default function applyActivityOrientationLock(arg0) {
-  if (isOrientationLockSupported()) {
-    if (OrientationLockState.UNLOCKED === arg0) {
-      handleOrientationChange.unlockOrientation({ unlockAfterRotatingToPreviousLock: true });
-      const obj3 = handleOrientationChange;
-    } else if (tmp3.PORTRAIT === arg0) {
-      handleOrientationChange.lockOrientation("PORTRAIT", true);
-      const obj2 = handleOrientationChange;
-    } else if (tmp3.LANDSCAPE === arg0) {
-      handleOrientationChange.lockOrientation("LANDSCAPE", true);
-      const obj = handleOrientationChange;
-    }
+  if (OrientationLockState.UNLOCKED === arg0) {
+    const result = applyOrientationLock.releaseOrientationLock({ unlockAfterRotatingToPreviousLock: true });
+    const obj3 = applyOrientationLock;
+  } else if (tmp.PORTRAIT === arg0) {
+    applyOrientationLock.applyOrientationLock("PORTRAIT");
+    const obj2 = applyOrientationLock;
+  } else if (tmp.LANDSCAPE === arg0) {
+    applyOrientationLock.applyOrientationLock("LANDSCAPE");
+    const obj = applyOrientationLock;
   }
 };

@@ -19,6 +19,9 @@ class GuildRoomManager extends tmp2 {
           },
       EMBEDDED_ACTIVITY_LAUNCH_SUCCESS(arg0) {
             return applyArgumentsResult.handleEmbeddedActivityLaunchSuccess(arg0);
+          },
+      CONNECTION_RESUMED() {
+            return applyArgumentsResult.handleConnectionResumed();
           }
     };
     return applyArgumentsResult;
@@ -104,6 +107,20 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
       }
     }
     continue;
+  }
+};
+prototype["handleConnectionResumed"] = function handleConnectionResumed() {
+  let isExperimentEnabledResult = null != c6;
+  if (isExperimentEnabledResult) {
+    isExperimentEnabledResult = null != c7;
+  }
+  if (isExperimentEnabledResult) {
+    const self = this;
+    isExperimentEnabledResult = this.isExperimentEnabled(c7, "CONNECTION_RESUMED");
+  }
+  if (isExperimentEnabledResult) {
+    const guildRoom = _guildRoomConnect.fetchGuildRoom(c7, c6);
+    const obj = _guildRoomConnect;
   }
 };
 prototype["handleEmbeddedActivityLaunchSuccess"] = function handleEmbeddedActivityLaunchSuccess(channelId) {

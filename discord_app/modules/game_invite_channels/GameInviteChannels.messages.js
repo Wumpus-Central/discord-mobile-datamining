@@ -1,6 +1,8 @@
 // discord_app/modules/game_invite_channels/GameInviteChannels.messages.js
 import 01274__ from "../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../_runtime/03306_registerAsset.js";
+import { registerAsset } from "../../../_runtime/03307_registerAsset.js";
 import { registerAsset } from "../../../_runtime/03308_registerAsset.js";
 import { registerAsset } from "../../../_runtime/03309_registerAsset.js";
 import { registerAsset } from "../../../_runtime/03310_registerAsset.js";
@@ -30,8 +32,6 @@ import { registerAsset } from "../../../_runtime/03333_registerAsset.js";
 import { registerAsset } from "../../../_runtime/03334_registerAsset.js";
 import { registerAsset } from "../../../_runtime/03335_registerAsset.js";
 import { registerAsset } from "../../../_runtime/03336_registerAsset.js";
-import { registerAsset } from "../../../_runtime/03337_registerAsset.js";
-import { registerAsset } from "../../../_runtime/03338_registerAsset.js";
 import { loadJsonAsset } from "../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

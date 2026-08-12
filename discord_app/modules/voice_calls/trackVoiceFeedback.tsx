@@ -70,7 +70,7 @@ function _trackVoiceFeedback() {
               let closure_21;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -97,7 +97,7 @@ function _trackVoiceFeedback() {
               c6 = 2;
               c7 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = callback(13088).getKrispModel();
+              obj2[0] = callback(13145).getKrispModel();
               return obj2;
             }
           } else if (arg0 === 1) {

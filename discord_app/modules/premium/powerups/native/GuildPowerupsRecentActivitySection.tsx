@@ -1,13 +1,12 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
-import { View } from "get ActivityIndicator";
+import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { resetCache } from "../../../../utils/DateUtils.tsx";
+import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import { useMaybeGetSortedBoosts } from "../hooks/useMaybeGetSortedBoosts.tsx";
 import { getBoostRowMessageText } from "../utils/getBoostRowMessageText.tsx";
 
@@ -21,34 +20,36 @@ function GuildPowerupsRecentActivityRow(row) {
   let sortKey;
   let username;
   row = row.row;
+  let obj = apexExperiment;
+  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivityRow");
   ({ boost, phase, sortKey } = row);
-  const tmp = callback3();
-  let obj = useMaybeGetSortedBoosts;
-  const getBoostUserConfig = obj.useGetBoostUserConfig(boost);
+  const tmp4 = callback();
+  let obj1 = useMaybeGetSortedBoosts;
+  const getBoostUserConfig = obj1.useGetBoostUserConfig(boost);
   ({ roleColor, roleColorStrings, username } = getBoostUserConfig);
-  let obj1 = resetCache;
+  let obj2 = resetCache;
   const date = new Date(sortKey);
-  let obj2 = initialize;
+  let obj3 = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = obj2.useStateFromStores(items, () => roleStyle.roleStyle);
+  const stateFromStores = obj3.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != roleColor) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmp2Result = tmp2(8072);
-    const processColorStringsArray = tmp2Result.useProcessColorStringsArray(roleColorStrings);
-    tmp2Result = tmp2(8072);
-    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
+    let tmpResult = tmp(8111);
+    const processColorStringsArray = tmpResult.useProcessColorStringsArray(roleColorStrings);
+    tmpResult = tmp(8111);
+    const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp2(7697).BoostGemIcon;
+      let BoostGemSlashIcon = tmp(7736).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp2(11944).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12001).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp2(11946).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12003).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
-    obj[0] = tmp.boostRowContainer;
+    obj[0] = tmp4.boostRowContainer;
     if ("gave" === phase) {
       obj1 = { color: null, size: "sm" };
       obj1[0] = Themes.unsafe_rawColors.GUILD_BOOSTING_PINK;
@@ -57,40 +58,50 @@ function GuildPowerupsRecentActivityRow(row) {
       obj2 = { size: "sm" };
     }
     const items1 = [closure_5(BoostGemSlashIcon, obj2), , ];
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.boostMessage;
-    let tmp18Result = "dot" === stateFromStores;
-    if (tmp18Result) {
-      tmp18Result = null != roleColor;
+    obj3 = { style: null, children: null };
+    obj3[0] = tmp4.boostMessage;
+    let tmp19Result = "dot" === stateFromStores;
+    if (tmp19Result) {
+      tmp19Result = null != roleColor;
     }
-    if (tmp18Result) {
+    if (tmp19Result) {
       const obj4 = { size: "small", color: null, colors: null };
       obj4[1] = roleColor;
       obj4[2] = roleColorStrings;
-      tmp18Result = tmp18(tmp2(1297).RoleDot, obj4);
+      tmp19Result = tmp19(tmp(1297).RoleDot, obj4);
     }
-    const items2 = [tmp18Result, , , ];
+    const items2 = [tmp19Result, , , ];
     const obj5 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
-    const items3 = [tmp.username, {}];
+    const items3 = [tmp4.username, {}];
     obj5[3] = items3;
-    let tmp22;
+    let tmp23;
     if (isRoleStyleAndRoleColorsEligibleForERC) {
-      tmp22 = processColorStringsArray;
+      tmp23 = processColorStringsArray;
     }
-    obj5[4] = tmp22;
+    obj5[4] = tmp23;
     obj5[5] = username;
-    items2[1] = closure_5(tmp2(4299).Text, obj5);
-    items2[2] = closure_5(tmp2(4299).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
+    items2[1] = closure_5(tmp(4340).Text, obj5);
+    items2[2] = closure_5(tmp(4340).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
-    obj6[2] = tmp.messageText;
+    obj6[2] = tmp4.messageText;
     obj6[3] = getBoostRowMessageText(row);
-    items2[3] = closure_5(tmp2(4299).Text, obj6);
+    items2[3] = closure_5(tmp(4340).Text, obj6);
     obj3[1] = items2;
     items1[1] = closure_6(View, obj3);
-    const obj7 = { variant: "text-xs/semibold", style: null, children: null };
-    obj7[1] = tmp.timestamp;
-    obj7[2] = calendarFormatResult;
-    items1[2] = closure_5(tmp2(4299).Text, obj7);
+    let str4 = "text-xs/semibold";
+    if (manaTypeConsolidationExperiment) {
+      str4 = "text-xs/medium";
+    }
+    const obj7 = { variant: null, color: null, style: null, children: null };
+    obj7[0] = str4;
+    let str5;
+    if (manaTypeConsolidationExperiment) {
+      str5 = "text-subtle";
+    }
+    obj7[1] = str5;
+    obj7[2] = tmp4.timestamp;
+    obj7[3] = calendarFormatResult;
+    items1[2] = closure_5(tmp(4340).Text, obj7);
     obj[1] = items1;
     return closure_6(View, obj);
   }
@@ -110,22 +121,30 @@ let obj1 = { gap: require("Themes").space.PX_12, marginTop: require("Themes").sp
 const result = require("jsxProd").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
 
 export default function GuildPowerupsRecentActivitySection(guildId) {
-  const tmp = callback3();
+  let obj = apexExperiment;
+  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivitySection");
+  const tmp4 = callback();
   const arr = useMaybeGetSortedBoosts(guildId.guildId, 10);
-  let tmp3 = null;
+  let tmp6Result = null;
   if (0 !== arr.length) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.sectionContainer;
-    obj = { variant: "heading-lg/semibold", color: "text-subtle", children: null };
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t.yM9Krm);
-    const items = [callback(Text.Text, obj), ];
     obj = { style: null, children: null };
-    obj[0] = tmp.boostContainer;
-    obj[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));
-    items[1] = callback(View, obj);
+    obj[0] = tmp4.sectionContainer;
+    let str = "text-subtle";
+    if (manaTypeConsolidationExperiment) {
+      str = "text-strong";
+    }
+    obj = { variant: "heading-lg/semibold", color: null, children: null };
+    obj[1] = str;
+    const intl = tmp(1236).intl;
+    obj[2] = intl.string(tmp(1236).t.yM9Krm);
+    const items = [closure_5(tmp(4340).Text, obj), ];
+    const obj1 = { style: null, children: null };
+    obj1[0] = tmp4.boostContainer;
+    obj1[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));
+    items[1] = closure_5(View, obj1);
     obj[1] = items;
-    tmp3 = callback2(View, obj);
+    tmp6Result = closure_6(tmp7, obj);
+    const tmp6 = closure_6;
   }
-  return tmp3;
+  return tmp6Result;
 };

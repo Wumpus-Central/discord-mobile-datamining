@@ -9,41 +9,39 @@ const require = arg1;
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default function useFavoritesGuildChannelFilter() {
-  hasHigherPrivileges = hasHigherPrivileges(stateFromStores[5]).useFavoritesAccess().hasHigherPrivileges;
-  const obj = hasHigherPrivileges(stateFromStores[5]);
   const items = [initializeFromUserSettings];
-  stateFromStores = hasHigherPrivileges(stateFromStores[6]).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
-  const items1 = [stateFromStores, hasHigherPrivileges];
+  stateFromStores = stateFromStores(589).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
+  const items1 = [stateFromStores];
   return React.useCallback((type) => {
     type = type.type;
-    if (hasHigherPrivileges(stateFromStores[7]).AutocompleterResultTypes.USER === type) {
+    if (stateFromStores(outer1_1[6]).AutocompleterResultTypes.USER === type) {
       const dMChannelFromUserId = outer1_3.getDMChannelFromUserId(type.record.id);
-      let tmp14 = !arg1;
+      let tmp13 = !arg1;
       if (!arg1) {
-        tmp14 = null == dMChannelFromUserId;
+        tmp13 = null == dMChannelFromUserId;
       }
-      let tmp16 = !tmp14;
-      if (!tmp14) {
-        let tmp18 = null == dMChannelFromUserId;
-        if (!tmp18) {
-          tmp18 = null == stateFromStores[dMChannelFromUserId.id];
+      let tmp15 = !tmp13;
+      if (!tmp13) {
+        let tmp17 = null == dMChannelFromUserId;
+        if (!tmp17) {
+          tmp17 = null == stateFromStores[dMChannelFromUserId.id];
         }
-        tmp16 = tmp18;
+        tmp15 = tmp17;
       }
-      return tmp16;
-    } else if (tmp(tmp2[7]).AutocompleterResultTypes.GROUP_DM === type) {
+      return tmp15;
+    } else if (tmp(tmp2[6]).AutocompleterResultTypes.GROUP_DM === type) {
       return null == stateFromStores[type.record.id];
     } else {
-      if (tmp(tmp2[7]).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp(tmp2[7]).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          let tmpResult = tmp(tmp2[9]);
+      if (tmp(tmp2[6]).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (tmp(tmp2[6]).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+          let tmpResult = tmp(tmp2[8]);
           return tmpResult.assertNever(type);
         }
       }
       let canResult = outer1_4.can(outer1_6.VIEW_CHANNEL, type.record);
       if (canResult) {
-        tmpResult = tmp(tmp2[8]);
-        canResult = tmpResult.canFavoriteChannelType(type.record, hasHigherPrivileges);
+        tmpResult = tmp(tmp2[7]);
+        canResult = tmpResult.isFavoritableChannel(type.record);
       }
       if (canResult) {
         canResult = null == stateFromStores[type.record.id];

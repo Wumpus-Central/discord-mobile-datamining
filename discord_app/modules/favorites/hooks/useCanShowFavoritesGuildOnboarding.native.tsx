@@ -2,7 +2,7 @@
 import setContent from "setContent";
 import handleConnectionOpen from "handleConnectionOpen";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
@@ -15,7 +15,7 @@ export default function useCanShowFavoritesGuildOnboarding() {
   const stateFromStores1 = initialize.useStateFromStores(items1, () => open.isOpen());
   const obj2 = initialize;
   let tmp4 = !stateFromStores;
-  const isModalOpen = navigationToRootTabHelper.useIsModalOpen();
+  const isModalOpen = coerceMainRoute.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import withEqualityFn from "withEqualityFn";
 import { jsx } from "jsxProd";
-import { isIterable } from "../../../../_runtime/03933_isIterable.js";
+import { isIterable } from "../../../../_runtime/03974_isIterable.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
 import { VoicePanelController } from "VoicePanelController.tsx";

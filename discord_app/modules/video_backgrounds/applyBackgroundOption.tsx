@@ -94,11 +94,11 @@ function _applyBackgroundOption() {
               c5 = undefined;
               let module_38 = false;
               if (null == source) {
-                outer1_10(tmp57, tmp58, callback(4400).FilterSettingsGraph.NONE);
+                outer1_10(tmp57, tmp58, callback(4440).FilterSettingsGraph.NONE);
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
               } else if (tmp59 === c7) {
-                outer1_10(tmp57, tmp58, callback(4400).FilterSettingsGraph.BACKGROUND_BLUR);
+                outer1_10(tmp57, tmp58, callback(4440).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
@@ -165,7 +165,7 @@ function _applyBackgroundOption() {
                     }
                   }
                 }
-                const tmp24 = callback2(9172)()[tmp59];
+                const tmp24 = callback2(9212)()[tmp59];
                 const isVideo = tmp24.isVideo;
                 module_38 = isVideo;
                 if (isVideo == null) {
@@ -284,7 +284,7 @@ function _applyBackgroundOptionLive() {
               location = flag.location;
               c4 = 1;
               c5 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -320,9 +320,9 @@ function _applyBackgroundOptionLive() {
             c5 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp16) {
+        } catch (tmp24) {
           c5 = tmp;
-          throw tmp16;
+          throw tmp24;
         }
       }
     })();
@@ -384,7 +384,7 @@ function _applyBackgroundOptionPreview() {
               location = flag.location;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

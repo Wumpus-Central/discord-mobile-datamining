@@ -75,7 +75,7 @@ function GuildPowerupsMultiPerkCard(arg0) {
   obj = { style: items1, children: null };
   items1[3] = "removing" === type2 && tmp4.imageContainerRemoving;
   let str = tmp10;
-  let tmp3Result = tmp3(11887);
+  let tmp3Result = tmp3(11944);
   if (tmp10 == null) {
     str = "";
   }
@@ -99,11 +99,11 @@ function GuildPowerupsMultiPerkCard(arg0) {
   if (null != calculatePowerupCardStatus) {
     const obj6 = { status: null };
     obj6[0] = calculatePowerupCardStatus;
-    let tmp18Result = tmp18(tmp(11888).GuildPowerupCardFooterStatus, obj6);
+    let tmp18Result = tmp18(tmp(11945).GuildPowerupCardFooterStatus, obj6);
   } else {
     const obj7 = { cost: null };
     obj7[0] = powerup.cost;
-    tmp18Result = tmp18(tmp(11888).GuildPowerupCardFooterCost, obj7);
+    tmp18Result = tmp18(tmp(11945).GuildPowerupCardFooterCost, obj7);
   }
   items4[1] = tmp18Result;
   obj4[1] = items4;
@@ -133,7 +133,7 @@ function GuildPowerupsMultiPerkCard(arg0) {
         _undefined();
       }
     };
-    tmp18Result = tmp18(tmp(4714).Button, obj8);
+    tmp18Result = tmp18(tmp(4754).Button, obj8);
   }
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -202,14 +202,14 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     obj[0] = useSafeAreaInsets().bottom;
     obj[0] = obj;
     ({ title: obj4[0], description: obj4[1] } = tmp4);
-    const items = [callback(tmp2(11914), { title: null, description: null }), , ];
+    const items = [callback(tmp2(11971), { title: null, description: null }), , ];
     tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj2 = { style: null, children: null };
       obj2[0] = tmp.disabledReasonContainer;
       const obj3 = { text: null };
       obj3[0] = tmp4.disabledReason;
-      obj2[1] = tmp6(tmp2(11907), obj3);
+      obj2[1] = tmp6(tmp2(11964), obj3);
       tmp6Result = tmp6(View, obj2);
     }
     items[1] = tmp6Result;
@@ -219,8 +219,8 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     obj4[1] = powerups.map((powerup) => outer1_4(outer1_8, { guildId, powerup, forceStaticImage: _undefined.forceStaticImages }, powerup.skuId));
     items[2] = callback(View, obj4);
     obj[1] = items;
-    obj[3] = closure_5(guildId(5399).BottomSheetScrollView, obj);
-    tmp6Result = tmp6(guildId(5397).BottomSheet, obj);
+    obj[3] = closure_5(guildId(5438).BottomSheetScrollView, obj);
+    tmp6Result = tmp6(guildId(5436).BottomSheet, obj);
     const obj1 = { title: null, description: null };
     const tmp8 = closure_5;
   }

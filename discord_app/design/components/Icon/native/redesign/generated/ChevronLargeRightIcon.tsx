@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ChevronLargeRightIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/11746_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/11803_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

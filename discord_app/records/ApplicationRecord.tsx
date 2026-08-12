@@ -5,7 +5,7 @@ import createdAt from "createdAt";
 import items3 from "items3";
 import { ApplicationTypes } from "ApplicationTypes";
 import { ApplicationOverlayMethodFlags } from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
-import { items1 } from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
+import { items } from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
 import { getAvatarURL } from "../utils/AvatarUtils.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
@@ -82,7 +82,7 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl(arg0) {
-    const obj = items1.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
+    const obj = items.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
     let prop;
     if (obj != null) {
       prop = obj.connectionEntrypointUrlOverride;

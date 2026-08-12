@@ -9,6 +9,7 @@ import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx
 import { map } from "../../../design/tokens/native/useToken.tsx";
 
 let c5;
+let c9;
 let closure_6;
 let error;
 let metroImportAll;
@@ -34,7 +35,7 @@ class UnreadIndicator {
     tmp5 = id;
     token = obj.useToken(require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE);
     c4 = token;
-    tmp7 = f61736(c6());
+    tmp7 = f61866(c7());
     GUILD_BAR_ITEM_SIZE = tmp7;
     tmp8 = MOUNTED === require("wrapChildrenDefault").TransitionStates.MOUNTED;
     c6 = tmp8;
@@ -59,11 +60,11 @@ class UnreadIndicator {
         obj = sharedId;
         obj = { animations: null, initialValues: null };
         const obj1 = { originY: null, originX: null, height: null };
-        obj1[0] = sharedId(MOUNTED[8]).withSpring(targetOriginY.targetOriginY, outer1_10, "animate-always");
+        obj1[0] = sharedId(MOUNTED[8]).withSpring(targetOriginY.targetOriginY, outer1_11, "animate-always");
         const obj4 = sharedId(MOUNTED[8]);
-        obj1[1] = sharedId(MOUNTED[8]).withSpring(targetOriginY.targetOriginX, outer1_10, "animate-always");
+        obj1[1] = sharedId(MOUNTED[8]).withSpring(targetOriginY.targetOriginX, outer1_11, "animate-always");
         const obj5 = sharedId(MOUNTED[8]);
-        obj1[2] = sharedId(MOUNTED[8]).withSpring(targetOriginY.targetHeight, outer1_10, "animate-always");
+        obj1[2] = sharedId(MOUNTED[8]).withSpring(targetOriginY.targetHeight, outer1_11, "animate-always");
         obj[0] = obj1;
         const obj2 = { height: 8, originY: null, originX: -12 };
         obj2[1] = token / 2;
@@ -89,20 +90,20 @@ class UnreadIndicator {
     obj[5] = token;
     fn.__closure = obj;
     fn.__workletHash = 404454683979;
-    fn.__initData = f61737;
+    fn.__initData = f61867;
     items1 = [, , , ];
     items1[0] = tmp8;
     items1[1] = sharedId;
     items1[2] = id;
     items1[3] = token;
-    fn2 = function _(height) {
+    fn2 = function p(height) {
       let obj = { animations: null, initialValues: null, callback: null };
       obj = { originY: null, originX: null, height: null };
-      obj[0] = sharedId(MOUNTED[8]).withSpring(height.targetOriginY, outer1_10, "animate-always");
+      obj[0] = sharedId(MOUNTED[8]).withSpring(height.targetOriginY, outer1_11, "animate-always");
       const obj3 = sharedId(MOUNTED[8]);
-      obj[1] = sharedId(MOUNTED[8]).withSpring(height.targetOriginX, outer1_10, "animate-always");
+      obj[1] = sharedId(MOUNTED[8]).withSpring(height.targetOriginX, outer1_11, "animate-always");
       const obj4 = sharedId(MOUNTED[8]);
-      obj[2] = sharedId(MOUNTED[8]).withSpring(height.targetHeight, outer1_10, "animate-always");
+      obj[2] = sharedId(MOUNTED[8]).withSpring(height.targetHeight, outer1_11, "animate-always");
       obj[0] = obj;
       obj[1] = { height: height.currentHeight, originY: height.currentOriginY, originX: height.currentOriginX };
       obj[2] = function callback(arg0) {
@@ -124,25 +125,25 @@ class UnreadIndicator {
     obj1[2] = MOUNTED;
     obj1[3] = require("wrapChildrenDefault").TransitionStates;
     obj1[4] = cleanUp;
-    obj1[5] = require("module_4042").runOnJS;
+    obj1[5] = require("module_4083").runOnJS;
     fn2.__closure = obj1;
     fn2.__workletHash = 10632665703864;
-    fn2.__initData = f61737;
+    fn2.__initData = f61867;
     items2 = [, ];
     items2[0] = MOUNTED;
     items2[1] = cleanUp;
     callback1 = cleanUp.useCallback(fn2, items2);
-    return c7(require("module_8011"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
+    return jsx(require("module_8050"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
   }
 }
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return callback2(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-({ GUILD_ITEM_HIT_SLOP: c5, useGuildWrapperSize: closure_6 } = GUILD_ITEM_SIZE);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-let closure_9 = { mass: 0.8, damping: 100, stiffness: 150 };
-let closure_10 = { mass: 0.25, damping: 100, stiffness: 200 };
-let closure_11 = createCacheKey.createStyles(() => {
+({ GUILD_ITEM_HIT_SLOP: c5, GUILD_ITEM_INSET_LEFT: closure_6, useGuildWrapperSize: error } = GUILD_ITEM_SIZE);
+({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
+let closure_11 = { mass: 0.25, damping: 100, stiffness: 200 };
+let closure_12 = createCacheKey.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
     num = 56;
@@ -154,9 +155,9 @@ let closure_11 = createCacheKey.createStyles(() => {
   obj[4] = obj;
   return obj;
 });
-let closure_12 = createCacheKey.createStyles((arg0, arg1, width, height) => {
+let closure_13 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   let obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
-  obj = { position: "relative", paddingTop: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft: 12, height, width: width + closure_5.left + closure_5.right };
+  obj = { position: "relative", paddingTop: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft: closure_6, height, width: width + closure_5.left + closure_5.right };
   obj[0] = obj;
   obj = { position: "relative", width, height: width, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: null };
   let str = "transparent";
@@ -177,9 +178,9 @@ let closure_12 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   obj[2] = { backgroundColor: BACKGROUND_BRAND };
   return obj;
 });
-let closure_13 = { code: "function GuildsBarAnimatedItemWrapperTsx1(values){const{disableEntering,sharedId,id,withSpring,BAR_SPRING_PHYSICS,guildItemSize}=this.__closure;if(disableEntering||sharedId!=null&&sharedId.get()!==id){return{animations:{},initialValues:{}};}return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:8,originY:guildItemSize/2,originX:-12}};}" };
-let closure_14 = { code: "function GuildsBarAnimatedItemWrapperTsx2(values){const{withSpring,BAR_SPRING_PHYSICS,transitionState,TransitionStates,cleanUp,runOnJS}=this.__closure;return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight,originY:values.currentOriginY,originX:values.currentOriginX},callback:function(finished){if(transitionState===TransitionStates.YEETED&&finished&&cleanUp!=null){runOnJS(cleanUp)();}}};}" };
-let closure_17 = { code: "function GuildsBarAnimatedItemWrapperTsx3(){const{withSpring,circle,guildItemSelectedBorderRadius,guildItemSize,CORNER_SPRING_PHYSICS}=this.__closure;return{borderRadius:withSpring(!circle?guildItemSelectedBorderRadius:guildItemSize/2,CORNER_SPRING_PHYSICS,'animate-always')};}" };
+let closure_14 = { code: "function GuildsBarAnimatedItemWrapperTsx1(values){const{disableEntering,sharedId,id,withSpring,BAR_SPRING_PHYSICS,guildItemSize}=this.__closure;if(disableEntering||sharedId!=null&&sharedId.get()!==id){return{animations:{},initialValues:{}};}return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:8,originY:guildItemSize/2,originX:-12}};}" };
+let closure_15 = { code: "function GuildsBarAnimatedItemWrapperTsx2(values){const{withSpring,BAR_SPRING_PHYSICS,transitionState,TransitionStates,cleanUp,runOnJS}=this.__closure;return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight,originY:values.currentOriginY,originX:values.currentOriginX},callback:function(finished){if(transitionState===TransitionStates.YEETED&&finished&&cleanUp!=null){runOnJS(cleanUp)();}}};}" };
+let closure_18 = { code: "function GuildsBarAnimatedItemWrapperTsx3(){const{withSpring,circle,guildItemSelectedBorderRadius,guildItemSize,CORNER_SPRING_PHYSICS}=this.__closure;return{borderRadius:withSpring(!circle?guildItemSelectedBorderRadius:guildItemSize/2,CORNER_SPRING_PHYSICS,'animate-always')};}" };
 let result = require("GUILD_ITEM_SIZE").fileFinishedImporting("modules/guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx");
 
 export default function GuildsBarAnimatedItemWrapper(id) {
@@ -245,11 +246,11 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   let c17;
   let closure_18;
   let c19;
-  let tmp = dragState();
+  let tmp = num();
   c13 = tmp;
   let obj = id(circle[6]);
   token = obj.useToken(selected(circle[5]).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmp6 = zIndex(tmp);
+  const tmp6 = sharedId(tmp);
   c15 = tmp6;
   const tmp7 = selected(circle[11])(config);
   let obj1 = id(circle[6]);
@@ -265,14 +266,14 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       } else {
         result = c16;
       }
-      obj = { borderRadius: obj.withSpring(result, styles, "animate-always") };
+      obj = { borderRadius: obj.withSpring(result, expanded, "animate-always") };
       return obj;
     }
   }
-  obj = { withSpring: id(circle[8]).withSpring, circle, guildItemSelectedBorderRadius: token1, guildItemSize: token, CORNER_SPRING_PHYSICS: styles };
+  obj = { withSpring: id(circle[8]).withSpring, circle, guildItemSelectedBorderRadius: token1, guildItemSize: token, CORNER_SPRING_PHYSICS: expanded };
   W.__closure = obj;
   W.__workletHash = 15930523896348;
-  W.__initData = c17;
+  W.__initData = closure_18;
   let obj4 = hint;
   const animatedStyle = obj2.useAnimatedStyle(W);
   const context = hint.useContext(id(circle[12]).HomeDrawerStateContext);
@@ -405,6 +406,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   obj.style = memo1;
   obj.accessibilityLabel = label;
   obj.accessible = true;
+  obj.focusable = true;
   obj.accessibilityRole = "button";
   obj.accessibilityState = { selected, expanded };
   obj.hitSlop = isDragTarget;
@@ -424,7 +426,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     tmp4Result = tmp4(tmp3[10]);
     obj2 = { item: null, renderItem: null };
     obj2[0] = memo2;
-    obj2[1] = token1;
+    obj2[1] = c17;
     obj1[2] = tmp21(tmp2(tmp3[7]).TransitionItem, obj2);
     let tmp21Result = tmp21(tmp4Result, obj1);
     let tmp25 = tmp21;
@@ -433,7 +435,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     obj3[1] = unreadStyle;
     obj4 = { item: null, renderItem: null };
     obj4[0] = memo2;
-    obj4[1] = token1;
+    obj4[1] = c17;
     obj3[3] = tmp21(tmp2(tmp3[7]).TransitionItem, obj4);
     tmp21Result = tmp21(tmp4(tmp3[15]), obj3);
     tmp25 = tmp21;
@@ -455,9 +457,9 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   }
   items9[1] = tmp30;
   obj5[2] = items9;
-  items5[2] = overState(id(circle[16]).ClipViewAnimated, obj5);
+  items5[2] = styles(id(circle[16]).ClipViewAnimated, obj5);
   obj.children = items5;
-  const tmp17Result = overState(tmp4Result, obj);
+  const tmp17Result = styles(tmp4Result, obj);
   let container = null;
   const tmp4Result2 = selected(circle[15]);
   if (enableHome) {
@@ -489,7 +491,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   }
   items11[1] = tmp25Result;
   obj6[6] = items11;
-  return overState(selected(circle[10]), obj6);
+  return styles(selected(circle[10]), obj6);
 };
 export const useGuildsBarAnimatedWrapperStyles = function useGuildsBarAnimatedWrapperStyles(arg0) {
   let obj = arg0;

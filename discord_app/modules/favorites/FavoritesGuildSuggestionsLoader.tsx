@@ -8,8 +8,8 @@ let c5;
 let closure_6;
 const require = arg1;
 function FavoritesGuildSuggestionsLoaderInner() {
-  let tmp = memo(12140)();
-  results = results(10252).useShareSearchResults({ channelFilter: tmp, includeFrecency: false }).results;
+  let tmp = memo(12197)();
+  results = results(10293).useShareSearchResults({ channelFilter: tmp, includeFrecency: false }).results;
   let items = [results];
   memo = importAllResult.useMemo(() => {
     let items = [];

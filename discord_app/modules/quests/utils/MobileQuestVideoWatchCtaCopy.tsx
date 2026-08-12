@@ -1,54 +1,58 @@
 // discord_app/modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx
+import { QuestsExperimentLocations } from "QuestsExperimentLocations";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { apexExperiment } from "../experiments/VQRemainingTimeTruncationExperiment.tsx";
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
-export const formatWatchRemainingDurationShort = function formatWatchRemainingDurationShort(targetSeconds) {
-  let obj = getApplicationIdsByTaskTypes;
-  const remainingTaskTime = obj.getRemainingTaskTime(targetSeconds);
-  const sum = 60 * remainingTaskTime.minutes + remainingTaskTime.seconds;
-  if (sum >= 60) {
-    const intl2 = tmp(1236).intl;
-    obj = { count: null };
-    const _Math = Math;
-    obj[0] = Math.round(sum / 60);
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t.PHhTXX, obj);
-  } else {
-    const intl = tmp(1236).intl;
-    obj = { count: null };
-    obj[0] = sum;
-    formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t.rUfeQx, obj);
-  }
-  return formatToPlainStringResult;
-};
-export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
+function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
   let obj = getApplicationIdsByTaskTypes;
   const remainingTaskTime = obj.getRemainingTaskTime(questTaskDetails);
-  const sum = 60 * remainingTaskTime.minutes + remainingTaskTime.seconds;
-  if (sum >= 60) {
-    const intl2 = tmp2(1236).intl;
-    obj = { count: null };
+  let num = 60;
+  truncate = 60 * remainingTaskTime.minutes + remainingTaskTime.seconds;
+  truncate = undefined;
+  if (truncate != null) {
+    truncate = truncate.truncate;
+  }
+  if (null != truncate && truncate > truncate.truncate) {
+    truncate = truncate.truncate;
+  }
+  if (truncate >= num) {
+    const intl2 = tmp(1236).intl;
+    let t = tmp(1236).t;
+    t = { count: null };
     const _Math = Math;
-    obj[0] = Math.round(sum / 60);
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.PHhTXX, obj);
+    num = truncate / num;
+    t[0] = Math.round(num);
+    intl2.formatToPlainString(tmp5 ? t.XTdnRd : t.PHhTXX, t);
+    const tmp6 = tmp5 ? t.XTdnRd : t.PHhTXX;
   } else {
-    const intl = tmp2(1236).intl;
+    const intl = tmp(1236).intl;
+    t = tmp(1236).t;
     obj = { count: null };
-    obj[0] = sum;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t.rUfeQx, obj);
+    obj[0] = truncate;
+    return intl.formatToPlainString(tmp5 ? t["spl/XS"] : t.rUfeQx, obj);
   }
-  const intl3 = tmp2(1236).intl;
-  const formatToPlainString = intl3.formatToPlainString;
-  const t = tmp2(1236).t;
-  if (tmp) {
-    const obj1 = { durationShort: null };
-    obj1[0] = formatToPlainStringResult;
-    let formatToPlainStringResult1 = formatToPlainString(t["pF/deA"], obj1);
+}
+const result = require("getSystemLocale").fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
+
+export { formatWatchRemainingDurationShort };
+export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
+  if (questTaskDetails.percentComplete > 0) {
+    const intl = getSystemLocale.intl;
+    let obj = { durationShort: null };
+    obj[0] = formatWatchRemainingDurationShort(questTaskDetails);
+    return intl.formatToPlainString(getSystemLocale.t["pF/deA"], obj);
   } else {
-    const obj2 = { durationShort: null };
-    obj2[0] = formatToPlainStringResult;
-    formatToPlainStringResult1 = formatToPlainString(t.CHrvqg, obj2);
+    let obj1 = apexExperiment;
+    obj = { location: null };
+    obj[0] = QuestsExperimentLocations.QUESTS_CARD;
+    const intl2 = getSystemLocale.intl;
+    obj = { durationShort: null };
+    obj1 = { truncate: null };
+    obj1[0] = obj1.getConfig(obj).truncateMoreThanSeconds;
+    obj[0] = formatWatchRemainingDurationShort(questTaskDetails, obj1);
+    return intl2.formatToPlainString(getSystemLocale.t.CHrvqg, obj);
   }
-  return formatToPlainStringResult1;
 };
 export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
   let minutes;

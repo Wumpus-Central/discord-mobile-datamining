@@ -223,7 +223,7 @@ function _createOrder() {
               body = undefined;
               constants = 1;
               logger = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -425,38 +425,132 @@ function _getOrCreateOrder() {
       let c6;
       let c7;
       let c8;
-      c1 = 0;
-      ({ skuId: c0, paymentGateway: c1, recipientUserId: c2, purchaseType: c3, isGift: c4, giftInfo: c5, createdAfter: c6, subscriptionPlanId: c7, externalGatewayFacet: c8 } = c0);
-      yield "ct";
-      const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
-      obj2[0] = constants;
-      obj2[1] = constants.DRAFT;
-      obj2[2] = c0;
-      obj2[3] = logger;
-      const lib = yield callback(obj2);
-      if (lib.length > 0) {
-        const id = lib[0];
-        const obj5 = { orderId: null, skuId: null, isGift: null };
-        obj5[0] = id.id;
-        obj5[1] = c0;
-        obj5[2] = constants;
-        logger.info("reusing existing draft order", obj5);
-        return id;
+      if (constants === 2) {
+        constants = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          constants = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c2 = tmp4;
+              c1 = 0;
+              c0 = undefined;
+              c1 = undefined;
+              c2 = undefined;
+              c3 = undefined;
+              constants = undefined;
+              c5 = undefined;
+              let logger;
+              let callback;
+              c8 = undefined;
+              ({ skuId: c0, paymentGateway: c1, recipientUserId: c2, purchaseType: c3, isGift: c4, giftInfo: c5, createdAfter: c6, subscriptionPlanId: c7, externalGatewayFacet: c8 } = c0);
+              let lib;
+              let id;
+              c3 = 1;
+              constants = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp4) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
+              obj2[0] = constants;
+              obj2[1] = constants.DRAFT;
+              obj2[2] = c0;
+              obj2[3] = logger;
+              c3 = 2;
+              constants = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = callback(obj2);
+              return obj3;
+            }
+          } else if (2 === tmp4) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
+            } else {
+              lib = arg1;
+              if (lib.length > 0) {
+                id = lib[0];
+                const obj5 = { orderId: null, skuId: null, isGift: null };
+                obj5[0] = id.id;
+                obj5[1] = c0;
+                obj5[2] = constants;
+                logger.info("reusing existing draft order", obj5);
+                constants = 3;
+                const obj6 = { value: null, done: true };
+                obj6[0] = id;
+                return obj6;
+              } else {
+                const obj7 = { paymentGateway: null, recipientUserId: null, isGift: null, giftInfo: null, orderLineItems: null, externalGatewayFacet: null };
+                obj7[0] = c1;
+                obj7[1] = c2;
+                obj7[2] = constants;
+                obj7[3] = c5;
+                const obj8 = { sku_id: null, quantity: 1, purchase_type: null, subscription_plan_id: null };
+                obj8[0] = c0;
+                obj8[2] = c3;
+                obj8[3] = callback;
+                const items = [obj8];
+                obj7[4] = items;
+                obj7[5] = c8;
+                c3 = 3;
+                constants = 1;
+                const obj9 = { value: null, done: false };
+                obj9[0] = lib(obj7);
+                return obj9;
+              }
+            }
+          } else if (arg0 === 1) {
+            constants = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            constants = 3;
+            const obj10 = { value: null, done: true };
+            obj10[0] = arg1;
+            return obj10;
+          } else {
+            constants = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp20) {
+          constants = tmp;
+          throw tmp20;
+        }
       }
-      const obj7 = { paymentGateway: null, recipientUserId: null, isGift: null, giftInfo: null, orderLineItems: null, externalGatewayFacet: null };
-      obj7[0] = c1;
-      obj7[1] = c2;
-      obj7[2] = constants;
-      obj7[3] = c5;
-      const obj8 = { sku_id: null, quantity: 1, purchase_type: null, subscription_plan_id: null };
-      obj8[0] = c0;
-      obj8[2] = c3;
-      obj8[3] = callback;
-      const items = [obj8];
-      obj7[4] = items;
-      obj7[5] = c8;
-      yield lib(obj7);
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -519,7 +613,7 @@ function _patchOrderLineItem() {
               c5 = undefined;
               c5 = 1;
               logger = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -550,7 +644,7 @@ function _patchOrderLineItem() {
           } else if (2 === tmp7) {
             c4 = 0;
             logger = c3;
-            let obj5 = callback(3981);
+            let obj5 = callback(4022);
             obj5 = { tags: null, extra: null };
             obj5[0] = { source: "OrderActionCreators_patchOrderLineItem" };
             const obj6 = { orderId: null, orderLineItemId: null, subscriptionPlanId: null };
@@ -697,7 +791,7 @@ function _patchOrder() {
               logger = undefined;
               c5 = 1;
               logger = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -736,7 +830,7 @@ function _patchOrder() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_7 = c3;
-            let obj5 = callback(3981);
+            let obj5 = callback(4022);
             obj5 = { tags: null, extra: null };
             obj5[0] = { source: "OrderActionCreators_patchOrder" };
             const obj6 = { orderId: null, orderLineItems: null };
@@ -877,7 +971,7 @@ function _updateOrder() {
               c5 = undefined;
               c5 = 1;
               logger = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -933,7 +1027,7 @@ function _updateOrder() {
           } else if (2 === tmp7) {
             c4 = 0;
             logger = obj2;
-            obj5 = callback(3981);
+            obj5 = callback(4022);
             const obj6 = { tags: null, extra: null };
             obj6[0] = { source: "OrderActionCreators_updateOrder" };
             const obj7 = { orderId: null, giftInfo: null };

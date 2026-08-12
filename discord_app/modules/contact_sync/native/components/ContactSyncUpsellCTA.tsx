@@ -4,7 +4,7 @@ import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../../_runtime/13215_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13272_registerAsset.js";
 
 let c4;
 let c5;
@@ -33,7 +33,7 @@ const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) 
       location(outer1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      let obj = location(5761);
+      let obj = location(5800);
       obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
       const intl = location(1236).intl;
@@ -56,7 +56,7 @@ const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) 
   obj[4] = intl.string(location(1236).t.T6Rfd9);
   const intl2 = location(1236).intl;
   obj[5] = intl2.string(location(1236).t.c6KIpg);
-  return jsx(location(7969).FormCTA, {
+  return jsx(location(8008).FormCTA, {
     onPress() {
       let obj = outer1_1(outer1_2[7]);
       obj = { type: outer1_5.CONTACT_SYNC_MODAL, location: null };
@@ -73,7 +73,7 @@ const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) 
       location(outer1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      let obj = location(5761);
+      let obj = location(5800);
       obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
       const intl = location(1236).intl;

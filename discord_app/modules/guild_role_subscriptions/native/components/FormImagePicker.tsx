@@ -234,8 +234,8 @@ export default function FormImagePicker(children) {
   obj = { style: tmp2.buttonColumn, children: null };
   obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
   const items = [
-    callback2(tmp6(4299).Text, obj),
-    callback2(tmp6(4714).Button, {
+    callback2(tmp6(4340).Text, obj),
+    callback2(tmp6(4754).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

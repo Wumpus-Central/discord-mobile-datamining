@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08392_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08431_registerAsset.js";
 import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { GenericHeaderTitle } from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";

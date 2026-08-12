@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx
-import { navigationToRootTabHelper } from "../helpers/NavigationRouteUtils.native.tsx";
+import { coerceMainRoute } from "../helpers/NavigationRouteUtils.native.tsx";
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {
@@ -7,12 +7,12 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const coerceChannelRouteResult = navigationToRootTabHelper.coerceChannelRoute(currentRoute);
+  const coerceChannelRouteResult = coerceMainRoute.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
-    const coerceGuildsRouteResult = tmp(4158).coerceGuildsRoute(currentRoute);
+    const coerceGuildsRouteResult = tmp(4199).coerceGuildsRoute(currentRoute);
     if (null != coerceGuildsRouteResult) {
       const params = coerceGuildsRouteResult.params;
       let guildId;
@@ -35,6 +35,6 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
-  const obj = navigationToRootTabHelper;
+  const obj = coerceMainRoute;
   tmp = require;
 };

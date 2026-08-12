@@ -20,12 +20,12 @@ const memoResult = importAllResult.memo(() => {
   const timingConfig = callback(importAllResult.useState(() => {
     let obj = { timingConfig: null };
     obj = { duration: 1000 + 500 * Math.random(), easing: null };
-    const Easing = stateFromStores(4042).Easing;
-    obj[1] = Easing.inOut(stateFromStores(4042).Easing.sin);
+    const Easing = stateFromStores(4083).Easing;
+    obj[1] = Easing.inOut(stateFromStores(4083).Easing.sin);
     obj[0] = obj;
     return obj;
   }), 1)[0].timingConfig;
-  let obj1 = stateFromStores(4042);
+  let obj1 = stateFromStores(4083);
   const fn = function _() {
     const obj = { opacity: null };
     if (stateFromStores) {
@@ -43,15 +43,15 @@ const memoResult = importAllResult.memo(() => {
     }
     return tmp6;
   };
-  obj = { reducedMotion: stateFromStores, ROW_OPACITY_END: c8, withDelay: stateFromStores(4042).withDelay, INITIAL_DELAY_MS: 1000, withRepeat: stateFromStores(4042).withRepeat, withSequence: stateFromStores(4042).withSequence, withTiming: stateFromStores(4304).withTiming, timingConfig };
+  obj = { reducedMotion: stateFromStores, ROW_OPACITY_END: c8, withDelay: stateFromStores(4083).withDelay, INITIAL_DELAY_MS: 1000, withRepeat: stateFromStores(4083).withRepeat, withSequence: stateFromStores(4083).withSequence, withTiming: stateFromStores(4345).withTiming, timingConfig };
   fn.__closure = obj;
   fn.__workletHash = 9488742940898;
   fn.__initData = closure_9;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   obj = { style: animatedStyle, pointerEvents: "none", children: null };
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
-  obj[2] = jsx(stateFromStores(5376).Card, { variant: "secondary", style: callback2().postPlaceholder });
-  return jsx(timingConfig(4042).View, { style: animatedStyle, pointerEvents: "none", children: null });
+  obj[2] = jsx(stateFromStores(5415).Card, { variant: "secondary", style: callback2().postPlaceholder });
+  return jsx(timingConfig(4083).View, { style: animatedStyle, pointerEvents: "none", children: null });
 });
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");
 

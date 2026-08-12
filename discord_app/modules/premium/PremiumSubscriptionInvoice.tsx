@@ -86,7 +86,7 @@ function _createSubscriptionInvoicePreview() {
               let createFromServer;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -99,7 +99,7 @@ function _createSubscriptionInvoicePreview() {
               return obj1;
             } else {
               obj2 = { items: null, payment_source_id: null, trial_id: null, code: null, apply_entitlements: null, currency: null, renewal: null, metadata: null, load_id: null };
-              const result = callback(3966).coerceExistingItemsToNewItemInterval(callback);
+              const result = callback(4007).coerceExistingItemsToNewItemInterval(callback);
               callback = result;
               obj2[0] = result.map((planId) => {
                 const obj = {};
@@ -129,7 +129,7 @@ function _createSubscriptionInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             constants = c3;
-            const billingError = new callback(4202).BillingError(constants);
+            const billingError = new callback(4243).BillingError(constants);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -261,7 +261,7 @@ function _updateSubscriptionInvoicePreview() {
               let closure_12;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -274,7 +274,7 @@ function _updateSubscriptionInvoicePreview() {
               return obj1;
             } else {
               if (null != callback2) {
-                let obj4 = callback(3966);
+                let obj4 = callback(4007);
                 callback2 = obj4.coerceExistingItemsToNewItemInterval(callback2);
               }
               let mapped;
@@ -312,7 +312,7 @@ function _updateSubscriptionInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_13 = c3;
-            const billingError = new callback(4202).BillingError(closure_13);
+            const billingError = new callback(4243).BillingError(closure_13);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -434,7 +434,7 @@ function _createOneTimePurchaseInvoicePreview() {
               let body;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -461,7 +461,7 @@ function _createOneTimePurchaseInvoicePreview() {
                 c6.quantity = c5;
               }
               c4 = 1;
-              let obj3 = callback(4541);
+              let obj3 = callback(4581);
               obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: false };
               obj3[0] = closure_12.STORE_SKU_PURCHASE(callback2);
               obj3[1] = c6;
@@ -474,7 +474,7 @@ function _createOneTimePurchaseInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_8 = c3;
-            const billingError = new callback(4202).BillingError(closure_8);
+            const billingError = new callback(4243).BillingError(closure_8);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -535,17 +535,84 @@ function _getSubscriptionInvoice() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      c1 = tmp2;
-      ({ subscriptionId: c0, preventFetch: c1 } = callback);
-      yield "ct";
-      if (c1) {
-        return null;
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp5;
+              c1 = tmp2;
+              let callback;
+              c1 = undefined;
+              ({ subscriptionId: c0, preventFetch: c1 } = callback);
+              body = undefined;
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else if (c1) {
+              c4 = 3;
+              return { value: null, done: true };
+            } else {
+              const HTTP = callback(body[7]).HTTP;
+              const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
+              obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
+              c3 = 2;
+              c4 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.get(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            body = arg1;
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = createFromServer.createInvoiceFromServer(body.body);
+            return obj;
+          }
+        } catch (tmp16) {
+          c4 = tmp;
+          throw tmp16;
+        }
       }
-      const HTTP = callback(body[7]).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
-      body = yield HTTP.get(obj2);
-      return createFromServer.createInvoiceFromServer(body.body);
     })();
     iter.next();
     return iter;

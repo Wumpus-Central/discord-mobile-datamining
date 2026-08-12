@@ -17,7 +17,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let first;
   let dependencyMap;
   let callback;
-  ({ shouldShow, modalConfig } = first(11876)(arg0, arg1));
+  ({ shouldShow, modalConfig } = first(11933)(arg0, arg1));
   if (shouldShow) {
     shouldShow = null != modalConfig;
   }
@@ -28,8 +28,8 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   if (shouldShow) {
     items.push(modalConfig.dismissibleContent);
   }
-  const tmp2 = first(11876)(arg0, arg1);
-  const tmp5 = callback(modalConfig(6024).useSelectedDismissibleContent(items), 2);
+  const tmp2 = first(11933)(arg0, arg1);
+  const tmp5 = callback(modalConfig(6063).useSelectedDismissibleContent(items), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   callback = React.useRef(false);
