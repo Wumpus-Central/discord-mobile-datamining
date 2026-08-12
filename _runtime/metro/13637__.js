@@ -1,46 +1,81 @@
 // _runtime/metro/13637__.js
-import { all } from "../13606_all.js";
+let _globalThis = typeof globalThis === "object";
+if (typeof globalThis === "object") {
+  _globalThis = globalThis;
+}
+let tmp = _globalThis;
+if (_globalThis) {
+  const _Math = Math;
+  tmp = _globalThis.Math === Math;
+}
+if (tmp) {
+  tmp = _globalThis;
+}
+if (!tmp) {
+  const _window = window;
+  let _window2 = typeof window === "object";
+  if (typeof window === "object") {
+    _window2 = window;
+  }
+  let tmp2 = _window2;
+  if (_window2) {
+    const _Math2 = Math;
+    tmp2 = _window2.Math === Math;
+  }
+  if (tmp2) {
+    tmp2 = _window2;
+  }
+  tmp = tmp2;
+}
+if (!tmp) {
+  const _self = self;
+  let _self2 = typeof self === "object";
+  if (typeof self === "object") {
+    _self2 = self;
+  }
+  let tmp3 = _self2;
+  if (_self2) {
+    const _Math3 = Math;
+    tmp3 = _self2.Math === Math;
+  }
+  if (tmp3) {
+    tmp3 = _self2;
+  }
+  tmp = tmp3;
+}
+if (!tmp) {
+  let tmp5 = typeof global === "object";
+  if (typeof global === "object") {
+    tmp5 = global;
+  }
+  let tmp6 = tmp5;
+  if (tmp5) {
+    const _Math4 = Math;
+    tmp6 = tmp5.Math === Math;
+  }
+  if (tmp6) {
+    tmp6 = tmp5;
+  }
+  tmp = tmp6;
+}
+if (!tmp) {
+  let self = typeof this === "object";
+  if (typeof this === "object") {
+    self = this;
+  }
+  let tmp7 = self;
+  if (self) {
+    const _Math5 = Math;
+    tmp7 = self.Math === Math;
+  }
+  if (tmp7) {
+    tmp7 = self;
+  }
+  tmp = tmp7;
+}
+if (!tmp) {
+  const _Function = Function;
+  tmp = Function("return this")();
+}
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (all(arg2)) {
-    tmp3(13638)(arg2, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = arg2;
-    } else {
-      tmp3(13581)(arg1, arg2);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = arg2;
-      } else {
-        obj = { value: null, enumerable: false, configurable: null, writable: null };
-        obj[0] = arg2;
-        obj[2] = !obj.nonConfigurable;
-        obj[3] = !obj.nonWritable;
-        tmp3(13634).f(arg0, arg1, obj);
-        const tmp3Result = tmp3(13634);
-      }
-    } catch (err) {
-    }
-  }
-  return arg0;
-};
+export default tmp;

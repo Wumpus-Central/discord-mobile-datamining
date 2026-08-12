@@ -17,7 +17,7 @@ if (!isJest) {
 let closure_6 = { code: "function pnpm_useAnimatedRefTs1(){const{tagOrWrapper,viewName}=this.__closure;const f=function(){return tagOrWrapper.value;};if(viewName){f.viewName=viewName;}return f;}" };
 
 export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
-  const f70938 = (getScrollableNode) => {
+  const f71073 = (getScrollableNode) => {
     if (getScrollableNode.getScrollableNode) {
       let scrollableNode = getScrollableNode.getScrollableNode();
     } else {
@@ -36,7 +36,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       const callback = map;
       if (map) {
         ref.current = callback(map);
-        fun.getTag = () => f70941(current[3]).findNodeHandle(closure_0);
+        fun.getTag = () => f71076(current[3]).findNodeHandle(closure_0);
         fun.current = map;
         if (tag.size) {
           tag = undefined;
@@ -91,18 +91,18 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
     if (!obj.isFabric()) {
       mutable = null;
       if (closure_5) {
-        mutable = f70941(current[4]).makeMutable(null);
-        const tmpResult = f70941(current[4]);
+        mutable = f71076(current[4]).makeMutable(null);
+        const tmpResult = f71076(current[4]);
       }
     }
     return mutable;
   }), 1)[0];
-  let f70941 = first;
-  const first1 = callback(callback2(() => f70941(current[4]).makeMutable(null)), 1)[0];
+  let f71076 = first;
+  const first1 = callback(callback2(() => f71076(current[4]).makeMutable(null)), 1)[0];
   let current = first1;
-  f70941 = (viewConfig) => {
+  f71076 = (viewConfig) => {
     if (obj.isFabric()) {
-      let fn = f70941(current[5]).getShadowNodeWrapperFromRef;
+      let fn = f71076(current[5]).getShadowNodeWrapperFromRef;
     } else {
       fn = (getScrollableNode) => {
         if (getScrollableNode.getScrollableNode) {
@@ -117,7 +117,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       };
     }
     current.value = fn(viewConfig);
-    if (f70941) {
+    if (f71076) {
       let str;
       if (viewConfig != null) {
         viewConfig = viewConfig.viewConfig;
@@ -143,7 +143,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       const callback = map;
       if (map) {
         ref.current = callback(map);
-        fun.getTag = () => f70941(current[3]).findNodeHandle(closure_0);
+        fun.getTag = () => f71076(current[3]).findNodeHandle(closure_0);
         fun.current = map;
         if (tag.size) {
           tag = undefined;
@@ -192,15 +192,15 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
     tmp4.current = fun;
   }
   current = tmp4.current;
-  const shareableMappingCache = f70941(current[6]).shareableMappingCache;
+  const shareableMappingCache = f71076(current[6]).shareableMappingCache;
   if (!shareableMappingCache.get(current)) {
     let obj = { __init: null };
     let fn = function n() {
       const fn = function f() {
         return value.value;
       };
-      if (f70941) {
-        fn.viewName = f70941;
+      if (f71076) {
+        fn.viewName = f71076;
       }
       return fn;
     };

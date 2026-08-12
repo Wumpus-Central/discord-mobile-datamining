@@ -5,10 +5,10 @@ import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrum
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 import { getStatics } from "01140_getStatics.js";
 
-function instrumentReactRouter(f103135, arg1, arg2, location) {
+function instrumentReactRouter(f103353, arg1, arg2, location) {
   let tmp5;
   let tmp6;
-  const _require = f103135;
+  const _require = f103353;
   const dependencyMap = arg4;
   let items = arg5;
   if (arg5 === undefined) {
@@ -58,7 +58,7 @@ function instrumentReactRouter(f103135, arg1, arg2, location) {
       obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
       obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj[1] = obj;
-      let result = obj.startBrowserTracingPageLoadSpan(f103135, obj);
+      let result = obj.startBrowserTracingPageLoadSpan(f103353, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
     }
   }

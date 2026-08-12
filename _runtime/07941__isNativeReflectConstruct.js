@@ -3,11 +3,8 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07942___INTERNAL_VIEW_CONFIG.js";
 
-const Use = arg1;
+const FeTile = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Use {
+class FeTile {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Use);
+    tmp = _isNativeReflectConstruct(this, FeTile);
     tmp2 = __esModule;
-    obj = __esModule(Use);
+    obj = __esModule(FeTile);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,53 +44,19 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Use, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      let children;
-      let height;
-      let width;
-      let x;
-      let y;
-      const self = this;
-      const props = this.props;
-      let str = props.href;
-      ({ children, x, y, width, height } = props);
-      if (undefined === str) {
-        str = props.xlinkHref;
-      }
-      let match = str;
-      if (str) {
-        match = str.match(self(7853).idPattern);
-      }
-      let tmp4 = match;
-      if (match) {
-        tmp4 = match[1];
-      }
-      if (!tmp4) {
-        const _console = console;
-        console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
-      }
-      let obj = { href: tmp4, x, y, width, height };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp7 = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(self(7852).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = children;
-      return <tmp7 ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
-    }
+require("_inherits")(FeTile, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeTile(7892).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeTile, items);
+importDefaultResultResult.displayName = "FeTile";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

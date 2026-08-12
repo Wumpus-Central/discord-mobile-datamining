@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "d33f2912dc07229c1490c1d77592fddf", name: "img_account_sync_twitter_light_and_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "a5aa4e98136aaaae712a29ded608e4e5", name: "img_account_sync_twitch_light_and_dark", type: "svg" });

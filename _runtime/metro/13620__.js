@@ -1,24 +1,2 @@
 // _runtime/metro/13620__.js
-import { call } from "../13603_call.js";
-import { 13621__ } from "13621__.js";
-
-export default (arg0, arg1, arg2) => {
-  const arr = 13621__(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
-    let tmp6 = call(arg0, tmp3);
-    let tmp7 = num;
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = tmp4(13603)(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+arg5.calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];

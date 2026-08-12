@@ -1,0 +1,47 @@
+// _runtime/03768_setUTCISODay.js
+import _typeof from "_typeof";
+import requiredArgs from "requiredArgs";
+import toInteger from "toInteger";
+
+if (!_typeof) {
+  let obj = { default: null };
+  obj[0] = _typeof;
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+let c0 = tmp3;
+if (!requiredArgs) {
+  obj = { default: null };
+  obj[0] = requiredArgs;
+  let tmp5 = obj;
+} else {
+  tmp5 = requiredArgs;
+}
+let closure_1 = tmp5;
+if (!toInteger) {
+  obj = { default: null };
+  obj[0] = toInteger;
+  let tmp7 = obj;
+} else {
+  tmp7 = toInteger;
+}
+
+export default function setUTCISODay(arg0, arg1) {
+  tmp5.default(2, arguments);
+  const defaultResult1 = tmp7.default(arg1);
+  let diff = defaultResult1;
+  if (defaultResult1 % 7 === 0) {
+    diff = defaultResult1 - 7;
+  }
+  const defaultResult2 = tmp3.default(arg0);
+  let num = 0;
+  const uTCDay = defaultResult2.getUTCDay();
+  if ((diff % 7 + 7) % 7 < 1) {
+    num = 7;
+  }
+  const diff1 = num + diff - uTCDay;
+  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
+  return defaultResult2;
+};
+export default exports.default;

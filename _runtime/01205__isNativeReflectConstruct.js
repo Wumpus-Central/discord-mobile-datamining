@@ -259,7 +259,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "Map" });
+                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "TypeError" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {

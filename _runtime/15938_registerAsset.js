@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 292, height: 182, scales: [2, 3], hash: "580ec4f595fa69a80ec70eff21ac3c71", name: "webhook_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/referral_program/native/images", width: 200.5, height: 114, scales: [2, 3], hash: "fbbee3b1c0716eaa554a8f9a94badc67", name: "asset_nitro_ticket", type: "png" });

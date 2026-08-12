@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/dark-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "3bf80d0ee51953e3bee2dbf2f586efb1", name: "feedback-modal-happy-desaturated", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "b9997656a6ea3bbba288fa094cb46f69", name: "ic_hide_24px", type: "png" });

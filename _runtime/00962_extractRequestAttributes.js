@@ -123,7 +123,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       c4 = undefined;
                       c3 = 1;
                       c4 = 1;
-                      return { value: "ct", done: "Array" };
+                      return { value: "ct", done: true };
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
@@ -154,7 +154,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
                       obj2[2] = methodPath;
                       obj5.startSpanManual(obj2, (() => {
-                        let closure_0 = outer2_2(/* F119989 */ function() { ... });
+                        let closure_0 = outer2_2(/* F120239 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(methodPath[2]);
@@ -167,7 +167,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj3[1] = obj3.getSpanOperation(outer1_1);
                     obj3[2] = methodPath;
                     obj1.startSpan(obj3, (() => {
-                      let closure_0 = outer2_2(/* F119991 */ function() { ... });
+                      let closure_0 = outer2_2(/* F120241 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -253,7 +253,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                               c4 = undefined;
                               c3 = 1;
                               c4 = 1;
-                              return { value: "ct", done: "Array" };
+                              return { value: "ct", done: true };
                             }
                           } else if (arg0 === 1) {
                             c4 = 3;
@@ -342,7 +342,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             let closure_0 = [...arguments];
                             let c3 = 0;
                             let c4 = 0;
-                            const iter = (/* F114870 */ function*() { ... })();
+                            const iter = (/* F115104 */ function*() { ... })();
                             iter.next();
                             return iter;
                           });

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9dd37f954b23d7c3c7ed4428be93436f", name: "ClydeIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 61, height: 61, scales: [3], hash: "a162bb51b9ed292f4f10e545ed35e2e3", name: "asset_platinum_badge_small", type: "png" });

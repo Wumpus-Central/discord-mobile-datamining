@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback", width: 72, height: 72, scales: [1, 2, 3], hash: "8c3b8fc66cebe540d123e4c535f8a6d7", name: "feedback-modal-happy", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 54, height: 54, scales: [1], hash: "9a03a674792f2187c83109744abce109", name: "connections-profile-steam-dota2", type: "png" });

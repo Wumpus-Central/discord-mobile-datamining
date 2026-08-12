@@ -3,12 +3,8 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { 07915__ } from "metro/07915__.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07920___INTERNAL_VIEW_CONFIG.js";
 
-const Mask = arg1;
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Mask {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Mask);
+    tmp = _isNativeReflectConstruct(this, FeComponentTransfer);
     tmp2 = __esModule;
-    obj = __esModule(Mask);
+    obj = __esModule(FeComponentTransfer);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -48,61 +44,19 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Mask, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      let maskContentUnits;
-      let maskUnits;
-      let style;
-      const self = this;
-      const props = this.props;
-      ({ maskUnits, maskContentUnits, style } = props);
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
-      let num = 0;
-      if (undefined !== maskUnits) {
-        num = 07915__[maskUnits];
-      }
-      obj[4] = num;
-      let num2 = 1;
-      if (undefined !== maskContentUnits) {
-        num2 = 07915__[maskContentUnits];
-      }
-      obj[5] = num2;
-      let str;
-      if (props != null) {
-        str = props.maskType;
-      }
-      if (!str) {
-        let maskType;
-        if (style != null) {
-          maskType = style.maskType;
-        }
-        str = maskType;
-      }
-      if (!str) {
-        str = "luminance";
-      }
-      obj[6] = self(7919).maskType[str];
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp5 = self;
-      const tmp8 = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(self(7852).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = props.children;
-      return <tmp8 ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
-    }
+require("_inherits")(FeComponentTransfer, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeComponentTransfer(7892).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

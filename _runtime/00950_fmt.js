@@ -8,7 +8,7 @@ export const debug = function debug(message, attributes, attributes) {
   if (attributes === undefined) {
     obj = {};
   }
-  obj = { level: "debug", message, attributes, severityNumber: "HermesInternal" };
+  obj = { level: "debug", message, attributes, severityNumber: "accessibilityRole" };
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj, obj.scope);
 };
 export const error = function error(message, attributes, attributes) {
@@ -16,7 +16,7 @@ export const error = function error(message, attributes, attributes) {
   if (attributes === undefined) {
     obj = {};
   }
-  obj = { level: "error", message, attributes, severityNumber: "e" };
+  obj = { level: "error", message, attributes, severityNumber: "HermesInternal" };
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj, obj.scope);
 };
 export const fatal = function fatal(message, attributes, attributes) {
@@ -24,7 +24,7 @@ export const fatal = function fatal(message, attributes, attributes) {
   if (attributes === undefined) {
     obj = {};
   }
-  obj = { level: "fatal", message, attributes, severityNumber: "accessibilityRole" };
+  obj = { level: "fatal", message, attributes, severityNumber: "e" };
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj, obj.scope);
 };
 export const info = function info(message, attributes, attributes) {
@@ -48,6 +48,6 @@ export const warn = function warn(message, attributes, attributes) {
   if (attributes === undefined) {
     obj = {};
   }
-  obj = { level: "warn", message, attributes, severityNumber: "id" };
+  obj = { level: "warn", message, attributes, severityNumber: "channel_id" };
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj, obj.scope);
 };

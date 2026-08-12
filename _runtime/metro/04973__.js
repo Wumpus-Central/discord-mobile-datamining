@@ -1,170 +1,91 @@
 // _runtime/metro/04973__.js
-import { getDataView } from "../04931_getDataView.js";
+import { getDataView } from "../04971_getDataView.js";
 const require = arg1;
+const module = arg2;
 const dependencyMap = arg6;
-obj = { 4: null, 8: null, 12: null, 16: null, 20: obj, 24: null, 36: null, 40: null, 48: obj, 52: null, 64: null, 80: null };
-obj = {
-  name: "Preferred CMM type",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  },
-  description(str) {
-    if (null === str) {
-      return "";
-    } else {
-      const formatted = str.toLowerCase();
-      if ("appl" === formatted) {
-        let str6 = "Apple";
-      } else if ("adbe" === formatted) {
-        str6 = "Adobe";
-      } else if ("msft" === formatted) {
-        str6 = "Microsoft";
-      } else {
-        if ("sunw" === formatted) {
-          str6 = "Sun Microsystems";
-        } else if ("sgi" !== formatted) {
-          str6 = "Taligent";
-          if ("tgnt" !== formatted) {
-            str6 = str;
-          }
-        }
-        str6 = "Silicon Graphics";
+arg5.default = {
+  parseAppMarkers(byteLength, flag2) {
+    if (module(4974).USE_TIFF) {
+      let tmpResult = tmp(4975);
+      if (tmpResult.isTiffFile(byteLength)) {
+        tmpResult = tmp(4975);
+        const findTiffOffsetsResult = tmpResult.findTiffOffsets();
+        let obj = { fileType: null };
+        obj[0] = { value: "tiff", description: "TIFF" };
+        return getDataView.objectAssign({}, findTiffOffsetsResult, obj);
       }
     }
-  }
-};
-obj = {
-  name: "Profile Version",
-  value(getUint8, sum) {
-    const str = getUint8.getUint8(sum);
-    const text = `${str.toString(10)}.`;
-    const str2 = getUint8.getUint8(sum + 1) >> 4;
-    const text1 = `${str.toString(10)}.${str2.toString(10)}`;
-    return `${str.toString(10)}.${str2.toString(10)}` + "." + getUint8.getUint8(sum + 1) % 16.toString(10);
-  }
-};
-obj[12] = {
-  name: "Profile/Device class",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  },
-  description(arg0) {
-    return "MultiplexVisualization profile";
-  }
-};
-obj[16] = {
-  name: "Color Space",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  }
-};
-obj[20] = {
-  name: "Connection Space",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  }
-};
-obj[24] = {
-  name: "ICC Profile Date",
-  value(getUint16, sum) {
-    const uint16 = getUint16.getUint16(sum);
-    const diff = getUint16.getUint16(sum + 2) - 1;
-    const uint161 = getUint16.getUint16(sum + 4);
-    const uint162 = getUint16.getUint16(sum + 6);
-    const uint163 = getUint16.getUint16(sum + 8);
-    return new Date(Date.UTC(uint16, diff, uint161, uint162, uint163, getUint16.getUint16(sum + 10))).toISOString();
-  }
-};
-obj[36] = {
-  name: "ICC Signature",
-  value(buffer) {
-    buffer = buffer.buffer;
-    const uint8Array = new Uint8Array(buffer.slice(arg1, arg1 + 4));
-    return fromCharCode.apply(null, uint8Array);
-  }
-};
-obj[40] = {
-  name: "Primary Platform",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  },
-  description(str) {
-    const formatted = str.toLowerCase();
-    if ("appl" === formatted) {
-      let str5 = "Apple";
-    } else if ("adbe" === formatted) {
-      str5 = "Adobe";
-    } else if ("msft" === formatted) {
-      str5 = "Microsoft";
-    } else if ("sunw" === formatted) {
-      str5 = "Sun Microsystems";
-    } else if ("sgi" === formatted) {
-      str5 = "Silicon Graphics";
-    } else {
-      str5 = "Taligent";
-      if ("tgnt" !== formatted) {
-        str5 = str;
+    if (module(4974).USE_JPEG) {
+      if (tmpResult1.isJpegFile(byteLength)) {
+        const tmpResult2 = tmp(4977);
+        const findJpegOffsetsResult = tmp(4977).findJpegOffsets(byteLength);
+        obj = { fileType: null };
+        obj[0] = { value: "jpeg", description: "JPEG" };
+        return getDataView.objectAssign({}, findJpegOffsetsResult, obj);
       }
+      tmpResult1 = tmp(4977);
     }
-    return str5;
-  }
-};
-obj[48] = {
-  name: "Device Manufacturer",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  },
-  description(str) {
-    const formatted = str.toLowerCase();
-    if ("appl" === formatted) {
-      let str5 = "Apple";
-    } else if ("adbe" === formatted) {
-      str5 = "Adobe";
-    } else if ("msft" === formatted) {
-      str5 = "Microsoft";
-    } else if ("sunw" === formatted) {
-      str5 = "Sun Microsystems";
-    } else if ("sgi" === formatted) {
-      str5 = "Silicon Graphics";
-    } else {
-      str5 = "Taligent";
-      if ("tgnt" !== formatted) {
-        str5 = str;
+    if (module(4974).USE_PNG) {
+      if (tmpResult3.isPngFile(byteLength)) {
+        const tmpResult4 = tmp(4978);
+        const findPngOffsetsResult = tmp(4978).findPngOffsets(byteLength, flag2);
+        const obj1 = { fileType: null };
+        obj1[0] = { value: "png", description: "PNG" };
+        return getDataView.objectAssign({}, findPngOffsetsResult, obj1);
       }
+      tmpResult3 = tmp(4978);
     }
-    return str5;
-  }
-};
-obj[52] = {
-  name: "Device Model Number",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  }
-};
-obj[64] = {
-  name: "Rendering Intent",
-  value(getUint32, sum) {
-    return getUint32.getUint32(sum);
-  },
-  description(arg0) {
-    if (0 === arg0) {
-      return "Perceptual";
-    } else if (1 === arg0) {
-      return "Relative Colorimetric";
-    } else if (2 === arg0) {
-      return "Saturation";
-    } else if (3 === arg0) {
-      return "Absolute Colorimetric";
-    } else {
-      return arg0;
+    if (module(4974).USE_HEIC) {
+      if (tmpResult5.isHeicFile(byteLength)) {
+        const tmpResult6 = tmp(4979);
+        const findHeicOffsetsResult = tmp(4979).findHeicOffsets(byteLength);
+        const obj2 = { fileType: null };
+        obj2[0] = { value: "heic", description: "HEIC" };
+        return getDataView.objectAssign({}, findHeicOffsetsResult, obj2);
+      }
+      tmpResult5 = tmp(4979);
     }
+    if (module(4974).USE_AVIF) {
+      if (tmpResult7.isAvifFile(byteLength)) {
+        const tmpResult8 = tmp(4983);
+        const findAvifOffsetsResult = tmp(4983).findAvifOffsets(byteLength);
+        const obj3 = { fileType: null };
+        obj3[0] = { value: "avif", description: "AVIF" };
+        return getDataView.objectAssign({}, findAvifOffsetsResult, obj3);
+      }
+      tmpResult7 = tmp(4983);
+    }
+    if (module(4974).USE_WEBP) {
+      if (tmpResult9.isWebpFile(byteLength)) {
+        const tmpResult10 = tmp(4984);
+        const findOffsetsResult = tmp(4984).findOffsets(byteLength);
+        const obj4 = { fileType: null };
+        obj4[0] = { value: "webp", description: "WebP" };
+        return getDataView.objectAssign({}, findOffsetsResult, obj4);
+      }
+      tmpResult9 = tmp(4984);
+    }
+    if (module(4974).USE_GIF) {
+      if (tmpResult11.isGifFile(byteLength)) {
+        const tmpResult12 = tmp(4985);
+        const findOffsetsResult1 = tmp(4985).findOffsets(byteLength);
+        const obj5 = { fileType: null };
+        obj5[0] = { value: "gif", description: "GIF" };
+        return getDataView.objectAssign({}, findOffsetsResult1, obj5);
+      }
+      tmpResult11 = tmp(4985);
+    }
+    if (module(4974).USE_XMP) {
+      if (tmpResult13.isXMLFile(byteLength)) {
+        const tmpResult14 = tmp(4986);
+        const findOffsetsResult2 = tmp(4986).findOffsets(byteLength);
+        const obj6 = { fileType: null };
+        obj6[0] = { value: "xml", description: "XML" };
+        return getDataView.objectAssign({}, findOffsetsResult2, obj6);
+      }
+      tmpResult13 = tmp(4986);
+    }
+    const error = new Error("Invalid image format");
+    throw error;
   }
 };
-obj[80] = {
-  name: "Profile Creator",
-  value(dataView, sum) {
-    return getDataView.getStringFromDataView(dataView, sum, 4);
-  }
-};
-arg5.iccTags = { desc: { name: "ICC Description" }, cprt: { name: "ICC Copyright" }, dmdd: { name: "ICC Device Model Description" }, vued: { name: "ICC Viewing Conditions Description" }, dmnd: { name: "ICC Device Manufacturer for Display" }, tech: { name: "Technology" } };
-arg5.iccProfile = obj;

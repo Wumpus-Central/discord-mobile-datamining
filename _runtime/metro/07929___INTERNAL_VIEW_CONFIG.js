@@ -1,7 +1,7 @@
 // _runtime/metro/07929___INTERNAL_VIEW_CONFIG.js
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
-const obj = { uiViewClassName: "RNSVGRadialGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, fx: true, fy: true, cx: true, cy: true, rx: true, ry: true, gradient: true, gradientUnits: true, gradientTransform: true } };
+const obj = { uiViewClassName: "RNSVGFeOffset", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true } };
 
-export default setRuntimeConfigProvider.get("RNSVGRadialGradient", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGFeOffset", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

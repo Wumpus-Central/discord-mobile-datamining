@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07911___INTERNAL_VIEW_CONFIG.js";
 
-const Line = arg1;
+const Ellipse = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Line {
+class Ellipse {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Line);
+    tmp = _isNativeReflectConstruct(this, Ellipse);
     tmp2 = __esModule;
-    obj = __esModule(Line);
+    obj = __esModule(Ellipse);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,30 +47,30 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Line, require("_isNativeReflectConstruct"));
+require("_inherits")(Ellipse, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
-      let x1;
-      let x2;
-      let y1;
-      let y2;
+      let cx;
+      let cy;
+      let rx;
+      let ry;
       const self = this;
       const props = this.props;
       let obj = {};
-      ({ x1, y1, x2, y2 } = props);
-      const merged = Object.assign(self(7852).extract(this, props));
-      obj.x1 = x1;
-      obj.y1 = y1;
-      obj.x2 = x2;
-      obj.y2 = y2;
+      ({ cx, cy, rx, ry } = props);
+      const merged = Object.assign(self(7891).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.rx = rx;
+      obj.ry = ry;
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const obj2 = self(7852);
+      const obj2 = self(7891);
       const merged1 = Object.assign(obj);
       return jsx(__INTERNAL_VIEW_CONFIG, {
         ref(arg0) {
@@ -80,8 +80,8 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = importDefaultResult(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;

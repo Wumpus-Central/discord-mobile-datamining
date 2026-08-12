@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/images", width: 435, height: 218, scales: [1], hash: "92f827adadc1f86811fd4e36c86fdf27", name: "nitro_modal_header_background", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 48, height: 48, scales: [2, 3], hash: "c0ad0e7adefed3e2ebad52c7f4beb394", name: "progress-setup", type: "png" });

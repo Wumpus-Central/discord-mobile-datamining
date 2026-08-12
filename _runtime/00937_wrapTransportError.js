@@ -161,7 +161,7 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
                   c0 = undefined;
                   c6 = 1;
                   c7 = 1;
-                  return { value: "ct", done: "Array" };
+                  return { value: "ct", done: true };
                 }
               } else {
                 if (1 === tmp7) {

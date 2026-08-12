@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 366.5, height: 180, scales: [2, 3], hash: "36372d934592de3c10481ad82af6bc9f", name: "img_longer_messages", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon", width: 60, height: 60, scales: [2, 3], hash: "0e26d39cd35df5b70db021fff662c44e", name: "Y2KIcon", type: "png" });

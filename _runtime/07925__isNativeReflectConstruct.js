@@ -3,10 +3,12 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
+import noop from "noop";
+import jsxProd from "jsxProd";
 
-const Polygon = importDefault;
+let closure_6;
+let error;
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,60 +28,60 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Polygon {
+({ jsx: closure_6, jsxs: error } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, FeDropShadow);
     tmp2 = __esModule;
-    obj = __esModule(apply);
+    obj = __esModule(FeDropShadow);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.setNativeProps = (points) => {
-      points = points.points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        points.d = "M" + _undefined(outer1_1[7])(points) + "z";
-      }
-      if (_undefined.root) {
-        const root = _undefined.root;
-        root.setNativeProps(points);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Polygon, require("_isNativeReflectConstruct"));
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      const props = this.props;
-      const points = props.points;
-      const obj = { ref: this.refMethod, d: null };
-      let combined = points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        combined = "M" + Polygon(7926)(points) + "z";
-      }
-      obj[1] = combined;
-      const merged = Object.assign(props);
-      return jsx(Polygon(7921), { ref: this.refMethod, d: null });
+require("_inherits")(FeDropShadow, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    let dx;
+    let dy;
+    let result;
+    const self = this;
+    const props = this.props;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
     }
+    let obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [callback3(FeDropShadow(7926), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(7928), { dx, dy, result: "offsetblur" }), , , ];
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    items[2] = callback3(FeDropShadow(7930), obj);
+    items[3] = callback3(FeDropShadow(7919), { in2: "offsetblur", operator: "in" });
+    obj = { result, children: null };
+    const items1 = [callback3(FeDropShadow(7934), {}), callback3(FeDropShadow(7934), { in: str })];
+    obj[1] = items1;
+    items[4] = callback4(FeDropShadow(7932), obj);
+    obj[0] = items;
+    return callback4(React.Fragment, obj);
   }
-];
-const importDefaultResultResult = importDefaultResult(Polygon, items);
-importDefaultResultResult.displayName = "Polygon";
-importDefaultResultResult.defaultProps = { points: "" };
+};
+let items = [obj];
+const importDefaultResultResult = importDefaultResult(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/private_channels/clean_up_inactive_gdms", scales: [1], hash: "78ec722bd03a658266c730b055967dd0", name: "CleanUpInactiveGDMs.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/vibegrations/intl", scales: [1], hash: "04f4fd8ce22b17439113e25c9237d492", name: "VibegrationsUntranslated.compiled.messages", type: "jsona" });

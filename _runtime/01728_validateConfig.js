@@ -79,8 +79,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "shaking_face",
-      reduceMotion: true
+      startTimestamp: "fist_tone5",
+      reduceMotion: "resetVelocityHistory"
     };
     let num = obj.velocity;
     if (num == null) {

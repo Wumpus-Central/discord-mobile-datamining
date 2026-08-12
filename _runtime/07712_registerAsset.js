@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "220c71f96225f35f4c52e38db6b8734b", name: "SoundboardIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MatteDarkIcon", width: 60, height: 60, scales: [2, 3], hash: "5e2f785032385a803c0dd3d91ffe95da", name: "MatteDarkIcon", type: "png" });

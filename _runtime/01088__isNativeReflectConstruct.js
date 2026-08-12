@@ -4950,7 +4950,7 @@ function initObservers(doc) {
                     } catch (tmp7) {
                       if (outer1_79) {
                         if (true === tmp8(tmp7)) {
-                          return /* F102970 */ function() { ... };
+                          return /* F103188 */ function() { ... };
                         }
                       }
                       throw tmp7;
@@ -6735,7 +6735,7 @@ function mergeWarning(_meta) {
     _meta._meta = obj;
     return _meta;
   } else {
-    obj = { headers: null, size: "Array", _meta: "Array" };
+    obj = { headers: null, size: "Array", _meta: -1 };
     obj[0] = obj;
     obj = { warnings: null };
     const items1 = [arg1];
@@ -7207,7 +7207,7 @@ function _prepareFetchData2() {
                           tmp23._meta = obj8;
                           let obj9 = tmp23;
                         } else {
-                          obj9 = { headers: null, size: "Array", _meta: "Array" };
+                          obj9 = { headers: null, size: "Array", _meta: -1 };
                           obj9[0] = obj8;
                           const obj10 = { warnings: null };
                           const items1 = [tmp21];
@@ -7351,7 +7351,7 @@ function _getResponseInfo2() {
               let closure_10;
               v0 = 1;
               dependencyMap = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -8005,7 +8005,7 @@ function _captureXhrBreadcrumbToReplay() {
                               tmp22._meta = obj6;
                               let obj7 = tmp22;
                             } else {
-                              obj7 = { headers: null, size: "Array", _meta: "Array" };
+                              obj7 = { headers: null, size: "Array", _meta: -1 };
                               obj7[0] = obj6;
                               const obj8 = { warnings: null };
                               let items2 = [tmp17];
@@ -8024,7 +8024,7 @@ function _captureXhrBreadcrumbToReplay() {
                             tmp18._meta = obj9;
                             let obj10 = tmp18;
                           } else {
-                            obj10 = { headers: null, size: "Array", _meta: "Array" };
+                            obj10 = { headers: null, size: "Array", _meta: -1 };
                             obj10[0] = obj9;
                             const obj11 = { warnings: null };
                             let items4 = [tmp14];
@@ -8439,60 +8439,140 @@ function _prepareReplayEvent() {
       let c1;
       let c2;
       let c3;
-      const dependencyMap = tmp2;
-      ({ client: c0, scope: c1, replayId: c2, event: c3 } = store);
-      yield "ct";
-      const obj2 = { event_id: null, integrations: null };
-      obj2[0] = c2;
-      if (typeof store._integrations === "object") {
-        if (null !== store._integrations) {
-          const _Array = Array;
-          if (!Array.isArray(store._integrations)) {
-            const _Object = Object;
-            const keys = Object.keys(store._integrations);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c2 = tmp5;
+              let dependencyMap = tmp2;
+              let store;
+              dependencyMap = undefined;
+              c2 = undefined;
+              c3 = undefined;
+              ({ client: c0, scope: c1, replayId: c2, event: c3 } = store);
+              c4 = undefined;
+              let closure_5;
+              let sdk;
+              sdk = undefined;
+              let name;
+              let version;
+              let settings;
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const obj2 = { event_id: null, integrations: null };
+              obj2[0] = c2;
+              let keys;
+              if (typeof store._integrations === "object") {
+                if (null !== store._integrations) {
+                  const _Array = Array;
+                  if (!Array.isArray(store._integrations)) {
+                    const _Object = Object;
+                    keys = Object.keys(store._integrations);
+                  }
+                }
+              }
+              obj2[1] = keys;
+              c4 = obj2;
+              store.emit("preprocessEvent", c3, c4);
+              let obj4 = store(817);
+              const options = store.getOptions();
+              let obj5 = store(817);
+              c3 = 2;
+              c4 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = obj4.prepareEvent(options, c3, c4, dependencyMap, store, obj5.getIsolationScope());
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            closure_5 = arg1;
+            if (closure_5) {
+              store.emit("postprocessEvent", closure_5, c4);
+              let str2 = closure_5.platform;
+              if (!str2) {
+                str2 = "javascript";
+              }
+              closure_5.platform = str2;
+              sdk = store.getSdkMetadata();
+              sdk = undefined;
+              if (sdk != null) {
+                sdk = sdk.sdk;
+              }
+              if (!sdk) {
+                sdk = {};
+              }
+              name = sdk.name;
+              version = sdk.version;
+              settings = sdk.settings;
+              obj5 = {};
+              const merged = Object.assign(closure_5.sdk);
+              let str3 = name;
+              if (!name) {
+                str3 = "sentry.javascript.unknown";
+              }
+              obj5.name = str3;
+              let str4 = version;
+              if (!version) {
+                str4 = "0.0.0";
+              }
+              obj5.version = str4;
+              obj5.settings = settings;
+              closure_5.sdk = obj5;
+              c4 = 3;
+              const obj6 = { value: null, done: true };
+              obj6[0] = closure_5;
+              return obj6;
+            } else {
+              c4 = 3;
+              return { value: null, done: true };
+            }
           }
+        } catch (tmp48) {
+          c4 = tmp;
+          throw tmp48;
         }
       }
-      obj2[1] = keys;
-      store.emit("preprocessEvent", c3, c4);
-      const obj4 = store(817);
-      const options = store.getOptions();
-      let obj5 = store(817);
-      let closure_5 = yield obj4.prepareEvent(options, c3, c4, dependencyMap, store, obj5.getIsolationScope());
-      if (closure_5) {
-        store.emit("postprocessEvent", closure_5, c4);
-        let str2 = closure_5.platform;
-        if (!str2) {
-          str2 = "javascript";
-        }
-        closure_5.platform = str2;
-        let sdk = store.getSdkMetadata();
-        if (sdk != null) {
-          sdk = sdk.sdk;
-        }
-        if (!sdk) {
-          sdk = {};
-        }
-        const name = sdk.name;
-        const version = sdk.version;
-        const settings = sdk.settings;
-        obj5 = {};
-        const merged = Object.assign(closure_5.sdk);
-        let str3 = name;
-        if (!name) {
-          str3 = "sentry.javascript.unknown";
-        }
-        obj5.name = str3;
-        let str4 = version;
-        if (!version) {
-          str4 = "0.0.0";
-        }
-        obj5.version = str4;
-        obj5.settings = settings;
-        closure_5.sdk = obj5;
-        return closure_5;
-      }
-      return null;
     })();
     iter.next();
     return iter;
@@ -8573,7 +8653,7 @@ function _sendReplayRequest() {
               let closure_20;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp10) {
             if (arg0 === 1) {
@@ -8855,7 +8935,7 @@ function _sendReplay() {
               let error;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "ct", done: true };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {

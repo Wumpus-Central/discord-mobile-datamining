@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 80, height: 80, scales: [1, 2, 3], hash: "80a5ad242e4f3350ec4e12c04784e6bf", name: "img_premium_icon_80px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 18, height: 18, scales: [2, 3], hash: "b979d6fc20f59ff3d9b456c0fcc05d95", name: "ic_add_super_reaction", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 300, height: 120, scales: [2, 3], hash: "a5f6ed280bfa7452913e665fb649bb9c", name: "img_stream_ended_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/activities/images", width: 445, height: 482, scales: [1], hash: "578f09ddbff611181344fe43546bae68", name: "announcement_birb", type: "png" });

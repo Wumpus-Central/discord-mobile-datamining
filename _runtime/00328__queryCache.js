@@ -63,7 +63,7 @@ function _queryCache() {
   return applyArgumentsResult;
 }
 let c6 = 1;
-let closure_8 = { uri: "Array", width: "call", height: "Map" };
+let closure_8 = { uri: "Array", width: "call", height: "TypeError" };
 function _BaseImage(arg0) {
   let accessibilityLabel;
   let accessibilityLabelledBy;

@@ -5,9 +5,10 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { extractFeFlood } from "07914_extractFeFlood.js";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07931___INTERNAL_VIEW_CONFIG.js";
 
-const Rect = arg1;
+const FeFlood = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Rect {
+class FeFlood {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Rect);
+    tmp = _isNativeReflectConstruct(this, FeFlood);
     tmp2 = __esModule;
-    obj = __esModule(Rect);
+    obj = __esModule(FeFlood);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,30 +48,31 @@ class Rect {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Rect, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(self(7852).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      return <tmp ref={function ref(arg0) {
+require("_inherits")(FeFlood, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
         return self.refMethod(arg0);
-      }} />;
-    }
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIG;
+    const merged = Object.assign(self(7914).extractFilter(this.props));
+    const merged1 = Object.assign(extractFeFlood(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

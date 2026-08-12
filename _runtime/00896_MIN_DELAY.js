@@ -240,7 +240,7 @@ export function makeOfflineTransport(arg0) {
                   c3 = undefined;
                   v02 = 1;
                   c7 = 1;
-                  return { value: "ct", done: "Array" };
+                  return { value: "ct", done: true };
                 }
               } else {
                 if (1 === tmp6) {

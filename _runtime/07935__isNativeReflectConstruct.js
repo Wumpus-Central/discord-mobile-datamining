@@ -1,16 +1,11 @@
 // _runtime/07935__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
+import importDefaultResult from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
-import { jsx } from "jsxProd";
-import { extractProps } from "07852_extractProps.js";
-import { extractFont } from "07859_extractFont.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07938___INTERNAL_VIEW_CONFIG.js";
+import importDefaultResult1 from "_inherits";
 
-const Text = arg1;
+let FeFuncA = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +25,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Text {
+class FeComponentTransferFunction {
   constructor() {
     self = this;
     items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
+    tmp = _isNativeReflectConstruct(this, FeFuncA);
     items1 = [...items];
-    tmp2 = __esModule;
-    obj = __esModule(apply);
-    tmp3 = __esModule;
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(FeFuncA);
+    tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -48,51 +42,125 @@ class Text {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = outer1_1(outer1_2[8])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = _undefined(outer1_2[9]).propsAndStyles(matrix);
-      const obj = _undefined(outer1_2[9]);
-      const merged = Object.assign(propsAndStylesResult, _undefined(outer1_2[10]).pickNotNil(outer1_1(outer1_2[11])(propsAndStylesResult, true)));
-      if (_undefined.root) {
-        const root = _undefined.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-    };
+    tmp3Result.channel = "UNKNOWN";
     return tmp3Result;
   }
 }
-require("_inherits")(Text, require("_isNativeReflectConstruct"));
+FeFuncA = FeComponentTransferFunction;
+importDefaultResult1(FeComponentTransferFunction, require("_isNativeReflectConstruct"));
 let items = [
   {
     key: "render",
     value: function render() {
-      let obj = Text(7852);
-      const propsAndStylesResult = obj.propsAndStyles(this.props);
-      obj = {};
-      const merged = Object.assign(propsAndStylesResult);
-      obj.x = null;
-      obj.y = null;
-      const tmp2Result = extractProps(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFont(propsAndStylesResult, true));
-      tmp2Result.ref = this.refMethod;
-      obj = {};
-      const tmp2 = extractProps;
-      const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIG, {});
+      const result = FeFuncA(7892).warnUnimplementedFilter();
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Text, items);
-importDefaultResultResult.displayName = "Text";
+const importDefaultResultResult = importDefaultResult(FeComponentTransferFunction, items);
+importDefaultResultResult.defaultProps = { type: "identity", tableValues: [], slope: 1, intercept: 0, amplitude: 1, exponent: 1, offset: 0 };
+class FeFuncR {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(FeFuncA);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "R";
+    return tmp3Result;
+  }
+}
+FeFuncA = FeFuncR;
+importDefaultResult1(FeFuncR, importDefaultResultResult);
+const importDefaultResultResult1 = importDefaultResult(FeFuncR);
+importDefaultResultResult1.displayName = "FeFuncR";
+class FeFuncG {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(FeFuncA);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "G";
+    return tmp3Result;
+  }
+}
+FeFuncA = FeFuncG;
+importDefaultResult1(FeFuncG, importDefaultResultResult);
+const importDefaultResultResult2 = importDefaultResult(FeFuncG);
+importDefaultResultResult2.displayName = "FeFuncG";
+class FeFuncB {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(FeFuncA);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "B";
+    return tmp3Result;
+  }
+}
+FeFuncA = FeFuncB;
+importDefaultResult1(FeFuncB, importDefaultResultResult);
+const importDefaultResultResult3 = importDefaultResult(FeFuncB);
+importDefaultResultResult3.displayName = "FeFuncB";
+class FeFuncA {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = _isNativeReflectConstruct(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(FeFuncA);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "A";
+    return tmp3Result;
+  }
+}
+importDefaultResult1(FeFuncA, importDefaultResultResult);
+const importDefaultResultResult4 = importDefaultResult(FeFuncA);
+importDefaultResultResult4.displayName = "FeFuncA";
 
 export default importDefaultResultResult;
+export const FeFuncR = importDefaultResultResult1;
+export const FeFuncG = importDefaultResultResult2;
+export const FeFuncB = importDefaultResultResult3;
+export const FeFuncA = importDefaultResultResult4;

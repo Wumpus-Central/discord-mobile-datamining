@@ -510,7 +510,7 @@ let items = [
                   ref = undefined;
                   c5 = 1;
                   c6 = 1;
-                  return { value: "ct", done: "Array" };
+                  return { value: "ct", done: true };
                 }
               } else {
                 if (1 === tmp5) {
@@ -575,14 +575,62 @@ let items = [
         let c4 = 0;
         let c5 = 0;
         const iter = (function*() {
-          let closure_3 = flag;
-          let closure_2 = tmp2;
-          flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
+          if (c5 === 2) {
+            c5 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  let closure_3 = flag;
+                  let closure_2 = tmp2;
+                  flag = undefined;
+                  flag = closure_1;
+                  if (closure_1 === undefined) {
+                    flag = false;
+                  }
+                  c4 = 1;
+                  c5 = 1;
+                  return { value: "ct", done: true };
+                }
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = closure_3.waitForLocaleLoaded(closure_3.defaultLocale, flag);
+                return obj;
+              }
+            } catch (tmp10) {
+              c5 = tmp;
+              throw tmp10;
+            }
           }
-          yield "ct";
-          return closure_3.waitForLocaleLoaded(closure_3.defaultLocale, flag);
         })();
         iter.next();
         return iter;
