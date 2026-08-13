@@ -1,2 +1,0 @@
-// _runtime/05527_set.js
-arg5.PanNativeProperties = new Set(["minDist", "avgTouches", "enableTrackpadTwoFingerGesture", "minPointers", "maxPointers", "minVelocity", "minVelocityX", "minVelocityY", "activateAfterLongPress", "activeOffsetYStart", "activeOffsetYEnd", "activeOffsetXStart", "activeOffsetXEnd", "failOffsetYStart", "failOffsetYEnd", "failOffsetXStart", "failOffsetXEnd"]);

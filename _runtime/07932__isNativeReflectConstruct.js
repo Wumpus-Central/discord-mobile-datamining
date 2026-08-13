@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07933___INTERNAL_VIEW_CONFIG.js";
 
-const FeMerge = arg1;
+const FeOffset = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMerge {
+class FeOffset {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeMerge);
+    tmp = _isNativeReflectConstruct(this, FeOffset);
     tmp2 = __esModule;
-    obj = __esModule(FeMerge);
+    obj = __esModule(FeOffset);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,30 +47,33 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeMerge, require("_isNativeReflectConstruct"));
+require("_inherits")(FeOffset, require("_isNativeReflectConstruct"));
 let obj = {
   key: "render",
   value: function render() {
     const self = this;
+    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
     const tmp = __INTERNAL_VIEW_CONFIG;
-    const merged = Object.assign(self(7914).extractFilter(this.props));
-    const obj2 = self(7914);
-    const merged1 = Object.assign(self(7914).extractFeMerge(this.props, this));
+    const merged1 = Object.assign(self(7918).extractFilter(this.props));
+    const obj2 = self(7918);
+    const merged2 = Object.assign(self(7918).extractIn(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = importDefaultResult(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
 obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.dx = 0;
+obj.dy = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

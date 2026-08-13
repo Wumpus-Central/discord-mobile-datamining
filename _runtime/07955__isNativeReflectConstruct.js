@@ -6,7 +6,7 @@ import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
 
-const Marker = importDefault;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Marker {
+class LinearGradient {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Marker);
+    tmp = _isNativeReflectConstruct(this, LinearGradient);
     tmp2 = __esModule;
-    obj = __esModule(Marker);
+    obj = __esModule(LinearGradient);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,28 +46,21 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Marker, require("_isNativeReflectConstruct"));
+require("_inherits")(LinearGradient, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let markerHeight;
-      let markerWidth;
-      let preserveAspectRatio;
-      let viewBox;
       const self = this;
       const props = this.props;
-      let obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-      ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
+      let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
       const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(7889)({ viewBox, preserveAspectRatio }));
-      obj.children = children;
+      const merged1 = Object.assign(self(7957)(props, this));
       return jsx(self(7956), {
         ref(arg0) {
           return self.refMethod(arg0);
@@ -76,8 +69,8 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = importDefaultResult(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

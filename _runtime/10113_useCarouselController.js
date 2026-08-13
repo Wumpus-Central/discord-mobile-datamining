@@ -171,14 +171,14 @@ export const useCarouselController = function useCarouselController(size) {
             if (useCallback != null) {
               tmp12 = useCallback();
             }
-            tmp13 = f84617;
-            sum = f84617() + num;
+            tmp13 = f84626;
+            sum = f84626() + num;
             tmp6.value = sum;
             tmp15 = handlerOffset;
             tmp16 = -sum;
             if (tmp) {
-              tmp18 = f84623;
-              tmp15.value = f84623(tmp16 * tmp7, onFinished);
+              tmp18 = f84632;
+              tmp15.value = f84632(tmp16 * tmp7, onFinished);
             } else {
               tmp15.value = tmp16 * tmp7;
               if (onFinished != null) {

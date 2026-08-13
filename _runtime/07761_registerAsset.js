@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 403.5, height: 180, scales: [2, 3], hash: "597d5d215d03c23e5b059bed2500d226", name: "img_more_servers", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 222.5, height: 118, scales: [2, 3], hash: "2762ca199009f1ddb659b515502ab30e", name: "img_tier_0_perk_custom_video_backgrounds", type: "png" });

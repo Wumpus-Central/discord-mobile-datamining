@@ -85,16 +85,16 @@ let items = [
   },
   {
     key: "registerCallableModule",
-    value: function registerCallableModule(MobileVoiceOverlayManager, closure_5) {
+    value: function registerCallableModule(ReactFabric, closure_5) {
       let closure_0 = closure_5;
-      this._lazyCallableModules[MobileVoiceOverlayManager] = () => closure_0;
+      this._lazyCallableModules[ReactFabric] = () => closure_0;
     }
   },
   {
     key: "registerLazyCallableModule",
-    value: function registerLazyCallableModule(MobileVoiceOverlayManager, fn) {
+    value: function registerLazyCallableModule(ReactFabric, fn) {
       let closure_1 = fn;
-      this._lazyCallableModules[MobileVoiceOverlayManager] = () => {
+      this._lazyCallableModules[ReactFabric] = () => {
         if (c1) {
           let closure_0 = tmp();
           c1 = null;

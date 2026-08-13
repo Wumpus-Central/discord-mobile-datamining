@@ -1,81 +1,45 @@
 // _runtime/metro/05015__.js
-import { getDataView } from "../04971_getDataView.js";
-import { readTag } from "../04991_readTag.js";
-import { importDefaultResult1 } from "../04992_importDefaultResult1.js";
+import { getDataView } from "../04972_getDataView.js";
+import { readTag } from "../04992_readTag.js";
+import { importDefaultResult1 } from "../04993_importDefaultResult1.js";
 const require = arg1;
-const module = arg2;
 const dependencyMap = arg6;
-let obj = { K3_III: 78420 };
-obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 arg5.default = {
-  read(byteLength) {
-    let obj = module(4976);
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    let obj1 = readTag;
-    const ifd = obj1.readIfd(byteLength, importDefaultResult1.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
-    }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
-    }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
+  read(byteLength, sum, arg2, byteOrder) {
+    let obj = readTag;
+    const ifd = obj.readIfd(byteLength, importDefaultResult1.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let tmp6 = ifd;
+    if (ifd.ShotInfo) {
+      const value = ifd.ShotInfo.value;
       obj = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj.CAMERA_ORIENTATION);
+      if (undefined !== value[27]) {
         obj = { value: null, description: null };
-        obj[0] = int8;
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
+        obj[0] = value[27];
+        let str = "None";
+        if (0 !== value[27]) {
+          let str2 = "Rotate 90 CW";
+          if (1 !== tmp7) {
+            let str3 = "Rotate 180";
+            if (2 !== tmp7) {
+              let str4 = "Unknown";
+              if (3 === tmp7) {
+                str4 = "Rotate 270 CW";
               }
-              str2 = str3;
+              str3 = str4;
             }
-            str = str2;
+            str2 = str3;
           }
-          str6 = str;
+          str = str2;
         }
-        obj[1] = str6;
-        obj.CameraOrientation = obj;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(4976).LITTLE_ENDIAN);
-        obj1 = { value: null, description: null };
-        obj1[0] = int16;
-        obj1[1] = "" + -0.5 * int16;
-        obj.RollAngle = obj1;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(4976).LITTLE_ENDIAN);
-        const obj2 = { value: null, description: null };
-        obj2[0] = int161;
-        obj2[1] = "" + -0.5 * int161;
-        obj.PitchAngle = obj2;
+        obj[1] = str;
+        obj.AutoRotate = obj;
       }
-      const tmp7Result = getDataView;
+      const tmp3Result = getDataView;
       delete tmp[tmp2];
-      tmp10 = getDataView.objectAssign({}, ifd, obj);
+      tmp6 = getDataView.objectAssign({}, ifd, obj);
       const objectAssignResult = getDataView.objectAssign({}, ifd, obj);
     }
-    return tmp10;
+    return tmp6;
   },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID: obj,
-  LIK3III: obj
+  SHOT_INFO_AUTO_ROTATE: 27
 };

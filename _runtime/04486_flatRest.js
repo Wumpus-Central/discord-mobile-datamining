@@ -1,9 +1,13 @@
 // _runtime/04486_flatRest.js
-import { shortOut } from "04487_shortOut.js";
-import { overRest } from "04491_overRest.js";
-import { flatten } from "04493_flatten.js";
+import flatRest from "flatRest";
+import { basePick } from "04497_basePick.js";
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
-};
+
+export default flatRest((arg0, arg1) => {
+  if (null == arg0) {
+    let obj = {};
+  } else {
+    obj = basePick(arg0, arg1);
+  }
+  return obj;
+});

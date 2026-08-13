@@ -5,15 +5,10 @@ import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import { Platform } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { _isNativeReflectConstruct } from "05599__isNativeReflectConstruct.js";
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
-const TouchableOpacity = arg1;
+const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,90 +28,76 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["style"];
-({ Animated: metroImportAll, Easing: c9, StyleSheet: c10, View: unpackModuleId } = get_ActivityIndicator);
-class TouchableOpacity {
+let closure_2 = ["style"];
+class TouchableNativeFeedback {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, TouchableNativeFeedback);
     tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
+    obj = _isNativeReflectConstruct(TouchableNativeFeedback);
     tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = outer1_10.flatten(_undefined.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
-      }
-      return num;
-    };
-    value = new Animated.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: outer1_9.inOut(outer1_9.quad), useNativeDriver: null };
-      let flag = _undefined.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
-      }
-      obj[3] = flag;
-      outer1_8.timing(_undefined.opacity, obj).start();
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === _undefined(outer1_2[9]).TOUCHABLE_STATE.BEGAN) {
-        _undefined.setOpacityTo(_undefined.props.activeOpacity, 0);
-      } else {
-        if (!tmp3) {
-          _undefined.setOpacityTo(_undefined.getChildStyleOpacityWithDefault(), 150);
-        }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(TouchableOpacity, require("noop").Component);
+require("_inherits")(TouchableNativeFeedback, require("noop").Component);
 let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
-    }
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
     const obj = {};
-    const tmp = callback(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
+    let rippleRadius = this.props.background;
+    if (!rippleRadius) {
+      obj.foreground = this.props.useForeground;
+      return obj;
     } else {
-      children = tmp2(closure_11, {});
+      if ("RippleAndroid" === rippleRadius.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
+      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
+      }
+      rippleRadius = rippleRadius.rippleRadius;
+      obj.rippleRadius = rippleRadius;
     }
-    obj.children = children;
-    return jsx(_isNativeReflectConstruct, {});
   }
 };
-let items = [obj];
-const importDefaultResultResult = importDefaultResult(TouchableOpacity, items);
+const items = [
+  obj,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = callback(props, closure_2);
+      const merged = Object.assign(tmp);
+      obj.style = style;
+      obj.extraButtonProps = self.getExtraButtonProps();
+      return jsx(TouchableNativeFeedback(5600), {});
+    }
+  }
+];
+const importDefaultResultResult = importDefaultResult(TouchableNativeFeedback, items);
 obj = {};
 let merged = Object.assign(require("_isNativeReflectConstruct").defaultProps);
-obj.activeOpacity = 0.2;
+obj.useForeground = true;
+obj.extraButtonProps = { rippleColor: null };
 importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
 export default importDefaultResultResult;

@@ -1,6 +1,6 @@
 // _runtime/04081_installWorkletsSupport.js
 import { reactNativeWorkletsCompat } from "../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
-import { getInstalledNitro } from "04088_getInstalledNitro.js";
+import { getInstalledNitro } from "04086_getInstalledNitro.js";
 let require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}" };

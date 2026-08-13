@@ -359,7 +359,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "<string:1681981443>", type: "<string:1358954890>", listener: "<string:1044447550>" };
+          obj = { fired: false, wrapFn: "a", target: "<string:1509950317>", type: "<string:1191183199>", listener: "<string:1313341443>" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -384,7 +384,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "<string:1681981443>", type: "<string:1358954890>", listener: "<string:1044447550>" };
+          obj = { fired: false, wrapFn: "a", target: "<string:1509950317>", type: "<string:1191183199>", listener: "<string:1313341443>" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;

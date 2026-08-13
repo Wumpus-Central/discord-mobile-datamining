@@ -5,8 +5,9 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/07909___INTERNAL_VIEW_CONFIG.js";
 
-const Defs = importDefault;
+const Circle = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Defs {
+class Circle {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Defs);
+    tmp = _isNativeReflectConstruct(this, Circle);
     tmp2 = __esModule;
-    obj = __esModule(Defs);
+    obj = __esModule(Circle);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,16 +47,39 @@ class Defs {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Defs, require("noop").Component);
+require("_inherits")(Circle, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
-      return jsx(Defs(7909), { children: this.props.children });
+      let cx;
+      let cy;
+      let r;
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, r } = props);
+      const merged = Object.assign(self(7895).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.r = r;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(7895);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIG, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Defs, items);
-importDefaultResultResult.displayName = "Defs";
+const importDefaultResultResult = importDefaultResult(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

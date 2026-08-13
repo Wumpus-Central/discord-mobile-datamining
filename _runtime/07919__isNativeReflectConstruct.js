@@ -1,13 +1,9 @@
 // _runtime/07919__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
+import FilterPrimitive from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07920___INTERNAL_VIEW_CONFIG.js";
 
-const FeComposite = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,54 +23,40 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeComposite {
+class FilterPrimitive {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeComposite);
+    items = [...arguments];
+    apply = undefined;
+    tmp = FilterPrimitive(this, apply);
+    items1 = [...items];
     tmp2 = __esModule;
-    obj = __esModule(FeComposite);
+    obj = __esModule(apply);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
-  }
-}
-require("_inherits")(FeComposite, require("_isNativeReflectConstruct"));
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.root = null;
+    tmp3Result.refMethod = (root) => {
+      c0.root = root;
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      const root = _undefined.root;
+      if (root != null) {
+        root.setNativeProps(arg0);
       }
     };
-    const tmp = __INTERNAL_VIEW_CONFIG;
-    const merged = Object.assign(self(7914).extractFilter(this.props));
-    const obj2 = self(7914);
-    const merged1 = Object.assign(self(7914).extractFeComposite(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    return tmp3Result;
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeComposite, items);
-importDefaultResultResult.displayName = "FeComposite";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.k1 = 0;
-obj.k2 = 0;
-obj.k3 = 0;
-obj.k4 = 0;
-importDefaultResultResult.defaultProps = obj;
+}
+require("_inherits")(FilterPrimitive, require("noop").Component);
+const importDefaultResultResult = importDefaultResult(FilterPrimitive);
+importDefaultResultResult.defaultPrimitiveProps = {};
 
 export default importDefaultResultResult;

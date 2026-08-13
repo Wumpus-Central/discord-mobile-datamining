@@ -560,11 +560,23 @@ if (self2) {
             break;
             case "ay":
             break;
-            case "gifting_facet":
+            case "glowing_star":
             break;
-            case "firstChild":
+            case "starFillMask":
             break;
-            case "emojiLineHeight":
+            case "USE_LIBOPENH264_DECODER":
+            break;
+            case "OPENH264":
+            break;
+            case "H264":
+            break;
+            case "Romaji":
+            break;
+            case "maj":
+            break;
+            case "NOK":
+            break;
+            case "enforcedHeight":
             break;
             case "$ZodBoolean":
             break;
@@ -603,14 +615,6 @@ if (self2) {
             case "te":
             break;
             case "serializeEnd":
-            break;
-            case "dispatchViewManagerCommand":
-            break;
-            case "reactTag":
-            break;
-            case "getPrivateChannelIntegrationAddedSystemMessageASTContent":
-            break;
-            case "trackSettingSearchQueryEntered":
             break;
             case "MarkupParserNodeTypeError":
             break;
@@ -662,10 +666,6 @@ if (self2) {
             break;
             case "perGuildMaxCount":
             break;
-            case "lheadingText":
-            break;
-            case "closeSuspendedUser":
-            break;
             case "getChannelIcon":
             break;
             case "getChannelIconComponent":
@@ -692,6 +692,16 @@ if (self2) {
             break;
             case "en":
             break;
+            case "baseQueue":
+            break;
+            case "addXhrInstrumentationHandler":
+            break;
+            case "shopping_bags":
+            break;
+            case "instrumentStateGraphCompile":
+            break;
+            case "pile_of_poo":
+            break;
             case "USE_APP_COMMAND":
             break;
             case "ANDROID_NOTIFICATION_LIGHTS":
@@ -702,11 +712,7 @@ if (self2) {
             break;
             case "SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS":
             break;
-            case "REQUIRE_SAFETY_FLOWS":
-            break;
-            case "SAFETY_FLOWS":
-            break;
-            case "SAFETY_FLOWS_MODAL_KEY":
+            case "REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE":
             break;
             case "$ZodCheckMaxLength":
             break;
@@ -729,12 +735,6 @@ if (self2) {
             case "mi":
             break;
             case "mit":
-            break;
-            case "getAppealClassificationId":
-            break;
-            case "$ZodMap":
-            break;
-            case "ZodMap":
               while (true) {
                 let str2 = "includes";
                 if ("includes" === code.format) {
@@ -765,19 +765,25 @@ if (self2) {
                 }
               }
             break;
+            case "getAppealSignal":
+            break;
+            case "getAppealSignalDisplayText":
+            break;
+            case "extractMediaSourcesFromComponent":
+            break;
+            case "trackGiftCodeCopy":
+            break;
+            case "$ZodMap":
+            break;
+            case "ZodMap":
+            break;
             case "M":
             break;
             case "ap":
             break;
-            case "_scrollView":
+            case "guild_score":
             break;
-            case "scrollView":
-            break;
-            case "scrollViewContainer":
-            break;
-            case "paymentIntent":
-            break;
-            case "paymentIntentSucceeded":
+            case "scorePassword":
             break;
             case "ToIntlMathematicalValue":
             break;
@@ -819,15 +825,19 @@ if (self2) {
             break;
             case "rect":
             break;
-            case "SETTINGS_CHANGELOG":
+            case "isPDF":
+            break;
+            case "PDF":
             break;
             case "PX_80":
             break;
             case "_":
             break;
-            case "login_source":
+            case "firstMessages":
             break;
-            case "sourceMapsEnabled":
+            case "spatialAudio":
+            break;
+            case "spatialAudioEnabled":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -849,11 +859,7 @@ if (self2) {
             break;
             case "perUserFpsWindow":
             break;
-            case "woman_and_man_holding_hands_tone2_tone4":
-            break;
-            case "regional_indicator_m":
-            break;
-            case "r_main_suffix$esjava$0":
+            case "woman_and_man_holding_hands_tone1_tone5":
             break;
             case "PREMIUM_PLANS":
             break;
@@ -889,6 +895,14 @@ if (self2) {
             break;
             case "BinaryReader":
             break;
+            case "APP_JS_STALLED":
+            break;
+            case "STALLED":
+            break;
+            case "DAVE_PROTOCOL_VERIFICATION":
+            break;
+            case "VERIFICATION_ENABLED":
+            break;
             case "$ZodSet":
             break;
             case "ZodSet":
@@ -896,6 +910,14 @@ if (self2) {
             case "S":
             break;
             case "et":
+            break;
+            case "_recomputeProgressTotal":
+            break;
+            case "TotalSoundboardSoundCountsByTier":
+            break;
+            case "TieredTenureBadge":
+            break;
+            case "TieredTenureBadgeStatus":
             break;
             case "fallen_leaf":
             break;
@@ -927,12 +949,6 @@ if (self2) {
             break;
             case "g":
             break;
-            case "client-metadata-id":
-            break;
-            case "disguised_face":
-            break;
-            case "face_with_hand_over_mouth":
-            break;
             case "$ZodSymbol":
             break;
             case "ZodSymbol":
@@ -943,11 +959,17 @@ if (self2) {
             break;
             case "bol":
             break;
-            case "QUEST_BOTTOM_SHEET":
+            case "QUEST_BAR_VIDEO_QUEST_PREVIEW":
             break;
-            case "trialId":
+            case "QUEST_PREVIEW_TOOL":
             break;
-            case "gameRecord":
+            case "QUEST_PREVIEW_TOOL_2":
+            break;
+            case "resolutionHeight":
+            break;
+            case "getRequestSession":
+            break;
+            case "generateHydrationId":
             break;
             case "ActionSheetHeaderPressableText":
             break;
@@ -957,7 +979,9 @@ if (self2) {
             break;
             case "ext":
             break;
-            case "isLocaleLoaded":
+            case "isModeratorReportOrPostChannel":
+            break;
+            case "isModeratorReportOrPostChannelId":
             break;
             case "AccessibilityFocusView":
             break;
@@ -972,6 +996,14 @@ if (self2) {
             case "reType":
             break;
             case "pe":
+            break;
+            case "minMicroseconds":
+            break;
+            case "secondsInYear":
+            break;
+            case "ear_with_hearing_aid_medium_skin_tone":
+            break;
+            case "unilateral":
             break;
             case "maxDynamicContentSize":
             break;
@@ -1041,9 +1073,9 @@ if (self2) {
             break;
             case "du":
             break;
-            case "NitroFileUploadSpotIllustration":
+            case "NitroEmeraldBadgeSmallBadge":
             break;
-            case "FileUploadSpotIllustration":
+            case "_transitions":
             break;
             case "__i":
             break;
@@ -1099,6 +1131,22 @@ if (self2) {
             break;
             case "ss":
             break;
+            case "closeCollectiblesShop":
+            break;
+            case "CollectiblesShopPerfCheckpoint":
+            break;
+            case "Checkpoint Intro Desktop":
+            break;
+            case "DesktopNotificationTypes":
+            break;
+            case "NotificationTypes":
+            break;
+            case "es-CO":
+            break;
+            case "COERCEPLAIN":
+            break;
+            case "PLAIN":
+            break;
             case "_w":
             break;
             case "wo":
@@ -1147,11 +1195,17 @@ if (self2) {
             break;
             case "ce":
             break;
-            case "enableSimulcast":
+            case "enableSnap":
             break;
-            case "castChannelRecord":
+            case "parseURL":
             break;
-            case "A/Ly/2":
+            case "parseURLSafely":
+            break;
+            case "getStageInstancesByGuild":
+            break;
+            case "clickCount":
+            break;
+            case "trackFeedFeedbackSubmitted":
             break;
             case "access":
             break;
@@ -1173,19 +1227,69 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "segmentFrequentTick":
+            case "couple_with_heart_person_person_dark_skin_tone_medium_light_skin_tone":
             break;
-            case "SEND_MESSAGE_FAILURE":
+            case "newMemberTimestamp":
             break;
-            case "REFERRAL_PROGRAM_POPOVER":
+            case "parseInline":
             break;
-            case "REFERRAL_PROGRAM_POPOVER_V2":
+            case "parseInlineReply":
+            break;
+            case "parseInlineReplyToAST":
+            break;
+            case "STANDALONE_CHANNEL_HEADER_BORDER":
+            break;
+            case "BORDER_SUBTLE":
+            break;
+            case "LEGACY_STANDARD_BACKGROUND_THEMES":
+            break;
+            case "STANDARD":
+            break;
+            case "STANDARD_BACKGROUND_THEME":
+            break;
+            case "YCrcPL":
+            break;
+            case "PLAID_LINK_JS":
+            break;
+            case "JSFPSMonitor":
+            break;
+            case "cancelPendingCommit":
+            break;
+            case "SHADOW_BUTTON_OVERLAY":
+            break;
+            case "OVERLAY_UPDATE":
+            break;
+            case "USER_BANNER_IGNORE_CONFIRM":
+            break;
+            case "IGNORE_CONFIRMATION_ACTION_SHEET":
+            break;
+            case "IGNORE_CONFIRMATION_ACTION_SHEET_KEY":
+            break;
+            case "CANNOT_JOIN":
+            break;
+            case "CANNOT_JOIN_THREAD":
+            break;
+            case "THREAD_ACTION_SHEET":
+            break;
+            case "REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT":
+            break;
+            case "REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2":
             break;
             case "Role":
             break;
             case "RoleFlags":
             break;
-            case "scrollToNewMessages":
+            case "scrollToQuestId":
+            break;
+            case "tagText":
+            break;
+            case "tagTextColor":
+            break;
+            case "woman_in_steamy_room_tone1":
+            break;
+            case "man_in_steamy_room_tone1":
+            break;
+            case "u95Dt4":
             break;
             case "accessibleDismiss":
             break;
@@ -1233,7 +1337,7 @@ if (self2) {
             break;
             case "ms":
             break;
-            case "clearAnalyticsEventsRecording":
+            case "getChannelRecords":
             break;
             case "GuildEntityDao":
             break;
@@ -1241,7 +1345,15 @@ if (self2) {
             break;
             case "Dao":
             break;
-            case "useNewUserDismissibleContent":
+            case "NOTIF_SETTINGS":
+            break;
+            case "SETTINGS_CLIENT_THEMES":
+            break;
+            case "CLIENT_THEMES_SPARKLE_PREVIEW":
+            break;
+            case "PREVIEW_SPAM_MESSAGE":
+            break;
+            case "useSecureFramesDeeplinkExperiment":
             break;
             case "app":
             break;
@@ -1261,15 +1373,15 @@ if (self2) {
             break;
             case "io":
             break;
-            case "showGiftingMarketing":
+            case "showGuardCallAlert":
             break;
             case "_applyCombination":
             break;
             case "ly":
             break;
-            case "USER_PROFILE_VOICE_ACTIVITY_CARD":
+            case "USER_PROFILE_UPDATE_FAILURE":
             break;
-            case "acceptedRequestLabel":
+            case "REGISTER_VIEWED":
             break;
             case "foi":
             break;
@@ -1303,13 +1415,42 @@ if (self2) {
             break;
             case "FormSubmitErrorType":
             break;
-            case "person_walking_facing_right_tone3":
+            case "person_walking_facing_right_tone4":
             break;
-            case "onItemPressed":
+            case "onOfferUpdated":
             break;
             case "_bodyArrayBuffer":
             break;
             case "dy":
+              while (true) {
+                str2 = "includes";
+                if ("includes" === code.format) {
+                  tmp6 = globalThis;
+                  _HermesInternal3 = HermesInternal;
+                  str6 = "\"";
+                  str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
+                  combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
+                } else {
+                  str3 = "regex";
+                  if ("regex" === code.format) {
+                    tmp5 = globalThis;
+                    _HermesInternal2 = HermesInternal;
+                    str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
+                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
+                  } else {
+                    tmp = dependencyMap;
+                    format = dependencyMap[code.format];
+                    tmp2 = null;
+                    if (format == null) {
+                      format = code.format;
+                    }
+                    tmp3 = globalThis;
+                    _HermesInternal = HermesInternal;
+                    str4 = "Virheellinen ";
+                    combined = "Virheellinen " + format;
+                  }
+                }
+              }
             break;
             case "safeAreaRight":
             break;
@@ -1341,7 +1482,9 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "chatHeaderTitleContainer":
+            case "channelInfo":
+            break;
+            case "channelInfoContainer":
             break;
             case "DynamicallyInjectedByGestureHandler":
             break;
@@ -1350,10 +1493,6 @@ if (self2) {
             case "all":
             break;
             case "ll":
-            break;
-            case "useFrameCallback":
-            break;
-            case "FadeOutToBottomAndroidSpec":
             break;
             case "_channelId":
             break;
@@ -1391,19 +1530,11 @@ if (self2) {
             break;
             case "ren":
             break;
-            case "TransitionGroup":
-            break;
-            case "TransitionGroupOverlayView":
+            case "addAnimatedEventToView":
             break;
             case "wMWyci":
             break;
             case "ix8XIj":
-            break;
-            case "inputSearchIcon":
-            break;
-            case "contentMetadata":
-            break;
-            case "dataFormatterCache":
             break;
             case "uni":
             break;
@@ -1422,57 +1553,14 @@ if (self2) {
             case "disableGuildSelect":
             break;
             case "GuildSelectDefaultIcon":
-              while (true) {
-                str2 = "includes";
-                if ("includes" === code.format) {
-                  tmp6 = globalThis;
-                  _HermesInternal3 = HermesInternal;
-                  str6 = "\"";
-                  str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  str3 = "regex";
-                  if ("regex" === code.format) {
-                    tmp5 = globalThis;
-                    _HermesInternal2 = HermesInternal;
-                    str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    tmp = dependencyMap;
-                    format = dependencyMap[code.format];
-                    tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    tmp3 = globalThis;
-                    _HermesInternal = HermesInternal;
-                    str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "concatSettings":
             break;
-            case "subscriptionRoleId":
+            case "subscription_listings":
             break;
-            case "MIDNIGHT_PRISM":
+            case "subscription_listings_ids":
             break;
-            case "SMALL_BUTTON_HEIGHT":
-            break;
-            case "man_in_business_suit_levitating_medium_dark_skin_tone":
-            break;
-            case "_guildReadStateSentinels":
-            break;
-            case "APP_USER_DEAUTHENTICATED":
-            break;
-            case "AUTHENTICATE":
-            break;
-            case "DID_REJOIN":
-            break;
-            case "JOIN_SERVER":
-            break;
-            case "SERVER_MUTE":
+            case "getDrawerWidth":
             break;
             case "$constructor":
             break;
@@ -1491,6 +1579,10 @@ if (self2) {
             case "tor":
             break;
             case "windowLength":
+            break;
+            case "lastCalculatedAt":
+            break;
+            case "trinketGlowAnimationUrl":
             break;
             case "_container":
             break;
@@ -1524,13 +1616,7 @@ if (self2) {
             break;
             case "tex":
             break;
-            case "withConsistentHeight":
-            break;
-            case "getRole":
-            break;
-            case "getRoleIcon":
-            break;
-            case "getRoleIconData":
+            case "withBackPressHandler":
             break;
             case "AccountAgeTier10LargeBadge":
             break;
@@ -1538,15 +1624,13 @@ if (self2) {
             break;
             case "Badge":
             break;
-            case "applicationBot":
+            case "churnUserDiscountOffer":
             break;
-            case "getMessageGiftIntentLastShownMap":
+            case "getCommittedVersions":
             break;
-            case "applyRelationProp":
+            case "isBlockedForMessage":
             break;
-            case "getNativeTextReference":
-            break;
-            case "getAdTrafficMetadataSealed":
+            case "getAppHardwareAccelerationEnabled":
             break;
             case "cr":
             break;
@@ -1564,9 +1648,13 @@ if (self2) {
             break;
             case "containerFloatingGradient":
             break;
-            case "saturation":
+            case "useIsEligibleForInappropriateConversationWarning":
             break;
-            case "saturationFactor":
+            case "getManageResourcePermissions":
+            break;
+            case "deleteSyncUnsafe":
+            break;
+            case "safeAreaContainer":
             break;
             case "_$esjava$cursor":
             break;
@@ -1584,28 +1672,6 @@ if (self2) {
             break;
             case "dddd":
             break;
-            case "SETTINGS_SPAM":
-            break;
-            case "AMD_VAAPI":
-            break;
-            case "VAAPI":
-            break;
-            case "API":
-            break;
-            case "API_ENDPOINT":
-            break;
-            case "POINT_AND_CLICK":
-            break;
-            case "generateChannelStageSection":
-            break;
-            case "onTapInlineCode":
-            break;
-            case "detector":
-            break;
-            case "detectorCallbacks":
-            break;
-            case "initialWindowMetrics":
-            break;
             case "__defaultLocale":
             break;
             case "def":
@@ -1620,6 +1686,10 @@ if (self2) {
             break;
             case "localeIdentifier":
             break;
+            case "isCurrentUserSpeaking":
+            break;
+            case "getInputDeviceOSMuted":
+            break;
             case "define":
             break;
             case "efi":
@@ -1627,8 +1697,6 @@ if (self2) {
             case "fi":
             break;
             case "fin":
-            break;
-            case "PlayStationLinkModalScenes":
             break;
             case "undelete":
             break;
@@ -1644,17 +1712,11 @@ if (self2) {
             break;
             case "startMs":
             break;
-            case "shouldTrackExposure":
+            case "shouldTrackOfficialMessageViews":
             break;
-            case "ExposureTypes":
+            case "canSendVoiceMessage":
             break;
-            case "APP_LAUNCHER_ONBOARDING_BOTS_BANNER":
-            break;
-            case "BOTS":
-            break;
-            case "flashListV2OnlySupportsNewArchitecture":
-            break;
-            case "reactNativeKeyboardDidShow":
+            case "VoiceMessageRecordingResult":
             break;
             case "avatar_description":
             break;
@@ -1680,15 +1742,27 @@ if (self2) {
             break;
             case "saved_at":
             break;
-            case "getSortValueForMember":
+            case "thong_sandal":
             break;
-            case "woman_construction_worker_tone2":
+            case "sandal":
             break;
-            case "man_construction_worker_tone2":
+            case "optionValues":
             break;
-            case "construction_worker_tone2":
+            case "startTimeMs":
             break;
-            case "isArrayEqual":
+            case "_language":
+            break;
+            case "_languageHint":
+            break;
+            case "lang":
+            break;
+            case "language":
+            break;
+            case "int2hsv":
+            break;
+            case "hsv2int":
+            break;
+            case "interstitial":
             break;
             case "aria-disabled":
             break;
@@ -1702,9 +1776,9 @@ if (self2) {
             break;
             case "led":
             break;
-            case "_onRootSpanTimeout":
+            case "FadeOutDown":
             break;
-            case "outlined":
+            case "owningExperimentId":
             break;
             case "_dispatch":
             break;
@@ -1740,7 +1814,9 @@ if (self2) {
             break;
             case "internalBinaryRead":
             break;
-            case "useScaledRowHeightData":
+            case "flag_vc":
+            break;
+            case "vcData":
             break;
             case "div":
             break;
@@ -1786,25 +1862,7 @@ if (self2) {
             break;
             case "enable":
             break;
-            case "shouldSendSpeaking":
-            break;
-            case "getLastErrored":
-            break;
-            case "red_square":
-            break;
-            case "areParticipantsEqual":
-            break;
-            case "alwaysPreviewVideo":
-            break;
-            case "VideoFilterType":
-            break;
-            case "preferSystemEffects":
-            break;
-            case "player_view_count":
-            break;
-            case "getExistingMembers":
-            break;
-            case "getExistingMembersRows":
+            case "shouldShareApplicationActivity":
             break;
             case "@braintree/extended-promise":
             break;
@@ -1833,6 +1891,10 @@ if (self2) {
             case "era":
             break;
             case "referrerPolicy":
+            break;
+            case "applicationBot":
+            break;
+            case "getMessageMetadata":
             break;
             case "beforeAddRecordingEvent":
             break;
@@ -1886,7 +1948,7 @@ if (self2) {
             break;
             case "he":
             break;
-            case "StreamingTier8LargeBadge":
+            case "StreamingTier7SmallBadge":
             break;
             case "EntitlementTenantFulfillmentStatus":
             break;
@@ -1894,11 +1956,15 @@ if (self2) {
             break;
             case "__findAnimatedPropsNodes":
             break;
-            case "flag_je":
+            case "destructiveIcon":
             break;
-            case "upsellCTADismissed":
+            case "containerIndex":
             break;
-            case "MILLIMETERS":
+            case "expandTopic":
+              return "Virheellinen arvo joukossa";
+            case "AUDIO_MISSING":
+            break;
+            case "MISSING_BASE_PERMISSIONS":
             break;
             case "system_channel_flags":
             break;
@@ -1917,16 +1983,12 @@ if (self2) {
             case "_oldestUnreadMessageId":
             break;
             case "oldestUnreadMessageId":
-            break;
+              return "Virheellinen arvo joukossa";
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPhone":
+            case "addPageListener":
             break;
-            case "addPhoneWithoutPassword":
-            break;
-            case "varint32read":
-            break;
-            case "readUIntLE":
+            case "waitSafelyForPostTTI":
             break;
             case "fo":
             break;
@@ -1940,13 +2002,19 @@ if (self2) {
             break;
             case "BeeIllocon":
             break;
-            case "safeJoin":
+            case "canSync":
             break;
-            case "initialLocale":
+            case "totp":
             break;
-            case "touchableHandleResponderTerminationRequest":
+            case "totpSecret":
             break;
-            case "onRequestSend":
+            case "retryAfter":
+            break;
+            case "retryAfterTime":
+            break;
+            case "retryAfterTimestamp":
+            break;
+            case "parseOptionValuesForSend":
             break;
             case "getChannelA11yHint":
             break;
@@ -1954,14 +2022,18 @@ if (self2) {
             break;
             case "interpolators":
             break;
-            case "shy":
+            case "stop_sign":
+            break;
+            case "neverProcessor":
+            break;
+            case "sortedIndexBy":
             break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
             break;
             case "U":
-              return "Virheellinen arvo joukossa";
+            break;
             case "Use":
             break;
             case "User":
@@ -1980,15 +2052,17 @@ if (self2) {
             break;
             case "constraints":
             break;
-            case "showUnread":
-            break;
             case "_getGuildState":
-              return "Virheellinen arvo joukossa";
+            break;
             case "getGuildState":
             break;
             case "G":
             break;
             case "Guild":
+            break;
+            case "voidProcessor":
+            break;
+            case "remoteSinkWantsMaxFramerate":
             break;
             case "_guildId":
             break;
@@ -1996,13 +2070,13 @@ if (self2) {
             break;
             case "current_guild_id":
             break;
-            case "getConnectionPrerequisites":
+            case "getConnections":
             break;
-            case "finishSamsungAuthorization":
+            case "getConnectionsCheckText":
             break;
-            case "Samsung":
+            case "extractOffset":
             break;
-            case "onTapCommandMention":
+            case "setAppStoreOverlayOpen":
             break;
             case "hasDiversity":
             break;
@@ -2022,21 +2096,13 @@ if (self2) {
             break;
             case "hashKey":
             break;
-            case "defaultValues":
-            break;
             case "bhd":
             break;
-            case "IN_APP_GUILD_TEMPLATES_MODAL_KEY":
+            case "IN_APP_MEMBER_VERIFICATION_MODAL_KEY":
             break;
-            case "GUILD_TEMPLATE":
+            case "HOCKEY":
             break;
-            case "GUILD_TEMPLATES":
-            break;
-            case "AppCrash":
-            break;
-            case "ContactSyncPermissionDenied":
-            break;
-            case "nie":
+            case "dashjs":
             break;
             case "_header":
             break;
@@ -2058,13 +2124,19 @@ if (self2) {
             break;
             case "SELF_HARM_CONTENT":
             break;
-            case "CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY":
+            case "CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE":
             break;
-            case "PRIMARY_DOMAIN":
+            case "PARENT":
             break;
-            case "MAIN_CALL_SCREEN":
+            case "E2EE_STREAM_VERIFICATION_CODE_COPIED":
             break;
-            case "SCREEN_BACKGROUND_COLOR":
+            case "MFA_STEP":
+            break;
+            case "STEP_NUMBER_TEXT_FONT_BIG":
+            break;
+            case "BIGINT":
+            break;
+            case "BIGINT_FORMAT_RANGES":
             break;
             case "player_height":
             break;
@@ -2076,7 +2148,13 @@ if (self2) {
             break;
             case "ht":
             break;
-            case "withOverlay":
+            case "withMutualGuilds":
+            break;
+            case "debugConfig":
+            break;
+            case "ignoreStatus":
+            break;
+            case "useCanManageVibegrations":
             break;
             case "segmentTick":
             break;
@@ -2097,12 +2175,6 @@ if (self2) {
             case "mot":
             break;
             case "icons":
-            break;
-            case "iconsContainer":
-            break;
-            case "setUint16":
-            break;
-            case "L2hmYy":
             break;
             case "_include":
             break;
@@ -2144,7 +2216,7 @@ if (self2) {
             break;
             case "deleteGuildEventException":
             break;
-            case "onRNCSliderSlidingStart":
+            case "onRNCSliderSlidingComplete":
             break;
             case "isPerformanceEventTiming":
             break;
@@ -2153,78 +2225,6 @@ if (self2) {
             case "PerformanceEventTiming_public":
             break;
             case "publicKey":
-            break;
-            case "publicKeyFingerprint":
-            break;
-            case "int":
-            break;
-            case "intlMessage":
-            break;
-            case "tl":
-            break;
-            case "getAppDir":
-            break;
-            case "getByteOrder":
-            break;
-            case "revealMessage":
-            break;
-            case "getAvailableGuildBoostSlots":
-            break;
-            case "woman_climbing_light_skin_tone":
-            break;
-            case "man_climbing_light_skin_tone":
-            break;
-            case "activity_items":
-            break;
-            case "_items":
-            break;
-            case "_itemsForType":
-            break;
-            case "item":
-            break;
-            case "activeUnjoinedThreads":
-            break;
-            case "jo":
-            break;
-            case "js":
-            break;
-            case "xs":
-            break;
-            case "GET_IMAGE":
-            break;
-            case "IMAGE_EDITOR":
-            break;
-            case "isRendered":
-            break;
-            case "gradientOverlay":
-            break;
-            case "yOffset":
-            break;
-            case "hasInputText":
-            break;
-            case "targetHeight":
-            break;
-            case "getHeight":
-            break;
-            case "jus":
-            break;
-            case "justify":
-            break;
-            case "if":
-            break;
-            case "Content":
-            break;
-            case "PasskeysSpotIllustration":
-            break;
-            case "ke":
-            break;
-            case "prevItem":
-            break;
-            case "embedded_activity_location_kind":
-            break;
-            case "ki":
-            break;
-            case "kin":
             break;
             default:
               return "Virheellinen sy\u00F6te";

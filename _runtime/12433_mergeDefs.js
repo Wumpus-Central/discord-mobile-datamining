@@ -102,7 +102,7 @@ const items3 = [require("_createClass"), BigInt("18446744073709551615")];
 obj[1] = items3;
 class Class {
   constructor() {
-    tmp = f53719(this, Class);
+    tmp = f53743(this, Class);
     return;
   }
 }

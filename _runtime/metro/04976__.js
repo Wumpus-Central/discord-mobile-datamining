@@ -1,18 +1,23 @@
 // _runtime/metro/04976__.js
-let c0 = 18761;
-let c1 = 19789;
+const module = arg2;
+const dependencyMap = arg6;
 arg5.default = {
-  BIG_ENDIAN: 19789,
-  LITTLE_ENDIAN: 18761,
-  getByteOrder(getUint16, sum) {
-    if (getUint16.getUint16(sum) === c0) {
-      return c0;
-    } else if (getUint16.getUint16(sum) === c1) {
-      return c1;
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
+    }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === module(4977).LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
+  },
+  findTiffOffsets() {
+    if (module(4975).USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
     } else {
-      const _Error = Error;
-      const error = new Error("Illegal byte order value. Faulty image.");
-      throw error;
+      return {};
     }
   }
 };

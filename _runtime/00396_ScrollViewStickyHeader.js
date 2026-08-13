@@ -232,7 +232,7 @@ export default function ScrollViewStickyHeader(ref) {
   items4 = [onlyResult.props.style, closure_12.header, ];
   const items5 = [{ translateY: tmp19[0] }];
   items4[2] = { transform: items5 };
-  let obj2 = { onLayout: "Array", style: 0 };
+  let obj2 = { onLayout: "Array", style: "Array" };
   obj2[1] = closure_12.fill;
   obj1[6] = first(onlyResult, obj2);
   return first3(tmp15(tmp16[5]).View, obj1);

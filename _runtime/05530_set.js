@@ -1,2 +1,2 @@
 // _runtime/05530_set.js
-arg5.FlingNativeProperties = new Set(["direction", "numberOfPointers"]);
+arg5.NativeHandlerNativeProperties = new Set(["shouldActivateOnStart", "disallowInterruption", "yieldsToContinuousGestures", "delaysChildPressedState"]);

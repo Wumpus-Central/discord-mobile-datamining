@@ -10,13 +10,13 @@ import { NavigationFocusedRouteStateContext } from "01567_NavigationFocusedRoute
 const require = arg1;
 
 export const NavigationIndependentTree = function NavigationIndependentTree(children) {
-  let obj = { value: "Array", children: 0 };
-  obj = { value: "Array", children: 0 };
-  obj = { value: "Array", children: 0 };
-  const obj1 = { value: "Array", children: 0 };
+  let obj = { value: "Array", children: "Array" };
+  obj = { value: "Array", children: "Array" };
+  obj = { value: "Array", children: "Array" };
+  const obj1 = { value: "Array", children: "Array" };
   obj1[1] = jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, { value: true, children: children.children });
-  obj[1] = jsx(context1.IsFocusedContext.Provider, { value: "Array", children: 0 });
-  obj[1] = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, { value: "Array", children: 0 });
-  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: "Array", children: 0 });
-  return jsx(context.NavigationRouteContext.Provider, { value: "Array", children: 0 });
+  obj[1] = jsx(context1.IsFocusedContext.Provider, { value: "Array", children: "Array" });
+  obj[1] = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, { value: "Array", children: "Array" });
+  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: "Array", children: "Array" });
+  return jsx(context.NavigationRouteContext.Provider, { value: "Array", children: "Array" });
 };

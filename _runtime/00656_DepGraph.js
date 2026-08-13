@@ -522,8 +522,8 @@ class tmp {
     setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(this));
     if (Error.captureStackTrace) {
       _Error = Error;
-      tmp3 = f19299;
-      captureStackTraceResult = Error.captureStackTrace(error, f19299);
+      tmp3 = f19310;
+      captureStackTraceResult = Error.captureStackTrace(error, f19310);
     }
     return error;
   }

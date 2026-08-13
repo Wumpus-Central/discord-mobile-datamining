@@ -1,5 +1,5 @@
 // _runtime/01617_setLastUnhandledLink.js
-const obj = { lastUnhandledLink: "Array", setLastUnhandledLink: 0 };
+const obj = { lastUnhandledLink: "Array", setLastUnhandledLink: "Array" };
 obj[1] = function setLastUnhandledLink() {
 
 };

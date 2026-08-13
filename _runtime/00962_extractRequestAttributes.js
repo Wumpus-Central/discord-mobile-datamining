@@ -154,7 +154,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
                       obj2[2] = methodPath;
                       obj5.startSpanManual(obj2, (() => {
-                        let closure_0 = outer2_2(/* F120239 */ function() { ... });
+                        let closure_0 = outer2_2(/* F120297 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(methodPath[2]);
@@ -167,7 +167,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj3[1] = obj3.getSpanOperation(outer1_1);
                     obj3[2] = methodPath;
                     obj1.startSpan(obj3, (() => {
-                      let closure_0 = outer2_2(/* F120241 */ function() { ... });
+                      let closure_0 = outer2_2(/* F120299 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -342,7 +342,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             let closure_0 = [...arguments];
                             let c3 = 0;
                             let c4 = 0;
-                            const iter = (/* F115104 */ function*() { ... })();
+                            const iter = (/* F115158 */ function*() { ... })();
                             iter.next();
                             return iter;
                           });

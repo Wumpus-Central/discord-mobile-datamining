@@ -1,15 +1,24 @@
 // _runtime/metro/13678__.js
-import { f } from "../13679_f.js";
-import { all } from "../13689_all.js";
-import { 13690__ } from "13690__.js";
-let closure_2 = require("call")([].concat);
+import { call } from "../13661_call.js";
+import { 13679__ } from "13679__.js";
 
-export default require("all")("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f.f(all(arg0));
-  const f = 13690__.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = callback(fResult, f(arg0));
+export default (arg0, arg1, arg2) => {
+  const arr = 13679__(arg1);
+  for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp3 = arr[num];
+    let tmp4 = require;
+    let tmp5 = dependencyMap;
+    let tmp6 = call(arg0, tmp3);
+    let tmp7 = num;
+    if (!tmp6) {
+      let tmp8 = arg2;
+      if (arg2) {
+        tmp8 = tmp4(13661)(arg2, tmp3);
+      }
+      tmp6 = tmp8;
+    }
+    if (!tmp6) {
+      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
+    }
   }
-  return tmp2;
-});
+};

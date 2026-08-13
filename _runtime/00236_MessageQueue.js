@@ -12,11 +12,11 @@ if (true === global.RN$Bridgeless) {
   };
 } else {
   closure_0 = require("MessageQueue").default;
-  fn = (MobileVoiceOverlayManager, fn) => {
+  fn = (ReactFabric, fn) => {
     if (typeof fn !== "function") {
-      const result = closure_0.registerCallableModule(MobileVoiceOverlayManager, fn);
+      const result = closure_0.registerCallableModule(ReactFabric, fn);
     } else {
-      const result1 = closure_0.registerLazyCallableModule(MobileVoiceOverlayManager, fn);
+      const result1 = closure_0.registerLazyCallableModule(ReactFabric, fn);
     }
   };
 }

@@ -3,8 +3,11 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import "noop";
+import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/07937___INTERNAL_VIEW_CONFIG.js";
 
-const FeImage = arg1;
+const FeMerge = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeImage);
+    tmp = _isNativeReflectConstruct(this, FeMerge);
     tmp2 = __esModule;
-    obj = __esModule(FeImage);
+    obj = __esModule(FeMerge);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -44,19 +47,30 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeImage, require("_isNativeReflectConstruct"));
+require("_inherits")(FeMerge, require("_isNativeReflectConstruct"));
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeImage(7892).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIG;
+    const merged = Object.assign(self(7918).extractFilter(this.props));
+    const obj2 = self(7918);
+    const merged1 = Object.assign(self(7918).extractFeMerge(this.props, this));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
+const importDefaultResultResult = importDefaultResult(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
 obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

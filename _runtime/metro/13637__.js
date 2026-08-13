@@ -1,81 +1,85 @@
 // _runtime/metro/13637__.js
-let _globalThis = typeof globalThis === "object";
-if (typeof globalThis === "object") {
-  _globalThis = globalThis;
-}
-let tmp = _globalThis;
-if (_globalThis) {
-  const _Math = Math;
-  tmp = _globalThis.Math === Math;
-}
-if (tmp) {
-  tmp = _globalThis;
-}
-if (!tmp) {
-  const _window = window;
-  let _window2 = typeof window === "object";
-  if (typeof window === "object") {
-    _window2 = window;
-  }
-  let tmp2 = _window2;
-  if (_window2) {
-    const _Math2 = Math;
-    tmp2 = _window2.Math === Math;
-  }
-  if (tmp2) {
-    tmp2 = _window2;
-  }
-  tmp = tmp2;
-}
-if (!tmp) {
-  const _self = self;
-  let _self2 = typeof self === "object";
-  if (typeof self === "object") {
-    _self2 = self;
-  }
-  let tmp3 = _self2;
-  if (_self2) {
-    const _Math3 = Math;
-    tmp3 = _self2.Math === Math;
-  }
-  if (tmp3) {
-    tmp3 = _self2;
-  }
-  tmp = tmp3;
-}
-if (!tmp) {
-  let tmp5 = typeof global === "object";
-  if (typeof global === "object") {
-    tmp5 = global;
-  }
-  let tmp6 = tmp5;
-  if (tmp5) {
-    const _Math4 = Math;
-    tmp6 = tmp5.Math === Math;
-  }
-  if (tmp6) {
-    tmp6 = tmp5;
-  }
-  tmp = tmp6;
-}
-if (!tmp) {
-  let self = typeof this === "object";
-  if (typeof this === "object") {
-    self = this;
-  }
-  let tmp7 = self;
-  if (self) {
-    const _Math5 = Math;
-    tmp7 = self.Math === Math;
-  }
-  if (tmp7) {
-    tmp7 = self;
-  }
-  tmp = tmp7;
-}
-if (!tmp) {
-  const _Function = Function;
-  tmp = Function("return this")();
-}
+import { getOwnPropertyDescriptor } from "../13640_getOwnPropertyDescriptor.js";
+import { isForced } from "../13677_isForced.js";
+import { 13638__ } from "13638__.js";
 
-export default tmp;
+export default (dontCallGetSet, obj) => {
+  let _global;
+  let stat;
+  let target;
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = 13638__;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = tmp(13639)(target, {});
+      }
+      prototype = tmp4;
+    } else {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = tmp(13638)[target].prototype;
+      }
+    }
+  }
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      let tmp20 = key10024;
+      if (arg0.dontCallGetSet) {
+        let tmp8 = require;
+        let tmp9 = dependencyMap;
+        obj = getOwnPropertyDescriptor;
+        let iter = obj.f(prototype, key10024);
+        let value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let tmp10 = require;
+      let tmp11 = dependencyMap;
+      let sum = key10024;
+      let tmp12 = isForced;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = tmp10(13678)(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = tmp10(13694)(tmp21, "sham", true);
+      }
+      let tmp15 = prototype;
+      let tmp16 = key10024;
+      let tmp17 = tmp21;
+      let tmp18 = arg0;
+      let tmp19 = tmp10(13695)(prototype, tmp20, tmp21, arg0);
+      continue;
+    }
+  }
+};

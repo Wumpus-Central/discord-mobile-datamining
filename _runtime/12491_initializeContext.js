@@ -100,7 +100,7 @@ function process(_zod, seen) {
     }
     return value.schema;
   } else {
-    obj = { schema: null, count: 1, cycle: "Array", path: "APPLE_PAY_PAYMENT_TOKEN_REQUIRED" };
+    obj = { schema: null, count: 1, cycle: "Array", path: "HOSTED_FIELDS_TIMEOUT" };
     obj[0] = {};
     obj[3] = tmp4.path;
     const seen2 = seen.seen;

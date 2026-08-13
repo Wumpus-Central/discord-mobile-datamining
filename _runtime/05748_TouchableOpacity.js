@@ -1,5 +1,2 @@
 // _runtime/05748_TouchableOpacity.js
-
-export const TouchableOpacity = require("LegacyBaseButton").TouchableOpacity;
-export const TouchableHighlight = require("LegacyBaseButton").TouchableHighlight;
-export const TouchableWithoutFeedback = require("LegacyBaseButton").TouchableWithoutFeedback;
+arg5.default = { TouchableOpacity: require("TouchableOpacity").TouchableOpacity, TouchableHighlight: require("TouchableOpacity").TouchableHighlight, TouchableWithoutFeedback: require("TouchableOpacity").TouchableWithoutFeedback };

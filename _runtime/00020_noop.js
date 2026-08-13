@@ -393,17 +393,17 @@ arg5.Children = {
       const items = [];
       let c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f65996.call;
+        const call = f66038.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65996(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f66038(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element) {
-    const f65994 = function() {
+    const f66036 = function() {
       const self = this;
-      const apply = f65994.apply;
+      const apply = f66036.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -414,36 +414,36 @@ arg5.Children = {
     if (null != element) {
       let c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f65996.call;
+        const call = f66038.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65996(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f66038(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
     }
   },
   count(element) {
-    const f65995 = () => {
+    const f66037 = () => {
       closure_0 = closure_0 + 1;
     };
     if (null != element) {
       let c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f65996.call;
+        const call = f66038.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65996(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f66038(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
     }
-    return f65995;
+    return f66037;
   },
   toArray(element) {
-    const f65996 = (arg0) => arg0;
+    const f66038 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       const items = [];
       let c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f65996.call;
+        const call = f66038.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65996(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f66038(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
       items1 = items;
     }
