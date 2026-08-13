@@ -101,7 +101,7 @@ function _setWarningBoosts() {
           } else {
             obj = callback(4238);
             const appliedGuildBoostsForGuild = obj.fetchAppliedGuildBoostsForGuild(callback);
-            obj1 = callback(11911);
+            obj1 = callback(11912);
             const guildBoostEntitlements = obj1.fetchGuildBoostEntitlements(callback, true);
             c6 = 3;
             return { value: "HermesInternal", done: null };

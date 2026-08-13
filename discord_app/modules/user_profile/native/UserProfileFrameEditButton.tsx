@@ -111,7 +111,7 @@ export default function UserProfileFrameEditButton(arg0) {
       obj2[0] = intl3.string(tmp2(1236).t.GWrZOd);
       const obj3 = { showNewBadge: null };
       obj3[0] = tmp5[0] === tmp2(1377).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE;
-      obj2[1] = tmp19(tmp2(14001).UserProfileEditFormLabelBadges, obj3);
+      obj2[1] = tmp19(tmp2(13992).UserProfileEditFormLabelBadges, obj3);
       obj2[2] = formatToPlainStringResult;
       const obj4 = { text: null };
       obj4[0] = formatToPlainStringResult;
@@ -136,7 +136,7 @@ export default function UserProfileFrameEditButton(arg0) {
       }
       obj2[5] = tmp19Result;
     }
-    return jsx(tmp2(14001).UserProfileEditFormButton, obj2);
+    return jsx(tmp2(13992).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

@@ -50,7 +50,7 @@ function GuildDirectoryEditDescription(entry) {
                 return obj;
               } else {
                 let closure_2 = tmp4;
-                let obj2 = outer1_2(11746);
+                let obj2 = outer1_2(11747);
                 dependencyMap = 1;
                 c4 = 1;
                 const obj1 = { value: null, done: false };
@@ -66,7 +66,7 @@ function GuildDirectoryEditDescription(entry) {
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = callback(11744);
+              obj = callback(11745);
               obj.close();
               c4 = 3;
               return { value: "HermesInternal", done: null };
@@ -115,7 +115,7 @@ function GuildDirectoryEditDescription(entry) {
   obj3[1] = intl2.string(entry(1236).t["R3BPH+"]);
   obj3[2] = entry;
   obj3[3] = entry.channelId;
-  items[1] = callback(_onSubmit(11747), obj3);
+  items[1] = callback(_onSubmit(11748), obj3);
   obj[2] = items;
   obj[2] = callback2(closure_6, obj);
   return callback(entry(5368).SafeAreaPaddingView, obj);

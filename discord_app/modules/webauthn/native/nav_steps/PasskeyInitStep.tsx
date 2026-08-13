@@ -6,7 +6,7 @@ import hasFetchedCredentials from "hasFetchedCredentials";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import jsxProd from "useAuthSessions";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/14043_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14034_registerAsset.js";
 
 let c10;
 let c5;

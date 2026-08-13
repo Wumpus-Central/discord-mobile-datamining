@@ -542,7 +542,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj12[1] = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj12);
   } else {
-    tmp32Result = tmp32(tmp31(16749).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(16740).StickerPlusIcon, { size: "lg" });
   }
   obj10[5] = tmp32Result;
   items4[1] = callback(stickerId(4887).PressableHighlight, obj10);

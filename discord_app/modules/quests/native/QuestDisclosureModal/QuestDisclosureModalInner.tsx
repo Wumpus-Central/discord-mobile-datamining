@@ -55,12 +55,12 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     let tmp6 = tmp5;
     items1 = items;
   } else {
-    obj[0] = tmp5(tmp2(10496).GlobeEarthIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(10498).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1236).intl;
     obj[1] = intl.string(tmp2(1236).t.xQSdPv);
     items1 = [obj, , ];
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(11274).UserIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(11275).UserIcon, { size: "xs" });
     const intl2 = tmp2(1236).intl;
     obj[1] = intl2.string(tmp2(1236).t.mYt7hQ);
     items1[1] = obj;

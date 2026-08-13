@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
 import set from "set";
 import ManaContext from "ManaContext";
-import get_ActivityIndicator from "module_10791";
+import get_ActivityIndicator from "module_10793";
 import { ThemeTypes } from "sum";
 import jsxProd from "GestureContainer";
 import createCacheKey from "createCacheKey";

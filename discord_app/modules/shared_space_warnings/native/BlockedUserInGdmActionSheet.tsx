@@ -99,7 +99,7 @@ function UserCalloutAvatars(userIds) {
       obj[2] = REFRESH_MEDIUM_32;
       let tmp6 = callback(tmp(1297).Avatar, obj);
     } else {
-      tmp6 = callback(tmp(11274).UserIcon, {});
+      tmp6 = callback(tmp(11275).UserIcon, {});
     }
   } else {
     obj = { users: null, size: null };

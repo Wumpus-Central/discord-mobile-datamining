@@ -145,5 +145,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj[12] = channelId;
   obj[13] = allowEmpty;
-  return tmp9(onSubmit(11271), obj);
+  return tmp9(onSubmit(11272), obj);
 };

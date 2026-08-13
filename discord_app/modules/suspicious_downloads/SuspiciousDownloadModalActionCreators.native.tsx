@@ -7,6 +7,6 @@ export default {
   show(href) {
     let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { href };
-    obj.openLazy(asyncRequireImpl(12291, dependencyMap.paths), "suspicious-download", obj);
+    obj.openLazy(asyncRequireImpl(12292, dependencyMap.paths), "suspicious-download", obj);
   }
 };

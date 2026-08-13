@@ -87,9 +87,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   let callback2;
   let tmp = createCacheKey();
   let obj = userId(7449);
-  let obj1 = userId(14648);
+  let obj1 = userId(14639);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(14649);
+  let obj2 = userId(14640);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = callback(first.useState(selectedEffectId), 2);

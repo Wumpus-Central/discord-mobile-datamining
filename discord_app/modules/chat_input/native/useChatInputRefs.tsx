@@ -307,7 +307,7 @@ export default function useChatInputRefs(chatInputProps) {
           threadCreationCallback = outer1_13.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[13]).getText(outer1_8.current, outer1_10.current, (text) => {
-              let obj = chatInputProps(11438);
+              let obj = chatInputProps(11439);
               obj = { text, params: null };
               obj = {};
               const merged = Object.assign(outer2_13.current);
@@ -318,8 +318,8 @@ export default function useChatInputRefs(chatInputProps) {
                 const obj1 = { text: null, threadCreationCallback: null };
                 obj1[0] = result.content;
                 obj1[1] = threadCreationCallback;
-                const result1 = chatInputProps(11438).chatInputCreateThread(obj1);
-                const tmpResult = chatInputProps(11438);
+                const result1 = chatInputProps(11439).chatInputCreateThread(obj1);
+                const tmpResult = chatInputProps(11439);
               }
             });
             tmp.current.sending = false;
@@ -351,7 +351,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1.cancel();
-                  let obj = threadCreationCallback(11438);
+                  let obj = threadCreationCallback(11439);
                   obj = { text: null, params: null };
                   obj[0] = arg0;
                   obj = {};

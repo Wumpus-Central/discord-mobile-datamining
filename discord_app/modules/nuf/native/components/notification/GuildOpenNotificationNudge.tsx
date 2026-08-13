@@ -63,9 +63,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(589);
-  let obj2 = stateFromStores3(14744);
-  const canSeePushNotificationNudge = stateFromStores(11838).useCanSeePushNotificationNudge();
-  const obj3 = stateFromStores(11838);
+  let obj2 = stateFromStores3(14735);
+  const canSeePushNotificationNudge = stateFromStores(11839).useCanSeePushNotificationNudge();
+  const obj3 = stateFromStores(11839);
   const items1 = [updateUserGuildSettingsInternal];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;

@@ -10,15 +10,15 @@ export const getIconForPerk = function getIconForPerk(perkIcon) {
   } else if (tmp(4234).PerkIcons.ANIMATED === perkIcon) {
     return tmp(9995).GifIcon;
   } else if (tmp(4234).PerkIcons.AUDIO === perkIcon) {
-    return tmp(11951).HeadphonesIcon;
+    return tmp(11952).HeadphonesIcon;
   } else if (tmp(4234).PerkIcons.STREAM === perkIcon) {
-    return tmp(11953).ScreenArrowIcon;
+    return tmp(11954).ScreenArrowIcon;
   } else if (tmp(4234).PerkIcons.UPLOAD === perkIcon) {
     return tmp(7703).UploadIcon;
   } else if (tmp(4234).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
     return tmp(9055).ShieldUserIcon;
   } else if (tmp(4234).PerkIcons.CUSTOMIZATION === perkIcon) {
-    return tmp(11145).ImagesIcon;
+    return tmp(11146).ImagesIcon;
   } else if (tmp(4234).PerkIcons.VANITY === perkIcon) {
     return tmp(8793).StarIcon;
   } else if (tmp(4234).PerkIcons.STAGE_VIDEO === perkIcon) {

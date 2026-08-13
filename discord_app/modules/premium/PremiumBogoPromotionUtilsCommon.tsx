@@ -166,9 +166,9 @@ function _isEligibleForBOGOPromotion() {
                 dependencyMap = !isClaimedResult;
                 let obj2 = flag(6928);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(12804);
+                let obj3 = flag(12805);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(12806);
+                let obj4 = flag(12807);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
                 const isMobile = flag(4581).isMobile;
                 let isAndroidResult = !isMobile;
@@ -411,7 +411,7 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     isAndroidResult = tmpResult.isAndroid();
   }
   const tmp11 = useScheduledForcedUpdate;
-  tmpResult = tmp(12806);
+  tmpResult = tmp(12807);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

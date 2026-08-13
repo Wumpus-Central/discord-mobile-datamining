@@ -23,9 +23,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15953).trackYouTabAvatarPress();
-    const obj = callback(15953);
-    const result1 = callback(15570).showYouAccountActionSheet();
+    const result = callback(15944).trackYouTabAvatarPress();
+    const obj = callback(15944);
+    const result1 = callback(15561).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();

@@ -375,7 +375,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
       outer1_1(outer1_3[32]).startEditingRoles(applyArgumentsResult.props.guild.id, applyArgumentsResult.props.user.id);
     };
     applyArgumentsResult.handleToggleRole = function handleToggleRole(roleId, state) {
-      callback(11288).toggleRole(roleId, state);
+      callback(11289).toggleRole(roleId, state);
     };
     applyArgumentsResult.handleSetCommunicationDisabled = function handleSetCommunicationDisabled() {
       let guild;
@@ -423,7 +423,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
       }
     };
     applyArgumentsResult.handleCancelEditMemberRoles = function handleCancelEditMemberRoles() {
-      callback(11288).stopEditingRoles();
+      callback(11289).stopEditingRoles();
     };
     return applyArgumentsResult;
   }

@@ -200,13 +200,13 @@ export default function DevToolsAnalyticsScreen() {
   obj = { style: tmp.analyticsContainer, children: null };
   obj = { title: "Actions", hasIcons: true, children: null };
   const obj1 = { icon: null, label: "Reverse Events", value: null, onValueChange: null };
-  obj1[0] = callback2(trimmed(11595).ArrowsUpDownIcon, {});
+  obj1[0] = callback2(trimmed(11596).ArrowsUpDownIcon, {});
   obj1[2] = first;
   obj1[3] = tmp5[1];
   const items2 = [callback2(trimmed(5808).TableSwitchRow, obj1), ];
   const obj2 = { arrow: true, variant: "danger", icon: null, label: "Clear Analytics Log", onPress: null };
   obj2[2] = callback2(trimmed(4301).TrashIcon, { color: "text-feedback-critical" });
-  obj2[4] = trimmed(13916).clearAnalyticsLog;
+  obj2[4] = trimmed(13907).clearAnalyticsLog;
   items2[1] = callback2(trimmed(5414).TableRow, obj2);
   obj[2] = items2;
   const items3 = [callback3(trimmed(5807).TableRowGroup, obj), , ];

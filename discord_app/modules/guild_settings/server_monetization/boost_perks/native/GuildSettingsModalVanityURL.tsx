@@ -7,7 +7,7 @@ import { GuildFeatures } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
-import { registerAsset } from "../../../../../../_runtime/16813_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16804_registerAsset.js";
 import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";

@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherKeyboard.tsx
 import importAllResult from "collectGuildAnalyticsMetadata";
-import { View } from "module_11490";
+import { View } from "module_11491";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION";

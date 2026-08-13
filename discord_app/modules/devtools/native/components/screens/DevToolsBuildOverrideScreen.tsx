@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo(() => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[first(undefined, 11236).DEVICE_FIELD];
+      tmp = overrides[first(undefined, 11237).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -61,12 +61,12 @@ const memoResult = importAllResult.memo(() => {
     };
     const items1 = [tmp7(tmp3(5414).TableRow, obj1), , ];
     let obj3 = { icon: null, label: "Refresh Override", onPress: null, arrow: true };
-    obj3[0] = tmp7(tmp3(13917).RefreshIcon, {});
-    obj3[2] = tmp3(11236).refreshBuildOverride;
+    obj3[0] = tmp7(tmp3(13908).RefreshIcon, {});
+    obj3[2] = tmp3(11237).refreshBuildOverride;
     items1[1] = tmp7(tmp3(5414).TableRow, obj3);
     const obj4 = { icon: null, label: "Clear Override", variant: "danger", onPress: null, arrow: true };
     obj4[0] = tmp7(tmp3(4301).TrashIcon, { color: "text-feedback-critical" });
-    obj4[3] = tmp3(11236).clearBuildOverride;
+    obj4[3] = tmp3(11237).clearBuildOverride;
     items1[2] = tmp7(tmp3(5414).TableRow, obj4);
     obj2[2] = items1;
     tmp10Result = tmp10(tmp3(5807).TableRowGroup, obj2);
@@ -147,11 +147,11 @@ const memoResult = importAllResult.memo(() => {
     onPress() {
       const type = first.type;
       if ("branch" === type) {
-        const result = first(11236).setBuildOverrideForBranch(tmp.id);
-        const obj3 = first(11236);
+        const result = first(11237).setBuildOverrideForBranch(tmp.id);
+        const obj3 = first(11237);
       } else if ("id" === type) {
-        const result1 = first(11236).setBuildOverrideForId(tmp.id);
-        const obj2 = first(11236);
+        const result1 = first(11237).setBuildOverrideForId(tmp.id);
+        const obj2 = first(11237);
       } else {
         first(1370).assertNever(tmp.type);
         const obj = first(1370);

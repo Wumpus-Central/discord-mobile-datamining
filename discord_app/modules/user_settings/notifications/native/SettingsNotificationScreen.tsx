@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationScreen.tsx
-import importAllResult from "module_13956";
+import importAllResult from "module_13947";
 import { View } from "NotificationPermissionSettingsHeader";
 import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore";
 import { MobileSetting } from "MobileSetting";

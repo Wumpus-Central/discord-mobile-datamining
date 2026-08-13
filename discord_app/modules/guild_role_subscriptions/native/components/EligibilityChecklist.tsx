@@ -22,9 +22,9 @@ function EligibilityChecklistRow(item) {
   items[1] = eligibleRow;
   obj = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = tmp6(16860);
+    let tmp6Result = tmp6(16851);
   } else {
-    tmp6Result = tmp6(16861);
+    tmp6Result = tmp6(16852);
   }
   obj[1] = tmp6Result;
   const items1 = [closure_4(preload, obj), ];
@@ -49,7 +49,7 @@ function EligibilityChecklistRow(item) {
   } else {
     const obj5 = { style: null };
     obj5[0] = tmp.divider;
-    tmp5Result = tmp5(tmp6(14527), obj5);
+    tmp5Result = tmp5(tmp6(14518), obj5);
   }
   children[1] = tmp5Result;
   return closure_5(closure_6, { children });

@@ -93,7 +93,7 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   ({ emoji: arr5[0], emojiFastImage: arr5[1] } = tmp);
   items5 = [, ];
   ({ emoji: arr6[0], emojiText: arr6[1] } = tmp);
-  obj[2] = sound(11392)(sound, 64);
+  obj[2] = sound(11393)(sound, 64);
   let str = sound.emojiName;
   if (str == null) {
     str = "";

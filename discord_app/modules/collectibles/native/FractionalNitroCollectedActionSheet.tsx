@@ -5,7 +5,7 @@ import { HelpdeskArticles } from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12226_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12227_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { FRACTIONAL_NITRO_COIN_SIZE } from "FractionalNitroCoinIllustration.tsx";
 

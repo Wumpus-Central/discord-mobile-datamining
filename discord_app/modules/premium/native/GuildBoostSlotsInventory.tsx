@@ -9,7 +9,7 @@ import jsxProd from "getSubscriptionPlaceholderPatternSource";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import { apply } from "../../../../_runtime/00012_apply.js";
-import { registerAsset } from "../../../../_runtime/12837_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12838_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSubscriptionPlaceholderPatternSource } from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -275,7 +275,7 @@ function BoostedGuild(arg0) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(12842), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(12843), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
   const items4 = [closure_12(closure_5, obj1), closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj[1] = items4;

@@ -148,7 +148,7 @@ AlertWrapper.prototype["render"] = function render() {
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "disabled", renderKey: "isArray", props: "isArray" });
+let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "HermesInternal", props: "r" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -194,7 +194,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "disabled", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "Array", renderKey: "HermesInternal", props: "r" };
       }
     }
   });

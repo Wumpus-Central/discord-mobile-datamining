@@ -521,7 +521,7 @@ const memoResult = importAllResult.memo((questContent) => {
                 obj1[0] = dependencyMap;
                 if (!outer1_20) {
                   if (!outer1_14) {
-                    let START_QUEST = tmp31(7232).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp31(7233).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
                   obj1[2] = outer1_4;
@@ -529,7 +529,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   v0 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp31(7232).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp31(7233).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -545,7 +545,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = openQuestAccessSuspendedBottomSheet;
-                  v0(14440)(obj);
+                  v0(14431)(obj);
                   dependencyMap = 3;
                 }
                 callback2();

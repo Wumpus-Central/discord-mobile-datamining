@@ -6,7 +6,7 @@ import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY";
 import jsxProd from "createStandardNavigationFactories";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { 14806__ } from "../../_runtime/metro/14806__.js";
+import { 14797__ } from "../../_runtime/metro/14797__.js";
 import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
 import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
 import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
@@ -287,7 +287,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(14806__, obj1), ];
+      const items = [callback(14797__, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };

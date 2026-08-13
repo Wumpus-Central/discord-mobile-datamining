@@ -48,7 +48,7 @@ function UsernameStatusMessage(arg0) {
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14080).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(14071).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -154,7 +154,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14080).NameValidationState.ERROR) {
+  if (type === tmp14(14071).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj1 = { children: null };

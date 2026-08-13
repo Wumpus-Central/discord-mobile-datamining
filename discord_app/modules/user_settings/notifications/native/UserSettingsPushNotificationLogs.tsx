@@ -222,7 +222,7 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(12300).ShareIcon, {});
+  obj[3] = callback3(first(12301).ShareIcon, {});
   items1[1] = callback3(first(4887).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj), ];

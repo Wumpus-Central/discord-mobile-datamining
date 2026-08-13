@@ -19,13 +19,13 @@ export default function transitionToActivity(arg0, _location) {
       tmp4 = tmp15(10366)(embeddedActivityLocationChannelId);
     }
     if (tmp4) {
-      tmp15(10944)(embeddedActivityLocationChannelId);
+      tmp15(10946)(embeddedActivityLocationChannelId);
     }
     selfEmbeddedActivityForLocation = selfEmbeddedActivityForLocation.getSelfEmbeddedActivityForLocation(_location);
     if (null != selfEmbeddedActivityForLocation) {
       if (tmp15(10366)(embeddedActivityLocationChannelId)) {
         let tmp15Result = tmp15(4538);
-        tmpResult = tmp(10613);
+        tmpResult = tmp(10615);
         obj = { applicationId: null, instanceId: null };
         ({ applicationId: obj5[0], compositeInstanceId: obj5[1] } = selfEmbeddedActivityForLocation);
         const participant = tmp15Result.selectParticipant(embeddedActivityLocationChannelId, tmpResult.getEmbeddedActivityParticipantId(obj));
@@ -33,8 +33,8 @@ export default function transitionToActivity(arg0, _location) {
         tmp15Result.hideActionSheet();
         setVoiceChatDrawerState(embeddedActivityLocationChannelId, VoiceChatDrawerState.CLOSED);
       } else {
-        const result = tmp(10586).updateActivityPanelMode(ActivityPanelModes.PANEL);
-        const tmpResult1 = tmp(10586);
+        const result = tmp(10588).updateActivityPanelMode(ActivityPanelModes.PANEL);
+        const tmpResult1 = tmp(10588);
       }
     }
   }

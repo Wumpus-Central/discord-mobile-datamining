@@ -6,7 +6,7 @@ import get_ActivityIndicator from "module_6034";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12159_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12160_registerAsset.js";
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

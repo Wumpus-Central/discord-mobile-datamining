@@ -31,7 +31,7 @@ function ConsoleRow(onPress) {
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
     let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(12252).PlaystationNeutralIcon, {});
+    obj[1] = callback(onPress(12253).PlaystationNeutralIcon, {});
     const intl3 = onPress(1236).intl;
     obj[2] = intl3.string(onPress(1236).t.JafL6p);
     let stringResult;
@@ -89,9 +89,9 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   }
   let obj = quest(10420);
   xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11221).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11221);
-  closure_5 = quest(10449).useQuestImpressionId();
+  closure_4 = quest(11222).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11222);
+  closure_5 = quest(10451).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(() => {

@@ -26,7 +26,7 @@ function CommunityPill(guildVisibility) {
   if (guildVisibility.guildVisibility === GlobeEarthIcon(9311).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
-    GlobeEarthIcon = tmp2(10496).GlobeEarthIcon;
+    GlobeEarthIcon = tmp2(10498).GlobeEarthIcon;
     tmp4Result = registerAsset;
   }
   let obj = {

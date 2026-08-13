@@ -52,7 +52,7 @@ items[4] = {
     return intl.string(getSystemLocale.t["755t4q"]);
   }
 };
-const obj3 = { duration: "Array", label: "Array" };
+const obj3 = { duration: "Array", label: 0 };
 obj3[1] = function label() {
   const intl = getSystemLocale.intl;
   return intl.string(getSystemLocale.t["46dqJY"]);

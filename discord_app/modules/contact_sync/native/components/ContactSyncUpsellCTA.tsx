@@ -4,7 +4,7 @@ import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../../_runtime/13273_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13274_registerAsset.js";
 
 let c4;
 let c5;

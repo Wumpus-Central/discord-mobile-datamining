@@ -12,7 +12,7 @@ import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import importAllResult from "initialize";
-import { registerAsset } from "../../../../../_runtime/10883_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10885_registerAsset.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { openChannelCallModal } from "../../../../utils/native/PrivateChannelCallUtils.tsx";
@@ -165,11 +165,11 @@ class StageSettingsButton {
 class StageInviteButton {
   constructor(arg0) {
     channelId = global.channelId;
-    f86338 = undefined;
-    f86339 = undefined;
+    f86318 = undefined;
+    f86319 = undefined;
     useActiveEvent = undefined;
     tmp2 = channelId;
-    tmp3 = f86339;
+    tmp3 = f86319;
     tmp = jsxs();
     obj = require("initialize");
     items = [];
@@ -177,7 +177,7 @@ class StageInviteButton {
     items1 = [];
     items1[0] = channelId;
     stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(channelId), items1);
-    f86338 = stateFromStores;
+    f86318 = stateFromStores;
     obj2 = require("initialize");
     items2 = [];
     items2[0] = View;
@@ -193,7 +193,7 @@ class StageInviteButton {
       }
       return outer1_7.getGuild(guild_id);
     }, items3);
-    f86339 = stateFromStores1;
+    f86319 = stateFromStores1;
     obj3 = require("useGuildEvents");
     useActiveEvent = obj3.useActiveEvent(channelId);
     tmp6 = null;
@@ -201,7 +201,7 @@ class StageInviteButton {
       tmp6 = null;
       if (null != stateFromStores1) {
         tmp7 = jsx;
-        tmp8 = f86338;
+        tmp8 = f86318;
         obj = { accessibilityLabel: null, containerStyle: null, source: null, IconComponent: null, onPress: null, disableBackground: true };
         tmp9 = require("ChannelCallNavigatorIcon");
         intl = require("getSystemLocale").intl;

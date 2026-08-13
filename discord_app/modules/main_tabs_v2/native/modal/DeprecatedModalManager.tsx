@@ -154,7 +154,7 @@ let prototype = function DeprecatedModalManager() {
     store: handleFormInit,
     closable: false,
     getComponent() {
-      return callback(16685).default;
+      return callback(16676).default;
     }
   };
   obj = {
@@ -162,7 +162,7 @@ let prototype = function DeprecatedModalManager() {
     store: FormStates,
     closable: false,
     getComponent() {
-      return callback(16959).default;
+      return callback(16950).default;
     }
   };
   applyArgumentsResult.actions = obj;

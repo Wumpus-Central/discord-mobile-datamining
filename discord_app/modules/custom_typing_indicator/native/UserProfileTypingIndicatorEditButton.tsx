@@ -22,12 +22,12 @@ export default function UserProfileTypingIndicatorEditButton() {
   obj[0] = intl.string(messagesProxy["pT+BVM"]);
   obj = { showPremiumIcon: true, showNewBadge: null };
   obj[1] = tmp2[0] === nativeStackNavigation(1377).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE;
-  obj[1] = jsx(nativeStackNavigation(14001).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: null });
+  obj[1] = jsx(nativeStackNavigation(13992).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: null });
   const intl2 = nativeStackNavigation(1236).intl;
   obj[2] = intl2.string(nativeStackNavigation(1236).t.PoWNfe);
   obj[3] = useCallback(() => {
     nativeStackNavigation.navigate(outer1_5.TYPING_INDICATOR);
     tmp3(outer1_6.TAKE_ACTION);
   }, items1);
-  return jsx(nativeStackNavigation(14001).UserProfileEditFormButton, { showPremiumIcon: true, showNewBadge: null });
+  return jsx(nativeStackNavigation(13992).UserProfileEditFormButton, { showPremiumIcon: true, showNewBadge: null });
 };

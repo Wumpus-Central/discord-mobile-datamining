@@ -727,7 +727,7 @@ function _submitBugReportWithScreenRecording() {
                       throwTypeErrorResult = SURVEY_CONFIGS;
                       obj14 = SURVEY_CONFIGS;
                       if (SURVEY_CONFIGS == null) {
-                        obj14 = { name: null, squad: null, asana_inbox_id: "e" };
+                        obj14 = { name: null, squad: null, asana_inbox_id: "Array" };
                         obj14[0] = uri.uploadConfig.featureName;
                         obj14[1] = uri.uploadConfig.squadName;
                       }

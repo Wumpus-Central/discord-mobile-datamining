@@ -136,9 +136,9 @@ let closure_17 = importAllResult.memo((channel) => {
   ({ locked, voiceStates, embeddedActivitiesCount } = channel);
   let obj = channel(9087);
   const activeEvent = obj.useActiveEvent(channel.id);
-  let obj1 = channel(15436);
+  let obj1 = channel(15427);
   const startTime = obj1.useStartTime(channel);
-  let obj2 = channel(15440);
+  let obj2 = channel(15431);
   const ensureSyncedChannelVoiceStates = obj2.useEnsureSyncedChannelVoiceStates(channel.id, voiceStates);
   let obj3 = channel(9793);
   const isConnectedToVoiceChannel = obj3.useIsConnectedToVoiceChannel(channel);
@@ -147,7 +147,7 @@ let closure_17 = importAllResult.memo((channel) => {
   const items1 = [channel];
   const stateFromStoresObject = obj4.useStateFromStoresObject(items, () => ({ hasUnread: outer1_8.hasUnread(channel.id), mentionCount: outer1_8.getMentionCount(channel.id), resolvedUnreadSetting: outer1_9.resolveUnreadSetting(channel) }), items1);
   ({ hasUnread, mentionCount, resolvedUnreadSetting } = stateFromStoresObject);
-  let obj5 = channel(15429);
+  let obj5 = channel(15420);
   const channelSubtitleData = obj5.getChannelSubtitleData(subtitle);
   let type;
   if (subtitle != null) {
@@ -229,7 +229,7 @@ let closure_17 = importAllResult.memo((channel) => {
     channelInfo: null,
     children: null
   };
-  const tmp19 = jsx(gameMentionsAsPlainText(15430), { channel, isChannelSelected: selected, isChannelCollapsed: collapsed, voiceStates: ensureSyncedChannelVoiceStates, enableConnectedUserLimit: true, enableActivities: true });
+  const tmp19 = jsx(gameMentionsAsPlainText(15421), { channel, isChannelSelected: selected, isChannelCollapsed: collapsed, voiceStates: ensureSyncedChannelVoiceStates, enableConnectedUserLimit: true, enableActivities: true });
   const intl = tmp(1236).intl;
   obj1[6] = intl.string(channel(1236).t["9C444m"]);
   obj1[7] = channel;
@@ -258,7 +258,7 @@ let closure_17 = importAllResult.memo((channel) => {
       obj5 = { users: null, max: 8, guildId: null, renderIcon: false };
       obj5[0] = summarizedVoiceUsers;
       obj5[2] = channel.guild_id;
-      obj4[1] = tmp17(tmp18(15337), obj5);
+      obj4[1] = tmp17(tmp18(15328), obj5);
       tmp17Result = tmp17(View, obj4);
       const tmpResult1 = tmp(4527);
     } else {
@@ -268,12 +268,12 @@ let closure_17 = importAllResult.memo((channel) => {
       obj7[0] = channel;
       obj7[1] = collapsed;
       obj7[2] = ensureSyncedChannelVoiceStates;
-      obj6[1] = tmp17(tmp18(15328), obj7);
+      obj6[1] = tmp17(tmp18(15319), obj7);
       tmp17Result = tmp17(View, obj6);
     }
   }
   obj1[15] = tmp17Result;
-  return jsx(gameMentionsAsPlainText(15323), {
+  return jsx(gameMentionsAsPlainText(15314), {
     onPress() {
       return (function handleVoiceChannelPress(channel) {
         const self = this;

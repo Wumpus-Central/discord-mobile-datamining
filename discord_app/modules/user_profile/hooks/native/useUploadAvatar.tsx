@@ -108,7 +108,7 @@ export default function useUploadAvatar(guildId) {
               }
             }
           }
-          obj1 = outer1_0(13972);
+          obj1 = outer1_0(13963);
           const obj4 = { imageUri: null, description: null, originalMd5: null };
           obj4[0] = base64;
           obj3 = outer1_0(8323);

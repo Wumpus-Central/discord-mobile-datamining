@@ -725,10 +725,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15090).toggle("force_mock_iap", arg0);
+    callback(15081).toggle("force_mock_iap", arg0);
     getUserAgnosticState.persist();
-    const obj = callback(15090);
-    const result = callback2(11238).checkForUpdateAndReload();
+    const obj = callback(15081);
+    const result = callback2(11239).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

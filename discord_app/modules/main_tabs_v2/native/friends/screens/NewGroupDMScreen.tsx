@@ -221,7 +221,7 @@ function _handleInviteUsers() {
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(10944)(_slicedToArray);
+                                v0(10946)(_slicedToArray);
                                 dependencyMap = 3;
                                 tmp9 = _slicedToArray;
                               }

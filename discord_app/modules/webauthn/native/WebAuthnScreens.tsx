@@ -12,14 +12,14 @@ export const getScreens = function getScreens(isModal) {
   obj = {
     title: "",
     render() {
-      return callback2(callback(14046), {});
+      return callback2(callback(14037), {});
     }
   };
   obj = { title: null, render: null, headerLeft: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["0N1s81"]);
   obj[1] = function render() {
-    return callback2(callback(14053), {});
+    return callback2(callback(14044), {});
   };
   let headerCloseButton;
   if (isModal) {
@@ -31,7 +31,7 @@ export const getScreens = function getScreens(isModal) {
   const obj1 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(14058), {});
+      return callback2(callback(14049), {});
     },
     title: null
   };
@@ -40,7 +40,7 @@ export const getScreens = function getScreens(isModal) {
   obj[WebAuthnScreens.EDIT] = obj1;
   const obj2 = {
     render() {
-      return callback2(callback(14059), {});
+      return callback2(callback(14050), {});
     },
     title: null
   };
@@ -50,7 +50,7 @@ export const getScreens = function getScreens(isModal) {
   const obj3 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(14062), {});
+      return callback2(callback(14053), {});
     },
     title: null,
     headerLeft: null
@@ -66,7 +66,7 @@ export const getScreens = function getScreens(isModal) {
   obj[WebAuthnScreens.NAME] = obj3;
   const obj4 = {
     render() {
-      return callback2(callback(14063), {});
+      return callback2(callback(14054), {});
     },
     title: null
   };

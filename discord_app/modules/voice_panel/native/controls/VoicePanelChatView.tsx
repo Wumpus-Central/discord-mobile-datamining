@@ -48,8 +48,8 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
     obj[1] = tmp(4297);
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11699), obj);
-    const tmpResult = tmp(11699);
+    let tmp5Result = tmp5(tmp(11700), obj);
+    const tmpResult = tmp(11700);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = getSystemLocale.intl;

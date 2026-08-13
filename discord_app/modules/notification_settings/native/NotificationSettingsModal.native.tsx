@@ -386,7 +386,7 @@ prototype["renderChannels"] = function renderChannels() {
   obj[0] = intl.string(self(1236).t.O4TIvi);
   obj = { icon: null, label: null, onPress: null };
   obj = { IconComponent: null };
-  obj[0] = self(12170).PlusMediumIcon;
+  obj[0] = self(12171).PlusMediumIcon;
   obj[0] = callback2(self(5420).TableRowIcon, obj);
   const intl2 = self(1236).intl;
   obj[1] = intl2.string(self(1236).t.quib7R);
@@ -525,7 +525,7 @@ export default function NotificationSettingsModal() {
     const obj3 = callback(5310);
     obj[1] = callback(5310).getHeaderBackButton();
     obj[2] = function render(guildId, navigation) {
-      return callback2(callback(16960), { guildId: guildId.guildId, navigation });
+      return callback2(callback(16951), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj;
     const obj1 = { headerLeft: null, title: null, render: null };

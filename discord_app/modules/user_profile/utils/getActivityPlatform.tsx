@@ -19,13 +19,13 @@ export default function getActivityPlatform(session_id) {
   } else if (tmp(8956)(session_id)) {
     tmpResult = tmp(5041);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(12345)(session_id)) {
-    return tmp(5041).get(PlatformTypes.XBOX);
   } else if (tmp(12346)(session_id)) {
+    return tmp(5041).get(PlatformTypes.XBOX);
+  } else if (tmp(12347)(session_id)) {
     return tmp(5041).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(12360)(session_id)) {
-      if (!tmp(12361)(session_id)) {
+    if (!tmp(12361)(session_id)) {
+      if (!tmp(12362)(session_id)) {
         const found = tmp(5041).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {

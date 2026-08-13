@@ -111,7 +111,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   fn2.__initData = closure_16;
   const animatedStyle1 = obj4.useAnimatedStyle(fn2);
   const tmp6 = first(5768);
-  const tmp14 = first(12796);
+  const tmp14 = first(12797);
   let obj6 = first(8211);
   const isInReverseTrial = obj6.useIsInReverseTrial();
   mergeGuildAvatar = stateFromStores1.useRef(-1);
@@ -128,11 +128,11 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     };
   }, items3);
   let obj7 = first(4007);
-  const tmp14Result = first(12796)(fractionalPremiumInfo.endsAt, first(12796).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp14Result = first(12797)(fractionalPremiumInfo.endsAt, first(12797).CountDownMessageTypes.LONG_TIME_LEFT);
   if (premiumGroupRole === first(1940).PremiumSubscriptionGroupRole.MEMBER) {
     obj1 = { style: null };
     obj1[0] = tmp.boostingUnavailablePill;
-    let tmp20 = callback(tmp4(12850), obj1);
+    let tmp20 = callback(tmp4(12851), obj1);
   } else {
     tmp20 = null;
     if (fractionalPremiumInfo.fractionalState !== FractionalPremiumStates.NONE) {
@@ -140,7 +140,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
       obj2[0] = tmp14Result;
       obj2[1] = isInReverseTrial;
       obj2[2] = tmp.boostingUnavailablePill;
-      tmp20 = callback(tmp4(12852), obj2);
+      tmp20 = callback(tmp4(12853), obj2);
     }
   }
   const obj3 = { onLayout, angle: 160, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, useAngle: true, style: null, children: null };
@@ -151,7 +151,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj3[6] = tmp.gradient;
   obj4 = { angle: 0, angleCenter: { x: 0.5, y: 0.5 }, colors: ["rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0)"], locations: [0.12, 0.5], useAngle: true, style: tmp.gradient, children: null };
   tmp4Result = tmp4(4766);
-  const items5 = [callback(first(12913), { guild }), , , ];
+  const items5 = [callback(first(12914), { guild }), , , ];
   const obj5 = { style: tmp.headerContent, children: null };
   obj6 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
   const intl = tmp7(1236).intl;
@@ -174,7 +174,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const obj11 = { style: items8, children: null };
   items8 = [animatedStyle1, tmp.totalBoostCountWrapper];
   const obj12 = { style: tmp.guildBoostCountIcon, source: null, color: null, size: null };
-  obj12[1] = first(12837);
+  obj12[1] = first(12838);
   obj12[2] = first(712).unsafe_rawColors.GUILD_BOOSTING_PINK;
   obj12[3] = first(1297).Icon.Sizes.SMALL;
   const items9 = [callback(first(1297).Icon, obj12), ];
@@ -203,8 +203,8 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   items6[4] = callback(first(6911), { styles: items13, guild, previousGuildSubscriptionSlot, analyticsSection: constants.HEADER, fractionalPremiumState: fractionalPremiumInfo.fractionalState, premiumGroupRole, intent, onResult });
   obj5[1] = items6;
   items5[1] = callback2(memo, obj5);
-  items5[2] = callback(first(12916), { style: tmp.headerStars });
-  items5[3] = callback(first(12917), { style: tmp.headerWave });
+  items5[2] = callback(first(12917), { style: tmp.headerStars });
+  items5[3] = callback(first(12918), { style: tmp.headerWave });
   obj4[6] = items5;
   obj3[7] = callback2(tmp4Result, obj4);
   const items14 = [callback(tmp4Result, obj3), ];
@@ -224,7 +224,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
     };
     const obj21 = { size: null, source: null, style: null };
     obj21[0] = tmp7(1297).Icon.Sizes.SMALL;
-    obj21[1] = tmp4(12918);
+    obj21[1] = tmp4(12919);
     obj21[2] = tmp.giftIcon;
     obj20[3] = tmp25(tmp7(1297).Icon, obj21);
     let obj22 = obj20;

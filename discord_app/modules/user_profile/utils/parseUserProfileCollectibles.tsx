@@ -10,7 +10,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles = collectibles.collectibles;
   }
   if (null == collectibles) {
-    return { collectibles: "disabled", profileEffect: "isArray", profileFrame: "isArray" };
+    return { collectibles: "Array", profileEffect: "HermesInternal", profileFrame: "r" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

@@ -5,8 +5,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/15462_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15463_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15453_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15454_registerAsset.js";
 
 let c4;
 let c5;
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   const callback1 = importAllResult.useCallback(() => {
     outer1_1(outer1_2[10]).open(null, guild.id, null, null);
   }, items3);
-  let obj1 = guild(14416);
+  let obj1 = guild(14407);
   obj = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
   obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };

@@ -237,7 +237,7 @@ export default function UserSettingsPremium(applicationId) {
         if (null == premiumFeatureCardOrder) {
           obj6 = { onClose: null };
           obj6[0] = onClose;
-          tmp31Result1 = tmp31(tmp(12751), obj6);
+          tmp31Result1 = tmp31(tmp(12752), obj6);
         }
       }
       let TIER_2_LEADING = premiumFeatureCardOrder;
@@ -293,8 +293,8 @@ export default function UserSettingsPremium(applicationId) {
         obj7[8] = onPaymentSuccess;
         obj7[9] = onPaymentDismiss;
         obj7[10] = isFullScreenPresentation;
-        tmp31Result1 = tmp31(tmp(12799), obj7);
-        const tmpResult = tmp(12799);
+        tmp31Result1 = tmp31(tmp(12800), obj7);
+        const tmpResult = tmp(12800);
       } else if (premiumTrialOfferPremiumType === closure_17.TIER_0) {
         let TIER_2_LEADING2 = tmp5(8672).PremiumFeatureCardOrder.TIER_0_LEADING;
       } else {

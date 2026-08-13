@@ -30,7 +30,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(15591)().value;
+    num2 = memo(15582)().value;
   }
   const sum = num + num2;
   _require = sum;

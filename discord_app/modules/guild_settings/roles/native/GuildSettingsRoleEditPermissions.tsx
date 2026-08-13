@@ -95,7 +95,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   tmp18Result = tmp18(tmp19, { children: tmp18Result });
   canResult = importAll(3994).can(obj);
-  const guildPermissionSpec = role(15987).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(15978).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,8 +108,8 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(16798), { role }), , , ];
-  const tmp14Result = role(15987);
+  const children = [closure_14(role(16789), { role }), , , ];
+  const tmp14Result = role(15978);
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
   const tmp26 = closure_15;

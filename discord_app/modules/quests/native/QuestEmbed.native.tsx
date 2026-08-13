@@ -36,7 +36,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     obj.headerColor = colors5.headerColor;
     obj.titleText = intl9.string(tmp2(1236).t["6LxbQM"]);
     ({ titleColor: obj25.titleColor, bodyTextColor: obj25.subtitleColor, bodyTextColor: obj25.bodyTextColor } = colors5);
-    obj.thumbnailUrl = Image.resolveAssetSource(merged5(12678)).uri;
+    obj.thumbnailUrl = Image.resolveAssetSource(merged5(12679)).uri;
     obj.embedCanBeTapped = true;
     obj.canBeAccepted = true;
     obj.type = InviteTypes.GUILD;
@@ -100,9 +100,9 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     }
     if (null == result) {
       if (null == value) {
-        const result1 = tmp2(7222).trackQuestEmbedFallbackViewed(questId, constants2.UNKNOWN_QUEST);
+        const result1 = tmp2(7223).trackQuestEmbedFallbackViewed(questId, constants2.UNKNOWN_QUEST);
         const intl12 = tmp2(1236).intl;
-        const tmp2Result2 = tmp2(7222);
+        const tmp2Result2 = tmp2(7223);
         const intl13 = tmp2(1236).intl;
         const stringResult2 = intl13.string(tmp2(1236).t.Ow5AQI);
         const colors6 = acceptLabelGreenColor.colors;
@@ -111,7 +111,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj4.headerColor = colors6.headerColor;
         obj4.titleText = intl12.string(tmp2(1236).t["rxf+nx"]);
         ({ titleColor: obj34.titleColor, bodyTextColor: obj34.subtitleColor, bodyTextColor: obj34.bodyTextColor } = colors6);
-        obj4.thumbnailUrl = Image.resolveAssetSource(merged5(12678)).uri;
+        obj4.thumbnailUrl = Image.resolveAssetSource(merged5(12679)).uri;
         obj4.embedCanBeTapped = true;
         obj4.canBeAccepted = true;
         merged5 = InviteTypes;
@@ -133,9 +133,9 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         }
         const tmp2Result3 = tmp2(500);
       }
-      const result2 = tmp2(7222).trackQuestEmbedFallbackViewed(questId, constants2.EXCLUDED_QUEST);
+      const result2 = tmp2(7223).trackQuestEmbedFallbackViewed(questId, constants2.EXCLUDED_QUEST);
       const intl7 = tmp2(1236).intl;
-      const tmp2Result4 = tmp2(7222);
+      const tmp2Result4 = tmp2(7223);
       const intl8 = tmp2(1236).intl;
       const stringResult4 = intl8.string(tmp2(1236).t.ii4mJo);
       const colors3 = acceptLabelGreenColor.colors;
@@ -144,7 +144,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
       obj6.headerColor = colors3.headerColor;
       obj6.titleText = intl7.string(tmp2(1236).t.Dd6Daw);
       ({ titleColor: obj18.titleColor, bodyTextColor: obj18.subtitleColor, bodyTextColor: obj18.bodyTextColor } = colors3);
-      obj6.thumbnailUrl = Image.resolveAssetSource(merged5(12678)).uri;
+      obj6.thumbnailUrl = Image.resolveAssetSource(merged5(12679)).uri;
       obj6.embedCanBeTapped = true;
       obj6.canBeAccepted = true;
       obj6.type = InviteTypes.GUILD;
@@ -188,10 +188,10 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
           obj9[0] = result.config.messages.questName;
           let formatToPlainStringResult1 = intl4.formatToPlainString(tmp2(1236).t["ge+AJp"], obj9);
         } else {
-          const questTaskDetails = tmp2(7228).getQuestTaskDetails(result);
-          const tmp2Result8 = tmp2(7228);
-          const thirdPartyTaskDetails = tmp2(7228).getThirdPartyTaskDetails(result);
-          const tmp2Result9 = tmp2(7228);
+          const questTaskDetails = tmp2(7229).getQuestTaskDetails(result);
+          const tmp2Result8 = tmp2(7229);
+          const thirdPartyTaskDetails = tmp2(7229).getThirdPartyTaskDetails(result);
+          const tmp2Result9 = tmp2(7229);
           const obj10 = { quest: null, taskDetails: null, location: null, sourceQuestContent: null, thirdPartyTaskDetails: null, withoutMarkdown: true, currentUser: null };
           obj10[0] = result;
           obj10[1] = questTaskDetails;
@@ -199,8 +199,8 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
           obj10[3] = tmp2(5205).QuestContent.QUEST_EMBED_MOBILE;
           obj10[4] = thirdPartyTaskDetails;
           obj10[6] = currentUser;
-          formatToPlainStringResult1 = tmp2(11222).getQuestsInstructionsToWinReward(obj10);
-          const tmp2Result10 = tmp2(11222);
+          formatToPlainStringResult1 = tmp2(11223).getQuestsInstructionsToWinReward(obj10);
+          const tmp2Result10 = tmp2(11223);
         }
         const formatToPlainStringResult = intl3.formatToPlainString(tmp2(1236).t.EAYZAr, obj8);
         const colors2 = acceptLabelGreenColor.colors;
@@ -209,11 +209,11 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj11.headerColor = colors2.headerColor;
         obj11.titleText = formatToPlainStringResult;
         ({ titleColor: obj13.titleColor, bodyTextColor: obj13.subtitleColor, bodyTextColor: obj13.bodyTextColor } = colors2);
-        obj11.thumbnailUrl = tmp2(10432).getQuestAsset(result, tmp2(10432).QuestAssetType.GAME_TILE, tmp29).url;
+        obj11.thumbnailUrl = tmp2(10431).getQuestAsset(result, tmp2(10431).QuestAssetType.GAME_TILE, tmp29).url;
         obj11.embedCanBeTapped = true;
         obj11.canBeAccepted = true;
         obj11.type = InviteTypes.GUILD;
-        const tmp2Result11 = tmp2(10432);
+        const tmp2Result11 = tmp2(10431);
         const obj12 = {};
         const tmp2Result12 = tmp2(500);
         const merged9 = Object.assign(obj11);
@@ -255,9 +255,9 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         }
         isAndroidResult3 = tmp2(500).isAndroid();
       } else {
-        const result3 = tmp2(7222).trackQuestEmbedFallbackViewed(questId, constants2.NOT_SHAREABLE_QUEST);
+        const result3 = tmp2(7223).trackQuestEmbedFallbackViewed(questId, constants2.NOT_SHAREABLE_QUEST);
         const intl = tmp2(1236).intl;
-        const tmp2Result13 = tmp2(7222);
+        const tmp2Result13 = tmp2(7223);
         const intl2 = tmp2(1236).intl;
         const stringResult7 = intl2.string(tmp2(1236).t.NXrP3N);
         const colors = acceptLabelGreenColor.colors;
@@ -266,7 +266,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj14.headerColor = colors.headerColor;
         obj14.titleText = intl.string(tmp2(1236).t.Dd6Daw);
         ({ titleColor: obj4.titleColor, bodyTextColor: obj4.subtitleColor, bodyTextColor: obj4.bodyTextColor } = colors);
-        obj14.thumbnailUrl = Image.resolveAssetSource(merged5(12678)).uri;
+        obj14.thumbnailUrl = Image.resolveAssetSource(merged5(12679)).uri;
         obj14.embedCanBeTapped = true;
         obj14.canBeAccepted = true;
         obj14.type = InviteTypes.GUILD;
@@ -285,7 +285,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         }
         return tmp19;
       }
-      tmp2Result6 = tmp2(7226);
+      tmp2Result6 = tmp2(7227);
     }
   }
 };

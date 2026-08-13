@@ -59,7 +59,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj1 = v0(11292);
+              let obj1 = v0(11293);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };

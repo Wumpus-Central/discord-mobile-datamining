@@ -5,7 +5,7 @@ import { GuildSettingsSections } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15455_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15446_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";

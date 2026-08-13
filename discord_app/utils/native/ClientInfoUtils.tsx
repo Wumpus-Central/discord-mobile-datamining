@@ -23,10 +23,10 @@ export const getConstants = function getConstants() {
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];
-  let str = "6221";
-  if (items.includes("6221")) {
+  let str = "6229";
+  if (items.includes("6229")) {
     const _HermesInternal = HermesInternal;
-    str = "dev (" + "6221" + ")";
+    str = "dev (" + "6229" + ")";
   }
   return str;
 };

@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = withQuestName);
-  let obj = quest(14442);
+  let obj = quest(14433);
   quest = obj.useVideoQuestModalContext().quest;
   let obj1 = quest(10420);
   const items = [quest.id];

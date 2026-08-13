@@ -17,7 +17,7 @@ export const openChangelog = function openChangelog() {
     const obj = coerceMainRoute;
   }
   if (!isModalOpenResult) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(14805, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(14796, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
     const obj2 = ModalActionCreators;
   }
 };

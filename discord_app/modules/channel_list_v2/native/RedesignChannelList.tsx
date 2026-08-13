@@ -75,7 +75,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return callback(tmp2(15478).default, obj);
+          return callback(tmp2(15469).default, obj);
         } else {
           tmp2Result = tmp2(8728);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {

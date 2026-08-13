@@ -13,7 +13,7 @@ export default function GuildProgressButton(guild) {
   let subtitle;
   guild = guild.guild;
   let completed;
-  let obj = guild(11897);
+  let obj = guild(11898);
   const guildProgressStep = obj.useGuildProgressStep(guild);
   completed = guildProgressStep.completed;
   const items = [completed, guild.id];
@@ -34,13 +34,13 @@ export default function GuildProgressButton(guild) {
   }, items1);
   obj = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
   obj = { source: null };
-  obj[0] = completed(15404);
+  obj[0] = completed(15395);
   obj[0] = jsx(guild(8015).RowButton.Icon, { source: null });
   const intl = guild(1236).intl;
   obj[1] = intl.string(guild(1236).t.o3HK3d);
   obj[2] = subtitle;
   obj[3] = callback;
-  obj[4] = jsx(completed(12011), { percent: percentComplete });
+  obj[4] = jsx(completed(12012), { percent: percentComplete });
   return jsx(guild(8015).RowButton, { source: null });
 };
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale, isRefreshEnabled) {

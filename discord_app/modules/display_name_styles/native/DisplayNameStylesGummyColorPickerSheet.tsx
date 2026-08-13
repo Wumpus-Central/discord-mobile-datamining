@@ -81,7 +81,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   }), 2);
   first1 = tmp9[0];
   closure_7 = tmp9[1];
-  const tmp12Result = onSelectColors(14655)(selectedColors(1935).DisplayNameEffect.GUMMY);
+  const tmp12Result = onSelectColors(14646)(selectedColors(1935).DisplayNameEffect.GUMMY);
   const findIndexResult = tmp12Result.findIndex((colors) => selectedColors(_undefined[11]).areArraysShallowEqual(colors.colors, first1));
   c8 = findIndexResult;
   items = [first];
@@ -145,12 +145,12 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   } else {
     const obj7 = { colors: null };
     obj7[0] = first1;
-    tmp18Result = tmp18(tmp11(14000), obj7);
+    tmp18Result = tmp18(tmp11(13991), obj7);
   }
   const items4 = [tmp18Result, ];
   const obj8 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
   tmp11 = onSelectColors;
-  const tmp12 = onSelectColors(14655);
+  const tmp12 = onSelectColors(14646);
   const tmp21 = first1;
   obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(9721).PencilIcon, { color: "white", size: "sm" }) });
   items4[1] = callback2(closure_5, obj8);

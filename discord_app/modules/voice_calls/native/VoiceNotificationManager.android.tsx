@@ -20,7 +20,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     VoiceNotificationManager = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "head_shaking_horizontally", isPushToTalk: "awful", embeddedActivity: "bored", isStreaming: "dejected" };
+    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "catch", isPushToTalk: "crook", embeddedActivity: "curve", isStreaming: "ensnare" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = outer1_9.getChannelId();
       const state = outer1_9.getState();
@@ -225,7 +225,7 @@ prototype["terminate"] = function terminate() {
 };
 let set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "head_shaking_horizontally", isPushToTalk: "awful", embeddedActivity: "bored", isStreaming: "dejected" };
+set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "catch", isPushToTalk: "crook", embeddedActivity: "curve", isStreaming: "ensnare" };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = outer1_9.getChannelId();
   const state = outer1_9.getState();

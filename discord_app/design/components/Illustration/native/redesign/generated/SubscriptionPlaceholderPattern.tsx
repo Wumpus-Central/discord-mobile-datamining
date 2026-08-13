@@ -12,13 +12,13 @@ export const getSubscriptionPlaceholderPatternSource = function getSubscriptionP
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(12839);
-    },
-    darker() {
       return callback(12840);
     },
-    light() {
+    darker() {
       return callback(12841);
+    },
+    light() {
+      return callback(12842);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12839);
-    },
-    darker() {
       return callback(12840);
     },
-    light() {
+    darker() {
       return callback(12841);
+    },
+    light() {
+      return callback(12842);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPa
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12839);
-    },
-    darker() {
       return callback(12840);
     },
-    light() {
+    darker() {
       return callback(12841);
+    },
+    light() {
+      return callback(12842);
     }
   };
   obj = {};

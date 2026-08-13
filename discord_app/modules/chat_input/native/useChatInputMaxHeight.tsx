@@ -55,7 +55,7 @@ function getChatInputHeightAnimationTimingWorklet(height) {
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     keyboardHeight = customKeyboardHeight;
   }
-  let tmpResult = tmp(11425);
+  let tmpResult = tmp(11426);
   const bound = Math.min(height, Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, tmpResult.getWindowDimensionsWorklet({ ignoreKeyboard: true }).height - keyboardHeight - c6)));
   tmpResult = tmp(4343);
   obj = { duration: tmp(4346).timingFastDuration, easing: tmp(4083).Easing.linear };

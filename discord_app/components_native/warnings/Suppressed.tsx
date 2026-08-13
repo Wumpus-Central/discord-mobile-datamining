@@ -3,8 +3,8 @@ import initialize from "initialize";
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
-import { registerAsset } from "../../../_runtime/16076_registerAsset.js";
-import { registerAsset } from "../../../_runtime/16077_registerAsset.js";
+import { registerAsset } from "../../../_runtime/16067_registerAsset.js";
+import { registerAsset } from "../../../_runtime/16068_registerAsset.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;

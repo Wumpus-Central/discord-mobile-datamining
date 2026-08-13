@@ -6,7 +6,7 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/08779_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16084_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16075_registerAsset.js";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 let c4;

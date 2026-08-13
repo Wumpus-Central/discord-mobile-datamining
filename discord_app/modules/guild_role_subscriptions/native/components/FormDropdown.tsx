@@ -5,8 +5,8 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/10789_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13312_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10791_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13313_registerAsset.js";
 import { Button } from "../../../../design/void/native.tsx";
 import { styles } from "FormStyles.tsx";
 

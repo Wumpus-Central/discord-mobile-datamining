@@ -317,7 +317,7 @@ function _apiLogin() {
               let obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f120656 = () => { ... };
+              const f120524 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -358,7 +358,7 @@ function subscribeOnce(subscribe) {
   let closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f120656(arg0);
+    return f120524(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }

@@ -15,9 +15,9 @@ export default function FavoritesGuildChannelSortModal() {
     const items = [...closure_5];
     callback(table[5]).startReordering.apply(items);
     return () => {
-      callback(15350).stopReordering();
-      const obj = callback(15350);
-      callback(15350).terminate();
+      callback(15341).stopReordering();
+      const obj = callback(15341);
+      callback(15341).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsets().bottom;

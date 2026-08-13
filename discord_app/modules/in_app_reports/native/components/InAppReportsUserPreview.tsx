@@ -34,7 +34,7 @@ export default function UserPreview(user) {
   const items = [callback(Text.Text, obj), ];
   const obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-  const obj2 = { size: null, user: null, guildId: "e" };
+  const obj2 = { size: null, user: null, guildId: "Array" };
   obj2[0] = Button.AvatarSizes.LARGE_48;
   obj2[1] = user;
   const items2 = [callback(Button.Avatar, obj2), ];

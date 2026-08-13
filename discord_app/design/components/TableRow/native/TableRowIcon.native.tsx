@@ -595,21 +595,15 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "ay":
     break;
-    case "glowing_star":
+    case "getWebViewProxy":
     break;
-    case "starFillMask":
+    case "xyYt8A":
     break;
-    case "USE_LIBOPENH264_DECODER":
+    case "ACTIVITIES_HOME":
     break;
-    case "OPENH264":
+    case "HOME":
     break;
-    case "H264":
-    break;
-    case "Romaji":
-    break;
-    case "maj":
-    break;
-    case "NOK":
+    case "HOME_DRAWER_GUILD_CLICKED":
     break;
     case "enforcedHeight":
     break;
@@ -649,7 +643,7 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "te":
     break;
-    case "serializeEnd":
+    case "serializeDate":
     break;
     case "MarkupParserNodeTypeError":
     break;
@@ -727,9 +721,11 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "en":
     break;
-    case "baseQueue":
+    case "localeCompare":
     break;
-    case "addXhrInstrumentationHandler":
+    case "parentLocale":
+    break;
+    case "addPerformanceInstrumentationHandler":
     break;
     case "shopping_bags":
     break;
@@ -771,13 +767,7 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "mit":
     break;
-    case "getAppealSignal":
-    break;
-    case "getAppealSignalDisplayText":
-    break;
-    case "extractMediaSourcesFromComponent":
-    break;
-    case "trackGiftCodeCopy":
+    case "getAppTitle":
     break;
     case "$ZodMap":
     break;
@@ -787,9 +777,11 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "ap":
     break;
-    case "guild_score":
+    case "floralwhite":
     break;
-    case "scorePassword":
+    case "white_check_mark":
+    break;
+    case "markVersionedDismissibleContentAsDismissed":
     break;
     case "ToIntlMathematicalValue":
     break;
@@ -831,11 +823,19 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "rect":
     break;
-    case "isPDF":
+    case "GUILD_SOUNDBOARD_SOUND_PLAY_START":
     break;
-    case "PDF":
+    case "RTC_CONNECTION_PLATFORM":
+    break;
+    case "ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED":
     break;
     case "PX_80":
+    break;
+    case "_":
+    break;
+    case "sourcePid":
+    break;
+    case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
     break;
   }
 };

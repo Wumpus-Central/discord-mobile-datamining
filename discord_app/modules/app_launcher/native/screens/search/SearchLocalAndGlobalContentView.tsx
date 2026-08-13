@@ -45,15 +45,15 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  let obj = hasOptions(11494);
+  let obj = hasOptions(11495);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     obj = { iconSource: null };
     obj[0] = appLauncherIconSource;
-    tmp4 = callback2(onPressSend(11499), obj);
+    tmp4 = callback2(onPressSend(11500), obj);
   }
-  let tmpResult = tmp(11548);
+  let tmpResult = tmp(11549);
   obj = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: tmp(9599).AppLauncherSectionName.SEARCH };
   const commandRowSend = tmpResult.useCommandRowSend(obj);
   hasOptions = commandRowSend.hasOptions;
@@ -84,7 +84,7 @@ function CommandRow(arg0) {
   obj1[6] = onPress;
   obj1[7] = memo;
   obj1[8] = callback;
-  obj1[9] = callback2(onPressSend(11548), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  obj1[9] = callback2(onPressSend(11549), { hasOptions, sending: commandRowSend.sending, onPressSend });
   return callback2(hasOptions(5414).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {

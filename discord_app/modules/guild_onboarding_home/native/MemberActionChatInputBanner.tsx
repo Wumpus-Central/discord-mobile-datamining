@@ -10,7 +10,7 @@ import { Routes } from "ME";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "useMemberActionsForChannel";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11253_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11254_registerAsset.js";
 import { newMemberActionFromServer } from "../GuildOnboardingHomeTypes.tsx";
 import { useMemberActionsForChannel } from "../MemberActionUtils.tsx";
 

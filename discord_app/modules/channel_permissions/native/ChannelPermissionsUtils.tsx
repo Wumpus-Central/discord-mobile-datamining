@@ -22,5 +22,5 @@ export const openChannelMembersActionSheet = function openChannelMembersActionSh
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Manage Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId: id, guildId: guild_id };
-  obj2.openLazy(asyncRequireImpl(11046, dependencyMap.paths), "channel-members-" + id, obj);
+  obj2.openLazy(asyncRequireImpl(11047, dependencyMap.paths), "channel-members-" + id, obj);
 };

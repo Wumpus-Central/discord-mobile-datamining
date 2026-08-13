@@ -89,8 +89,8 @@ export default function GuildProgressActionSheet(guild) {
               base64 = undefined;
               outer1_1(9070).init(outer1_5);
               const obj6 = outer1_1(9070);
-              outer1_0(11897).hideActionSheet(outer1_0.id);
-              const obj7 = outer1_0(11897);
+              outer1_0(11898).hideActionSheet(outer1_0.id);
+              const obj7 = outer1_0(11898);
               const obj1 = { size: null };
               obj1[0] = outer1_10;
               dependencyMap = 1;

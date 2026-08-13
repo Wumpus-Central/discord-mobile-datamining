@@ -5,7 +5,7 @@ import Button from "Button";
 import get_ActivityIndicator from "module_8514";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildPrompts } from "GuildPrompts";
-import jsxProd from "module_12080";
+import jsxProd from "module_12081";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";

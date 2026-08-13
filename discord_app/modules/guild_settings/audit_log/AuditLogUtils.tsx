@@ -1724,7 +1724,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             found = dependencyMap;
             if (set.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1236).t["PyEa+J"];
-            } else if (found(16707).GuildFeedItemTypes.FORUM_POST === newValue) {
+            } else if (found(16698).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1236).t.hCuAb1;
             } else {
               return found(1236).t["UZ+U3A"];

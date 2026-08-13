@@ -68,7 +68,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            let obj1 = outer1_0(14833);
+            let obj1 = outer1_0(14824);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -101,7 +101,7 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(14833);
+    let obj = callback(14824);
     obj.clearCaches();
     const intl = callback(1236).intl;
     const stringResult = intl.string(callback(1236).t["23xR5w"]);

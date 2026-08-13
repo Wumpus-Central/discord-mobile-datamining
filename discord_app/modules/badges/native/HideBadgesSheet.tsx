@@ -34,7 +34,7 @@ function HideBadgeTile(badge) {
     badgeIconHidden = tmp.badgeIconHidden;
   }
   obj[2] = badgeIconHidden;
-  const items2 = [closure_10(onToggle(14006), obj), ];
+  const items2 = [closure_10(onToggle(13997), obj), ];
   const obj1 = { style: tmp.indicator, "aria-hidden": true, children: null };
   if (badge.hidden) {
     const obj2 = { size: "sm", color: null };

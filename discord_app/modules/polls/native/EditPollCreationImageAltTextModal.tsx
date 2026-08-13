@@ -36,7 +36,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   let first;
   const tmp = createCacheKey();
-  const tmp4 = first(11653)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = first(11654)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let obj = React;
   let str;
@@ -58,7 +58,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   const obj1 = { onPress: null, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  obj1[0] = onSave(11655).closeEditPollCreationImageAltTextModal;
+  obj1[0] = onSave(11656).closeEditPollCreationImageAltTextModal;
   const intl = onSave(1236).intl;
   obj1[3] = intl.string(onSave(1236).t.cpT0Cq);
   const obj2 = { source: null };

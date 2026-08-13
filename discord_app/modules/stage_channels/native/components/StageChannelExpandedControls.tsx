@@ -44,7 +44,7 @@ const memoResult = require("noop").memo((channel) => {
   const obj4 = channel(589);
   const stageHasMedia = channel(5176).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(10869).StreamVolumeItem, {}));
+  items5.push(jsx(channel(10871).StreamVolumeItem, {}));
   if (tmp11) {
     obj = { channel: null, disabled: null };
     obj[0] = channel;
@@ -60,11 +60,11 @@ const memoResult = require("noop").memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj[1] = tmp12;
-    items5.push(tmp9(tmp5(10869).ScreenshareButton, obj));
+    items5.push(tmp9(tmp5(10871).ScreenshareButton, obj));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
-  items5.push(jsx(channel(10869).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(10869).DeafenButton, { channel }));
+  items5.push(jsx(channel(10871).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(10871).DeafenButton, { channel }));
   obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
   return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
 });

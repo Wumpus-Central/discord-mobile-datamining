@@ -35,9 +35,9 @@ class VoiceProcessingOptions {
       obj1 = { value: null, onChange: null, title: null, hasIcons: false, children: null };
       obj1[0] = selectedNoiseSuppressionOption;
       obj1[1] = function noiseCancellationChanged(arg0) {
-        callback2(9205).setNoiseCancellation(arg0 === callback(10832).NoiseSuppressionOpt.KRISP);
+        callback2(9205).setNoiseCancellation(arg0 === callback(10834).NoiseSuppressionOpt.KRISP);
         const obj = callback2(9205);
-        callback2(9205).setNoiseSuppression(arg0 === callback(10832).NoiseSuppressionOpt.STANDARD);
+        callback2(9205).setNoiseSuppression(arg0 === callback(10834).NoiseSuppressionOpt.STANDARD);
       };
       intl3 = require("getSystemLocale").intl;
       obj1[2] = intl3.string(require("getSystemLocale").t.t8Qhib);
@@ -106,8 +106,8 @@ class VoiceProcessingOptions {
       obj10[1] = intl2.string(require("getSystemLocale").t.najZCV);
       obj10[2] = selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
       obj10[3] = function onValueChange(arg0) {
-        const NoiseSuppressionOpt = callback(10832).NoiseSuppressionOpt;
-        return callback(10832).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+        const NoiseSuppressionOpt = callback(10834).NoiseSuppressionOpt;
+        return callback(10834).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
       };
       obj9[1] = jsx(require("TableSwitchRow").TableSwitchRow, obj10);
       return jsx(require("UserSettingsVoice").UserSettingsTableRowGroup, obj9);

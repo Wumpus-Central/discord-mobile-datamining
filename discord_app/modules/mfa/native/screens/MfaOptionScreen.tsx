@@ -66,7 +66,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp10Result1) {
     const obj6 = { props: null };
     obj6[0] = screenProps;
-    tmp10Result1 = tmp10(tmp(15072), obj6);
+    tmp10Result1 = tmp10(tmp(15063), obj6);
   }
   items3[1] = tmp10Result1;
   obj5[1] = items3;

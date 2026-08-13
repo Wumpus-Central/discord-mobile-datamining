@@ -3,7 +3,7 @@ import "set";
 import get_ActivityIndicator from "registerAsset";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14055_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14046_registerAsset.js";
 
 let c3;
 let c4;

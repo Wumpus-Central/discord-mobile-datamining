@@ -94,7 +94,7 @@ export default function RedesignAddAvatarModal(route) {
             if (null == base64) {
               let pendingImage;
               if (null != outer1_0) {
-                obj = outer1_0(13972);
+                obj = outer1_0(13963);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
                 obj2 = outer1_0(8323);

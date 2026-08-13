@@ -31,8 +31,8 @@ function FamilyCenter() {
   const tmp = createCacheKey();
   let obj = familyCenterInitialized(7381);
   const acceptedRequestsCount = obj.useAcceptedRequestsCount();
-  const tmp6 = isLoading(14191)();
-  const selectedTab = isLoading(14192)().selectedTab;
+  const tmp6 = isLoading(14182)();
+  const selectedTab = isLoading(14183)().selectedTab;
   let obj1 = familyCenterInitialized(7383);
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(647);
@@ -53,13 +53,13 @@ function FamilyCenter() {
   const intl = familyCenterInitialized(1236).intl;
   obj[0] = intl.string(isLoading(2303).bdBmqy);
   obj[1] = FamilyCenterSubPages.ACTIVITY;
-  obj[2] = callback2(isLoading(14193), {});
+  obj[2] = callback2(isLoading(14184), {});
   const items1 = [obj, ];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1236).intl;
   obj1[0] = intl2.string(isLoading(2303)["gVWG+6"]);
   obj1[1] = FamilyCenterSubPages.REQUESTS;
-  obj1[2] = callback2(isLoading(14233), {});
+  obj1[2] = callback2(isLoading(14224), {});
   items1[1] = obj1;
   obj[0] = items1;
   obj[1] = function onPageChange(arg0) {

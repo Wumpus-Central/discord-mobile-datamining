@@ -17,7 +17,7 @@ import { registerAsset } from "../../../../../_runtime/09172_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/09237_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/09782_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10069_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14855_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14846_registerAsset.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -223,7 +223,7 @@ function ExampleToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   const importDefault = tmp[1];
-  let obj = first(13484);
+  let obj = first(13485);
   obj = { on: null, off: null };
   obj = { text: "Unfollow", icon: registerAsset };
   obj[0] = obj;
@@ -242,7 +242,7 @@ function ExampleIconToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   const importDefault = tmp[1];
-  let obj = first(13484);
+  let obj = first(13485);
   obj = { on: null, off: null };
   obj = { variant: "destructive", accessibilityLabel: "Mute", icon: registerAsset };
   obj[0] = obj;

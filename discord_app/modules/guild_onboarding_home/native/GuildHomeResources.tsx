@@ -8,7 +8,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "transitionTo";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/15764_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15755_registerAsset.js";
 import { useResourceChannels } from "../useResourceChannels.tsx";
 
 let c10;
@@ -48,9 +48,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(11455);
+  let tmp2Result = tmp2(11456);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(15763)(firstResult);
+  const tmp11 = stateFromStores(15754)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -146,7 +146,7 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(11455).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(11456).ForumPostMediaThumbnail, obj9);
             }
           }
         }

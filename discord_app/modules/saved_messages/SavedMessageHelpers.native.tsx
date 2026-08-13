@@ -69,7 +69,7 @@ function _addOrUpdateSavedMessage() {
                   }
                   obj10 = displayToast(8423);
                 }
-                let obj3 = displayToast(11156);
+                let obj3 = displayToast(11157);
                 BookmarkIcon = 2;
                 savedMessage = 1;
                 obj3 = { value: null, done: false };
@@ -149,7 +149,7 @@ function _addOrUpdateSavedMessage() {
                   if (null != lib.dueAt) {
                     BookmarkIcon = displayToast(4306).ClockIcon;
                   } else {
-                    BookmarkIcon = displayToast(11158).BookmarkIcon;
+                    BookmarkIcon = displayToast(11159).BookmarkIcon;
                   }
                   obj = lib(4062);
                   const obj4 = { key: "SAVED_MESSAGE_CREATE_SUCCESS", IconComponent: null, content: null };

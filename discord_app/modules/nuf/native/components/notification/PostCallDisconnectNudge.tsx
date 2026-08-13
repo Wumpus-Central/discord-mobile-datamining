@@ -34,10 +34,10 @@ export default function PostCallDisconnectNudge(arg0) {
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(14744);
+  let obj = stateFromStores1(14735);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(11838).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(11838);
+  const canSeePushNotificationNudge = stateFromStores(11839).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(11839);
   const items = [updateVoiceState];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
   const obj3 = stateFromStores(589);

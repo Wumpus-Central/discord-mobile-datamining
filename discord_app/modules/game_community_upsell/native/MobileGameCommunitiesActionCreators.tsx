@@ -66,7 +66,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               obj[1] = callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items });
               let value = HTTP.get(obj);
               let obj2 = callback(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F118540 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F118408 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -136,7 +136,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   obj[1] = callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items });
                   let value = HTTP.get(obj);
                   let obj2 = callback(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F118540 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F118408 */ function() { ... });
                 });
               }
             }).catch(() => {

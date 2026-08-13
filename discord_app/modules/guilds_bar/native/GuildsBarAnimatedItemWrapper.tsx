@@ -35,7 +35,7 @@ class UnreadIndicator {
     tmp5 = id;
     token = obj.useToken(require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE);
     c4 = token;
-    tmp7 = f61906(c7());
+    tmp7 = f61886(c7());
     GUILD_BAR_ITEM_SIZE = tmp7;
     tmp8 = MOUNTED === require("wrapChildrenDefault").TransitionStates.MOUNTED;
     c6 = tmp8;
@@ -90,7 +90,7 @@ class UnreadIndicator {
     obj[5] = token;
     fn.__closure = obj;
     fn.__workletHash = 404454683979;
-    fn.__initData = f61907;
+    fn.__initData = f61887;
     items1 = [, , , ];
     items1[0] = tmp8;
     items1[1] = sharedId;
@@ -128,7 +128,7 @@ class UnreadIndicator {
     obj1[5] = require("module_4083").runOnJS;
     fn2.__closure = obj1;
     fn2.__workletHash = 10632665703864;
-    fn2.__initData = f61907;
+    fn2.__initData = f61887;
     items2 = [, ];
     items2[0] = MOUNTED;
     items2[1] = cleanUp;

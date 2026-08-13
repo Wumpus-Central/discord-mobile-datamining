@@ -27,8 +27,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
         if (obj.isAndroid()) {
-          const result = callback(13873).handleVoiceMessageDeleted(id);
-          const obj2 = callback(13873);
+          const result = callback(13864).handleVoiceMessageDeleted(id);
+          const obj2 = callback(13864);
         } else {
           const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
@@ -40,8 +40,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       if (obj.isAndroid()) {
-        callback(13873).pauseCurrentPlayer(false);
-        const obj2 = callback(13873);
+        callback(13864).pauseCurrentPlayer(false);
+        const obj2 = callback(13864);
       } else {
         const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {

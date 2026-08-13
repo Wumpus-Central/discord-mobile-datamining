@@ -62,8 +62,8 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        callback2(11294).close();
-        const obj = callback2(11294);
+        callback2(11295).close();
+        const obj = callback2(11295);
         callback2(9070).close();
         const obj2 = callback2(9070);
         const result = callback(4061).showTransferOwnershipSuccess();

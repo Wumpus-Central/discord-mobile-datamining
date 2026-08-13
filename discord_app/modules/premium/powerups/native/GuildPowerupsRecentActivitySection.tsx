@@ -44,9 +44,9 @@ function GuildPowerupsRecentActivityRow(row) {
     if ("gave" === phase) {
       let BoostGemSlashIcon = tmp(7740).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12003).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12004).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12005).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12006).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp4.boostRowContainer;

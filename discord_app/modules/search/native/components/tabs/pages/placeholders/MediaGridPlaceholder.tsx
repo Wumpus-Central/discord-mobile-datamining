@@ -79,9 +79,9 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
           style: _undefined.row,
           children: arr.map((arg0, arg1) => {
             let obj = { height: closure_0, width: closure_0, style: null };
-            const tmp = numRows(15813);
+            const tmp = numRows(15804);
             obj = { itemIndex: closure_0 * outer2_5 + arg1, numItems: outer1_3.length, numColumns: outer2_5, spacing: outer2_6 };
-            obj[2] = outer2_0(11768).getMediaGridItemStyles(obj);
+            obj[2] = outer2_0(11769).getMediaGridItemStyles(obj);
             return outer2_7(tmp, obj, arg1);
           })
         }),

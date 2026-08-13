@@ -391,7 +391,7 @@ export default function ICYMIJoinGuildsScreen() {
             const guildChannelScores = obj7.getGuildChannelScores();
             const recommendedGuilds = v0(8962).getRecommendedGuilds();
             const obj9 = v0(8962);
-            v0(4550).popWithKey(outer1_0(15664).ICYMI_INFO_MODAL_KEY);
+            v0(4550).popWithKey(outer1_0(15655).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = undefined;
@@ -427,7 +427,7 @@ export default function ICYMIJoinGuildsScreen() {
           const obj19 = v0(8962);
           const recommendedGuilds1 = v0(8962).getRecommendedGuilds();
           const obj20 = v0(8962);
-          v0(4550).popWithKey(outer1_0(15664).ICYMI_INFO_MODAL_KEY);
+          v0(4550).popWithKey(outer1_0(15655).ICYMI_INFO_MODAL_KEY);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

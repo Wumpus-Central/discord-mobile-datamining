@@ -28,8 +28,8 @@ export default function UserProfileMutuals(user) {
   let obj = user(8837);
   const userProfileAnalyticsContext = obj.useUserProfileAnalyticsContext();
   ({ context: c2, trackUserProfileAction: c3 } = userProfileAnalyticsContext);
-  ({ mutualFriends, mutualGuilds } = guildId(12023)(user));
-  if (guildId(12337)(user)) {
+  ({ mutualFriends, mutualGuilds } = guildId(12024)(user));
+  if (guildId(12338)(user)) {
     let tmp7 = null != mutualFriends;
     if (tmp7) {
       tmp7 = mutualFriends.length > 0;
@@ -82,15 +82,15 @@ export default function UserProfileMutuals(user) {
       obj1[1] = mapped.length;
       obj1[2] = mapped.map((username) => username.username);
       obj1[3] = mapped.map((id) => {
-        const obj = { user: id, size: null, guildId: "e" };
+        const obj = { user: id, size: null, guildId: "Array" };
         obj[1] = user(_undefined[16]).AvatarSizes.SIZE_16;
         return callback(user(_undefined[16]).Avatar, obj, id.id);
       });
-      const items = [callback(tmp2(12370).AvatarPile, obj1), ];
+      const items = [callback(tmp2(12371).AvatarPile, obj1), ];
       let obj2 = { variant: null, color: null, children: null };
       obj2[0] = c8;
       obj2[1] = c9;
-      obj2[2] = tmp5(12030)(mutualFriends.length);
+      obj2[2] = tmp5(12031)(mutualFriends.length);
       items[1] = callback(tmp2(4338).Text, obj2);
       obj[3] = items;
       tmp9Result = tmp9(tmp2(4887).PressableOpacity, obj);
@@ -151,13 +151,13 @@ export default function UserProfileMutuals(user) {
           obj[1] = user(_undefined[20]).GuildIconSizes.XXSMALL;
           return callback(guildId(_undefined[20]), obj, guild.id);
         });
-        tmp21 = callback(tmp2(12037).GuildIconPile, obj5);
+        tmp21 = callback(tmp2(12038).GuildIconPile, obj5);
       }
       const items2 = [tmp21, ];
       const obj6 = { variant: null, color: null, children: null };
       obj6[0] = c8;
       obj6[1] = c9;
-      obj6[2] = tmp5(12024)(mutualGuilds.length);
+      obj6[2] = tmp5(12025)(mutualGuilds.length);
       items2[1] = callback(tmp2(4338).Text, obj6);
       obj4[3] = items2;
       tmp9Result = tmp9(tmp2(4887).PressableOpacity, obj4);
@@ -168,5 +168,5 @@ export default function UserProfileMutuals(user) {
   } else {
     return null;
   }
-  const tmp6 = guildId(12023)(user);
+  const tmp6 = guildId(12024)(user);
 };

@@ -70,7 +70,7 @@ export default function BackupScreen(finish) {
       outer1_1(true);
       let v0 = 1;
       const obj1 = { mfaType: "backup", data: null };
-      obj1[1] = lib;
+      obj1[1] = lib.replace(/-/g, "");
       yield lib(obj1);
       if (1 === tmp7) {
         v0 = 0;

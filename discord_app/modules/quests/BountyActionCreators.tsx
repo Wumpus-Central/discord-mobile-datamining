@@ -57,10 +57,13 @@ function _fetchBountiesAndDispatch() {
               let tmpResult = tmp(tmp2[6]);
               const bountyFromServerResult = tmpResult.bountyFromServer(creative.creative.creative_content);
               tmpResult = tmp(tmp2[7]);
-              const obj = { fetchedAt: null, requestId: null, adCreativeId: null };
+              let obj = { fetchedAt: null, requestId: null, creative: null };
               obj[0] = closure_1;
               obj[1] = request_id.request_id;
-              obj[2] = bountyFromServerResult.id;
+              obj = { type: null, bounty: null };
+              obj[0] = tmp(tmp2[5]).AdCreativeType.BOUNTY;
+              obj[1] = bountyFromServerResult;
+              obj[2] = obj;
               const result = map.set(bountyFromServerResult.id, tmpResult.questAdDecisionFromAdDecision(creative, obj));
               const items = [bountyFromServerResult];
               return items;
@@ -130,7 +133,7 @@ function _fetchQuestHomeBounties() {
                 let uuid = tmp2;
                 let obj5 = outer1_0(6971);
                 uuid = yield obj5.getSession();
-                const uuid2 = outer1_0(7225).getOrRefreshAdSession();
+                const uuid2 = outer1_0(7226).getOrRefreshAdSession();
                 const HTTP = outer1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
                 obj3[0] = outer1_6.QUESTS_GET_DECISIONS;

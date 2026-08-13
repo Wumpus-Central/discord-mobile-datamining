@@ -51,7 +51,7 @@ class ChannelCallModal {
   constructor(arg0) {
     channel = global.channel;
     obj = { channelId: channel.id, guildId: channel.guild_id };
-    return jsx(f49514, obj);
+    return jsx(f49510, obj);
   }
 }
 let c4 = importAllResult;
@@ -67,8 +67,8 @@ let closure_18 = importAllResult.memo((arg0) => {
     if (null != first) {
       outer1_1(outer1_2[13]).initialize(tmp);
       return () => {
-        callback2(10726).terminate();
-        const obj = callback2(10726);
+        callback2(10728).terminate();
+        const obj = callback2(10728);
         callback2(7793).setHidden(false);
         const obj2 = callback2(7793);
         if (!obj3.isModalOpen(closure_31)) {

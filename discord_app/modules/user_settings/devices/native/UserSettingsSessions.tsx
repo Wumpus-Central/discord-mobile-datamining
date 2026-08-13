@@ -7,9 +7,9 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/10917_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/11693_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14271_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10919_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11694_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14262_registerAsset.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -29,7 +29,7 @@ function UserSettingsSessions() {
   let otherSessions;
   let tmp7;
   const tmp = createCacheKey();
-  let obj = otherSessions(14056);
+  let obj = otherSessions(14047);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   let obj1 = otherSessions(589);
@@ -151,14 +151,14 @@ function SessionInfo(session) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAsset;
-              obj[2] = session(14272).VrHeadsetIcon;
+              obj[2] = session(14263).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAsset;
-              obj[2] = session(12250).ScreenIcon;
+              obj[2] = session(12251).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
             }
@@ -174,8 +174,8 @@ function SessionInfo(session) {
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14056).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14056);
+        formatDateResult = tmp9(14047).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14047);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1370).isNotNullish);
@@ -256,7 +256,7 @@ function SessionInfo(session) {
   const intl = session(1236).intl;
   obj16[0] = intl.string(session(1236).t.cDHCNY);
   obj16[1] = registerAsset;
-  obj16[2] = session(12250).ScreenIcon;
+  obj16[2] = session(12251).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
   obj = obj16;

@@ -5,6 +5,6 @@ const CustomColorPicker = "CustomColorPicker";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/color_picker/native/showCustomColorPickerActionSheet.tsx");
 
 export default function showCustomColorPickerActionSheet(arg0, arg1) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(13975, dependencyMap.paths), CustomColorPicker, arg0, arg1);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(13966, dependencyMap.paths), CustomColorPicker, arg0, arg1);
 };
 export const CUSTOM_COLOR_PICKER_KEY = "CustomColorPicker";

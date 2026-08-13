@@ -49,9 +49,9 @@ export default function _default(children) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp2Result = tmp2(12902);
+    let tmp2Result = tmp2(12903);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(12903);
+    tmp2Result = tmp2(12904);
   } else if (tmp11.TIER_2 === premiumType) {
     tmp2Result = tmp2(7435);
   }

@@ -114,7 +114,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   let dependencyMap;
   let ref1;
   ({ analyticsLocations, paymentGateway } = skuId);
-  let obj = skuId(12233);
+  let obj = skuId(12234);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
@@ -168,7 +168,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj1[2] = callback3(tmp(4755).Button, obj2);
     callback3(tmp(1297).EmptyState, obj1);
   } else {
-    callback3(initialVariantIndex(12237), {});
+    callback3(initialVariantIndex(12238), {});
   }
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {

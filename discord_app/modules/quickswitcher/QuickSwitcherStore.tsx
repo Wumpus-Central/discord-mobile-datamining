@@ -586,7 +586,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
         if (queryMode === tmp7(7353).AutocompleterResultTypes.VOICE_CHANNEL) {
           store.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
-          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "Array" }, true);
+          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "a" }, true);
         }
         tmp7 = require;
       }

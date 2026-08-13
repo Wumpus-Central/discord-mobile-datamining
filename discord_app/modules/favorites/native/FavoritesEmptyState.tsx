@@ -51,7 +51,7 @@ export default function FavoritesEmptyState() {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1236).intl;
     obj3[1] = intl4.string(tmp9(3047)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(12170).PlusMediumIcon, {});
+    obj3[2] = tmp8(tmp2(12171).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {

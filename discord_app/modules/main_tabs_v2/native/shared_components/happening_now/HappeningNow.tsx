@@ -10,6 +10,7 @@ import createCacheKey from "createCacheKey";
 import { Gesture } from "LegacyBaseButton";
 import { LegacyBaseButton } from "../../../../../../_runtime/05467_LegacyBaseButton.js";
 import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
+import { HappeningNowCardUnifiedVC } from "HappeningNowCardUnifiedVC.tsx";
 
 let HAPPENING_NOW_PANELS_CONTAINER_PADDING;
 let c5;
@@ -22,8 +23,14 @@ function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
       kind = kind.kind;
+      let obj = {};
+      const merged = Object.assign(kind);
+      const merged1 = Object.assign(fullWidth);
+      obj.cardKey = keyExtractor(kind);
+      return jsx(HappeningNowCardUnifiedVC, {});
     }
   }
+  obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
@@ -72,7 +79,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: true, isFocused: true };
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "Array", isFocused: "isArray" };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

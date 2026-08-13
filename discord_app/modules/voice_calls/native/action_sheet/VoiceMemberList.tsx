@@ -213,8 +213,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = registerAsset;
-      obj[3] = tmp4(12801).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(12801).CircularIconButton, obj);
+      obj[3] = tmp4(12802).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(12802).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = function onPress() {

@@ -31,7 +31,7 @@ export default {
     const obj2 = ACTION_SHEET_HEIGHT_HALF;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(_asyncRequireImpl(16441, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(_asyncRequireImpl(16432, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let c1;

@@ -14,8 +14,8 @@ const require = arg1;
 class BaseChannelSubtitle {
   constructor(arg0) {
     ({ mode, subtitle } = global);
-    tmp = f52407;
-    if (mode !== f52407.UNREAD_IMPORTANT) {
+    tmp = f52401;
+    if (mode !== f52401.UNREAD_IMPORTANT) {
       if (mode !== tmp.RELEVANT) {
         if (mode !== tmp.SELECTED) {
           MUTED = tmp.MUTED;
@@ -124,7 +124,7 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11812);
+      let AnimatedPressableHighlight = hideIcon(11813);
     } else {
       AnimatedPressableHighlight = mode(8712).AnimatedPressableHighlight;
     }

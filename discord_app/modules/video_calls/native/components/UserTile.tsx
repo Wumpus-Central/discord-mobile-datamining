@@ -15,9 +15,9 @@ import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import { registerAsset } from "../../../../../_runtime/08046_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10684_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10685_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10686_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10687_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10688_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_14;

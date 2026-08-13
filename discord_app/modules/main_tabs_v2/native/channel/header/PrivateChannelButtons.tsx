@@ -152,7 +152,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     tmp14 = callParticipants.length > 0;
   }
   c10 = tmp14;
-  const tmp15 = screenIndex(12607)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp15 = screenIndex(12608)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp15.application;
   const items6 = [stateFromStores];
   callback = obj7.useCallback(() => {
@@ -261,7 +261,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     };
     const intl5 = tmp4(1236).intl;
     obj[2] = intl5.string(tmp4(1236).t["+KSnWX"]);
-    obj[3] = callback(tmp4(12301).WindowLaunchIcon, { size: "sm" });
+    obj[3] = callback(tmp4(12302).WindowLaunchIcon, { size: "sm" });
     let tmp23Result = callback(tmp4(4887).PressableOpacity, obj);
   } else if (tmp15.isAppDM) {
     let tmp39 = null;

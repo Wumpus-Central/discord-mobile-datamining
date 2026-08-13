@@ -38,11 +38,11 @@ function FavoritesGuildActionSheet() {
       const intl2 = tmp4(1236).intl;
       obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
       const obj3 = { IconComponent: null };
-      obj3[0] = tmp4(11595).ArrowsUpDownIcon;
+      obj3[0] = tmp4(11596).ArrowsUpDownIcon;
       obj2[1] = tmp7(tmp4(5806).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
         tmp3(4310).hideActionSheet(closure_6);
-        tmp3(15347)();
+        tmp3(15338)();
       };
       obj1[1] = tmp7(tmp4(5806).ActionSheetRow, obj2);
       tmp7Result = tmp7(tmp4(5806).ActionSheetRow.Group, obj1);

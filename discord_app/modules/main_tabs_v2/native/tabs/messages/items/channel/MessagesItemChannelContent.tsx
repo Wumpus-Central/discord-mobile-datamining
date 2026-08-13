@@ -173,7 +173,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   if (tmp13) {
     tmp13 = !tmp3(8985)(channel.id);
   }
-  tmpResult = tmp(15247);
+  tmpResult = tmp(15238);
   let tmp3Result = tmp3(11);
   let id = stateFromStores;
   if (stateFromStores == null) {
@@ -332,7 +332,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
       const obj18 = { wavePressed: null, hasNameplate: null };
       obj18[0] = tmp18.wavePressed;
       obj18[1] = hasNameplate;
-      tmp21Result3 = tmp21(tmp3(15250), obj18);
+      tmp21Result3 = tmp21(tmp3(15241), obj18);
     }
     const obj19 = { children: null };
     items9[1] = tmp21Result3;

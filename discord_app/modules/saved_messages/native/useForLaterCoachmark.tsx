@@ -5,7 +5,7 @@ import { Image } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12635_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12636_registerAsset.js";
 
 const require = arg1;
 function CoachmarkImg() {

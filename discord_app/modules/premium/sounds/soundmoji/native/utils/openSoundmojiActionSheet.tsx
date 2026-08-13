@@ -5,7 +5,7 @@ const result = require("SoundmojiActionSheet").fileFinishedImporting("modules/pr
 
 export default function openSoundmojiActionSheet(arg0) {
   if (obj.getSoundmojiRenderingExperiment({ location: "openSoundmojiActionSheet" })) {
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11391, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11392, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
     const obj2 = ACTION_SHEET_HEIGHT_HALF;
   }
 };

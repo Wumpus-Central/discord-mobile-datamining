@@ -102,7 +102,7 @@ prototype["getState"] = function getState() {
     obj[0] = closure_3;
     obj[1] = closure_4;
   } else {
-    obj = { theme: "Array", customTheme: "ct" };
+    obj = { theme: "isArray", customTheme: "accessibilityRole" };
   }
   return obj;
 };

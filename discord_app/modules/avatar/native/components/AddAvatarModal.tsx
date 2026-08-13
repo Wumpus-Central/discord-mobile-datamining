@@ -79,7 +79,7 @@ function AddAvatarScreen() {
             if (null == base64) {
               let pendingImage;
               if (null != outer1_0) {
-                obj = outer1_0(13972);
+                obj = outer1_0(13963);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
                 obj2 = outer1_0(8323);
@@ -128,9 +128,9 @@ function AddAvatarScreen() {
   let pendingImage;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
   if (null != first) {
-    let tmp9Result = tmp9(13972);
+    let tmp9Result = tmp9(13963);
     obj = { imageUri: null, description: null };
-    obj[0] = tmp9(16592).DEFAULT_AVATARS[first];
+    obj[0] = tmp9(16583).DEFAULT_AVATARS[first];
     tmp9Result = tmp9(8323);
     obj[1] = tmp9Result.generateAvatarDescription();
     pendingImage = tmp9Result.createPendingImage(obj);
@@ -164,7 +164,7 @@ function AddAvatarScreen() {
   obj2[0] = items2;
   const items3 = [closure_10(View, obj2), , ];
   const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(imageUri);
-  items3[1] = callback(first(16601), {
+  items3[1] = callback(first(16592), {
     avatarSource: useDominantRGBFromImage.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -188,7 +188,7 @@ function AddAvatarScreen() {
   obj6[1] = callback(Button.LegacyText, obj7);
   items3[2] = callback(View, obj6);
   obj1[1] = items3;
-  const items4 = [closure_10(View, obj1), callback(first(16592), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
+  const items4 = [closure_10(View, obj1), callback(first(16583), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = tmp9(1236).intl;

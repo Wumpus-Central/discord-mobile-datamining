@@ -49,7 +49,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   if (powerup.type === constants.LEVEL) {
     obj = { style: null };
     obj[0] = tmp.gemContainer;
-    let tmp15 = callback(tmp2(11944), obj);
+    let tmp15 = callback(tmp2(11945), obj);
     let tmp14 = callback;
   } else if (tmp10 === closure_7) {
     obj = { style: null, children: null };
@@ -66,7 +66,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
     obj3[0] = str;
     obj3[1] = tmp.image;
     tmp14 = callback;
-    tmp15 = callback(tmp2(11946), obj3);
+    tmp15 = callback(tmp2(11947), obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp15, ];
@@ -163,7 +163,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   ({ disabled, reason } = useCanGuildPowerupBeToggled(guildId, powerup, isPowerupActive));
   const tmp8 = useCanGuildPowerupBeToggled(guildId, powerup, isPowerupActive);
   ({ onActivate: c1, isLoading } = useGuildPowerupOnActivate(guildId, powerup));
-  dependencyMap = tmp2(11960)(guildId, powerup);
+  dependencyMap = tmp2(11961)(guildId, powerup);
   if (tmp4) {
     let tmp14 = !showConfigureButton;
     const hasItem = set.has(powerup.skuId);
@@ -196,7 +196,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     if (tmp21) {
       const obj1 = { text: null };
       obj1[0] = reason;
-      tmp21 = callback(tmp2(11966), obj1);
+      tmp21 = callback(tmp2(11967), obj1);
     }
     items[1] = tmp21;
     if (showConfigureButton) {

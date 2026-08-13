@@ -28,7 +28,7 @@ function ShopThisLookCard(skuId) {
   let getFetchState;
   let callback;
   let wishlistButton = createCacheKey();
-  let obj = skuId(12233);
+  let obj = skuId(12234);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
@@ -182,8 +182,8 @@ export default function ShopThisLookActionSheet(arg0) {
   let obj = _useEquippedCollectibleSkuIds;
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12547)(obj));
-  const tmp2 = analyticsLocations(12547)(obj);
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12548)(obj));
+  const tmp2 = analyticsLocations(12548)(obj);
   analyticsLocations = analyticsLocations(5768)(analyticsLocations(5788).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = React.useCallback((initialProductSkuId) => {

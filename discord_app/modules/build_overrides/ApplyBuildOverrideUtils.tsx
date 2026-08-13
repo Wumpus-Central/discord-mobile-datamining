@@ -314,7 +314,7 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-const f87245 = function() {
+const f87225 = function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

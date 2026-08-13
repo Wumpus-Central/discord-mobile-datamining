@@ -15,7 +15,7 @@ const require = arg1;
 function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
   let obj = { Illustration: null, title: null, body: null, children: null };
-  obj[0] = navigation(16678).VerifyPhone;
+  obj[0] = navigation(16669).VerifyPhone;
   const intl = navigation(1236).intl;
   obj[1] = intl.string(navigation(1236).t.KLnLIP);
   const intl2 = navigation(1236).intl;
@@ -115,7 +115,7 @@ export default function VerificationModal() {
       return callback3(callback(6051).HeaderActionButton, obj);
     };
     obj3[6] = function render() {
-      return callback3(callback2(16682), {});
+      return callback3(callback2(16673), {});
     };
     obj[constants.OVERVIEW] = obj3;
     let obj5 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
@@ -179,9 +179,9 @@ export default function VerificationModal() {
           onVerified(arg0) {
             let arr = arg0;
             let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-            let closure_2 = outer1_3(/* F120741 */ function() { ... });
+            let closure_2 = outer1_3(/* F120609 */ function() { ... });
             obj[1] = () => { ... };
-            let closure_1 = outer1_3(/* F120743 */ function() { ... });
+            let closure_1 = outer1_3(/* F120611 */ function() { ... });
             obj[2] = () => { ... };
             arr = arr.push(outer1_10.VERIFY_PASSWORD, obj);
           }

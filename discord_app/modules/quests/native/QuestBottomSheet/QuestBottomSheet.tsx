@@ -89,9 +89,9 @@ function useEnrolledQuestContentProps(quest) {
   let dependencyMap;
   let callback;
   let importDefaultResult;
-  let obj = quest(11221);
+  let obj = quest(11222);
   dependencyMap = obj.useTrackQuestContentClickedWithImpression();
-  let obj1 = quest(10449);
+  let obj1 = quest(10451);
   callback = obj1.useQuestImpressionId();
   let obj2 = quest(10420);
   const questTaskDetails = obj2.useQuestTaskDetails(quest);
@@ -121,7 +121,7 @@ function useEnrolledQuestContentProps(quest) {
   }
   const userStatus = quest.userStatus;
   let completedAt;
-  const hasWatchVideoOnMobileTasks = quest(14407).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = quest(14398).useHasWatchVideoOnMobileTasks(quest.config);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
@@ -138,7 +138,7 @@ function useEnrolledQuestContentProps(quest) {
   }, items);
   tmpResult = tmp(10420);
   const questTaskDetails1 = tmpResult.useQuestTaskDetails(quest);
-  const obj6 = quest(14407);
+  const obj6 = quest(14398);
   isQuestProgressing1 = quest(10420).useIsQuestProgressing(quest);
   const tmpResult1 = quest(10420);
   let tmp5Result = tmp5(quest(10420).useTaskPlatformScreen(quest, questTaskDetails1), 3);
@@ -211,9 +211,9 @@ function useEnrolledQuestContentProps(quest) {
     return items;
   }, items3);
   tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5205).TaskPlatformScreen.CONSOLE || first1;
-  hasWatchVideoOnMobileTasks1 = quest(14407).useHasWatchVideoOnMobileTasks(quest.config);
-  const tmpResult3 = quest(14407);
-  isMobileActivityQuest = quest(14407).useMobileActivityQuest(quest).isMobileActivityQuest;
+  hasWatchVideoOnMobileTasks1 = quest(14398).useHasWatchVideoOnMobileTasks(quest.config);
+  const tmpResult3 = quest(14398);
+  isMobileActivityQuest = quest(14398).useMobileActivityQuest(quest).isMobileActivityQuest;
   const items4 = [tmp5Result[1], memo3, memo1, memo2, hasWatchVideoOnMobileTasks1, isMobileActivityQuest];
   const memo4 = obj8.useMemo(() => {
     let hasItem = 1 === _undefined2.length;
@@ -253,7 +253,7 @@ function useEnrolledQuestContentProps(quest) {
   }
   obj[1] = onNext;
   items5[1] = obj;
-  const tmpResult4 = quest(14407);
+  const tmpResult4 = quest(14398);
   questLogger = undefined;
   dependencyMap = undefined;
   callback = undefined;

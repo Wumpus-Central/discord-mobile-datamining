@@ -21,7 +21,7 @@ const fn = function u(get) {
     obj.runOnUI(fn)(get, arg1);
   }
 };
-let obj = { runOnUI: require("module_4083").runOnUI, updateSharedValueIfChanged: "Array" };
+let obj = { runOnUI: require("module_4083").runOnUI, updateSharedValueIfChanged: "a" };
 fn.__closure = obj;
 fn.__workletHash = 6367316923455;
 fn.__initData = { code: "function updateSharedValueIfChangedNativeTsx2(sharedValue,value){const{runOnUI,updateSharedValueIfChanged}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueIfChanged)(sharedValue,value);}else{const _sharedValue=sharedValue.get();const newValue={..._sharedValue,...value};for(const key in newValue){if(_sharedValue[key]!==newValue[key]){sharedValue.set(newValue);break;}}}}" };
@@ -47,7 +47,7 @@ fn2 = function u(get) {
     const obj = fn2(4083);
   }
 };
-obj = { runOnUI: require("module_4083").runOnUI, updateSharedValueArrayIfChanged: "Array" };
+obj = { runOnUI: require("module_4083").runOnUI, updateSharedValueArrayIfChanged: "a" };
 fn2.__closure = obj;
 fn2.__workletHash = 10682766507787;
 fn2.__initData = { code: "function updateSharedValueIfChangedNativeTsx4(sharedValue,value){const{runOnUI,updateSharedValueArrayIfChanged}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueArrayIfChanged)(sharedValue,value);}else{const _sharedValue=sharedValue.get();if(_sharedValue.length!==value.length){sharedValue.set(value);}for(let i=0;i<value.length;i++){if(_sharedValue[i]!==value[i]){sharedValue.set(value);}}}}" };

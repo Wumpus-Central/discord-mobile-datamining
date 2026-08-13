@@ -48,12 +48,12 @@ function useComputedImagesForActivity(activity, getIconURL) {
         obj1[0] = guildIconURL;
         tmp14 = obj1;
       }
-      const obj2 = { largeImage: null, smallImage: "Array" };
+      const obj2 = { largeImage: null, smallImage: "a" };
       obj2[0] = tmp14;
       obj8 = obj2;
       const tmp15Result = tmp15(9704);
     } else if (isOnXbox(activity)) {
-      const obj3 = { largeImage: null, smallImage: "Array" };
+      const obj3 = { largeImage: null, smallImage: "a" };
       const obj4 = { src: null, alt: null };
       let tmp2Result = tmp2(5041);
       obj4[0] = tmp2Result.get(constants.XBOX).icon.customPNG;
@@ -63,8 +63,8 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj8 = obj3;
     } else {
       if (null == smallImage) {
-        if (tmp2(12346)(activity)) {
-          const obj5 = { largeImage: null, smallImage: "Array" };
+        if (tmp2(12347)(activity)) {
+          const obj5 = { largeImage: null, smallImage: "a" };
           const obj6 = { src: null, alt: null };
           tmp2Result = tmp2(5041);
           obj6[0] = tmp2Result.get(constants.PLAYSTATION).icon.lightPNG;
@@ -88,7 +88,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
           obj7[1] = smallImage;
           obj8 = obj7;
         } else {
-          obj8 = { largeImage: null, smallImage: "Array" };
+          obj8 = { largeImage: null, smallImage: "a" };
           obj8[0] = smallImage;
         }
       } else {
@@ -211,7 +211,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "Array", smallImage: "ct" };
+    return { largeImage: "isArray", smallImage: "accessibilityRole" };
   } else {
     let large_image;
     if (activity != null) {
@@ -376,20 +376,20 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
       obj[1] = tmp3.smallImage;
       let obj4 = obj;
     } else if (null != tmp7) {
-      obj1 = { largeImage: null, smallImage: "Array" };
+      obj1 = { largeImage: null, smallImage: "a" };
       obj1[0] = tmp7;
       obj4 = obj1;
     } else {
       if (null != coverURL) {
         if (showCoverImage) {
-          const obj2 = { largeImage: null, smallImage: "Array" };
+          const obj2 = { largeImage: null, smallImage: "a" };
           const obj3 = { src: null };
           obj3[0] = coverURL;
           obj2[0] = obj3;
           obj4 = obj2;
         }
       }
-      obj4 = { largeImage: null, smallImage: "Array" };
+      obj4 = { largeImage: null, smallImage: "a" };
       obj4[0] = useComputedImagesForActivity(activity, obj).largeImage;
     }
     const obj5 = { activity: null, application: null, largeImageSrc: null, trackingSource: null };

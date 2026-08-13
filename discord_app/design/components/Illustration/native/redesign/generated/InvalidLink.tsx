@@ -15,7 +15,7 @@ export const getInvalidLinkSource = function getInvalidLinkSource(theme) {
       return callback(10393);
     },
     darker() {
-      return callback(11246);
+      return callback(11247);
     },
     light() {
       return callback(10394);
@@ -30,7 +30,7 @@ export const useInvalidLinkSource = function useInvalidLinkSource() {
       return callback(10393);
     },
     darker() {
-      return callback(11246);
+      return callback(11247);
     },
     light() {
       return callback(10394);
@@ -45,7 +45,7 @@ export const InvalidLink = function InvalidLink(arg0) {
       return callback(10393);
     },
     darker() {
-      return callback(11246);
+      return callback(11247);
     },
     light() {
       return callback(10394);

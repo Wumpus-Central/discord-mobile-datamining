@@ -45,7 +45,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(3995);
   tmp6 = GuildMemberFlags;
-  obj[3] = jsx(guildId(11888).ChatXIcon, {});
+  obj[3] = jsx(guildId(11889).ChatXIcon, {});
   obj[4] = stringResult1;
   return jsx(ChatInputGuard, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

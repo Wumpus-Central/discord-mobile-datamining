@@ -8,7 +8,7 @@ import jsxProd from "preload";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
-import { registerAsset } from "../../../../../_runtime/12813_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12814_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
@@ -30,7 +30,7 @@ function CheckIcon() {
   const unsafe_rawColors = Themes.unsafe_rawColors;
   const isThemeDarkResult = obj.isThemeDark(useTheme());
   obj = { source: null, color: null, size: null };
-  obj[0] = tmp(12812);
+  obj[0] = tmp(12813);
   obj[1] = obj.isThemeDark(useTheme()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   obj[2] = Button.IconSizes.SMALL;
   return callback2(Button.Icon, obj);

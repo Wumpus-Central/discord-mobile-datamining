@@ -5,14 +5,14 @@ import { TextAreaCta } from "TextAreaCta";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importAllResult from "module_11882";
-import { registerAsset } from "../../../../../_runtime/11880_registerAsset.js";
+import importAllResult from "module_11883";
 import { registerAsset } from "../../../../../_runtime/11881_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11882_registerAsset.js";
 import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
-const memoResult = require("module_11882").memo(function ChatInputGuardGuildMemberVerification(guildId) {
+const memoResult = require("module_11883").memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
   let obj = guildId(8478);
@@ -68,7 +68,7 @@ const memoResult = require("module_11882").memo(function ChatInputGuardGuildMemb
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(11882);
+    obj[1] = tmp2(11883);
     obj[2] = !stateFromStores;
     tmp13Result = tmp13(tmp14(5759), obj);
     const tmp14Result = tmp14(5759);

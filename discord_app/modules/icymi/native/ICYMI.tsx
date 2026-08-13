@@ -54,7 +54,7 @@ function InfoButton() {
     const obj = callback2(8962);
     callback2(8962).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
     const obj2 = callback2(8962);
-    callback(15662).pushICYMIInfoModal({ extendedOnboarding: true });
+    callback(15653).pushICYMIInfoModal({ extendedOnboarding: true });
   };
   return callback(IconButton.IconButton, obj);
 }
@@ -399,9 +399,9 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
   const intl = LeftBackIconWithBadge(1236).intl;
   obj6[1] = intl.string(LeftBackIconWithBadge(1236).t["13/7kX"]);
-  obj6[2] = LeftBackIconWithBadge(15598).goBack;
+  obj6[2] = LeftBackIconWithBadge(15589).goBack;
   if (inNestedNavigator) {
-    LeftBackIconWithBadge = LeftBackIconWithBadge(15600).LeftBackIconWithBadge;
+    LeftBackIconWithBadge = LeftBackIconWithBadge(15591).LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
     let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
   } else {

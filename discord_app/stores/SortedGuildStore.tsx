@@ -49,7 +49,7 @@ function convertNodeToGuildFolder(type) {
     obj[4] = children.map((id) => id.id);
     return obj;
   } else if (tmp(5198).GuildsNodeType.GUILD === type) {
-    obj = { folderId: "Array", guildIds: "Array" };
+    obj = { folderId: "Array", guildIds: 0 };
     const items = [type.id];
     obj[1] = items;
     return obj;

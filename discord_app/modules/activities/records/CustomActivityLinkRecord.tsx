@@ -34,8 +34,8 @@ CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   if (this.type === CustomLinkType.CustomLinkType.MANAGED) {
     let tmpResult = tmp(8288);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12287).CustomLinkType.QUICK) {
-    tmpResult = tmp(12284);
+  } else if (self.type === tmp(12288).CustomLinkType.QUICK) {
+    tmpResult = tmp(12285);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

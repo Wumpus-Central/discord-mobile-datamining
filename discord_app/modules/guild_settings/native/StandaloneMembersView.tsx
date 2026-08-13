@@ -29,14 +29,14 @@ export default function StandaloneMembersView(guildId) {
     return callback(guildId(5310).NavigatorHeader, obj);
   };
   obj1[2] = function render() {
-    return outer1_4(navigation(15766), { guildId });
+    return outer1_4(navigation(15757), { guildId });
   };
   obj[constants.MAIN] = obj1;
   obj[constants.MEMBER_EDIT] = {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return outer1_4(guildId(11286).GuildSettingsModalMemberEditScene, { guildId });
+      return outer1_4(guildId(11287).GuildSettingsModalMemberEditScene, { guildId });
     }
   };
   obj[constants.MEMBER_KICK] = {
@@ -46,7 +46,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return outer1_4(navigation(11299), { guildId });
+      return outer1_4(navigation(11300), { guildId });
     }
   };
   obj[constants.MEMBER_BAN] = {
@@ -56,7 +56,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return outer1_4(navigation(11301), { guildId });
+      return outer1_4(navigation(11302), { guildId });
     }
   };
   const obj2 = { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null };

@@ -157,7 +157,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         EXPERIMENT = ExperimentEmbedType.EXPERIMENT;
       }
       id = id.getId();
-      tmp4Result = tmp4(11259);
+      tmp4Result = tmp4(11260);
       const experimentServerAssignment = tmp4Result.getExperimentServerAssignment(tmp10, id);
       const experimentServerAssignmentLabel = tmp4(8250).getExperimentServerAssignmentLabel(tmp10, experimentServerAssignment);
       if (EXPERIMENT === tmp13.EXPERIMENT_TREATMENT) {
@@ -174,7 +174,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         obj.titleColor = colors.titleColor;
         obj.subtitle = label;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = tmp4(8100).getAssetUriForEmbed(tmp(11260));
+        obj.thumbnailUrl = tmp4(8100).getAssetUriForEmbed(tmp(11261));
         obj.thumbnailBackgroundColor = colors.backgroundColor;
         obj.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -203,7 +203,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         }
         obj.subtitle = combined1;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = tmp4(8100).getAssetUriForEmbed(tmp(11260));
+        obj.thumbnailUrl = tmp4(8100).getAssetUriForEmbed(tmp(11261));
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj.acceptLabelText = "View Experiment Details";
         obj.embedCanBeTapped = true;
@@ -228,9 +228,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
   obj1.bodyTextColor = colors.bodyTextColor;
   const obj4 = experimentTreatmentFromEmbedURL(10418);
   if (tmp4Result4.isThemeDark(closure_2)) {
-    let tmpResult = tmp(11257);
+    let tmpResult = tmp(11258);
   } else {
-    tmpResult = tmp(11258);
+    tmpResult = tmp(11259);
   }
   obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

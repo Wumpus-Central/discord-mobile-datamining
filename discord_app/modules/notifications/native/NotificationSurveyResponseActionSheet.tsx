@@ -5,7 +5,7 @@ import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../_runtime/11084_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11085_registerAsset.js";
 import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";

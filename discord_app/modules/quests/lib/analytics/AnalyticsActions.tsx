@@ -38,10 +38,10 @@ function trackQuestEvent(sourceQuestContent) {
       allApplicationIds = [];
     }
     obj[2] = allApplicationIds;
-    let tmp24Result = tmp24(7232);
+    let tmp24Result = tmp24(7233);
     obj[3] = tmp24Result.getQuestStatus(value);
     const id = value.id;
-    tmp24Result = tmp24(7225);
+    tmp24Result = tmp24(7226);
     let uuid = tmp24Result.getOrRefreshAdSession(shouldExtendSession).uuid;
     const obj13 = getApplicationIdsByTaskTypes;
     const adDecisionData = getQuestDeliveryDataForPlacement.getAdDecisionData(id, sourceQuestContent);
@@ -64,7 +64,7 @@ function trackQuestEvent(sourceQuestContent) {
     const merged = Object.assign(adDecisionData);
     let QUEST = adDecisionData.creative_type;
     if (QUEST == null) {
-      QUEST = tmp24(7233).AdCreativeType.QUEST;
+      QUEST = tmp24(7222).AdCreativeType.QUEST;
     }
     const obj1 = {};
     obj.creative_type = QUEST;
@@ -150,8 +150,8 @@ function trackAdContentEvent(sourceQuestContent) {
     obj1[0] = relatedQuestId;
     let questStatus = null;
     if (null != quest) {
-      questStatus = tmp3(7232).getQuestStatus(quest);
-      const tmp3Result2 = tmp3(7232);
+      questStatus = tmp3(7233).getQuestStatus(quest);
+      const tmp3Result2 = tmp3(7233);
     }
     obj1[1] = questStatus;
     let obj2 = obj1;
@@ -256,7 +256,7 @@ function _getCommonClickEventProperties() {
               c4 = 2;
               c5 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = obj5.getAdUser(callback(7232).getQuestContentName(callback));
+              obj2[0] = obj5.getAdUser(callback(7233).getQuestContentName(callback));
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -270,7 +270,7 @@ function _getCommonClickEventProperties() {
           } else {
             initializeState = arg1;
             const obj4 = {};
-            const merged = Object.assign(callback(7232).getContentProperties(callback, callback2, dependencyMap));
+            const merged = Object.assign(callback(7233).getContentProperties(callback, callback2, dependencyMap));
             const merged1 = Object.assign(callback2(7183)());
             obj4.cta_name = c3;
             obj4.impression_id = c4;
@@ -693,7 +693,7 @@ export const trackBountyCarouselScroll = function trackBountyCarouselScroll(resu
   obj[2] = scrollingType;
   obj[3] = scrollingDirection;
   obj[4] = carouselPosition;
-  tmpResult = tmp(7232);
+  tmpResult = tmp(7233);
   obj[5] = tmpResult.getQuestContentName(questContent);
   obj2.track(AnalyticEvents.BOUNTY_CAROUSEL_SCROLL, obj);
 };
@@ -807,7 +807,7 @@ export const trackQuestHomeCarouselScroll = function trackQuestHomeCarouselScrol
   obj[4] = scrollWindowStartIndex;
   obj[5] = scrollWindowEndIndex;
   obj[6] = scrollWindowSize;
-  tmpResult = tmp(7232);
+  tmpResult = tmp(7233);
   obj[7] = tmpResult.getQuestContentName(questContent);
   obj[8] = questContent;
   obj[9] = carouselSize;

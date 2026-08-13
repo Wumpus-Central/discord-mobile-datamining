@@ -105,7 +105,7 @@ export default function UserProfileBadgesEditButton(arg0) {
     }
     obj[3] = tmp18;
     obj[4] = tmp6;
-    return callback(tmp2(14001).UserProfileEditFormButton, obj);
+    return callback(tmp2(13992).UserProfileEditFormButton, obj);
   } else {
     return null;
   }

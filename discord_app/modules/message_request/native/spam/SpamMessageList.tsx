@@ -202,10 +202,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = createCacheKey();
   importDefault = tmp;
   const bottom = useSafeAreaInsets().bottom;
-  let obj = goToMessageRequestPreview(16042);
+  let obj = goToMessageRequestPreview(16033);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequests();
-  let obj1 = goToMessageRequestPreview(16040);
+  let obj1 = goToMessageRequestPreview(16031);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffect(() => {
     let obj = _undefined(698);
@@ -218,7 +218,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj = { bodyText: null };
     let intl = tmp4(1236).intl;
     obj[0] = intl.string(tmp4(1236).t.hasFPQ);
-    return callback(tmp2(16043), obj);
+    return callback(tmp2(16034), obj);
   } else {
     const items = ["header-section"];
     HermesBuiltin.arraySpread(arr, 1);

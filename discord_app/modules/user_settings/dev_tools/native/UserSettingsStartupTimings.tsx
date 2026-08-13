@@ -254,7 +254,7 @@ export default function UserSettingsStartupTimings() {
     items[3] = callback2(callback2(5807).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj25 = { icon: null, label: "Copy timings to clipboard.", arrow: true, onPress: null };
-    obj25[0] = callback(callback2(12300).ShareIcon, {});
+    obj25[0] = callback(callback2(12301).ShareIcon, {});
     obj25[3] = closure_14;
     obj24[2] = callback(callback2(5414).TableRow, obj25);
     items[4] = callback(callback2(5807).TableRowGroup, obj24);

@@ -172,7 +172,7 @@ const PureComponent = importAllResult.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f111207 = applyArgumentsResult;
+    f111077 = applyArgumentsResult;
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
@@ -219,9 +219,9 @@ class ConnectedAccount extends PureComponent {
       const account = lib.props.account;
       applyArgumentsResult(outer1_2[13]).disconnect(account.type, account.id);
     };
-    f111207 = undefined;
+    f111077 = undefined;
     closure_1 = applyArgumentsResult;
-    f111207 = RowSwitch((arg0) => {
+    f111077 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -279,9 +279,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f111207 = undefined;
+    f111077 = undefined;
     closure_1 = applyArgumentsResult;
-    f111207 = RowSwitch((arg0) => {
+    f111077 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -339,9 +339,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f111207 = undefined;
+    f111077 = undefined;
     closure_1 = applyArgumentsResult;
-    f111207 = RowSwitch((arg0) => {
+    f111077 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -380,9 +380,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f111207 = undefined;
+    f111077 = undefined;
     closure_1 = applyArgumentsResult;
-    f111207 = RowSwitch((arg0) => {
+    f111077 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -513,33 +513,33 @@ prototype["renderMetadata"] = function renderMetadata() {
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(11021);
+    let tmp2Result = tmp2(11022);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
   } else if (tmp6.STEAM === type) {
-    tmp2Result = tmp2(11021);
+    tmp2Result = tmp2(11022);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
     if (tmp6.BLUESKY !== type) {
       if (tmp6.TWITTER !== type) {
         if (tmp6.MASTODON !== type) {
           if (tmp6.EBAY === type) {
-            redditMetadataItems = tmp2(11021).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(11021);
+            redditMetadataItems = tmp2(11022).generateEbayMetadataItems(metadata);
+            const tmp2Result1 = tmp2(11022);
           } else if (tmp6.PAYPAL === type) {
-            redditMetadataItems = tmp2(11021).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(11021);
+            redditMetadataItems = tmp2(11022).generatePaypalMetadataItems(metadata);
+            const tmp2Result2 = tmp2(11022);
           } else {
             redditMetadataItems = [];
             if (tmp6.TIKTOK === type) {
-              redditMetadataItems = tmp2(11021).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(11021);
+              redditMetadataItems = tmp2(11022).generateTikTokMetadataItems(metadata);
+              const tmp2Result3 = tmp2(11022);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11021).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(11021);
+    redditMetadataItems = tmp2(11022).generateTwitterMetadataItems(metadata);
+    const tmp2Result4 = tmp2(11022);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -642,7 +642,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp9Result = tmp9(10069);
     } else {
-      tmp9Result = tmp9(14291);
+      tmp9Result = tmp9(14282);
     }
     obj10[2] = tmp9Result;
     obj9[6] = callback3(tmp2(1297).Icon, obj10);

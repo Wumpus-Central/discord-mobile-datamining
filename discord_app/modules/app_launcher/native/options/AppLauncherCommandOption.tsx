@@ -299,7 +299,7 @@ export default function AppLauncherCommandOption(option) {
     obj8[3] = command;
     obj8[4] = optionValues;
     let first6;
-    let tmp64Result = tmp64(11614);
+    let tmp64Result = tmp64(11615);
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -332,7 +332,7 @@ export default function AppLauncherCommandOption(option) {
     obj9[1] = name;
     obj9[2] = channel.guild_id;
     let first7;
-    tmp64Result = tmp64(11616);
+    tmp64Result = tmp64(11617);
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

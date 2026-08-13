@@ -101,7 +101,7 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("reinjectEphemerals").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "ct", localCreationAnswerId: null };
+  const obj = { text: "Array", image: "accessibilityRole", localCreationAnswerId: 1140851135 };
   obj[2] = v1.v4();
   return obj;
 };

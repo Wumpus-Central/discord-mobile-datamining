@@ -184,8 +184,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(11468), obj);
-    tmp5 = callback(tmp(11467).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(11469), obj);
+    tmp5 = callback(tmp(11468).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

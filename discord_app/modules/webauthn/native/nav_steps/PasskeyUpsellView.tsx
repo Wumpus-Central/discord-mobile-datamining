@@ -7,7 +7,7 @@ import { HelpdeskArticles } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/14051_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14042_registerAsset.js";
 import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let c5;
@@ -51,9 +51,9 @@ export default function PasskeyUpsellView() {
     navigation.push(outer1_8.NAME, obj);
   }
   function onCancel() {
-    callback(14047).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14047);
-    const result = callback(14048).closePasskeyUpsellModal();
+    callback(14038).markDismissed(constants.USER_DISMISS);
+    const obj = callback(14038);
+    const result = callback(14039).closePasskeyUpsellModal();
   }
   let obj = navigation(1499);
   navigation = obj.useNavigation();

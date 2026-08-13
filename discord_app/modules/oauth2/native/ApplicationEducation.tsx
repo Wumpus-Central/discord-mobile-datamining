@@ -66,7 +66,7 @@ export default function ApplicationEducation(arg0) {
     }
     obj[1] = formatToPlainString2Result;
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp4(10487).ChatSmileIcon;
+    obj3[0] = tmp4(10489).ChatSmileIcon;
     const intl7 = tmp4(1236).intl;
     const string3 = intl7.string;
     const t5 = tmp4(1236).t;
@@ -165,7 +165,7 @@ export default function ApplicationEducation(arg0) {
       const obj13 = { children: null };
       const items1 = [tmp27, items.map((iconComponent) => callback(closure_9, { iconComponent: iconComponent.iconComponent, text: iconComponent.text }, arg1))];
       obj11[1] = items1;
-      const items2 = [closure_6(View, obj11), callback(tmp4(10489).AuthorizeFormSeparator, {})];
+      const items2 = [closure_6(View, obj11), callback(tmp4(10491).AuthorizeFormSeparator, {})];
       obj13[0] = items2;
       tmp30Result = tmp30(closure_7, obj13);
       const tmp31 = closure_7;

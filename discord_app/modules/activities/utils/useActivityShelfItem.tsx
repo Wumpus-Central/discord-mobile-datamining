@@ -91,7 +91,7 @@ function useOnActivityItemSelected(arg0) {
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
   analyticsLocations = context(5768)().analyticsLocations;
-  closure_14 = context(10691)();
+  closure_14 = context(10693)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -396,10 +396,10 @@ export default function useActivityShelfItem(backgroundResolution) {
   let tmp9 = null;
   const tmp3 = getPlatform;
   if (null != activity.activity_preview_video_asset_id) {
-    tmp9 = tmp(11501)(application.id, activity.activity_preview_video_asset_id);
+    tmp9 = tmp(11502)(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
-  let tmpResult = tmp(11502);
+  let tmpResult = tmp(11503);
   if ("channel" === context.type) {
     channel = context.channel;
   }
@@ -411,7 +411,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   const tmp13 = useActivityAction(obj);
   let tmp4Result = tmp4(7634);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    tmpResult = tmp(10578);
+    tmpResult = tmp(10580);
     tmp4Result = tmp4(500);
     const str = activityItem.activity.client_platform_config[tmpResult(undefined, tmp4Result.getOS(tmp4Result))].release_phase;
     let replaced;

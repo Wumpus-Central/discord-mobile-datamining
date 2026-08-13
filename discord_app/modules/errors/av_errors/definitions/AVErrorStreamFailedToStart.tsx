@@ -15,7 +15,7 @@ export const AVErrorStreamFailedToStartDefinition = {
     });
     return found.map((currentUserActiveStream) => {
       const obj = { type: callback(9219).AVError.STREAM_FAILED_TO_START };
-      const obj2 = callback(17002);
+      const obj2 = callback(16993);
       const merged = Object.assign(obj2.getStreamErrorContext(callback(4408).encodeStreamKey(currentUserActiveStream)));
       return obj;
     });

@@ -104,7 +104,7 @@ function WishlistSuggestionsGridContents(arg0) {
   }, items1);
   obj = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap: closure_9 };
   const analyticsLocations = context().analyticsLocations;
-  let obj3 = stateFromStores(12554);
+  let obj3 = stateFromStores(12555);
   obj = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: stateFromStores(9406).WishlistFetchSource.USER_PROFILE };
   const items2 = obj3.useAddToWishlistGridItems(obj).items;
   const items3 = [trackUserProfileWishlistAction];
@@ -126,7 +126,7 @@ function WishlistSuggestionsGridContents(arg0) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp5.shopButtonContainer;
     let obj2 = { size: "md", variant: "secondary", icon: null, text: null, onPress: null };
-    obj2[2] = callback(tmp4(11582).ShopIcon, { size: "sm" });
+    obj2[2] = callback(tmp4(11583).ShopIcon, { size: "sm" });
     const intl4 = tmp4(1236).intl;
     obj2[3] = intl4.string(tmp4(1236).t.RSyoZu);
     obj2[4] = callback;
@@ -194,11 +194,11 @@ function WishlistSuggestionsGridContents(arg0) {
     obj11[1] = wishlist;
     obj11[2] = analyticsLocations;
     obj11[3] = useCardGridLayout(obj).cardWidth;
-    items6[1] = callback(tmp(12557), obj11);
+    items6[1] = callback(tmp(12558), obj11);
     const obj12 = { style: null, children: null };
     obj12[0] = tmp5.shopButtonContainer;
     const obj13 = { size: "md", variant: "secondary", icon: null, text: null, onPress: null };
-    obj13[2] = callback(tmp4(11582).ShopIcon, { size: "sm" });
+    obj13[2] = callback(tmp4(11583).ShopIcon, { size: "sm" });
     const intl3 = tmp4(1236).intl;
     obj13[3] = intl3.string(tmp4(1236).t.RSyoZu);
     obj13[4] = callback;
@@ -206,7 +206,7 @@ function WishlistSuggestionsGridContents(arg0) {
     items6[2] = callback(View, obj12);
     obj5[4] = items6;
     obj3[1] = closure_13(tmp(4083).View, obj5);
-    tmp13Result = tmp13(tmp4(12556).WishlistAnalyticsProvider, obj3);
+    tmp13Result = tmp13(tmp4(12557).WishlistAnalyticsProvider, obj3);
   }
   return tmp13Result;
 }

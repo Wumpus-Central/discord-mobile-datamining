@@ -54,12 +54,12 @@ function AnimatedWrapper(children) {
   let pIPState;
   let animatedStyle;
   let animatedStyle1;
-  let obj = wrapperOffset(10738);
+  let obj = wrapperOffset(10740);
   height = obj.useGlobalStatusIndicatorState().height;
   const tmp3 = callback2();
   dependencyMap = tmp3;
   let obj1 = connected;
-  const context = connected.useContext(height(11703));
+  const context = connected.useContext(height(11704));
   wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   controlsSpecs = context.controlsSpecs;
@@ -77,7 +77,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 6243014585347;
   fn.__initData = closure_55;
   derivedValue = obj2.useDerivedValue(fn);
-  let obj3 = wrapperOffset(16252);
+  let obj3 = wrapperOffset(16243);
   pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4083);
   const fn2 = function l() {
@@ -151,7 +151,7 @@ function AnimatedWrapper(children) {
       }
     }
   };
-  obj = { cheapWorkletShallowEqual: wrapperOffset(8825).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10289), wrapperOffset, getMaxPanelWidth: wrapperOffset(16240).getMaxPanelWidth, getPanelX: wrapperOffset(16240).getPanelX, roundToNearestPixel: height(11135), windowDimensions };
+  obj = { cheapWorkletShallowEqual: wrapperOffset(8825).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10289), wrapperOffset, getMaxPanelWidth: wrapperOffset(16231).getMaxPanelWidth, getPanelX: wrapperOffset(16231).getPanelX, roundToNearestPixel: height(11136), windowDimensions };
   fn3.__closure = obj;
   fn3.__workletHash = 3683279660781;
   fn3.__initData = closure_57;

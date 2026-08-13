@@ -73,7 +73,7 @@ const memoResult = importAllResult.memo((arg0) => {
     const items = [callback2(tmp2(4887).PressableOpacity, obj), , , , ];
     let obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
-    items[1] = callback2(tmp5(15396), obj1);
+    items[1] = callback2(tmp5(15387), obj1);
     const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
     obj2[2] = tmp.centeredText;
     const intl2 = tmp2(1236).intl;

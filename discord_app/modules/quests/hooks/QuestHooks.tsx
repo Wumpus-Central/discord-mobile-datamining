@@ -105,8 +105,8 @@ function useQuests(arg0) {
         obj = obj(10422);
         const currentQuests = obj.fetchCurrentQuests();
         if (obj2.isMac()) {
-          const state = hasFetched(10430).getState();
-          const obj3 = hasFetched(10430);
+          const state = hasFetched(10446).getState();
+          const obj3 = hasFetched(10446);
         }
         obj2 = obj(500);
       }
@@ -232,9 +232,9 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       questHomeHero = questHomeHero.questHomeHero;
       if (null != questHomeHero) {
         if (!questHomeHero.isQuestHomeHeroShelfEnabled) {
-          let tmp50Result = tmp50(7226);
+          let tmp50Result = tmp50(7227);
           const result2 = tmp50Result.isQuestFeaturedByHero(questHomeHero, id.id);
-          tmp50Result = tmp50(7226);
+          tmp50Result = tmp50(7227);
           let num2 = 1;
           if (result2) {
             num2 = c28;
@@ -242,13 +242,13 @@ function defaultSortFn(id, id2, questHomeHero, get) {
           return num2;
         }
       }
-      const questType = tmp50(7226).getQuestType(id.config);
-      const tmp50Result1 = tmp50(7226);
-      const questType1 = tmp50(7226).getQuestType(id2.config);
-      const tmp50Result2 = tmp50(7226);
-      const result3 = tmp50(7228).hasWatchVideoOnMobileTasks(id);
-      const tmp50Result3 = tmp50(7228);
-      const result4 = tmp50(7228).hasWatchVideoOnMobileTasks(id2);
+      const questType = tmp50(7227).getQuestType(id.config);
+      const tmp50Result1 = tmp50(7227);
+      const questType1 = tmp50(7227).getQuestType(id2.config);
+      const tmp50Result2 = tmp50(7227);
+      const result3 = tmp50(7229).hasWatchVideoOnMobileTasks(id);
+      const tmp50Result3 = tmp50(7229);
+      const result4 = tmp50(7229).hasWatchVideoOnMobileTasks(id2);
       if (result3 !== result4) {
         if (!result3) {
           return num3;
@@ -261,7 +261,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       }
       if (questType !== questType1) {
         num3 = 1;
-        if (questType === tmp50(7231).QuestType.VIDEO) {
+        if (questType === tmp50(7232).QuestType.VIDEO) {
           num3 = c28;
         }
       }
@@ -318,7 +318,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
         num10 = c28;
       }
       num5 = num10;
-      const tmp50Result4 = tmp50(7228);
+      const tmp50Result4 = tmp50(7229);
     }
     const obj9 = getQuestDeliveryDataForPlacement;
     const tmp19 = null != completedAt2;
@@ -386,22 +386,22 @@ function doesQuestPassTaskFilter(quest) {
     obj[0] = quest;
     let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj);
     if (!hasPlayOnDesktopTaskResult) {
-      let tmp2Result = tmp2(7228);
+      let tmp2Result = tmp2(7229);
       obj = { quest: null };
       obj[0] = quest;
       hasPlayOnDesktopTaskResult = tmp2Result.hasStreamOnDesktopTask(obj);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      tmp2Result = tmp2(7228);
+      tmp2Result = tmp2(7229);
       hasPlayOnDesktopTaskResult = tmp2Result.hasPlayActivityTask(quest);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = tmp2(7228).isConsoleQuest(quest);
-      const tmp2Result1 = tmp2(7228);
+      hasPlayOnDesktopTaskResult = tmp2(7229).isConsoleQuest(quest);
+      const tmp2Result1 = tmp2(7229);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = tmp2(7228).isInGameQuest(quest);
-      const tmp2Result2 = tmp2(7228);
+      hasPlayOnDesktopTaskResult = tmp2(7229).isInGameQuest(quest);
+      const tmp2Result2 = tmp2(7229);
     }
     return hasPlayOnDesktopTaskResult;
   } else {
@@ -1134,7 +1134,7 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
   let obj = accounts(589);
   const tmp = accounts;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7228).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7229).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1142,8 +1142,8 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  let obj2 = accounts(7228);
-  getVideoQuestWatchCtaText = tmp(10449).useGetQuestImpressionId();
+  let obj2 = accounts(7229);
+  getVideoQuestWatchCtaText = tmp(10451).useGetQuestImpressionId();
   return () => {
     let obj = accounts(outer1_2[30]);
     if (c3) {
@@ -1424,7 +1424,7 @@ export const useWaitingForConsoleConnection = function useWaitingForConsoleConne
   ({ xboxAccounts, playstationAccounts } = memo);
   const obj = accounts(589);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7228).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7229).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1736,7 +1736,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   let tmp8Result = tmp8(500);
   let tmp17 = tmp8Result.isWeb() && tmp12;
   if (tmp17) {
-    tmp8Result = tmp8(10451);
+    tmp8Result = tmp8(10453);
     tmp17 = !tmp8Result.isQuestSupportedOnWeb(userStatus);
   }
   const obj2 = _initialize;

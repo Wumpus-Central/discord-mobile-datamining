@@ -10,7 +10,7 @@ import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "SearchField";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/12942_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12943_registerAsset.js";
 
 let Fonts;
 let c9;
@@ -34,11 +34,11 @@ function ChannelRow(channel) {
   obj[4] = channel;
   obj[5] = selected;
   obj[7] = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(15323), obj), ];
+  const children = [closure_11(onChannelSelected(15314), obj), ];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(16860);
+    obj[1] = tmp2(16851);
     selected = tmp8(tmp2(5308), obj);
     const tmp2Result = tmp2(5308);
   }

@@ -5,7 +5,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleFormInit from "handleFormInit";
 import ME from "ME";
-import jsxProd from "module_16829";
+import jsxProd from "module_16820";
 import createCacheKey from "createCacheKey";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 

@@ -422,7 +422,7 @@ function _createThread_() {
                       throwTypeErrorResult = dependencyMap;
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = callback(12640)(lib.id, maybeRebuildState);
+                      throwTypeErrorResult = callback(12641)(lib.id, maybeRebuildState);
                     }
                   } else {
                     let obj8 = callback(4683);

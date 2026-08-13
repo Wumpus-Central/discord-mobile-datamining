@@ -75,7 +75,7 @@ function _getInitialURLs() {
         if (null != closure_1) {
           if (null != closure_1.url) {
             if (callback(closure_1.url)) {
-              let push = arr(17058).DeeplinkSource;
+              let push = arr(17049).DeeplinkSource;
               if (closure_1.isDeferred) {
                 let AppsFlyer = push.AppsFlyerDeferred;
               } else {
@@ -90,7 +90,7 @@ function _getInitialURLs() {
             } else {
               const obj4 = { url: null, source: null };
               obj4[0] = closure_1.url;
-              obj4[1] = arr(17058).DeeplinkSource.OS;
+              obj4[1] = arr(17049).DeeplinkSource.OS;
               arr = arr.push(obj4);
               dependencyMap = 3;
             }
@@ -110,7 +110,7 @@ function _getInitialURLs() {
       if (null != dependencyMap) {
         const obj6 = { url: null, source: null };
         obj6[0] = dependencyMap;
-        obj6[1] = arr(17058).DeeplinkSource.ReactNativeLinking;
+        obj6[1] = arr(17049).DeeplinkSource.ReactNativeLinking;
         arr.push(obj6);
       }
     }
@@ -672,7 +672,7 @@ function _init(_payload) {
                 throwTypeErrorResult = outer1_1;
                 throwTypeErrorResult = c3;
                 const obj14 = outer1_0(500);
-                const initialNotification = outer1_1(10746).getInitialNotification();
+                const initialNotification = outer1_1(10748).getInitialNotification();
                 items[1] = initialNotification.catch(() => null);
                 throwTypeErrorResult = outer1_28;
                 items[2] = outer1_28();
@@ -683,13 +683,13 @@ function _init(_payload) {
                 num2 = outer1_0(2007);
                 throwTypeErrorResult = c3;
                 throwTypeErrorResult = c3;
-                const obj15 = outer1_1(10746);
-                throwTypeErrorResult = num2(17068, c3.paths).then((arg0) => arg0.default());
+                const obj15 = outer1_1(10748);
+                throwTypeErrorResult = num2(17059, c3.paths).then((arg0) => arg0.default());
                 items[4] = throwTypeErrorResult;
                 throwTypeErrorResult = Promise.all(items);
                 v0 = 1;
                 c3 = 1;
-                const num2Result = num2(17068, c3.paths);
+                const num2Result = num2(17059, c3.paths);
               } else {
                 throwTypeErrorResult = outer1_1;
                 throwTypeErrorResult = c3;
@@ -726,7 +726,7 @@ function _init(_payload) {
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = c3;
                 if (obj18.isAndroid()) {
-                  if (callback(13731).isTTITest) {
+                  if (callback(13722).isTTITest) {
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = onStorageInitialize;
                     throwTypeErrorResult = outer1_0;
@@ -767,9 +767,9 @@ function _init(_payload) {
               throwTypeErrorResult = dependencyMap;
               closure_16 = 5.default;
               throwTypeErrorResult = dependencyMap;
-              closure_17 = 16383.default;
+              closure_17 = 16374.default;
               throwTypeErrorResult = dependencyMap;
-              closure_18 = 16433.default;
+              closure_18 = 16424.default;
               throwTypeErrorResult = dependencyMap;
               closure_19 = 17;
               throwTypeErrorResult = closure_16;
@@ -842,8 +842,8 @@ function _init(_payload) {
                 closure_20.verbose("Flux has initialized");
               });
             }
-            outer1_1(17087)();
-            const result1 = outer1_0(17088).setupLibdiscoreTimersMonitor();
+            outer1_1(17078)();
+            const result1 = outer1_0(17079).setupLibdiscoreTimersMonitor();
             const item = outer1_4.forEach((url) => {
               url = url.url;
               onStorageInitialize(paths[15])("handleURL", () => callback(table[16])).default(url, true);
@@ -902,7 +902,7 @@ function _init(_payload) {
             outer1_12 = null;
             throwTypeErrorResult = v0;
             throwTypeErrorResult = c3;
-            const obj7 = outer1_0(17088);
+            const obj7 = outer1_0(17079);
             if (null != obj10.getToken()) {
               throwTypeErrorResult = callback;
               items2.Promise.resolve();
@@ -912,7 +912,7 @@ function _init(_payload) {
               throwTypeErrorResult = onStorageInitialize;
               throwTypeErrorResult = outer1_0;
               throwTypeErrorResult = c3;
-              getState = outer1_0(13520);
+              getState = outer1_0(13511);
               throwTypeErrorResult = getState;
               throwTypeErrorResult = getState.beginLoadedExperimentsTimeout();
               throwTypeErrorResult = getState;
@@ -938,12 +938,12 @@ function _init(_payload) {
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[1] = outer1_0(2007)(13784, c3.paths);
+            items2[1] = outer1_0(2007)(13775, c3.paths);
             throwTypeErrorResult = outer1_0;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[2] = outer1_0(2007)(13797, c3.paths);
+            items2[2] = outer1_0(2007)(13788, c3.paths);
             throwTypeErrorResult = outer1_0;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
@@ -953,7 +953,7 @@ function _init(_payload) {
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[4] = outer1_0(2007)(17089, c3.paths);
+            items2[4] = outer1_0(2007)(17080, c3.paths);
             throwTypeErrorResult = outer1_7;
             items2[5] = outer1_7;
             throwTypeErrorResult = items2.Promise.all(items2);
@@ -1129,7 +1129,7 @@ const promise = new Promise((arg0) => {
 });
 loadIndex.recordEnd();
 const tmp10 = new require("isAnalyticsEndpoint")("index.native.tsx");
-result = require("module_16383").fileFinishedImporting("modules/app_startup/native/NativeAppStartup.tsx");
+result = require("module_16374").fileFinishedImporting("modules/app_startup/native/NativeAppStartup.tsx");
 
 export const applicationReady = future;
 export const init = function init() {

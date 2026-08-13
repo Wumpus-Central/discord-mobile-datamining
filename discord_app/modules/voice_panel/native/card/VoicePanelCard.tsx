@@ -1498,7 +1498,8 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: layoutTransition, layoutPhysics: "VoicePanelVideoRenderer" };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "channel", layout: 294018179, layoutPhysics: 29109569 };
+  obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);
   tmp25 = callback;

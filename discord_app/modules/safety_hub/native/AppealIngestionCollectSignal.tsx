@@ -73,13 +73,13 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = createCacheKey();
   c1 = tmp;
-  let obj = isDsaEligible(11336);
+  let obj = isDsaEligible(11337);
   dependencyMap = obj.useSafetyHubAppealSignal();
   const intl = isDsaEligible(1236).intl;
   const intl2 = isDsaEligible(1236).intl;
   const stringResult = intl.string(isDsaEligible(1236).t["C5q+pW"]);
   obj = { children: null };
-  const items = [callback(isDsaEligible(11351).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
+  const items = [callback(isDsaEligible(11352).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.form, children: null };
   const obj2 = { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: null };
@@ -95,5 +95,5 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj[1] = callback2(isDsaEligible(8012).Form, obj1);
   items[1] = callback(handleAppealSignalSelect, obj);
   obj[0] = items;
-  return callback2(isDsaEligible(11351).AppealIngestionModalScreen, obj);
+  return callback2(isDsaEligible(11352).AppealIngestionModalScreen, obj);
 };

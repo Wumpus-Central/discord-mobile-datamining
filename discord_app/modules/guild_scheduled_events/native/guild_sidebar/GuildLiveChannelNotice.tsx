@@ -107,7 +107,7 @@ function UserSummaryRow(arg0) {
       obj[0] = items2;
       let obj1 = { size: "custom", style: null };
       obj1[1] = max(9845).makeSizeStyle(14);
-      const items3 = [callback(max(11951).HeadphonesIcon, obj1), ];
+      const items3 = [callback(max(11952).HeadphonesIcon, obj1), ];
       let obj2 = { variant: "text-xs/semibold", style: null, maxFontSizeMultiplier: 1, children: null };
       obj2[1] = { marginLeft: 4 };
       obj2[3] = audienceCount;
@@ -428,7 +428,7 @@ export default importAllResult.memo((guild) => {
   guild = guild.guild;
   let activeEventOrStageInstanceChannel;
   let guildActiveEvent;
-  let obj = activeEventOrStageInstanceChannel(15392);
+  let obj = activeEventOrStageInstanceChannel(15383);
   activeEventOrStageInstanceChannel = obj.useActiveEventOrStageInstanceChannel(guild.id);
   let obj1 = activeEventOrStageInstanceChannel(9087);
   guildActiveEvent = obj1.useGuildActiveEvent(guild.id);

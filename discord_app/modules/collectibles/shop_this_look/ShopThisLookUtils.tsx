@@ -3,7 +3,15 @@ import { CollectiblesSKUSourceType } from "../../../../discord_common/js/shared/
 const result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
 export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {
-  let tmp = null != stateFromStores && stateFromStores.isAvailable();
+  let tmp = null != stateFromStores;
+  if (tmp) {
+    const isAvailable = stateFromStores.isAvailable;
+    let isAvailableResult;
+    if (isAvailable != null) {
+      isAvailableResult = isAvailable();
+    }
+    tmp = true === isAvailableResult;
+  }
   if (tmp) {
     const tenantMetadata = stateFromStores.tenantMetadata;
     let sourceType;

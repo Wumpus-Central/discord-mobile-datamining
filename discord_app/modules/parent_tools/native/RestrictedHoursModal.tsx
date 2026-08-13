@@ -246,11 +246,11 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(16447).closeRestrictedHoursModal();
-      const obj = callback(16447);
+      const result = callback(16438).closeRestrictedHoursModal();
+      const obj = callback(16438);
     }
   }, items1);
   useBackPressHandler(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
-  return callback2(callback(11386).Modal, obj);
+  return callback2(callback(11387).Modal, obj);
 };

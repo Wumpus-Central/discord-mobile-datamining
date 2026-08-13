@@ -98,10 +98,10 @@ export default function GuildFolderSettingsModal(folderId) {
       return tmp;
     }));
     let obj = folderId(8747);
-    const result = folderId(15492).hideGuildsBarFolderModal();
+    const result = folderId(15483).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(15492).hideGuildsBarFolderModal();
+    const result = folderId(15483).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {

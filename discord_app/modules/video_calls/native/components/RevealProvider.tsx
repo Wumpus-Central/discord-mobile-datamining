@@ -96,7 +96,7 @@ export default function RevealProvider(showStatus) {
   }
   const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children, ];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(10628);
+  tmp4Result = tmp4(10630);
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }

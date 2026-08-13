@@ -61,7 +61,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   fn.__workletHash = 17233409273245;
   fn.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = height(15234);
+  let obj2 = height(15225);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = importAllResult.useCallback(() => {
     const rootNavigationRef = height(_undefined[12]).getRootNavigationRef();
@@ -136,7 +136,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   obj6[3] = tmp14Result;
   const intl3 = tmp6(1236).intl;
   obj6[4] = intl3.string(height(1236).t["5h0QOP"]);
-  const items2 = [callback(height(7796).IconButton, obj6), callback(scrollPosition(15239), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const items2 = [callback(height(7796).IconButton, obj6), callback(scrollPosition(15230), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
   if (tmp4) {
     let tmp2Result = tmp2(4281);
   } else {

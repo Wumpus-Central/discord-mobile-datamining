@@ -33,7 +33,7 @@ export default function _default(subblock) {
   let obj2 = subblock(589);
   let items = [updateCategoriesAndProducts];
   stateFromStores = obj2.useStateFromStores(items, () => outer1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId));
-  let obj3 = subblock(12240);
+  let obj3 = subblock(12241);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
     unpublishedAt = undefined;

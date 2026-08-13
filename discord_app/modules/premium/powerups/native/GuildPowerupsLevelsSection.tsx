@@ -49,7 +49,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj[0] = intl.string(listings(2335)["TXY/b0"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(listings(2335).aJv4PB);
-  const items1 = [callback(listings(11973), obj), ];
+  const items1 = [callback(listings(11974), obj), ];
   obj = { cardMarginRight: PX_16, cardWidth: 250, contentContainerStyle: tmp.scrollerContent, itemCount: memo.length, onScrollingChange: callback, style: tmp.scroller, children: null };
   obj[6] = memo.map((powerup, index) => {
     obj = { style: _undefined.cardContainer, children: outer1_5(listings(_undefined[10]), obj) };

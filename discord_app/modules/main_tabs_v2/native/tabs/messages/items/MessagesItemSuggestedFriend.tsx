@@ -6,7 +6,7 @@ import markAllUserIdListsStale from "markAllUserIdListsStale";
 import ME from "ME";
 import jsxProd from "SendMessageIcon";
 import createCacheKey from "createCacheKey";
-import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15252_toNativeHorizontalOffset.js";
+import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15243_toNativeHorizontalOffset.js";
 import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
@@ -103,7 +103,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     setAddedPressed(true);
   }, items4);
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: true };
+  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: "r" };
   obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
   const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };

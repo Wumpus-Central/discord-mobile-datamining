@@ -121,7 +121,7 @@ class BasicButtonPill {
       flag = false;
     }
     ({ expressiveRiveRef, expressivePressState } = global);
-    tmp3 = f33124(str, DEFAULT_BUTTON_SIZE);
+    tmp3 = f33115(str, DEFAULT_BUTTON_SIZE);
     obj = { variant: str, size: DEFAULT_BUTTON_SIZE, style: items, pressed, shiny: flag, expressiveRiveRef, expressivePressState, children: jsx(View, obj) };
     items = [, ];
     items[0] = tmp3.pill;
@@ -152,7 +152,7 @@ class LoadingButtonPill {
     useRef = undefined;
     c2 = undefined;
     ({ expressiveRiveRef, expressivePressState } = global);
-    tmp3 = f33124(str, DEFAULT_BUTTON_SIZE);
+    tmp3 = f33115(str, DEFAULT_BUTTON_SIZE);
     useRef = noop.useRef(null);
     tmp4 = _slicedToArray(noop.useState(flag), 2);
     [tmp5, c2] = tmp4;

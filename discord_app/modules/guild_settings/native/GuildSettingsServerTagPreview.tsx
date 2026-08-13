@@ -110,7 +110,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
             let ok = tmp2;
             ok = undefined;
             dependencyMap(true);
-            let obj1 = outer1_0(13329);
+            let obj1 = outer1_0(13330);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -189,7 +189,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
       obj10[1] = primaryColor;
       obj10[2] = secondaryColor;
       ({ SIZE_12: obj16[3], SIZE_12: obj16[4] } = GuildTagBadgeSize);
-      tmp15Result = tmp15(tmp2(13330).GuildBadge, obj10);
+      tmp15Result = tmp15(tmp2(13331).GuildBadge, obj10);
     }
     obj9[1] = tmp15Result;
     tmp15Result = tmp15(tmp2(9302).BaseGuildTagChiplet, obj9);
@@ -212,7 +212,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const tmp10 = callback2(React.useState(false), 2);
   const tmp14 = closure_12;
   const tmp18 = closure_6;
-  const items11 = [closure_10(tmp18, { source: onAdopted(13374), style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const items11 = [closure_10(tmp18, { source: onAdopted(13375), style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj14 = { style: tmp.messageBody, children: null };
   const items12 = [closure_10(guildId(4338).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
   const obj15 = { variant: "text-md/normal", color: "text-default", children: null };

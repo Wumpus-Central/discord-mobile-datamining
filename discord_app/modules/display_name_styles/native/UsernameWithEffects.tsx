@@ -368,7 +368,7 @@ const memoResult = importAllResult.memo((userName) => {
       const items12 = [merged.style, ];
       let tmp73 = null != displayNameStylesFont;
       if (tmp73) {
-        const obj8 = { fontFamily: null, lineHeight: "Array" };
+        const obj8 = { fontFamily: null, lineHeight: "a" };
         obj8[0] = displayNameStylesFont;
         tmp73 = obj8;
       }

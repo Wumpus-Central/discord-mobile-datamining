@@ -8,7 +8,7 @@ import headerTitle from "headerTitle";
 import createCacheKey from "createCacheKey";
 import { KeyboardChatScrollView } from "../../../../../_runtime/01642_KeyboardChatScrollView.js";
 import { createStackNavigator } from "../../../../../_runtime/05825_createStackNavigator.js";
-import { registerAsset } from "../../../../../_runtime/15208_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15199_registerAsset.js";
 import { usePortraitOrientationOnly } from "../useOrientationLock.tsx";
 import { useWideAuthView } from "../useWideAuthView.tsx";
 import { BackgroundImage } from "atoms/BackgroundImage.tsx";
@@ -201,7 +201,7 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15209).initialize();
+    callback2(15200).initialize();
     return () => callback(table[21]).terminate();
   }, []);
   const layoutEffect = importAllResult.useLayoutEffect(() => callback(6982).trackAppUIViewed(), []);

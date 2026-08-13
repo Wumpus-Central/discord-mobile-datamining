@@ -9,7 +9,7 @@ import _executeCommand from "_executeCommand";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "defaultAreStatesEqual";
 import { t } from "../../../../../../_runtime/04544_t.js";
-import { registerAsset } from "../../../../../../_runtime/11612_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11613_registerAsset.js";
 import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";

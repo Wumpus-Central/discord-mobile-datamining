@@ -3,7 +3,9 @@ import handleConnectionInfoChange from "handleConnectionInfoChange";
 import initializeState from "initializeState";
 import { AnalyticEvents } from "ME";
 import set from "ME";
+import { AdCreativeType } from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { result } from "../ads/utils/AdDecisionUtils.tsx";
 import { isForegrounded } from "../analytics_sessions/SessionForegroundUtils.native.tsx";
 import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
 import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
@@ -112,70 +114,81 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
     currentFetchedAt = null;
   }
   let self = this;
-  let pendingRequests = this.pendingRequests;
+  const pendingRequests = this.pendingRequests;
   let timestamp = pendingRequests.get(arg0);
   let tmp5 = null;
   if (null != timestamp) {
-    pendingRequests = null;
+    let tmp10 = null;
     if (null !== currentFetchedAt) {
-      let obj = { questId: null, adCreativeId: null, fetchedAt: null, ttlMillis: 0, adDecisionData: null };
-      obj[0] = currentQuestId;
-      obj[1] = currentQuestId;
-      obj[2] = currentFetchedAt;
-      let tmp6;
+      let tmp6 = null;
+      if (tmp5 != currentQuestId) {
+        let obj = { type: null, questId: null };
+        obj[0] = AdCreativeType.AdCreativeType.QUEST;
+        obj[1] = currentQuestId;
+        tmp6 = obj;
+      }
+      obj = { creative: null, fetchedAt: null, ttlMillis: 0, adDecisionData: null };
+      obj[0] = tmp6;
+      obj[1] = currentFetchedAt;
+      let tmp9;
       if (tmp5 != adRequestId) {
         obj = { decision_id: null };
         obj[0] = adRequestId;
-        tmp6 = obj;
+        tmp9 = obj;
       }
-      obj[4] = tmp6;
-      pendingRequests = obj;
+      obj[3] = tmp9;
+      tmp10 = obj;
     }
-    let previousAdDecision = timestamp.previousAdDecision;
+    const previousAdDecision = timestamp.previousAdDecision;
     let str = "null";
     let str2 = "null";
     if (tmp5 != previousAdDecision) {
       let str3 = "quest";
-      if (tmp5 == previousAdDecision.questId) {
+      if (tmp5 == obj4.getDeliveredQuestId(previousAdDecision.creative)) {
         str3 = "no_serve";
       }
       str2 = str3;
+      obj4 = result;
     }
-    if (tmp5 != pendingRequests) {
+    if (tmp5 != tmp10) {
       let str4 = "quest";
-      if (tmp5 == pendingRequests.questId) {
+      if (tmp5 == obj5.getDeliveredQuestId(tmp10.creative)) {
         str4 = "no_serve";
       }
       str = str4;
+      obj5 = result;
     }
     if ("quest" !== str2) {
       const _HermesInternal = HermesInternal;
       let combined = "" + str2 + "_to_" + str;
-      previousAdDecision = trackRoundtrip;
-      obj = {};
+      const obj1 = {};
       const merged = Object.assign(timestamp);
       const _Date = Date;
       timestamp = Date.now();
-      obj.apiResponseTimestamp = timestamp;
-      obj.wasSuccessful = adRequestId.wasSuccessful;
-      obj.adRequestId = adRequestId;
-      tmp5 = trackRoundtrip(obj, combined, currentFetchedAt);
-      pendingRequests = self.pendingRequests;
-      self = pendingRequests.delete(arg0);
+      obj1.apiResponseTimestamp = timestamp;
+      obj1.wasSuccessful = adRequestId.wasSuccessful;
+      obj1.adRequestId = adRequestId;
+      tmp5 = trackRoundtrip(obj1, combined, currentFetchedAt);
+      const pendingRequests2 = self.pendingRequests;
+      self = pendingRequests2.delete(arg0);
     }
-    let questId;
+    let creative;
     if (previousAdDecision != tmp5) {
-      questId = previousAdDecision.questId;
+      creative = previousAdDecision.creative;
     }
-    let questId1;
-    if (pendingRequests != tmp5) {
-      questId1 = pendingRequests.questId;
+    const deliveredQuestId = result.getDeliveredQuestId(creative);
+    const obj6 = result;
+    const tmp17 = require;
+    let creative1;
+    if (tmp10 != tmp5) {
+      creative1 = tmp10.creative;
     }
     let str8 = "different_quest";
-    if (questId === questId1) {
+    if (deliveredQuestId === tmp17Result.getDeliveredQuestId(creative1)) {
       str8 = "same_quest";
     }
     combined = str8;
+    tmp17Result = result;
   }
 };
 let set = Object.create(QuestDecisionRoundtripTracker.prototype);

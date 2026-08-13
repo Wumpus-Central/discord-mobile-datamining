@@ -28,8 +28,8 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
         const hasPartySizeResult = hasPartySize.hasPartySize(partySize);
         let isPartyFullResult = !hasPartySizeResult;
         if (hasPartySizeResult) {
-          isPartyFullResult = tmp5(11205).isPartyFull(partySize);
-          const tmp5Result = tmp5(11205);
+          isPartyFullResult = tmp5(11206).isPartyFull(partySize);
+          const tmp5Result = tmp5(11206);
         }
         return !isPartyFullResult;
       } else {

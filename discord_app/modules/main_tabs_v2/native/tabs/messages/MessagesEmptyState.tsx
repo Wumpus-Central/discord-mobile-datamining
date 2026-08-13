@@ -48,7 +48,7 @@ export default function MessagesEmptyState() {
   const result = 0.9 * width;
   let tmp7Result = tmp7(4890);
   const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = tmp7(14416);
+  tmp7Result = tmp7(14407);
   const items1 = [tmp.scrollViewContentContainer, ];
   let tmp18;
   if (isScreenLandscape) {
@@ -61,7 +61,7 @@ export default function MessagesEmptyState() {
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: tmp2(15263), style: null };
+  const obj5 = { resizeMode: "contain", source: tmp2(15254), style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;

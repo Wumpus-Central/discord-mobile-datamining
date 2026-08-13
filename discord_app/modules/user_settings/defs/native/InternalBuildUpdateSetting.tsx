@@ -17,7 +17,7 @@ createToggle = {
     if (obj.useStateFromStores(items, () => null !== checkForNewerBuild.latestFetchedBuild().newBuild)) {
       let RefreshIcon = tmp(4292).DownloadIcon;
     } else {
-      RefreshIcon = tmp(13917).RefreshIcon;
+      RefreshIcon = tmp(13908).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -54,8 +54,8 @@ createToggle = {
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
-      importAll(13321).openBuildInstaller(newBuild);
-      const obj2 = importAll(13321);
+      importAll(13322).openBuildInstaller(newBuild);
+      const obj2 = importAll(13322);
     } else {
       checkForNewerBuild.checkForNewerBuild();
     }

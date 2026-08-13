@@ -37,7 +37,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const items2 = [callback(guildId(5436).BottomSheetTitleHeader, obj), , ];
   const obj2 = { leading: null, label: null, onPress: null };
   const obj3 = { source: null };
-  obj3[0] = stateFromStores1(11808);
+  obj3[0] = stateFromStores1(11809);
   obj2[0] = callback(guildId(1297).Icon, obj3);
   const obj4 = { text: null };
   const intl2 = guildId(1236).intl;
@@ -51,7 +51,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   items2[1] = callback(guildId(8012).FormRow, obj2);
   const obj5 = { leading: null, label: null, onPress: null };
   const obj6 = { source: null };
-  obj6[0] = tmp8(stateFromStores1 ? 11809 : 11810);
+  obj6[0] = tmp8(stateFromStores1 ? 11810 : 11811);
   obj5[0] = callback(guildId(1297).Icon, obj6);
   const intl3 = tmp2(1236).intl;
   const string = intl3.string;

@@ -39,9 +39,9 @@ export default function AppShare(targetUserId) {
   const items = [first];
   const effect = obj.useEffect(() => {
     if (!first) {
-      first(13775).init();
+      first(13766).init();
       dependencyMap(true);
-      const obj = first(13775);
+      const obj = first(13766);
     }
   }, items);
   const items1 = [targetUserId];
@@ -104,7 +104,7 @@ export default function AppShare(targetUserId) {
     obj = { appEntryKey: null, sharedContent: null, onClose: null };
     obj[0] = tmp18;
     obj[1] = targetUserId;
-    const tmp14Result = tmp14(13315);
+    const tmp14Result = tmp14(13316);
     if (tmp9Result.isMetaQuest()) {
       let exitApp = tmp14(8973).close;
     } else {
@@ -117,8 +117,8 @@ export default function AppShare(targetUserId) {
     const items5 = [tmp19(tmp9(5862).SceneLoadingIndicator, {}), , , ];
     obj1 = { appEntryKey: null };
     obj1[0] = tmp18;
-    items5[1] = tmp19(tmp9(16065).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16113), {});
+    items5[1] = tmp19(tmp9(16056).ActionSheetContainer, obj1);
+    items5[2] = tmp19(tmp14(16104), {});
     items5[3] = tmp19(tmp9(4688).AlertModalContainer, {});
     obj[1] = items5;
     return closure_11(tmp17, obj);

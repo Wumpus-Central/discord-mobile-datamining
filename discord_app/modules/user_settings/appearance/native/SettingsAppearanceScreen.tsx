@@ -20,8 +20,8 @@ const memoResult = importAllResult.memo(() => {
   let theme;
   nativeStackNavigation(4771)(() => {
     if (initialize.shouldSync("appearance")) {
-      const userCustomThemes = _undefined(14574).fetchUserCustomThemes();
-      const obj = _undefined(14574);
+      const userCustomThemes = _undefined(14565).fetchUserCustomThemes();
+      const obj = _undefined(14565);
     }
   });
   let items = [handleThemeChange, isSyncedModeThemesEnabled];
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = _useNavigation;
-  return jsx(nativeStackNavigation(13956), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(13947), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("initialize").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

@@ -211,7 +211,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [tmp16Result, ];
   tmp25Result = null;
   if (isFavoritesGuildIdResult) {
-    tmp25Result = tmp25(tmp7(15356).FavoritesGuildHeaderActionButton, {});
+    tmp25Result = tmp25(tmp7(15347).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp25Result;
   obj11[1] = items6;
@@ -220,7 +220,7 @@ export default function ChannelListStickyHeader(guild) {
   if (flag) {
     const obj12 = { guild: null, useButtonComponent: true, useEventsButton: true };
     obj12[0] = guild;
-    tmp25Result1 = tmp25(tmp(11727), obj12);
+    tmp25Result1 = tmp25(tmp(11728), obj12);
   }
   items7[1] = tmp25Result1;
   if (tmp25Result2) {
@@ -229,7 +229,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj14 = { guildId: null, joinSource: null };
     obj14[0] = guild.id;
     obj14[1] = JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER;
-    obj13[1] = tmp25(tmp(15361), obj14);
+    obj13[1] = tmp25(tmp(15352), obj14);
     tmp25Result2 = tmp25(tmp22, obj13);
   }
   items7[2] = tmp25Result2;
@@ -245,7 +245,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj16 = { targetRef: null, guild: null };
     obj16[0] = ref;
     obj16[1] = guild;
-    tmp25Result4 = tmp25(tmp(15362), obj16);
+    tmp25Result4 = tmp25(tmp(15353), obj16);
   }
   items7[4] = tmp25Result4;
   obj10[1] = items7;

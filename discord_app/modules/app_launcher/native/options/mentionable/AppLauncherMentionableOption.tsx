@@ -26,19 +26,19 @@ function MentionableIcon(mentionable) {
     return tmp7;
   } else {
     const type = mentionable.type;
-    if (tmp2(11624).MentionableItemTypes.USER === type) {
+    if (tmp2(11625).MentionableItemTypes.USER === type) {
       obj = { user: null, guildId: null, animate: null, size: null };
       obj[0] = mentionable.result.user;
       obj[1] = mentionable.guildId;
       obj[2] = !stateFromStores;
       obj[3] = tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32;
       return tmp5(tmp2(1297).Avatar, obj);
-    } else if (tmp2(11624).MentionableItemTypes.ROLE === type) {
+    } else if (tmp2(11625).MentionableItemTypes.ROLE === type) {
       const obj1 = { role: null };
       obj1[0] = mentionable.result;
-      return tmp5(tmp2(11625).RoleIcon, obj1);
+      return tmp5(tmp2(11626).RoleIcon, obj1);
     } else {
-      const GLOBAL = tmp2(11624).MentionableItemTypes.GLOBAL;
+      const GLOBAL = tmp2(11625).MentionableItemTypes.GLOBAL;
       return tmp7;
     }
   }

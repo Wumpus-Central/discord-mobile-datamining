@@ -98,8 +98,8 @@ function _emitClickEventWithCreative() {
             return obj3;
           } else {
             constants = arg1;
-            if (c1 !== lib(7233).AdCreativeType.QUEST) {
-              obj3 = lib(7222);
+            if (c1 !== lib(7222).AdCreativeType.QUEST) {
+              obj3 = lib(7223);
               const obj4 = { adContentId: null, relatedQuestId: null, adCreativeType: null, event: null, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
               obj4[0] = lib.adCreativeId;
               obj4[1] = lib.relatedQuestId;
@@ -131,7 +131,7 @@ function _emitClickEventWithCreative() {
               obj6[1] = constants.QUEST_CONTENT_CLICKED;
               obj7 = {};
               const merged1 = Object.assign(constants);
-              const obj13 = lib(7222);
+              const obj13 = lib(7223);
               const adMetadataSealed = lib(7204).getAdMetadataSealed(c3, adCreativeId);
               dependencyMap = adMetadataSealed;
               if (adMetadataSealed == null) {
@@ -382,7 +382,7 @@ function handleViewImpression(minViewTimeSeconds) {
   const obj4 = getBrandSafetyContext;
   const merged2 = Object.assign(getQuestContentName.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
   if (minViewTimeSeconds.adCreativeType !== AdCreativeType.AdCreativeType.QUEST) {
-    let tmp9Result = tmp9(7222);
+    let tmp9Result = tmp9(7223);
     obj = { event: null, adContentId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
     obj[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
     ({ adCreativeId: obj9[1], adCreativeType: obj9[2] } = minViewTimeSeconds);
@@ -395,7 +395,7 @@ function handleViewImpression(minViewTimeSeconds) {
     tmp9Result.trackAdContentEvent(obj);
   } else {
     const adCreativeId = minViewTimeSeconds.adCreativeId;
-    tmp9Result = tmp9(7222);
+    tmp9Result = tmp9(7223);
     obj1 = { event: null, questId: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
     obj1[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
     obj1[1] = adCreativeId;
@@ -485,7 +485,7 @@ function _handleViewInternalSurfaceImpressionAction() {
             lib2 = arg1;
             const obj2 = {};
             const obj9 = lib2(698);
-            const merged = Object.assign(lib(7232).getContentProperties(lib.surfaceId));
+            const merged = Object.assign(lib(7233).getContentProperties(lib.surfaceId));
             let advertisingId = null;
             if (null != lib2) {
               obj = lib(500);
@@ -511,7 +511,7 @@ function _handleViewInternalSurfaceImpressionAction() {
             }
             obj2.is_targeted = lib2;
             obj9.track(constants.QUEST_CONTENT_VIEWED, obj2);
-            const obj11 = lib(7232);
+            const obj11 = lib(7233);
           }
           constants = 3;
           obj3 = { value: null, done: true };

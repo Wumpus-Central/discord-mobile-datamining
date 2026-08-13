@@ -45,7 +45,7 @@ export const StepModal = function StepModal(steps) {
   obj = { height: steps(5307).NAV_BAR_HEIGHT + tmp3.top };
   obj.headerStyle = obj;
   obj.hideTitle = true;
-  const items1 = [callback2(steps(11386).Modal, obj), ];
+  const items1 = [callback2(steps(11387).Modal, obj), ];
   const obj1 = { style: items2, pointerEvents: "box-none", children: null };
   items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
   const obj2 = { currentStep: tmp4[0], totalSteps: null };
@@ -57,7 +57,7 @@ export const StepModal = function StepModal(steps) {
     num = 0;
   }
   obj2[1] = num;
-  obj1[2] = callback2(steps(13494).ModalStepIndicator, obj2);
+  obj1[2] = callback2(steps(13495).ModalStepIndicator, obj2);
   items1[1] = callback2(View, obj1);
   obj[1] = items1;
   return closure_7(View, obj);

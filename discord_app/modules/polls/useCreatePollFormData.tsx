@@ -184,11 +184,11 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
               const callback = closure_1;
               closure_1 = callback2;
               outer1_19(callback, closure_1);
-              outer1_18(first3(callback2, callback(11647).PollMediaUploadAttachmentStatus.PREPARING), closure_1);
+              outer1_18(first3(callback2, callback(11648).PollMediaUploadAttachmentStatus.PREPARING), closure_1);
               table = 1;
               c6 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback2(11645).handlePollGifAttachmentAdd(callback, table[closure_1].localCreationAnswerId, callback2);
+              obj1[0] = callback2(11646).handlePollGifAttachmentAdd(callback, table[closure_1].localCreationAnswerId, callback2);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -201,9 +201,9 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
             return obj;
           } else {
             if (null != arg1) {
-              outer1_18(first3(closure_1, callback(11647).PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), callback);
+              outer1_18(first3(closure_1, callback(11648).PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), callback);
             } else {
-              outer1_18(first3(closure_1, callback(11647).PollMediaUploadAttachmentStatus.ERROR), callback);
+              outer1_18(first3(closure_1, callback(11648).PollMediaUploadAttachmentStatus.ERROR), callback);
             }
             c6 = 3;
           }

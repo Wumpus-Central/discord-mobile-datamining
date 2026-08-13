@@ -55,7 +55,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let tmp2Result = tmp2(589);
   const items1 = [createEmptyPromotionsByType];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = tmp2(16086);
+  tmp2Result = tmp2(16077);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;

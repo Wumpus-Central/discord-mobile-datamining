@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/BellZIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/12630_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12631_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

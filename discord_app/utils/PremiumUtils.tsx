@@ -2604,8 +2604,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.SHOP_DISCOUNTS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13395);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13395).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13396);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13396).COLLECTIBLES, currentUser);
     }
     return isCrepeEnabled;
   },
@@ -2620,8 +2620,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.MORE_QUEST_ORBS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13395);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13395).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13396);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13396).QUEST_ORB_MULTIPLIER, perks);
     }
     return isCrepeEnabled;
   },

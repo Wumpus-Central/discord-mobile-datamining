@@ -6,7 +6,6 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import addSku from "addSku";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
-import { registerAsset } from "../../../../../../../_runtime/12644_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12645_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12646_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12647_registerAsset.js";
@@ -17,6 +16,7 @@ import { registerAsset } from "../../../../../../../_runtime/12651_registerAsset
 import { registerAsset } from "../../../../../../../_runtime/12652_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12653_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12654_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12655_registerAsset.js";
 import { metadata } from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import { getGradientColorByPercentage } from "../../../../../client_themes/native/ClientThemesUtils.tsx";
 import { getEmbedThemeColors } from "getEmbedThemeColors.tsx";

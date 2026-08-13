@@ -234,7 +234,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = undefined;
             c1 = undefined;
             if (null == outer1_0._timeoutId) {
-              if (null != outer1_1(16569)) {
+              if (null != outer1_1(16560)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj1 = { value: null, done: false };
@@ -255,7 +255,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
                 let checkForStallReportResult;
-                obj = outer1_1(16569);
+                obj = outer1_1(16560);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }

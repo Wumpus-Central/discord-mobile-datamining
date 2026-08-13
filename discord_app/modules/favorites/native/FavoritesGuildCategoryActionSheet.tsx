@@ -10,7 +10,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
   let dependencyMap;
-  const tmp3 = onClose(12196)(category);
+  const tmp3 = onClose(12197)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(4034).DeveloperMode;
   const setting = DeveloperMode.useSetting();

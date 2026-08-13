@@ -42,9 +42,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(589);
-  const tmp3 = useMessagePreview(channel, { unread: channel(15547).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreview(channel, { unread: channel(15538).useBaseChannelUnreadBadgeState(channel, false).unread });
   c4 = tmp3;
-  const obj3 = channel(15547);
+  const obj3 = channel(15538);
   const items2 = [updateUserGuildSettingsInternal];
   stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_7.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -81,7 +81,7 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(12629);
+        tmp5Result = tmp5(12630);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
         BellSlashIcon = tmp5(9781).BellSlashIcon;
@@ -109,7 +109,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return callback(channel(15510).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(15501).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });

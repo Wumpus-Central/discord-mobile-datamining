@@ -5,7 +5,7 @@ import { EventActionType } from "EventActionType";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/16614_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16605_registerAsset.js";
 
 let c4;
 let c5;
@@ -39,7 +39,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items);
   const callback1 = React.useCallback(() => {
     let obj = outer1_1(outer1_2[7]);
-    obj = { action_type: outer1_6.SKIP_STEP, action_location: _location, permission_granted: "e" };
+    obj = { action_type: outer1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     obj.track(outer1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
     outer1_1(outer1_2[9]).hideActionSheet();
   }, items1);

@@ -4,8 +4,8 @@ import handleThemeChange from "handleThemeChange";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/11250_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/11251_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11252_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
@@ -53,9 +53,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(11248);
+      let tmp13Result = tmp13(11249);
     } else {
-      tmp13Result = tmp13(11249);
+      tmp13Result = tmp13(11250);
     }
     obj = { source: null };
     obj[0] = tmp13Result;

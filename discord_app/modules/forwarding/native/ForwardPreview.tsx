@@ -97,7 +97,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num == null) {
       num = 0;
     }
-    tmp6 = tmp2(11142).CHECKPOINT_PERSONA_COLORS[num];
+    tmp6 = tmp2(11143).CHECKPOINT_PERSONA_COLORS[num];
   }
   if (tmp6 != null) {
     const primaryColor = tmp6.primaryColor;
@@ -120,7 +120,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         obj[0] = num2;
         obj[1] = num3;
         let formatToPlainStringResult = intl4.formatToPlainString(tmp2(1236).t.Lr0Top, obj);
-        let AttachmentIcon = tmp2(11145).ImagesIcon;
+        let AttachmentIcon = tmp2(11146).ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
@@ -205,7 +205,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       if (1 === num2) {
         let ImagesIcon = tmp2(4856).ImageIcon;
       } else {
-        ImagesIcon = tmp2(11145).ImagesIcon;
+        ImagesIcon = tmp2(11146).ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
       formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.h4pFfU, obj11);

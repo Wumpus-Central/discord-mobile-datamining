@@ -102,7 +102,7 @@ export default function ConnectivityGlobalStatusContent() {
   tmp5Result = tmp5(4890);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4197).isModalOpen(tmp2(10624));
+    isScreenLandscape = tmp5(4197).isModalOpen(tmp2(10626));
     const tmp5Result1 = tmp5(4197);
   }
   if (isScreenLandscape) {
@@ -130,7 +130,7 @@ export default function ConnectivityGlobalStatusContent() {
     obj1[3] = isThemeDarkResult;
     obj1[4] = rtcConnectionState;
     obj1[5] = remotePlatform;
-    tmp19 = callback(tmp2(10745), obj1);
+    tmp19 = callback(tmp2(10747), obj1);
   }
   items3[1] = tmp19;
   obj[1] = items3;

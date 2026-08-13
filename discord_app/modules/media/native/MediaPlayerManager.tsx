@@ -25,7 +25,7 @@ let map1;
 let closure_16 = new require("ensureGuildLoaded")("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   let closure_0 = arg0;
-  const obj = {
+  return {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "PX_16",
     canAccessMedia: "disabled",
@@ -33,15 +33,13 @@ let obj = keys.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "ct",
-    showPip: "UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL",
+    showPip: "button-action",
     closePip() {
       callback(outer1_2[13]).batchUpdates(() => callback({ showPip: false }));
     },
-    displayedMediaItemIdsPerChannel: "heading-lg/extrabold",
-    currentlyDisplayedChannelId: "interactive-text-active"
+    displayedMediaItemIdsPerChannel: {},
+    currentlyDisplayedChannelId: null
   };
-  obj[9] = {};
-  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {

@@ -42,9 +42,9 @@ export default function BuyNitroPlanSelector(planSelection) {
   });
   let obj1 = planSelection(7693);
   isBuyNitroPurchaseBlocked = obj1.useIsBuyNitroPurchaseBlocked();
-  let obj2 = planSelection(12743);
+  let obj2 = planSelection(12744);
   updateProduct = obj2.useBuyNitroPlanLabelRenderer();
-  let obj3 = planSelection(12744);
+  let obj3 = planSelection(12745);
   closure_5 = obj3.useBuyNitroPlanSubLabelRenderer();
   obj = { style: tmp.header, children: null };
   obj = { title: null };
@@ -52,7 +52,7 @@ export default function BuyNitroPlanSelector(planSelection) {
   obj[0] = intl.string(planSelection(1236).t.u95Dt4);
   const items1 = [callback(selection(7787), obj), ];
   obj1 = { selectedTier: selection.tier, setSelectedTier: selection.setTier, disabled: isBuyNitroPurchaseBlocked };
-  items1[1] = callback(selection(12745), obj1);
+  items1[1] = callback(selection(12746), obj1);
   obj[1] = items1;
   const children = [callback2(isBuyNitroPurchaseBlocked, obj), , ];
   let tmp8Result = null != selection.productId;

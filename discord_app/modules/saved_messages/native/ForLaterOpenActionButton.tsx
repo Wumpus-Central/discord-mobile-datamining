@@ -26,7 +26,7 @@ function BadgedIcon(arg0) {
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4306).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11158).BookmarkIcon;
+    BookmarkIcon = tmp4(11159).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

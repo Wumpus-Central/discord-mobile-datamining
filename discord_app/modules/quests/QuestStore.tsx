@@ -5,6 +5,7 @@ import _toPropertyKey from "_toPropertyKey";
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import { Store } from "initialize";
 import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { AdCreativeType } from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import { QuestRewardTypes } from "../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 import { result } from "../ads/utils/AdDecisionUtils.tsx";
@@ -550,13 +551,13 @@ const questStore = new QuestStore(require("dispatcher"), {
   QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(arg0) {
     let adContext;
     let adDecisionData;
+    let creative;
     let fetchedAt;
     let metadataSealed;
     let placement;
-    let quest;
     let responseTtlSeconds;
     let trafficMetadataSealed;
-    ({ quest, placement } = arg0);
+    ({ creative, placement } = arg0);
     ({ adDecisionData, adContext, responseTtlSeconds, metadataSealed, trafficMetadataSealed, fetchedAt } = arg0);
     let closure_13 = Date.now();
     let c4 = false;
@@ -567,28 +568,15 @@ const questStore = new QuestStore(require("dispatcher"), {
       value.succeed();
     }
     map.delete(placement);
-    let id;
-    if (quest != null) {
-      id = quest.id;
+    if (creative == null) {
+      creative = null;
     }
-    if (id == null) {
-      id = null;
-    }
-    const obj = { questId: id, adCreativeId: null, fetchedAt: null, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-    let id1;
-    if (quest != null) {
-      id1 = quest.id;
-    }
-    if (id1 == null) {
-      id1 = null;
-    }
-    obj[1] = id1;
-    obj[2] = fetchedAt;
-    obj[3] = result.resolveResponseTtl(responseTtlSeconds);
-    obj[4] = adDecisionData;
-    obj[5] = adContext;
-    obj[6] = metadataSealed;
-    obj[7] = trafficMetadataSealed;
+    const obj = { creative, fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
+    obj[2] = result.resolveResponseTtl(responseTtlSeconds);
+    obj[3] = adDecisionData;
+    obj[4] = adContext;
+    obj[5] = metadataSealed;
+    obj[6] = trafficMetadataSealed;
     map1 = new Map(map1);
     const result1 = map1.set(placement, obj);
   },
@@ -616,8 +604,8 @@ const questStore = new QuestStore(require("dispatcher"), {
     ({ responseTtlSeconds, fetchedAt } = placement);
     map = new Map(map);
     const result = map.set(placement, false);
-    const obj = { questId: null, adCreativeId: null, fetchedAt, ttlMillis: null };
-    obj[3] = result.resolveResponseTtl(responseTtlSeconds);
+    const obj = { creative: null, fetchedAt, ttlMillis: null };
+    obj[2] = result.resolveResponseTtl(responseTtlSeconds);
     map1 = new Map(map1);
     const result1 = map1.set(placement, obj);
   },
@@ -1483,23 +1471,21 @@ const questStore = new QuestStore(require("dispatcher"), {
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function handleFetchQuestHomeHeroSuccess(fetchedAt) {
-    let c45;
-    let questHomeHero;
     let c44 = false;
     let closure_43 = Date.now();
     map = new Map(map);
     const result = map.set(fetchedAt.placement, false);
-    ({ questHomeHero: c45, questHomeHero } = fetchedAt);
-    let id;
-    if (questHomeHero != null) {
-      id = questHomeHero.id;
+    const questHomeHero = fetchedAt.questHomeHero;
+    let tmp2 = null;
+    if (null != fetchedAt.questHomeHero) {
+      let obj = { type: null, questHomeHero: null };
+      obj[0] = AdCreativeType.AdCreativeType.QUEST_HOME_HERO;
+      obj[1] = fetchedAt.questHomeHero;
+      tmp2 = obj;
     }
-    if (id == null) {
-      id = null;
-    }
-    const obj = { questId: null, adCreativeId: id, fetchedAt: fetchedAt.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-    obj[3] = result.resolveResponseTtl(fetchedAt.responseTtlSeconds);
-    ({ adDecisionData: obj2[4], adContext: obj2[5], metadataSealed: obj2[6], trafficMetadataSealed: obj2[7] } = fetchedAt);
+    obj = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
+    obj[2] = result.resolveResponseTtl(fetchedAt.responseTtlSeconds);
+    ({ adDecisionData: obj3[3], adContext: obj3[4], metadataSealed: obj3[5], trafficMetadataSealed: obj3[6] } = fetchedAt);
     map1 = new Map(map1);
     const result1 = map1.set(fetchedAt.placement, obj);
   },

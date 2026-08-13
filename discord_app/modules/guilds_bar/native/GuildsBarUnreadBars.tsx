@@ -260,7 +260,7 @@ function findFirstOrLastMentionedItem(scrollPosValue) {
               obj[2] = arg2;
               let tmp36 = checkNodeAndIterate(obj);
               if (null != tmp36) {
-                let obj1 = { beforeItem: "Array", afterItem: "Array" };
+                let obj1 = { beforeItem: "Array", afterItem: 0 };
                 let obj2 = { section: null, row: null, mention: true };
                 obj2[0] = tmp36.section + tmp50.GUILDS;
                 obj2[1] = tmp36.item;
@@ -271,7 +271,7 @@ function findFirstOrLastMentionedItem(scrollPosValue) {
               }
               return tmp37;
             }
-            let obj3 = { beforeItem: null, afterItem: "Array" };
+            let obj3 = { beforeItem: null, afterItem: "a" };
             let obj4 = { section: null, row: null, mention: true };
             obj4[0] = sum;
             obj4[1] = tmp32.item;
@@ -290,8 +290,8 @@ let c4 = importAllResult;
 ({ FastListRenderSections: c10, useGuildWrapperSize: unpackModuleId, GUILD_LIST_WIDTH } = GUILD_ITEM_SIZE);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = CONNECTION_BANNER_HEIGHT);
 let closure_15 = createCacheKey.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "Array", afterItem: "ct" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
+let closure_17 = { beforeItem: "isArray", afterItem: "accessibilityRole" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
 let closure_20 = { code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}" };
 let closure_21 = { code: "function GuildsBarUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}" };
 const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {

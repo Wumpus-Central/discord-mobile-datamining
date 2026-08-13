@@ -119,12 +119,12 @@ const memoResult = importAllResult.memo((channel) => {
   obj6[2] = intl.string(id(1236).t["13/7kX"]);
   obj6[3] = tmp.chatHeaderBackIconContainer;
   const obj7 = { source: null, size: null };
-  obj7[0] = guild_id(11025);
+  obj7[0] = guild_id(11026);
   obj7[1] = id(1297).Icon.Sizes.MEDIUM;
   obj6[4] = callback(id(1297).Icon, obj7);
   const items7 = [callback(id(4887).PressableOpacity, obj6), ];
   const tmp12 = guild_id(4278)();
-  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12187).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12188).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj5[1] = items7;
   items3[4] = closure_7(View, obj5);
   obj1[2] = items3;

@@ -63,7 +63,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj[1] = product;
     obj[2] = isSubscription;
     obj[3] = subscriptionPlanId;
-    const items = [closure_4(tmp2(14224), obj), ];
+    const items = [closure_4(tmp2(14215), obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.textContainer;
     const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };

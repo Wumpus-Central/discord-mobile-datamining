@@ -32,7 +32,7 @@ let closure_18 = { code: "function VoicePanelPIPPushToTalkOverlayTsx6(){const{ru
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  let obj = sharedValue(16252);
+  let obj = sharedValue(16243);
   const pIPState = obj.usePIPState();
   sharedValue = pIPState;
   let tmp2 = callback3();
@@ -120,7 +120,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       return obj;
     }
   }
-  obj1 = { withSpring: sharedValue(4754).withSpring, isPushingToTalk: first, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: sharedValue(16247).getVoicePanelPIPBorderRadius, pipState: pIPState };
+  obj1 = { withSpring: sharedValue(4754).withSpring, isPushingToTalk: first, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: sharedValue(16238).getVoicePanelPIPBorderRadius, pipState: pIPState };
   H.__closure = obj1;
   H.__workletHash = 450590017248;
   H.__initData = closure_15;
@@ -170,7 +170,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   items5 = [tmp2.iconContainer, animatedStyle];
   let obj5 = { style: animatedStyle1, size: null, source: null, disableColor: true };
   obj5[1] = sharedValue(1297).Icon.Sizes.SMALL_20;
-  obj5[2] = first(16322);
+  obj5[2] = first(16313);
   obj4[2] = callback(closure_10, obj5);
   obj3[1] = callback(set, obj4);
   items4[1] = callback(sharedValue(5467).GestureDetector, obj3);

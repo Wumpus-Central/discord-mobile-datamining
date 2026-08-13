@@ -7,7 +7,7 @@ import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/08545_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10905_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10907_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
@@ -46,15 +46,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10846);
+    let tmp5 = channelId(10848);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(10684);
+    tmp5 = channelId(10686);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(10685);
+      tmp5 = channelId(10687);
       flag3 = false;
     }
   }
@@ -81,7 +81,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => outer1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10904);
+    tmp4 = channelId(10906);
   }
   let tmp6 = null;
   if (null != tmp4) {

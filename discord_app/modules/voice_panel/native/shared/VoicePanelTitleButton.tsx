@@ -9,7 +9,7 @@ import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/05423_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/07736_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16267_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16258_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { TwinButtons } from "../../../../design/components/experimental/native.tsx";
@@ -162,7 +162,7 @@ let closure_11 = createCacheKey.createStyles({ userIcons: { marginLeft: -6 }, ch
 const memoResult = importAllResult.memo(function VoicePanelTitleButton() {
   let channelType;
   let focused;
-  const context = importAllResult.useContext(channelId(11703));
+  const context = importAllResult.useContext(channelId(11704));
   const guildId = context.guildId;
   channelId = context.channelId;
   ({ channelType, focused } = context);
@@ -174,7 +174,7 @@ const memoResult = importAllResult.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(16263)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(16254)(derivedStateFromSharedValue, channelId, guildId);
   const items = [guildId, channelId];
   const onPress = importAllResult.useCallback(() => {
     const result = guildId(outer1_2[28]).openVoicePanelSettingsActionSheet(guildId, channelId);

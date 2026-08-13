@@ -234,7 +234,7 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(10851);
+      let obj = callback(10853);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = callback(1236).intl;

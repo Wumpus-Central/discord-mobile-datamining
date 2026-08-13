@@ -131,7 +131,7 @@ function UserActionSheet(pool) {
   fetchFingerprint = React.useCallback((arg0) => {
     usersForPool(4310).hideActionSheet("generated-test-users");
     const obj = usersForPool(4310);
-    pool(13950).loginAsGeneratedUser(pool.id, arg0);
+    pool(13941).loginAsGeneratedUser(pool.id, arg0);
   }, items);
   let obj = { header: null, children: null };
   obj = { title: pool.summary, subtitle: null };
@@ -143,7 +143,7 @@ function UserActionSheet(pool) {
   obj2[2] = usersForPool.map((id) => {
     let closure_0 = id;
     const obj = { icon: null, label: null, subLabel: null, onPress: null, disabled: null, trailing: null, start: null, end: null };
-    obj[0] = outer1_10(pool(11274).UserIcon, { size: "md" });
+    obj[0] = outer1_10(pool(11275).UserIcon, { size: "md" });
     ({ username: obj[1], email: obj[2] } = id);
     obj[3] = function onPress() {
       return outer1_3(id.id);

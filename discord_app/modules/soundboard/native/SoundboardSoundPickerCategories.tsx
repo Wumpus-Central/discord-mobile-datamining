@@ -7,7 +7,7 @@ import ME from "ME";
 import jsxProd from "isSoundboardSectionNitroLocked";
 import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/10005_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16237_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16228_registerAsset.js";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 import { SoundButtonOverlay } from "../SoundboardTypes.tsx";

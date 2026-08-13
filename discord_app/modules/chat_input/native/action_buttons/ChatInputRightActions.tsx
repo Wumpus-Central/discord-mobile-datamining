@@ -31,7 +31,7 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounce(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThread, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL" });
+  obj.children = callback2(renderChatInputActionButtonGiftAndThread, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "button-action" });
   return callback2(ReanimatedRexport.View, obj);
 }
 let c4 = importAllResult;
@@ -91,7 +91,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj1[0] = keyboardType === channel(1626).KeyboardTypes.EXPRESSION;
   obj1[1] = showKeyboardIcon;
   obj1[2] = onPressExpression;
-  items1[1] = callback2(onPressAction(11618), obj1);
+  items1[1] = callback2(onPressAction(11619), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

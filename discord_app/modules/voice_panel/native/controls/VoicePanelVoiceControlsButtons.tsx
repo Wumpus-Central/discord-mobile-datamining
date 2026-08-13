@@ -15,9 +15,9 @@ import { MediaEngineContextTypes } from "DesktopSources";
 import { jsx } from "initialize";
 import { registerAsset } from "../../../../../_runtime/08063_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10313_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10840_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16275_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16276_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10842_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16266_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16267_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
 import { HeadphonesSlashIcon } from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
@@ -184,7 +184,7 @@ export { GameConsoleAccountButton };
 export const ActivitiesButton = function ActivitiesButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = React.useContext(dismissPanel(11703)).dismissPanel;
+  dismissPanel = React.useContext(dismissPanel(11704)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = React.useCallback(() => {
     dismissPanel();
@@ -203,7 +203,7 @@ export const ActivitiesButton = function ActivitiesButton(openTab) {
 export const ChatButton = function ChatButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = React.useContext(dismissPanel(11703)).dismissPanel;
+  dismissPanel = React.useContext(dismissPanel(11704)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = React.useCallback(() => {
     dismissPanel();
@@ -241,7 +241,7 @@ export const ScreenshareButton = function ScreenshareButton(channel) {
   let text;
   let onPress;
   let isActive;
-  const tmp = isActive(10797)(channel.channel);
+  const tmp = isActive(10799)(channel.channel);
   onPress = tmp.onPress;
   isActive = tmp.isActive;
   const items = [isActive, onPress];
@@ -281,7 +281,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
     obj = { title: null, hasIcons: false, children: null };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.pEAl4b);
-    const tmp4Result = tmp4(10825);
+    const tmp4Result = tmp4(10827);
     let fn;
     if (tmpResult.isAndroid()) {
       fn = () => true;
@@ -373,7 +373,7 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj = { IconComponent: null, source: null };
   obj[0] = channelId(7759).VideoIcon;
-  obj[1] = stateFromStores(10796);
+  obj[1] = stateFromStores(10798);
   obj[0] = jsx(channelId(5420).TableRowIcon, { IconComponent: null, source: null });
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t.ZMTRyc);
@@ -403,7 +403,7 @@ export const HideSelfVideo = function HideSelfVideo() {
       if (!table) {
         if (!VIDEO) {
           VIDEO = outer1_15.VIDEO;
-          const f114121 = (arg0) => f114121(!VIDEO);
+          const f113991 = (arg0) => f113991(!VIDEO);
           let obj = callback(table[14]);
           obj = { importer: null };
           obj[0] = function importer() {
@@ -421,7 +421,7 @@ export const HideSelfVideo = function HideSelfVideo() {
           obj.openLazy(obj);
         }
       }
-      return f114121(!VIDEO);
+      return f113991(!VIDEO);
     };
     const intl = tmp5(1236).intl;
     obj[3] = intl.string(tmp5(1236).t.MH8ESU);

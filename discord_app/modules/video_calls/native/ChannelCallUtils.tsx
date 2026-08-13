@@ -4,9 +4,9 @@ import initialize from "initialize";
 import ME from "ME";
 import { jsx } from "showShareActionSheet";
 import { registerAsset } from "../../../../_runtime/08063_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10840_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16369_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16370_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10842_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16360_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16361_registerAsset.js";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

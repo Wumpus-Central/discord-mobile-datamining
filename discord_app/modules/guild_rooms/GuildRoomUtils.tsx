@@ -5,7 +5,7 @@ import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomObjectTypes.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };
-    obj[0] = tmp(13093).GuildRoomObjectTypes.PLANT;
+    obj[0] = tmp(13094).GuildRoomObjectTypes.PLANT;
     obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj2[0], created_by: obj2[1] } = object_type);
     let date;
@@ -18,7 +18,7 @@ function serverGuildRoomObjectToClient(object_type) {
     const merged = Object.assign(obj);
   } else {
     obj = { objectType: null };
-    obj[0] = tmp(13093).GuildRoomObjectTypes.NOTE;
+    obj[0] = tmp(13094).GuildRoomObjectTypes.NOTE;
     const obj1 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj4[0], created_by: obj4[1] } = object_type);
     let date1;
@@ -37,7 +37,7 @@ let result = require("GuildRoomObjectTypes").fileFinishedImporting("modules/guil
 
 export const findSeat = function findSeat(items1) {
   const _require = items1;
-  const seats = table[_require(undefined, 13089).GuildRoomBackgrounds.DEFAULT].seats;
+  const seats = table[_require(undefined, 13090).GuildRoomBackgrounds.DEFAULT].seats;
   return seats.find((position) => position.position.x === items1.x && position.position.y === tmp.y);
 };
 export const serverGuildRoomToClient = function serverGuildRoomToClient(body) {

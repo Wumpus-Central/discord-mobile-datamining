@@ -11,7 +11,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import { GuildScheduledEventEntityTypes as closure_14 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { InviteTypes } from "InviteSendStates";
-import { registerAsset } from "../../../../../../../../_runtime/12668_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/12669_registerAsset.js";
 import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
 import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../utils/GuildRecordUtils.tsx";
 import { getGuildEventsForCurrentUser } from "../../../../../../guild_scheduled_events/GuildScheduledEventManager.tsx";

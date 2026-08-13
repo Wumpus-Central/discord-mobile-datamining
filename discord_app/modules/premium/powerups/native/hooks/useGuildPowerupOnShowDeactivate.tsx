@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 import { asyncRequireImpl } from "../../../../../../_runtime/02007_asyncRequireImpl.js";
 
 const require = arg1;
-let closure_4 = importAllResult.lazy(() => asyncRequireImpl(11961, dependencyMap.paths));
+let closure_4 = importAllResult.lazy(() => asyncRequireImpl(11962, dependencyMap.paths));
 const result = require("GuildPowerupsDeactivateAlert").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
 
 export default function useGuildPowerupOnShowDeactivate(arg0, arg1) {

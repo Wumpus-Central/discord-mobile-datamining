@@ -3,12 +3,13 @@ import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { Pagination } from "../../../../../_runtime/13500_Pagination.js";
 
 const require = arg1;
-let obj = { container: { position: "relative", top: -16, marginBottom: -16 }, dot: null };
-obj = { width: 8, height: 8, borderRadius: require("Themes").radii.xs, marginHorizontal: 4, backgroundColor: require("Themes").colors.ICON_STRONG };
-obj[1] = obj;
+let obj = { container: null, dot: null };
+obj = { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: require("Themes").space.PX_20, paddingVertical: require("Themes").space.PX_32 };
+obj[0] = obj;
+createCacheKey = { width: 8, height: 8, borderRadius: require("Themes").radii.xs, marginHorizontal: 4, backgroundColor: require("Themes").colors.ICON_STRONG };
+obj[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 let closure_6 = { code: "function CarouselPaginationTsx1(){const{withTiming,active,STANDARD_EASING}=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');}" };
 let closure_7 = { code: "function CarouselPaginationTsx2(){const{interpolate,progress,interpolateColor,backgroundColor,brand500}=this.__closure;return{width:interpolate(progress.get(),[0,1],[8,16]),backgroundColor:interpolateColor(progress.get(),[0,1],[backgroundColor,brand500]),opacity:interpolate(progress.get(),[0,1],[0.3,1])};}" };
@@ -35,7 +36,7 @@ let closure_8 = require("noop").memo((active) => {
   derivedValue = obj.useDerivedValue(fn);
   BRAND_500 = derivedValue(BRAND_500[4]).unsafe_rawColors.BRAND_500;
   backgroundColor = tmp.dot.backgroundColor;
-  const fn2 = function c() {
+  const fn2 = function u() {
     const obj = { width: null, backgroundColor: null, opacity: null };
     obj[0] = active(BRAND_500[5]).interpolate(derivedValue.get(), [0, 1], [8, 16]);
     const obj2 = active(BRAND_500[5]);
@@ -55,13 +56,14 @@ let closure_8 = require("noop").memo((active) => {
 });
 const result = require("jsxProd").fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");
 
-export default function CarouselPagination(arg0) {
+export default function CarouselPagination(currentIndex) {
   let containerStyle;
-  let currentIndex;
   let numberOfItems;
-  ({ numberOfItems, currentIndex, containerStyle } = arg0);
-  const tmp2 = <closure_8 />;
-  const tmp = callback();
-  const items = [tmp.container, containerStyle];
-  return <View style={items}>{jsx(Pagination.Pagination, { dotElement: tmp2, inactiveDotElement: tmp2, dotsLength: numberOfItems, activeDotIndex: currentIndex })}</View>;
+  currentIndex = currentIndex.currentIndex;
+  ({ numberOfItems, containerStyle } = currentIndex);
+  const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const items = [callback().container, containerStyle];
+  obj[0] = items;
+  obj[4] = Array.from({ length: numberOfItems }, (arg0, arg1) => outer1_4(outer1_8, { active: arg1 === currentIndex }, arg1));
+  return <View style={null} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">{null}</View>;
 };

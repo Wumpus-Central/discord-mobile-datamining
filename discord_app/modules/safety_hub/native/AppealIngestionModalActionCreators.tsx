@@ -10,7 +10,7 @@ export default {
     let obj = dispatcher;
     obj = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     obj.dispatch(obj);
-    ModalActionCreators.pushLazy(asyncRequireImpl(11351, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(11352, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
     ModalActionCreators.popWithKey(APPEAL_INGESTION_MODAL_KEY);

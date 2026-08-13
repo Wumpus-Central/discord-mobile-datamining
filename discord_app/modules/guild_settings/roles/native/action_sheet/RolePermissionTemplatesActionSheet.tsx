@@ -7,7 +7,7 @@ import createCacheKey from "createCacheKey";
 import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { width } from "../GuildSettingsRoleTemplate.tsx";
+import { GuildSettingsRoleTemplate } from "../GuildSettingsRoleTemplate.tsx";
 
 let c5;
 let closure_6;
@@ -34,7 +34,7 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
   const tmp = createCacheKey();
   obj = { header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
   obj = { style: tmp.templateContainer, children: null };
-  obj[1] = jsx(width, {
+  obj[1] = jsx(GuildSettingsRoleTemplate, {
     onSelect(arg0) {
       let closure_0 = arg0;
       if (closure_0) {

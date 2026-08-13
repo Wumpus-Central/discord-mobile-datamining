@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12167_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12168_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -63,7 +63,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
     learnMoreHook(arg0, arg1) {
       const obj = { onPress: null, variant: "text-sm/medium", color: "text-link", children: null };
-      obj[0] = callback(12097).handleOpenLearnMoreLink;
+      obj[0] = callback(12098).handleOpenLearnMoreLink;
       obj[3] = arg0;
       return callback2(callback(4338).Text, obj, arg1);
     }

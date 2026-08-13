@@ -14,7 +14,7 @@ import jsxProd from "registerAsset";
 import importDefaultResult from "module_4083";
 import createCacheKey from "createCacheKey";
 import importDefaultResult1 from "module_4083";
-import { registerAsset } from "../../../../../_runtime/16267_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16258_registerAsset.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
@@ -57,11 +57,11 @@ function StreamIcon(voicePlatform) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let source = registerAsset;
   if (voicePlatform === constants2.XBOX) {
-    source = tmp(16310);
+    source = tmp(16301);
   } else if (voicePlatform === tmp6.MOBILE) {
-    source = tmp(10917);
+    source = tmp(10919);
   } else if (voicePlatform === tmp6.QUEST) {
-    source = tmp(16311);
+    source = tmp(16302);
   }
   const style = [callback2(useIsMobileVisualRefreshExperimentEnabled("VoicePanelCardFloatingControls")).iconWithoutBackground, animatedStyle];
   return callback(closure_19, { source, style });
@@ -74,15 +74,15 @@ function AnimatedLabelIcon(icon) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
-  } else if (tmp4(16265).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
+  } else if (tmp4(16256).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
     obj = { style: null, hitSlop: 12, onPress: null, children: null };
     obj[0] = tmp3.speakerMuteIcon;
     obj[2] = icon.onPress;
     const obj1 = { style: null };
     obj1[0] = tmp3.iconWithoutBackground;
-    obj[3] = callback(tmp4(10826).VoiceXIcon, obj1);
+    obj[3] = callback(tmp4(10828).VoiceXIcon, obj1);
     return callback(Pressable, obj);
-  } else if (tmp4(16265).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
+  } else if (tmp4(16256).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
     const obj2 = { style: null, onPress: null, children: null };
     obj2[0] = tmp3.iconContainer;
     obj2[1] = icon.onPress;
@@ -91,7 +91,7 @@ function AnimatedLabelIcon(icon) {
     obj3[1] = icon.videoIconState;
     obj2[2] = callback(tmp4(9228).VideoIcon, obj3);
     return callback(Pressable, obj2);
-  } else if (tmp4(16265).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
+  } else if (tmp4(16256).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp3.iconContainer;
     const obj5 = { onPress: null, hitSlop: 12, children: null };
@@ -102,7 +102,7 @@ function AnimatedLabelIcon(icon) {
     obj5[2] = callback(tmp4(9228).MuteDeafenIcon, obj6);
     obj4[1] = callback(Pressable, obj5);
     return callback(tmp(5821), obj4);
-  } else if (tmp4(16265).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
+  } else if (tmp4(16256).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
     obj = { style: null, onPress: null, children: null };
     obj[0] = tmp3.iconContainer;
     obj[1] = icon.onPress;
@@ -158,7 +158,7 @@ let closure_27 = importAllResult.memo((participant) => {
   controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = importAllResult.useContext(guildId(11703)).guildId;
+  guildId = importAllResult.useContext(guildId(11704)).guildId;
   let obj = controlsHidden(4083);
   const fn = function n() {
     const value = controlsHidden.get();
@@ -205,13 +205,13 @@ let closure_27 = importAllResult.memo((participant) => {
     }
   }, items);
   obj = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
-  obj[0] = guildId(16312);
+  obj[0] = guildId(16303);
   obj[1] = callback;
   obj[2] = animatedStyle;
   obj[3] = layout;
   const tmp3 = closure_16;
-  const tmp4 = guildId(16195);
-  const result = controlsHidden(16263).isStableActivityParticipant(participant);
+  const tmp4 = guildId(16186);
+  const result = controlsHidden(16254).isStableActivityParticipant(participant);
   const intl = controlsHidden(1236).intl;
   const string = intl.string;
   const t = controlsHidden(1236).t;

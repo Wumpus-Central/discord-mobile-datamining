@@ -16,7 +16,7 @@ class ICYMIForumThreadRow {
     message = global.message;
     c2 = undefined;
     author = undefined;
-    tmp = f62490();
+    tmp = f62470();
     tmp2 = channel;
     tmp3 = c2;
     obj = require("initialize");

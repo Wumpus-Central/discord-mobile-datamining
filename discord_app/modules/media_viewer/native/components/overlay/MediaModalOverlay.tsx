@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "MediaModalOverlayHeader";
 import get_ActivityIndicator from "ObscuredView";
-import jsxProd from "module_12314";
+import jsxProd from "module_12315";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
@@ -29,7 +29,7 @@ function OverlayMuteButton(arg0) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.w4m945);
   obj = { left: true, right: true, children: null };
-  obj[2] = importDefault(isMuted ? 12304 : 10866);
+  obj[2] = importDefault(isMuted ? 12305 : 10868);
   obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
@@ -45,7 +45,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.UIsxUw);
   obj = { left: true, right: true, children: null };
-  obj[2] = importDefault(spoilerActive ? 12305 : 12306);
+  obj[2] = importDefault(spoilerActive ? 12306 : 12307);
   obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
@@ -57,7 +57,7 @@ function MediaModalOverlay(getVideoControls) {
   let source;
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  let obj = index(12309);
+  let obj = index(12310);
   const items = [index];
   const items1 = [videoControls];
   const callback = importAllResult.useCallback(() => index(outer1_2[25]).toggleSpoiler(index), items);
@@ -194,7 +194,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj9[5] = onClose;
     obj9[6] = tmp8;
     obj9[7] = overlayEnabled;
-    tmp21Result2 = tmp21(tmp2(12315).MediaModalOverlayFooter, obj9);
+    tmp21Result2 = tmp21(tmp2(12316).MediaModalOverlayFooter, obj9);
   }
   const obj10 = { children: null };
   items3[2] = tmp21Result2;

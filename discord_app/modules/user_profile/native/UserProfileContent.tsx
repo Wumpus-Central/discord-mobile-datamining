@@ -246,7 +246,7 @@ function EditSection(guildId) {
   obj[3] = function onPress() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
     trackUserProfileAction(4310).hideActionSheet();
-    trackUserProfileAction(10569)();
+    trackUserProfileAction(10571)();
     dependencyMap();
   };
   obj[2] = callback(guildId(4755).Button, obj);
@@ -261,13 +261,13 @@ function EditSection(guildId) {
     obj2[3] = function onPress() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
       trackUserProfileAction(4310).hideActionSheet();
-      trackUserProfileAction(10569)();
+      trackUserProfileAction(10571)();
       callback();
     };
     tmp6Result = tmp6(tmp4(4755).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12339), obj);
+  return callback(trackUserProfileAction(12340), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let containerBackground;
@@ -279,7 +279,7 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(12407), {});
+    isCurrentUser = callback(tmp(12408), {});
   }
   const items1 = [isCurrentUser, callback(WidgetRenderer, { userId, isVisible, cardStyle: items })];
   obj[1] = items1;

@@ -44,14 +44,14 @@ function ViewDebugLogsActionSheet() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.XpPGhL);
   obj[3] = function render() {
-    return callback2(callback(14827), {});
+    return callback2(callback(14818), {});
   };
   const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
   const obj1 = { icon: callback(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = getSystemLocale.intl;
   obj1[1] = intl3.string(getSystemLocale.t.b0nJvk);
   obj1[3] = function render() {
-    return callback2(closure_3, { children: callback2(callback(14830), {}) });
+    return callback2(closure_3, { children: callback2(callback(14821), {}) });
   };
   items[1] = callback(ViewDebugLogsActionSheetRow, obj1);
   let tmpResult = null;
@@ -61,7 +61,7 @@ function ViewDebugLogsActionSheet() {
     const intl4 = tmp2(1236).intl;
     obj2[1] = intl4.string(tmp2(1236).t.Ljj0ps);
     obj2[3] = function render() {
-      return callback2(callback(14831), {});
+      return callback2(callback(14822), {});
     };
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/MainNavigator.tsx
 import useNativeThemeUpdater from "useNativeThemeUpdater";
 import importAllResult from "HeaderWithBorder";
-import { View } from "module_15943";
+import { View } from "module_15934";
 import fetchFingerprint from "fetchFingerprint";
 import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings";
 import ME from "ME";

@@ -81,9 +81,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj[1] = channelId;
     obj[2] = roleId;
-    obj[2] = closure_8(tmp9(11034), obj);
+    obj[2] = closure_8(tmp9(11035), obj);
     tmp16Result = tmp16(tmp3(5437).BottomSheet, obj);
-    let tmp9Result = tmp9(11034);
+    let tmp9Result = tmp9(11035);
   }
   return tmp16Result;
 };

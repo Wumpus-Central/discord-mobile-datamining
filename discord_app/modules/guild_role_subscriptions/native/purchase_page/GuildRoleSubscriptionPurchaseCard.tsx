@@ -34,8 +34,8 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/g
 export default function GuildRoleSubscriptionPurchaseCard(guildId) {
   const listingId = guildId.listingId;
   const tmp = createCacheKey();
-  let obj = importAll(14537);
-  let obj1 = importAll(14537);
+  let obj = importAll(14528);
+  let obj1 = importAll(14528);
   let obj2 = TruncatedText;
   const formattedSubscriptionPlan = obj2.useFormattedSubscriptionPlan(listingId);
   obj = { scrollable: true, startExpanded: true, children: null };

@@ -67,7 +67,7 @@ function GuildInfoHeader(bannerHeight) {
   const tmp5 = bannerHeight(4084);
   obj[1] = callback(bannerHeight(4889), { absolute: true, tall: true });
   const items1 = [callback(bannerHeight(4084), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15343), obj2) };
+  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15334), obj2) };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;

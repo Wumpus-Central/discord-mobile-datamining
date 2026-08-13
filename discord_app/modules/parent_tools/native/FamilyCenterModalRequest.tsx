@@ -555,7 +555,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = callback(navigation(4755).Button, obj7);
   obj5[0] = items4;
   obj4[0] = closure_13(navigation(5191).ButtonGroup, obj5);
-  items3[1] = callback(navigation(11384).ModalFooter, obj4);
+  items3[1] = callback(navigation(11385).ModalFooter, obj4);
   obj2[0] = items3;
   return closure_13(navigation(7852).ModalScreen, obj2);
 }
@@ -725,7 +725,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/par
 export default function FamilyCenterRequestModal(userId) {
   userId = userId.userId;
   const linkCode = userId.linkCode;
-  const FamilyCenterConnectionPrereqExperiment = userId(11385).FamilyCenterConnectionPrereqExperiment;
+  const FamilyCenterConnectionPrereqExperiment = userId(11386).FamilyCenterConnectionPrereqExperiment;
   const items = [linkCode, userId];
   const memo = React.useMemo(() => {
     let obj = {};
@@ -807,7 +807,7 @@ export default function FamilyCenterRequestModal(userId) {
     obj[userId(outer1_2[11]).FamilyCenterModalRequestSections.TEEN_SCAN] = obj7;
     return obj;
   }, items);
-  const FamilyCenterModalRequestSections = userId(11373).FamilyCenterModalRequestSections;
+  const FamilyCenterModalRequestSections = userId(11374).FamilyCenterModalRequestSections;
   if (FamilyCenterConnectionPrereqExperiment.useConfig({ location: "FamilyCenterRequestModal" }).enabled) {
     let PREREQ_LOADING = FamilyCenterModalRequestSections.PREREQ_LOADING;
   } else {
@@ -816,7 +816,7 @@ export default function FamilyCenterRequestModal(userId) {
   let obj = { initialRouteName: PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = tmp3(1236).intl;
   obj[2] = intl.string(userId(1236).t["13/7kX"]);
-  return callback(userId(11386).Modal, obj);
+  return callback(userId(11387).Modal, obj);
 };
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

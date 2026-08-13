@@ -5,7 +5,7 @@ const FavoritesGuildChannelSortModal = "FavoritesGuildChannelSortModal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildChannelSortModal.tsx");
 
 export default function openFavoritesGuildChannelSortModal() {
-  ModalActionCreators.pushLazy(asyncRequireImpl(15348, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
+  ModalActionCreators.pushLazy(asyncRequireImpl(15339, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
 };
 export const closeFavoritesGuildChannelSortModal = function closeFavoritesGuildChannelSortModal() {
   ModalActionCreators.popWithKey(FavoritesGuildChannelSortModal);

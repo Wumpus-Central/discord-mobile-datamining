@@ -164,7 +164,7 @@ function ChangeSpendingLimitScreen(teenId) {
     items4[1] = tmp9(tmp2(4755).Button, obj11);
     obj10[0] = items4;
     obj9[0] = tmp8(tmp2(5191).ButtonGroup, obj10);
-    items3[1] = tmp9(tmp2(11384).ModalFooter, obj9);
+    items3[1] = tmp9(tmp2(11385).ModalFooter, obj9);
     obj8[0] = items3;
     return tmp8(tmp2(7852).ModalScreen, obj8);
   } else if (isOverspending) {
@@ -232,5 +232,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1236).intl;
   obj[2] = intl.string(teenId(1236).t["13/7kX"]);
-  return callback(teenId(11386).Modal, obj);
+  return callback(teenId(11387).Modal, obj);
 };

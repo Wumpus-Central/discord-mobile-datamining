@@ -60,7 +60,7 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = callback(closure_4, obj6);
     obj3[1] = items3;
     items2[1] = callback2(closure_4, obj3);
-    const obj7 = { user: null, size: null, guildId: "e" };
+    const obj7 = { user: null, size: null, guildId: "Array" };
     obj7[0] = stateFromStores;
     obj7[1] = tmp2(tmp3[17]).AvatarSizes.LARGE_48;
     items2[2] = callback(tmp2(tmp3[17]).Avatar, obj7);
@@ -245,7 +245,7 @@ export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBan
     let num = sum3 + PX_82;
   } else {
     num = 0;
-    if (bannerSize === tmp3(15400).MobileAccountLinkingBannerSize.MEDIUM) {
+    if (bannerSize === tmp3(15391).MobileAccountLinkingBannerSize.MEDIUM) {
       const sum4 = PX_8 + PX_12 + 48 + PX_122;
       num = sum4 + tmp3(4759).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
     }

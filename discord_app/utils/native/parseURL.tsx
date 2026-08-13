@@ -169,7 +169,7 @@ export default function parseURL(arg0) {
                                   if (tmp5(4331).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
                                     if (tmp5(4331).CodedLinkType.APP_OAUTH2_LINK !== type) {
                                       if (tmp5(4331).CodedLinkType.COLLECTIBLES_SHOP === type) {
-                                        let tmp5Result = tmp5(12289);
+                                        let tmp5Result = tmp5(12290);
                                         const tmp10 = callback(findCodedLinkResult.code.split("-"), 2)[1];
                                         if (tmp5Result.isVirtualCurrencyEnabled().enabled) {
                                           if (tmp9 === constants2.ORBS) {
@@ -236,7 +236,7 @@ export default function parseURL(arg0) {
       obj13[3] = obj14;
       return obj13;
     } else {
-      tmp5Result = tmp5(13263);
+      tmp5Result = tmp5(13264);
       const result = tmp5Result.findRemoteAuthFingerprint(host, pathname);
       if (null != result) {
         if (result.length > 0) {
@@ -424,7 +424,7 @@ export default function parseURL(arg0) {
                 if (query == null) {
                   str5 = "";
                 }
-                const result1 = tmp5(10470).parseOAuth2AuthorizeProps(str5);
+                const result1 = tmp5(10472).parseOAuth2AuthorizeProps(str5);
                 if (null != result1) {
                   const obj39 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                   obj39[0] = fingerprint;
@@ -439,7 +439,7 @@ export default function parseURL(arg0) {
                   obj39[3] = obj40;
                   return obj39;
                 }
-                const tmp5Result3 = tmp5(10470);
+                const tmp5Result3 = tmp5(10472);
               }
               if (null != pathname.match(closure_17)) {
                 let str12 = query;
@@ -574,8 +574,8 @@ export default function parseURL(arg0) {
                         const obj57 = { type: null, guildId: null, settingsSection: null, settingsSubsection: null };
                         obj57[0] = closure_7.GUILD_SETTINGS;
                         obj57[1] = tmp41[1];
-                        obj57[2] = uRL(13264)(closure_5, tmp41[2]);
-                        obj57[3] = uRL(13264)(closure_6, tmp41[3]);
+                        obj57[2] = uRL(13265)(closure_5, tmp41[2]);
+                        obj57[3] = uRL(13265)(closure_6, tmp41[3]);
                         obj56[3] = obj57;
                         return obj56;
                       } else {
@@ -593,8 +593,8 @@ export default function parseURL(arg0) {
                           obj58[2] = installationId;
                           const obj59 = { type: null, settingsSection: null, settingsSubsection: null, feature: null };
                           obj59[0] = closure_7.GUILD_SETTINGS_PICKER;
-                          obj59[1] = uRL(13264)(closure_5, tmp36[1]);
-                          obj59[2] = uRL(13264)(closure_6, tmp36[2]);
+                          obj59[1] = uRL(13265)(closure_5, tmp36[1]);
+                          obj59[2] = uRL(13265)(closure_6, tmp36[2]);
                           obj59[3] = tmp87(str7).feature;
                           obj58[3] = obj59;
                           return obj58;

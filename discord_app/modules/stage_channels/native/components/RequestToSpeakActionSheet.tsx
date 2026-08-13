@@ -62,9 +62,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(10767).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(10769).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(10769).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(10771).MicrophoneArrowRightIcon;
   }
   obj = {
     onPress() {
@@ -90,7 +90,7 @@ function ManageSelfSpeakerRow(channel) {
   obj[1] = callback2(MicrophoneArrowRightIcon, {});
   obj[2] = stringResult;
   obj = { source: null };
-  obj[0] = tmp4(10771);
+  obj[0] = tmp4(10773);
   obj[3] = callback2(channel(1297).Icon, obj);
   return callback2(channel(5414).TableRow, obj);
 }
@@ -182,13 +182,13 @@ export default function RequestToSpeakActionSheet(channelId) {
     obj11[0] = stateFromStores;
     const _Math = Math;
     obj11[1] = Math.max(first1 - first - 8, 0);
-    items4[1] = callback2(tmp3(10772), obj11);
+    items4[1] = callback2(tmp3(10774), obj11);
     obj2[1] = items4;
     obj1[2] = callback3(tmp(4753).Stack, obj2);
     obj[2] = callback2(tmp(5439).BottomSheetScrollView, obj1);
     obj[1] = callback2(tmp(5437).BottomSheet, obj);
     tmp14 = callback2(tmp(5768).AnalyticsLocationProvider, obj);
-    const tmp3Result = tmp3(10772);
+    const tmp3Result = tmp3(10774);
   }
   return tmp14;
 };

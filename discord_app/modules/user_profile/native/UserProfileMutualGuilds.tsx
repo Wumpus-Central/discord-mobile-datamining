@@ -18,8 +18,8 @@ export default function UserProfileMutualGuilds(user) {
   const tmp = callback3();
   let obj = user(8837);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const mutualGuilds = trackUserProfileAction(12023)(user).mutualGuilds;
-  if (trackUserProfileAction(12337)(user)) {
+  const mutualGuilds = trackUserProfileAction(12024)(user).mutualGuilds;
+  if (trackUserProfileAction(12338)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);
@@ -53,9 +53,9 @@ export default function UserProfileMutualGuilds(user) {
           obj[1] = user(5819).GuildIconSizes.XXSMALL;
           return callback(trackUserProfileAction(5819), obj, guild.id);
         });
-        const items = [callback(tmp2(12037).GuildIconPile, obj1), ];
+        const items = [callback(tmp2(12038).GuildIconPile, obj1), ];
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
-        obj2[2] = trackUserProfileAction(12024)(mutualGuilds.length);
+        obj2[2] = trackUserProfileAction(12025)(mutualGuilds.length);
         items[1] = callback(tmp2(4338).Text, obj2);
         obj[3] = items;
         obj[1] = callback2(tmp2(4887).PressableOpacity, obj);

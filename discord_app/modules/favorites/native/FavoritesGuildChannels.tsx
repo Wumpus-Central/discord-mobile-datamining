@@ -31,34 +31,34 @@ export default function FavoritesGuildChannels(arg0) {
     return null;
   } else {
     let guild = arg0;
-    const items = [callback2(tmp2(15481), {}), ];
+    const items = [callback2(tmp2(15472), {}), ];
     if (hasNoChannels) {
       obj = { style: null, contentInset: null, children: null };
       ({ style: obj7[0], contentInset: obj7[1] } = guild);
       obj1 = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
       guild = guild.guild;
       obj1[0] = guild;
-      const items1 = [tmp10(tmp2(15343), obj1), , ];
+      const items1 = [tmp10(tmp2(15334), obj1), , ];
       tmp10Result = null;
       if (shouldShowEmptyState) {
         shouldShowEmptyState = {};
-        tmp10Result = tmp10(tmp2(15482), shouldShowEmptyState);
+        tmp10Result = tmp10(tmp2(15473), shouldShowEmptyState);
       }
       items1[1] = tmp10Result;
-      tmp2 = tmp2(15407);
+      tmp2 = tmp2(15398);
       tmp10Result = tmp10(tmp2, {});
       items1[2] = tmp10Result;
       obj[2] = items1;
-      let tmp10Result1 = tmp8(tmp2(15446), obj);
-      const tmp2Result = tmp2(15446);
+      let tmp10Result1 = tmp8(tmp2(15437), obj);
+      const tmp2Result = tmp2(15437);
     } else {
       const obj2 = {};
       const merged = Object.assign(guild);
       obj2.guildChannels = guildChannels;
       obj2.guildChannelsVersion = 0;
-      obj2.favoritesSuggestionsNoticeHeight = tmp5(15407).getFavoritesSuggestionsNoticeHeight(fontScale, tmp4, tmp);
-      tmp10Result1 = tmp10(tmp5(15312).ChannelList, obj2);
-      const tmp5Result = tmp5(15407);
+      obj2.favoritesSuggestionsNoticeHeight = tmp5(15398).getFavoritesSuggestionsNoticeHeight(fontScale, tmp4, tmp);
+      tmp10Result1 = tmp10(tmp5(15303).ChannelList, obj2);
+      const tmp5Result = tmp5(15398);
     }
     obj3 = { children: null };
     items[1] = tmp10Result1;

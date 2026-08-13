@@ -77,7 +77,7 @@ const memoResult = importAllResult.memo((channel) => {
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  let tmp5Result = tmp5(15323);
+  let tmp5Result = tmp5(15314);
   const intl = tmp2(1236).intl;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
@@ -109,7 +109,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj2[0] = channel;
     obj2[1] = selected;
     obj2[2] = collapsed;
-    tmp5Result = tmp5(15430);
+    tmp5Result = tmp5(15421);
     if (!hasMedia) {
       let tmp20 = channel.userLimit > 0;
       if (tmp20) {
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj4[1] = collapsed;
       obj4[2] = arr3;
       obj4[3] = stageParticipantsCount;
-      obj3[1] = tmp12(tmp5(15328), obj4);
+      obj3[1] = tmp12(tmp5(15319), obj4);
       tmp12Result = tmp12(View, obj3);
     }
     obj.children = tmp12Result;
