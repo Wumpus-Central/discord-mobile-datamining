@@ -66,9 +66,9 @@ function _submitReportForInappropriateConversationSafetyAlert() {
       callback2 = dependencyMap;
       let c5 = 1;
       const obj1 = { name: null, record: null };
-      obj1[0] = callback(8062).ReportNames.MESSAGE;
+      obj1[0] = callback(8066).ReportNames.MESSAGE;
       obj1[1] = callback;
-      yield callback(8065).submitHeadlessReport(obj1, { variant: "safety_alerts_headless_v1" });
+      yield callback(8069).submitHeadlessReport(obj1, { variant: "safety_alerts_headless_v1" });
       if (1 === tmp7) {
         c5 = 0;
         if (callback2 != null) {
@@ -176,7 +176,7 @@ export const showReportModalForGuildScheduledEvent = function showReportModalFor
   obj = { report_type: ReportNames.ReportNames.GUILD_SCHEDULED_EVENT };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: tmp(8062).ReportNames.GUILD_SCHEDULED_EVENT, record: closure_0 };
+  obj = { name: tmp(8066).ReportNames.GUILD_SCHEDULED_EVENT, record: closure_0 };
   obj1 = { onSubmit: arg1 };
   _showReportModal.showReportModal(obj, {}, obj1);
 };
@@ -254,7 +254,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   let obj = collectGuildAnalyticsMetadata;
   obj = { report_type: ReportNames.UnauthenticatedReportNames.MESSAGE };
-  const merged = Object.assign({ message_id: "isArray", channel_id: "accessibilityRole" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "ct" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   const tmp = new hasFlag({});
   obj = { name: ReportNames.UnauthenticatedReportNames.MESSAGE, record: tmp };

@@ -30,7 +30,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = sharedValue(4189);
+  let obj1 = sharedValue(4187);
   let str = obj1.getName(stateFromStores);
   if (str == null) {
     str = "Roka";
@@ -49,7 +49,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     obj[0] = tmp7(outer1_2[10]).withTiming(value, tmp7(outer1_2[11]).timingStandard);
     return obj;
   };
-  obj = { withTiming: tmp2(4345).withTiming, opacity: sharedValue, timingStandard: tmp2(4348).timingStandard };
+  obj = { withTiming: tmp2(4343).withTiming, opacity: sharedValue, timingStandard: tmp2(4346).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 6531430956793;
   fn.__initData = closure_10;
@@ -58,7 +58,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl = tmp2(1236).intl;
     obj[2] = intl.string(tmp2(1236).t.WYyzI5);
-    let tmp11 = callback(tmp2(4340).Text, obj);
+    let tmp11 = callback(tmp2(4338).Text, obj);
     let tmp12 = callback;
   } else {
     obj1 = { children: null };
@@ -66,11 +66,11 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const obj3 = { variant: "text-sm/normal", color: "text-link", children: null };
     const items1 = ["@", str, " "];
     obj3[2] = items1;
-    const items2 = [callback2(tmp2(4340).Text, obj3), ];
+    const items2 = [callback2(tmp2(4338).Text, obj3), ];
     const intl3 = tmp2(1236).intl;
     items2[1] = intl3.string(tmp2(1236).t.WYyzI5);
     obj2[2] = items2;
-    obj1[0] = callback2(tmp2(4340).Text, obj2);
+    obj1[0] = callback2(tmp2(4338).Text, obj2);
     tmp11 = callback(View, obj1);
     tmp12 = callback;
   }
@@ -86,7 +86,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj5 = { style: tmp.cardContent, children: null };
   const obj6 = { children: null };
   const obj7 = { source: null, size: null };
-  obj7[0] = sharedValue(9882);
+  obj7[0] = sharedValue(9885);
   obj7[1] = Button.AvatarSizes.LARGE_48;
   obj6[0] = tmp12(Button.Avatar, obj7);
   const items4 = [tmp12(View, obj6), ];

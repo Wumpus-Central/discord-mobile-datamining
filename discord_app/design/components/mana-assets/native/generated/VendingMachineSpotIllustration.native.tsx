@@ -1,11 +1,11 @@
-// discord_app/design/components/mana-assets/native/generated/GiftCardRedeem3dIllustration.native.tsx
+// discord_app/design/components/mana-assets/native/generated/VendingMachineSpotIllustration.native.tsx
 import { jsx } from "jsxProd";
-import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftCardRedeem3dIllustration-2x.png.js";
+import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/VendingMachineSpotIllustration-2x.png.js";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 
-const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GiftCardRedeem3dIllustration.native.tsx");
+const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/VendingMachineSpotIllustration.native.tsx");
 
-export const GiftCardRedeem3dIllustration = function GiftCardRedeem3dIllustration(width) {
+export const VendingMachineSpotIllustration = function VendingMachineSpotIllustration(width) {
   let accessibilityLabel;
   let accessible;
   let resizeMode;

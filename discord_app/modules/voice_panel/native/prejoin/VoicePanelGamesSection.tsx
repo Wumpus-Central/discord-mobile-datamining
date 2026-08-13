@@ -30,7 +30,7 @@ function GameRow(gameId) {
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(tmp3(9297), { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(tmp3(9301), { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       const obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;
@@ -48,7 +48,7 @@ function GameRow(gameId) {
       obj3[0] = name;
       obj2[5] = intl2.formatToPlainString(tmp(1236).t["9sZWVp"], obj3);
     }
-    return jsx(tmp(5413).TableRow, obj2);
+    return jsx(tmp(5414).TableRow, obj2);
   }
   tmp3 = importDefault;
   const tmp4 = useOpenGameProfileModal;

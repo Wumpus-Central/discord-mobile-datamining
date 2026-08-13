@@ -38,10 +38,10 @@ function trackQuestEvent(sourceQuestContent) {
       allApplicationIds = [];
     }
     obj[2] = allApplicationIds;
-    let tmp24Result = tmp24(7227);
+    let tmp24Result = tmp24(7232);
     obj[3] = tmp24Result.getQuestStatus(value);
     const id = value.id;
-    tmp24Result = tmp24(7220);
+    tmp24Result = tmp24(7225);
     let uuid = tmp24Result.getOrRefreshAdSession(shouldExtendSession).uuid;
     const obj13 = getApplicationIdsByTaskTypes;
     const adDecisionData = getQuestDeliveryDataForPlacement.getAdDecisionData(id, sourceQuestContent);
@@ -49,7 +49,7 @@ function trackQuestEvent(sourceQuestContent) {
     obj[0] = uuid;
     const tmp24Result1 = getQuestDeliveryDataForPlacement;
     if (!tmp24Result2.isBillableQuestContent(sourceQuestContent)) {
-      const activeSessionUnsafe = tmp24(6965).getActiveSessionUnsafe();
+      const activeSessionUnsafe = tmp24(6971).getActiveSessionUnsafe();
       uuid = undefined;
       if (activeSessionUnsafe != null) {
         uuid = activeSessionUnsafe.uuid;
@@ -57,14 +57,14 @@ function trackQuestEvent(sourceQuestContent) {
       if (uuid == null) {
         uuid = null;
       }
-      const tmp24Result3 = tmp24(6965);
+      const tmp24Result3 = tmp24(6971);
     }
     obj[1] = uuid;
     obj[2] = id;
     const merged = Object.assign(adDecisionData);
     let QUEST = adDecisionData.creative_type;
     if (QUEST == null) {
-      QUEST = tmp24(7228).AdCreativeType.QUEST;
+      QUEST = tmp24(7233).AdCreativeType.QUEST;
     }
     const obj1 = {};
     obj.creative_type = QUEST;
@@ -79,7 +79,7 @@ function trackQuestEvent(sourceQuestContent) {
       if (!value.preview) {
         const hasItem = set.has(event);
         if (trackGuildAndChannelMetadata) {
-          let tmp21Result = tmp21(4538);
+          let tmp21Result = tmp21(4539);
           tmp21Result.trackWithMetadata(event, obj1, hasItem);
         } else {
           tmp21Result = tmp21(698);
@@ -115,7 +115,7 @@ function trackAdContentEvent(sourceQuestContent) {
   obj = { client_ad_session_id: uuid, billing_session_id: null, ad_content_id: null };
   let obj3 = getQuestDeliveryDataForPlacement;
   if (!obj3.isBillableQuestContent(sourceQuestContent)) {
-    let tmp3Result = tmp3(6965);
+    let tmp3Result = tmp3(6971);
     const activeSessionUnsafe = tmp3Result.getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
@@ -134,7 +134,7 @@ function trackAdContentEvent(sourceQuestContent) {
   }
   obj = { creative_type: adCreativeType };
   const merged1 = Object.assign(obj);
-  tmp3Result = tmp3(7198);
+  tmp3Result = tmp3(7204);
   let adMetadataSealed = tmp3Result.getAdMetadataSealed(sourceQuestContent, adContentId);
   if (adMetadataSealed == null) {
     adMetadataSealed = null;
@@ -150,8 +150,8 @@ function trackAdContentEvent(sourceQuestContent) {
     obj1[0] = relatedQuestId;
     let questStatus = null;
     if (null != quest) {
-      questStatus = tmp3(7227).getQuestStatus(quest);
-      const tmp3Result2 = tmp3(7227);
+      questStatus = tmp3(7232).getQuestStatus(quest);
+      const tmp3Result2 = tmp3(7232);
     }
     obj1[1] = questStatus;
     let obj2 = obj1;
@@ -169,7 +169,7 @@ function trackAdContentEvent(sourceQuestContent) {
     const isLoggingAnalyticsEvents = refreshSourceMapCookie.isLoggingAnalyticsEvents;
     const hasItem = set.has(event);
     if (trackGuildAndChannelMetadata) {
-      let tmp20Result = tmp20(4538);
+      let tmp20Result = tmp20(4539);
       tmp20Result.trackWithMetadata(event, obj3, hasItem);
     } else {
       tmp20Result = tmp20(698);
@@ -252,11 +252,11 @@ function _getCommonClickEventProperties() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj5 = callback(7229);
+              let obj5 = callback(7234);
               c4 = 2;
               c5 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = obj5.getAdUser(callback(7227).getQuestContentName(callback));
+              obj2[0] = obj5.getAdUser(callback(7232).getQuestContentName(callback));
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -270,8 +270,8 @@ function _getCommonClickEventProperties() {
           } else {
             initializeState = arg1;
             const obj4 = {};
-            const merged = Object.assign(callback(7227).getContentProperties(callback, callback2, dependencyMap));
-            const merged1 = Object.assign(callback2(7177)());
+            const merged = Object.assign(callback(7232).getContentProperties(callback, callback2, dependencyMap));
+            const merged1 = Object.assign(callback2(7183)());
             obj4.cta_name = c3;
             obj4.impression_id = c4;
             let advertisingId = null;
@@ -390,7 +390,7 @@ function _trackQuestContentClicked() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              adTrafficMetadataSealed = callback(7198).getAdTrafficMetadataSealed(callback2, callback);
+              adTrafficMetadataSealed = callback(7204).getAdTrafficMetadataSealed(callback2, callback);
               callback2 = adTrafficMetadataSealed;
               obj2 = { questId: callback, event: constants.QUEST_CONTENT_CLICKED };
               initialize = {};
@@ -417,7 +417,7 @@ function _trackQuestContentClicked() {
             return obj5;
           } else {
             const merged = Object.assign(arg1);
-            const adMetadataSealed = callback(7198).getAdMetadataSealed(callback2);
+            const adMetadataSealed = callback(7204).getAdMetadataSealed(callback2);
             c1 = adMetadataSealed;
             if (adMetadataSealed == null) {
               c1 = null;
@@ -428,7 +428,7 @@ function _trackQuestContentClicked() {
               dependencyMap = null;
             }
             initialize.traffic_metadata_sealed = dependencyMap;
-            obj = callback(7234);
+            obj = callback(7239);
             const currentQuestHomeSearchSession = obj.getCurrentQuestHomeSearchSession();
             let uuid;
             if (currentQuestHomeSearchSession != null) {
@@ -441,7 +441,7 @@ function _trackQuestContentClicked() {
             initialize.search_session_id = c3;
             obj2.properties = initialize;
             obj2.trackGuildAndChannelMetadata = constants;
-            obj1 = callback(7198);
+            obj1 = callback(7204);
             obj2.shouldExtendSession = obj1.isBillableQuestContent(c1);
             obj2.sourceQuestContent = callback2;
             callback2(obj2);
@@ -564,7 +564,7 @@ function _trackAdContentClicked() {
           } else {
             obj2.properties = properties;
             obj2.trackGuildAndChannelMetadata = c8;
-            obj = callback(7198);
+            obj = callback(7204);
             obj2.shouldExtendSession = obj.isBillableQuestContent(c3);
             obj2.sourceQuestContent = c9;
             dependencyMap(obj2);
@@ -679,7 +679,7 @@ export const trackBountyCarouselScroll = function trackBountyCarouselScroll(resu
   obj = { client_ad_session_id: uuid, billing_session_id: null, scrolling_type: null, scrolling_direction: null, carousel_position: null, content_name: null };
   const obj2 = expandEventProperties;
   if (!obj4.isBillableQuestContent(questContent)) {
-    let tmpResult = tmp(6965);
+    let tmpResult = tmp(6971);
     const activeSessionUnsafe = tmpResult.getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
@@ -693,7 +693,7 @@ export const trackBountyCarouselScroll = function trackBountyCarouselScroll(resu
   obj[2] = scrollingType;
   obj[3] = scrollingDirection;
   obj[4] = carouselPosition;
-  tmpResult = tmp(7227);
+  tmpResult = tmp(7232);
   obj[5] = tmpResult.getQuestContentName(questContent);
   obj2.track(AnalyticEvents.BOUNTY_CAROUSEL_SCROLL, obj);
 };
@@ -718,7 +718,7 @@ export const trackBountyCarouselEmptyStateViewed = function trackBountyCarouselE
   const obj2 = expandEventProperties;
   const tmp = require;
   if (!obj4.isBillableQuestContent(QuestsVisibleMessagesChangedSource.QuestContent.QUEST_HOME_MOBILE_CAROUSEL)) {
-    const activeSessionUnsafe = tmp(6965).getActiveSessionUnsafe();
+    const activeSessionUnsafe = tmp(6971).getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
       uuid = activeSessionUnsafe.uuid;
@@ -726,7 +726,7 @@ export const trackBountyCarouselEmptyStateViewed = function trackBountyCarouselE
     if (uuid == null) {
       uuid = null;
     }
-    const tmpResult = tmp(6965);
+    const tmpResult = tmp(6971);
   }
   obj[1] = uuid;
   obj[2] = arg0;
@@ -792,7 +792,7 @@ export const trackQuestHomeCarouselScroll = function trackQuestHomeCarouselScrol
   obj = { scrolling_type: scrollingType, client_ad_session_id: uuid, billing_session_id: null, scrolling_direction: null, scroll_window_start_index: null, scroll_window_end_index: null, scroll_window_size: null, content_name: null, content_id: null, carousel_size: null };
   const obj2 = expandEventProperties;
   if (!obj4.isBillableQuestContent(questContent)) {
-    let tmpResult = tmp(6965);
+    let tmpResult = tmp(6971);
     const activeSessionUnsafe = tmpResult.getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
@@ -807,7 +807,7 @@ export const trackQuestHomeCarouselScroll = function trackQuestHomeCarouselScrol
   obj[4] = scrollWindowStartIndex;
   obj[5] = scrollWindowEndIndex;
   obj[6] = scrollWindowSize;
-  tmpResult = tmp(7227);
+  tmpResult = tmp(7232);
   obj[7] = tmpResult.getQuestContentName(questContent);
   obj[8] = questContent;
   obj[9] = carouselSize;

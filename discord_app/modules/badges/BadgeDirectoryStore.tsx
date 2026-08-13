@@ -43,11 +43,11 @@ prototype["getBadges"] = function getBadges(arg0) {
     return items;
   }
 };
-prototype["hasCatalogFor"] = function hasCatalogFor(arg0) {
-  return set.has(arg0);
+prototype["hasCatalogFor"] = function hasCatalogFor(id) {
+  return set.has(id);
 };
-prototype["isCatalogStaleFor"] = function isCatalogStaleFor(arg0) {
-  const value = map1.get(arg0);
+prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
+  const value = map1.get(id);
   let tmp2 = null == value;
   if (!tmp2) {
     const _Date = Date;
@@ -55,9 +55,9 @@ prototype["isCatalogStaleFor"] = function isCatalogStaleFor(arg0) {
   }
   return tmp2;
 };
-prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(arg0) {
-  let tmp = arg0;
-  if (arg0 == null) {
+prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(stateFromStores) {
+  let tmp = stateFromStores;
+  if (stateFromStores == null) {
     const currentUser = authStore.getCurrentUser();
     let id;
     if (currentUser != null) {

@@ -8,7 +8,7 @@ import ME from "ME";
 import jsxProd from "LinearGradient";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../_runtime/05316_Background.js";
+import { Background } from "../../../../_runtime/05317_Background.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";

@@ -6,7 +6,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Gradients } from "items";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { keys } from "../../../ConstantsIOS.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -74,9 +74,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = tmp2(1236).intl;
   obj[1] = intl.string(getSystemLocale.t.YKxJCI);
   obj[2] = function onConfirm() {
-    callback2(4683).close();
-    const obj = callback2(4683);
-    callback(5191).closeApplyBoostModal();
+    callback2(4684).close();
+    const obj = callback2(4684);
+    callback(5192).closeApplyBoostModal();
   };
   obj = {
     nextScene: tmp6[0],

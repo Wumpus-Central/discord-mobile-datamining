@@ -75,6 +75,7 @@ export const MenuPopoutState = require("MenuPopout").MenuPopoutState;
 export const Heading = require("Text").Heading;
 export const Text = require("Text").Text;
 export const TextStyleSheet = require("Text").TextStyleSheet;
+export const PlainTextExperimentProvider = require("PlainTextExperimentProvider").PlainTextExperimentProvider;
 export const TransitionGroup = require("wrapChildrenDefault").TransitionGroup;
 export const TransitionItem = require("wrapChildrenDefault").TransitionItem;
 export const TransitionStates = require("wrapChildrenDefault").TransitionStates;

@@ -112,7 +112,7 @@ export default function PremiumPerkCard(variant) {
       obj2[0] = tmp4.imageOverlayText;
       imageStyle = imageOverlayText.toUpperCase();
       obj2[2] = imageStyle;
-      imageSrc = callback(tmp6(4340).Text, obj2);
+      imageSrc = callback(tmp6(4338).Text, obj2);
       obj1[1] = imageSrc;
       items1[1] = callback(closure_4, obj1);
       obj[1] = items1;
@@ -135,7 +135,7 @@ export default function PremiumPerkCard(variant) {
     if (null != description) {
       const obj4 = { variant: "text-sm/normal", children: null };
       obj4[1] = description;
-      let tmp21 = callback(tmp6(4340).Text, obj4);
+      let tmp21 = callback(tmp6(4338).Text, obj4);
     } else {
       tmp21 = null;
       if (null != bodyComponent) {
@@ -165,7 +165,7 @@ export default function PremiumPerkCard(variant) {
     const items5 = [tmp4.title, titleStyle];
     obj8[0] = items5;
     obj8[3] = title;
-    items4[2] = callback(tmp6(4340).Text, obj8);
+    items4[2] = callback(tmp6(4338).Text, obj8);
     const obj9 = { style: null, children: null };
     obj9[0] = tmp4.description;
     obj9[1] = tmp21;
@@ -177,7 +177,7 @@ export default function PremiumPerkCard(variant) {
       const obj11 = { size: "sm", variant: "secondary", text: null, onPress: null };
       obj11[2] = cta;
       obj11[3] = buttonOnPress;
-      obj10[1] = tmp29(tmp6(4754).Button, obj11);
+      obj10[1] = tmp29(tmp6(4755).Button, obj11);
       tmp29Result = tmp29(tmp24, obj10);
     }
     items4[4] = tmp29Result;
@@ -194,23 +194,23 @@ export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
 export const usePremiumPerkCard = function usePremiumPerkCard() {
   let obj = subscriptionPlansLoaded(12756);
   subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
-  let obj1 = subscriptionPlansLoaded(4239);
+  let obj1 = subscriptionPlansLoaded(4237);
   const formatSizeResult = obj1.formatSize(closure_6 / 1024, { useKibibytes: true });
   const callback = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6057);
+    let obj = subscriptionPlansLoaded(6059);
     obj = { screen: constants.COLLECTIBLES_SHOP, params: null };
-    obj = { analyticsSource: callback(5787).PREMIUM_MARKETING_PERK_CARD };
+    obj = { analyticsSource: callback(5788).PREMIUM_MARKETING_PERK_CARD };
     obj[1] = obj;
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6057);
+    let obj = subscriptionPlansLoaded(6059);
     obj = { screen: constants.PROFILE_CUSTOMIZATION };
     obj.openUserSettings(obj);
   }, []);
   const items = [subscriptionPlansLoaded];
   const callback2 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6057);
+    let obj = subscriptionPlansLoaded(6059);
     obj = { screen: constants.APPEARANCE_THEME_PICKER };
     obj.openUserSettings(obj);
   }, []);
@@ -223,7 +223,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj = { customProfile: null, clientThemes: null, serverBoosts: null, greyServerBoosts: null, customAppIcons: null, emoji: null, customSounds: null, sticker: null, earlyAccess: null, memberPricing: null, largeUploads: null, hdVideo: null, superReactions: null, entranceSounds: null, badge: null, greyBadge: null, xboxGamePass: null };
   obj = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const callback4 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(6057);
+    let obj = subscriptionPlansLoaded(6059);
     obj = { screen: constants.APP_ICONS };
     obj.openUserSettings(obj);
   }, []);
@@ -358,7 +358,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   const obj17 = { uri: metadata };
   obj19[0] = combined.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0);
   obj18[1] = intl36.format(subscriptionPlansLoaded(1236).t["9Wv+8h"], obj19);
-  obj16[3] = callback(subscriptionPlansLoaded(4340).Text, obj18);
+  obj16[3] = callback(subscriptionPlansLoaded(4338).Text, obj18);
   obj[16] = obj16;
   return obj;
 };

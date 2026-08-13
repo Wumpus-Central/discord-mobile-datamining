@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08657_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08661_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { computeChannelName } from "../../../channel/useChannelName.tsx";
 import { getChannelMode } from "../../../guild_sidebar/native/ChannelItem.tsx";

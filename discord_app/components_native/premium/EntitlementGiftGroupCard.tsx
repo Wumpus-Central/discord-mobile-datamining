@@ -222,9 +222,9 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   items1[1] = closure_15(closure_4, obj3);
   if (isRefreshEnabled) {
     if (isOpen) {
-      let ChevronSmallRightIcon = tmp2(9524).ChevronSmallDownIcon;
+      let ChevronSmallRightIcon = tmp2(9528).ChevronSmallDownIcon;
     } else {
-      ChevronSmallRightIcon = tmp2(5817).ChevronSmallRightIcon;
+      ChevronSmallRightIcon = tmp2(5818).ChevronSmallRightIcon;
     }
     obj = {};
     tmp6(ChevronSmallRightIcon, obj);

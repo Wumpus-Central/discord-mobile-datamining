@@ -8,7 +8,7 @@ import ME from "ME";
 import { EmojiIntention } from "set";
 import jsxProd from "removeCustomStatus";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08513_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08517_registerAsset.js";
 import { Button } from "../../../design/void/native.tsx";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -113,15 +113,17 @@ function EditCustomStatusWithPreview(navigation) {
     onClose(analyticsLocations[19])(obj);
     const AccessibilityAnnouncer = navigation(tmp[20]).AccessibilityAnnouncer;
     const intl = navigation(tmp[11]).intl;
-    AccessibilityAnnouncer.announce(intl.string(navigation(analyticsLocations[11]).t.Og40Yn), "polite");
+    AccessibilityAnnouncer.announce(intl.string(navigation(analyticsLocations[11]).t.Og40Yn));
     onClose();
   }, items2);
   const items3 = [onClose];
   const callback1 = obj.useCallback(() => {
     onClose(analyticsLocations[21])();
-    const AccessibilityAnnouncer = navigation(analyticsLocations[20]).AccessibilityAnnouncer;
-    const intl = navigation(analyticsLocations[11]).intl;
-    AccessibilityAnnouncer.announce(intl.string(navigation(analyticsLocations[11]).t.YdUwBS), "polite");
+    const timerId = setTimeout(() => {
+      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
+      const intl = callback(1236).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.YdUwBS));
+    }, 300);
     onClose();
   }, items3);
   ref1 = obj.useRef(null);
@@ -372,7 +374,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.Iuzg8R);
-      return callback3(callback(8427).GenericHeaderTitle, obj);
+      return callback3(callback(8431).GenericHeaderTitle, obj);
     };
     obj[2] = analyticsLocations(outer1_2[30]).getHeaderCloseButton(_prompt(outer1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
@@ -391,5 +393,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj[3] = obj;
-  return tmp2(analyticsLocations(5822).Navigator, obj);
+  return tmp2(analyticsLocations(5823).Navigator, obj);
 };

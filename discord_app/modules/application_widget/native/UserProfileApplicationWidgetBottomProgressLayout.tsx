@@ -108,7 +108,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if ("value" === singleStringOrSkeleton.status) {
     const obj10 = { variant: "heading-sm/medium", lineClamp: 2, children: null };
     obj10[2] = singleStringOrSkeleton.text;
-    let tmp15Result = tmp15(tmp3(4340).Text, obj10);
+    let tmp15Result = tmp15(tmp3(4338).Text, obj10);
   } else {
     tmp15Result = tmp15(tmp3(12508).TextSkeleton, { variant: "heading-sm/medium" });
   }
@@ -116,7 +116,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if ("value" === singleStringOrSkeleton1.status) {
     const obj11 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj11[3] = singleStringOrSkeleton1.text;
-    tmp15Result = tmp15(tmp3(4340).Text, obj11);
+    tmp15Result = tmp15(tmp3(4338).Text, obj11);
   } else {
     tmp15Result = tmp15(tmp3(12508).TextSkeleton, { variant: "text-xs/medium" });
   }
@@ -137,7 +137,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
       iter2Result = "" + tmp3Result.decimalToClampedPercentage(iter.value) + "%";
     }
     obj12[3] = iter2Result;
-    tmp15(tmp3(4340).Text, obj12);
+    tmp15(tmp3(4338).Text, obj12);
   } else {
     items7[1] = tmp15(tmp3(12508).TextSkeleton, { variant: "text-sm/medium", widthChars: 4 });
     obj8[1] = items7;

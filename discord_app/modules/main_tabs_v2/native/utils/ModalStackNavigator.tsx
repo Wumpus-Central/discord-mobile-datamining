@@ -26,9 +26,9 @@ const memoResult = require("noop").memo(function ModalStackNavigator(children) {
         headerLeft: null,
         headerTitleAlign: "center"
       };
-      obj[1] = outer1_0(8427).getRenderModalCloseImage(navigation.navigation);
+      obj[1] = outer1_0(8431).getRenderModalCloseImage(navigation.navigation);
       let merged = Object.assign(dependencyMap);
-      let merged1 = Object.assign(outer1_1(9723)());
+      let merged1 = Object.assign(outer1_1(9727)());
       return obj;
     },
     children: <createNativeStackNavigator.Screen {...obj} />

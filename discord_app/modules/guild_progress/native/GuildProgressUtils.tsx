@@ -69,7 +69,7 @@ function useIOSCompletionStates(guild) {
   const items6 = [tmp8];
   const stateFromStores4 = _initialize.useStateFromStores(items6, () => outer1_6.getProgress(guild.id));
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(12007).ServerSetupBoostCtaExperiment;
+    const ServerSetupBoostCtaExperiment = tmp(12009).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
     const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
     if (enabled) {
@@ -114,7 +114,7 @@ export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { guild };
-  obj.openLazy(asyncRequireImpl(11897, dependencyMap.paths), "guild-progress-" + guild.id, obj);
+  obj.openLazy(asyncRequireImpl(11899, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet("guild-progress-" + arg0);

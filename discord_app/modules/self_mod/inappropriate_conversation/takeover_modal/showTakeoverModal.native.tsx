@@ -4,7 +4,7 @@ import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { InappropriateConversationExperiment } from "../SelfModInappropriateConversationExperiment.tsx";
 
-const result = require("module_4549").fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");
+const result = require("module_4550").fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");
 
 export const showTakeoverModal = function showTakeoverModal(arg0) {
   let channelId;
@@ -19,7 +19,7 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
     obj[1] = warningType;
     obj[2] = senderId;
     obj[3] = channelId;
-    ModalActionCreators.pushLazy(asyncRequireImpl(15112, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(15121, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
     const obj2 = ModalActionCreators;
   }
 };

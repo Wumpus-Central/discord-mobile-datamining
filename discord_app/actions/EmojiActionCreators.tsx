@@ -90,7 +90,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4244)(c4);
+            const tmp18 = new callback2(4242)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

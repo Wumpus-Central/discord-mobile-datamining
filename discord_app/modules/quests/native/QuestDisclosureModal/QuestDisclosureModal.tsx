@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08072_registerAsset.js";
 import { HeaderActionButton } from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -26,7 +26,7 @@ export default function QuestDisclosureModal(arg0) {
   let require;
   ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
   function onClose() {
-    return callback2(14412).hideModal();
+    return callback2(14421).hideModal();
   }
   let obj = {
     headerLeft: onClose,
@@ -37,7 +37,7 @@ export default function QuestDisclosureModal(arg0) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.GcsZKJ);
-      return callback3(callback(5309).NavigatorHeader, obj);
+      return callback3(callback(5310).NavigatorHeader, obj);
     },
     render() {
       return outer1_3(outer1_1(outer1_2[6]), { isTargetedDisclosure: closure_0, gamePublisher: closure_1, gameTitle: closure_2, onClose, cosponsorName: closure_3, isVideoQuest: closure_4 });

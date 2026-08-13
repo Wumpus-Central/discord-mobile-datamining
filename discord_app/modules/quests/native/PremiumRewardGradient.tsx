@@ -80,22 +80,22 @@ function PremiumRewardGlowGradient(arg0) {
     return items;
   }, items);
   let obj2 = token(1350);
-  const isThemeDarkResult = obj2.isThemeDark(token1(4280)());
+  const isThemeDarkResult = obj2.isThemeDark(token1(4278)());
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, style];
   const items2 = [tmp.glow, ];
   let glowLight = !isThemeDarkResult;
   const tmp10 = closure_5;
-  const tmp7 = token1(4280)();
+  const tmp7 = token1(4278)();
   const tmp9 = closure_7;
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
-  obj = { style: items2, maskElement: tmp11(tmp3(4765), obj1), children: tmp11(tmp3(4765), obj2) };
+  obj = { style: items2, maskElement: tmp11(tmp3(4766), obj1), children: tmp11(tmp3(4766), obj2) };
   items2[1] = glowLight;
   obj1 = { style: closure_4.absoluteFill, colors: ["transparent", "black"], start: closure_11, end: closure_12 };
   obj2 = { style: closure_4.absoluteFill, colors: memo, start: closure_9, end: closure_10 };
-  const items3 = [closure_6(token1(5349), obj), children];
+  const items3 = [closure_6(token1(5350), obj), children];
   obj[1] = items3;
   return tmp9(tmp10, obj);
 }

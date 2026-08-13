@@ -29,11 +29,11 @@ function FamilyCenter() {
   let openAgeGateModal;
   let tmp12;
   const tmp = createCacheKey();
-  let obj = familyCenterInitialized(7377);
+  let obj = familyCenterInitialized(7381);
   const acceptedRequestsCount = obj.useAcceptedRequestsCount();
-  const tmp6 = isLoading(14182)();
-  const selectedTab = isLoading(14183)().selectedTab;
-  let obj1 = familyCenterInitialized(7379);
+  const tmp6 = isLoading(14191)();
+  const selectedTab = isLoading(14192)().selectedTab;
+  let obj1 = familyCenterInitialized(7383);
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(647);
   const items = [freshTeenActivityWithMap];
@@ -42,24 +42,24 @@ function FamilyCenter() {
   isLoading = stateFromStoresObject.isLoading;
   const dependencyMap = tmp10;
   currentUser = currentUser.getCurrentUser();
-  const tmp3 = isLoading(5767);
+  const tmp3 = isLoading(5768);
   [tmp12, openAgeGateModal] = callback(obj2.useState(0), 2);
   callback = obj2.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj3 = familyCenterInitialized(9001);
+  let obj3 = familyCenterInitialized(9005);
   obj = { items: null, onPageChange: null, pageWidth: null, defaultIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = familyCenterInitialized(1236).intl;
   obj[0] = intl.string(isLoading(2303).bdBmqy);
   obj[1] = FamilyCenterSubPages.ACTIVITY;
-  obj[2] = callback2(isLoading(14184), {});
+  obj[2] = callback2(isLoading(14193), {});
   const items1 = [obj, ];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1236).intl;
   obj1[0] = intl2.string(isLoading(2303)["gVWG+6"]);
   obj1[1] = FamilyCenterSubPages.REQUESTS;
-  obj1[2] = callback2(isLoading(14224), {});
+  obj1[2] = callback2(isLoading(14233), {});
   items1[1] = obj1;
   obj[0] = items1;
   obj[1] = function onPageChange(arg0) {
@@ -97,7 +97,7 @@ function FamilyCenter() {
       }
     }
   }, items2);
-  isLoading(4770)(() => {
+  isLoading(4771)(() => {
     let obj = familyCenterInitialized(tmp10[30]);
     obj = { dismissAction: outer1_11.AUTO, forceTrack: true };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(familyCenterInitialized(tmp10[31]).DismissibleContent.FAMILY_CENTER_NEW_BADGE, obj);
@@ -113,15 +113,15 @@ function FamilyCenter() {
   if (familyCenterInitialized) {
     if (null != currentUser) {
       if (!tmp10) {
-        tmp4(5865).openAgeGateModal(AgeGateSource.FAMILY_CENTER);
+        tmp4(5866).openAgeGateModal(AgeGateSource.FAMILY_CENTER);
         return null;
       }
     }
   }
-  obj3 = { value: tmp3(isLoading(5787).FAMILY_CENTER).analyticsLocations, children: null };
+  obj3 = { value: tmp3(isLoading(5788).FAMILY_CENTER).analyticsLocations, children: null };
   let obj4 = { style: tmp.container, onLayout: callback, children: null };
   const obj5 = { style: tmp.segmentedControlContainer, children: null };
-  obj5[1] = callback2(familyCenterInitialized(9187).SegmentedControl, { state: segmentedControlState });
+  obj5[1] = callback2(familyCenterInitialized(9191).SegmentedControl, { state: segmentedControlState });
   const items3 = [callback2(closure_5, obj5), ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
@@ -129,7 +129,7 @@ function FamilyCenter() {
   } else {
     const obj7 = { state: null };
     obj7[0] = segmentedControlState;
-    tmp14Result = tmp14(tmp4(9607).SegmentedControlPages, obj7);
+    tmp14Result = tmp14(tmp4(9611).SegmentedControlPages, obj7);
   }
   obj6[1] = tmp14Result;
   obj6 = tmp14(tmp23, obj6);
@@ -137,7 +137,7 @@ function FamilyCenter() {
   obj4[2] = items3;
   obj4 = closure_16(tmp23, obj4);
   obj3[1] = obj4;
-  tmp14Result = tmp14(tmp4(5767).AnalyticsLocationProvider, obj3);
+  tmp14Result = tmp14(tmp4(5768).AnalyticsLocationProvider, obj3);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_12, FamilyCenterSubPageAnalyticsIds: map1, FamilyCenterSubPages } = items);

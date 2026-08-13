@@ -55,7 +55,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp6;
     obj[6] = tmp2.wrapper;
     obj[7] = children;
-    tmp7Result = callback2(titleContentHeight(4886).PressableOpacity, obj);
+    tmp7Result = callback2(titleContentHeight(4887).PressableOpacity, obj);
     const tmp7 = callback2;
   }
   return tmp7Result;
@@ -96,9 +96,9 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(9516), obj);
+    let tmp8Result = tmp11(tmp(9520), obj);
     let tmp8 = tmp11;
-    const tmpResult = tmp(9516);
+    const tmpResult = tmp(9520);
   } else {
     tmp8 = closure_9;
     let str = "heading-lg/bold";
@@ -149,7 +149,7 @@ function UserAvatar(user) {
   let status;
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: "done", isMobileOnline: true, isVROnline: null, style: null, autoStatusCutout: 102.957 };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
   obj[3] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -259,7 +259,7 @@ function ParentChannelSubTitle(channel) {
   const obj3 = computeChannelName;
   const tmp6 = mergeGuildAvatar;
   const tmp7 = markAllUserIdListsStale;
-  obj[6] = tmp5(4534).computeChannelName(channel, tmp6, tmp7);
+  obj[6] = tmp5(4535).computeChannelName(channel, tmp6, tmp7);
   return tmp4(Text.Text, obj);
 }
 function EmptyIcon() {

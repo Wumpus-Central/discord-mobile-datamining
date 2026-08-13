@@ -27,7 +27,7 @@ export default function Header(style) {
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preload;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(7791);
+    let tmp2Result = tmp2(7795);
   } else {
     tmp2Result = tmp2(12808);
   }

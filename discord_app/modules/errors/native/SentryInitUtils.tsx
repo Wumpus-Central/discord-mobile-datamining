@@ -561,17 +561,17 @@ function trackCrash(event, hint, arg2) {
     tmp25(1208).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1208);
   }
-  const AppCrashedReasons = tmp11(13531).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(13532).AppCrashedReasons;
   const tmp19 = expandEventProperties;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7108).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(7114).MetricEvents.APP_CRASHED, tags: null };
   const items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(7103).increment(obj1, true);
+  tmp26(7109).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -606,18 +606,18 @@ export const initSentry = function initSentry() {
           obj[0] = ReleaseChannel;
           obj[1] = isStable;
           closure_10.verbose("Initialize", obj);
-          if (obj17.isAndroid()) {
+          if (obj15.isAndroid()) {
             if (isStable) {
-              let tmp15Result = tmp15(tmp[17]);
-              const device = tmp15Result.getDevice();
+              let tmp14Result = tmp14(tmp[17]);
+              const device = tmp14Result.getDevice();
             }
           }
           let c12 = 0.05;
           const SentryDsn = constants.SentryDsn;
           if (isStable) {
-            tmp15Result = tmp15(tmp[18]);
+            tmp14Result = tmp14(tmp[18]);
             let SentryStaffDsn = SentryDsn;
-            if (tmp15Result.isMetaQuest()) {
+            if (tmp14Result.isMetaQuest()) {
               c12 = 1;
               let c13 = 1;
               SentryStaffDsn = SentryDsn;
@@ -630,7 +630,7 @@ export const initSentry = function initSentry() {
             SentryStaffDsn = constants.SentryStaffDsn;
             c12 = 1;
           }
-          obj17 = callback(tmp[16]);
+          obj15 = callback(tmp[16]);
           const lastCrashReport = callback2(tmp[13]).getLastCrashReport();
           const obj4 = callback2(tmp[13]);
           lastCrashReport.then((arg0) => {
@@ -645,12 +645,12 @@ export const initSentry = function initSentry() {
               callback2(arg0, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp15Result1 = callback(tmp[4]);
+          const tmp14Result1 = callback(tmp[4]);
           let str2 = "ios";
-          if (tmp15Result2.isAndroid()) {
+          if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6210", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@343.2.0-2+343202", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6221", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@343.3.0-2+343203", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           obj[0] = `/error-reporting-proxy/${str2}`;
           obj[2] = closure_16;
           obj[4] = SentryStaffDsn;
@@ -659,9 +659,9 @@ export const initSentry = function initSentry() {
           const items = [closure_7];
           obj[10] = items;
           const items1 = [closure_8, , ];
-          tmp15Result2 = callback(tmp[16]);
+          tmp14Result2 = callback(tmp[16]);
           items1[1] = callback(tmp[4]).featureFlagsIntegration();
-          const tmp15Result3 = callback(tmp[4]);
+          const tmp14Result3 = callback(tmp[4]);
           const obj1 = { shouldCreateSpanForRequest: null };
           obj1[0] = function shouldCreateSpanForRequest(arg0) {
             let closure_0 = arg0;
@@ -686,18 +686,15 @@ export const initSentry = function initSentry() {
             }
             return data;
           };
-          tmp15Result1.init(obj);
-          const tmp15Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6210");
-          const tmp15Result5 = callback(tmp[4]);
+          tmp14Result1.init(obj);
+          const tmp14Result4 = callback(tmp[4]);
+          callback(tmp[4]).setTag("buildNumber", "6221");
+          const tmp14Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
-          const tmp15Result6 = callback(tmp[4]);
+          const tmp14Result6 = callback(tmp[4]);
           const _HermesInternal = HermesInternal;
           callback(tmp[4]).setTag("design_id", "" + callback(tmp[20]).DesignIds.DESIGN_TABS_IA);
-          const tmp15Result7 = callback(tmp[4]);
-          const tmp15Result8 = callback(tmp[4]);
-          tmp15Result8.setTag("newArchEnabled", callback(tmp[21]).isFabric());
-          const tmp15Result9 = callback(tmp[21]);
+          const tmp14Result7 = callback(tmp[4]);
         }
       }
     });

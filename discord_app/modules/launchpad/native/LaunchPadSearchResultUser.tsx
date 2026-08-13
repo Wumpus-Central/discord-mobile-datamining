@@ -8,7 +8,7 @@ import handleTypingStart from "handleTypingStart";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { StatusTypes } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_16130";
+import jsxProd from "module_16141";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
@@ -55,7 +55,7 @@ function UserResult(user) {
     const items = [user.id];
     outer1_1(outer1_2[13]).openPrivateChannel({ recipientIds: items });
   }, items);
-  let obj = user(4760);
+  let obj = user(4761);
   const fontScale = obj.useFontScale();
   let obj1 = user(589);
   const items1 = [_getSystemLocale];
@@ -75,8 +75,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7142).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7142);
+    relativeTimestamp = tmp6(7148).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7148);
   }
   let str = "text-muted";
   if (unread) {
@@ -85,7 +85,7 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16127);
+  tmp2Result = tmp2(16138);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
@@ -120,8 +120,8 @@ function UserResult(user) {
   const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapper;
   if (comparator == null) {
-    comparator = tmp2(4189).getUserTag(user);
-    const tmp2Result3 = tmp2(4189);
+    comparator = tmp2(4187).getUserTag(user);
+    const tmp2Result3 = tmp2(4187);
   }
   obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
   let tmp14Result;
@@ -133,7 +133,7 @@ function UserResult(user) {
       obj3[2] = str;
       obj3[3] = flag;
       obj3[4] = tmp6(4039).ChannelListLayoutTypes.COMPACT;
-      tmp14Result = tmp14(tmp6(9836).ChannelRowPreview, obj3);
+      tmp14Result = tmp14(tmp6(9839).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -147,7 +147,7 @@ function UserResult(user) {
   items5[2] = ChannelContent(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
-  return tmp2Result(callback(user(4886).PressableHighlight, obj));
+  return tmp2Result(callback(user(4887).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   let channel;
@@ -167,7 +167,7 @@ function UserResultWithChannel(arg0) {
   const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(14618)(channel, { unread });
+  obj.lastMessage = channel(14627)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;

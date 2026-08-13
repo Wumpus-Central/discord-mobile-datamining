@@ -70,7 +70,7 @@ export default function FadeOutLottieAnimation(onComplete) {
       return;
     }
   }
-  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4345).withTiming, runOnJS: onComplete(4083).runOnJS, setIsFadeOut: tmp7 };
+  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4343).withTiming, runOnJS: onComplete(4083).runOnJS, setIsFadeOut: tmp7 };
   T.__closure = obj;
   T.__workletHash = 1137618554665;
   T.__initData = closure_8;
@@ -91,9 +91,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       dependencyMap(true);
     };
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(first(5758), { style: null, speed: null, onAnimationFinish: null });
+    obj[1] = jsx(first(5759), { style: null, speed: null, onAnimationFinish: null });
     let tmp14Result = tmp14(first(4083).View, obj);
-    const tmp16 = first(5758);
+    const tmp16 = first(5759);
   } else {
     tmp14Result = null;
   }

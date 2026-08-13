@@ -68,7 +68,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   let obj = flag2(accessibilityState[7]);
   const buttonPressAnimationProps = obj.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    obj = { animatedScaleStyles: "Array", buttonAnimationProps: "Array" };
     obj = { onLayout: null, onPressIn: null, onPressOut: null };
     obj[0] = onLayout;
     obj[1] = onPressIn;

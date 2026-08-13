@@ -6,7 +6,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importDefaultResult from "module_4083";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { BottomSheetModal } from "../../../_runtime/05438_BottomSheetModal.js";
+import { BottomSheetModal } from "../../../_runtime/05439_BottomSheetModal.js";
 import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import { set } from "../../modules/core/native/NativeView.tsx";
 import { ReanimatedRexport } from "../../modules/reanimated/ReanimatedRexport.tsx";
@@ -1397,7 +1397,7 @@ let closure_20 = importAllResult.memo(function FastListStickySectionRendererComp
   if (horizontal) {
     tmp16 = layoutSize;
   }
-  obj1 = { style: items2, collapsable: false, preventClipping: true, children: null };
+  obj1 = { style: items2, collapsable: false, children: null };
   obj[3] = tmp16;
   items2[1] = obj;
   items2[2] = animatedStyle;
@@ -1408,7 +1408,7 @@ let closure_20 = importAllResult.memo(function FastListStickySectionRendererComp
     cloneElementResult = importAllResult.cloneElement(onlyResult, obj2);
   }
   const items3 = [cloneElementResult, false];
-  obj1[3] = items3;
+  obj1[2] = items3;
   return closure_10(scrollPosValue(items[11]), obj1);
 });
 let closure_21 = importAllResult.memo(function _FastListSectionRenderer(disableWrapper) {

@@ -117,7 +117,7 @@ function resolveChannelScreens(index, isChatLockedOpen) {
   for (let num = 0; num <= index.index; num = num + 1) {
     let tmp = arr2;
     let tmp2 = dependencyMap;
-    let obj = arr2(4199);
+    let obj = arr2(4197);
     let coerceChannelRouteResult = obj.coerceChannelRoute(index.routes[num]);
     let tmp4 = num;
     if (null != coerceChannelRouteResult) {
@@ -250,8 +250,8 @@ export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
     const tmp5 = getActiveTabsRoute(coerceTabsRouteResult);
     let tmp6 = null != tmp5;
     if (tmp6) {
-      tmp6 = null != tmp(4199).coerceGuildsRoute(tmp5);
-      const tmpResult = tmp(4199);
+      tmp6 = null != tmp(4197).coerceGuildsRoute(tmp5);
+      const tmpResult = tmp(4197);
     }
     return tmp6;
   }

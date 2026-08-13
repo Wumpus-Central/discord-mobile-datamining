@@ -87,16 +87,16 @@ export default function GuildProgressActionSheet(guild) {
               let closure_1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
-              outer1_1(9066).init(outer1_5);
-              const obj6 = outer1_1(9066);
-              outer1_0(11895).hideActionSheet(outer1_0.id);
-              const obj7 = outer1_0(11895);
+              outer1_1(9070).init(outer1_5);
+              const obj6 = outer1_1(9070);
+              outer1_0(11897).hideActionSheet(outer1_0.id);
+              const obj7 = outer1_0(11897);
               const obj1 = { size: null };
               obj1[0] = outer1_10;
               dependencyMap = 1;
               c3 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = outer1_1(4900).openImagePicker(obj1);
+              obj2[0] = outer1_1(4901).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -110,7 +110,7 @@ export default function GuildProgressActionSheet(guild) {
           } else {
             base64 = arg1.base64;
             if (null != base64) {
-              obj = outer1_1(9066);
+              obj = outer1_1(9070);
               obj.updateIcon(closure_5, base64);
             }
             c3 = 3;

@@ -194,13 +194,13 @@ function SKUNameAndDescriptionSection(sku) {
     obj[0] = tmp.section;
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = sku.name;
-    const items = [callback(tmp2(4340).Heading, obj), ];
+    const items = [callback(tmp2(4338).Heading, obj), ];
     const isNullOrEmptyResult = tmp2(1903).isNullOrEmpty(sku.description);
     let tmp7Result = !isNullOrEmptyResult;
     if (!isNullOrEmptyResult) {
       const obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
       obj1[2] = sku.description;
-      tmp7Result = tmp7(tmp2(4340).Text, obj1);
+      tmp7Result = tmp7(tmp2(4338).Text, obj1);
     }
     items[1] = tmp7Result;
     obj[1] = items;
@@ -247,7 +247,7 @@ function ItemDetailsSection(selectedItem) {
   if (!isNullOrEmptyResult) {
     obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = trimmed;
-    tmp14 = callback(tmp8(4340).Heading, obj);
+    tmp14 = callback(tmp8(4338).Heading, obj);
   }
   const items = [tmp14, , ];
   const tmp8Result1 = isNullOrEmpty;
@@ -268,7 +268,7 @@ function ItemDetailsSection(selectedItem) {
     const items1 = [tmp18, ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj4[2] = trimmed1;
-    items1[1] = callback(tmp8(4340).Text, obj4);
+    items1[1] = callback(tmp8(4338).Text, obj4);
     obj1[1] = items1;
     tmp11Result = tmp11(tmp12, obj1);
   }
@@ -279,7 +279,7 @@ function ItemDetailsSection(selectedItem) {
   if (!isNullOrEmptyResult2) {
     const obj5 = { variant: "text-md/medium", color: "text-default", children: null };
     obj5[2] = trimmed2;
-    tmp23 = callback(tmp8(4340).Text, obj5);
+    tmp23 = callback(tmp8(4338).Text, obj5);
   }
   items[2] = tmp23;
   obj[1] = items;
@@ -310,7 +310,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   const tmp = callback3();
   dependencyMap = tmp;
   const rect = analyticsLocations(1628)();
-  let obj = analyticsLocations(7692);
+  let obj = analyticsLocations(7696);
   storeFront = obj.useNativeIAPPayments().storeFront;
   let obj1 = skuId(589);
   let items = [memo2];
@@ -318,14 +318,14 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   let obj2 = skuId(589);
   let items1 = [memo2];
   stateFromStores1 = obj2.useStateFromStores(items1, () => memo2.isFetching(skuId) || memo2.didFetchingSkuFail(skuId));
-  let obj3 = skuId(5773);
+  let obj3 = skuId(5774);
   let applicationId;
   if (stateFromStores != null) {
     applicationId = stateFromStores.applicationId;
   }
   const getOrFetchApplication = obj3.useGetOrFetchApplication(applicationId);
   let tmp10 = getOrFetchApplication;
-  let tmp2Result = tmp2(5770);
+  let tmp2Result = tmp2(5771);
   if (getOrFetchApplication == null) {
     tmp10 = null;
   }
@@ -346,7 +346,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const items1 = [...items, analyticsLocations(_undefined[28]).SLAYER_STOREFRONT_NATIVE_PDP];
     return items1;
   }, items4);
-  const tmp17 = analyticsLocations(5755)(() => skuId(_undefined[30]).v4());
+  const tmp17 = analyticsLocations(5756)(() => skuId(_undefined[30]).v4());
   useNativeCheckoutStore = tmp17;
   const items5 = [memo1, skuId, , , , ];
   let type;
@@ -385,7 +385,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj[7] = c8;
     return obj;
   }, items5);
-  analyticsLocations(4770)(() => {
+  analyticsLocations(4771)(() => {
     let obj = analyticsLocations(_undefined[32]);
     obj = { location_stack: memo1, type: skuId(_undefined[33]).SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY, sku_id: skuId, application_id: null };
     let applicationId;
@@ -396,7 +396,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj.track(_undefined2.OPEN_MODAL, obj);
   });
   handleUserSettingsStoreUpdate = obj5.useRef("not_started");
-  tmp4Result = tmp4(4770);
+  tmp4Result = tmp4(4771);
   const unmountEffect = tmp4Result.useUnmountEffect(() => {
     if ("pending" === ref.current) {
       analyticsLocations(_undefined[32]).track(_undefined2.PAYMENT_FLOW_CANCELED, memo2);
@@ -586,11 +586,11 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = tmp4(5891).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+    let result = tmp4(5893).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
     const intl4 = tmp4(1236).intl;
     const stringResult = intl4.string(tmp4(1236).t.boqtTA);
     const items12 = [tmp.container, ];
-    const tmp4Result1 = tmp4(5891);
+    const tmp4Result1 = tmp4(5893);
     let num3 = 0;
     if (!tmp4Result2.isIOS()) {
       num3 = rect.top;
@@ -609,7 +609,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     };
     const intl = tmp4(1236).intl;
     obj3[2] = intl.string(tmp4(1236).t.cpT0Cq);
-    const items13 = [callback1(tmp4(5316).HeaderBackButton, obj3), ];
+    const items13 = [callback1(tmp4(5317).HeaderBackButton, obj3), ];
     const obj4 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
     obj4[2] = tmp.headerTitle;
     let name;
@@ -617,7 +617,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       name = getOrFetchApplication.name;
     }
     obj4[3] = name;
-    items13[1] = callback1(tmp4(4340).Heading, obj4);
+    items13[1] = callback1(tmp4(4338).Heading, obj4);
     obj2[1] = items13;
     const items14 = [c16(memo1, obj2), , ];
     obj5 = { style: null, children: null };
@@ -628,7 +628,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       obj6[0] = stateFromStores2.absoluteFill;
       const items15 = [closure_18, closure_19];
       obj6[1] = items15;
-      exclusive = tmp42(tmp2(4765), obj6);
+      exclusive = tmp42(tmp2(4766), obj6);
     }
     const items16 = [exclusive, ];
     const obj7 = { contentContainerStyle: null, children: null };
@@ -642,7 +642,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       if (tmp42Result) {
         const obj9 = { sku: null };
         obj9[0] = stateFromStores;
-        tmp42Result = tmp42(tmp2(9444), obj9);
+        tmp42Result = tmp42(tmp2(9448), obj9);
       }
     }
     const items17 = [tmp42Result, , ];
@@ -702,7 +702,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       obj19[2] = tmp.availabilityCopy;
       const intl2 = tmp4(1236).intl;
       obj19[3] = intl2.string(tmp2(3239).gndWN7);
-      tmp42Result2 = tmp42(tmp4(4340).Text, obj19);
+      tmp42Result2 = tmp42(tmp4(4338).Text, obj19);
     }
     items20[1] = tmp42Result2;
     const obj20 = { style: null, children: null };
@@ -718,15 +718,15 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     }
     obj22[4] = tmp59;
     obj22[5] = callback2;
-    obj21[1] = callback1(tmp4(4754).Button, obj22);
+    obj21[1] = callback1(tmp4(4755).Button, obj22);
     const items21 = [callback1(memo1, obj21), ];
     const obj23 = { icon: null, variant: "primary", size: "lg", disabled: null, accessibilityLabel: null, onPress: null };
-    obj23[0] = tmp2(8224);
+    obj23[0] = tmp2(8228);
     obj23[3] = tmp32;
     const intl3 = tmp4(1236).intl;
     obj23[4] = intl3.string(tmp4(1236).t.QAZA5f);
     obj23[5] = tmp41;
-    items21[1] = callback1(tmp4(7792).IconButton, obj23);
+    items21[1] = callback1(tmp4(7796).IconButton, obj23);
     obj20[1] = items21;
     items20[2] = c16(memo1, obj20);
     if (result) {
@@ -757,7 +757,7 @@ function SocialLayerStorefrontProductDetailsModalWithOrderCTX(skuId) {
     GOOGLE = tmp3.GOOGLE;
     tmp4 = tmp3;
   }
-  const OTPACOMOrderExperiment = tmp(7453).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp(7457).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   obj = { paymentGateway: GOOGLE, orderRequired: null, skuIds: null, isGift: false, activeSubscription: null, onOrderRetryCancellation: null, children: null };
   if (enabled) {

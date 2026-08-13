@@ -229,7 +229,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "Array" });
+      setOptions({ headerRight: "sa" });
     }
   }, items5);
   obj = { style: tmp.container, children: null };
@@ -264,22 +264,22 @@ export default function ChannelSettingsEditForumTag(channelId) {
           usableCustomEmojiById(null);
           callback("");
         };
-        obj5[2] = tmp27(tmp3(6037).CircleXIcon, { size: "xs" });
-        let tmp27Result = tmp27(tmp3(4886).PressableOpacity, obj5);
+        obj5[2] = tmp27(tmp3(6039).CircleXIcon, { size: "xs" });
+        let tmp27Result = tmp27(tmp3(4887).PressableOpacity, obj5);
       } else {
         tmp27Result = null;
       }
       const obj6 = { children: null };
       const obj7 = { hasIcons: true, children: null };
       obj3[2] = tmp27Result;
-      obj7[1] = tmp27(tmp3(5413).TableRow, obj3);
-      const items6 = [tmp27(tmp3(5806).TableRowGroup, obj7), ];
+      obj7[1] = tmp27(tmp3(5414).TableRow, obj3);
+      const items6 = [tmp27(tmp3(5807).TableRowGroup, obj7), ];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.hint;
       const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
       let intl2 = tmp3(1236).intl;
       obj9[2] = intl2.string(tmp3(1236).t["3v8kZH"]);
-      obj8[1] = tmp27(tmp3(4340).Text, obj9);
+      obj8[1] = tmp27(tmp3(4338).Text, obj9);
       items6[1] = tmp27(tmp28, obj8);
       obj6[0] = items6;
       const items7 = [tmp29(tmp28, obj6), , ];
@@ -303,8 +303,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
         }
         closure_10(tmp2);
       };
-      obj11[1] = tmp27(tmp3(5807).TableSwitchRow, obj10);
-      items7[1] = tmp27(tmp3(5806).TableRowGroup, obj11);
+      obj11[1] = tmp27(tmp3(5808).TableSwitchRow, obj10);
+      items7[1] = tmp27(tmp3(5807).TableRowGroup, obj11);
       tmp27Result = null;
       if (!tmp2) {
         const obj12 = { hasIcons: false, children: null };
@@ -331,12 +331,12 @@ export default function ChannelSettingsEditForumTag(channelId) {
           };
           obj.show(obj);
         };
-        obj12[1] = tmp27(tmp3(5413).TableRow, obj13);
-        tmp27Result = tmp27(tmp3(5806).TableRowGroup, obj12);
+        obj12[1] = tmp27(tmp3(5414).TableRow, obj13);
+        tmp27Result = tmp27(tmp3(5807).TableRowGroup, obj12);
       }
       items7[2] = tmp27Result;
       obj1[2] = items7;
-      obj[1] = tmp29(tmp3(4752).Stack, obj1);
+      obj[1] = tmp29(tmp3(4753).Stack, obj1);
       return tmp27(tmp28, obj);
     }
     const obj14 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
@@ -358,9 +358,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
       str2 = "";
     }
     obj14[3] = str2;
-    tmp27Result1 = tmp27(tag(5399), obj14);
+    tmp27Result1 = tmp27(tag(5400), obj14);
     tmp31 = tag;
-    const tmp32 = tag(5399);
+    const tmp32 = tag(5400);
   }
-  tmp27Result1 = tmp27(tmp3(7696).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(7700).ReactionIcon, {});
 };

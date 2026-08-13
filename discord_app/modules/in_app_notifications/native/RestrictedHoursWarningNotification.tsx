@@ -37,10 +37,10 @@ const memoResult = importAllResult.memo(function RestrictedHoursWarningNotificat
     notification(outer1_2[10]).openUserSettings(obj);
   }, items1);
   obj = { icon: <View size="sm" color={null} />, header: memo, children: null, onPress: null, notification: null };
-  obj[2] = jsx(notification(4340).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp: closure_5, children: notification.subtitle });
+  obj[2] = jsx(notification(4338).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp: closure_5, children: notification.subtitle });
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(notification(9898).NotificationPressable, { icon: <View size="sm" color={null} />, header: memo, children: null, onPress: null, notification: null });
+  return jsx(notification(9896).NotificationPressable, { icon: <View size="sm" color={null} />, header: memo, children: null, onPress: null, notification: null });
 });
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
 

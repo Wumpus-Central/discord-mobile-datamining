@@ -57,7 +57,7 @@ function buildCommand(arg0) {
       CHAT = obj(1954).ApplicationCommandType.CHAT;
     }
     obj[6] = CHAT;
-    obj[7] = obj(7024).ApplicationCommandInputType.BOT;
+    obj[7] = obj(7030).ApplicationCommandInputType.BOT;
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
@@ -344,10 +344,10 @@ function buildCommand(arg0) {
     ({ nsfw: obj3[17], contexts: obj3[18], integration_types: obj3[19], global_popularity_rank: obj3[20], handler: obj3[21] } = rootCommand);
     return obj;
   } else if (useKeyedPermissions) {
-    const keyPermissionsResult = obj(7023).keyPermissions(rootCommand.permissions);
+    const keyPermissionsResult = obj(7029).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
     obj = keyPermissionsResult;
-    const obj2 = obj(7023);
+    const obj2 = obj(7029);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;
@@ -469,7 +469,7 @@ function buildSubCommands(arg0) {
 }
 function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
   const obj = commandPermissions;
-  const tmp = commandLevelPermissions[obj.toPermissionKey(obj, selfMember.userId, require(undefined, 7024) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER)];
+  const tmp = commandLevelPermissions[obj.toPermissionKey(obj, selfMember.userId, require(undefined, 7030) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER)];
   if (null != tmp) {
     return tmp.permission;
   } else {
@@ -480,7 +480,7 @@ function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
       let tmp5 = require;
       let tmp6 = dependencyMap;
       let obj2 = commandPermissions;
-      let tmp7 = commandLevelPermissions[obj2.toPermissionKey(obj2, tmp3, require(undefined, 7024) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
+      let tmp7 = commandLevelPermissions[obj2.toPermissionKey(obj2, tmp3, require(undefined, 7030) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
       if (null != tmp7) {
         flag = true;
         let tmp9 = tmp7;
@@ -496,7 +496,7 @@ function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
       return false;
     } else {
       const obj3 = commandPermissions;
-      const tmp14 = commandLevelPermissions[obj3.toPermissionKey(obj3, id, require(undefined, 7024) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
+      const tmp14 = commandLevelPermissions[obj3.toPermissionKey(obj3, id, require(undefined, 7030) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
       let permission = null;
       if (null != tmp14) {
         permission = tmp14.permission;
@@ -514,9 +514,7 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   let closure_0 = arg1;
   return apply.flatMap(application_commands, (id) => {
     outer1_1(outer1_3[10])(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: 0 };
-    obj[4] = closure_0;
-    return outer1_12(obj);
+    return outer1_12({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: closure_0 });
   });
 };
 export const applicationPermissionsList = function applicationPermissionsList(arr) {

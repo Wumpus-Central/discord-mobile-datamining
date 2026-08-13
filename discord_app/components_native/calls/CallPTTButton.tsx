@@ -100,10 +100,10 @@ const memoResult = importAllResult.memo((look) => {
   class F {
     constructor() {
       tmp = sendCallback;
-      tmp2 = f85131;
-      obj = sendCallback(f85131[15]);
+      tmp2 = f84939;
+      obj = sendCallback(f84939[15]);
       tmp3 = obj.runOnJS(c6)(true);
-      obj2 = sendCallback(f85131[15]);
+      obj2 = sendCallback(f84939[15]);
       tmp4 = obj2.runOnJS(c4)(false);
       if (null != setIsSwipeToChatDisabled) {
         tmpResult = tmp(tmp2[15]);
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo((look) => {
   const PanResult = Gesture.Pan();
   class N {
     constructor() {
-      obj = sendCallback(f85131[15]);
+      obj = sendCallback(f84939[15]);
       tmp = obj.runOnJS(c6)(false);
       return;
     }

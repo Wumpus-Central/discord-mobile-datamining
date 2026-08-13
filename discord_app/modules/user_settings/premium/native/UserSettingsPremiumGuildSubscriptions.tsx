@@ -113,7 +113,7 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
       const obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj2[0] = tmp.externalManagement;
       obj2[3] = externalManagementMessage;
-      tmp6Result = tmp6(tmp7(4340).Text, obj2);
+      tmp6Result = tmp6(tmp7(4338).Text, obj2);
     }
     const obj3 = { children: null };
     items1[2] = tmp6Result;
@@ -197,10 +197,10 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(6901)({ forceFetch: true }));
-  let tmpResult = tmp(8207);
+  ({ fractionalState: c2, endsAt } = flag(6907)({ forceFetch: true }));
+  let tmpResult = tmp(8211);
   closure_3 = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(6901)({ forceFetch: true });
+  const tmp3 = flag(6907)({ forceFetch: true });
   closure_4 = flag(12796)(endsAt, tmp(12796).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(589);
   const items = [handleGuildBoostsUpdate, handlePaymentSourceCreateEnd, addSubscriptionPlan, mergeGuildAvatar];

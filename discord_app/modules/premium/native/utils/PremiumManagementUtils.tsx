@@ -95,7 +95,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 const intl3 = tmp13(1236).intl;
                 const t = tmp13(1236).t;
                 obj[2] = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(6911).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
+                jsx(tmp13(6917).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
                 const tmp9 = jsx;
               } else {
                 function manageExternalNitroSubscription() {

@@ -36,7 +36,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }, items);
   let intl = savedMessage(1236).intl;
   obj[0] = intl.string(savedMessage(1236).t["+TSRGD"]);
-  obj[1] = savedMessage(11190).ChatArrowRightIcon;
+  obj[1] = savedMessage(11181).ChatArrowRightIcon;
   obj[2] = function action() {
     return jumpToMessage();
   };
@@ -49,7 +49,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }
   obj = {
     label: intl2.string(SvXS1Z),
-    IconComponent: tmp3(5365).XSmallIcon,
+    IconComponent: tmp3(5366).XSmallIcon,
     action() {
       return savedMessage(outer1_2[7]).removeSavedMessage(savedMessage.saveData);
     },
@@ -69,10 +69,10 @@ export default function ForLaterCardActionButtons(savedMessage) {
       const intl = savedMessage(1236).intl;
       obj.accessibilityLabel = intl.string(savedMessage(1236).t.e1heBD);
       obj.size = "sm";
-      obj.icon = jumpToMessage(8650);
-      return callback(savedMessage(7792).IconButton, obj);
+      obj.icon = jumpToMessage(8654);
+      return callback(savedMessage(7796).IconButton, obj);
     };
-    obj[1] = jsx(tmp3(8643).ContextMenu, { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null });
+    obj[1] = jsx(tmp3(8647).ContextMenu, { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null });
     return <View style={null}>{null}</View>;
   } else {
     const intl3 = tmp3(1236).intl;
@@ -82,7 +82,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
       let PencilIcon = tmp3(12629).BellZIcon;
     } else {
-      PencilIcon = tmp3(9717).PencilIcon;
+      PencilIcon = tmp3(9721).PencilIcon;
     }
     obj2[1] = PencilIcon;
     obj2[2] = callback;

@@ -18,7 +18,7 @@ class StageChannelRaiseHandAck {
   constructor(arg0) {
     channel = global.channel;
     _handleAcceptInvite = undefined;
-    f86277 = undefined;
+    f86085 = undefined;
     useState = undefined;
     _handleAcceptInvite = function _handleAcceptInvite(arg0) {
       const self = this;
@@ -54,19 +54,19 @@ class StageChannelRaiseHandAck {
                 if (null != outer1_0) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(outer1_0.id)) {
                     const obj1 = { entryPoint: null };
-                    obj1[0] = tmp42(7840).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-                    const result = outer1_1(7838).showAgeVerificationGetStartedModal(obj1);
-                    const obj4 = outer1_1(7838);
+                    obj1[0] = tmp42(7844).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+                    const result = outer1_1(7842).showAgeVerificationGetStartedModal(obj1);
+                    const obj4 = outer1_1(7842);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = tmp42(7819).audienceAckRequestToSpeak(outer1_0, false);
+                    obj2[0] = tmp42(7823).audienceAckRequestToSpeak(outer1_0, false);
                     return obj2;
                   }
-                  obj9 = outer1_0(5180);
+                  obj9 = outer1_0(5181);
                 }
                 c5 = 3;
               }
@@ -82,8 +82,8 @@ class StageChannelRaiseHandAck {
               dependencyMap = 0;
               dependencyMap(false);
               if (null == outer1_8.getKey()) {
-                outer1_2(7815).openStageChannel(outer1_0);
-                const obj8 = outer1_2(7815);
+                outer1_2(7819).openStageChannel(outer1_0);
+                const obj8 = outer1_2(7819);
               }
             }
             dependencyMap = 0;
@@ -128,7 +128,7 @@ class StageChannelRaiseHandAck {
     items1 = [];
     items1[0] = channel.id;
     stateFromStores = obj.useStateFromStores(items, () => outer1_9.getStageInstanceByChannel(channel.id), items1);
-    f86277 = stateFromStores;
+    f86085 = stateFromStores;
     tmp8 = require("useMountLayoutEffect")(() => {
       let obj = _undefined(_undefined2[14]);
       const intl = channel(_undefined2[8]).intl;
@@ -298,7 +298,7 @@ export default function GlobalStageChannelStatus(arg0) {
     stringResult = intl.string(id(1236).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeak();
-  let invitedHeaderText = tmp3(10343)(id);
+  let invitedHeaderText = tmp3(10254)(id);
   let obj = id(589);
   const items = [closure_9];
   const items1 = [id];
@@ -334,11 +334,11 @@ export default function GlobalStageChannelStatus(arg0) {
           obj[0] = tmp.noticeContainer;
           const obj1 = { animated: true, barStyle: null };
           obj1[1] = str;
-          const items2 = [callback2(tmp3(7789), obj1), , ];
+          const items2 = [callback2(tmp3(7793), obj1), , ];
           const obj2 = { style: null, size: null, source: null };
           obj2[0] = activeSpeakerIcon;
           obj2[1] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-          tmp8Result = tmp8(4804);
+          tmp8Result = tmp8(4805);
           obj2[2] = tmp8Result.getChannelIconWithGuild(channel, guild);
           items2[1] = callback2(tmp8(1297).Icon, obj2);
           tmp13Result = "" !== str2;

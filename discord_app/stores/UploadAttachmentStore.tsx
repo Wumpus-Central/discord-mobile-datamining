@@ -62,7 +62,7 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
   }
   return value;
 };
-prototype["getUploadCount"] = function getUploadCount(channelId, draftType) {
+prototype["getUploadCount"] = function getUploadCount(channelId, ChannelMessage) {
   map = map.get(channelId);
   if (map == null) {
     const _Map = Map;
@@ -70,7 +70,7 @@ prototype["getUploadCount"] = function getUploadCount(channelId, draftType) {
   }
   let value;
   if (map != null) {
-    value = map.get(draftType);
+    value = map.get(ChannelMessage);
   }
   if (value == null) {
     value = closure_6;

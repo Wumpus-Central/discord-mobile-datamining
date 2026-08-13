@@ -3,7 +3,7 @@ import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
 import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
-import jsxProd from "module_4354";
+import jsxProd from "module_4355";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
@@ -45,10 +45,10 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let markAllUserIdListsStale;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8833);
+  let obj = user(8837);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5767)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5768)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
   let tmp3Result = tmp3(12406);
@@ -56,7 +56,7 @@ function FriendRequestButton(user) {
   tmp3Result = tmp3(589);
   const items = [markAllUserIdListsStale];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  markAllUserIdListsStale = trackUserProfileAction(4189).useName(user);
+  markAllUserIdListsStale = trackUserProfileAction(4187).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -67,7 +67,7 @@ function FriendRequestButton(user) {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
           let UserPlusIcon = tmp3(12583).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4282).UserPlusIcon;
+          UserPlusIcon = tmp3(4280).UserPlusIcon;
         }
         const intl = tmp3(1236).intl;
         const string = intl.string;
@@ -97,11 +97,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(12037).confirmCancelFriendRequest(obj);
-            const obj3 = user(12037);
+            const result = user(12039).confirmCancelFriendRequest(obj);
+            const obj3 = user(12039);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9289);
+            obj = trackUserProfileAction(9293);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

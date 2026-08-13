@@ -30,9 +30,9 @@ function _generatePairwiseFingerprint() {
     let c8 = 0;
     return (function*(arg0, arg1, arg2, arg3, arg4) {
       let closure_6 = tmp2;
-      const items = [lib(9243).generateKeyFingerprint(lib, uint8Array, asyncGeneratorStep), ];
-      const obj9 = lib(9243);
-      items[1] = lib(9243).generateKeyFingerprint(lib, module_36, closure_4);
+      const items = [lib(9247).generateKeyFingerprint(lib, uint8Array, asyncGeneratorStep), ];
+      const obj9 = lib(9247);
+      items[1] = lib(9247).generateKeyFingerprint(lib, module_36, closure_4);
       lib = yield Promise.all(items);
       const sorted = lib.sort(closure_5);
       const _Uint8Array2 = Uint8Array;

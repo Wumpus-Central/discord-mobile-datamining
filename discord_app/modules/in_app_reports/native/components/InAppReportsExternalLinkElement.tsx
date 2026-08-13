@@ -17,11 +17,11 @@ function ExternalLinkItem(data) {
     obj[1] = tmp2;
     obj = { IconComponent: null };
     obj[0] = url(12723).LinkExternalMediumIcon;
-    obj[2] = callback(url(5419).TableRowIcon, obj);
+    obj[2] = callback(url(5420).TableRowIcon, obj);
     obj[3] = function onPress() {
       outer1_1(outer1_2[8]).openURL(url);
     };
-    tmp3 = callback(url(8011).RowButton, obj);
+    tmp3 = callback(url(8015).RowButton, obj);
   }
   return tmp3;
 }

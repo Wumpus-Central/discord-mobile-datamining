@@ -10,78 +10,78 @@ export default function getGameProfileWebsiteData(category) {
     let obj = { icon: null, action: null, title: null, url: null };
     obj = { size: "md", color: null };
     obj[1] = arg1;
-    obj[0] = jsx(tmp(10582).GlobeEarthIcon, { size: "md", color: null });
-    obj[1] = tmp(9329).GameProfileTrackActionActions.WebsiteLink;
+    obj[0] = jsx(tmp(10496).GlobeEarthIcon, { size: "md", color: null });
+    obj[1] = tmp(9333).GameProfileTrackActionActions.WebsiteLink;
     const intl8 = tmp(1236).intl;
     obj[2] = intl8.string(tmp(1236).t.fOUKvg);
     obj[3] = category.url;
     return obj;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.TWITTER === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.TWITTER === category) {
     const obj1 = { icon: null, action: null, title: null, url: null };
     const obj2 = { size: "md", color: null };
     obj2[1] = arg1;
-    obj1[0] = jsx(tmp(8238).XNeutralIcon, { size: "md", color: null });
-    obj1[1] = tmp(9329).GameProfileTrackActionActions.XLink;
+    obj1[0] = jsx(tmp(8242).XNeutralIcon, { size: "md", color: null });
+    obj1[1] = tmp(9333).GameProfileTrackActionActions.XLink;
     const intl7 = tmp(1236).intl;
     obj1[2] = intl7.string(tmp(1236).t.INic4y);
     obj1[3] = category.url;
     return obj1;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.YOUTUBE === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.YOUTUBE === category) {
     const obj3 = { icon: null, action: null, title: null, url: null };
     const obj4 = { size: "md", color: null };
     obj4[1] = arg1;
-    obj3[0] = jsx(tmp(11790).YoutubeNeutralIcon, { size: "md", color: null });
-    obj3[1] = tmp(9329).GameProfileTrackActionActions.YouTubeLink;
+    obj3[0] = jsx(tmp(11788).YoutubeNeutralIcon, { size: "md", color: null });
+    obj3[1] = tmp(9333).GameProfileTrackActionActions.YouTubeLink;
     const intl6 = tmp(1236).intl;
     obj3[2] = intl6.string(tmp(1236).t.lNmxbE);
     obj3[3] = category.url;
     return obj3;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.FACEBOOK === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.FACEBOOK === category) {
     const obj5 = { icon: null, action: null, title: null, url: null };
     const obj6 = { size: "md", color: null };
     obj6[1] = arg1;
-    obj5[0] = jsx(tmp(8240).FacebookNeutralIcon, { size: "md", color: null });
-    obj5[1] = tmp(9329).GameProfileTrackActionActions.FacebookLink;
+    obj5[0] = jsx(tmp(8244).FacebookNeutralIcon, { size: "md", color: null });
+    obj5[1] = tmp(9333).GameProfileTrackActionActions.FacebookLink;
     const intl5 = tmp(1236).intl;
     obj5[2] = intl5.string(tmp(1236).t.FjyREK);
     obj5[3] = category.url;
     return obj5;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.INSTAGRAM === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.INSTAGRAM === category) {
     const obj7 = { icon: null, action: null, title: null, url: null };
     const obj8 = { size: "md", color: null };
     obj8[1] = arg1;
-    obj7[0] = jsx(tmp(8242).InstagramNeutralIcon, { size: "md", color: null });
-    obj7[1] = tmp(9329).GameProfileTrackActionActions.InstagramLink;
+    obj7[0] = jsx(tmp(8246).InstagramNeutralIcon, { size: "md", color: null });
+    obj7[1] = tmp(9333).GameProfileTrackActionActions.InstagramLink;
     const intl4 = tmp(1236).intl;
     obj7[2] = intl4.string(tmp(1236).t["cgR+IK"]);
     obj7[3] = category.url;
     return obj7;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.BLUESKY === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.BLUESKY === category) {
     const obj9 = { icon: null, action: null, title: null, url: null };
     const obj10 = { size: "md", color: null };
     obj10[1] = arg1;
-    obj9[0] = jsx(tmp(12257).BlueskyNeutralIcon, { size: "md", color: null });
-    obj9[1] = tmp(9329).GameProfileTrackActionActions.BlueskyLink;
+    obj9[0] = jsx(tmp(12259).BlueskyNeutralIcon, { size: "md", color: null });
+    obj9[1] = tmp(9333).GameProfileTrackActionActions.BlueskyLink;
     const intl3 = tmp(1236).intl;
     obj9[2] = intl3.string(tmp(1236).t["D/PHq5"]);
     obj9[3] = category.url;
     return obj9;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.REDDIT === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.REDDIT === category) {
     const obj11 = { icon: null, action: null, title: null, url: null };
     const obj12 = { size: "md", color: null };
     obj12[1] = arg1;
-    obj11[0] = jsx(tmp(12259).RedditNeutralIcon, { size: "md", color: null });
-    obj11[1] = tmp(9329).GameProfileTrackActionActions.RedditLink;
+    obj11[0] = jsx(tmp(12261).RedditNeutralIcon, { size: "md", color: null });
+    obj11[1] = tmp(9333).GameProfileTrackActionActions.RedditLink;
     const intl2 = tmp(1236).intl;
     obj11[2] = intl2.string(tmp(1236).t["Hgb+fc"]);
     obj11[3] = category.url;
     return obj11;
-  } else if (tmp(9332).ThirdPartyGameApplicationWebsiteCategory.TWITCH === category) {
+  } else if (tmp(9336).ThirdPartyGameApplicationWebsiteCategory.TWITCH === category) {
     obj = { icon: null, action: null, title: null, url: null };
     const obj13 = { size: "md", color: null };
     obj13[1] = arg1;
-    obj[0] = jsx(tmp(12261).TwitchNeutralIcon, { size: "md", color: null });
-    obj[1] = tmp(9329).GameProfileTrackActionActions.TwitchLink;
+    obj[0] = jsx(tmp(12263).TwitchNeutralIcon, { size: "md", color: null });
+    obj[1] = tmp(9333).GameProfileTrackActionActions.TwitchLink;
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["7xtz4G"]);
     obj[3] = category.url;

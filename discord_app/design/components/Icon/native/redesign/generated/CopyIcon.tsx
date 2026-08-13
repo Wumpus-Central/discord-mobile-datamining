@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CopyIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/04293_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/04291_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

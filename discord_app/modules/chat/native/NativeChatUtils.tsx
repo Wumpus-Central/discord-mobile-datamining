@@ -1,5 +1,6 @@
 // discord_app/modules/chat/native/NativeChatUtils.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
+import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
@@ -28,7 +29,7 @@ obj = {
           DCDChatManager.scrollTo(tmp15, arg1, tmp, tmp2, TOP);
         }
       } else {
-        const Commands = tmp5(11067).Commands;
+        const Commands = tmp5(10982).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
       obj2 = set;
@@ -44,7 +45,7 @@ obj = {
           DCDChatManager.scrollToBottom(tmp6, arg1);
         }
       } else {
-        const Commands = tmp2(11067).Commands;
+        const Commands = tmp2(10982).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
       obj = set;
@@ -90,7 +91,7 @@ obj = {
           DCDChatManager.scrollIntoView(tmp13, arg1, tmp, tmp2);
         }
       } else {
-        const Commands = tmp4(11067).Commands;
+        const Commands = tmp4(10982).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
       obj2 = set;
@@ -100,125 +101,104 @@ obj = {
   updateRows(arg0, rows) {
     let forceReload;
     if (null != arg0) {
-      if (obj7.isIOS()) {
-        let tmp35Result = tmp35(4086);
-        if (tmp35Result.isFabric()) {
-          tmp35Result = tmp35(11068);
-          const andIncrementChangesetIdForChat = tmp35Result.getAndIncrementChangesetIdForChat(arg0);
-          ({ rows, forceReload } = rows);
-          if (forceReload == null) {
-            forceReload = false;
-          }
-          let obj = { category: "chat.dispatch", message: null, data: null };
-          const _HermesInternal = HermesInternal;
-          obj[1] = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
-          obj = { changesetUpdateId: null, opCount: null, rows: null, forceReload: null };
-          obj[0] = andIncrementChangesetIdForChat;
-          obj[1] = rows.length;
-          obj[2] = rows;
-          obj[3] = forceReload;
-          obj[2] = obj;
-          SentryUtils.native.addBreadcrumb(obj);
-          const Commands = tmp35(11067).Commands;
-          const _JSON3 = JSON;
-          const json = JSON.stringify(rows.rows);
-          const isLoadingAtTop2 = rows.isLoadingAtTop;
-          let str3 = "";
-          if (null != rows.scrollData) {
-            const _JSON4 = JSON;
-            str3 = JSON.stringify(rows.scrollData);
-          }
-          let flag4 = rows.HACK_iOSForceAnimations;
-          if (flag4 == null) {
-            flag4 = false;
-          }
-          let flag5 = rows.forceReload;
-          if (flag5 == null) {
-            flag5 = false;
-          }
-          let flag6 = rows.isAnimated;
-          if (flag6 == null) {
-            flag6 = true;
-          }
-          Commands.updateRows(arg0, json, isLoadingAtTop2, str3, andIncrementChangesetIdForChat, flag4, flag5, flag6);
-          const obj4 = SentryUtils.native;
+      if (obj6.isIOS()) {
+        let tmp31Result = tmp31(10983);
+        const andIncrementChangesetIdForChat = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
+        ({ rows, forceReload } = rows);
+        if (forceReload == null) {
+          forceReload = false;
         }
-      }
-      const tmp2 = callback(arg0);
-      if (null != tmp2) {
-        if (tmp35Result1.isIOS()) {
-          let DCDChatManager = closure_3.DCDChatManager;
-        } else {
-          DCDChatManager = enforcing;
-        }
-        const _JSON = JSON;
-        const json1 = JSON.stringify(rows.rows);
+        let obj = { category: "chat.dispatch", message: null, data: null };
+        const _HermesInternal = HermesInternal;
+        obj[1] = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
+        obj = { changesetUpdateId: null, opCount: null, rows: null, forceReload: null };
+        obj[0] = andIncrementChangesetIdForChat;
+        obj[1] = rows.length;
+        obj[2] = rows;
+        obj[3] = forceReload;
+        obj[2] = obj;
+        SentryUtils.native.addBreadcrumb(obj);
+        const Commands = tmp31(10982).Commands;
+        const _JSON2 = JSON;
+        const json = JSON.stringify(rows.rows);
         const isLoadingAtTop = rows.isLoadingAtTop;
-        let json2 = null;
+        let str3 = "";
         if (null != rows.scrollData) {
-          const _JSON2 = JSON;
-          json2 = JSON.stringify(rows.scrollData);
+          const _JSON3 = JSON;
+          str3 = JSON.stringify(rows.scrollData);
         }
-        tmp35Result1 = tmp35(500);
-        const andIncrementChangesetIdForChat1 = tmp35(11068).getAndIncrementChangesetIdForChat(arg0);
-        let flag = rows.HACK_iOSForceAnimations;
-        if (flag == null) {
-          flag = false;
+        let flag4 = rows.HACK_iOSForceAnimations;
+        if (flag4 == null) {
+          flag4 = false;
         }
-        let flag2 = rows.forceReload;
-        if (flag2 == null) {
-          flag2 = false;
+        let flag5 = rows.forceReload;
+        if (flag5 == null) {
+          flag5 = false;
         }
-        let flag3 = rows.isAnimated;
-        if (flag3 == null) {
-          flag3 = true;
+        let flag6 = rows.isAnimated;
+        if (flag6 == null) {
+          flag6 = true;
         }
-        DCDChatManager.updateRows(tmp2, json1, isLoadingAtTop, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
-        const tmp35Result2 = tmp35(11068);
+        Commands.updateRows(arg0, json, isLoadingAtTop, str3, andIncrementChangesetIdForChat, flag4, flag5, flag6);
+        const obj3 = SentryUtils.native;
+      } else {
+        const tmp2 = callback(arg0);
+        if (null != tmp2) {
+          const obj7 = enforcing;
+          const _JSON4 = JSON;
+          const json1 = JSON.stringify(rows.rows);
+          const isLoadingAtTop2 = rows.isLoadingAtTop;
+          let json2 = null;
+          if (null != rows.scrollData) {
+            const _JSON = JSON;
+            json2 = JSON.stringify(rows.scrollData);
+          }
+          tmp31Result = tmp31(10983);
+          const andIncrementChangesetIdForChat1 = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
+          let flag = rows.HACK_iOSForceAnimations;
+          if (flag == null) {
+            flag = false;
+          }
+          let flag2 = rows.forceReload;
+          if (flag2 == null) {
+            flag2 = false;
+          }
+          let flag3 = rows.isAnimated;
+          if (flag3 == null) {
+            flag3 = true;
+          }
+          obj7.updateRows(tmp2, json1, isLoadingAtTop2, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
+        }
       }
-      obj7 = set;
+      obj6 = set;
     }
   },
   clearRows(arg0) {
     if (null != arg0) {
-      if (obj5.isIOS()) {
-        let tmp7Result = tmp7(4086);
-        if (tmp7Result.isFabric()) {
-          const Commands = tmp7(11067).Commands;
-          tmp7Result = tmp7(11068);
-          Commands.clearRows(arg0, tmp7Result.getAndIncrementChangesetIdForChat(arg0));
+      if (obj4.isIOS()) {
+        const Commands = tmp6(10982).Commands;
+        let tmp6Result = tmp6(10983);
+        Commands.clearRows(arg0, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
+      } else {
+        const tmp2 = callback(arg0);
+        if (null != tmp2) {
+          tmp6Result = tmp6(10983);
+          enforcing.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
+          const obj = enforcing;
         }
       }
-      const tmp2 = callback(arg0);
-      if (null != tmp2) {
-        if (tmp7Result1.isIOS()) {
-          let DCDChatManager = closure_3.DCDChatManager;
-        } else {
-          DCDChatManager = enforcing;
-        }
-        tmp7Result1 = tmp7(500);
-        DCDChatManager.clearRows(tmp2, tmp7(11068).getAndIncrementChangesetIdForChat(arg0));
-        const tmp7Result2 = tmp7(11068);
-      }
-      obj5 = set;
+      obj4 = set;
     }
   },
   fadeIn(arg0) {
-    if (null != arg0) {
-      if (obj.isIOS()) {
-        if (tmpResult.isFabric()) {
-          const Commands = tmp(11067).Commands;
-          Commands.fadeIn(arg0);
-        } else {
-          const tmp4 = callback(arg0);
-          if (null != tmp4) {
-            const DCDChatManager = closure_3.DCDChatManager;
-            DCDChatManager.fadeIn(tmp4);
-          }
-        }
-        tmpResult = tmp(4086);
-      }
-      obj = set;
+    let isIOSResult = null != arg0;
+    if (isIOSResult) {
+      isIOSResult = set.isIOS();
+      const obj = set;
+    }
+    if (isIOSResult) {
+      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      Commands.fadeIn(arg0);
     }
   },
   focus(arg0, arg1) {

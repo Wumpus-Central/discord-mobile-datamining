@@ -34,7 +34,7 @@ export default function UserPreview(user) {
   const items = [callback(Text.Text, obj), ];
   const obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-  const obj2 = { size: null, user: null, guildId: "Array" };
+  const obj2 = { size: null, user: null, guildId: "e" };
   obj2[0] = Button.AvatarSizes.LARGE_48;
   obj2[1] = user;
   const items2 = [callback(Button.Avatar, obj2), ];
@@ -43,7 +43,7 @@ export default function UserPreview(user) {
   if (tmp7Result) {
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = user.globalName;
-    tmp7Result = tmp7(tmp2(4340).Text, obj4);
+    tmp7Result = tmp7(tmp2(4338).Text, obj4);
   }
   const items3 = [tmp7Result, callback(Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
   obj3[1] = items3;

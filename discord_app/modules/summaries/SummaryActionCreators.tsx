@@ -212,7 +212,7 @@ function _fetchSummaries() {
           } else {
             if (1 === dispatchResult1) {
               c6 = 0;
-              const aPIError = new callback(4243).APIError(_handleConnectionOpen);
+              const aPIError = new callback(4241).APIError(_handleConnectionOpen);
               dependencyMap = aPIError;
             } else if (arg0 === 1) {
               c8 = 3;
@@ -604,7 +604,7 @@ function _fetchSummariesBulk() {
             if (2 === tmp7) {
               summaries = 0;
               c7 = body;
-              aPIError = new substr(4243).APIError(c7);
+              aPIError = new substr(4241).APIError(c7);
             } else if (arg0 === 1) {
               constants = 3;
               throw arg1;
@@ -793,7 +793,7 @@ function _deleteSummary() {
           } else if (1 === tmp7) {
             c4 = 0;
             callback = ME;
-            const aPIError = new lib(4243).APIError(callback);
+            const aPIError = new lib(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;

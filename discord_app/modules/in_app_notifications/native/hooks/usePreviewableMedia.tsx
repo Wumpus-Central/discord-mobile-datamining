@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/07876_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07880_inlineStyles.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CirclePlayIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import { WaveformIcon } from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
@@ -82,7 +82,7 @@ function getBasePreviewableMedia(arg0) {
           obj[3] = str7;
           let arr = items.push(obj);
         } else {
-          let tmp8Result = tmp8(4531);
+          let tmp8Result = tmp8(4532);
           let tmp10 = filename;
           if (tmp8Result.isVideoFile(tmp7)) {
             let obj1 = { id: null, type: null, media: null, parentType: null };
@@ -99,7 +99,7 @@ function getBasePreviewableMedia(arg0) {
             obj1[3] = str6;
             let arr1 = items.push(obj1);
           } else {
-            tmp8Result = tmp8(4531);
+            tmp8Result = tmp8(4532);
             let tmp11 = filename;
             let push = items.push;
             let obj2 = { id: null, type: null, media: null, icon: null, parentType: null };
@@ -112,7 +112,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(9853).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(tmp8(9856).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -128,7 +128,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = Themes.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(9858).FileIcon, obj3);
+              obj2[3] = callback(tmp8(9861).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

@@ -93,11 +93,11 @@ let closure_13 = importAllResult.memo((guild) => {
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getDirectoryEntry(directoryChannelId, guild.id));
   obj = { label: guild.name, icon: null, trailing: null, start: null, end: null };
   obj = { style: callback3().guildIcon, guild };
-  obj[1] = callback(directoryChannelId(5818), obj);
-  obj[2] = callback(directoryChannelId(11745), { entry: stateFromStores });
+  obj[1] = callback(directoryChannelId(5819), obj);
+  obj[2] = callback(directoryChannelId(11743), { entry: stateFromStores });
   obj[3] = start;
   obj[4] = end;
-  return callback(guild(5413).TableRow, obj);
+  return callback(guild(5414).TableRow, obj);
 });
 let closure_14 = importAllResult.memo((guild) => {
   let end;
@@ -116,11 +116,11 @@ let closure_14 = importAllResult.memo((guild) => {
     end: null
   };
   obj = { style: callback3().guildIcon, guild };
-  obj[2] = callback(handleItemPress(5818), obj);
-  obj[3] = callback(guild(5413).TableRow.Arrow, {});
+  obj[2] = callback(handleItemPress(5819), obj);
+  obj[3] = callback(guild(5414).TableRow.Arrow, {});
   obj[4] = start;
   obj[5] = end;
-  return callback(guild(5413).TableRow, obj);
+  return callback(guild(5414).TableRow, obj);
 });
 let obj2 = { paddingHorizontal: require("Themes").space.PX_12, width: "100%", marginTop: 18 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx");

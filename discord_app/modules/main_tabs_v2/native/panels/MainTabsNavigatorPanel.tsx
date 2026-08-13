@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx
 import set from "set";
-import importAllResult from "module_4354";
+import importAllResult from "module_4355";
 import get_ActivityIndicator from "ComponentDispatcher";
 import ME from "ME";
 import jsxProd from "module_4083";

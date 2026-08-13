@@ -98,7 +98,7 @@ let closure_18 = importAllResult.memo(() => {
     obj = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
     obj[2] = items2;
-    tmp4Result = tmp4(tmp(4340).Text, obj);
+    tmp4Result = tmp4(tmp(4338).Text, obj);
   }
   items1[4] = tmp4Result;
   const items3 = [closure_14(closure_15, { children: items1 }), "\n", , , , , ];
@@ -119,7 +119,7 @@ let closure_18 = importAllResult.memo(() => {
     const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj2[2] = items5;
-    tmp4Result = tmp4(tmp(4340).Text, obj2);
+    tmp4Result = tmp4(tmp(4338).Text, obj2);
   }
   items4[4] = tmp4Result;
   items3[2] = closure_14(closure_15, { children: items4 });
@@ -141,7 +141,7 @@ let closure_18 = importAllResult.memo(() => {
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj4[2] = items7;
-    tmp4Result1 = tmp4(tmp(4340).Text, obj4);
+    tmp4Result1 = tmp4(tmp(4338).Text, obj4);
   }
   items6[4] = tmp4Result1;
   items3[4] = closure_14(closure_15, { children: items6 });
@@ -265,7 +265,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4083).withRepeat, withSequence: stateFromStores(4083).withSequence, withTiming: stateFromStores(4345).withTiming, Easing: stateFromStores(4083).Easing };
+  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4083).withRepeat, withSequence: stateFromStores(4083).withSequence, withTiming: stateFromStores(4343).withTiming, Easing: stateFromStores(4083).Easing };
   fn.__closure = obj;
   fn.__workletHash = 17454673879926;
   fn.__initData = closure_19;
@@ -276,7 +276,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1236).intl;
   obj1[2] = intl.string(stateFromStores(1236).t.JwIJMV);
-  items3[1] = callback2(stateFromStores(4340).Text, obj1);
+  items3[1] = callback2(stateFromStores(4338).Text, obj1);
   obj[1] = items3;
   const tmp8 = callback3(View, obj);
   let tmp7Result = tmp8;
@@ -284,7 +284,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(4886).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(4887).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

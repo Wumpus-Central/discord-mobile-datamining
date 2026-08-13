@@ -304,7 +304,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   let forceNavigate;
   let guildId;
   let screen;
-  let obj = icymiScreen(4200);
+  let obj = icymiScreen(4198);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -328,7 +328,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
             obj[1] = channelId;
             obj[2] = drawerOpen.drawerOpen;
             obj[1] = obj;
-            let tmpResult = tmp(4200);
+            let tmpResult = tmp(4198);
             const rootNavigationRef1 = tmpResult.getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
@@ -336,7 +336,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   const rootState = rootNavigationRef1.getRootState();
                   const routes = rootState.routes;
                   const found = routes.filter((name) => "modal" === name.name);
-                  tmpResult = tmp(4201);
+                  tmpResult = tmp(4199);
                   const obj1 = { name: "tabs", key: null, params: null };
                   const _HermesInternal = HermesInternal;
                   obj1[1] = "tabs-" + tmp(514).v4();
@@ -397,7 +397,7 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
       const CommonActions = callback(1500).CommonActions;
-      return CommonActions.reset(callback(4201).getInitialAuthState());
+      return CommonActions.reset(callback(4199).getInitialAuthState());
     });
     flag = true;
   }
@@ -417,10 +417,10 @@ export const pushModal = function pushModal(arg0) {
   }
   let flag = !tmp4;
   if (!tmp4) {
-    tmp(4207).dismissKeyboard();
+    tmp(4205).dismissKeyboard();
     rootNavigationRef.navigate("modal", arg0);
     flag = true;
-    const tmpResult = tmp(4207);
+    const tmpResult = tmp(4205);
   }
   return flag;
 };

@@ -34,7 +34,7 @@ export default {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj2 = outer1_0(4517);
+              let obj2 = outer1_0(4518);
               dependencyMap = 1;
               c2 = 1;
               const obj1 = { value: null, done: false };
@@ -50,7 +50,7 @@ export default {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4515);
+            obj = outer1_0(4516);
             if (arg1) {
               obj.ROBLOX_PROTOCOL_URL(closure_0);
             } else {

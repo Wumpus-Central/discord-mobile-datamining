@@ -11,10 +11,10 @@ import ME from "ME";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
 import jsxProd from "CollapsingText";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/11561_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11562_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11638_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11639_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11557_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11558_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11634_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11635_registerAsset.js";
 import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
@@ -69,7 +69,7 @@ function AppLauncherCommandViewFooter(arg0) {
       const obj9 = outer1_0(stateFromStores[16]);
       const fn = function e() {
         const obj = callback(4083);
-        return callback(4083).runOnJS(callback(4313).triggerHapticFeedback)(callback(4313).HapticFeedbackTypes.IMPACT_LIGHT);
+        return callback(4083).runOnJS(callback(4311).triggerHapticFeedback)(callback(4311).HapticFeedbackTypes.IMPACT_LIGHT);
       };
       const obj2 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
       obj2[0] = outer1_0(stateFromStores[15]).runOnJS;

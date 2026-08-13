@@ -7,7 +7,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 import regExp from "regExp";
 import { EmojiIntention } from "set";
-import { registerAsset } from "../../../../_runtime/07989_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07993_registerAsset.js";
 import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
 import { AutocompleteFormDivider } from "../../autocompleter/native/AutocompleteUtils.tsx";
 import { apexExperiment } from "../../game_mentions/GameMentionsMobileExperiment.tsx";
@@ -300,16 +300,16 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = f87728(11444);
+  let obj = f87713(11435);
   const users = obj.getUsers(channel);
-  f87728 = (arg0) => arg0;
+  f87713 = (arg0) => arg0;
   let match = regex2.exec(arg1);
   if (null != match) {
     do {
       let str = match[1];
-      f87728 = str.trim();
+      f87713 = str.trim();
       let tmp2 = match;
-      if (null != users.find((text) => f87728(text.text) === f87728)) {
+      if (null != users.find((text) => f87713(text.text) === f87713)) {
         obj = { location: null, length: null };
         obj[0] = match.index;
         obj[1] = match[0].length;
@@ -318,14 +318,14 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
       match = obj2.exec(arg1);
     } while (null != match);
   }
-  f87728 = (arg0) => arg0.split("#")[0];
+  f87713 = (arg0) => arg0.split("#")[0];
   let match1 = regex3.exec(arg1);
   if (null != match1) {
     do {
       let str2 = match1[1];
-      f87728 = str2.trim();
+      f87713 = str2.trim();
       let tmp5 = match1;
-      if (null != users.find((text) => f87728(text.text) === f87728)) {
+      if (null != users.find((text) => f87713(text.text) === f87713)) {
         obj = { location: null, length: null };
         obj[0] = match1.index;
         obj[1] = match1[0].length;

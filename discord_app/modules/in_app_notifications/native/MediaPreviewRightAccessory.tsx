@@ -18,7 +18,6 @@ import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
 import { redactionSettingToRenderedString } from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { Sticker } from "../../stickers/native/Sticker.tsx";
 import { isBlurDisabled } from "../../visual_effect_view/native/VisualEffectView.tsx";
 import { VoiceMessageIcon } from "hooks/usePreviewableMedia.tsx";
@@ -73,11 +72,11 @@ function ObscuredMediaOverlay(isSpoiler) {
   items[2] = tmp11;
   const obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = tmp14(tmp2(4850).ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = tmp14(tmp2(4851).ImageWarningIcon, { size: "sm", color: "white" });
   } else {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.spoilerPill;
-    obj2[1] = tmp14(tmp2(8542).EyeIcon, { size: "sm", color: "white" });
+    obj2[1] = tmp14(tmp2(8546).EyeIcon, { size: "sm", color: "white" });
     tmp14Result = tmp14(tmp15, obj2);
   }
   const obj3 = { children: null };
@@ -114,11 +113,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(9852).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(9852).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(9852).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(9852).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(9852).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(9855).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(9855).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(9855).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(9855).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(9855).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -127,17 +126,17 @@ function SinglePreviewableMedia(arg0) {
               if (null == thumbnail) {
                 return null;
               } else {
-                let tmp2Result = tmp2(5948);
+                let tmp2Result = tmp2(5950);
                 const author = message.author;
                 let id;
                 if (author != null) {
                   id = author.id;
                 }
                 const enabledHarmTypesForChannelAndAuthorId = tmp2Result.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id);
-                tmp2Result = tmp2(5948);
+                tmp2Result = tmp2(5950);
                 obj1 = { type: null, media: null };
                 const getMediaObscuredReasonFromBitmask = tmp2Result.getMediaObscuredReasonFromBitmask;
-                obj1[0] = tmp2(5953).ObscuredMediaTypes.Embed;
+                obj1[0] = tmp2(5955).ObscuredMediaTypes.Embed;
                 obj1[1] = media;
                 if (null != thumbnail.proxyURL) {
                   if ("" !== thumbnail.proxyURL) {
@@ -178,7 +177,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(9852).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(9855).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -206,10 +205,10 @@ function SinglePreviewableMedia(arg0) {
                 obj12[0] = media;
                 obj12[2] = enabledHarmTypesBitmaskForMessage;
                 obj12[3] = shouldAgeVerifyForExplicitMedia;
-                const attachmentObscurityProps = tmp2(8272).getAttachmentObscurityProps(obj12);
-                const tmp2Result1 = tmp2(8272);
-                const attachmentUrl = tmp2(8891).getAttachmentUrl(media);
-                const tmp2Result2 = tmp2(8891);
+                const attachmentObscurityProps = tmp2(8276).getAttachmentObscurityProps(obj12);
+                const tmp2Result1 = tmp2(8276);
+                const attachmentUrl = tmp2(8895).getAttachmentUrl(media);
+                const tmp2Result2 = tmp2(8895);
                 const obj13 = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, animated: false, format: null };
                 obj13[0] = attachmentUrl;
                 obj13[1] = width;
@@ -217,7 +216,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(9852).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(9855).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -238,7 +237,7 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preload, obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(9852).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(9855).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
@@ -274,7 +273,7 @@ function MultiplePreviewableMedia(arg0) {
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
     const obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
-    obj[0] = callback(8337).CutoutShape.RoundedRect;
+    obj[0] = callback(8341).CutoutShape.RoundedRect;
     obj[1] = 56 - roundToNearestPixelResult + sum;
     obj[2] = -sum;
     obj[3] = roundToNearestPixelResult;
@@ -309,36 +308,6 @@ function MediaPreviewRightAccessoryContent(arg0) {
   }
   return tmp4;
 }
-function ExpandableMediaPreview(accessoryExitProgressSV) {
-  let message;
-  let previewableMedia;
-  let totalMediaCount;
-  accessoryExitProgressSV = accessoryExitProgressSV.accessoryExitProgressSV;
-  ({ message, totalMediaCount, previewableMedia } = accessoryExitProgressSV);
-  let obj = accessoryExitProgressSV(4083);
-  const fn = function l() {
-    const value = accessoryExitProgressSV.get();
-    let obj = { opacity: 1 - value, transform: items };
-    obj = { scale: 1 - value };
-    items = [obj];
-    return obj;
-  };
-  fn.__closure = { accessoryExitProgressSV };
-  fn.__workletHash = 9116777278421;
-  fn.__initData = closure_22;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [callback5().rightAccessoryAbsolute, animatedStyle];
-  obj[1] = callback(MediaPreviewRightAccessoryContent, { previewableMedia, totalMediaCount, message });
-  return callback(ReanimatedRexport.View, obj);
-}
-function SimpleMediaPreview(arg0) {
-  let message;
-  let previewableMedia;
-  let totalMediaCount;
-  ({ message, previewableMedia, totalMediaCount } = arg0);
-  return callback(View, { style: callback5().rightAccessoryContainer, children: callback(MediaPreviewRightAccessoryContent, { previewableMedia, totalMediaCount, message }) });
-}
 ({ PixelRatio: c4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
@@ -369,35 +338,24 @@ let obj5 = { alignItems: "center", justifyContent: "center", backgroundColor: re
 createCacheKey[5] = { padding: require("Themes").space.PX_4, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_14 = createCacheKey.createStyles({ container: { overflow: "visible" } });
-let obj9 = { rightAccessoryContainer: { marginLeft: require("set").RIGHT_ACCESSORY_LEFT_MARGIN }, rightAccessoryAbsolute: null };
+let closure_15 = createCacheKey.createStyles({ rightAccessoryContainer: { marginLeft: require("set").RIGHT_ACCESSORY_LEFT_MARGIN } });
 let obj8 = { padding: require("Themes").space.PX_4, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-obj9[1] = { position: "absolute", right: require("Themes").space.PX_12, top: require("Themes").space.PX_12 };
-let closure_15 = createCacheKey.createStyles(obj9);
-let closure_22 = { code: "function MediaPreviewRightAccessoryTsx1(){const{accessoryExitProgressSV}=this.__closure;const progress=accessoryExitProgressSV.get();return{opacity:1-progress,transform:[{scale:1-progress}]};}" };
-let obj10 = { position: "absolute", right: require("Themes").space.PX_12, top: require("Themes").space.PX_12 };
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 
-export const PREVIEW_SIZE = 64;
-export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(arg0) {
-  let accessoryExitProgressSV;
-  let message;
-  ({ message, accessoryExitProgressSV } = arg0);
+export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(message) {
+  message = message.message;
   let obj = VoiceMessageIcon;
   const previewableMedia = obj.usePreviewableMedia(message);
-  if (0 === previewableMedia.length) {
-    return null;
-  } else if (null != accessoryExitProgressSV) {
-    obj = { message: null, previewableMedia: null, totalMediaCount: null, accessoryExitProgressSV: null };
-    obj[0] = message;
-    obj[1] = previewableMedia;
-    obj[2] = length;
-    obj[3] = accessoryExitProgressSV;
-    let tmp3 = callback(ExpandableMediaPreview, obj);
-  } else {
-    obj = { message: null, previewableMedia: null, totalMediaCount: null };
-    obj[0] = message;
-    obj[1] = previewableMedia;
-    obj[2] = length;
-    tmp3 = callback(SimpleMediaPreview, obj);
+  let tmp2 = null;
+  if (0 !== previewableMedia.length) {
+    obj = { style: null, children: null };
+    obj[0] = tmp.rightAccessoryContainer;
+    obj = { previewableMedia: null, totalMediaCount: null, message: null };
+    obj[0] = previewableMedia;
+    obj[1] = length;
+    obj[2] = message;
+    obj[1] = callback(MediaPreviewRightAccessoryContent, obj);
+    tmp2 = callback(View, obj);
   }
+  return tmp2;
 };

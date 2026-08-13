@@ -23,7 +23,7 @@ import { intl as intl21 } from "getSystemLocale";
 import { intl as intl22 } from "getSystemLocale";
 import { intl as intl23 } from "getSystemLocale";
 import { intl as intl24 } from "getSystemLocale";
-import { registerAsset } from "../../../../_runtime/07705_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07709_registerAsset.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 
@@ -188,7 +188,7 @@ export const getIconById = function getIconById(currentAppIcon) {
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
-    obj[0] = tmp(7704).FreemiumAppIconIds.DEFAULT;
+    obj[0] = tmp(7708).FreemiumAppIconIds.DEFAULT;
     obj[1] = registerAsset;
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t.ANxkLy);

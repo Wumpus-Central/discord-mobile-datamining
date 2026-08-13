@@ -2,7 +2,7 @@
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LegacyBaseButton } from "../../../../_runtime/05466_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../_runtime/05467_LegacyBaseButton.js";
 import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
 import { BuyNitroPurchaseButton } from "components/purchase_button/BuyNitroPurchaseButton.tsx";
 

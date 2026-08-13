@@ -20,7 +20,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     VoiceNotificationManager = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "HOSTED_FIELDS_FIELDS_EMPTY", embeddedActivity: "All fields are empty. Cannot tokenize empty card fields.", isStreaming: "ear_with_hearing_aid_tone5" };
+    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "head_shaking_horizontally", isPushToTalk: "awful", embeddedActivity: "bored", isStreaming: "dejected" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = outer1_9.getChannelId();
       const state = outer1_9.getState();
@@ -225,7 +225,7 @@ prototype["terminate"] = function terminate() {
 };
 let set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "HOSTED_FIELDS_FIELDS_EMPTY", embeddedActivity: "All fields are empty. Cannot tokenize empty card fields.", isStreaming: "ear_with_hearing_aid_tone5" };
+set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "head_shaking_horizontally", isPushToTalk: "awful", embeddedActivity: "bored", isStreaming: "dejected" };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = outer1_9.getChannelId();
   const state = outer1_9.getState();

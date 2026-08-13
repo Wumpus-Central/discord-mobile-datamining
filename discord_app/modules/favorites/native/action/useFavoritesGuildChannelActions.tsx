@@ -42,7 +42,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp6) {
     tmp6 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(9765).useFavoritesBetaTagDismissibleContent(tmp6);
+  const favoritesBetaTagDismissibleContent = tmp(9769).useFavoritesBetaTagDismissibleContent(tmp6);
   obj = { hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
   return obj;
 };

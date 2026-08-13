@@ -7,7 +7,7 @@ import GuildFeatures from "GuildFeatures";
 import jsxProd from "preload";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
 import { registerAsset } from "../../../../../_runtime/12813_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

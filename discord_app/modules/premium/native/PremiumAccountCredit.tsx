@@ -79,7 +79,7 @@ function AccountCreditTier(arg0) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj5[0] = tmp.subText;
     obj5[3] = stringResult;
-    tmp21Result = tmp21(tmp2(4340).Text, obj5);
+    tmp21Result = tmp21(tmp2(4338).Text, obj5);
   }
   items2[1] = tmp21Result;
   obj3[1] = items2;
@@ -143,7 +143,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       obj[0] = tmp.title;
       const intl = tmp2(1236).intl;
       obj[4] = intl.string(tmp2(1236).t.YugZY0);
-      const items1 = [callback(tmp2(4340).Text, obj), , , ];
+      const items1 = [callback(tmp2(4338).Text, obj), , , ];
       const obj1 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj1[0] = items2;
@@ -158,7 +158,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       obj2[0] = tmp.creditDescription;
       const intl2 = tmp2(1236).intl;
       obj2[2] = intl2.string(tmp2(1236).t.kNEjGm);
-      items1[2] = callback(tmp2(4340).Text, obj2);
+      items1[2] = callback(tmp2(4338).Text, obj2);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -167,7 +167,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           obj3[0] = tmp.creditDescription;
           const intl3 = tmp2(1236).intl;
           obj3[2] = intl3.string(tmp2(1236).t.azRP0E);
-          tmp9Result = callback(tmp2(4340).Text, obj3);
+          tmp9Result = callback(tmp2(4338).Text, obj3);
         }
       }
       items1[3] = tmp9Result;

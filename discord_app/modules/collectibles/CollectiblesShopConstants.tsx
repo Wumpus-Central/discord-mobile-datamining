@@ -30,6 +30,7 @@ export const SEARCH_BAR_WIDTH_PX = 225;
 export const STATE_TRANSITION_THRESHOLD_PX = 20;
 export const CollectiblesSearchBarCTAName = { SEARCH_ICON: "search icon", SEARCH_BAR: "search bar", SEARCH_BAR_CLEAR: "search bar clear" };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
+export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
 export const CollectibleShopTab = obj;
 export const CollectiblesIndexPageTabs = items;
 export const isIndexPageTab = function isIndexPageTab(arg0) {

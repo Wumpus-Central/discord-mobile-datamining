@@ -8,7 +8,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { fuzzysearch } from "../../../../../../_runtime/05268_fuzzysearch.js";
+import { fuzzysearch } from "../../../../../../_runtime/05269_fuzzysearch.js";
 import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 
 let c10;
@@ -33,7 +33,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         let num3 = 1;
         return 1;
       } else {
-        let tmp19Result = tmp19(4189);
+        let tmp19Result = tmp19(4187);
         let tmp5 = user;
         let globalName = tmp19Result.getGlobalName(tmp4);
         let toLocaleLowerCaseResult1;
@@ -42,7 +42,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult1) {
           let tmp8 = toLocaleLowerCaseResult1;
-          if (tmp19(5268)(trimmed1, tmp7)) {
+          if (tmp19(5269)(trimmed1, tmp7)) {
             let tmp15 = obj;
             obj.return();
             let num2 = 1;
@@ -58,7 +58,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult2) {
           let tmp13 = toLocaleLowerCaseResult2;
-          if (tmp19(5268)(trimmed1, tmp12)) {
+          if (tmp19(5269)(trimmed1, tmp12)) {
             let tmp14 = obj;
             obj.return();
             let num = 1;

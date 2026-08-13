@@ -18,10 +18,10 @@ let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   let gradientPresetId;
   let theme;
-  nativeStackNavigation(4770)(() => {
+  nativeStackNavigation(4771)(() => {
     if (initialize.shouldSync("appearance")) {
-      const userCustomThemes = _undefined(14565).fetchUserCustomThemes();
-      const obj = _undefined(14565);
+      const userCustomThemes = _undefined(14574).fetchUserCustomThemes();
+      const obj = _undefined(14574);
     }
   });
   let items = [handleThemeChange, isSyncedModeThemesEnabled];
@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(() => {
     if (obj.isAndroid()) {
       if (_undefined.persistedFontScale === _undefined.fontScale) {
         if (tmp3.persistedIsClassicChatFontScaleEnabled === tmp3.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "Array" });
+          nativeStackNavigation.setOptions({ headerRight: "sa" });
         }
       }
       obj = { headerRight: null };
@@ -66,7 +66,7 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = _undefined(10493);
+    let obj = _undefined(10407);
     obj = { sections: null };
     const items = [constants.MOBILE_VISUAL_REFRESH];
     const items1 = [{ settings: items }, , , , , , , , , ];
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = _useNavigation;
-  return jsx(nativeStackNavigation(13952), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(13956), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("initialize").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

@@ -57,7 +57,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
         guild = guild.getGuild(arg1);
         if (null != guild) {
           const obj = { type: null, value: null, label: null, guild: null };
-          obj[0] = callback(4571).SelectOptionType.GUILD;
+          obj[0] = callback(4572).SelectOptionType.GUILD;
           ({ id: obj[1], name: obj[2] } = guild);
           obj[3] = guild;
           arr.push(obj);
@@ -70,7 +70,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       obj[0] = arg0;
       reduced = obj.queryGuilds(obj).map((record) => {
         record = record.record;
-        return { type: callback(4571).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+        return { type: callback(4572).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
       });
       const queryGuildsResult = obj.queryGuilds(obj);
     }

@@ -6,8 +6,8 @@ import fetchFingerprint from "fetchFingerprint";
 import { MediaEngineContextTypes } from "DesktopSources";
 import jsxProd from "NOOP";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10956_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10957_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10870_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10871_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
@@ -143,7 +143,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (null != stateFromStores) {
     const obj1 = { label: null };
     obj1[0] = tmp11;
-    tmp9Result = tmp9(tmp2(8008).FormRow, obj1);
+    tmp9Result = tmp9(tmp2(8012).FormRow, obj1);
   }
   return tmp9Result;
 };
@@ -183,7 +183,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStates(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10960 : 10961), label: null };
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10874 : 10875), label: null };
   const intl = tmp4(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);

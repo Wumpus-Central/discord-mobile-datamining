@@ -5,7 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import setContent from "setContent";
 import hairlineWidth from "hairlineWidth";
 import { GuildFeatures } from "ME";
-import jsxProd from "View";
+import jsxProd from "REAWorkaroundView";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
@@ -65,9 +65,9 @@ function GuildInfoHeader(bannerHeight) {
   const tmp = callback5();
   obj = { style: animatedStyle1, children: null };
   const tmp5 = bannerHeight(4084);
-  obj[1] = callback(bannerHeight(4888), { absolute: true, tall: true });
+  obj[1] = callback(bannerHeight(4889), { absolute: true, tall: true });
   const items1 = [callback(bannerHeight(4084), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15334), obj2) };
+  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15343), obj2) };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
@@ -265,11 +265,11 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   let num2 = 0;
   const token = tmp7Result.useToken(tmp(712).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
-    num2 = tmp7(4758).SMALL_BUTTON_HEIGHT + closure_11;
+    num2 = tmp7(4759).SMALL_BUTTON_HEIGHT + closure_11;
   }
   let num3 = 0;
   if (tmp11) {
-    num3 = 8 + tmp7(4758).MEDIUM_BUTTON_HEIGHT + 8;
+    num3 = 8 + tmp7(4759).MEDIUM_BUTTON_HEIGHT + 8;
   }
   let num5 = 16;
   if (isFavoritesGuildIdResult) {
@@ -277,13 +277,13 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num6 = 0;
   if (tmp9) {
-    tmp7Result = tmp7(9498);
+    tmp7Result = tmp7(9502);
     num6 = tmp7Result.scaleTextLineHeight(token, fontScale);
   }
   let bound = scaleTextLineHeightResult;
   if (isFavoritesGuildIdResult) {
     const _Math = Math;
-    bound = Math.max(scaleTextLineHeightResult, tmp7(4758).SMALL_BUTTON_HEIGHT);
+    bound = Math.max(scaleTextLineHeightResult, tmp7(4759).SMALL_BUTTON_HEIGHT);
   }
   return t(16 + bound + num6 + num2 + num3 + num5 + num);
 };

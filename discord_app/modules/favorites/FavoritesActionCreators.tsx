@@ -149,7 +149,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(9758)(limit);
+    tmp(9762)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -158,8 +158,8 @@ function showLimitReachedAlert(limit) {
     obj = { count: null };
     obj[0] = limit;
     obj[1] = intl2.formatToPlainString(getSystemLocale.t.JaIyFi, obj);
-    tmp(4682).show(obj);
-    const tmpResult = tmp(4682);
+    tmp(4683).show(obj);
+    const tmpResult = tmp(4683);
   }
 }
 function onSaveFailed() {
@@ -286,7 +286,7 @@ function _addFavoriteChannelsToParent() {
               };
               found = lib.filter((arg0) => !initializeFromUserSettings.isFavorite(arg0));
               if (0 !== found.length) {
-                let obj1 = lib(9762);
+                let obj1 = lib(9766);
                 handleConnectionOpen = !obj1.getIsFavoritesGuildEnabled();
                 const PreloadedUserSettingsActionCreators = lib(1374).PreloadedUserSettingsActionCreators;
                 c5 = 1;
@@ -428,7 +428,7 @@ function _addFavoriteChannelsToParent() {
             throw arg1;
           } else if (arg0 !== 2) {
             if (found.some((arg0) => initializeFromUserSettings.isFavorite(arg0))) {
-              callback(9763)();
+              callback(9767)();
             }
           }
           c6 = 3;
@@ -668,7 +668,7 @@ function _addFavoriteCategory() {
                     obj[0] = tmp5;
                     let tmp6 = obj;
                   } else {
-                    const favoritesAccess = tmp(9755).getFavoritesAccess();
+                    const favoritesAccess = tmp(9759).getFavoritesAccess();
                     const favoriteLimit = favoritesAccess.favoriteLimit;
                     tmp6 = null;
                     if (favoriteLimit > 0) {
@@ -684,14 +684,14 @@ function _addFavoriteCategory() {
                         }
                       }
                     }
-                    const tmpResult = tmp(9755);
+                    const tmpResult = tmp(9759);
                   }
                   if (null != tmp6) {
                     const limit = tmp6.limit;
                     if (tmp6.canUpsell) {
-                      tmp4(9758)(limit);
+                      tmp4(9762)(limit);
                     } else {
-                      tmp4Result = tmp4(4682);
+                      tmp4Result = tmp4(4683);
                       const obj1 = { title: null, body: null };
                       const intl = tmp(1236).intl;
                       obj1[0] = intl.string(tmp(1236).t["+XYXtZ"]);

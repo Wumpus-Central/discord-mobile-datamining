@@ -30,7 +30,7 @@ function getGradientColorByPercentage(type, END) {
   } else {
     colors = type.customThemeSettings.colors;
     if (1 === colors.length) {
-      return tmp(4193).hexToRgb(colors[0]);
+      return tmp(4191).hexToRgb(colors[0]);
     } else {
       const mapped2 = colors.map((arg0, arg1) => arg1 / (colors.length - 1) * 100);
       obj = n;
@@ -147,8 +147,8 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
     const tmp30 = getGradientColorByPercentage(customBackgroundGradient, tmp10);
     const tmp35 = new hslToRgb(tmp30.r, tmp30.g, tmp30.b, tmp11);
     const tmp38 = new hslToRgb(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - tmp11);
-    const mixColorsResult = tmp(4193).mixColors(tmp35, tmp38);
-    const tmpResult1 = tmp(4193);
+    const mixColorsResult = tmp(4191).mixColors(tmp35, tmp38);
+    const tmpResult1 = tmp(4191);
     const obj5 = n;
     return n.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
   }

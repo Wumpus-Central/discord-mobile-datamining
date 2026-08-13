@@ -139,7 +139,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(7055);
+      let tmp7Result = tmp7(7061);
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -147,7 +147,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = tmp7(5894);
+      tmp7Result = tmp7(5896);
       priceString = tmp7Result.formatPrice(result.amount, result.currency);
     }
   }
@@ -174,7 +174,7 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     }
     return tmp7;
   } else {
-    return tmp(7055).extractPriceByPurchaseTypes(googleSkuIds, arg1);
+    return tmp(7061).extractPriceByPurchaseTypes(googleSkuIds, arg1);
   }
   tmp = require;
 };

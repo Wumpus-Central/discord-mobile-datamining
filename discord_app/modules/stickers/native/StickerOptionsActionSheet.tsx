@@ -18,11 +18,11 @@ export default function StickerOptionsActionSheet(stickerUrl) {
   let obj = { children: null };
   obj = { hasIcons: true, children: null };
   obj = { icon: null, label: null, onPress: null };
-  obj[0] = jsx(stickerUrl(4288).LinkIcon, {});
+  obj[0] = jsx(stickerUrl(4286).LinkIcon, {});
   const intl = stickerUrl(1236).intl;
   obj[1] = intl.string(stickerUrl(1236).t.B1ubHx);
   obj[2] = callback;
-  obj[1] = jsx(stickerUrl(5413).TableRow, { icon: null, label: null, onPress: null });
-  obj[0] = jsx(stickerUrl(5806).TableRowGroup, { icon: null, label: null, onPress: null });
-  return jsx(stickerUrl(5803).ActionSheet, { icon: null, label: null, onPress: null });
+  obj[1] = jsx(stickerUrl(5414).TableRow, { icon: null, label: null, onPress: null });
+  obj[0] = jsx(stickerUrl(5807).TableRowGroup, { icon: null, label: null, onPress: null });
+  return jsx(stickerUrl(5804).ActionSheet, { icon: null, label: null, onPress: null });
 };

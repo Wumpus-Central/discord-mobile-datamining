@@ -1,11 +1,13 @@
 // discord_app/modules/in_app_notifications/native/MessageNotificationHeader.tsx
 import noop from "noop";
-import { View } from "XSmallIcon";
+import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let error;
@@ -65,8 +67,6 @@ function LocationText(channel) {
   return closure_8(str, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
-let closure_9 = Object.freeze({ radius: 12 });
-let closure_10 = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
 createCacheKey = { container: null, headerContent: null, primaryText: null, secondaryTextContainer: null, separator: null, icon: null, secondaryText: null };
 createCacheKey = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
 createCacheKey[0] = createCacheKey;
@@ -82,13 +82,11 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 export default function MessageNotificationHeader(locationTextColor) {
   let author;
   let channel;
-  let expanded;
   let guild;
-  let onDismiss;
   let parentChannel;
-  ({ channel, parentChannel, guild, author, expanded, onDismiss } = locationTextColor);
+  ({ channel, parentChannel, guild, author } = locationTextColor);
   const tmp = createCacheKey();
-  let obj = onDismiss(589);
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   if (author != null) {
@@ -103,11 +101,11 @@ export default function MessageNotificationHeader(locationTextColor) {
     obj[0] = tmp5;
     const tmp6 = obj;
   }
-  let tmp2Result = tmp2(4534);
+  let tmp2Result = tmp2(4535);
   const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
   const type = channel.type;
   let tmp10 = channelName;
-  if (onDismiss(692).ChannelTypes.GROUP_DM !== type) {
+  if (set.ChannelTypes.GROUP_DM !== type) {
     if (tmp2(692).ChannelTypes.GUILD_FORUM !== type) {
       if (tmp2(692).ChannelTypes.GUILD_TEXT !== type) {
         if (tmp2(692).ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
@@ -118,7 +116,7 @@ export default function MessageNotificationHeader(locationTextColor) {
           }
           let channelName1 = null;
           if (null != parentChannel) {
-            tmp2Result = tmp2(4534);
+            tmp2Result = tmp2(4535);
             channelName1 = tmp2Result.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
           }
           if (null != channelName1) {
@@ -144,48 +142,29 @@ export default function MessageNotificationHeader(locationTextColor) {
   }
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.headerContent, children: null };
-  let tmp19 = null != author;
-  if (tmp19) {
+  let tmp17Result = null != author;
+  if (tmp17Result) {
     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
     const items1 = [tmp.primaryText, tmp6];
     obj2[3] = items1;
     obj2[4] = author.nick;
-    tmp19 = callback(tmp2(4340).Text, obj2);
+    tmp17Result = tmp17(tmp2(4338).Text, obj2);
   }
-  const items2 = [tmp19, ];
-  let tmp21 = null != tmp10;
-  if (tmp21) {
+  const items2 = [tmp17Result, ];
+  tmp17Result = null != tmp10;
+  if (tmp17Result) {
     const obj3 = { location: null, channel: null, parentChannel: null, author: null, color: null };
     obj3[0] = tmp10;
     obj3[1] = channel;
     obj3[2] = parentChannel;
     obj3[3] = author;
     obj3[4] = locationTextColor.locationTextColor;
-    tmp21 = callback(LocationText, obj3);
+    tmp17Result = tmp17(LocationText, obj3);
   }
-  items2[1] = tmp21;
+  items2[1] = tmp17Result;
   obj1[1] = items2;
-  const items3 = [closure_8(View, obj1), ];
-  if (expanded) {
-    expanded = null != onDismiss;
-  }
-  if (expanded) {
-    const obj4 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null };
-    const intl = tmp2(1236).intl;
-    obj4[1] = intl.string(tmp2(1236).t.LnEgqX);
-    obj4[2] = closure_10;
-    obj4[3] = closure_9;
-    obj4[4] = function onPress() {
-      return onDismiss("close_from_expanded");
-    };
-    const obj5 = { color: "icon-subtle", style: null };
-    obj5[1] = { height: 20, width: 20 };
-    obj4[5] = callback(tmp2(5365).XSmallIcon, obj5);
-    expanded = callback(tmp2(4886).PressableOpacity, obj4);
-  }
-  items3[1] = expanded;
-  obj[1] = items3;
-  return closure_8(View, obj);
+  obj[1] = closure_8(View, obj1);
+  return closure_7(View, obj);
 };
 export const SimpleNotificationHeader = function SimpleNotificationHeader(secondaryText) {
   let labelStyle;
@@ -202,11 +181,11 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
     obj[0] = tmp.secondaryTextContainer;
     obj = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: null, children: "\u00B7" };
     obj[3] = tmp.separator;
-    const items2 = [tmp4(tmp5(4340).Text, obj), ];
+    const items2 = [tmp4(tmp5(4338).Text, obj), ];
     const obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj1[3] = tmp.secondaryText;
     obj1[4] = secondaryText;
-    items2[1] = tmp4(tmp5(4340).Text, obj1);
+    items2[1] = tmp4(tmp5(4338).Text, obj1);
     obj[1] = items2;
     tmp2Result = tmp2(tmp3, obj);
   }

@@ -70,33 +70,33 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   }
   return tmp6;
 };
-export const canReplyToMessage = function canReplyToMessage(channel, message) {
+export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
   const obj = useCanUnarchiveThread;
-  if (channel.isPrivate()) {
-    let hasItem = !channel.isSystemDM();
+  if (isPrivate.isPrivate()) {
+    let hasItem = !isPrivate.isSystemDM();
   } else {
-    hasItem = obj2.can(Permissions.SEND_MESSAGES, channel) && obj2.can(Permissions.READ_MESSAGE_HISTORY, channel);
+    hasItem = obj2.can(Permissions.SEND_MESSAGES, isPrivate) && obj2.can(Permissions.READ_MESSAGE_HISTORY, isPrivate);
     const tmp4 = Permissions;
   }
   if (hasItem) {
     const REPLYABLE = tmp(686).MessageTypesSets.REPLYABLE;
-    hasItem = REPLYABLE.has(message.type);
+    hasItem = REPLYABLE.has(type.type);
   }
   currentUser = currentUser.getCurrentUser();
-  const canUnarchiveThreadResult = useCanUnarchiveThread.canUnarchiveThread(channel);
+  const canUnarchiveThreadResult = useCanUnarchiveThread.canUnarchiveThread(isPrivate);
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const guildId = channel.getGuildId();
+  const guildId = isPrivate.getGuildId();
   const tmpResult = useUserCommunicationDisabled;
-  const isArchivedThreadResult = channel.isArchivedThread();
+  const isArchivedThreadResult = isPrivate.isArchivedThread();
   let tmp11 = !isArchivedThreadResult;
   if (isArchivedThreadResult) {
     tmp11 = canUnarchiveThreadResult;
   }
   if (hasItem) {
-    hasItem = message.state === constants2.SENT;
+    hasItem = type.state === constants2.SENT;
   }
   if (hasItem) {
     hasItem = !hasFlagResult;

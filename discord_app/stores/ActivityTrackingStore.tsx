@@ -68,7 +68,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreators.updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4229).Interval();
+    const interval = new tmp3(4227).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       outer1_18(closure_0);

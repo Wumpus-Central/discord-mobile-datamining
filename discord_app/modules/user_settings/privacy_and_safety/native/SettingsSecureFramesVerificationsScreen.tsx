@@ -27,9 +27,9 @@ function VerificationListItem(userId) {
   obj[2] = start;
   obj[3] = end;
   obj = { onPress: callback, children: null };
-  obj[1] = jsx(userId(5365).XSmallIcon, {});
-  obj[4] = jsx(userId(4886).PressableHighlight, { onPress: callback, children: null });
-  return jsx(userId(5413).TableRow, { onPress: callback, children: null });
+  obj[1] = jsx(userId(5366).XSmallIcon, {});
+  obj[4] = jsx(userId(4887).PressableHighlight, { onPress: callback, children: null });
+  return jsx(userId(5414).TableRow, { onPress: callback, children: null });
 }
 function SectionListItem(children) {
   const tmp = callback();
@@ -69,13 +69,13 @@ function ClearVerificationsListFooter(userId) {
   obj = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
   const intl = userId(1236).intl;
   obj[2] = intl.string(userId(1236).t["2xL5lu"]);
-  obj[0] = jsx(userId(4340).Text, { variant: "text-md/semibold", color: "text-feedback-critical", children: null });
+  obj[0] = jsx(userId(4338).Text, { variant: "text-md/semibold", color: "text-feedback-critical", children: null });
   obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
   const intl2 = userId(1236).intl;
   obj[2] = intl2.string(userId(1236).t.kgAfXN);
-  obj[1] = jsx(userId(4340).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
+  obj[1] = jsx(userId(4338).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
   obj[2] = callback;
-  return jsx(userId(5413).TableRow, { variant: "text-xs/medium", color: "text-subtle", children: null });
+  return jsx(userId(5414).TableRow, { variant: "text-xs/medium", color: "text-subtle", children: null });
 }
 let closure_7 = createCacheKey.createStyles({ list: { flexGrow: 1 }, listContent: { paddingVertical: 32, paddingHorizontal: 16 }, listFooter: { marginTop: 32 }, section: { marginBottom: 8 } });
 let closure_8 = { VERIFICATION: "VERIFICATION", SECTION: "SECTION" };
@@ -83,14 +83,14 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_set
 
 export default function SettingsSecureFramesVerificationsScreen() {
   const tmp = callback();
-  let obj = userId(6919);
+  let obj = userId(6925);
   userId = obj.useSettingNavigationRoute().params.userId;
   let obj1 = userId(1499);
   const navigation = obj1.useNavigation();
   let items = [mergeGuildAvatar];
   const stateFromStores = userId(589).useStateFromStores(items, () => outer1_5.getUser(userId));
   const obj3 = userId(589);
-  const dependencyMap = navigation(4189).getFormattedName(stateFromStores, false);
+  const dependencyMap = navigation(4187).getFormattedName(stateFromStores, false);
   const layoutEffect = secureFramesUserVerifiedKeys.useLayoutEffect(() => {
     let obj = { title: null, headerTitle: null };
     let intl = userId(1236).intl;
@@ -104,8 +104,8 @@ export default function SettingsSecureFramesVerificationsScreen() {
     };
     navigation.setOptions(obj);
   });
-  const obj4 = navigation(4189);
-  secureFramesUserVerifiedKeys = userId(14939).useSecureFramesUserVerifiedKeys(userId);
+  const obj4 = navigation(4187);
+  secureFramesUserVerifiedKeys = userId(14948).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -130,6 +130,6 @@ export default function SettingsSecureFramesVerificationsScreen() {
   obj1 = { style: tmp.listFooter, children: null };
   obj1[1] = <ClearVerificationsListFooter userId={userId} />;
   obj[5] = <View style={tmp.listFooter}>{null}</View>;
-  obj[1] = jsx(userId(7786).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
+  obj[1] = jsx(userId(7790).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
   return <View keyExtractor={keyExtractor} getItemType={getItemType} renderItem={renderItem} data={memo} contentContainerStyle={tmp.listContent} ListFooterComponent={null} />;
 };

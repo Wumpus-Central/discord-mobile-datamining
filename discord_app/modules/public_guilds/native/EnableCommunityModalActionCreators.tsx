@@ -6,7 +6,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/public
 
 export default {
   open() {
-    ModalActionCreators.pushLazy(asyncRequireImpl(16819, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(16830, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
   },
   close() {
     ModalActionCreators.popWithKey(ENABLED_COMMUNITY_MODAL_KEY);

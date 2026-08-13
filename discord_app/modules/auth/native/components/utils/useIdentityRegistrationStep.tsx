@@ -81,7 +81,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               let c4;
               const sum = ref.current + c6;
               closure_1 = sum;
-              let obj1 = { email: "Array", phone: 0 };
+              let obj1 = { email: "Array", phone: "Array" };
               obj1[1] = sum;
               v0(obj1);
               closure_2 = callback2(callback);

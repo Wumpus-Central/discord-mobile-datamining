@@ -44,7 +44,7 @@ function GuildBoostSlotCooldown(cooldownEndsAt) {
     obj[1] = hours;
     obj[2] = minutes;
     obj[3] = intl.format(cooldownEndsAt(1236).t.NffSH8, obj);
-    tmp5 = callback(cooldownEndsAt(4340).Text, obj);
+    tmp5 = callback(cooldownEndsAt(4338).Text, obj);
   }
   return tmp5;
 }
@@ -115,8 +115,8 @@ function GuildBoostSlot(guildBoostSlot) {
       const obj3 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
       const intl2 = guildBoostSlot(1236).intl;
       obj3[2] = intl2.string(guildBoostSlot(1236).t.jqqLb6);
-      obj2[2] = tmp6(guildBoostSlot(4340).Text, obj3);
-      tmp6Result = tmp6(guildBoostSlot(4886).PressableOpacity, obj2);
+      obj2[2] = tmp6(guildBoostSlot(4338).Text, obj3);
+      tmp6Result = tmp6(guildBoostSlot(4887).PressableOpacity, obj2);
     }
     obj[2] = tmp6Result;
     obj[3] = tmp;
@@ -165,8 +165,8 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const obj2 = { variant: "text-md/medium", color: "text-link", children: null };
     const intl2 = found(1236).intl;
     obj2[2] = intl2.string(found(1236).t["7KyPor"]);
-    obj1[2] = callback(found(4340).Text, obj2);
-    obj[1] = callback(found(4886).PressableOpacity, obj1);
+    obj1[2] = callback(found(4338).Text, obj2);
+    obj[1] = callback(found(4887).PressableOpacity, obj1);
     obj[2] = 0 === found.length;
     tmp4 = callback(GuildBoostSlotsInventoryRow, obj);
   }
@@ -325,9 +325,9 @@ const result = require("handleThemeChange").fileFinishedImporting("modules/premi
 export default function GuildBoostSlotsInventory() {
   const tmp = createCacheKey();
   const effect = React.useEffect(() => {
-    const subscriptions = callback(4663).fetchSubscriptions();
-    const obj = callback(4663);
-    const guildBoostSlots = valueResult(4240).fetchGuildBoostSlots();
+    const subscriptions = callback(4664).fetchSubscriptions();
+    const obj = callback(4664);
+    const guildBoostSlots = valueResult(4238).fetchGuildBoostSlots();
   }, []);
   let obj = initialize;
   const items = [reset];
@@ -370,7 +370,7 @@ export default function GuildBoostSlotsInventory() {
         obj2[0] = tmp.header;
         const intl = tmp3(1236).intl;
         obj2[3] = intl.string(tmp3(1236).t.gB9oQ7);
-        const items3 = [callback(tmp3(4340).Text, obj2), found.map((guildId) => outer1_11(outer1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
+        const items3 = [callback(tmp3(4338).Text, obj2), found.map((guildId) => outer1_11(outer1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
         obj1[0] = items3;
         tmp10Result = tmp10(closure_13, obj1);
       }

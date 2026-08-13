@@ -4,7 +4,7 @@ import { PRIMARY_DOMAIN } from "ME";
 import getConstants from "getConstants";
 import set from "set";
 import set from "getConstants";
-import { parse } from "../../../_runtime/04262_parse.js";
+import { parse } from "../../../_runtime/04260_parse.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";

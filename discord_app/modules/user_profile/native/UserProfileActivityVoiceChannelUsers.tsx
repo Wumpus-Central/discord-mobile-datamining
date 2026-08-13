@@ -17,7 +17,7 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8858);
+  let obj = user(8862);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [sortActivity];
   const stateFromStoresObject = user(589).useStateFromStoresObject(items, () => ({ status: outer1_3.getStatus(user.id), isMobileOnline: outer1_3.isMobileOnline(user.id), isVROnline: outer1_3.isVROnline(user.id) }));
@@ -34,7 +34,7 @@ function UserRow(user) {
   obj[2] = jsx(user(1297).Avatar, { user, avatarDecoration, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, autoStatusCutout: true });
   obj[3] = start;
   obj[4] = end;
-  return jsx(user(5413).TableRow, { user, avatarDecoration, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, autoStatusCutout: true });
+  return jsx(user(5414).TableRow, { user, avatarDecoration, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, autoStatusCutout: true });
 }
 const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");
 

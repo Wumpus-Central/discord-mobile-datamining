@@ -93,7 +93,7 @@ let prototype = function CustomStatusManager() {
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
-            callback(9810)(obj);
+            callback(9814)(obj);
             closure_6.stop();
           }
         }
@@ -135,9 +135,9 @@ let prototype = function CustomStatusManager() {
             callback(table[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(9809).setFocusMode(false);
+          applyArgumentsResult(9813).setFocusMode(false);
           closure_7.stop();
-          const tmpResult = applyArgumentsResult(9809);
+          const tmpResult = applyArgumentsResult(9813);
         }
       }
     }

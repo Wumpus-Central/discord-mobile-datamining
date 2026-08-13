@@ -63,7 +63,7 @@ function MediaMosaicImage(source) {
   dependencyMap = tmp2[1];
   let obj = source(4083);
   const fn = function c() {
-    let obj = source(4345);
+    let obj = source(4343);
     let num = 1;
     if (first) {
       num = 0;
@@ -71,7 +71,7 @@ function MediaMosaicImage(source) {
     obj = { opacity: obj.withTiming(num, { duration: 150 }) };
     return obj;
   };
-  obj = { withTiming: source(4345).withTiming, imageFinishedLoading: first };
+  obj = { withTiming: source(4343).withTiming, imageFinishedLoading: first };
   fn.__closure = obj;
   fn.__workletHash = 7803531897566;
   fn.__initData = closure_20;
@@ -81,7 +81,7 @@ function MediaMosaicImage(source) {
   const memo = React.useMemo(() => {
     if (null != source.placeholder) {
       const obj = { uri: null, width: null, height: null };
-      obj[0] = source(15686).createThumbhashImageFromPlaceholder(tmp.placeholder);
+      obj[0] = source(15695).createThumbhashImageFromPlaceholder(tmp.placeholder);
       ({ width: obj[1], height: obj[2] } = tmp);
       return obj;
     }
@@ -89,7 +89,7 @@ function MediaMosaicImage(source) {
   obj = { style: items1, children: null };
   items1 = [animatedStyle, tmp.thumbhashMedia];
   const items2 = [style, tmp.media, dimensions];
-  obj[1] = callback2(first(5307), { source: memo, style: items2 });
+  obj[1] = callback2(first(5308), { source: memo, style: items2 });
   const items3 = [callback2(first(4083).View, obj), ];
   const obj1 = {
     source,
@@ -400,7 +400,7 @@ function SingleImage(source) {
   ({ initialIndex, handlePressMedia, visible } = source);
   const tmp = callback4();
   let obj = React;
-  const context = React.useContext(source(15641).ICYMIContext);
+  const context = React.useContext(source(15650).ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -459,7 +459,7 @@ class GravityAttachmentMediaMosaic {
     items = [, ];
     items[0] = length;
     items[1] = sources;
-    tmp = f62383();
+    tmp = f62423();
     memo = c4.useMemo(() => {
       let sum;
       const result = length % 3;

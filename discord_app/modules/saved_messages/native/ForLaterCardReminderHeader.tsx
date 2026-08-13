@@ -28,7 +28,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
   }
-  obj = { dueAt, now: throttledNow, type: tmp2(10326).DueInStringTypes.SHORT };
+  obj = { dueAt, now: throttledNow, type: tmp2(11162).DueInStringTypes.SHORT };
   const dueInString = obj.useDueInString(obj);
   const isOverdue = dueInString.isOverdue;
   if (null == savedMessage.saveData.dueAt) {
@@ -45,12 +45,12 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
     obj1[0] = tmp.icon;
     const obj2 = { size: "xxs", color: null };
     obj2[1] = isOverdue ? colors.TEXT_FEEDBACK_CRITICAL : colors.INTERACTIVE_TEXT_DEFAULT;
-    obj1[1] = callback(tmp2(4308).ClockIcon, obj2);
+    obj1[1] = callback(tmp2(4306).ClockIcon, obj2);
     const items = [callback(View, obj1), , ];
     const obj3 = { variant: "text-md/semibold", color: null, children: null };
     obj3[1] = str;
     obj3[2] = tmp6;
-    items[1] = callback(tmp2(4340).Text, obj3);
+    items[1] = callback(tmp2(4338).Text, obj3);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.actionsContainer;
     obj4[1] = actions;

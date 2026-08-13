@@ -732,7 +732,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
     let streamType;
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    let obj = sourceId(4407);
+    let obj = sourceId(4408);
     obj = { streamType, guildId, channelId, ownerId: store2.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     let startsWithResult;
@@ -826,13 +826,13 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
       } else if (reason === tmp3.UNAUTHORIZED) {
         FAILED = tmp22.FAILED;
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
-        let obj = guildId(4407);
+        let obj = guildId(4408);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2007)(13247, dependencyMap.paths).then((arg0) => {
+        guildId(2007)(13248, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2007)(13247, dependencyMap.paths);
+        const promise = guildId(2007)(13248, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

@@ -6,8 +6,8 @@ import { HorizontalGradient } from "ME";
 import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
-import { _isNativeReflectConstruct } from "../../../../_runtime/05349__isNativeReflectConstruct.js";
+import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
+import { _isNativeReflectConstruct } from "../../../../_runtime/05350__isNativeReflectConstruct.js";
 import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 

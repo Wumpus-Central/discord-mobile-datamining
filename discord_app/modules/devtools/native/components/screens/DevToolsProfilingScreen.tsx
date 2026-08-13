@@ -44,8 +44,8 @@ export default function DevToolsProfilingScreen() {
     let obj1 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj2 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: null };
     obj2[3] = callback;
-    obj1[2] = tmp8(tmp4(5413).TableRow, obj2);
-    let items = [tmp8(tmp4(5806).TableRowGroup, obj1), ];
+    obj1[2] = tmp8(tmp4(5414).TableRow, obj2);
+    let items = [tmp8(tmp4(5807).TableRowGroup, obj1), ];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((arg0) => {
@@ -81,11 +81,11 @@ export default function DevToolsProfilingScreen() {
     const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const obj6 = { variant: "text-xs/semibold", style: null, children: "<ComponentProfiler />" };
     obj6[1] = tmp3.monospace;
-    const items1 = ["Make sure you wrap your component in ", tmp8(tmp4(4340).Text, obj6), " to enable measurements."];
+    const items1 = ["Make sure you wrap your component in ", tmp8(tmp4(4338).Text, obj6), " to enable measurements."];
     obj5[2] = items1;
-    obj4[1] = tmp10(tmp4(4340).Text, obj5);
-    obj3[2] = tmp8(tmp4(5413).TableRow, obj4);
-    tmp8Result = tmp8(tmp4(5806).TableRowGroup, obj3);
+    obj4[1] = tmp10(tmp4(4338).Text, obj5);
+    obj3[2] = tmp8(tmp4(5414).TableRow, obj4);
+    tmp8Result = tmp8(tmp4(5807).TableRowGroup, obj3);
   }
   const obj7 = { spacing: 16, children: null };
   const items2 = [tmp8Result, closure_5(DevToolsProfilingUseStateFromStores.DevToolsProfilingUseStateFromStores, {})];

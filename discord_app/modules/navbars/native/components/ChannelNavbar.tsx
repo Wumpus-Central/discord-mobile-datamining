@@ -438,12 +438,12 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(4804);
+    let tmp2Result = tmp2(4805);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;
   if (null != stateFromStores) {
-    tmp2Result = tmp2(4534);
+    tmp2Result = tmp2(4535);
     channelName = tmp2Result.computeChannelName(stateFromStores, mergeGuildAvatar, markAllUserIdListsStale);
   }
   let isDMResult;

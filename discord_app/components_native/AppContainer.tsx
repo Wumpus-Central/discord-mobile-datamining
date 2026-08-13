@@ -31,7 +31,7 @@ function GestureWrapper(children) {
   let isScreenLandscape;
   const tmp = createCacheKey();
   c0 = tmp;
-  isScreenLandscape = isScreenLandscape(4889).useIsScreenLandscape();
+  isScreenLandscape = isScreenLandscape(4890).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
     const items = [_undefined.flex, ];
@@ -92,7 +92,7 @@ function AppNavigationContainer(children) {
     outer1_7();
   }, []);
   const memo = React.useMemo(() => {
-    const tmp = callback(4201)();
+    const tmp = callback(4199)();
     let name;
     if (tmp != null) {
       const first = tmp.routes[0];
@@ -100,7 +100,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(13888).log("Initial Screen: " + name);
+    callback(13889).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -179,7 +179,7 @@ try {
     const appEntryKey = children.appEntryKey;
     let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = memo(13889).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(13890).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -208,8 +208,8 @@ try {
     }, []);
     riveAppStatePlaybackExperiment = undefined;
     memo = undefined;
-    let obj = memo(13889);
-    riveAppStatePlaybackExperiment = memo(15143).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = memo(13890);
+    riveAppStatePlaybackExperiment = memo(15152).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveAppStatePlaybackExperiment];
     memo = React.useMemo(() => {
       const items = [];

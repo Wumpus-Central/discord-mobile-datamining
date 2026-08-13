@@ -9,12 +9,13 @@ import ME from "ME";
 import { CollectibleShopTab } from "items";
 import { CurrencyCodes } from "sum";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { keysSorter } from "../../../_runtime/05212_keysSorter.js";
+import { keysSorter } from "../../../_runtime/05213_keysSorter.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 import { useSKUPrice } from "../storefront/StorefrontUtils.tsx";
+import { RewardRequirementType } from "SocialLayerStorefrontTypes.tsx";
 
 let c10;
 let c9;
@@ -86,8 +87,22 @@ function hasSocialLayerStorefront(guild) {
     return tmp6;
   }
 }
+function transformRewardRequirementServer(type) {
+  let progress;
+  let tmp = null;
+  if (type.type === RewardRequirementType.RewardRequirementType.SUBSCRIPTION) {
+    const obj = { type: null, planIds: null, progress: null };
+    ({ type: obj[0], plan_ids: obj[1], progress } = type);
+    if (progress == null) {
+      progress = null;
+    }
+    obj[2] = progress;
+    tmp = obj;
+  }
+  return tmp;
+}
 function transformSlayerStorefrontPromotionServer(id) {
-  let obj = { id: id.id, endsAt: null, flavor: null, pdp: null, storefront: null, checkout: null, vcStream: null };
+  let obj = { id: id.id, endsAt: null, flavor: null, pdp: null, storefront: null, checkout: null, vcStream: null, rewardRequirements: null };
   let ends_at = id.ends_at;
   if (ends_at == null) {
     ends_at = null;
@@ -129,7 +144,16 @@ function transformSlayerStorefrontPromotionServer(id) {
     tmp5 = obj2;
   }
   obj[6] = tmp5;
+  let reward_requirements = id.reward_requirements;
+  if (reward_requirements == null) {
+    reward_requirements = [];
+  }
+  const mapped = reward_requirements.map(transformRewardRequirementServer);
+  obj[7] = mapped.filter((arg0) => null != arg0);
   return obj;
+}
+function isSubscriptionRewardRequirement(type) {
+  return type.type === RewardRequirementType.RewardRequirementType.SUBSCRIPTION;
 }
 function getSKUShareURL(arg0, applicationId) {
   let tab;
@@ -174,6 +198,17 @@ function getCountryPrices(arg0, arg1) {
       countryPrices = arg0.prices[tmp.DEFAULT].countryPrices;
     }
   }
+}
+function getRequiredSubscriptionPlanIds(arr) {
+  const found = arr.find(isSubscriptionRewardRequirement);
+  let planIds = null;
+  if (null != found) {
+    planIds = null;
+    if (found.planIds.length > 0) {
+      planIds = found.planIds;
+    }
+  }
+  return planIds;
 }
 function isOnCollectiblesShopGameShopPage(arr) {
   let applicationId;
@@ -299,6 +334,25 @@ export const transformStorefrontMetadataServer = function transformStorefrontMet
   obj[1] = prop;
   return obj;
 };
+export { getRequiredSubscriptionPlanIds };
+export const getRewardRequirementPlanTargetingParams = function getRewardRequirementPlanTargetingParams(arr) {
+  const found = arr.find(isSubscriptionRewardRequirement);
+  let planIds = null;
+  if (null != found) {
+    planIds = null;
+    if (found.planIds.length > 0) {
+      planIds = found.planIds;
+    }
+  }
+  if (null != planIds) {
+    if (1 === planIds.length) {
+      let obj = { initialPlanId: null, shouldDisallowPlanSelection: true };
+      obj[0] = planIds[0];
+    }
+    return obj;
+  }
+  obj = {};
+};
 export const transformSlayerApplicationStorefrontSummaryServer = function transformSlayerApplicationStorefrontSummaryServer(id) {
   let logo_asset_id;
   const obj = { id: id.id, publishedAt: null, title: null, logoAssetId: null, lightThemeLogoAssetId: null };
@@ -410,7 +464,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "isArray", primaryIconLabel: "accessibilityRole" };
+          obj = { primaryIconAsset: "Array", primaryIconLabel: "ct" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -423,7 +477,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "isArray", primaryIconLabel: "accessibilityRole" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "ct" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;

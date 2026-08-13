@@ -735,12 +735,12 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
       codecUsageStats = getCodecUsageStats("receiver", tmp3);
     }
     obj = { stream_application_name: null };
-    obj[0] = obj2(4521).default.getApplicationNames();
+    obj[0] = obj2(4522).default.getApplicationNames();
     if (self.isOwner) {
       obj = { clips_enabled: null, clips_buffer_length: null };
-      obj[0] = tmp5(4402).isClipsEnabled();
+      obj[0] = tmp5(4403).isClipsEnabled();
       obj[1] = tmp8.clipsLength;
-      const tmp5Result = tmp5(4402);
+      const tmp5Result = tmp5(4403);
     } else {
       obj = {};
     }
@@ -771,7 +771,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         const merged6 = Object.assign(self.getStreamAnalyticsProperties());
         const merged7 = Object.assign(obj);
         const merged8 = Object.assign(obj2);
-        obj.app_hardware_acceleration_enabled = callback(4338).getAppHardwareAccelerationEnabled();
+        obj.app_hardware_acceleration_enabled = callback(4336).getAppHardwareAccelerationEnabled();
         obj.channel_type = type;
         obj.reason = callback;
         obj.max_viewers = self.analyticsContext.maxViewers;
@@ -779,16 +779,16 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         obj.hardware_enabled = outer1_9.getHardwareEncoding();
         let tmp = null;
         if (self.isOwner) {
-          tmp = tmp4(7171)();
+          tmp = tmp4(7177)();
         }
         obj.device_performance_class = tmp;
         obj.soundshare_experimental = outer1_9.getExperimentalSoundshare();
         obj.quality_preset = _videoQuality.getState().preset;
-        const obj4 = callback(4338);
+        const obj4 = callback(4336);
         const obj5 = outer1_9;
-        obj.discord_is_elevated = callback(4338).getDiscordIsElevated();
+        obj.discord_is_elevated = callback(4336).getDiscordIsElevated();
         obj2.track(outer1_13.VIDEO_STREAM_ENDED, obj);
-        const tmp4Result = callback(4338);
+        const tmp4Result = callback(4336);
       }
     });
     _videoQuality = _videoQuality.getInboundParticipants();
@@ -815,7 +815,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         const merged6 = Object.assign(self.getStreamAnalyticsProperties());
         const merged7 = Object.assign(obj);
         const merged8 = Object.assign(obj2);
-        obj.app_hardware_acceleration_enabled = callback(4338).getAppHardwareAccelerationEnabled();
+        obj.app_hardware_acceleration_enabled = callback(4336).getAppHardwareAccelerationEnabled();
         obj.channel_type = type;
         obj.reason = callback;
         obj.max_viewers = self.analyticsContext.maxViewers;
@@ -823,15 +823,15 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         obj.hardware_enabled = outer1_9.getHardwareEncoding();
         let tmp2 = null;
         if (self.isOwner) {
-          tmp2 = tmp4(7171)();
+          tmp2 = tmp4(7177)();
         }
         obj.device_performance_class = tmp2;
         obj.track(outer1_13.VIDEO_STREAM_ENDED, obj);
-        const obj3 = callback(4338);
+        const obj3 = callback(4336);
         tmp4 = callback;
       }
     });
-    const _default = obj2(4521).default;
+    const _default = obj2(4522).default;
     tmp5 = obj2;
   }
 };

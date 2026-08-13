@@ -99,10 +99,10 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   const intl4 = tmp5(1236).intl;
   obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
   obj1[2] = tmp7Result;
-  tmp7Result = tmp7(tmp5(5435).BottomSheetTitleHeader, obj1);
+  tmp7Result = tmp7(tmp5(5436).BottomSheetTitleHeader, obj1);
   let obj2 = { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: null };
   const items1 = [subscriptionListingsForGuild.length];
-  obj2[4] = closure_6(emoji(8049), {
+  obj2[4] = closure_6(emoji(8053), {
     inActionSheet: true,
     style: tmp.list,
     itemSize: closure_9,

@@ -130,7 +130,7 @@ function _guildRoomConnect() {
                   let tmp59 = items;
                   let tmp60 = callback;
                   let tmp61 = dependencyMap;
-                  let obj16 = callback(16521);
+                  let obj16 = callback(16532);
                   let obj6 = { guildId: null, channelId: null };
                   let tmp62 = callback;
                   obj6[0] = callback;
@@ -139,10 +139,10 @@ function _guildRoomConnect() {
                   let result = obj16.trackGuildRoomUserConnected(obj6);
                   let tmp65 = callback;
                   let tmp66 = dependencyMap;
-                  let obj18 = callback(8604);
+                  let obj18 = callback(8608);
                   let tmp67 = callback;
                   let tmp68 = dependencyMap;
-                  let fireSurveyActionResult = obj18.fireSurveyAction(callback(8611).SurveyActionTypes.GUILD_ROOM_JOINED);
+                  let fireSurveyActionResult = obj18.fireSurveyAction(callback(8615).SurveyActionTypes.GUILD_ROOM_JOINED);
                   let tmp70 = users;
                   users = users.users;
                   let tmp71 = fetchFingerprint;
@@ -176,7 +176,7 @@ function _guildRoomConnect() {
                       c8 = tmp10;
                       let tmp13 = callback;
                       let tmp14 = dependencyMap;
-                      obj = callback(16521);
+                      obj = callback(16532);
                       let obj10 = { channelId: null, update: null };
                       let tmp15 = callback2;
                       obj10[0] = callback2;
@@ -190,7 +190,7 @@ function _guildRoomConnect() {
                     let tmp19 = items;
                     let tmp20 = callback;
                     let tmp21 = dependencyMap;
-                    obj2 = callback(16521);
+                    obj2 = callback(16532);
                     let obj11 = { guildId: null, channelId: null, actualSeatPosition: null, targetSeatPosition: null };
                     let tmp22 = callback;
                     obj11[0] = callback;
@@ -507,7 +507,7 @@ function _createGuildRoomNote() {
         throw arg1;
       } else if (arg0 !== 2) {
         if (callback2 !== callback) {
-          const obj = callback(16521);
+          const obj = callback(16532);
           const obj4 = { interactionType: "note_created", guildId: null, channelId: null };
           obj4[1] = callback;
           obj4[2] = callback2;
@@ -587,7 +587,7 @@ function _deleteGuildRoomNote() {
             return obj3;
           } else {
             if (closure_1 !== callback) {
-              obj = callback(16521);
+              obj = callback(16532);
               const obj4 = { interactionType: "note_deleted", guildId: null, channelId: null };
               obj4[1] = callback;
               obj4[2] = closure_1;

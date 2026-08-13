@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import { jsx } from "jsxProd";
-import { LegacyBaseButton } from "../../../../../_runtime/05466_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../../_runtime/05467_LegacyBaseButton.js";
 
 let c10;
 let c5;

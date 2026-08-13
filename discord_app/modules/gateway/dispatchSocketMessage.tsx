@@ -1887,8 +1887,8 @@ defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
 });
 defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
   const obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: null };
-  obj[1] = obj(8424).savedMessageCreateObjectToClient(body);
-  const obj2 = obj(8424);
+  obj[1] = obj(8428).savedMessageCreateObjectToClient(body);
+  const obj2 = obj(8428);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1899,8 +1899,8 @@ defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
 });
 defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
   const obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: null };
-  obj[1] = obj(8424).savedMessageDeleteObjectToClient(channelId);
-  const obj2 = obj(8424);
+  obj[1] = obj(8428).savedMessageDeleteObjectToClient(channelId);
+  const obj2 = obj(8428);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1954,7 +1954,7 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (cha
   if ("MESSAGE_POLL_VOTE_ADD" === arg1) {
     str = "MESSAGE_REACTION_ADD";
   }
-  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7262).ReactionTypes.VOTE };
+  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7267).ReactionTypes.VOTE };
   obj = { id: channelId.answer_id, name: "" };
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
@@ -2040,17 +2040,17 @@ defineSimpleDispatch(["USER_PAYMENT_SOURCES_UPDATE"], () => {
   if (obj.isUserSettingsOpen()) {
     const paymentSources = _deletePaymentSource.fetchPaymentSources();
     const tmpResult = _deletePaymentSource;
-    const subscriptionPlansBySKUs = importAll(5916).fetchSubscriptionPlansBySKUs(fetchedSKUIDs.getFetchedSKUIDs());
-    const obj3 = importAll(5916);
+    const subscriptionPlansBySKUs = importAll(5918).fetchSubscriptionPlansBySKUs(fetchedSKUIDs.getFetchedSKUIDs());
+    const obj3 = importAll(5918);
   }
 });
 defineSimpleDispatch(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-  const currentUser = importAll(8353).fetchCurrentUser();
-  const obj = importAll(8353);
+  const currentUser = importAll(8357).fetchCurrentUser();
+  const obj = importAll(8357);
   const tmp3 = require;
   if (obj2.isUserSettingsOpen()) {
-    const subscriptions = tmp3(4663).fetchSubscriptions();
-    const tmp3Result = tmp3(4663);
+    const subscriptions = tmp3(4664).fetchSubscriptions();
+    const tmp3Result = tmp3(4664);
   }
 });
 defineSimpleDispatch(["WISHLIST_ITEM_PURCHASED"], (recipientId) => {
@@ -2459,9 +2459,9 @@ defineSimpleDispatch(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (choices) =>
 });
 defineSimpleDispatch(["INTERACTION_MODAL_CREATE"], (id) => {
   const obj = { type: "INTERACTION_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, components: null, nonce: null, resolved: null };
-  obj[6] = obj(4565).transformComponents(id.components);
+  obj[6] = obj(4566).transformComponents(id.components);
   ({ nonce: obj[7], resolved: obj[8] } = id);
-  const obj2 = obj(4565);
+  const obj2 = obj(4566);
   const obj3 = dispatcher;
   dispatcher.dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);

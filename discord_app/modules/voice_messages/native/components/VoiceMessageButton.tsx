@@ -14,7 +14,7 @@ import { NativePermissionTypes } from "NativePermissionStatus";
 import { jsx } from "useGradientBottom";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { LegacyBaseButton } from "../../../../../_runtime/05466_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../../_runtime/05467_LegacyBaseButton.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
 import { XSmallBoldIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   setContent = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp11 = sharedValue1(11054)();
+  const tmp11 = sharedValue1(10969)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     let closure_0 = arg0;
@@ -609,9 +609,9 @@ const memoResult = importAllResult.memo((disabled) => {
         items[0] = obj.get()[1];
         items[1] = disabled;
         result = obj.set(items);
-        tmp2 = f109608;
+        tmp2 = f109643;
         tmp3 = c2;
-        obj2 = f109608(c2[19]);
+        obj2 = f109643(c2[19]);
         tmp4 = outer1_29;
         tmp5 = obj2.runOnJS(outer1_29)();
       }
@@ -650,7 +650,7 @@ const memoResult = importAllResult.memo((disabled) => {
     }
   }, items9);
   let obj5 = _coerceMainRoute;
-  const tmp23 = sharedValue1(9058);
+  const tmp23 = sharedValue1(9062);
   let intl = _getSystemLocale.intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
@@ -820,7 +820,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   obj = { gesture: memo, children: null };
-  obj1 = { ref: sharedValue1(11689)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
+  obj1 = { ref: sharedValue1(11687)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
   const tmp23Result = tmp23(sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -888,7 +888,7 @@ const memoResult = importAllResult.memo((disabled) => {
     tmp30 = clientThemesOverride;
   }
   obj1[7] = tmp30;
-  obj[1] = jsx(sharedValue1(11670), { ref: sharedValue1(11689)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
+  obj[1] = jsx(sharedValue1(11668), { ref: sharedValue1(11687)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
   return jsx(_LegacyBaseButton.GestureDetector, { gesture: memo, children: null });
 });
 let result = require("noop").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");

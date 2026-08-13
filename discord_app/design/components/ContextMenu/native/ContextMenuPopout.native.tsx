@@ -24,7 +24,7 @@ function ContextMenuBackdrop(onDismiss) {
     obj[0] = visible(outer1_2[12]).withSpring(value, visible(outer1_2[6]).CONTEXT_MENU_SPRING);
     return obj;
   };
-  obj = { withSpring: visible(4753).withSpring, visible, CONTEXT_MENU_SPRING: visible(8645).CONTEXT_MENU_SPRING };
+  obj = { withSpring: visible(4754).withSpring, visible, CONTEXT_MENU_SPRING: visible(8649).CONTEXT_MENU_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 6862317967896;
   fn.__initData = closure_16;
@@ -42,7 +42,7 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj[4] = stringResult;
-  return tmp3(visible(4742).Backdrop, obj);
+  return tmp3(visible(4743).Backdrop, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);

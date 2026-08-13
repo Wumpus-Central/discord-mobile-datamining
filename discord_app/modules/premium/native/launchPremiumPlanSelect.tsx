@@ -4,7 +4,7 @@ import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js
 import { PremiumModal } from "../../../components_native/premium/PremiumModal.tsx";
 import { getSanitizedRestrictedGuilds } from "../../../utils/UserSettingsUtils.tsx";
 
-let result = require("module_4549").fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
+let result = require("module_4550").fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
 
 export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostPurchaseFlow) {
   let analyticsLocation;
@@ -73,9 +73,9 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[9] = tmp;
     obj[10] = onPaymentSuccess;
     obj[11] = onPaymentDismiss;
-    const obj3 = flag2(4549);
-    obj3.pushLazy(asyncRequireImpl(6915, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(6915, dependencyMap.paths);
+    const obj3 = flag2(4550);
+    obj3.pushLazy(asyncRequireImpl(6921, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(6921, dependencyMap.paths);
   }
   let result = getSanitizedRestrictedGuilds.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

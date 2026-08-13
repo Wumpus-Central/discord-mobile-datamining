@@ -35,7 +35,7 @@ class UnreadIndicator {
     tmp5 = id;
     token = obj.useToken(require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE);
     c4 = token;
-    tmp7 = f61866(c7());
+    tmp7 = f61906(c7());
     GUILD_BAR_ITEM_SIZE = tmp7;
     tmp8 = MOUNTED === require("wrapChildrenDefault").TransitionStates.MOUNTED;
     c6 = tmp8;
@@ -90,7 +90,7 @@ class UnreadIndicator {
     obj[5] = token;
     fn.__closure = obj;
     fn.__workletHash = 404454683979;
-    fn.__initData = f61867;
+    fn.__initData = f61907;
     items1 = [, , , ];
     items1[0] = tmp8;
     items1[1] = sharedId;
@@ -128,12 +128,12 @@ class UnreadIndicator {
     obj1[5] = require("module_4083").runOnJS;
     fn2.__closure = obj1;
     fn2.__workletHash = 10632665703864;
-    fn2.__initData = f61867;
+    fn2.__initData = f61907;
     items2 = [, ];
     items2[0] = MOUNTED;
     items2[1] = cleanUp;
     callback1 = cleanUp.useCallback(fn2, items2);
-    return jsx(require("module_8050"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
+    return jsx(require("set"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
   }
 }
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
@@ -192,6 +192,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   let enableHome;
   let entering;
   let exiting;
+  let expanded;
   let expandedChildren;
   let externalChildren;
   let guildsBarIconDrawerStyle;
@@ -202,7 +203,6 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   let label;
   let layout;
   let onAccessibilityAction;
-  let preventClipping;
   let unread;
   let zIndex;
   id = id.id;
@@ -229,12 +229,8 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   }
   const overState = id.overState;
   const styles = id.styles;
-  ({ accessibilityActions, preventClipping, onAccessibilityAction } = id);
-  if (preventClipping === undefined) {
-    preventClipping = false;
-  }
-  const expanded = id.expanded;
-  ({ zIndex, entering, exiting, layout } = id);
+  ({ accessibilityActions, expanded } = id);
+  ({ zIndex, onAccessibilityAction, entering, exiting, layout } = id);
   if (zIndex === undefined) {
     zIndex = 0;
   }
@@ -256,7 +252,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   let obj1 = id(circle[6]);
   token1 = obj1.useToken(selected(circle[5]).modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
   let obj2 = id(circle[9]);
-  class W {
+  class X {
     constructor() {
       obj = id(circle[8]);
       if (circle) {
@@ -271,11 +267,11 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     }
   }
   obj = { withSpring: id(circle[8]).withSpring, circle, guildItemSelectedBorderRadius: token1, guildItemSize: token, CORNER_SPRING_PHYSICS: expanded };
-  W.__closure = obj;
-  W.__workletHash = 15930523896348;
-  W.__initData = closure_18;
+  X.__closure = obj;
+  X.__workletHash = 15930523896348;
+  X.__initData = closure_18;
   let obj4 = hint;
-  const animatedStyle = obj2.useAnimatedStyle(W);
+  const animatedStyle = obj2.useAnimatedStyle(X);
   const context = hint.useContext(id(circle[12]).HomeDrawerStateContext);
   ({ homeDrawerState, enableHome } = context);
   let items = [isDragTarget, dragState, num, overState, zIndex, tmp];
@@ -465,7 +461,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   if (enableHome) {
     container = tmp6.container;
   }
-  const obj6 = { style: items10, layout, entering, exiting, preventClipping, collapsable: false, children: null };
+  const obj6 = { style: items10, layout, entering, exiting, collapsable: false, children: null };
   items10 = [container, memo.style];
   let tmp25Result = tmp17Result;
   if (enableHome) {
@@ -490,7 +486,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     const tmp4Result4 = tmp4(tmp3[10]);
   }
   items11[1] = tmp25Result;
-  obj6[6] = items11;
+  obj6[5] = items11;
   return styles(selected(circle[10]), obj6);
 };
 export const useGuildsBarAnimatedWrapperStyles = function useGuildsBarAnimatedWrapperStyles(arg0) {

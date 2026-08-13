@@ -7,17 +7,17 @@ function getLayoutStyles(layout, launchpad) {
     flag = false;
   }
   if (ChannelListLayoutTypes.ChannelListLayoutTypes.COZY_DRAWER === layout) {
-    return tmp(9843).CHANNEL_LIST_STYLES_COZY_DRAWER;
+    return tmp(9846).CHANNEL_LIST_STYLES_COZY_DRAWER;
   } else if (tmp(4039).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
-    return tmp(9843).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
+    return tmp(9846).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
   } else if (tmp(4039).ChannelListLayoutTypes.COMPACT === layout) {
-    let tmpResult = tmp(9845);
+    let tmpResult = tmp(9848);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
     if (tmp(4039).ChannelListLayoutTypes.MINIMAL !== layout) {
       const COZY = tmp(4039).ChannelListLayoutTypes.COZY;
     }
-    tmpResult = tmp(9846);
+    tmpResult = tmp(9849);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }

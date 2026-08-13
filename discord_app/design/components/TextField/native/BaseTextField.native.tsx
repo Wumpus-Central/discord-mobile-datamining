@@ -13,7 +13,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   let isFocused;
   let keyboardType;
   let secureTextEntry;
-  let obj = ref(6041);
+  let obj = ref(6043);
   obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: onChangeText(1367)("InputFieldContainer") };
   const inputStyles = obj.useInputStyles(obj);
   let obj2 = ref(4070);
@@ -95,10 +95,10 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   items2[2] = size.inputStyle;
   obj2.style = items2;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
-  items1[1] = tmp12(ref(6044).NativeTextInput, obj2);
+  items1[1] = tmp12(ref(6046).NativeTextInput, obj2);
   items1[2] = size.trailing;
   obj1.children = items1;
-  return tmp10(ref(6041).InputFieldContainer, obj1);
+  return tmp10(ref(6043).InputFieldContainer, obj1);
 });
 const result = require("set").fileFinishedImporting("design/components/TextField/native/BaseTextField.native.tsx");
 

@@ -35,7 +35,7 @@ function HomeDrawerDMsRow() {
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
     obj1[3] = intl.format(tmp2(1236).t.N5UIKr, obj2);
-    items1[1] = callback(tmp2(4340).Text, obj1);
+    items1[1] = callback(tmp2(4338).Text, obj1);
     obj[1] = items1;
     tmp5 = callback2(View, obj);
   }

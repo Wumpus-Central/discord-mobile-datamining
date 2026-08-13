@@ -4,7 +4,7 @@ import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
 
 let closure_6;
 let error;
@@ -26,7 +26,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(13973).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(13977).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;

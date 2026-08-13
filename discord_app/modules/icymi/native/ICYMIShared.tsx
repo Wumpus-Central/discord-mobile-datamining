@@ -29,7 +29,7 @@ let unpackModuleId;
 const require = arg1;
 class Separator {
   constructor() {
-    obj = { style: f62352().separator };
+    obj = { style: f62392().separator };
     return jsx(View, obj);
   }
 }
@@ -68,7 +68,7 @@ class GuildContentPost {
     guild = global.guild;
     ({ channel, hideTimestamp, id, type } = global);
     ({ timestamp, children, avatar, title, subtitle, onHeaderPress, onHeaderLongPress, disableInteractions } = global);
-    tmp = f62352();
+    tmp = f62392();
     tmp2 = guild;
     tmp3 = id;
     obj = require("getFontScale");
@@ -504,14 +504,14 @@ export const SimplePost = function SimplePost(arg0) {
   let sharedValue;
   const tmp = callback3();
   let obj = highlight(4065);
-  token = obj.useToken(token(712).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4280)());
-  let obj1 = highlight(4193);
+  token = obj.useToken(token(712).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4278)());
+  let obj1 = highlight(4191);
   const hexWithOpacityResult = obj1.hexWithOpacity(token(712).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
   let obj2 = highlight(4083);
   sharedValue = obj2.useSharedValue(0);
   const tmp2 = token;
-  const tmp4 = token(4280)();
+  const tmp4 = token(4278)();
   const fn = function c() {
     const obj = { backgroundColor: null };
     const items = [token, _undefined];

@@ -5,7 +5,7 @@ import { Consents } from "ME";
 import { DeviceSettingsStore } from "initialize";
 
 let object = arg1;
-let closure_6 = { detected: false, lastScannedAt: "Array" };
+let closure_6 = { detected: false, lastScannedAt: "r" };
 let closure_7 = { apps: {} };
 class LocalAppDetectionStore extends DeviceSettingsStore {
   constructor() {

@@ -61,7 +61,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != guild) {
             if (null == outer1_6[skuId.skuId]) {
-              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "accessibilityRole" };
+              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
             } else {
               let tmp4;
               if (null != outer1_7[tmp22]) {
@@ -114,7 +114,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
             obj1[3] = levelPowerup;
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: "<string:1056964609>" };
+            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: true };
             obj2[0] = tmp11.TIER_OVERRIDE_ACTIVATED;
             obj2[1] = skuId;
             obj2[3] = skuId;
@@ -130,11 +130,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "accessibilityRole" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
     }
   });
   if (mapped.length <= 0) {
-    obj = { type: null, sourceEntitlement: "Array", sourcePowerup: "accessibilityRole" };
+    obj = { type: null, sourceEntitlement: "Array", sourcePowerup: "isArray" };
     obj[0] = constants.INACTIVE;
     let first = obj;
   } else {
@@ -188,7 +188,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
         if (null != stateFromStores) {
           if (null != guild) {
             if (null == outer1_6[skuId.skuId]) {
-              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "accessibilityRole" };
+              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
             } else {
               let tmp4;
               if (null != outer1_7[tmp22]) {
@@ -241,7 +241,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
             obj1[3] = levelPowerup;
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: "<string:1056964609>" };
+            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: true };
             obj2[0] = tmp11.TIER_OVERRIDE_ACTIVATED;
             obj2[1] = skuId;
             obj2[3] = skuId;
@@ -257,7 +257,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           return obj;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "accessibilityRole" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
     }
   });
 };

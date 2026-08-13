@@ -35,7 +35,7 @@ export default function UserProfileOverscrollBanner(arg0) {
     const obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;
     obj1[1] = StyleSheet.absoluteFillObject;
-    tmp3Result = tmp3(module_8819, obj1);
+    tmp3Result = tmp3(module_8823, obj1);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;

@@ -23,9 +23,9 @@ export default {
     obj = { type: "THREAD_SETTINGS_DRAFT_CHANGE", channelId: id, draft };
     obj.dispatch(obj);
   },
-  changeScheduledMessage(channelId, draft) {
+  changeScheduledMessage(closure_0, draft) {
     let obj = dispatcher;
-    obj = { type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId, draft };
+    obj = { type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId: closure_0, draft };
     obj.dispatch(obj);
   }
 };

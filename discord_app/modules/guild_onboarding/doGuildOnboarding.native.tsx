@@ -5,14 +5,14 @@ import handleConnectionOpen from "handleConnectionOpen";
 import shouldShowOnboarding from "shouldShowOnboarding";
 import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY";
 import ME from "ME";
-import { 05279__ } from "../../../_runtime/metro/05279__.js";
+import { 05280__ } from "../../../_runtime/metro/05280__.js";
 import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 let c9;
 let metroImportAll;
 const require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(05279__));
+  return JSON.parse(JSON.stringify(05280__));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -66,14 +66,14 @@ function _doGuildOnboarding() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj8 = lib(4312);
+              let obj8 = lib(4310);
               obj8.hideActionSheet();
-              lib(4549).popAll();
-              const obj10 = lib(4549);
+              lib(4550).popAll();
+              const obj10 = lib(4550);
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = guildId(5271).waitForGuild(closure_0);
+              obj2[0] = guildId(5272).waitForGuild(closure_0);
               return obj2;
             }
           } else {
@@ -95,7 +95,7 @@ function _doGuildOnboarding() {
                   hasItem = features.has(constants.COMMUNITY);
                 }
                 if (hasItem) {
-                  let obj5 = guildId(5280);
+                  let obj5 = guildId(5281);
                   c5 = 3;
                   c6 = 1;
                   const obj4 = { value: null, done: false };
@@ -265,7 +265,7 @@ function _fetchLandingAsset() {
           } else {
             dependencyMap = arg1;
             const _HermesInternal = HermesInternal;
-            const tmp12 = callback(5284);
+            const tmp12 = callback(5285);
             c3 = 0;
             c5 = 3;
             obj = { value: null, done: true };

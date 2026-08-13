@@ -38,7 +38,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
   if (tmp4.shouldShow) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    let str;
+    let str = "text-subtle";
     if (manaTypeConsolidationExperiment) {
       str = "text-strong";
     }
@@ -51,7 +51,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     obj[1] = str2;
     const intl = tmp6(1236).intl;
     obj[2] = intl.string(tmp2(2335)["3FRirU"]);
-    const items = [closure_4(tmp6(4340).Text, obj), , ];
+    const items = [closure_4(tmp6(4338).Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       const obj1 = { text: null };
@@ -64,7 +64,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj2 = { guildId: null, powerupNames: null, warnings: null };
       obj2[0] = guildId;
       ({ expiringPowerupNames: obj5[1], warnings: obj5[2] } = tmp5);
-      shouldShow2 = tmp11(tmp2(11979), obj2);
+      shouldShow2 = tmp11(tmp2(11981), obj2);
     }
     items[2] = shouldShow2;
     obj[1] = items;

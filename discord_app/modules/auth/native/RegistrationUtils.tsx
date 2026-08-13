@@ -6,7 +6,7 @@ import useRegistrationUIStore from "useRegistrationUIStore";
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
-import { Background } from "../../../../_runtime/05316_Background.js";
+import { Background } from "../../../../_runtime/05317_Background.js";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { NavigatorWithCaptchaHook } from "components/Auth.tsx";
 

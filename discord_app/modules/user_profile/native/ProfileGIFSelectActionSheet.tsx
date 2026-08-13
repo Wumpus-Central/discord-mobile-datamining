@@ -162,7 +162,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
                 }
               } else {
                 if (outer1_10.BANNER === tmp65) {
-                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "text-sm/normal" };
+                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: 0 };
                   obj9[0] = lib(outer1_2[13]).AssetOriginTypes.NEW_ASSET;
                   obj9[1] = c5;
                   obj9[4] = closure_6;

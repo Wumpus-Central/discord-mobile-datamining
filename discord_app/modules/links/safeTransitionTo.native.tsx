@@ -134,7 +134,7 @@ function _safeTransitionTo() {
           }
           obj7 = callback2(closure_2[11]);
           if (closure_2 == null) {
-            closure_2 = { guildId: "Array" };
+            closure_2 = { guildId: "sa" };
           }
           c5 = 2;
           c6 = 1;

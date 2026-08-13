@@ -8,7 +8,6 @@ import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import { QuestRewardTypes } from "../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 import { result } from "../ads/utils/AdDecisionUtils.tsx";
-import { apexExperiment } from "experiments/NewAdRequestBehaviorExperiment.tsx";
 import { getQuestLogger } from "lib/getQuestLogger.tsx";
 import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
 import { progressFromServer } from "utils/QuestServerUtils.tsx";
@@ -439,13 +438,13 @@ const questStore = new QuestStore(require("dispatcher"), {
       let tmp13 = mapped;
       let tmp14 = dependencyMap;
       let tmp15 = dependencyMap;
-      let obj5 = mapped(7198);
+      let obj5 = mapped(7204);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5204).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(5205).QuestContent.QUEST_BAR)) {
         let tmp17 = tmp12;
         let tmp18 = tmp14;
-        let tmp13Result = tmp13(7206);
+        let tmp13Result = tmp13(7212);
         let obj1 = { location: null };
         let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
@@ -479,7 +478,7 @@ const questStore = new QuestStore(require("dispatcher"), {
         let tmp32 = mapped;
         let tmp33 = dependencyMap;
         let tmp34 = dependencyMap;
-        let obj10 = mapped(7198);
+        let obj10 = mapped(7204);
         let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
@@ -557,8 +556,8 @@ const questStore = new QuestStore(require("dispatcher"), {
     let quest;
     let responseTtlSeconds;
     let trafficMetadataSealed;
-    ({ quest, placement, adDecisionData, adContext, metadataSealed, trafficMetadataSealed } = arg0);
-    ({ responseTtlSeconds, fetchedAt } = arg0);
+    ({ quest, placement } = arg0);
+    ({ adDecisionData, adContext, responseTtlSeconds, metadataSealed, trafficMetadataSealed, fetchedAt } = arg0);
     let closure_13 = Date.now();
     let c4 = false;
     map = new Map(map);
@@ -567,50 +566,35 @@ const questStore = new QuestStore(require("dispatcher"), {
     if (value != null) {
       value.succeed();
     }
-    map2.delete(placement);
-    if (obj3.getConfig({ location: "handleFetchQuestToDeliverSuccess" }).enableNewRequestBehavior) {
-      let id;
-      if (quest != null) {
-        id = quest.id;
-      }
-      if (id == null) {
-        id = null;
-      }
-      let obj = { questId: null, adCreativeId: null, fetchedAt: null, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-      obj[0] = id;
-      let id1;
-      if (quest != null) {
-        id1 = quest.id;
-      }
-      if (id1 == null) {
-        id1 = null;
-      }
-      obj[1] = id1;
-      obj[2] = fetchedAt;
-      obj[3] = result.resolveResponseTtl(responseTtlSeconds);
-      obj[4] = adDecisionData;
-      obj[5] = adContext;
-      obj[6] = metadataSealed;
-      obj[7] = trafficMetadataSealed;
-      const _Map = Map;
-      map1 = new Map(map1);
-      const result1 = map1.set(placement, obj);
-      const obj6 = result;
-    } else if (null == quest) {
-      map.delete(placement);
-    } else {
-      obj = { quest: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-      obj[0] = quest;
-      obj[1] = adDecisionData;
-      obj[2] = adContext;
-      obj[3] = metadataSealed;
-      obj[4] = trafficMetadataSealed;
-      const result2 = map.set(placement, obj);
+    map.delete(placement);
+    let id;
+    if (quest != null) {
+      id = quest.id;
     }
+    if (id == null) {
+      id = null;
+    }
+    const obj = { questId: id, adCreativeId: null, fetchedAt: null, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
+    let id1;
+    if (quest != null) {
+      id1 = quest.id;
+    }
+    if (id1 == null) {
+      id1 = null;
+    }
+    obj[1] = id1;
+    obj[2] = fetchedAt;
+    obj[3] = result.resolveResponseTtl(responseTtlSeconds);
+    obj[4] = adDecisionData;
+    obj[5] = adContext;
+    obj[6] = metadataSealed;
+    obj[7] = trafficMetadataSealed;
+    map1 = new Map(map1);
+    const result1 = map1.set(placement, obj);
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function handleFetchQuestToDeliverFailure(placement) {
     placement = placement.placement;
-    map.delete(placement);
+    set7.delete(placement);
     let closure_13 = Date.now();
     let c4 = false;
     map = new Map(map);
@@ -622,28 +606,20 @@ const questStore = new QuestStore(require("dispatcher"), {
       value = tmp9;
     }
     const timestamp = Date.now();
-    const result2 = map2.set(placement, timestamp + value.fail());
+    const result2 = map.set(placement, timestamp + value.fail());
   },
   QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function handleClearExpiredQuestToDeliver(placement) {
     let fetchedAt;
     let responseTtlSeconds;
     placement = placement.placement;
+    let c4 = false;
     ({ responseTtlSeconds, fetchedAt } = placement);
-    let obj = apexExperiment;
-    if (obj.getConfig({ location: "handleClearExpiredQuestToDeliver" }).enableNewRequestBehavior) {
-      let c4 = false;
-      const _Map = Map;
-      map = new Map(map);
-      const result = map.set(placement, false);
-      obj = { questId: null, adCreativeId: null, fetchedAt: null, ttlMillis: null };
-      obj[2] = fetchedAt;
-      obj[3] = result.resolveResponseTtl(responseTtlSeconds);
-      const _Map2 = Map;
-      map1 = new Map(map1);
-      const result1 = map1.set(placement, obj);
-    } else {
-      return false;
-    }
+    map = new Map(map);
+    const result = map.set(placement, false);
+    const obj = { questId: null, adCreativeId: null, fetchedAt, ttlMillis: null };
+    obj[3] = result.resolveResponseTtl(responseTtlSeconds);
+    map1 = new Map(map1);
+    const result1 = map1.set(placement, obj);
   },
   QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN: function handleFetchEarnedQuestToDeliverBegin(content) {
     let c7 = true;
@@ -714,7 +690,7 @@ const questStore = new QuestStore(require("dispatcher"), {
           let tmp24 = map3;
           let tmp25 = tmp36;
           let tmp26 = tmp38;
-          let tmp37Result = tmp37(7198);
+          let tmp37Result = tmp37(7204);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }

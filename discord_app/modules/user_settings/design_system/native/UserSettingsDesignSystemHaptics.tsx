@@ -12,7 +12,7 @@ let c4;
 const require = arg1;
 function HapticButton(text) {
   const type = text.type;
-  return callback(type(4754).Button, {
+  return callback(type(4755).Button, {
     variant: "secondary",
     onPress() {
       return type(outer1_1[5]).triggerHapticFeedback(type);

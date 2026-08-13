@@ -34,8 +34,8 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
   const reanimatedKeyboardAnimation = obj.useReanimatedKeyboardAnimation();
   height = reanimatedKeyboardAnimation.height;
   progress = reanimatedKeyboardAnimation.progress;
-  keyboardTypeSharedValue = animatedSheetIndex(4209).useKeyboardTypeSharedValue();
-  const obj2 = animatedSheetIndex(4209);
+  keyboardTypeSharedValue = animatedSheetIndex(4207).useKeyboardTypeSharedValue();
+  const obj2 = animatedSheetIndex(4207);
   class S {
     constructor() {
       tmp = animatedSheetIndex;
@@ -85,6 +85,6 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
     return items;
   }, items);
   obj = { style: memo, children: null };
-  obj[1] = height(animatedSheetIndex(4214).PortalHost, { name: str });
+  obj[1] = height(animatedSheetIndex(4212).PortalHost, { name: str });
   return height(flag(4083).View, obj);
 };

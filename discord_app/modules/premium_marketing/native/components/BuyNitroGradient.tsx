@@ -4,7 +4,7 @@ import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import importDefaultResult from "module_4083";
-import { LinearGradient } from "../../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
 
 let c4;
 let c5;
@@ -33,7 +33,7 @@ export default function BuyNitroGradient(selectedTier) {
     obj = { opacity: obj.withTiming(num, selectedTier(outer1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: selectedTier(4345).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4348).timingStandard };
+  obj = { withTiming: selectedTier(4343).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4346).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 14014615431537;
   fn.__initData = closure_8;

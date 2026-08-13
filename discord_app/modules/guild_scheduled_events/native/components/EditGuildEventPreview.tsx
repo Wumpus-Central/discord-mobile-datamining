@@ -30,7 +30,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4534)(stateFromStores);
+  const tmp6 = channel_id(4535)(stateFromStores);
   dependencyMap = tmp6;
   let obj1 = _getChannelFromEvent;
   locationFromEvent = obj1.getLocationFromEvent(event);
@@ -52,7 +52,7 @@ function PreviewBody(event) {
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(9078)(obj3);
+    obj2[0] = channel_id(9082)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;

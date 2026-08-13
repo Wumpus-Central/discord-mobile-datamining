@@ -96,11 +96,11 @@ function getCommandOptionComponents(option) {
           if (null != channel) {
             let obj = { style: null, children: null };
             obj[0] = styles.commandOptionMentionText;
-            const items1 = [closure_18, tmp6(4534).computeChannelName(channel, authStore, markAllUserIdListsStale)];
+            const items1 = [closure_18, tmp6(4535).computeChannelName(channel, authStore, markAllUserIdListsStale)];
             obj[1] = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = callback2(tmp6(1297).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4534);
+            const tmp6Result = tmp6(4535);
           }
           const str3 = iter.value;
         } else {
@@ -254,8 +254,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           const channel = store.getChannel(item10118.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_18 + tmp5(4534).computeChannelName(channel, authStore, markAllUserIdListsStale);
-            const tmp5Result = tmp5(4534);
+            sum = closure_18 + tmp5(4535).computeChannelName(channel, authStore, markAllUserIdListsStale);
+            const tmp5Result = tmp5(4535);
           }
           const str4 = item10118.value;
         } else if (tmp5(1954).ApplicationCommandOptionType.ROLE === type) {
@@ -695,7 +695,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(outer1_3[38]);
     }
   }, items1);
-  obj = { value: messageId(5767)(messageId(5787).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(5768)(messageId(5788).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -738,6 +738,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_21(channelId(5436).BottomSheet, obj);
-  return closure_21(channelId(5767).AnalyticsLocationProvider, obj);
+  obj[1] = closure_21(channelId(5437).BottomSheet, obj);
+  return closure_21(channelId(5768).AnalyticsLocationProvider, obj);
 };

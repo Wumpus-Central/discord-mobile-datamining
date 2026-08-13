@@ -55,15 +55,15 @@ export const TimestampBadge = function TimestampBadge(activity) {
         flag2 = false;
       }
       if (flag2) {
-        let GameControllerIcon = tmp2(12347).HourglassIcon;
-      } else if (tmp10(7239)(activity)) {
-        GameControllerIcon = tmp2(7731).AppsIcon;
+        let GameControllerIcon = tmp2(11666).HourglassIcon;
+      } else if (tmp10(7244)(activity)) {
+        GameControllerIcon = tmp2(7735).AppsIcon;
       } else if (activity.type === ActivityTypes.WATCHING) {
-        GameControllerIcon = tmp2(9689).TvIcon;
+        GameControllerIcon = tmp2(9693).TvIcon;
       } else if (activity.type === tmp6.LISTENING) {
-        GameControllerIcon = tmp2(9694).MusicIcon;
+        GameControllerIcon = tmp2(9698).MusicIcon;
       } else {
-        GameControllerIcon = tmp2(8807).GameControllerIcon;
+        GameControllerIcon = tmp2(8811).GameControllerIcon;
       }
       obj = { style: null, children: null };
       obj[0] = tmp.container;
@@ -95,10 +95,10 @@ export const PartyBadge = function PartyBadge(activity) {
         obj[0] = tmp.container;
         obj = { size: "xxs", color: null };
         obj[1] = Themes.colors.TEXT_MUTED;
-        const items = [callback(tmp9(4857).GroupIcon, obj), ];
+        const items = [callback(tmp9(4858).GroupIcon, obj), ];
         obj = { variant: "text-sm/medium", color: "text-muted", children: null };
         obj[2] = richGameStateBadgeText;
-        items[1] = callback(tmp9(4340).Text, obj);
+        items[1] = callback(tmp9(4338).Text, obj);
         obj[1] = items;
         tmp8 = callback2(View, obj);
       }
@@ -121,10 +121,10 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
     obj[0] = tmp.container;
     obj = { size: "xxs", color: null };
     obj[1] = Themes.colors.TEXT_MUTED;
-    const items = [callback(tmp2(11174).TopicsIcon, obj), ];
+    const items = [callback(tmp2(11089).TopicsIcon, obj), ];
     const obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj1[2] = episodeBadgeText;
-    items[1] = callback(tmp2(4340).Text, obj1);
+    items[1] = callback(tmp2(4338).Text, obj1);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }

@@ -278,8 +278,8 @@ prototype["getThreadSettings"] = function getThreadSettings(channelId) {
     return tmp7;
   }
 };
-prototype["getScheduledMessage"] = function getScheduledMessage(arg0) {
-  const id = store.getId();
+prototype["getScheduledMessage"] = function getScheduledMessage(id) {
+  id = store.getId();
   if (null != id) {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
@@ -288,7 +288,7 @@ prototype["getScheduledMessage"] = function getScheduledMessage(arg0) {
       tmp3 = obj;
     }
     let tmp7;
-    if (tmp3[arg0] != null) {
+    if (tmp3[id] != null) {
       tmp7 = tmp6[obj.ScheduledMessage];
     }
     return tmp7;

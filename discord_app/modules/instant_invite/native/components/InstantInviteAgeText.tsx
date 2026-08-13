@@ -42,9 +42,9 @@ export default function InstantInviteAgeText(style) {
     }
     obj = { variant: null, children: null };
     obj[0] = str2;
-    const items2 = [tmp2(9112).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [tmp2(9116).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj[1] = items2;
-    const items3 = [closure_4(tmp2(4340).Text, obj), ];
+    const items3 = [closure_4(tmp2(4338).Text, obj), ];
     if (canEditInvite) {
       obj1 = { onPress: null, accessibilityRole: "link", accessibilityLabel: null, hitSlop: null, children: null };
       obj1[0] = function onPress() {
@@ -63,13 +63,13 @@ export default function InstantInviteAgeText(style) {
       obj2[0] = str;
       const intl2 = tmp2(1236).intl;
       obj2[2] = intl2.string(tmp2(1236).t["VNe8P/"]);
-      obj1[4] = closure_5(tmp2(4340).Text, obj2);
-      canEditInvite = tmp9(tmp2(4886).PressableOpacity, obj1);
+      obj1[4] = closure_5(tmp2(4338).Text, obj2);
+      canEditInvite = tmp9(tmp2(4887).PressableOpacity, obj1);
     }
     items3[1] = canEditInvite;
     obj[1] = items3;
     tmp7Result = tmp7(View, obj);
-    const tmp2Result = tmp2(9112);
+    const tmp2Result = tmp2(9116);
     const tmp8 = View;
   }
   return tmp7Result;

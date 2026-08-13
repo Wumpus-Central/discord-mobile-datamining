@@ -34,7 +34,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   let dependencyMap;
   ({ children, isLast } = arg0);
   const ref = React.useRef(null);
-  let obj = first(6063);
+  let obj = first(6065);
   const tmp3 = callback(obj.useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
@@ -55,7 +55,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     return obj;
   }, items);
   const tmp = createCacheKey();
-  const coachmark = first(8698).useCoachmark(ref, memo);
+  const coachmark = first(8702).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   callback = React.useCallback(() => {

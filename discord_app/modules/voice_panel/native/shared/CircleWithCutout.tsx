@@ -2,7 +2,7 @@
 import { PixelRatio } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
-import { inlineStyles } from "../../../../../_runtime/07876_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07880_inlineStyles.js";
 import { CircleWithCutout } from "CircleWithCutoutUtils.tsx";
 
 let c3;

@@ -43,14 +43,14 @@ const memoResult = importAllResult.memo(() => {
     }
     return tmp6;
   };
-  obj = { reducedMotion: stateFromStores, ROW_OPACITY_END: c8, withDelay: stateFromStores(4083).withDelay, INITIAL_DELAY_MS: 1000, withRepeat: stateFromStores(4083).withRepeat, withSequence: stateFromStores(4083).withSequence, withTiming: stateFromStores(4345).withTiming, timingConfig };
+  obj = { reducedMotion: stateFromStores, ROW_OPACITY_END: c8, withDelay: stateFromStores(4083).withDelay, INITIAL_DELAY_MS: 1000, withRepeat: stateFromStores(4083).withRepeat, withSequence: stateFromStores(4083).withSequence, withTiming: stateFromStores(4343).withTiming, timingConfig };
   fn.__closure = obj;
   fn.__workletHash = 9488742940898;
   fn.__initData = closure_9;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   obj = { style: animatedStyle, pointerEvents: "none", children: null };
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
-  obj[2] = jsx(stateFromStores(5415).Card, { variant: "secondary", style: callback2().postPlaceholder });
+  obj[2] = jsx(stateFromStores(5416).Card, { variant: "secondary", style: callback2().postPlaceholder });
   return jsx(timingConfig(4083).View, { style: animatedStyle, pointerEvents: "none", children: null });
 });
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");

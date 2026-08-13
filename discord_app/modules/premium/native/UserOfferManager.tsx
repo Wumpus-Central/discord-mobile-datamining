@@ -17,7 +17,7 @@ let prototype = function UserOfferManager() {
     currentUser = currentUser.getCurrentUser();
     const NitroACOMSubscriptionExperiment = applyArgumentsResult(table[4]).NitroACOMSubscriptionExperiment;
     if (NitroACOMSubscriptionExperiment.getConfig({ location: "UserOfferManager.handlePostConnectionOpen" }).enabled) {
-      const obj = { offerId: "Array", paymentGatewayOverride: 0 };
+      const obj = { offerId: "Array", paymentGatewayOverride: "Array" };
       obj[1] = constants.APPLE_ADVANCED_COMMERCE;
       const tmp4 = obj;
     }

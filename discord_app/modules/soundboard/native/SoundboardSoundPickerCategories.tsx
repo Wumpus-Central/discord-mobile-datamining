@@ -6,8 +6,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "isSoundboardSectionNitroLocked";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/10007_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16226_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10005_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16237_registerAsset.js";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 import { SoundButtonOverlay } from "../SoundboardTypes.tsx";
@@ -41,21 +41,21 @@ function SoundCategoryItem(style) {
     let tmp13Result = callback(GuildIconSizes, obj);
     let tmp4 = null;
     let tmp5 = null;
-  } else if (tmp2(4796).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp2(4797).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp2(1236).intl;
     name = intl3.string(tmp2(1236).t.y3LQCG);
     tmp4 = registerAsset;
     tmp5 = null;
     tmp13Result = null;
-  } else if (tmp2(4796).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp2(4797).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl2 = tmp2(1236).intl;
     name = intl2.string(tmp2(1236).t["+cGVV6"]);
     obj = { style: null };
     obj[0] = tmp.keyboardItem;
-    tmp5 = callback(tmp2(4308).ClockIcon, obj);
+    tmp5 = callback(tmp2(4306).ClockIcon, obj);
     tmp4 = null;
     tmp13Result = null;
-  } else if (tmp2(4796).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp2(4797).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl = tmp2(1236).intl;
     name = intl.string(tmp2(1236).t.Rtvk9X);
     tmp4 = registerAsset;
@@ -66,7 +66,7 @@ function SoundCategoryItem(style) {
     tmp5 = null;
     tmp13Result = null;
     name = null;
-    if (tmp2(4796).SoundboardSoundGridSectionType.SEARCH === type) {
+    if (tmp2(4797).SoundboardSoundGridSectionType.SEARCH === type) {
       const intl4 = tmp2(1236).intl;
       name = intl4.string(tmp2(1236).t.sKt3xS);
       tmp4 = registerAsset;
@@ -99,7 +99,7 @@ function SoundCategoryItem(style) {
     obj3[0] = tmp.lockContainer;
     const obj4 = { style: null };
     obj4[0] = tmp.lock;
-    obj3[1] = tmp13(tmp2(4863).LockIcon, obj4);
+    obj3[1] = tmp13(tmp2(4864).LockIcon, obj4);
     locked = tmp13(tmp15, obj3);
   }
   items1[1] = locked;

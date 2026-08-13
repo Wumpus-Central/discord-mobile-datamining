@@ -2,7 +2,7 @@
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
-import { keysSorter } from "../../../_runtime/05212_keysSorter.js";
+import { keysSorter } from "../../../_runtime/05213_keysSorter.js";
 import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 let c5;
@@ -19,10 +19,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(8947).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(8951).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(8947).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(8951).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };

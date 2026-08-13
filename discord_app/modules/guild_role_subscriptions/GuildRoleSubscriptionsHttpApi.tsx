@@ -57,7 +57,7 @@ function _updateGuildRoleSubscriptionGroupListing() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -148,7 +148,7 @@ function _createGuildRoleSubscriptionGroupListing() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -238,7 +238,7 @@ function _deleteGuildRoleSubscriptionGroupListing() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -349,7 +349,7 @@ function _createGuildRoleSubscriptionListing() {
           } else if (2 === tmp8) {
             c6 = 0;
             closure_4 = closure_5;
-            const aPIError = new callback(4243).APIError(closure_4);
+            const aPIError = new callback(4241).APIError(closure_4);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -465,7 +465,7 @@ function _updateGuildRoleSubscriptionListing() {
           } else if (2 === tmp8) {
             c7 = 0;
             closure_5 = closure_6;
-            const aPIError = new callback(4243).APIError(closure_5);
+            const aPIError = new callback(4241).APIError(closure_5);
             throw aPIError;
           } else if (arg0 === 1) {
             c9 = 3;
@@ -698,7 +698,7 @@ function _updateGuildRoleSubscriptionsSettings() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -904,7 +904,7 @@ function _getGuildRoleSubscriptionGroupListing() {
           } else if (2 === tmp8) {
             c6 = 0;
             closure_3 = closure_5;
-            const aPIError = new callback(4243).APIError(closure_3);
+            const aPIError = new callback(4241).APIError(closure_3);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1086,7 +1086,7 @@ function _deleteGuildRoleSubscriptionListing() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1175,7 +1175,7 @@ function _archiveGuildRoleSubscriptionListing() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1356,7 +1356,7 @@ function _updateGuildRoleSubscriptionsTrial() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1447,7 +1447,7 @@ function _getGuildRoleSubscriptionTrialEligibility() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4243).APIError(callback);
+            const aPIError = new callback(4241).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;

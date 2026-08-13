@@ -12,13 +12,13 @@ export const getSearchEmptySource = function getSearchEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(8762);
+      return callback(8766);
     },
     darker() {
-      return callback(8763);
+      return callback(8767);
     },
     light() {
-      return callback(8764);
+      return callback(8768);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useSearchEmptySource = function useSearchEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(8762);
+      return callback(8766);
     },
     darker() {
-      return callback(8763);
+      return callback(8767);
     },
     light() {
-      return callback(8764);
+      return callback(8768);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const SearchEmpty = function SearchEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(8762);
+      return callback(8766);
     },
     darker() {
-      return callback(8763);
+      return callback(8767);
     },
     light() {
-      return callback(8764);
+      return callback(8768);
     }
   };
   obj = {};

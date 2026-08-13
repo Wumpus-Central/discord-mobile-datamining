@@ -15,16 +15,16 @@ let unpackModuleId;
 const require = arg1;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(4543).match(showHint.usernameStatus);
-  let obj = { type: showHint(14071).NameValidationState.ERROR, message: null };
-  const P = showHint(4543).P;
+  const match = showHint(4544).match(showHint.usernameStatus);
+  let obj = { type: showHint(14080).NameValidationState.ERROR, message: null };
+  const P = showHint(4544).P;
   obj[1] = P.select();
-  const str = showHint(4543);
-  obj = { type: showHint(14071).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(4543).P;
+  const str = showHint(4544);
+  obj = { type: showHint(14080).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(4544).P;
   obj[1] = P2.select();
-  const withResult = match.with(obj, (children) => callback(showHint(4340).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => callback(showHint(4340).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj, (children) => callback(showHint(4340).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => callback(showHint(4338).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => callback(showHint(4338).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj, (children) => callback(showHint(4338).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };

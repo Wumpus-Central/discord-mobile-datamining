@@ -91,7 +91,7 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(outer1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(10065)(obj);
+          lastAssetIndex(10063)(obj);
         }
       }
     }

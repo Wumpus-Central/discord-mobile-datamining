@@ -2,7 +2,7 @@
 import dispatcher from "dispatcher";
 import { DraftType } from "handleChanged";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { registerAsset } from "../../../../_runtime/08657_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08661_registerAsset.js";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
@@ -75,13 +75,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7182).parse(lib2, lib2);
+              constants = lib2(7188).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8401);
+                let obj2 = lib2(8405);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8386).Future();
-              let obj3 = lib2(6959);
+              future = new lib(8390).Future();
+              let obj3 = lib2(6965);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
               obj2[2] = c4;

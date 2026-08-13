@@ -49,7 +49,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   if (powerup.type === constants.LEVEL) {
     obj = { style: null };
     obj[0] = tmp.gemContainer;
-    let tmp15 = callback(tmp2(11942), obj);
+    let tmp15 = callback(tmp2(11944), obj);
     let tmp14 = callback;
   } else if (tmp10 === closure_7) {
     obj = { style: null, children: null };
@@ -66,7 +66,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
     obj3[0] = str;
     obj3[1] = tmp.image;
     tmp14 = callback;
-    tmp15 = callback(tmp2(11944), obj3);
+    tmp15 = callback(tmp2(11946), obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp15, ];
@@ -113,13 +113,13 @@ function GuildPowerupsBottomSheetBody(powerup) {
       obj[0] = tmp.cooldownInfo;
       const obj1 = { size: "xs", color: null };
       obj1[1] = Themes.colors.TEXT_MUTED;
-      const items1 = [tmp7(tmp8(4300).CircleInformationIcon, obj1), ];
+      const items1 = [tmp7(tmp8(4298).CircleInformationIcon, obj1), ];
       const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = tmp8(1236).intl;
       const obj3 = { cooldownDays: null };
       obj3[0] = powerup.deactivationCooldownPeriodDays;
       obj2[2] = intl.formatToPlainString(messagesProxy.GMhQcE, obj3);
-      items1[1] = tmp7(tmp8(4340).Text, obj2);
+      items1[1] = tmp7(tmp8(4338).Text, obj2);
       obj[1] = items1;
       tmp5Result = tmp5(View, obj);
     }
@@ -151,10 +151,10 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   const tmp4 = useHasAllocateBoostPermission(guildId);
   ({ showToggleButton, showConfigureButton, isPowerupActive } = useGuildPowerupCardFooterConfig(guildId, powerup));
   if (showConfigureButton) {
-    let result = powerup.skuId !== isPowerupActive(4235).GUILD_POWERUP_TAG_SKU_ID;
+    let result = powerup.skuId !== isPowerupActive(4233).GUILD_POWERUP_TAG_SKU_ID;
     if (!result) {
-      result = tmp6(9069).canUseMobileServerTagSettings(guildId);
-      const tmp6Result = tmp6(9069);
+      result = tmp6(9073).canUseMobileServerTagSettings(guildId);
+      const tmp6Result = tmp6(9073);
     }
     showConfigureButton = result;
     tmp6 = isPowerupActive;
@@ -163,7 +163,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   ({ disabled, reason } = useCanGuildPowerupBeToggled(guildId, powerup, isPowerupActive));
   const tmp8 = useCanGuildPowerupBeToggled(guildId, powerup, isPowerupActive);
   ({ onActivate: c1, isLoading } = useGuildPowerupOnActivate(guildId, powerup));
-  dependencyMap = tmp2(11958)(guildId, powerup);
+  dependencyMap = tmp2(11960)(guildId, powerup);
   if (tmp4) {
     let tmp14 = !showConfigureButton;
     const hasItem = set.has(powerup.skuId);
@@ -186,7 +186,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       obj[0] = tmp.description;
       const intl = isPowerupActive(1236).intl;
       obj[2] = intl.string(tmp2(2335)["jo5++h"]);
-      tmp14 = callback(isPowerupActive(4340).Text, obj);
+      tmp14 = callback(isPowerupActive(4338).Text, obj);
     }
     const items = [tmp14, , , ];
     let tmp21 = disabled;
@@ -196,7 +196,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     if (tmp21) {
       const obj1 = { text: null };
       obj1[0] = reason;
-      tmp21 = callback(tmp2(11964), obj1);
+      tmp21 = callback(tmp2(11966), obj1);
     }
     items[1] = tmp21;
     if (showConfigureButton) {
@@ -204,7 +204,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       const intl2 = isPowerupActive(1236).intl;
       obj2[1] = intl2.string(tmp2(2335).g5Ds69);
       obj2[2] = tmp10;
-      showConfigureButton = callback(isPowerupActive(4754).Button, obj2);
+      showConfigureButton = callback(isPowerupActive(4755).Button, obj2);
     }
     items[2] = showConfigureButton;
     if (showToggleButton) {
@@ -242,7 +242,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
           tmp();
         }
       };
-      callback(isPowerupActive(4754).Button, obj3);
+      callback(isPowerupActive(4755).Button, obj3);
       const tmp27 = callback;
       const tmp28 = isPowerupActive;
     }

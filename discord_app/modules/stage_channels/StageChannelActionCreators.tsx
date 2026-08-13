@@ -33,17 +33,17 @@ function audienceAckRequestToSpeak(channel, suppress) {
   let obj1 = useAudienceRequestToSpeakState;
   const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
-    let objResult = obj(5180);
+    let objResult = obj(5181);
     if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
       return Promise.resolve();
     }
   }
   if (!tmp7) {
-    objResult = obj(4538);
+    objResult = obj(4539);
     obj = {};
-    const merged = Object.assign(obj(7821).getStageChannelMetadata(channel));
+    const merged = Object.assign(obj(7825).getStageChannelMetadata(channel));
     objResult.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj);
-    const objResult1 = obj(7821);
+    const objResult1 = obj(7825);
   }
   const HTTP = obj(530).HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
@@ -103,10 +103,10 @@ function _startStage() {
               let closure_1;
               if ("" !== closure_1) {
                 if (outer1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(7814);
+                  let obj2 = callback(7818);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(7827);
+                const obj4 = callback(7831);
                 c6 = 1;
                 c7 = 1;
                 const obj1 = { value: null, done: false };

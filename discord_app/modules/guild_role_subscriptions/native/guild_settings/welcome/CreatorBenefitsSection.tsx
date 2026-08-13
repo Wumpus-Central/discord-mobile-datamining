@@ -4,12 +4,12 @@ import { View } from "registerAsset";
 import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/16856_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16859_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16860_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16861_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16862_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/16863_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16867_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16870_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16871_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16872_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16873_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16874_registerAsset.js";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
@@ -64,9 +64,9 @@ function ConsistentEarningBenefit() {
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
   const tmp3 = useTheme();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(16857);
+    let tmpResult = tmp(16868);
   } else {
-    tmpResult = tmp(16858);
+    tmpResult = tmp(16869);
   }
   const items2 = [callback(BenefitAvatar, { avatarSource: tmpResult }), , ];
   obj4 = AccessibilityAnnouncer;

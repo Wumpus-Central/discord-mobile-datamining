@@ -10,7 +10,7 @@ let result = require("MediaViewerDimensionsProvider").fileFinishedImporting("mod
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
   sharedValue = sharedValue(4083).useSharedValue(0);
   let obj = sharedValue(4083);
-  const mediaViewerDimensions = sharedValue(8910).useMediaViewerDimensions();
+  const mediaViewerDimensions = sharedValue(8914).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = React.useEffect(() => {

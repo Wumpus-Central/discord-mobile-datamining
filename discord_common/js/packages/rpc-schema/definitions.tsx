@@ -1,13 +1,13 @@
 // discord_common/js/packages/rpc-schema/definitions.tsx
 import { set } from "../../shared/shared-constants/OAuth2Scopes.tsx";
 import { RPCCommands } from "helpers.tsx";
-let obj = { request: "Array", response: 0 };
+let obj = { request: "Array", response: "Array" };
 obj[1] = function response(string) {
   const obj = { image_url: null };
   obj[0] = string.string().required();
   return obj;
 };
-obj = { response: "Array", request: 0 };
+obj = { response: "Array", request: "Array" };
 obj[1] = function request(string) {
   const obj = { mediaUrl: null };
   const stringResult = string.string();
@@ -64,7 +64,7 @@ obj = {
     return obj;
   }
 };
-let obj1 = { request: "Array", response: 0 };
+let obj1 = { request: "Array", response: "Array" };
 obj1[1] = function response(array) {
   let obj = { participants: null };
   const arrayResult = array.array();
@@ -76,7 +76,7 @@ obj1[1] = function response(array) {
   obj[0] = arrayResult.items(keys.required()).required();
   return obj;
 };
-let obj4 = { request: "Array", response: 0 };
+let obj4 = { request: "Array", response: "Array" };
 obj4[1] = function response(array) {
   let arrayResult = array.array();
   let obj = { type: null, user: null, presence: null };
@@ -191,7 +191,7 @@ obj4[1] = function response(array) {
   obj1[0] = requiredResult.items(array.object(obj));
   return obj1;
 };
-const obj9 = { request: "Array", response: 0 };
+const obj9 = { request: "Array", response: "Array" };
 obj9[1] = function response(string) {
   const obj = { quest_id: null, enrolled_at: null, completed_at: null, external_cta_url: null };
   obj[0] = string.string().required();
@@ -205,7 +205,7 @@ obj9[1] = function response(string) {
   obj[3] = string.string().required();
   return obj;
 };
-const obj10 = { request: "Array", response: 0 };
+const obj10 = { request: "Array", response: "Array" };
 obj10[1] = function response(string) {
   const obj = { ticket: null };
   obj[0] = string.string().required();
@@ -353,7 +353,7 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().min(0).max(1024);
       return obj;
     },
-    response: "a"
+    response: "Array"
   },
   [RPCCommands.RPCCommand.GET_USER]: {
     request(string) {

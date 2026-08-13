@@ -139,13 +139,13 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
       const tmp = require;
       let result = getDecisionOutcomeFromMessage.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(7009).isAutomodNotification(messageRecord);
+        let flag = tmp(7015).isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(7009);
+        const tmpResult = tmp(7015);
       }
       return result;
     }

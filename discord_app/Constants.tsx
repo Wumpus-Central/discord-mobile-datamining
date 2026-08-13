@@ -1942,8 +1942,8 @@ obj = {
     return "/users/@me/relationships/" + id + "/ignore";
   },
   SCHEDULED_MESSAGES: "/users/@me/scheduled-messages",
-  SCHEDULED_MESSAGE(arg0) {
-    return "/users/@me/scheduled-messages/" + arg0;
+  SCHEDULED_MESSAGE(c0) {
+    return "/users/@me/scheduled-messages/" + c0;
   },
   HOLIDAY_REDEEM_PRIZE: "/holidays/redeem-prize",
   APPLIED_BOOST_MODIFY_END_DATE: "/debug/applied-boosts/ends-at",

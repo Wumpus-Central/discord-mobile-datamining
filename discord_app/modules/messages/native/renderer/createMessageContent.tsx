@@ -55,7 +55,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(5985);
+            let tmp15Result = tmp15(5987);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
               obj[0] = channelName;
@@ -80,8 +80,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1236).intl;
                 obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(8096);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8097));
+                tmp15Result = tmp15(8100);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8101));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {

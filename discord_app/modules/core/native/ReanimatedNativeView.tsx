@@ -1,12 +1,4 @@
 // discord_app/modules/core/native/ReanimatedNativeView.tsx
-import isFabric from "isFabric";
+const result = require("set").fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");
 
-if (isFabric.isFabric()) {
-  let importDefaultResult = require("View");
-} else {
-  importDefaultResult = require("module_4083").createAnimatedComponent(require("set"));
-  const importDefaultResult1 = require("module_4083");
-}
-const result = require("module_4083").fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");
-
-export default importDefaultResult;
+export { default } from "REAWorkaroundView";

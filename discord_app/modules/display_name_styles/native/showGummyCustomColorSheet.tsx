@@ -5,6 +5,6 @@ const DisplayNameStylesGummyCustomColorSheet = "DisplayNameStylesGummyCustomColo
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/display_name_styles/native/showGummyCustomColorSheet.tsx");
 
 export default function showGummyCustomColorSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14648, dependencyMap.paths), DisplayNameStylesGummyCustomColorSheet, arg0, "stack");
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14657, dependencyMap.paths), DisplayNameStylesGummyCustomColorSheet, arg0, "stack");
 };
 export const DISPLAY_NAME_STYLES_GUMMY_CUSTOM_COLOR_SHEET_KEY = "DisplayNameStylesGummyCustomColorSheet";

@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileGradientContainer.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
-import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
 import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
 
 const require = arg1;

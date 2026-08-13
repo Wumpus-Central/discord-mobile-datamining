@@ -77,14 +77,14 @@ export default function NUFChannelIllustration() {
   let items = [sharedValue1, first];
   const effect1 = sharedValue1.useEffect(() => {
     if (first.length >= 2) {
-      const result = sharedValue1.set(sharedValue1(4345).withTiming(1, { duration: 250 }));
-      const obj = sharedValue1(4345);
+      const result = sharedValue1.set(sharedValue1(4343).withTiming(1, { duration: 250 }));
+      const obj = sharedValue1(4343);
     }
   }, items);
   let items1 = [sharedValue, first];
   const effect2 = sharedValue1.useEffect(() => {
     const result = sharedValue.set(0);
-    const result1 = sharedValue.set(tmp(4345).withTiming(1, { duration: 200 }));
+    const result1 = sharedValue.set(tmp(4343).withTiming(1, { duration: 200 }));
   }, items1);
   let obj2 = ReanimatedRexport;
   const fn = function b() {
@@ -136,7 +136,7 @@ export default function NUFChannelIllustration() {
     obj = { source: children.avatar, style: tmp.messageAvatar };
     const items = [outer1_7(outer1_6, obj), ];
     obj = { style: tmp.messageContent, children: null };
-    const items1 = [outer1_7(tmp(4340).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), outer1_7(tmp(4340).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
+    const items1 = [outer1_7(tmp(4338).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), outer1_7(tmp(4338).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
     obj[1] = items1;
     items[1] = outer1_8(outer1_5, obj);
     obj[1] = items;

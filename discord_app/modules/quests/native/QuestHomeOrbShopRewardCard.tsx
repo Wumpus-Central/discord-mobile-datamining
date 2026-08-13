@@ -5,7 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getProductName } from "../../collectibles/utils/getProductName.tsx";
+import { getCardProductName } from "../../collectibles/utils/getProductName.tsx";
 
 let closure_6;
 let error;
@@ -30,7 +30,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj = { product: closure_0, hasShopDiscount: stateFromStores };
     return obj.getProductOrbPrice(obj);
   }, items1);
-  getProductName;
+  getCardProductName;
   let tmp7 = null;
   if (null != memo) {
     obj = { style: null, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };
@@ -38,10 +38,10 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj[3] = tmp6;
     obj = { product: null, isPurchased: false, solidBackground: true };
     obj[0] = product;
-    const items2 = [callback(stateFromStores(9461), obj), ];
+    const items2 = [callback(stateFromStores(9465), obj), ];
     const obj1 = { product: null, collectibleProductState: null, hidePrice: true };
     obj1[0] = product;
-    items2[1] = callback(stateFromStores(9464), obj1);
+    items2[1] = callback(stateFromStores(9468), obj1);
     obj[4] = items2;
     tmp7 = callback2(View, obj);
   }

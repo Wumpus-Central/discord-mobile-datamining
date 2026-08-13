@@ -21,7 +21,7 @@ class LikelyAtoWarningBanner {
     senderId = global.senderId;
     handleLearnMore = undefined;
     c4 = undefined;
-    f85219 = undefined;
+    f85027 = undefined;
     handleLearnMore = function handleLearnMore() {
       let obj = channelId(senderId[8]);
       obj = { channelId, warningId, senderId, warningType: callback.LIKELY_ATO, cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_LEARN_MORE };
@@ -53,7 +53,7 @@ class LikelyAtoWarningBanner {
     items2[1] = senderId;
     items2[2] = warningId;
     items2[3] = callback;
-    f85219 = handleLearnMore.useCallback((cta) => {
+    f85027 = handleLearnMore.useCallback((cta) => {
       let obj = channelId(senderId[11]);
       obj = { channelId, guildId: null, muteDurationSeconds: outer1_9.ALWAYS };
       const result = obj.handleMuteSettingPress(obj);
@@ -82,9 +82,9 @@ class LikelyAtoWarningBanner {
       obj[6] = callback().map((children) => {
         let obj = { children: null };
         obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title };
-        const items = [callback3(callback(4340).Text, obj, arg1), ];
+        const items = [callback3(callback(4338).Text, obj, arg1), ];
         obj = { variant: "text-xs/medium", color: "text-subtle", children: children.description };
-        items[1] = callback3(callback(4340).Text, obj, arg1);
+        items[1] = callback3(callback(4338).Text, obj, arg1);
         obj[0] = items;
         return callback4(closure_11, obj);
       });

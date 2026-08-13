@@ -21,8 +21,8 @@ export default function useChannelFollowerStats(arg0) {
     if (null == stateFromStores) {
       if (!first) {
         dependencyMap(true);
-        const channelFollowerStats = first(10268).fetchChannelFollowerStats(closure_0);
-        const obj = first(10268);
+        const channelFollowerStats = first(10264).fetchChannelFollowerStats(closure_0);
+        const obj = first(10264);
       }
     } else {
       const _Date = Date;

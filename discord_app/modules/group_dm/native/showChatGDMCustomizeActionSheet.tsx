@@ -7,5 +7,5 @@ const result = require("ChatGDMCustomizeActionSheet").fileFinishedImporting("mod
 export default function showChatGDMCustomizeActionSheet(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ModalActionCreators.pushLazy(asyncRequireImpl(9719, dependencyMap.paths), closure_0, "customize-group-dm", { presentation: "modal" });
+  ModalActionCreators.pushLazy(asyncRequireImpl(9723, dependencyMap.paths), closure_0, "customize-group-dm", { presentation: "modal" });
 };

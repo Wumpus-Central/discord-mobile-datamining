@@ -55,14 +55,14 @@ function _startContactSyncForDiscoverability() {
                 phone = currentUser.phone;
               }
               const localAccount = outer1_8.getLocalAccount(outer1_11.CONTACTS);
-              callback(12095);
+              callback(12097);
               if (null == phone) {
                 const _Error = Error;
                 const error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
                 outer1_6(tmp31);
-                let obj4 = outer1_1(12099);
+                let obj4 = outer1_1(12101);
                 let obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
                 obj1[1] = tmp31;
@@ -83,7 +83,7 @@ function _startContactSyncForDiscoverability() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(12095);
+              obj1 = callback(12097);
               dependencyMap = 2;
               c3 = 1;
               obj4 = { value: null, done: false };
@@ -160,8 +160,8 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
-        const result = callback(12161).setNewUserFlowCompleted();
-        const obj2 = callback(12161);
+        const result = callback(12163).setNewUserFlowCompleted();
+        const obj2 = callback(12163);
       } else {
         callback2(709).dispatch({ type: "ONBOARDING_STEP" });
         const obj = callback2(709);

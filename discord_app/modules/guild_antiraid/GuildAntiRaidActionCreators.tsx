@@ -191,7 +191,7 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(9822)(guild);
+                tmp8 = callback2(9826)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -282,7 +282,7 @@ function _handleReportRaid() {
               const guild = outer1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(9822)(guild);
+                tmp8 = v0(9826)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {

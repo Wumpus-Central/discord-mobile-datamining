@@ -163,7 +163,7 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       if (tmp2Result.isUserEntitledToLibraryApplication(obj2)) {
         return obj2;
       }
-      tmp2Result = tmp2(4389);
+      tmp2Result = tmp2(4390);
     }
     tmp2 = require;
   }

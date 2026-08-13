@@ -285,10 +285,10 @@ function getGuildMemberAvatarURLSimple(size) {
   const obj3 = handleImageLoad;
   return combined + "?" + parse.stringify(obj);
 }
-function getGuildBannerURL(fromInviteGuildResult, flag) {
+function getGuildBannerURL(guild, flag) {
   let banner;
   let id;
-  ({ id, banner } = fromInviteGuildResult);
+  ({ id, banner } = guild);
   if (flag === undefined) {
     flag = false;
   }
@@ -1196,12 +1196,12 @@ export default {
     }
     return tmp2;
   },
-  getGuildBannerSource(fromInviteGuildResult, hasItem) {
+  getGuildBannerSource(guild, hasItem) {
     let flag = hasItem;
     if (hasItem === undefined) {
       flag = false;
     }
-    const tmp = getGuildBannerURL(fromInviteGuildResult, flag);
+    const tmp = getGuildBannerURL(guild, flag);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
       const obj = { uri: null };

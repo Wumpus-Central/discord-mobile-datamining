@@ -68,7 +68,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            let obj1 = outer1_0(14824);
+            let obj1 = outer1_0(14833);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -101,7 +101,7 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(14824);
+    let obj = callback(14833);
     obj.clearCaches();
     const intl = callback(1236).intl;
     const stringResult = intl.string(callback(1236).t["23xR5w"]);
@@ -114,7 +114,7 @@ function CacheActionsActionSheet() {
     };
     callback2(4062).open(obj);
     const obj2 = callback2(4062);
-    callback2(4312).hideActionSheet(closure_7);
+    callback2(4310).hideActionSheet(closure_7);
   };
   items[1] = callback2(ActionSheetRowIcon.ActionSheetRow, obj2);
   obj[1] = items;

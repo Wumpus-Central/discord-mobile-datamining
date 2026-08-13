@@ -10,7 +10,7 @@ import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10013_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10011_registerAsset.js";
 import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";

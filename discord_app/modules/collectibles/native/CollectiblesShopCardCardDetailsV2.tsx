@@ -5,7 +5,7 @@ import updateProduct from "updateProduct";
 import ME from "ME";
 import jsxProd from "CollectiblesItemType";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
@@ -13,7 +13,7 @@ import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
-import { getProductName } from "../utils/getProductName.tsx";
+import { getCardProductName } from "../utils/getProductName.tsx";
 
 let c9;
 let closure_6;
@@ -243,12 +243,12 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   let obj1 = useCanPurchaseFrames;
   let isProfileFramesEarlyAccessPhase = obj1.useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardCardDetailsV2");
   if (isProfileFramesEarlyAccessPhase) {
-    let tmp2Result = tmp2(7054);
+    let tmp2Result = tmp2(7060);
     const productType = tmp2Result.getProductType(product);
     isProfileFramesEarlyAccessPhase = productType === tmp2(1949).CollectiblesItemType.PROFILE_FRAME;
   }
   let obj3 = getPremiumPlanItem;
-  tmp2Result = tmp2(7055);
+  tmp2Result = tmp2(7061);
   const shopDiscountSource = tmp2Result.getShopDiscountSource(currentUser);
   const tmp8 = obj3.canUseShopDiscounts(currentUser) || isProfileFramesEarlyAccessPhase;
   const token = map.useToken(tmp7(712).colors.BACKGROUND_BASE_LOW);
@@ -259,15 +259,15 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   const tmp2Result4 = hexToRgba;
   const tmp2Result5 = hexToRgba;
   const hexToRgbaStringResult1 = tmp2Result4.hexToRgbaString(hexToRgba.hexWithOpacity(token, 0));
-  const productName = getProductName.getProductName(product);
-  const tmp2Result6 = getProductName;
+  const cardProductName = getCardProductName.getCardProductName(product);
+  const tmp2Result6 = getCardProductName;
   const items = [updateProduct];
   const stateFromStores = initialize.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
   obj = { style: items1, colors: items2, locations: [0, 0.4, 1], start: constants.START, end: constants.END, children: null };
   items1 = [tmp.regularMetadataContainer];
   items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
   const tmp2Result7 = initialize;
-  obj = { style: tmp.assetName, variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: productName };
+  obj = { style: tmp.assetName, variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: cardProductName };
   const items3 = [callback(Text.Text, obj), ];
   let tmp15Result = !hidePrice;
   if (!hidePrice) {
@@ -285,7 +285,7 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
     const items4 = [tmp17(closure_11, obj2), ];
     obj3 = { product: null };
     obj3[0] = product;
-    items4[1] = tmp17(tmp7(9476), obj3);
+    items4[1] = tmp17(tmp7(9480), obj3);
     obj1[1] = items4;
     tmp15Result = tmp15(View, obj1);
   }

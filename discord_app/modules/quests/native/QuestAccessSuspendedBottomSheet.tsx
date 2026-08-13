@@ -12,11 +12,11 @@ const result = require("AccountSettingsTabs").fileFinishedImporting("modules/que
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {
-    let obj = callback2(4312);
-    obj.hideActionSheet(callback(14425).ACTION_SHEET_KEY);
+    let obj = callback2(4310);
+    obj.hideActionSheet(callback(14434).ACTION_SHEET_KEY);
     obj = { screen: constants.ACCOUNT, params: obj };
     obj = { initialTab: constants2.STANDING };
-    callback(6057).openUserSettings(obj);
+    callback(6059).openUserSettings(obj);
   }, []);
   let obj = { title: null, description: null, actions: null };
   const intl = getSystemLocale.intl;

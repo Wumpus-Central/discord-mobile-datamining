@@ -428,19 +428,26 @@ function _setMomentLocale() {
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let closure_0 = arg0;
   const importDefault = arg1;
-  let obj = { isLoading: false, inProgressLocale: "Boolean", error: "accessibilityRole", localeData: 139455987900731700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, setLoadingStarted: "nurturing", setLoadingSucceeded: "plant", setLoadingFailed: "pot", setLocaleData: "potted" };
-  obj[3] = code;
-  obj[4] = function setLoadingStarted(closure_0) {
-    return callback({ isLoading: true, inProgressLocale: closure_0 });
+  let obj = {
+    isLoading: false,
+    inProgressLocale: "Boolean",
+    error: "call",
+    localeData: code,
+    setLoadingStarted(closure_0) {
+      return callback({ isLoading: true, inProgressLocale: closure_0 });
+    },
+    setLoadingSucceeded: 36478017,
+    setLoadingFailed: 381047040,
+    setLocaleData: 20759109
   };
   obj[5] = function setLoadingSucceeded(closure_0) {
     if (callback2().inProgressLocale === closure_0) {
-      callback({ isLoading: false, inProgressLocale: "Boolean", error: "accessibilityRole" });
+      callback({ isLoading: false, inProgressLocale: "Boolean", error: "call" });
     }
   };
   obj[6] = function setLoadingFailed(arg0, closure_0) {
     if (callback2().inProgressLocale === closure_0) {
-      const obj = { isLoading: false, inProgressLocale: "Array", error: 100 };
+      const obj = { isLoading: false, inProgressLocale: "Array", error: 0 };
       obj[2] = arg0;
       callback(obj);
     }

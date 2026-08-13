@@ -15,9 +15,9 @@ createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [checkForNewerBuild];
     if (obj.useStateFromStores(items, () => null !== checkForNewerBuild.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4294).DownloadIcon;
+      let RefreshIcon = tmp(4292).DownloadIcon;
     } else {
-      RefreshIcon = tmp(13913).RefreshIcon;
+      RefreshIcon = tmp(13917).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -54,8 +54,8 @@ createToggle = {
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
-      importAll(13320).openBuildInstaller(newBuild);
-      const obj2 = importAll(13320);
+      importAll(13321).openBuildInstaller(newBuild);
+      const obj2 = importAll(13321);
     } else {
       checkForNewerBuild.checkForNewerBuild();
     }

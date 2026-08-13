@@ -742,7 +742,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj6[0] = initialize.props.current.channel;
           obj6[1] = outer1_29;
           obj6[2] = function onDismissKeyboard() {
-            return callback(4207).dismissKeyboard();
+            return callback(4205).dismissKeyboard();
           };
           obj6[3] = function onRestoreKeyboard() {
             return getState.handleToggleKeyboard({ type: outer1_0(outer1_3[49]).KeyboardTypes.SYSTEM });
@@ -761,7 +761,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj7[0] = initialize.props.current.channel;
           obj7[1] = outer1_33.CAMERA_BUTTON;
           obj7[2] = function onDismissKeyboard() {
-            return callback(4207).dismissKeyboard();
+            return callback(4205).dismissKeyboard();
           };
           obj7[3] = function onRestoreKeyboard() {
             return getState.handleToggleKeyboard({ type: outer1_0(outer1_3[49]).KeyboardTypes.SYSTEM });

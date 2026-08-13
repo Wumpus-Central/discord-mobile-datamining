@@ -27,8 +27,8 @@ function _fetchDefaultSoundsFromApi2() {
       callback2 = dependencyMap;
       let obj3 = callback2(709);
       obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
-      const obj4 = callback(5995);
-      const tmp28 = new callback2(4244)(callback2);
+      const obj4 = callback(5997);
+      const tmp28 = new callback2(4242)(callback2);
       const result = obj4.captureOrIgnoreApiError(tmp28);
       let c5 = 3;
     } else if (arg0 === 1) {
@@ -83,7 +83,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(5996);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(5998);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -244,7 +244,7 @@ function _uploadSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(4796);
+            obj = callback(4797);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -357,7 +357,7 @@ function _updateSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(4796);
+            obj = callback(4797);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -505,7 +505,7 @@ function _fetchSoundGuildData() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = handleSoundCreateOrUpdate;
-            const tmp25 = new callback(4244)(callback);
+            const tmp25 = new callback(4242)(callback);
             throw tmp25;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -520,7 +520,7 @@ function _fetchSoundGuildData() {
             lib = arg1;
             let discoverableGuild = null;
             if (null != lib.body) {
-              obj = lib(5997);
+              obj = lib(5999);
               discoverableGuild = obj.makeDiscoverableGuild(lib.body);
             }
             c5 = 0;

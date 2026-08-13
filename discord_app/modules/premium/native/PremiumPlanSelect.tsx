@@ -15,7 +15,7 @@ import items from "items";
 import { ItemPurchaseType } from "CustomCheckoutFlow";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
 import { registerAsset } from "../../../../_runtime/12879_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12880_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12881_registerAsset.js";
@@ -487,7 +487,7 @@ function PlanSection(showBoostOnlyLabels) {
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = showBoostOnlyLabels.label;
     obj[2] = mapped;
-    let tmp7Result = tmp7(shouldShowModernBoostFlow(5806).TableRowGroup, obj);
+    let tmp7Result = tmp7(shouldShowModernBoostFlow(5807).TableRowGroup, obj);
   } else {
     obj = { children: null };
     obj[0] = mapped;
@@ -508,18 +508,18 @@ function CurrentPlanRow(subscription) {
   const tmp = callback5();
   if (subscription.showCurrentPlan) {
     if (null != subscription) {
-      productIdFromSubscription = subscription(6912).getProductIdFromSubscription(subscription, true);
-      let obj4 = subscription(6912);
+      productIdFromSubscription = subscription(6918).getProductIdFromSubscription(subscription, true);
+      let obj4 = subscription(6918);
       const tmp13 = subscription;
-      const premiumBundledItemsFromProductId = subscription(6912).getPremiumBundledItemsFromProductId(productIdFromSubscription);
+      const premiumBundledItemsFromProductId = subscription(6918).getPremiumBundledItemsFromProductId(productIdFromSubscription);
       const premiumTier = premiumBundledItemsFromProductId.premiumTier;
       if (null != premiumTier) {
         let PREMIUM_GUILD = callback2(premiumTier);
       } else {
-        PREMIUM_GUILD = constants5.PREMIUM_GUILD;
+        PREMIUM_GUILD = constants6.PREMIUM_GUILD;
       }
-      const obj5 = subscription(6912);
-      toggledIntervalProduct = tmp13(6912).getToggledIntervalProduct(productIdFromSubscription);
+      const obj5 = subscription(6918);
+      toggledIntervalProduct = tmp13(6918).getToggledIntervalProduct(productIdFromSubscription);
       let obj = { style: null, colors: null, start: null, end: null, children: null };
       obj[0] = tmp.currentPlanGradient;
       obj[1] = PREMIUM_GUILD;
@@ -529,9 +529,9 @@ function CurrentPlanRow(subscription) {
       obj[1] = subscription;
       obj[2] = analyticsLoadId;
       let tmp11 = null == toggledIntervalProduct;
-      const tmp13Result = tmp13(6912);
+      const tmp13Result = tmp13(6918);
       if (tmp11) {
-        tmp11 = subscription.status !== constants4.CANCELED;
+        tmp11 = subscription.status !== constants5.CANCELED;
       }
       obj[3] = tmp11;
       obj[5] = function purchase() {
@@ -561,8 +561,8 @@ function CurrentPlanRow(subscription) {
                     let obj = {};
                     const merged = Object.assign(arg0);
                     obj.productId = outer1_1;
-                    obj.continueWithUpsell = outer3_3(/* F120515 */ function() { ... });
-                    obj.continueWithDefault = outer3_3(/* F120516 */ function() { ... });
+                    obj.continueWithUpsell = outer3_3(/* F120573 */ function() { ... });
+                    obj.continueWithDefault = outer3_3(/* F120574 */ function() { ... });
                     return outer3_32(closure_0, obj);
                   };
                 });
@@ -632,24 +632,35 @@ function PlanSections(showCurrentPlan) {
     shouldRemoveYearlyUpsell = subscription(analyticsLoadId[53]).getShouldRemoveYearlyUpsell("PremiumPlanSelect");
     let obj2 = subscription(analyticsLoadId[53]);
   }
+  if (!shouldRemoveYearlyUpsell) {
+    let hasActiveTrial;
+    if (subscription != null) {
+      hasActiveTrial = subscription.hasActiveTrial;
+    }
+    let tmp9 = true === hasActiveTrial;
+    if (tmp9) {
+      tmp9 = subscription.paymentGateway === constants4.APPLE_ADVANCED_COMMERCE;
+    }
+    shouldRemoveYearlyUpsell = tmp9;
+  }
   if (boostContainer) {
     boostContainer = subscription(analyticsLoadId[53]).getMobileBoostingEnabled("PremiumPlanSelect");
     let obj3 = subscription(analyticsLoadId[53]);
   }
-  let tmp10 = null != subscription;
-  if (tmp10) {
-    tmp10 = subscription(analyticsLoadId[23]).getPremiumTypeFromSubscription(subscription) === closure_20.TIER_2;
+  let tmp13 = null != subscription;
+  if (tmp13) {
+    tmp13 = subscription(analyticsLoadId[23]).getPremiumTypeFromSubscription(subscription) === closure_20.TIER_2;
     const obj4 = subscription(analyticsLoadId[23]);
   }
-  let tmp14 = boostContainer;
+  let tmp17 = boostContainer;
   if (boostContainer) {
-    tmp14 = tmp10;
+    tmp17 = tmp13;
   }
-  c10 = tmp14;
+  c10 = tmp17;
   recommendedBoostCount = null;
   if (boostContainer) {
     recommendedBoostCount = null;
-    if (!tmp10) {
+    if (!tmp13) {
       recommendedBoostCount = subscription(analyticsLoadId[53]).getRecommendedBoostCount("PremiumPlanSelect");
       const obj5 = subscription(analyticsLoadId[53]);
     }
@@ -740,9 +751,9 @@ function PlanSections(showCurrentPlan) {
   });
   const found = mapped.filter((plansInSection) => plansInSection.plansInSection.length > 0);
   let found1 = found;
-  if (tmp14) {
+  if (tmp17) {
     found1 = found;
-    if (tmp18) {
+    if (tmp21) {
       found1 = found.filter((section) => "premium-guild" !== section.section.id);
     }
   }
@@ -752,11 +763,11 @@ function PlanSections(showCurrentPlan) {
   }
   obj = { style: items, children: null };
   items[1] = boostContainer;
-  if (tmp14) {
-    tmp14 = callback3(BoostPurchaseNitroBanner, {});
+  if (tmp17) {
+    tmp17 = callback3(BoostPurchaseNitroBanner, {});
   }
   const items1 = [
-    tmp14,
+    tmp17,
     callback3(CurrentPlanRow, { subscription, analyticsLoadId, purchase, trackPaymentFlowStep, trackNewPaymentFlow, showCurrentPlan: showCurrentPlan.showCurrentPlan, shouldRemoveYearlyUpsell }),
     found1.map((plans) => {
       const section = plans.section;
@@ -1235,13 +1246,13 @@ let result = require("noop").fileFinishedImporting("modules/premium/native/Premi
 
 export default function PremiumPlanSelectWithOrderCTX(isBoostPurchaseFlow) {
   const _require = isBoostPurchaseFlow;
-  let obj = _require(stateFromStores1[65]);
+  let obj = _require(stateFromStores[65]);
   const navigation = obj.useNavigation();
-  let obj1 = _require(stateFromStores1[32]);
-  const items = [reset];
-  const stateFromStores = obj1.useStateFromStores(items, () => reset.getPremiumTypeSubscription());
-  const NitroACOMSubscriptionExperiment = _require(stateFromStores1[74]).NitroACOMSubscriptionExperiment;
-  let obj2 = _require(stateFromStores1[45]);
+  let obj1 = _require(stateFromStores[32]);
+  let items = [reset];
+  stateFromStores = obj1.useStateFromStores(items, () => reset.getPremiumTypeSubscription());
+  const NitroACOMSubscriptionExperiment = _require(stateFromStores[74]).NitroACOMSubscriptionExperiment;
+  let obj2 = _require(stateFromStores[45]);
   if (obj2.isIOS()) {
     if (NitroACOMSubscriptionExperiment.useConfig({ location: "PremiumPlanSelectWithOrderCTX" }).enabled) {
       let APPLE = tmp7.APPLE_ADVANCED_COMMERCE;
@@ -1255,23 +1266,45 @@ export default function PremiumPlanSelectWithOrderCTX(isBoostPurchaseFlow) {
     if (null != stateFromStores) {
       paymentGateway = stateFromStores.paymentGateway;
     }
-    obj = { subscriptionPlanId: null, skuId: null, quantity: 1 };
-    obj[0] = PREMIUM_YEAR_TIER_2.PREMIUM_YEAR_TIER_2;
-    let tmp2Result = tmp2(tmp3[23]);
-    obj[1] = tmp2Result.castPremiumSubscriptionAsSkuId(TIER_2.TIER_2);
-    const items1 = [obj];
-    tmp2Result = tmp2(tmp3[32]);
+    let obj3 = mobileBoostingEnabled;
+    let items1 = [stateFromStores];
+    const memo = mobileBoostingEnabled.useMemo(() => {
+      let baseSubscriptionItemForSubscriptionItems = null;
+      if (null != stateFromStores) {
+        let obj = isBoostPurchaseFlow(stateFromStores[75]);
+        baseSubscriptionItemForSubscriptionItems = obj.getBaseSubscriptionItemForSubscriptionItems(tmp.items);
+      }
+      if (null != baseSubscriptionItemForSubscriptionItems) {
+        obj = { subscriptionPlanId: null, skuId: null, quantity: null };
+        obj[0] = baseSubscriptionItemForSubscriptionItems.planId;
+        const obj5 = isBoostPurchaseFlow(stateFromStores[23]);
+        obj[1] = obj5.castPremiumSubscriptionAsSkuId(navigation(stateFromStores[23]).getSkuIdForPlan(baseSubscriptionItemForSubscriptionItems.planId));
+        obj[2] = baseSubscriptionItemForSubscriptionItems.quantity;
+        const items = [obj];
+        let items1 = items;
+        const obj6 = navigation(stateFromStores[23]);
+      } else {
+        obj = { subscriptionPlanId: null, skuId: null, quantity: 1 };
+        obj[0] = outer1_22.PREMIUM_YEAR_TIER_2;
+        obj[1] = isBoostPurchaseFlow(stateFromStores[23]).castPremiumSubscriptionAsSkuId(outer1_19.TIER_2);
+        items1 = [obj];
+        const obj3 = isBoostPurchaseFlow(stateFromStores[23]);
+      }
+      return items1;
+    }, items1);
+    let tmp2Result = tmp2(tmp3[32]);
     const items2 = [reset];
-    stateFromStores1 = tmp2Result.useStateFromStores(items2, () => reset.hasFetchedSubscriptions());
+    const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => reset.hasFetchedSubscriptions());
     const items3 = [stateFromStores1];
-    const effect = importAllResult.useEffect(() => {
+    const effect = mobileBoostingEnabled.useEffect(() => {
       if (!stateFromStores1) {
-        const subscriptions = isBoostPurchaseFlow(stateFromStores1[70]).fetchSubscriptions();
-        const obj = isBoostPurchaseFlow(stateFromStores1[70]);
+        const subscriptions = isBoostPurchaseFlow(stateFromStores[70]).fetchSubscriptions();
+        const obj = isBoostPurchaseFlow(stateFromStores[70]);
       }
     }, items3);
+    tmp2Result = tmp2(tmp3[32]);
     const items4 = [closure_10];
-    const stateFromStores2 = tmp2(tmp3[32]).useStateFromStores(items4, () => {
+    const stateFromStores2 = tmp2Result.useStateFromStores(items4, () => {
       let tmp2;
       if (null != isBoostPurchaseFlow.guildId) {
         const guild = outer1_10.getGuild(tmp.guildId);
@@ -1283,26 +1316,26 @@ export default function PremiumPlanSelectWithOrderCTX(isBoostPurchaseFlow) {
       }
       return tmp2;
     });
-    let mobileBoostingEnabled = true === isBoostPurchaseFlow.isBoostPurchaseFlow;
+    mobileBoostingEnabled = true === isBoostPurchaseFlow.isBoostPurchaseFlow;
     if (mobileBoostingEnabled) {
       mobileBoostingEnabled = tmp2(tmp3[53]).getMobileBoostingEnabled("PremiumPlanSelect");
-      const tmp2Result2 = tmp2(tmp3[53]);
+      const tmp2Result1 = tmp2(tmp3[53]);
     }
     const items5 = [navigation, mobileBoostingEnabled, stateFromStores2];
-    const layoutEffect = importAllResult.useLayoutEffect(() => {
+    const layoutEffect = obj3.useLayoutEffect(() => {
       if (mobileBoostingEnabled) {
         if (null != stateFromStores2) {
-          const intl2 = isBoostPurchaseFlow(stateFromStores1[22]).intl;
+          const intl2 = isBoostPurchaseFlow(stateFromStores[22]).intl;
           let obj = { server: null };
           obj[0] = tmp3;
-          let formatToPlainStringResult = intl2.formatToPlainString(isBoostPurchaseFlow(stateFromStores1[22]).t.LcefAL, obj);
+          let formatToPlainStringResult = intl2.formatToPlainString(isBoostPurchaseFlow(stateFromStores[22]).t.LcefAL, obj);
         }
         obj = { title: null };
         obj[0] = formatToPlainStringResult;
         tmp2(obj);
       }
-      const intl = isBoostPurchaseFlow(stateFromStores1[22]).intl;
-      formatToPlainStringResult = intl.string(isBoostPurchaseFlow(stateFromStores1[22]).t.u95Dt4);
+      const intl = isBoostPurchaseFlow(stateFromStores[22]).intl;
+      formatToPlainStringResult = intl.string(isBoostPurchaseFlow(stateFromStores[22]).t.u95Dt4);
     }, items5);
     if (stateFromStores1) {
       if (null != paymentGateway) {
@@ -1310,7 +1343,7 @@ export default function PremiumPlanSelectWithOrderCTX(isBoostPurchaseFlow) {
         obj[0] = paymentGateway;
         obj[1] = paymentGateway === tmp7.APPLE_ADVANCED_COMMERCE;
         obj[2] = [];
-        obj[3] = items1;
+        obj[3] = memo;
         obj[5] = stateFromStores;
         obj[6] = function onOrderRetryCancellation() {
           let arr = navigation;
@@ -1320,30 +1353,28 @@ export default function PremiumPlanSelectWithOrderCTX(isBoostPurchaseFlow) {
             arr = arr.pop();
           }
         };
-        obj1 = {};
+        obj = {};
         const merged = Object.assign(isBoostPurchaseFlow);
-        obj[7] = callback3(closure_46, obj1);
-        return callback3(navigation(tmp3[75]), obj);
+        obj[7] = callback3(closure_46, obj);
+        return callback3(navigation(tmp3[76]), obj);
       }
       let str2 = "Android";
-      if (tmp2Result3.isIOS()) {
+      if (tmp2Result2.isIOS()) {
         str2 = "iOS";
       }
-      obj2 = { children: null };
-      const obj3 = { variant: "display-md", children: null };
+      obj1 = { children: null };
+      obj2 = { variant: "display-md", children: null };
       let intl = tmp2(tmp3[22]).intl;
-      const obj4 = { mobilePlatform: null };
-      obj4[0] = str2;
-      obj3[1] = intl.format(tmp2(tmp3[22]).t.CnoyAN, obj4);
-      obj2[0] = callback3(tmp2(tmp3[21]).Text, obj3);
-      return callback3(closure_7, obj2);
+      obj3 = { mobilePlatform: null };
+      obj3[0] = str2;
+      obj2[1] = intl.format(tmp2(tmp3[22]).t.CnoyAN, obj3);
+      obj1[0] = callback3(tmp2(tmp3[21]).Text, obj2);
+      return callback3(closure_7, obj1);
     } else {
-      const obj5 = { style: null, children: null };
-      obj5[0] = tmp.loadingSpinnerContainer;
-      obj5[1] = callback3(tmp2(tmp3[42]).ActivityIndicator, { animating: true, size: "large" });
-      return callback3(closure_7, obj5);
+      const obj4 = { style: null, children: null };
+      obj4[0] = tmp.loadingSpinnerContainer;
+      obj4[1] = callback3(tmp2(tmp3[42]).ActivityIndicator, { animating: true, size: "large" });
+      return callback3(closure_7, obj4);
     }
-    const obj7 = importAllResult;
-    const tmp2Result1 = tmp2(tmp3[32]);
   }
 };

@@ -2,7 +2,7 @@
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { set } from "../../../core/native/ReanimatedNativeView.tsx";
 
 const require = arg1;
 const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVariant, ref) => {
@@ -21,8 +21,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVari
   obj.variant = str;
   obj.maxFontSizeMultiplier = 2;
   obj[3] = jsx(IconButton.IconButton, {});
-  return jsx(ReanimatedNativeView, {});
+  return jsx(set, {});
 }));
-const result = require("module_8050").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
 
 export default memoResult;

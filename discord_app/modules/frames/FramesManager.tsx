@@ -18,13 +18,13 @@ class FramesManager extends tmp3 {
             applyArgumentsResult.handleRPCDisconnect(arg0);
           },
       FRAME_LAUNCH(applicationId) {
-            const result = applyArgumentsResult(10662).trackFrameSessionStart(applicationId.applicationId);
+            const result = applyArgumentsResult(10576).trackFrameSessionStart(applicationId.applicationId);
           },
       FRAME_LAUNCH_FAIL(applicationId) {
-            const result = applyArgumentsResult(10669).discardPendingFrameLaunch(applicationId.applicationId);
+            const result = applyArgumentsResult(10583).discardPendingFrameLaunch(applicationId.applicationId);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(10662).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(10576).trackFrameSessionEnd(applicationId.applicationId);
           }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {

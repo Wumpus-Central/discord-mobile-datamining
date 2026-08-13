@@ -19,7 +19,7 @@ const require = arg1;
 function SourceIcon(toastText) {
   toastText = toastText.toastText;
   let obj = {
-    style: createCacheKey().sourceIcon,
+    style: callback2().sourceIcon,
     onPress() {
       let obj = outer1_1(outer1_2[5]);
       obj = { key: "WISHLIST_SOURCE_ICON", content: toastText };
@@ -32,31 +32,42 @@ function SourceIcon(toastText) {
   };
   obj = { color: null, size: "md" };
   obj[0] = Themes.colors.INTERACTIVE_ICON_DEFAULT;
-  obj[5] = callback(toastText(8812).HeartIcon, obj);
+  obj[5] = callback(toastText(8816).HeartIcon, obj);
   return callback(closure_3, obj);
 }
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
-createCacheKey = { borderWidth: 1, borderRadius: require("Themes").radii.lg, borderColor: require("Themes").colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-let obj1 = {};
+let obj = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8 };
+obj = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
+obj = { borderWidth: 1, borderRadius: require("Themes").radii.lg, borderColor: require("Themes").colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj[0] = obj;
+createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj1.justifyContent = "center";
-obj1.alignItems = "center";
-obj1.zIndex = 2;
-obj1.shadowOpacity = 0.5;
-obj1.shadowRadius = 6;
-obj1.elevation = 6;
-createCacheKey[1] = obj1;
-createCacheKey[2] = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center" };
-createCacheKey[3] = { opacity: 0.5 };
-createCacheKey[4] = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, zIndex: 1 };
-let obj2 = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, zIndex: 1 };
-createCacheKey[5] = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, zIndex: 2, width: 32, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey.justifyContent = "center";
+createCacheKey.alignItems = "center";
+createCacheKey.zIndex = 2;
+createCacheKey.shadowOpacity = 0.5;
+createCacheKey.shadowRadius = 6;
+createCacheKey.elevation = 6;
+obj[1] = createCacheKey;
+obj[2] = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center" };
+obj[3] = { opacity: 0.5 };
+let obj2 = {};
+const merged1 = Object.assign(obj);
+obj2.zIndex = 1;
+obj[4] = obj2;
+let obj3 = {};
+const merged2 = Object.assign(obj);
+obj3.zIndex = 2;
+obj3.width = 32;
+obj3.height = 32;
+obj3.borderRadius = require("Themes").radii.round;
+obj3.backgroundColor = require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+obj3.alignItems = "center";
+obj3.justifyContent = "center";
+obj[5] = obj3;
+let closure_8 = createCacheKey.createStyles(obj);
 let obj4 = { OWNED: "owned", LOCKED: "locked" };
-let obj3 = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, zIndex: 2, width: 32, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
 const result = require("jsxProd").fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
 
 export default function WishlistItemCardBase(username) {
@@ -76,7 +87,7 @@ export default function WishlistItemCardBase(username) {
     size = 170;
   }
   ({ overlay, accessibilityHidden } = username);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
@@ -108,7 +119,7 @@ export default function WishlistItemCardBase(username) {
       stringResult = intl2.string(tmp2(1236).t.wu4gyV);
     }
   }
-  let tmp14Result1 = source === tmp2(9402).WishlistItemSource.WISHLIST;
+  let tmp14Result1 = source === tmp2(9406).WishlistItemSource.WISHLIST;
   items1[1] = stringResult;
   let tmp10 = null;
   if (tmp14Result1) {
@@ -132,7 +143,7 @@ export default function WishlistItemCardBase(username) {
     const obj3 = { color: null, size: "custom", style: null };
     obj3[0] = tmp5(712).colors.WHITE;
     obj3[2] = { width: 40, height: 40 };
-    obj2[4] = tmp14(tmp2(9275).CheckmarkLargeBoldIcon, obj3);
+    obj2[4] = tmp14(tmp2(9279).CheckmarkLargeBoldIcon, obj3);
     tmp14Result = tmp14(tmp15, obj2);
   }
   items3[1] = tmp14Result;
@@ -143,7 +154,7 @@ export default function WishlistItemCardBase(username) {
     const obj5 = { color: null, size: "custom", style: null };
     obj5[0] = tmp5(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
     obj5[2] = { width: 18, height: 18 };
-    obj4[4] = tmp14(tmp2(4863).LockIcon, obj5);
+    obj4[4] = tmp14(tmp2(4864).LockIcon, obj5);
     tmp14Result = tmp14(tmp15, obj4);
   }
   items3[2] = tmp14Result;
@@ -189,4 +200,5 @@ export default function WishlistItemCardBase(username) {
   const tmp13 = closure_6;
 };
 export const DEFAULT_ITEM_SIZE = 170;
+export const CARD_TOP_RIGHT_OVERLAY_POSITION = obj;
 export const WishlistItemCardOverlay = obj4;

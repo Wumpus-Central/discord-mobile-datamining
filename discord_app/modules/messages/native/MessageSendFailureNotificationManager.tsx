@@ -9,7 +9,7 @@ import "initialize";
 import { dispatcher } from "../../../actions/native/InAppNotificationActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
-import { extractMetadataFromNotification } from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
+import { isReactionMilestoneNotification } from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
 
 let error;
 let metroImportAll;
@@ -34,8 +34,8 @@ function handleMessageSendFailure(shouldNotify) {
       const result = obj.presentLocalNotification(obj);
     } else if (channelId !== channelId.getChannelId(guildId.getGuildId())) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
-      const notificationDuration = extractMetadataFromNotification.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
-      const obj4 = extractMetadataFromNotification;
+      const notificationDuration = isReactionMilestoneNotification.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
+      const obj4 = isReactionMilestoneNotification;
       const obj1 = { type: null, channelId: null, messageId: null, key: null, duration: null, onDismiss: null, inAppNotificationId: null };
       obj1[0] = MESSAGE_FAILED_TO_SEND;
       obj1[1] = channelId;
@@ -46,9 +46,9 @@ function handleMessageSendFailure(shouldNotify) {
         callback(table[7]).clearNotification();
       };
       const obj5 = dispatcher;
-      obj1[6] = extractMetadataFromNotification.generateInAppNotificationId();
+      obj1[6] = isReactionMilestoneNotification.generateInAppNotificationId();
       obj5.enqueueNotification(obj1);
-      const obj7 = extractMetadataFromNotification;
+      const obj7 = isReactionMilestoneNotification;
     }
   }
 }

@@ -29,7 +29,7 @@ import ME from "ME";
 import { StaticChannelId } from "set";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import { apply } from "../../_runtime/00012_apply.js";
-import { fuzzysearch } from "../../_runtime/05268_fuzzysearch.js";
+import { fuzzysearch } from "../../_runtime/05269_fuzzysearch.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { sortByMatchScore } from "../modules/autocompleter/sortByMatchScore.tsx";
 import { compareChannelsByScoreAndPosition } from "../modules/channel_text_area/compareChannelsByScoreAndPosition.tsx";
@@ -240,21 +240,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5268)(toLocaleLowerCaseResult, str4) || tmp12(5268)(normalizeResult, str5);
+                                let tmp28 = tmp12(5269)(toLocaleLowerCaseResult, str4) || tmp12(5269)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5268)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5269)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5268)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5269)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5268)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5269)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5268)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5269)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -388,13 +388,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5025).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5026).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5025).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5026).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5025).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5025).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5026).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5026).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -930,10 +930,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4332).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4330).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4332);
-        const regExp1 = new RegExp(callback(4332).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4330);
+        const regExp1 = new RegExp(callback(4330).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -942,17 +942,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4332);
+        let obj2 = callback(4330);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4332).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4330).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4332).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4332);
-        let regExp1 = new RegExp(callback(4332).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4330).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4330);
+        let regExp1 = new RegExp(callback(4330).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4332).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4330).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -2112,11 +2112,11 @@ areArraysShallowlyEqual = {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(1903);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4332).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4330).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4332);
+        const obj3 = nextResult(4330);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4332).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4330).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = outer1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {

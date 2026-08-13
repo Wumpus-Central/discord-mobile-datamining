@@ -27,10 +27,10 @@ export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSo
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
   let obj = apexExperiment;
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_product_details_modal" })) {
-    const socialLayerStorefrontConfig = tmp(7798).fetchSocialLayerStorefrontConfig();
+    const socialLayerStorefrontConfig = tmp(7802).fetchSocialLayerStorefrontConfig();
     const obj5 = ModalActionCreators;
     obj5.pushLazy(tmp(2007)(10136, dependencyMap.paths), closure_0, c4, { presentation: "modal" });
-    const tmpResult = tmp(7798);
+    const tmpResult = tmp(7802);
   } else {
     obj = { title: null, body: null };
     const intl = tmp(1236).intl;

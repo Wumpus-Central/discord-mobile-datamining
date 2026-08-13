@@ -1,13 +1,15 @@
 // discord_app/modules/chat_input/native/ChatInputContextBar.tsx
-import importAllResult from "processColorStrings";
-import get_ActivityIndicator from "useDisplayNameStyles";
+import importAllResult from "DISPLAY_NAME_STYLES_FONT_FAMILY_MAP";
+import get_ActivityIndicator from "useCheckboxA11yNative";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import handleChanged from "handleChanged";
+import { DraftType } from "handleChanged";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08513_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08517_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
@@ -18,9 +20,9 @@ import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experime
 let c10;
 let c4;
 let c5;
-let c9;
 let closure_12;
-let metroImportAll;
+let closure_14;
+let map1;
 let unpackModuleId;
 const require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
@@ -38,7 +40,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj[3] = tmp3.floatingReplyTextWrapper;
     const intl3 = tmp(1236).intl;
     obj[4] = intl3.string(tmp(1236).t["5IEsGx"]);
-    const items = [callback(tmp(4340).Text, obj), ];
+    const items = [callback(tmp(4338).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.floatingRightActions;
     obj2 = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
@@ -51,11 +53,11 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj2[3] = tmp13;
     obj2[4] = onCancelReplying;
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = tmp4(8513);
+    obj3[0] = tmp4(8517);
     obj3[1] = tmp(1297).Icon.Sizes.CUSTOM;
     obj3[2] = tmp3.floatingCloseIcon;
     obj2[5] = callback(tmp(1297).Icon, obj3);
-    obj1[1] = callback(tmp(4886).PressableOpacity, obj2);
+    obj1[1] = callback(tmp(4887).PressableOpacity, obj2);
     items[1] = callback(closure_5, obj1);
     obj[1] = items;
     let tmp7Result = tmp7(tmp11, obj);
@@ -68,7 +70,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.contextCancelIconWrapper;
     const obj6 = { source: null, size: null };
-    obj6[0] = tmp4(8513);
+    obj6[0] = tmp4(8517);
     obj6[1] = tmp(1297).Icon.Sizes.SMALL_20;
     obj5[1] = callback(tmp(1297).Icon, obj6);
     const items1 = [callback(closure_5, obj5), ];
@@ -76,9 +78,9 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj7[3] = tmp3.contextButtonText;
     const intl2 = tmp(1236).intl;
     obj7[4] = intl2.string(tmp(1236).t["5IEsGx"]);
-    items1[1] = callback(tmp(4340).Text, obj7);
+    items1[1] = callback(tmp(4338).Text, obj7);
     obj4[5] = items1;
-    tmp7Result = tmp7(tmp(4886).PressableOpacity, obj4);
+    tmp7Result = tmp7(tmp(4887).PressableOpacity, obj4);
   }
   return tmp7Result;
 }
@@ -91,8 +93,8 @@ class ChatInputReplyBar {
     colorStrings = undefined;
     nick = undefined;
     guildId = undefined;
-    f84926 = undefined;
-    f84926 = undefined;
+    f88853 = undefined;
+    f88853 = undefined;
     id = undefined;
     author = undefined;
     tmp = pendingReply;
@@ -100,7 +102,7 @@ class ChatInputReplyBar {
     ({ onToggleReplyMention, chatInputFloatingOverride } = global);
     obj = require("useIsMobileVisualRefreshExperimentEnabled");
     tmp3 = obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating || chatInputFloatingOverride;
-    tmp4 = f48391();
+    tmp4 = f52527();
     tmpResult = require("map");
     tmp5 = c1;
     token = tmpResult.useToken(require("Themes").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
@@ -108,7 +110,7 @@ class ChatInputReplyBar {
     bound = require("noop");
     tmpResult2 = require("initialize");
     items = [];
-    items[0] = f84926;
+    items[0] = f88853;
     stateFromStores = tmpResult2.useStateFromStores(items, () => roleStyle.roleStyle);
     c1 = stateFromStores;
     tmpResult3 = require("useCheckboxA11yNative");
@@ -122,7 +124,7 @@ class ChatInputReplyBar {
     items1[0] = colorString;
     items1[1] = stateFromStores;
     ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-    f84926 = colorStrings.useMemo(() => {
+    f88853 = colorStrings.useMemo(() => {
       let tmp;
       if ("hidden" !== stateFromStores) {
         if (null != colorString) {
@@ -137,7 +139,7 @@ class ChatInputReplyBar {
     obj1 = { userId: pendingReply.message.author.id, guildId };
     tmp10 = require("useDisplayNameStyles")(obj1);
     tmpResult4 = require("DISPLAY_NAME_STYLES_FONT_FAMILY_MAP");
-    f84926 = tmpResult4.useDisplayNameStylesFont({ displayNameStyles: tmp10 });
+    f88853 = tmpResult4.useDisplayNameStylesFont({ displayNameStyles: tmp10 });
     tmpResult5 = require("processColorStrings");
     processColorStringsArray = tmpResult5.useProcessColorStringsArray(colorStrings);
     id = processColorStringsArray;
@@ -165,46 +167,44 @@ class ChatInputReplyBar {
             obj[0] = tmp;
             obj[1] = colorStrings;
             obj[2] = guildId;
-            const items = [outer1_10(pendingReply(colorString[6]).RoleDot, obj), ];
+            const items = [outer1_12(pendingReply(colorString[7]).RoleDot, obj), ];
             obj = { variant: null, style: null, children: null };
             obj[0] = "text-sm/semibold";
             let tmp19;
-            if (null != mergeGuildAvatar) {
-              let obj1 = { fontFamily: null };
+            if (null != handleChanged) {
+              const obj1 = { fontFamily: null };
               obj1[0] = tmp18;
               tmp19 = obj1;
             }
             const obj2 = { children: null };
             obj[1] = tmp19;
             obj[2] = nick;
-            items[1] = outer1_10(pendingReply(colorString[11]).Text, obj, arg1);
+            items[1] = outer1_12(pendingReply(colorString[12]).Text, obj, arg1);
             obj2[0] = items;
-            let tmp3Result = outer1_11(outer1_12, obj2);
-            const tmp15 = outer1_10;
-            const tmp8 = outer1_11;
-            const tmp9 = outer1_12;
+            let tmp3Result = outer1_13(outer1_14, obj2);
+            const tmp15 = outer1_12;
+            const tmp8 = outer1_13;
+            const tmp9 = outer1_14;
           }
           return tmp3Result;
         }
-        obj = { variant: "text-sm/semibold", experimental_useNativeText: null, style: null, gradientColors: null, children: null };
-        obj1 = pendingReply(colorString[20]);
-        obj[1] = !obj1.isFabric();
+        obj = { variant: "text-sm/semibold", style: null, gradientColors: null, children: null };
         const items1 = [maybeApplyNoTextColorForLightCustomTheme, ];
-        let tmp5 = null != mergeGuildAvatar;
+        let tmp5 = null != handleChanged;
         if (tmp5) {
           const obj3 = { fontFamily: null };
           obj3[0] = tmp4;
           tmp5 = obj3;
         }
         items1[1] = tmp5;
-        obj[2] = items1;
+        obj[1] = items1;
         let tmp6;
-        if (closure_9) {
+        if (mergeGuildAvatar) {
           tmp6 = processColorStringsArray;
         }
-        obj[3] = tmp6;
-        obj[4] = nick;
-        tmp3Result = outer1_10(pendingReply(colorString[11]).Text, obj, "" + arg1 + "-" + pendingReply.message.author.id);
+        obj[2] = tmp6;
+        obj[3] = nick;
+        tmp3Result = outer1_12(pendingReply(colorString[12]).Text, obj, "" + arg1 + "-" + pendingReply.message.author.id);
       };
       obj2[3] = intl4.format(require("getSystemLocale").t["8E4GxS"], obj3);
       tmp13Result = tmp13(require("Text").Text, obj2);
@@ -240,46 +240,44 @@ class ChatInputReplyBar {
             obj[0] = tmp;
             obj[1] = colorStrings;
             obj[2] = guildId;
-            const items = [outer1_10(pendingReply(colorString[6]).RoleDot, obj), ];
+            const items = [outer1_12(pendingReply(colorString[7]).RoleDot, obj), ];
             obj = { variant: null, style: null, children: null };
             obj[0] = "text-sm/semibold";
             let tmp19;
-            if (null != mergeGuildAvatar) {
-              let obj1 = { fontFamily: null };
+            if (null != handleChanged) {
+              const obj1 = { fontFamily: null };
               obj1[0] = tmp18;
               tmp19 = obj1;
             }
             const obj2 = { children: null };
             obj[1] = tmp19;
             obj[2] = nick;
-            items[1] = outer1_10(pendingReply(colorString[11]).Text, obj, arg1);
+            items[1] = outer1_12(pendingReply(colorString[12]).Text, obj, arg1);
             obj2[0] = items;
-            let tmp3Result = outer1_11(outer1_12, obj2);
-            const tmp15 = outer1_10;
-            const tmp8 = outer1_11;
-            const tmp9 = outer1_12;
+            let tmp3Result = outer1_13(outer1_14, obj2);
+            const tmp15 = outer1_12;
+            const tmp8 = outer1_13;
+            const tmp9 = outer1_14;
           }
           return tmp3Result;
         }
-        obj = { variant: "text-sm/semibold", experimental_useNativeText: null, style: null, gradientColors: null, children: null };
-        obj1 = pendingReply(colorString[20]);
-        obj[1] = !obj1.isFabric();
+        obj = { variant: "text-sm/semibold", style: null, gradientColors: null, children: null };
         const items1 = [maybeApplyNoTextColorForLightCustomTheme, ];
-        let tmp5 = null != mergeGuildAvatar;
+        let tmp5 = null != handleChanged;
         if (tmp5) {
           const obj3 = { fontFamily: null };
           obj3[0] = tmp4;
           tmp5 = obj3;
         }
         items1[1] = tmp5;
-        obj[2] = items1;
+        obj[1] = items1;
         let tmp6;
-        if (closure_9) {
+        if (mergeGuildAvatar) {
           tmp6 = processColorStringsArray;
         }
-        obj[3] = tmp6;
-        obj[4] = nick;
-        tmp3Result = outer1_10(pendingReply(colorString[11]).Text, obj, "" + arg1 + "-" + pendingReply.message.author.id);
+        obj[2] = tmp6;
+        obj[3] = nick;
+        tmp3Result = outer1_12(pendingReply(colorString[12]).Text, obj, "" + arg1 + "-" + pendingReply.message.author.id);
       };
       obj6[3] = intl3.format(require("getSystemLocale").t["8E4GxS"], obj7);
       obj4[6] = tmp14(require("Text").Text, obj6);
@@ -462,8 +460,8 @@ function ChatInputEditBar(onCancelEditing) {
     floatingCloseIcon = tmp3.floatingCloseIcon;
   }
   obj1[2] = floatingCloseIcon;
-  obj[6] = closure_10(Button.Icon, obj1);
-  tmp7Result = tmp7(tmp(4886).PressableOpacity, obj);
+  obj[6] = closure_12(Button.Icon, obj1);
+  tmp7Result = tmp7(tmp(4887).PressableOpacity, obj);
   obj2 = { style: tmp3.contextBarRow, children: null };
   const obj3 = { children: null };
   const items = [, ];
@@ -481,22 +479,93 @@ function ChatInputEditBar(onCancelEditing) {
     obj3[0] = items;
     tmp16 = obj3;
   }
-  obj2[1] = closure_11(closure_12, tmp16);
-  return closure_10(closure_5, obj2);
+  obj2[1] = closure_13(closure_14, tmp16);
+  return closure_12(closure_5, obj2);
+}
+function ChatInputScheduledMessageBar(scheduledTimestamp) {
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
+  const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
+  const tmp3 = callback3();
+  let obj1 = map;
+  const token = obj1.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  let obj2 = map;
+  const bound = Math.max(0, (token - obj2.useToken(Themes.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
+  let str = "text-sm/medium";
+  if (chatInputFloating) {
+    str = "text-sm/normal";
+  }
+  obj = { lineClamp: 1, variant: str, color: null, style: null, children: null };
+  let str2 = "text-default";
+  if (chatInputFloating) {
+    str2 = "text-strong";
+  }
+  obj[2] = str2;
+  obj[3] = chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText;
+  const intl = tmp(1236).intl;
+  obj = { timestamp: null };
+  obj[0] = new Date(scheduledTimestamp.scheduledTimestamp).valueOf();
+  obj[4] = intl.formatToPlainString(getSystemLocale.t.ZN3tIx, obj);
+  let tmp7Result = tmp7(Text.Text, obj);
+  obj1 = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
+  const intl2 = tmp(1236).intl;
+  obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
+  let tmp9;
+  if (chatInputFloating) {
+    if (bound > 0) {
+      tmp9 = bound;
+    }
+  }
+  obj1[3] = tmp9;
+  let prop;
+  if (!chatInputFloating) {
+    prop = tmp3.contextCancelIconWrapper;
+  }
+  obj1[4] = prop;
+  obj1[5] = scheduledTimestamp.onCancelScheduling;
+  obj2 = { source: null, size: null, style: null };
+  obj2[0] = registerAsset;
+  const Sizes = tmp(1297).Icon.Sizes;
+  obj2[1] = chatInputFloating ? Sizes.CUSTOM : Sizes.SMALL_20;
+  let floatingCloseIcon;
+  if (chatInputFloating) {
+    floatingCloseIcon = tmp3.floatingCloseIcon;
+  }
+  obj2[2] = floatingCloseIcon;
+  obj1[6] = closure_12(Button.Icon, obj2);
+  tmp7Result = tmp7(tmp(4887).PressableOpacity, obj1);
+  const obj3 = { style: tmp3.contextBarRow, children: null };
+  const obj4 = { children: null };
+  const items = [, ];
+  if (chatInputFloating) {
+    items[0] = tmp7Result;
+    const obj5 = { style: null, children: null };
+    obj5[0] = tmp3.floatingRightActions;
+    obj5[1] = tmp7Result;
+    items[1] = tmp7(tmp13, obj5);
+    obj4[0] = items;
+    let tmp16 = obj4;
+  } else {
+    items[0] = tmp7Result;
+    items[1] = tmp7Result;
+    obj4[0] = items;
+    tmp16 = obj4;
+  }
+  obj3[1] = closure_13(closure_14, tmp16);
+  return closure_12(closure_5, obj3);
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: metroImportAll, Routes: c9 } = ME);
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
+({ AnalyticEvents: c10, Routes: unpackModuleId } = ME);
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let obj = { duration: 250, easing: require("Button").STANDARD_EASING };
-let closure_14 = createCacheKey.createStyles((arg0) => {
+let closure_16 = createCacheKey.createStyles((arg0) => {
   let backgroundColor = arg0;
   if (arg0 == null) {
     backgroundColor = Themes.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND;
   }
   return { contextBar: { backgroundColor } };
 });
-let closure_15 = createCacheKey.createStyles(() => {
+let closure_17 = createCacheKey.createStyles(() => {
   let obj = { contextBarRow: null, floatingReplyTextWrapper: null, contextCancelIconWrapper: null, contextButtonText: null, floatingContextBar: null, replyMentionButton: null, replyMentionButtonActive: null, replyMentionIcon: null, replyMentionIconActive: null, floatingRightActions: null, floatingMentionGroup: null, floatingDivider: null, floatingCloseIcon: null };
   obj = { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: Themes.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: Themes.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: Themes.modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP };
   obj[0] = obj;
@@ -519,9 +588,9 @@ let closure_15 = createCacheKey.createStyles(() => {
   obj[12] = { width: Themes.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: Themes.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: Themes.colors.INTERACTIVE_ICON_DEFAULT };
   return obj;
 });
-let closure_19 = { code: "function ChatInputContextBarTsx1(){const{stylesBackgroundColor,chatInputFloating,heightSv}=this.__closure;return{backgroundColor:stylesBackgroundColor,...(chatInputFloating?{maxHeight:heightSv.get()}:{height:heightSv.get()})};}" };
-let closure_20 = { code: "function ChatInputContextBarTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
-let closure_21 = importAllResult.forwardRef((children, ref) => {
+let closure_22 = { code: "function ChatInputContextBarTsx1(){const{stylesBackgroundColor,chatInputFloating,heightSv}=this.__closure;return{backgroundColor:stylesBackgroundColor,...(chatInputFloating?{maxHeight:heightSv.get()}:{height:heightSv.get()})};}" };
+let closure_23 = { code: "function ChatInputContextBarTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
+let closure_24 = importAllResult.forwardRef((children, ref) => {
   let floatingContextBar;
   let backgroundColor;
   let num;
@@ -530,17 +599,17 @@ let closure_21 = importAllResult.forwardRef((children, ref) => {
   let closure_5;
   const gradientValue = floatingContextBar(num[22]).useGradientValue(floatingContextBar(num[22]).GradientPercentage.END);
   let obj = floatingContextBar(num[22]);
-  floatingContextBar = floatingContextBar(num[9]).useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
+  floatingContextBar = floatingContextBar(num[10]).useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
   backgroundColor = callback2(gradientValue).contextBar.backgroundColor;
   num = 40;
-  const obj2 = floatingContextBar(num[9]);
+  const obj2 = floatingContextBar(num[10]);
   if (floatingContextBar) {
     num = 60;
   }
   let tmpResult = tmp(tmp2[23]);
   sharedValue = tmpResult.useSharedValue(0);
   tmpResult = tmp(tmp2[23]);
-  let fn = function l() {
+  let fn = function o() {
     let obj = { backgroundColor };
     if (floatingContextBar) {
       obj = { maxHeight: null };
@@ -554,7 +623,7 @@ let closure_21 = importAllResult.forwardRef((children, ref) => {
   };
   fn.__closure = { stylesBackgroundColor: backgroundColor, chatInputFloating: floatingContextBar, heightSv: sharedValue };
   fn.__workletHash = 3976432455712;
-  fn.__initData = closure_19;
+  fn.__initData = closure_22;
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
   ref = sharedValue.useRef(null);
   const items = [ref];
@@ -566,10 +635,10 @@ let closure_21 = importAllResult.forwardRef((children, ref) => {
   }, items);
   const imperativeHandle = sharedValue.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = store.set(outer1_0(outer1_2[24]).withTiming(closure_2, outer1_13));
+      const result = store.set(outer1_0(outer1_2[24]).withTiming(closure_2, outer1_15));
     },
     componentDidEnter() {
-      const result = store.set(outer1_0(outer1_2[24]).withTiming(closure_2, outer1_13));
+      const result = store.set(outer1_0(outer1_2[24]).withTiming(closure_2, outer1_15));
     },
     componentWillLeave(current) {
       closure_4.current = current;
@@ -583,8 +652,8 @@ let closure_21 = importAllResult.forwardRef((children, ref) => {
       obj = { runOnJS: outer1_0(outer1_2[23]).runOnJS, handleTransitionFinished: closure_5 };
       fn.__closure = obj;
       fn.__workletHash = 10908592279914;
-      fn.__initData = outer1_20;
-      const result = store.set(obj.withTiming(0, outer1_13, "respect-motion-settings", fn));
+      fn.__initData = outer1_23;
+      const result = store.set(obj.withTiming(0, outer1_15, "respect-motion-settings", fn));
     }
   }));
   const style = [animatedStyle, ];
@@ -592,7 +661,7 @@ let closure_21 = importAllResult.forwardRef((children, ref) => {
     floatingContextBar = tmp4.floatingContextBar;
   }
   style[1] = floatingContextBar;
-  return closure_10(backgroundColor(num[23]).View, { style, children: children.children });
+  return closure_12(backgroundColor(num[23]).View, { style, children: children.children });
 });
 const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
   let onCancelEditing;
@@ -625,7 +694,7 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
         ({ id: obj[1], guild_id: obj[2] } = tmp10);
         const obj4 = outer1_1(outer1_2[26]);
         obj[4] = tmp8(tmp9[27]).getContextBarCancelReason("reply", "cancel");
-        const currentUser = outer1_7.getCurrentUser();
+        const currentUser = outer1_9.getCurrentUser();
         let id1;
         if (currentUser != null) {
           id1 = currentUser.id;
@@ -635,14 +704,14 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
           id2 = tmp.message.author.id;
         }
         obj[5] = id1 === id2;
-        obj4.track(outer1_8.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
+        obj4.track(outer1_10.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
         const tmp8Result = tmp8(tmp9[27]);
       }
     },
     onTapContextBarReply() {
       if (null != closure_2) {
         const channel = tmp.channel;
-        outer1_0(outer1_2[28]).transitionTo(outer1_9.CHANNEL(channel.getGuildId(), tmp.channel.id, tmp.message.id));
+        outer1_0(outer1_2[28]).transitionTo(outer1_11.CHANNEL(channel.getGuildId(), tmp.channel.id, tmp.message.id));
         const obj = outer1_0(outer1_2[28]);
       }
     },
@@ -661,12 +730,14 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
     message = pendingReply.message;
   }
   const nullableMessageAuthor = obj.useNullableMessageAuthor(message);
+  const items1 = [handleChanged];
+  const stateFromStores = channel(pendingReply[16]).useStateFromStores(items1, () => outer1_7.getScheduledMessage(channel.id));
   obj = { component: closure_5, children: null };
-  let tmp7 = null != pendingReply;
-  if (tmp7) {
-    tmp7 = null != nullableMessageAuthor;
+  let tmp8 = null != pendingReply;
+  if (tmp8) {
+    tmp8 = null != nullableMessageAuthor;
   }
-  if (tmp7) {
+  if (tmp8) {
     obj = { children: null };
     const obj1 = { pendingReply: null, pendingReplyAuthor: null, onTapContextBarReply: null, onCancelReplying: null, onToggleReplyMention: null };
     obj1[0] = pendingReply;
@@ -675,29 +746,41 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
     obj1[3] = onCancelReplying;
     obj1[4] = onToggleReplyMention;
     obj[0] = callback(ChatInputReplyBar, obj1);
-    tmp7 = callback(closure_21, obj);
+    tmp8 = callback(closure_24, obj);
   }
-  const items1 = [tmp7, , ];
-  let tmp11 = null != pendingReply && null == nullableMessageAuthor;
-  if (tmp11) {
+  const items2 = [tmp8, , , ];
+  let tmp12 = null != pendingReply && null == nullableMessageAuthor;
+  if (tmp12) {
     const obj2 = { children: null };
     let obj3 = { onCancelReplying: null };
     obj3[0] = onCancelReplying;
     obj2[0] = callback(ChatInputReplyBarNoAuthor, obj3);
-    tmp11 = callback(closure_21, obj2);
+    tmp12 = callback(closure_24, obj2);
   }
-  items1[1] = tmp11;
-  let tmp15 = null != channel.pendingEdit;
-  if (tmp15) {
+  items2[1] = tmp12;
+  let tmp16 = null != channel.pendingEdit;
+  if (tmp16) {
     let obj4 = { children: null };
     const obj5 = { onCancelEditing: null };
     obj5[0] = onCancelEditing;
     obj4[0] = callback(ChatInputEditBar, obj5);
-    tmp15 = callback(closure_21, obj4);
+    tmp16 = callback(closure_24, obj4);
   }
-  items1[2] = tmp15;
-  obj[1] = items1;
-  return closure_11(channel(pendingReply[30]).TransitionGroup, obj);
+  items2[2] = tmp16;
+  let tmp20 = null != stateFromStores;
+  if (tmp20) {
+    const obj6 = { children: null };
+    const obj7 = { scheduledTimestamp: null, onCancelScheduling: null };
+    obj7[0] = stateFromStores.scheduledTimestamp;
+    obj7[1] = function onCancelScheduling() {
+      return chatInputRef(pendingReply[31]).clearDraft(channel.id, outer1_8.ScheduledMessage);
+    };
+    obj6[0] = callback(ChatInputScheduledMessageBar, obj7);
+    tmp20 = callback(closure_24, obj6);
+  }
+  items2[3] = tmp20;
+  obj[1] = items2;
+  return closure_13(channel(pendingReply[30]).TransitionGroup, obj);
 });
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/chat_input/native/ChatInputContextBar.tsx");
 

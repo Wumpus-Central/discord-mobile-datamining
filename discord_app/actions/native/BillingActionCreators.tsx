@@ -159,16 +159,16 @@ function handlePurchaseException(code) {
     let obj = isSpendingLimitError;
     let billingError = code;
     if (!(code instanceof V6OrEarlierAPIError.BillingError)) {
-      billingError = new tmp(4243).BillingError(code);
+      billingError = new tmp(4241).BillingError(code);
     }
     if (obj.isSpendingLimitError(billingError)) {
-      let tmpResult = tmp(7376);
+      let tmpResult = tmp(7380);
       const result = tmpResult.showSpendingLimitReachedAlert();
     } else {
       const message = code.message;
       const _JSON = JSON;
       const json = JSON.stringify(code);
-      let obj1 = importAll(7488);
+      let obj1 = importAll(7492);
       const underlyingIOSError = obj1.getUnderlyingIOSError(code);
       if (null != underlyingIOSError) {
         obj = { title: null, body: null };
@@ -199,8 +199,8 @@ function handlePurchaseException(code) {
           }
         }
         let billingError1 = code;
-        if (!(code instanceof tmp(4243).BillingError)) {
-          billingError1 = new tmp(4243).BillingError(code);
+        if (!(code instanceof tmp(4241).BillingError)) {
+          billingError1 = new tmp(4241).BillingError(code);
         }
         let tmp19 = message2 === stringResult && flag;
         if (tmp19) {
@@ -321,7 +321,7 @@ function _clearAndMakeIAPRequest() {
                 c10 = 3;
                 c11 = 1;
                 let obj1 = { value: null, done: false };
-                obj1[0] = callback(7463).clearTransactionIOS();
+                obj1[0] = callback(7467).clearTransactionIOS();
                 return obj1;
               }
             } else if (1 === tmp8) {
@@ -335,7 +335,7 @@ function _clearAndMakeIAPRequest() {
             } else if (2 === tmp8) {
               length = 1;
               c11 = transactionDate;
-              length = callback3(7488).getUnderlyingIOSError(c11);
+              length = callback3(7492).getUnderlyingIOSError(c11);
               if (null != length) {
                 if (length.length > 0) {
                   let str1 = length;
@@ -356,7 +356,7 @@ function _clearAndMakeIAPRequest() {
               if (str != null) {
                 str1 = str.toString();
               }
-              const obj13 = callback3(7488);
+              const obj13 = callback3(7492);
             } else if (3 === tmp8) {
               if (arg0 === 1) {
                 c11 = 3;
@@ -374,7 +374,7 @@ function _clearAndMakeIAPRequest() {
                 obj5[0] = arg1;
                 return obj5;
               } else {
-                let obj7 = callback(7462);
+                let obj7 = callback(7466);
                 c10 = 4;
                 c11 = 1;
                 const obj6 = { value: null, done: false };
@@ -538,7 +538,7 @@ function _getIAPJWTRequestData() {
         obj = obj2;
       };
       obj1[3] = obj2;
-      body = yield outer1_1(5167).post(obj1);
+      body = yield outer1_1(5168).post(obj1);
       let obj = { requestJSONString: null };
       let _JSON = JSON;
       obj[0] = JSON.stringify(body.body.request_data);
@@ -656,18 +656,18 @@ function _updateAppleSubscription() {
 }
 function determineProductId(arg0) {
   if (APBRequestOperations.APBRequestOperations.CREATE !== arg0) {
-    if (tmp(7624).APBRequestOperations.CANCEL !== arg0) {
-      if (tmp(7624).APBRequestOperations.RESUBSCRIBE !== arg0) {
-        if (tmp(7624).APBRequestOperations.REACTIVATE !== arg0) {
-          if (tmp(7624).APBRequestOperations.CHARGE === arg0) {
-            return tmp(5900).ProductIds.GENERIC_CONSUMABLE;
+    if (tmp(7628).APBRequestOperations.CANCEL !== arg0) {
+      if (tmp(7628).APBRequestOperations.RESUBSCRIBE !== arg0) {
+        if (tmp(7628).APBRequestOperations.REACTIVATE !== arg0) {
+          if (tmp(7628).APBRequestOperations.CHARGE === arg0) {
+            return tmp(5902).ProductIds.GENERIC_CONSUMABLE;
           } else {
-            if (tmp(7625).ACRequestOperations.CREATE !== arg0) {
-              if (tmp(7625).ACRequestOperations.CANCEL !== arg0) {
-                if (tmp(7625).ACRequestOperations.REACTIVATE !== arg0) {
-                  if (tmp(7625).ACRequestOperations.MODIFY !== arg0) {
-                    if (tmp(7625).ACRequestOperations.CHARGE === arg0) {
-                      return tmp(5900).ProductIds.GENERIC_CONSUMABLE;
+            if (tmp(7629).ACRequestOperations.CREATE !== arg0) {
+              if (tmp(7629).ACRequestOperations.CANCEL !== arg0) {
+                if (tmp(7629).ACRequestOperations.REACTIVATE !== arg0) {
+                  if (tmp(7629).ACRequestOperations.MODIFY !== arg0) {
+                    if (tmp(7629).ACRequestOperations.CHARGE === arg0) {
+                      return tmp(5902).ProductIds.GENERIC_CONSUMABLE;
                     } else {
                       const _Error = Error;
                       const error = new Error("Invalid operation");
@@ -677,7 +677,7 @@ function determineProductId(arg0) {
                 }
               }
             }
-            return tmp(5900).ProductIds.GENERIC_SUBSCRIPTION;
+            return tmp(5902).ProductIds.GENERIC_SUBSCRIPTION;
           }
         }
       }
@@ -893,7 +893,7 @@ function _createGenericSubscription() {
               return obj1;
             } else if (callback3()) {
               if (callback7(c2)) {
-                c5 = callback6(callback(7625).ACRequestOperations.CREATE);
+                c5 = callback6(callback(7629).ACRequestOperations.CREATE);
                 let obj22 = lib(709);
                 const obj2 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: null };
                 obj2[1] = c5;
@@ -937,7 +937,7 @@ function _createGenericSubscription() {
               obj9[3] = dependencyMap;
               obj9[4] = c4;
               const obj10 = { operation: null };
-              obj10[0] = callback(7625).ACRequestOperations.CREATE;
+              obj10[0] = callback(7629).ACRequestOperations.CREATE;
               const merged = Object.assign(obj9);
               c5 = 4;
               c6 = 1;
@@ -1024,7 +1024,7 @@ function _createGenericSubscription() {
               obj19[0] = requestJSONString;
               return obj19;
             } else {
-              obj5 = callback(7463);
+              obj5 = callback(7467);
               const obj20 = { purchase: null };
               obj20[0] = originalPurchase;
               c5 = 7;
@@ -1145,7 +1145,7 @@ function _modifyGenericSubscription() {
               obj1[0] = requestJSONString;
               return obj1;
             } else if (callback4()) {
-              GENERIC_SUBSCRIPTION = callback(5900).ProductIds.GENERIC_SUBSCRIPTION;
+              GENERIC_SUBSCRIPTION = callback(5902).ProductIds.GENERIC_SUBSCRIPTION;
               let obj23 = callback2(709);
               const obj2 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: null };
               obj2[1] = GENERIC_SUBSCRIPTION;
@@ -1175,7 +1175,7 @@ function _modifyGenericSubscription() {
               c6 = false;
               v0 = 1;
               const obj7 = { operation: null, request_identifier: null, subscription_id: null, subscription_items: null, order_id: null };
-              obj7[0] = callback(7625).ACRequestOperations.MODIFY;
+              obj7[0] = callback(7629).ACRequestOperations.MODIFY;
               obj7[1] = callback;
               obj7[2] = callback2;
               obj7[3] = c2.map((planId) => ({ plan_id: planId.planId, quantity: planId.quantity }));
@@ -1277,7 +1277,7 @@ function _modifyGenericSubscription() {
                 obj16[0] = requestJSONString;
                 return obj16;
               } else {
-                obj6 = callback(7463);
+                obj6 = callback(7467);
                 const obj17 = { purchase: null };
                 obj17[0] = originalPurchase;
                 GENERIC_SUBSCRIPTION = 9;
@@ -1890,69 +1890,486 @@ function _mobilePurchaseSKU() {
     let c8 = 0;
     let c9 = 0;
     let c7 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          const obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+    const iter = (function*(arg0, requestJSONString) {
+      let c7;
+      let closure_0;
+      let closure_1;
+      let closure_2;
+      let closure_3;
+      let closure_4;
+      let closure_5;
+      let isFreeForStaffSelfPurchase;
+      let throwTypeErrorResult;
+      if (orderId === 2) {
+        orderId = 3;
+        throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        try {
-          let c7 = 0;
-          const code = closure_6;
-          if (code.code === callback(4029).ErrorCodes.BILLING_PURCHASE_REQUEST_INVALID) {
-            const result = callback(4022).captureBillingException(code, {});
-            const obj2 = callback(4022);
-          }
-          while (true) {
-            let tmp14 = closure_4;
-            let tmp15 = closure_5;
-            let tmp18 = c9;
-            let tmp19 = null == c9;
-            let tmp16 = closure_28;
-            let tmp17 = closure_23;
-            if (tmp19) {
-              break;
-            } else {
-              let tmp20 = closure_4;
-              tmp19 = closure_12;
-              break;
-            }
-            let tmp21 = closure_4;
-            let tmp16Result = tmp16(tmp17, "collectibles", tmp19);
-            let tmp23 = closure_12;
-            if (closure_12) {
-              let tmp28 = closure_5;
-              let tmp29 = constants;
-              let POST_PURCHASE_FAILED = constants.POST_PURCHASE_FAILED;
-            } else {
-              let tmp24 = closure_4;
-              let tmp25 = closure_5;
-              let tmp26 = callback2;
-              let tmp27 = closure_23;
-              POST_PURCHASE_FAILED = callback2(closure_23);
-            }
-            { success: false, failureReason: null }[1] = POST_PURCHASE_FAILED;
-            let num = 3;
-            c9 = 3;
-          }
-        } catch (tmp30) {
-          closure_6 = tmp30;
-          if (tmp3 === c7) {
-            c9 = tmp2;
-            throw tmp30;
-          } else if (tmp === tmp32) {
-            let c8 = tmp2;
+        throwTypeErrorResult = requestJSONString;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp6;
+        throwTypeErrorResult = null;
+        if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw requestJSONString;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = requestJSONString;
+            return obj;
           } else {
-            c8 = tmp4;
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            orderId = 2;
+            switch (c8) {
+              case 0:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  orderId = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = requestJSONString;
+                  return obj;
+                } else {
+                  closure_5 = tmp3;
+                  closure_4 = tmp8;
+                  let callback;
+                  let callback2;
+                  let transactionReceipt;
+                  let dependencyMap;
+                  closure_4 = undefined;
+                  closure_5 = undefined;
+                  throwTypeErrorResult = undefined;
+                  c7 = undefined;
+                  c8 = undefined;
+                  orderId = undefined;
+                  let initialize;
+                  ({ requestIdentifier: closure_0, skuId: closure_1, currency: closure_2, countryCode: closure_3, analyticsLocations: closure_4, analyticsLoadId: closure_5, isGift: throwTypeErrorResult, giftInfoOptions: c7, isFreeForStaffSelfPurchase } = callback);
+                  throwTypeErrorResult = callback;
+                  if (isFreeForStaffSelfPurchase === undefined) {
+                    isFreeForStaffSelfPurchase = true;
+                  }
+                  c8 = isFreeForStaffSelfPurchase;
+                  orderId = throwTypeErrorResult.orderId;
+                  throwTypeErrorResult = callback2;
+                  initialize = callback2;
+                  let closure_11;
+                  let closure_12;
+                  let currentUser;
+                  requestJSONString = undefined;
+                  let updateProduct;
+                  let purchaseResponse;
+                  let constants;
+                  let constants2;
+                  let closure_19;
+                  let closure_20;
+                  let staff;
+                  let callback3;
+                  c8 = 1;
+                  orderId = 1;
+                  return { value: "ct", done: true };
+                }
+              break;
+              case 1:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  orderId = 3;
+                  const obj1 = { value: null, done: true };
+                  obj1[0] = requestJSONString;
+                  return obj1;
+                } else {
+                  throwTypeErrorResult = closure_5;
+                  throwTypeErrorResult = outer1_29;
+                  if (outer1_29()) {
+                    throwTypeErrorResult = closure_4;
+                    throwTypeErrorResult = closure_5;
+                    throwTypeErrorResult = callback7;
+                    throwTypeErrorResult = outer1_2;
+                    if (callback7(outer1_2)) {
+                      throwTypeErrorResult = closure_4;
+                      throwTypeErrorResult = closure_5;
+                      throwTypeErrorResult = outer1_36;
+                      throwTypeErrorResult = callback;
+                      throwTypeErrorResult = outer1_3;
+                      closure_11 = outer1_36(callback(outer1_3[42]).ACRequestOperations.CHARGE);
+                      throwTypeErrorResult = callback2;
+                      throwTypeErrorResult = outer1_3;
+                      let obj30 = callback2(outer1_3[23]);
+                      let obj2 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: null };
+                      throwTypeErrorResult = closure_11;
+                      obj2[1] = closure_11;
+                      c8 = 2;
+                      orderId = 1;
+                      const obj3 = { value: null, done: false };
+                      obj3[0] = obj30.dispatch(obj2);
+                      return obj3;
+                    } else {
+                      throwTypeErrorResult = closure_5;
+                      let obj4 = { success: false, failureReason: null };
+                      throwTypeErrorResult = outer1_39;
+                      obj4[1] = outer1_39.INVALID_CURRENCY;
+                      orderId = 3;
+                      const obj5 = { value: null, done: true };
+                      obj5[0] = obj4;
+                      return obj5;
+                    }
+                  } else {
+                    throwTypeErrorResult = closure_5;
+                    const obj6 = { success: false, failureReason: null };
+                    throwTypeErrorResult = outer1_39;
+                    obj6[1] = outer1_39.CANNOT_MAKE_REQUEST;
+                    orderId = 3;
+                    const obj7 = { value: null, done: true };
+                    obj7[0] = obj6;
+                    return obj7;
+                  }
+                }
+              break;
+              case 2:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  orderId = 3;
+                  let obj8 = { value: null, done: true };
+                  obj8[0] = requestJSONString;
+                  return obj8;
+                } else {
+                  throwTypeErrorResult = closure_4;
+                  throwTypeErrorResult = closure_5;
+                  throwTypeErrorResult = callback;
+                  throwTypeErrorResult = dependencyMap;
+                  let obj9 = { sku_id: null, load_id: null, location_stack: null, payment_gateway: null };
+                  throwTypeErrorResult = callback2;
+                  obj9[0] = callback2;
+                  throwTypeErrorResult = closure_5;
+                  obj9[1] = closure_5;
+                  throwTypeErrorResult = closure_4;
+                  obj9[2] = closure_4;
+                  throwTypeErrorResult = closure_20;
+                  obj9[3] = closure_20.APPLE_ADVANCED_COMMERCE;
+                  throwTypeErrorResult = callback(7420).trackPaymentFlowStartedAnalyticsAndCTP(obj9);
+                  closure_12 = false;
+                  throwTypeErrorResult = closure_4;
+                  c7 = 1;
+                  throwTypeErrorResult = transactionReceipt;
+                  throwTypeErrorResult = dependencyMap;
+                  c8 = 4;
+                  orderId = 1;
+                  const obj10 = { value: null, done: false };
+                  obj10[0] = (function retryPendingPurchases(closure_2, closure_3) {
+                    const self = this;
+                    const apply = closure_43.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })(transactionReceipt, dependencyMap);
+                  return obj10;
+                }
+              break;
+              case 3:
+                c7 = 0;
+                let closure_23 = throwTypeErrorResult;
+                let obj19 = callback2(709);
+                const obj11 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: null };
+                obj11[1] = closure_11;
+                obj19.dispatch(obj11);
+                const billingError = new callback(4241).BillingError(closure_23);
+                closure_20 = billingError;
+                staff = currentUser.getCurrentUser();
+                if (null != staff) {
+                  if (staff.isStaff()) {
+                    if (c8) {
+                      if (closure_20.code === callback(4029).ErrorCodes.BILLING_CANNOT_CHARGE_ZERO_AMOUNT) {
+                        throwTypeErrorResult = closure_4;
+                        throwTypeErrorResult = initialize;
+                        dependencyMap = initialize;
+                        if (initialize == null) {
+                          throwTypeErrorResult = closure_5;
+                          throwTypeErrorResult = callback;
+                          throwTypeErrorResult = dependencyMap;
+                          dependencyMap = callback(7630).purchaseSKU;
+                        }
+                        throwTypeErrorResult = closure_4;
+                        throwTypeErrorResult = dependencyMap;
+                        callback3 = dependencyMap;
+                        throwTypeErrorResult = closure_5;
+                        c7 = 2;
+                        throwTypeErrorResult = callback3;
+                        throwTypeErrorResult = callback2;
+                        const obj12 = { countryCode: null, expectedAmount: 0, expectedCurrency: null, loadId: null, isGift: null, giftInfoOptions: null };
+                        throwTypeErrorResult = dependencyMap;
+                        obj12[0] = dependencyMap;
+                        throwTypeErrorResult = constants2;
+                        obj12[2] = constants2.USD;
+                        throwTypeErrorResult = callback;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj22 = callback(514);
+                        obj12[3] = obj22.v4();
+                        obj12[4] = throwTypeErrorResult;
+                        throwTypeErrorResult = c7;
+                        obj12[5] = c7;
+                        c8 = 10;
+                        orderId = 1;
+                        const obj13 = { value: null, done: false };
+                        obj13[0] = callback3("collectibles", callback2, obj12);
+                        return obj13;
+                      }
+                    }
+                  }
+                }
+                let tmp90 = null == orderId;
+                if (!tmp90) {
+                  tmp90 = closure_12;
+                }
+                closure_28(closure_23, "collectibles", tmp90);
+                if (closure_12) {
+                  throwTypeErrorResult = constants3;
+                  let POST_PURCHASE_FAILED = constants3.POST_PURCHASE_FAILED;
+                } else {
+                  POST_PURCHASE_FAILED = callback4(closure_23);
+                }
+                { success: false, failureReason: null }[1] = POST_PURCHASE_FAILED;
+                orderId = 3;
+                const tmp87 = closure_28;
+                const tmp88 = closure_23;
+              break;
+              case 4:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  orderId = 3;
+                  const obj14 = { value: null, done: true };
+                  obj14[0] = requestJSONString;
+                  return obj14;
+                } else {
+                  throwTypeErrorResult = closure_4;
+                  throwTypeErrorResult = closure_5;
+                  const obj15 = { sku_id: null, request_identifier: null, currency: null, country_code: null, is_gift: null, gift_info_options: null, order_id: null };
+                  throwTypeErrorResult = callback2;
+                  obj15[0] = callback2;
+                  throwTypeErrorResult = callback;
+                  obj15[1] = callback;
+                  throwTypeErrorResult = transactionReceipt;
+                  obj15[2] = transactionReceipt;
+                  throwTypeErrorResult = dependencyMap;
+                  obj15[3] = dependencyMap;
+                  obj15[4] = throwTypeErrorResult;
+                  throwTypeErrorResult = c7;
+                  obj15[5] = c7;
+                  throwTypeErrorResult = orderId;
+                  obj15[6] = orderId;
+                  currentUser = obj15;
+                  throwTypeErrorResult = callback6;
+                  const obj16 = { operation: null };
+                  throwTypeErrorResult = callback;
+                  throwTypeErrorResult = dependencyMap;
+                  obj16[0] = callback(7629).ACRequestOperations.CHARGE;
+                  throwTypeErrorResult = currentUser;
+                  throwTypeErrorResult = obj16;
+                  throwTypeErrorResult = Object.assign(currentUser);
+                  c8 = 5;
+                  orderId = 1;
+                  const obj17 = { value: null, done: false };
+                  obj17[0] = callback6(obj16);
+                  return obj17;
+                }
+              break;
+              case 5:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  orderId = 3;
+                  const obj18 = { value: null, done: true };
+                  obj18[0] = requestJSONString;
+                  return obj18;
+                } else {
+                  requestJSONString = requestJSONString.requestJSONString;
+                  c8 = 6;
+                  orderId = 1;
+                  obj19 = { value: null, done: false };
+                  obj19[0] = callback5(callback, requestJSONString, closure_11, true);
+                  return obj19;
+                }
+              break;
+              case 6:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  orderId = 3;
+                  const obj20 = { value: null, done: true };
+                  obj20[0] = requestJSONString;
+                  return obj20;
+                } else {
+                  throwTypeErrorResult = closure_4;
+                  updateProduct = requestJSONString;
+                  throwTypeErrorResult = updateProduct;
+                  purchaseResponse = updateProduct.purchaseResponse;
+                  throwTypeErrorResult = updateProduct;
+                  constants = updateProduct.originalPurchase;
+                  closure_12 = true;
+                  throwTypeErrorResult = purchaseResponse;
+                  const jwsRepresentation = purchaseResponse.jwsRepresentation;
+                  transactionReceipt = jwsRepresentation;
+                  if (jwsRepresentation == null) {
+                    transactionReceipt = purchaseResponse.transactionReceipt;
+                  }
+                  constants2 = transactionReceipt;
+                  obj8 = callback2(1217);
+                  closure_19 = obj8.v3(constants2);
+                  if (throwTypeErrorResult) {
+                    obj9 = callback2(709);
+                    const obj21 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CACHE_ACTION", key: null, giftOptions: null };
+                    obj21[1] = closure_19;
+                    obj22 = {};
+                    const merged = Object.assign(c7);
+                    obj21[2] = obj22;
+                    obj9.dispatch(obj21);
+                  }
+                  const obj23 = { encodedReceipt: null, retries: 3, presentmentCurrency: null, appStoreRegion: null, giftInfoOptions: null, isGift: null, jwsRepresentation: null, source: "mobilePurchaseSKU", orderId: null };
+                  obj23[0] = purchaseResponse.transactionReceipt;
+                  obj23[2] = transactionReceipt;
+                  obj23[3] = dependencyMap;
+                  obj23[4] = c7;
+                  obj23[5] = throwTypeErrorResult;
+                  obj23[6] = purchaseResponse.jwsRepresentation;
+                  obj23[8] = orderId;
+                  c8 = 7;
+                  orderId = 1;
+                  const obj24 = { value: null, done: false };
+                  obj24[0] = lib(obj23);
+                  return obj24;
+                }
+              break;
+              case 7:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  orderId = 3;
+                  const obj25 = { value: null, done: true };
+                  obj25[0] = requestJSONString;
+                  return obj25;
+                } else {
+                  throwTypeErrorResult = closure_4;
+                  if (throwTypeErrorResult) {
+                    obj2 = callback2(709);
+                    const obj26 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: null };
+                    obj26[1] = closure_19;
+                    obj2.dispatch(obj26);
+                  }
+                  obj4 = callback(7467);
+                  const obj27 = { purchase: null };
+                  obj27[0] = constants;
+                  c8 = 8;
+                  orderId = 1;
+                  const obj28 = { value: null, done: false };
+                  obj28[0] = obj4.finishTransaction(obj27);
+                  return obj28;
+                }
+              break;
+              case 8:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  orderId = 3;
+                  const obj29 = { value: null, done: true };
+                  obj29[0] = requestJSONString;
+                  return obj29;
+                } else {
+                  throwTypeErrorResult = closure_4;
+                  throwTypeErrorResult = closure_5;
+                  throwTypeErrorResult = callback2;
+                  throwTypeErrorResult = dependencyMap;
+                  obj30 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: null };
+                  throwTypeErrorResult = closure_11;
+                  obj30[1] = closure_11;
+                  throwTypeErrorResult = callback2(709).dispatch(obj30);
+                  throwTypeErrorResult = callback2;
+                  throwTypeErrorResult = dependencyMap;
+                  const obj41 = callback2(709);
+                  throwTypeErrorResult = constants;
+                  const obj31 = { sku_id: null, load_id: null, location_stack: null, payment_gateway: null, is_gift: null };
+                  throwTypeErrorResult = callback2;
+                  obj31[0] = callback2;
+                  throwTypeErrorResult = closure_5;
+                  obj31[1] = closure_5;
+                  throwTypeErrorResult = closure_4;
+                  obj31[2] = closure_4;
+                  throwTypeErrorResult = closure_20;
+                  obj31[3] = closure_20.APPLE_ADVANCED_COMMERCE;
+                  obj31[4] = throwTypeErrorResult;
+                  throwTypeErrorResult = callback2(698).track(constants.PAYMENT_FLOW_COMPLETED, obj31);
+                  const obj32 = { success: true, failureReason: null };
+                  throwTypeErrorResult = constants3;
+                  obj32[1] = constants3.NONE;
+                  c7 = 0;
+                  orderId = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = obj32;
+                  return obj;
+                }
+              break;
+              case 9:
+                c7 = 0;
+                lib = throwTypeErrorResult;
+                if (lib.code === callback(4029).ErrorCodes.BILLING_PURCHASE_REQUEST_INVALID) {
+                  throwTypeErrorResult = closure_4;
+                  throwTypeErrorResult = closure_5;
+                  throwTypeErrorResult = callback;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = callback(4022).captureBillingException(lib, {});
+                  const obj40 = callback(4022);
+                }
+              break;
+              default:
+                if (arg0 === 1) {
+                  orderId = 3;
+                  throw requestJSONString;
+                } else if (arg0 === 2) {
+                  c7 = 0;
+                  orderId = 3;
+                  const obj33 = { value: null, done: true };
+                  obj33[0] = requestJSONString;
+                  return obj33;
+                } else {
+                  throwTypeErrorResult = closure_5;
+                  const obj34 = { success: true, failureReason: null };
+                  throwTypeErrorResult = constants3;
+                  obj34[1] = constants3.NONE;
+                  c7 = 0;
+                  orderId = 3;
+                  const obj35 = { value: null, done: true };
+                  obj35[0] = obj34;
+                  return obj35;
+                }
+            }
+          } catch (throwTypeErrorResult) {
+            if (tmp4 === c7) {
+              throwTypeErrorResult = tmp2;
+              orderId = tmp2;
+              throw throwTypeErrorResult;
+            } else if (throwTypeErrorResult === throwTypeErrorResult) {
+              c8 = tmp2;
+            } else {
+              c8 = tmp5;
+            }
           }
         }
       }
@@ -2264,7 +2681,7 @@ let obj = {
                 c4 = 2;
                 c5 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_0(7463).initConnection();
+                obj2[0] = outer1_0(7467).initConnection();
                 return obj2;
               }
             }
@@ -2920,7 +3337,7 @@ let obj = {
     })();
   }
 };
-let items = [require("module_7463").ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [require("module_7467").ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 obj = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 let result = set.fileFinishedImporting("actions/native/BillingActionCreators.tsx");

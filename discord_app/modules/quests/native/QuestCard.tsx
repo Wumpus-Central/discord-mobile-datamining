@@ -35,7 +35,7 @@ let result = createCacheKey.experimental_createToken((theme) => {
   const colors = Themes.colors;
   const semanticColor = internal.resolveSemanticColor(theme, shared.isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
   const isThemeDarkResult = shared.isThemeDark(theme);
-  return tmp(4193).hexOpacityToRgba(semanticColor, 0);
+  return tmp(4191).hexOpacityToRgba(semanticColor, 0);
 });
 let result1 = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
@@ -190,7 +190,7 @@ const memoResult = importAllResult.memo((questContent) => {
   ({ gradientStart, gradientMid, gradientEnd } = product());
   tmp3Result = tmp3(tmp4[20]);
   let items1 = [quest.id];
-  const tmp17 = sourceQuestContent(tmp3Result.useRecyclingState(null, items1), 2);
+  let tmp17 = sourceQuestContent(tmp3Result.useRecyclingState(null, items1), 2);
   first = tmp17[0];
   const NOOP = tmp19;
   let items2 = [tmp17[1]];
@@ -516,12 +516,12 @@ const memoResult = importAllResult.memo((questContent) => {
               } else {
                 let closure_0 = tmp2;
                 outer1_5.log("Enrolling in quest");
-                outer1_0(10508);
+                outer1_0(10422);
                 let obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
                 if (!outer1_20) {
                   if (!outer1_14) {
-                    let START_QUEST = tmp31(7227).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp31(7232).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
                   obj1[2] = outer1_4;
@@ -529,7 +529,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   v0 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp31(7227).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp31(7232).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -545,7 +545,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = openQuestAccessSuspendedBottomSheet;
-                  v0(14431)(obj);
+                  v0(14440)(obj);
                   dependencyMap = 3;
                 }
                 callback2();
@@ -615,114 +615,98 @@ const memoResult = importAllResult.memo((questContent) => {
   let tmp87 = isQuestExpiredResult;
   const memo1 = obj5.useMemo(() => {
     let obj = outer1_0(QUEST_HOME_MOBILE[54]);
-    let isFabricResult = obj.isFabric();
     let num = 0;
-    if (isFabricResult) {
-      num = 0;
-      if (tmpResult.isAndroid()) {
-        num = 16 / scaledTextLineHeight;
-      }
-      tmpResult = tmp(tmp2[55]);
+    if (obj.isAndroid()) {
+      num = 16 / scaledTextLineHeight;
     }
-    const result = tmp4 / 8;
-    obj = { width: tmp4, height: tmp4, marginRight: result, marginTop: 0, transform: null };
-    let tmp7;
-    if (isFabricResult) {
-      obj = { translateY: null };
-      obj[0] = num;
-      const items = [obj];
-      tmp7 = items;
-    }
-    const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary" };
-    obj[4] = tmp7;
+    const result = tmp / 8;
+    obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary" };
+    obj = { width: tmp, height: tmp, marginRight: result, marginTop: 0, transform: items };
+    items = [{ translateY: num }];
     if (closure_16) {
       if (result2) {
-        const obj2 = { style: null, children: null };
-        obj2[0] = tmp9.orbWithAmountRow;
-        const obj3 = { size: "custom", color: "mobile-text-heading-primary", style: null };
-        obj3[2] = obj;
-        const items1 = [defaultRewardNameWithArticle(tmp(tmp2[56]).OrbsIcon, obj3), , ];
-        if (isFabricResult) {
-          const obj4 = { style: null };
-          const obj5 = { width: null };
-          obj5[0] = result;
-          obj4[0] = obj5;
-          isFabricResult = tmp36(tmp34, obj4);
-        }
-        items1[1] = isFabricResult;
-        const obj6 = {};
-        const merged = Object.assign(obj1);
-        const intl4 = tmp(tmp2[44]).intl;
+        const obj1 = { style: null, children: null };
+        obj1[0] = tmp9.orbWithAmountRow;
+        const obj2 = { size: "custom", color: "mobile-text-heading-primary", style: null };
+        obj2[2] = obj;
+        const items1 = [defaultRewardNameWithArticle(tmp2(tmp3[55]).OrbsIcon, obj2), , ];
+        const obj3 = { style: null };
+        const obj4 = { width: null };
+        obj4[0] = result;
+        obj3[0] = obj4;
+        items1[1] = defaultRewardNameWithArticle(tmp9, obj3);
+        const obj5 = {};
+        const merged = Object.assign(obj);
+        const intl4 = tmp2(tmp3[44]).intl;
         let num4 = orbQuantityClaimed;
         if (orbQuantityClaimed == null) {
           num4 = 0;
         }
-        const obj7 = { orbAmount: null };
-        obj7[0] = num4;
-        obj6.children = intl4.format(tmp(tmp2[44]).t["nLXlh+"], obj7);
-        items1[2] = defaultRewardNameWithArticle(tmp(tmp2[57]).Text, obj6);
-        obj2[1] = items1;
-        let tmp16Result = questEnrollmentBlockedUntil(tmp34, obj2);
-        const tmp33 = questEnrollmentBlockedUntil;
+        const obj6 = { orbAmount: null };
+        obj6[0] = num4;
+        obj5.children = intl4.format(tmp2(tmp3[44]).t["nLXlh+"], obj6);
+        items1[2] = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj5);
+        obj1[1] = items1;
+        let tmp14Result = questEnrollmentBlockedUntil(tmp9, obj1);
+        const tmp30 = questEnrollmentBlockedUntil;
+        const tmp31 = tmp9;
+        const tmp33 = defaultRewardNameWithArticle;
       }
-      return tmp16Result;
+      return tmp14Result;
     }
     if (closure_16) {
-      const obj8 = {};
-      const merged1 = Object.assign(obj1);
-      obj8.children = defaultRewardName;
-      tmp16Result = defaultRewardNameWithArticle(tmp(tmp2[57]).Text, obj8);
+      const obj7 = {};
+      const merged1 = Object.assign(obj);
+      obj7.children = defaultRewardName;
+      tmp14Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj7);
     } else if (result2) {
-      const obj9 = { style: null, children: null };
-      obj9[0] = tmp9.orbWithAmountRow;
-      const obj10 = {};
-      const merged2 = Object.assign(obj1);
-      const intl2 = tmp(tmp2[44]).intl;
-      const obj11 = { rewardWithArticleHook: null };
-      obj11[0] = function rewardWithArticleHook() {
+      const obj8 = { style: null, children: null };
+      obj8[0] = tmp9.orbWithAmountRow;
+      const obj9 = {};
+      const merged2 = Object.assign(obj);
+      const intl2 = tmp2(tmp3[44]).intl;
+      const obj10 = { rewardWithArticleHook: null };
+      obj10[0] = function rewardWithArticleHook() {
         return null;
       };
-      obj10.children = intl2.format(tmp(tmp2[44]).t["0IUT4Y"], obj11);
-      const items2 = [defaultRewardNameWithArticle(tmp(tmp2[57]).Text, obj10), ];
-      const obj12 = { style: null, children: null };
-      obj12[0] = tmp9.orbWithAmountRow;
-      const obj13 = { size: "custom", color: "mobile-text-heading-primary", style: null };
-      obj13[2] = obj;
-      const items3 = [defaultRewardNameWithArticle(tmp(tmp2[56]).OrbsIcon, obj13), , ];
-      let tmp19Result = isFabricResult;
-      if (isFabricResult) {
-        const obj14 = { style: null };
-        const obj15 = { width: null };
-        obj15[0] = result;
-        obj14[0] = obj15;
-        tmp19Result = tmp19(tmp17, obj14);
-      }
-      items3[1] = tmp19Result;
-      const obj16 = {};
-      const merged3 = Object.assign(obj1);
-      const intl3 = tmp(tmp2[44]).intl;
+      obj9.children = intl2.format(tmp2(tmp3[44]).t["0IUT4Y"], obj10);
+      const items2 = [defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj9), ];
+      const obj11 = { style: null, children: null };
+      obj11[0] = tmp9.orbWithAmountRow;
+      const obj12 = { size: "custom", color: "mobile-text-heading-primary", style: null };
+      obj12[2] = obj;
+      const items3 = [defaultRewardNameWithArticle(tmp2(tmp3[55]).OrbsIcon, obj12), , ];
+      const obj13 = { style: null };
+      const obj14 = { width: null };
+      obj14[0] = result;
+      obj13[0] = obj14;
+      items3[1] = defaultRewardNameWithArticle(tmp9, obj13);
+      const obj15 = {};
+      const merged3 = Object.assign(obj);
+      const intl3 = tmp2(tmp3[44]).intl;
       let num3 = questOrbRewardQuantityForUser;
       if (questOrbRewardQuantityForUser == null) {
         num3 = 0;
       }
-      const obj17 = { orbAmount: null };
-      obj17[0] = num3;
-      obj16.children = intl3.format(tmp(tmp2[44]).t["nLXlh+"], obj17);
-      items3[2] = defaultRewardNameWithArticle(tmp(tmp2[57]).Text, obj16);
-      obj12[1] = items3;
-      items2[1] = questEnrollmentBlockedUntil(tmp9, obj12);
-      obj9[1] = items2;
-      tmp16Result = tmp16(tmp17, obj9);
+      const obj16 = { orbAmount: null };
+      obj16[0] = num3;
+      obj15.children = intl3.format(tmp2(tmp3[44]).t["nLXlh+"], obj16);
+      items3[2] = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj15);
+      obj11[1] = items3;
+      items2[1] = questEnrollmentBlockedUntil(tmp9, obj11);
+      obj8[1] = items2;
+      tmp14Result = tmp14(tmp15, obj8);
+      const tmp17 = defaultRewardNameWithArticle;
     } else {
-      const obj18 = {};
-      const merged4 = Object.assign(obj1);
-      const intl = tmp(tmp2[44]).intl;
-      const obj19 = { rewardWithArticleHook: null };
-      obj19[0] = function rewardWithArticleHook() {
+      const obj17 = {};
+      const merged4 = Object.assign(obj);
+      const intl = tmp2(tmp3[44]).intl;
+      const obj18 = { rewardWithArticleHook: null };
+      obj18[0] = function rewardWithArticleHook() {
         return closure_12;
       };
-      obj18.children = intl.format(tmp(tmp2[44]).t["0IUT4Y"], obj19);
-      tmp16Result = defaultRewardNameWithArticle(tmp(tmp2[57]).Text, obj18);
+      obj17.children = intl.format(tmp2(tmp3[44]).t["0IUT4Y"], obj18);
+      tmp14Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj17);
     }
   }, items10);
   if (isQuestExpiredResult) {
@@ -743,7 +727,7 @@ const memoResult = importAllResult.memo((questContent) => {
   const ctaLink = tmp3(tmp4[28]).getCtaLink(quest.config);
   callback2 = obj5.useCallback(() => {
     const obj = { questId: quest.id, initialStep: null, sourceQuestContent: null };
-    obj[1] = outer1_0(QUEST_HOME_MOBILE[58]).VideoQuestModalSteps.WATCH_VIDEO;
+    obj[1] = outer1_0(QUEST_HOME_MOBILE[57]).VideoQuestModalSteps.WATCH_VIDEO;
     obj[2] = sourceQuestContent;
     quest(QUEST_HOME_MOBILE[47])(obj);
   }, items11);
@@ -814,12 +798,12 @@ const memoResult = importAllResult.memo((questContent) => {
   let obj13 = { visible: tmp78, glow: true, children: null };
   let obj14 = { style: items14, children: null };
   items14 = [tmp9.heroContainer, { height: result }];
-  let tmp10Result = tmp10(tmp4[60]);
-  const items15 = [defaultRewardNameWithArticle(quest(tmp4[61]), { source: obj16, style: tmp9.heroImg, onError: callback, accessible: true, accessibilityRole: "image", accessibilityLabel: quest.config.messages.questName }), , , ];
+  let tmp10Result = tmp10(tmp4[59]);
+  const items15 = [defaultRewardNameWithArticle(quest(tmp4[60]), { source: obj16, style: tmp9.heroImg, onError: callback, accessible: true, accessibilityRole: "image", accessibilityLabel: quest.config.messages.questName }), , , ];
   let obj17 = { style: tmp9.heroLinearGradientOverlay, start: null, end: null, colors: null };
-  tmp10Result = tmp10(tmp4[62]);
-  obj17[1] = tmp3(tmp4[63]).VerticalGradient.START;
-  obj17[2] = tmp3(tmp4[63]).VerticalGradient.END;
+  tmp10Result = tmp10(tmp4[61]);
+  obj17[1] = tmp3(tmp4[62]).VerticalGradient.START;
+  obj17[2] = tmp3(tmp4[62]).VerticalGradient.END;
   const items16 = [gradientStart, gradientMid, gradientEnd];
   obj17[3] = items16;
   items15[1] = defaultRewardNameWithArticle(tmp10Result, obj17);
@@ -827,17 +811,17 @@ const memoResult = importAllResult.memo((questContent) => {
   if (preview) {
     let obj18 = { style: null, children: null };
     obj18[0] = tmp9.previewBadge;
-    let obj19 = { variant: "eyebrow", color: "text-overlay-light", style: null, children: null };
+    const obj19 = { variant: "eyebrow", color: "text-overlay-light", style: null, children: null };
     obj19[2] = tmp9.previewBadgeText;
     const intl7 = tmp3(tmp4[44]).intl;
     obj19[3] = intl7.string(tmp3(tmp4[44]).t.SKNnqq);
-    obj18[1] = tmp92(tmp3(tmp4[57]).Text, obj19);
+    obj18[1] = tmp92(tmp3(tmp4[56]).Text, obj19);
     preview = tmp92(tmp95, obj18);
   }
   items15[2] = preview;
   const obj20 = { style: tmp9.heroFooterContainer, children: null };
   const obj21 = { style: tmp9.heroFooterLeftContainer, children: null };
-  const items17 = [defaultRewardNameWithArticle(quest(tmp4[64]), { assetUrl: questGameLogotypeAssetUrl, onError: callback }), ];
+  const items17 = [defaultRewardNameWithArticle(quest(tmp4[63]), { assetUrl: questGameLogotypeAssetUrl, onError: callback }), ];
   let str = "text-overlay-light";
   let str2 = "text-overlay-light";
   if (isThemeDarkResult) {
@@ -847,14 +831,14 @@ const memoResult = importAllResult.memo((questContent) => {
   const obj23 = { variant: "text-xs/medium", color: str2, children: null };
   const intl8 = tmp3(tmp4[44]).intl;
   obj23[2] = intl8.string(tmp3(tmp4[44]).t.VAbKhK);
-  const items18 = [defaultRewardNameWithArticle(tmp3(tmp4[57]).Text, obj23), , ];
-  const obj24 = { source: quest(tmp4[66]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+  const items18 = [defaultRewardNameWithArticle(tmp3(tmp4[56]).Text, obj23), , ];
+  const obj24 = { source: quest(tmp4[65]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
   const intl9 = tmp3(tmp4[44]).intl;
   obj24[4] = intl9.string(tmp3(tmp4[44]).t.OfMjx9);
   items18[1] = defaultRewardNameWithArticle(closure_6, obj24);
-  items18[2] = defaultRewardNameWithArticle(tmp3(tmp4[57]).Text, { variant: "text-xs/medium", color: "text-overlay-light", children: quest.config.messages.gamePublisher });
+  items18[2] = defaultRewardNameWithArticle(tmp3(tmp4[56]).Text, { variant: "text-xs/medium", color: "text-overlay-light", children: quest.config.messages.gamePublisher });
   obj22[3] = items18;
-  items17[1] = questEnrollmentBlockedUntil(tmp3(tmp4[65]).Stack, obj22);
+  items17[1] = questEnrollmentBlockedUntil(tmp3(tmp4[64]).Stack, obj22);
   obj21[1] = items17;
   const items19 = [questEnrollmentBlockedUntil(closure_7, obj21), ];
   let tmp92Result = !isQuestExpiredResult;
@@ -871,7 +855,7 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj27 = { expiryDate: null };
     obj27[0] = questFormattedDate1;
     obj26[2] = intl10.format(tmp3(tmp4[44]).t["7D8r4F"], obj27);
-    tmp92Result = tmp92(tmp3(tmp4[57]).Text, obj26);
+    tmp92Result = tmp92(tmp3(tmp4[56]).Text, obj26);
   }
   items19[1] = tmp92Result;
   obj20[1] = items19;
@@ -885,16 +869,16 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj31 = { quest: null, progress: null, size: "sm" };
     obj31[0] = quest;
     obj31[1] = obj4.useQuestCompletionDetails(quest).completedRatio;
-    tmp92Result = tmp92(tmp10(tmp4[67]), obj31);
+    tmp92Result = tmp92(tmp10(tmp4[66]), obj31);
   } else {
     const obj32 = { quest: null, height: 64, width: 64 };
     obj32[0] = quest;
-    tmp92Result = tmp92(tmp10(tmp4[68]), obj32);
+    tmp92Result = tmp92(tmp10(tmp4[67]), obj32);
   }
   obj30[1] = tmp92Result;
   const items21 = [defaultRewardNameWithArticle(closure_7, obj30), ];
   const obj33 = { style: tmp9.detailsTextContainer, children: null };
-  const items22 = [defaultRewardNameWithArticle(tmp3(tmp4[57]).Text, { variant: "eyebrow", color: "text-brand", style: tmp9.questName, accessibilityRole: "header", children: formatToPlainStringResult }), ];
+  const items22 = [defaultRewardNameWithArticle(tmp3(tmp4[56]).Text, { variant: "eyebrow", color: "text-brand", style: tmp9.questName, accessibilityRole: "header", children: formatToPlainStringResult }), ];
   const obj35 = { style: tmp9.bodyContainer, children: null };
   const obj36 = { style: tmp9.subtitleRow, children: null };
   const items23 = [memo1, ];
@@ -902,7 +886,7 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj37 = { questId: null, orbMultiplierEligibility: null };
     obj37[0] = quest.config.id;
     obj37[1] = questOrbMultiplierEligibility;
-    shouldShowBonusOrbsUX = tmp92(tmp3(tmp4[69]).QuestOrbMultiplierPerkPill, obj37);
+    shouldShowBonusOrbsUX = tmp92(tmp3(tmp4[68]).QuestOrbMultiplierPerkPill, obj37);
   }
   items23[1] = shouldShowBonusOrbsUX;
   obj36[1] = items23;
@@ -911,7 +895,7 @@ const memoResult = importAllResult.memo((questContent) => {
   if (tmp92Result1) {
     const obj38 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj38[2] = formatToPlainStringResult1;
-    tmp92Result1 = tmp92(tmp3(tmp4[57]).Text, obj38);
+    tmp92Result1 = tmp92(tmp3(tmp4[56]).Text, obj38);
   }
   items24[1] = tmp92Result1;
   obj35[1] = items24;
@@ -932,16 +916,16 @@ const memoResult = importAllResult.memo((questContent) => {
     obj41[1] = NOOP;
     const intl11 = tmp3(tmp4[44]).intl;
     obj41[4] = intl11.string(tmp3(tmp4[44]).t.V293qn);
-    const items25 = [tmp92(tmp3(tmp4[70]).Button, obj41), ];
+    const items25 = [tmp92(tmp3(tmp4[69]).Button, obj41), ];
     const obj42 = { onPress: null, variant: "tertiary", text: null };
     obj42[0] = function onPress() {
       let obj = quest(QUEST_HOME_MOBILE[39]);
       obj = { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent };
-      obj.openLazy(outer1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[71], QUEST_HOME_MOBILE.paths), "QuestEnrollmentBlockedBottomSheet", obj);
+      obj.openLazy(outer1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[70], QUEST_HOME_MOBILE.paths), "QuestEnrollmentBlockedBottomSheet", obj);
     };
     const intl12 = tmp3(tmp4[44]).intl;
     obj42[2] = intl12.string(tmp3(tmp4[44]).t.vY9GgG);
-    items25[1] = tmp92(tmp3(tmp4[70]).Button, obj42);
+    items25[1] = tmp92(tmp3(tmp4[69]).Button, obj42);
     obj40[0] = items25;
     merged4 = obj40;
   } else {
@@ -952,7 +936,7 @@ const memoResult = importAllResult.memo((questContent) => {
       const obj44 = { grow: true, variant: "secondary", text: null, onPress: null };
       obj44[2] = tmp3(tmp4[28]).getExternalCtaLabel(quest);
       obj44[3] = callback1;
-      obj43[1] = tmp92(tmp3(tmp4[70]).Button, obj44);
+      obj43[1] = tmp92(tmp3(tmp4[69]).Button, obj44);
       merged4 = tmp92(tmp95, obj43);
       const tmp3Result38 = tmp3(tmp4[28]);
     }
@@ -963,7 +947,7 @@ const memoResult = importAllResult.memo((questContent) => {
     merged4 = obj46;
     merged4 = obj8;
     merged4 = Object.assign(obj8);
-    obj45[1] = tmp92(tmp3(tmp4[70]).Button, obj46);
+    obj45[1] = tmp92(tmp3(tmp4[69]).Button, obj46);
     items26[1] = tmp92(tmp95, obj45);
     obj40[0] = items26;
     merged4 = obj40;
@@ -980,9 +964,9 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj47 = { accessibilityLabel: null, icon: null, onPress: null, variant: "secondary" };
     const intl13 = tmp3(tmp4[44]).intl;
     obj47[0] = intl13.string(tmp3(tmp4[44]).t.YsCuyF);
-    obj47[1] = tmp10(tmp4[73]);
+    obj47[1] = tmp10(tmp4[72]);
     obj47[2] = callback2;
-    merged4 = tmp92(tmp3(tmp4[72]).IconButton, obj47);
+    merged4 = tmp92(tmp3(tmp4[71]).IconButton, obj47);
   }
   items27[1] = merged4;
   if (tmp92Result2) {
@@ -992,17 +976,17 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj48 = { accessibilityLabel: null, icon: null, onPress: null, variant: "secondary" };
     const intl14 = tmp3(tmp4[44]).intl;
     obj48[0] = intl14.string(tmp3(tmp4[44]).t.CkUzLd);
-    obj48[1] = tmp10(tmp4[73]);
+    obj48[1] = tmp10(tmp4[72]);
     obj48[2] = callback3;
-    tmp92Result2 = tmp92(tmp3(tmp4[72]).IconButton, obj48);
+    tmp92Result2 = tmp92(tmp3(tmp4[71]).IconButton, obj48);
   }
   items27[2] = tmp92Result2;
-  items27[3] = defaultRewardNameWithArticle(quest(tmp4[74]), { quest, showShareLink: !isQuestExpiredResult, location: first.QUESTS_CARD, sourceQuestContent });
+  items27[3] = defaultRewardNameWithArticle(quest(tmp4[73]), { quest, showShareLink: !isQuestExpiredResult, location: first.QUESTS_CARD, sourceQuestContent });
   obj39[4] = items27;
-  items20[2] = questEnrollmentBlockedUntil(tmp3(tmp4[65]).Stack, obj39);
+  items20[2] = questEnrollmentBlockedUntil(tmp3(tmp4[64]).Stack, obj39);
   obj13[2] = items20;
   obj12[2] = questEnrollmentBlockedUntil(tmp10Result, obj13);
-  return defaultRewardNameWithArticle(tmp3(tmp4[59]).Card, obj12);
+  return defaultRewardNameWithArticle(tmp3(tmp4[58]).Card, obj12);
 });
 let result3 = require("noop").fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 

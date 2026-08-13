@@ -50,7 +50,7 @@ function BurstReactionAnimationContainerInner() {
       let obj = { opacity: 0 };
     } else {
       obj = { opacity: null };
-      const tmp11 = callback(4345);
+      const tmp11 = callback(4343);
       const withTiming = tmp11.withTiming;
       const obj1 = { duration: 300 };
       if (first1) {
@@ -89,7 +89,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = { activeOpacity: null, onPress: null, style: null, children: null };
-      obj[0] = callback(7283).BACKDROP_OPACITY;
+      obj[0] = callback(7288).BACKDROP_OPACITY;
       obj[1] = function onPress() {
         outer1_4(false);
         outer1_5.current = false;
@@ -108,7 +108,7 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7325), obj3);
+        tmpResult = tmp(first(7330), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = outer1_8(handleComponentFinish, obj2);
@@ -119,7 +119,7 @@ function BurstReactionAnimationContainerInner() {
         obj5[0] = tmp4.dismissTextContainer;
         const intl = tmp2(1236).intl;
         obj5[2] = intl.string(tmp2(1236).t.QpPMih);
-        const items2 = [tmp(tmp2(4340).Text, obj5), ];
+        const items2 = [tmp(tmp2(4338).Text, obj5), ];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -132,8 +132,8 @@ function BurstReactionAnimationContainerInner() {
       obj[1] = outer1_8(first(4083).View, obj);
       return outer1_8(callback(1297).OverlayView, obj);
     };
-    tmp8 = callback(first(10047), obj);
-    let tmp11 = first(10047);
+    tmp8 = callback(first(10045), obj);
+    let tmp11 = first(10045);
   }
   return tmp8;
 }

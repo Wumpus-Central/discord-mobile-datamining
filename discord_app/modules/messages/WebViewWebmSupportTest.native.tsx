@@ -5,7 +5,7 @@ const result = require("set").fileFinishedImporting("modules/messages/WebViewWeb
 
 export const isIOSWithWebM = function isIOSWithWebM() {
   if (obj.isIOS()) {
-    const str = tmp(4324).getSocName();
+    const str = tmp(4322).getSocName();
     let tmp4 = null == str;
     if (!tmp4) {
       tmp4 = !str.startsWith(ARM64_);

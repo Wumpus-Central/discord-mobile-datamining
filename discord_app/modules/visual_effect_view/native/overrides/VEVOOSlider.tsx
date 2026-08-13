@@ -4,7 +4,7 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import importAllResult from "noop";
 import set from "createCacheKey";
-import { _getRequireWildcardCache } from "../../../../../_runtime/08030__getRequireWildcardCache.js";
+import { _getRequireWildcardCache } from "../../../../../_runtime/08034__getRequireWildcardCache.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const require = arg1;

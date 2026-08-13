@@ -229,7 +229,7 @@ let closure_17 = importAllResult.memo((game) => {
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4340).Text, obj5);
+    items3[1] = tmp10(tmp6(4338).Text, obj5);
     obj3[1] = items3;
     tmp8Result = tmp8(tmp9, obj3);
   }

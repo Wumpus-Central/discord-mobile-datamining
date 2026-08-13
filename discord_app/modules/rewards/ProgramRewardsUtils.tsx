@@ -23,7 +23,7 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
   } else {
     flag = false;
     if (tmp(13053).RewardProgram.XBOX === NITRO) {
-      tmpResult = tmp(7057);
+      tmpResult = tmp(7063);
       flag = tmpResult.getIsCrepeEnabled(str);
     }
   }
@@ -49,7 +49,7 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
   } else {
     flag = false;
     if (tmp(13053).RewardProgram.XBOX === XBOX) {
-      tmpResult = tmp(7057);
+      tmpResult = tmp(7063);
       flag = tmpResult.getIsCrepeEnabled(str);
     }
   }
@@ -89,7 +89,7 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
     let tmpResult = tmp(13056);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else if (tmp(13053).RewardProgram.XBOX === arg0) {
-    tmpResult = tmp(7057);
+    tmpResult = tmp(7063);
     return tmpResult.getIsCrepeEnabled(str);
   } else {
     return false;

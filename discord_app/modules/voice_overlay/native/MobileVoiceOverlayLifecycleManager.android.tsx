@@ -32,8 +32,6 @@ import { intl as intl9 } from "getSystemLocale";
 import { intl as intl10 } from "getSystemLocale";
 import { intl as intl11 } from "getSystemLocale";
 import "initialize";
-import { MessageQueue } from "../../../../_runtime/00039_MessageQueue.js";
-import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 
 let closure_14;
 let closure_15;
@@ -63,7 +61,6 @@ class MobileVoiceOverlayManager {
     obj.channelSelectorResults = [];
     obj.layoutTrashedSubscription = null;
     obj.channelQueryUpdateSubscription = null;
-    obj.isBatchedBridgeInitialized = false;
     obj.handleMobileVoiceOverlayStoreUpdate = function handleMobileVoiceOverlayStoreUpdate() {
       if (outer1_13.getEnabled()) {
         obj.handleOverlayEnable();
@@ -72,7 +69,7 @@ class MobileVoiceOverlayManager {
         const result1 = obj.unsubscribeFromNativeEvents();
         obj.overlayState = outer1_17.DISABLED;
         if (obj.isOverlayShowing()) {
-          const obj2 = outer1_1(outer1_2[24]);
+          const obj2 = outer1_1(outer1_2[22]);
           if (obj2 != null) {
             obj2.hideOverlay();
           }
@@ -80,7 +77,7 @@ class MobileVoiceOverlayManager {
       }
     };
     obj.handleOverlayEnable = function handleOverlayEnable() {
-      let obj = outer1_1(outer1_2[24]);
+      let obj = outer1_1(outer1_2[22]);
       if (obj != null) {
         const enableOverlayResult = obj.enableOverlay();
         obj.enableOverlay().then((arg0) => {
@@ -89,12 +86,12 @@ class MobileVoiceOverlayManager {
             const result1 = closure_0.subscribeToNativeEvents();
             closure_0.overlayState = outer1_17.NOT_SHOWING;
           } else {
-            outer1_1(outer1_2[25]).setEnabled(false);
+            outer1_1(outer1_2[23]).setEnabled(false);
             closure_0.overlayState = outer1_17.DISABLED;
-            const obj = outer1_1(outer1_2[25]);
+            const obj = outer1_1(outer1_2[23]);
           }
         }).catch(() => {
-          outer1_1(outer1_2[25]).setEnabled(false);
+          outer1_1(outer1_2[23]).setEnabled(false);
           closure_0.overlayState = outer1_17.DISABLED;
         });
         const nextPromise = obj.enableOverlay().then((arg0) => {
@@ -103,9 +100,9 @@ class MobileVoiceOverlayManager {
             const result1 = closure_0.subscribeToNativeEvents();
             closure_0.overlayState = outer1_17.NOT_SHOWING;
           } else {
-            outer1_1(outer1_2[25]).setEnabled(false);
+            outer1_1(outer1_2[23]).setEnabled(false);
             closure_0.overlayState = outer1_17.DISABLED;
-            const obj = outer1_1(outer1_2[25]);
+            const obj = outer1_1(outer1_2[23]);
           }
         });
       }
@@ -128,26 +125,18 @@ class MobileVoiceOverlayManager {
       return null != outer1_16.find((_changeCallbacks) => _changeCallbacks._changeCallbacks.has(obj.handleOverlayUIStoreUpdate));
     };
     obj.subscribeToNativeEvents = function subscribeToNativeEvents() {
-      obj = obj(outer1_2[22]);
-      if (obj.isFabric()) {
-        obj.layoutTrashedSubscription = outer1_1(tmp[24]).onLayoutTrashed(obj.handleLayoutTrashed);
-        const obj2 = outer1_1(tmp[24]);
-        obj.channelQueryUpdateSubscription = outer1_1(tmp[24]).onChannelQueryUpdate(obj.handleChannelQueryUpdate);
-        const obj3 = outer1_1(tmp[24]);
-      }
+      const obj = outer1_1(outer1_2[22]);
+      obj.layoutTrashedSubscription = obj.onLayoutTrashed(obj.handleLayoutTrashed);
+      obj.channelQueryUpdateSubscription = outer1_1(outer1_2[22]).onChannelQueryUpdate(obj.handleChannelQueryUpdate);
     };
     obj.unsubscribeFromNativeEvents = function unsubscribeFromNativeEvents() {
-      obj = obj(outer1_2[22]);
-      if (obj.isFabric()) {
-        const layoutTrashedSubscription = obj.layoutTrashedSubscription;
-        if (layoutTrashedSubscription != null) {
-          layoutTrashedSubscription.remove();
-        }
-        const channelQueryUpdateSubscription = obj.channelQueryUpdateSubscription;
-        if (channelQueryUpdateSubscription != null) {
-          channelQueryUpdateSubscription.remove();
-        }
-        const tmp = obj;
+      const layoutTrashedSubscription = obj.layoutTrashedSubscription;
+      if (layoutTrashedSubscription != null) {
+        layoutTrashedSubscription.remove();
+      }
+      const channelQueryUpdateSubscription = obj.channelQueryUpdateSubscription;
+      if (channelQueryUpdateSubscription != null) {
+        channelQueryUpdateSubscription.remove();
       }
     };
     obj.handleOverlayUIStoreUpdate = function handleOverlayUIStoreUpdate() {
@@ -162,7 +151,7 @@ class MobileVoiceOverlayManager {
             const overlayState = obj.overlayState;
             if (tmp.WAITING_FOR_SERVICE !== overlayState) {
               if (tmp.NOT_SHOWING === overlayState) {
-                const result = outer1_1(outer1_2[26]).isForegroundServiceRunning((arg0) => {
+                const result = outer1_1(outer1_2[24]).isForegroundServiceRunning((arg0) => {
                   if (arg0) {
                     obj.showOverlay();
                   } else {
@@ -267,12 +256,12 @@ class MobileVoiceOverlayManager {
                       obj2.currentVoiceChannelId = currentVoiceChannelId;
                       let tmp36 = outer1_1;
                       let tmp37 = outer1_2;
-                      let obj3 = outer1_1(outer1_2[24]);
+                      let obj3 = outer1_1(outer1_2[22]);
                       if (obj3 != null) {
                         obj = { users: null, channelName: null, guildName: null, guildId: null, channelId: null, extraUsers: null, deafened: null, muted: null, connectionQuality: null, canGenerateInvite: null, channelSelectorResults: null };
                         obj[0] = items;
                         let tmp51 = obj;
-                        let obj6 = obj(tmp37[27]);
+                        let obj6 = obj(tmp37[25]);
                         let tmp52 = outer1_11;
                         let tmp53 = outer1_9;
                         obj[1] = obj6.computeChannelName(channel, outer1_11, outer1_9);
@@ -331,7 +320,7 @@ class MobileVoiceOverlayManager {
       if (0 === query.length) {
         currentGuildId = obj.getVoiceConnectedGuildAndChannel().currentGuildId;
       }
-      obj = outer1_1(outer1_2[28]);
+      obj = outer1_1(outer1_2[26]);
       obj = {
         query,
         guildId: currentGuildId,
@@ -346,7 +335,7 @@ class MobileVoiceOverlayManager {
       obj.channelSelectorResults = obj.queryChannels(obj).map((record) => {
         record = record.record;
         const obj = { channelId: record.id, guildId: record.guild_id, channelName: null, guildName: null, categoryName: null };
-        obj[2] = lib(table[27]).computeChannelName(record, mergeGuildAvatar, markAllUserIdListsStale);
+        obj[2] = lib(table[25]).computeChannelName(record, mergeGuildAvatar, markAllUserIdListsStale);
         guild = guild.getGuild(record.guild_id);
         let str;
         if (guild != null) {
@@ -359,8 +348,8 @@ class MobileVoiceOverlayManager {
         channel = channel.getChannel(record.parent_id);
         let str2 = "";
         if (null != channel) {
-          str2 = lib(table[27]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
-          const tmpResult = lib(table[27]);
+          str2 = lib(table[25]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+          const tmpResult = lib(table[25]);
         }
         obj[4] = str2;
         return obj;
@@ -371,12 +360,12 @@ class MobileVoiceOverlayManager {
       const channel = outer1_3.getChannel(voiceConnectedGuildAndChannel.currentVoiceChannelId);
       const rTCConnectionId = outer1_8.getRTCConnectionId();
       obj = { type: "voice", rtc_connection_id: rTCConnectionId };
-      const obj2 = outer1_1(outer1_2[29]);
-      const merged = Object.assign(obj(outer1_2[30]).collectChannelAnalyticsMetadata(channel));
-      const obj4 = obj(outer1_2[30]);
-      const merged1 = Object.assign(obj(outer1_2[30]).collectGuildAnalyticsMetadata(voiceConnectedGuildAndChannel.currentGuildId));
+      const obj2 = outer1_1(outer1_2[27]);
+      const merged = Object.assign(obj(outer1_2[28]).collectChannelAnalyticsMetadata(channel));
+      const obj4 = obj(outer1_2[28]);
+      const merged1 = Object.assign(obj(outer1_2[28]).collectGuildAnalyticsMetadata(voiceConnectedGuildAndChannel.currentGuildId));
       obj2.track(outer1_14.MOBILE_OVERLAY_OPENED, obj);
-      const obj6 = outer1_1(outer1_2[24]);
+      const obj6 = outer1_1(outer1_2[22]);
       if (obj6 != null) {
         obj6.showOverlay(outer1_18);
       }
@@ -385,10 +374,10 @@ class MobileVoiceOverlayManager {
     };
     obj.hideOverlay = function hideOverlay() {
       const rTCConnectionId = outer1_8.getRTCConnectionId();
-      const obj = outer1_1(outer1_2[29]);
+      const obj = outer1_1(outer1_2[27]);
       obj.track(outer1_14.MOBILE_OVERLAY_CLOSED, { type: "voice", rtc_connection_id: rTCConnectionId });
-      outer1_1(outer1_2[29]).track(outer1_14.MOBILE_OVERLAY_CLOSED, {});
-      const obj3 = outer1_1(outer1_2[24]);
+      outer1_1(outer1_2[27]).track(outer1_14.MOBILE_OVERLAY_CLOSED, {});
+      const obj3 = outer1_1(outer1_2[22]);
       if (obj3 != null) {
         obj3.hideOverlay();
       }
@@ -414,8 +403,8 @@ class MobileVoiceOverlayManager {
       obj.trashedVoiceChannelId = obj.currentVoiceChannelId;
       const result = obj.handleOverlayUIStoreUpdate();
     };
-    obj.handleChannelQueryUpdate = function handleChannelQueryUpdate(handleChannelQueryUpdate) {
-      const result = obj.refreshChannelSelectorResults(handleChannelQueryUpdate);
+    obj.handleChannelQueryUpdate = function handleChannelQueryUpdate(query) {
+      const result = obj.refreshChannelSelectorResults(query);
       const result1 = obj.handleOverlayUIStoreUpdate();
     };
     return obj;
@@ -424,18 +413,6 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  let obj = isFabric;
-  if (!tmp2) {
-    if (typeof NativeCallableInterface !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    obj = Object.create(NativeCallableInterface.prototype);
-    obj.manager = self;
-    const result = MessageQueue.registerCallableModule("MobileVoiceOverlayManager", obj);
-    self.isBatchedBridgeInitialized = true;
-    const obj2 = MessageQueue;
-    const tmp4 = NativeCallableInterface;
-  }
   if (getUserAgnosticState.getEnabled()) {
     self.handleOverlayEnable();
   }
@@ -447,29 +424,13 @@ prototype["terminate"] = function terminate() {
   const result1 = this.unsubscribeFromNativeEvents();
 };
 let closure_19 = new MobileVoiceOverlayManager();
-class NativeCallableInterface {
-  constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.manager = global;
-    return obj;
-  }
-}
-const prototype2 = NativeCallableInterface.prototype;
-prototype2["onLayoutTrashed"] = function onLayoutTrashed(handleLayoutTrashed) {
-  const manager = this.manager;
-  manager.handleLayoutTrashed();
-};
-prototype2["onChannelQueryUpdate"] = function onChannelQueryUpdate(handleChannelQueryUpdate) {
-  const manager = this.manager;
-  const result = manager.handleChannelQueryUpdate(handleChannelQueryUpdate);
-};
 class MobileVoiceOverlayLifecycleManager extends tmp15 {
 }
-const prototype3 = MobileVoiceOverlayLifecycleManager.prototype;
-prototype3["_initialize"] = function _initialize() {
+const prototype2 = MobileVoiceOverlayLifecycleManager.prototype;
+prototype2["_initialize"] = function _initialize() {
   closure_19.initialize();
 };
-prototype3["_terminate"] = function _terminate() {
+prototype2["_terminate"] = function _terminate() {
   closure_19.terminate();
 };
 const mobileVoiceOverlayLifecycleManager = new MobileVoiceOverlayLifecycleManager();

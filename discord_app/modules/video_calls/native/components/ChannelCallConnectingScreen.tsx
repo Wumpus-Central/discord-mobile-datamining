@@ -10,7 +10,7 @@ import { InstantInviteSources } from "ME";
 import { Permissions } from "sum";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import { BottomSheetModal } from "../../../../../_runtime/05438_BottomSheetModal.js";
+import { BottomSheetModal } from "../../../../../_runtime/05439_BottomSheetModal.js";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -141,7 +141,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = createCacheKey();
-  let obj = channel(10873);
+  let obj = channel(10787);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (getUncachedChannelPermissions.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -158,14 +158,14 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };
-    obj[0] = tmp2(10926);
+    obj[0] = tmp2(10840);
     obj[1] = fn;
     const intl = tmp5(1236).intl;
     obj = { channelName: null };
     obj[0] = tmp4;
     obj[2] = intl.formatToPlainString(tmp5(1236).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10925), obj);
-    const tmp2Result = tmp2(10925);
+    tmp9Result = tmp9(tmp2(10839), obj);
+    const tmp2Result = tmp2(10839);
   }
   const obj1 = { children: null };
   items[1] = tmp9Result;

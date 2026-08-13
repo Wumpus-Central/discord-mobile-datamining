@@ -68,7 +68,7 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4684);
+            obj = outer1_0(4685);
             obj.dismissAlert(outer1_6);
             navigation.goBack();
             dependencyMap = 0;

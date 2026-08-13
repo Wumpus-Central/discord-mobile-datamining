@@ -12,13 +12,13 @@ export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTi
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(7665);
+      return callback(7669);
     },
     darker() {
-      return callback(7666);
+      return callback(7670);
     },
     light() {
-      return callback(7667);
+      return callback(7671);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(7665);
+      return callback(7669);
     },
     darker() {
-      return callback(7666);
+      return callback(7670);
     },
     light() {
-      return callback(7667);
+      return callback(7671);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(7665);
+      return callback(7669);
     },
     darker() {
-      return callback(7666);
+      return callback(7670);
     },
     light() {
-      return callback(7667);
+      return callback(7671);
     }
   };
   obj = {};

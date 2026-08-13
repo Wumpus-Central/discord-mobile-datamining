@@ -45,16 +45,16 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  let obj = hasOptions(11498);
+  let obj = hasOptions(11494);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     obj = { iconSource: null };
     obj[0] = appLauncherIconSource;
-    tmp4 = callback2(onPressSend(11503), obj);
+    tmp4 = callback2(onPressSend(11499), obj);
   }
-  let tmpResult = tmp(11552);
-  obj = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: tmp(9595).AppLauncherSectionName.SEARCH };
+  let tmpResult = tmp(11548);
+  obj = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: tmp(9599).AppLauncherSectionName.SEARCH };
   const commandRowSend = tmpResult.useCommandRowSend(obj);
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
@@ -77,15 +77,15 @@ function CommandRow(arg0) {
     }
   }, items1);
   const obj1 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  tmpResult = tmp(8382);
+  tmpResult = tmp(8386);
   obj1[2] = tmpResult.getSectionName(application);
   obj1[4] = isFirstRow;
   obj1[5] = isLastRow;
   obj1[6] = onPress;
   obj1[7] = memo;
   obj1[8] = callback;
-  obj1[9] = callback2(onPressSend(11552), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return callback2(hasOptions(5413).TableRow, obj1);
+  obj1[9] = callback2(onPressSend(11548), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return callback2(hasOptions(5414).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;

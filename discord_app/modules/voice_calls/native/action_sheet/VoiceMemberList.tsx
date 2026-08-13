@@ -15,7 +15,7 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { ThemeTypes } from "sum";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09768_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09772_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { GuildEventVoiceBanner } from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
@@ -228,7 +228,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8008).FormRow, obj);
+      items[1] = callback2(tmp4(8012).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

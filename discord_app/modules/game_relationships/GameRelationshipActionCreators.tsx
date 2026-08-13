@@ -364,7 +364,7 @@ export default {
       const intl = onSuccess(outer1_2[4]).intl;
       AccessibilityAnnouncer.announce(intl.string(onSuccess(outer1_2[4]).t.taJiuc));
     }).catch((arg0) => {
-      const aPIError = new onSuccess(4243).APIError(arg0);
+      const aPIError = new onSuccess(4241).APIError(arg0);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1236).intl;
@@ -374,7 +374,7 @@ export default {
         anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
       }
       obj[1] = anyErrorMessage;
-      callback(4682).show(obj);
+      callback(4683).show(obj);
       return Promise.reject(arg0);
     });
   },

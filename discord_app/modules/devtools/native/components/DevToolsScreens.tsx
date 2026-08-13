@@ -17,7 +17,7 @@ import { DismissableContentsEmpty } from "screens/DevToolsDismissableContentsScr
 import { effectName } from "screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx";
 import { UserExperimentDebugView } from "screens/DevToolsExperimentsScreen.tsx";
 import { PoolIdInput } from "screens/DevToolsGeneratedTestUsersScreen.tsx";
-import { handleResetInAppNotificationExpandNux } from "screens/DevToolsInAppNotificationTestingScreen.tsx";
+import { getSelectedGuildChannel } from "screens/DevToolsInAppNotificationTestingScreen.tsx";
 import { CacheLogEntry } from "screens/DevToolsLocalMessageCache.tsx";
 import { DevToolsLoggingFlagsScreen } from "screens/DevToolsLoggingFlagsScreen.tsx";
 import { OtaVerificationActionSheet } from "screens/DevToolsOTATestScreen.tsx";
@@ -364,7 +364,7 @@ obj[24] = {
   headerTitle: "In App Notification Testing",
   Icon: require("MagicWandIcon").MagicWandIcon,
   render() {
-    return jsx(handleResetInAppNotificationExpandNux.default, {});
+    return jsx(getSelectedGuildChannel.default, {});
   }
 };
 const obj24 = { displayNameEffectsBenchmark: null };
@@ -372,7 +372,7 @@ const obj23 = {
   headerTitle: "In App Notification Testing",
   Icon: require("MagicWandIcon").MagicWandIcon,
   render() {
-    return jsx(handleResetInAppNotificationExpandNux.default, {});
+    return jsx(getSelectedGuildChannel.default, {});
   }
 };
 obj24[0] = {

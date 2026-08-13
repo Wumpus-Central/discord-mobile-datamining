@@ -77,7 +77,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       const obj4 = { perks: null };
       obj4[0] = str2;
       obj[2] = intl.format(tmp2(2335)["7lwpzR"], obj4);
-      obj[1] = jsx(guild(4340).Text, { style: null, variant: "text-sm/semibold", children: null });
+      obj[1] = jsx(guild(4338).Text, { style: null, variant: "text-sm/semibold", children: null });
       return <View style={null} variant="text-sm/semibold">{null}</View>;
     }
   }

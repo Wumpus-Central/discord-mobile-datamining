@@ -9,7 +9,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   let closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "clientIp", scrollPosition: null, windowSize: "blockQuote", setStateShallow: "channelMention", dropStart: null, dropComplete: null };
+  let obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "bojov\u00E9 um\u011Bn\u00ED", scrollPosition: "\u010Dern\u00FD p\u00E1s", windowSize: "d\u017Eudo", setStateShallow: "judo", dropStart: "karate", dropComplete: "kimono" };
   obj[3] = _ReanimatedRexport.makeMutable({ min: 0, max: 0 });
   const obj2 = _ReanimatedRexport;
   obj[4] = _ReanimatedRexport.makeMutable(obj);
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessibilityRole" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       const _setTimeout = setTimeout;
@@ -85,7 +85,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(outer1_2[3]).batchUpdates(() => callback({ dropSpecs: "Array" }));
+      callback(outer1_2[3]).batchUpdates(() => callback({ dropSpecs: "sa" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       if (null == dragSpecs) {

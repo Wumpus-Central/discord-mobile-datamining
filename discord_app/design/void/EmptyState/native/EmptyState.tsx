@@ -58,7 +58,7 @@ export default function EmptyState(Illustration) {
     const items4 = [tmp.emptyTitle, tmp11];
     obj2[3] = items4;
     obj2[4] = title;
-    tmp14 = callback(tmp2(4340).Text, obj2);
+    tmp14 = callback(tmp2(4338).Text, obj2);
   }
   items3[1] = tmp14;
   let tmp16 = null;
@@ -67,7 +67,7 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp.emptyBody, bodyStyle];
     obj3[3] = items5;
     obj3[4] = body;
-    tmp16 = callback(tmp2(4340).Text, obj3);
+    tmp16 = callback(tmp2(4338).Text, obj3);
   }
   items3[2] = tmp16;
   items3[3] = children;

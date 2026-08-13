@@ -15,7 +15,7 @@ import importDefaultResult1 from "module_4083";
 import importDefaultResult2 from "module_4083";
 import createCacheKey from "createCacheKey";
 import importDefaultResult3 from "Button";
-import { inlineStyles } from "../../../../../_runtime/07876_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07880_inlineStyles.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";

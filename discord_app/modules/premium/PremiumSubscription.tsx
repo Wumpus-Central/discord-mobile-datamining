@@ -58,8 +58,8 @@ export const getNonePlanIdForSubscription = function getNonePlanIdForSubscriptio
   }
   return NONE_MONTH;
 };
-export const getBaseSubscriptionItemForSubscriptionItems = function getBaseSubscriptionItemForSubscriptionItems(arr) {
-  return arr.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);
+export const getBaseSubscriptionItemForSubscriptionItems = function getBaseSubscriptionItemForSubscriptionItems(items) {
+  return items.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);
 };
 export const getBasePlanIdForSubscriptionItems = function getBasePlanIdForSubscriptionItems(items, interval, intervalCount) {
   const found = items.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);

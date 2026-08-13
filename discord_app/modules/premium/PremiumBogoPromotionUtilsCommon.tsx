@@ -164,13 +164,13 @@ function _isEligibleForBOGOPromotion() {
                   isClaimedResult = currentUser2.isClaimed();
                 }
                 dependencyMap = !isClaimedResult;
-                let obj2 = flag(6922);
+                let obj2 = flag(6928);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
                 let obj3 = flag(12804);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
                 let obj4 = flag(12806);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
-                const isMobile = flag(4580).isMobile;
+                const isMobile = flag(4581).isMobile;
                 let isAndroidResult = !isMobile;
                 if (isMobile) {
                   let obj5 = flag(500);
@@ -200,7 +200,7 @@ function _isEligibleForBOGOPromotion() {
                             isPaymentsBlocked = 2;
                             authStore = 1;
                             obj2 = { value: null, done: false };
-                            obj2[0] = flag(4663).fetchMostRecentSubscription();
+                            obj2[0] = flag(4664).fetchMostRecentSubscription();
                             return obj2;
                           }
                         }
@@ -246,7 +246,7 @@ function _isEligibleForBOGOPromotion() {
               isPaymentsBlocked = 3;
               authStore = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = flag(4663).fetchSubscriptions();
+              obj6[0] = flag(4664).fetchSubscriptions();
               return obj6;
             }
           }
@@ -404,7 +404,7 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdate({ delay: num2 });
-  const isMobile = tmp(4580).isMobile;
+  const isMobile = tmp(4581).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
     let tmpResult = tmp(500);

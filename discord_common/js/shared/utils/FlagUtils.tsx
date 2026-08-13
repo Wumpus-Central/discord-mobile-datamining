@@ -7,8 +7,8 @@ export const hasFlag = function hasFlag(arg0, arg1) {
 export const hasAnyFlag = function hasAnyFlag(flags, arg1) {
   return flags & arg1;
 };
-export const addFlag = function addFlag(setting, MUTUAL_FRIENDS) {
-  return setting | MUTUAL_FRIENDS;
+export const addFlag = function addFlag(setting, SUPPRESS_NOTIFICATIONS) {
+  return setting | SUPPRESS_NOTIFICATIONS;
 };
 export const removeFlag = function removeFlag(flags, OBFUSCATED) {
   return flags & ~OBFUSCATED;

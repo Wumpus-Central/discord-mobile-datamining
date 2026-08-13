@@ -107,7 +107,7 @@ export default function FamilyCenterModalDataTooltip() {
   const memo = React.useMemo(() => {
     let obj = { DATA_TOOLTIP: null };
     obj = { headerShown: true, headerLeft: null, headerTitle: null, render: null };
-    obj[1] = callback(5309).getHeaderCloseButton(callback2(4549).pop);
+    obj[1] = callback(5310).getHeaderCloseButton(callback2(4550).pop);
     obj[2] = function headerTitle() {
       return null;
     };

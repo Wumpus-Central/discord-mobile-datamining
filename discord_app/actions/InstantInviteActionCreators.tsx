@@ -20,7 +20,7 @@ import { StaticChannelRoute } from "set";
 import { StreamTypes } from "StreamIssueReportReasons";
 import { InviteTargetTypes } from "InviteSendStates";
 import { STAGE_INVITE_STATE_KEY } from "MAX_STAGE_TOPIC_LENGTH";
-import { format } from "../../_runtime/04662_format.js";
+import { format } from "../../_runtime/04663_format.js";
 import { getInviteDynamicLinkTemplate } from "../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx";
 import { generateDynamicLink } from "../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -674,7 +674,7 @@ export default {
       obj[1] = arg0;
       tmp(709).dispatch(obj);
       const tmpResult = tmp(709);
-      nextPromise = tmp(9378)(arg0, arg1, arg2).then((arg0) => {
+      nextPromise = tmp(9382)(arg0, arg1, arg2).then((arg0) => {
         let code;
         let invite;
         ({ invite, code } = arg0);
@@ -693,7 +693,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(9378)(arg0, arg1, arg2);
+      const promise = tmp(9382)(arg0, arg1, arg2);
     }
     return nextPromise;
   },
@@ -796,7 +796,7 @@ export default {
             const obj5 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: null };
             obj5[1] = body;
             obj4.dispatch(obj5);
-            const tmp30 = new outer1_1(4244)(closure_1);
+            const tmp30 = new outer1_1(4242)(closure_1);
             throw tmp30;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -1040,7 +1040,7 @@ export default {
         return obj.exact(obj);
       };
       obj1[1] = obj2;
-      yield outer1_1(5167).get(obj1);
+      yield outer1_1(5168).get(obj1);
       if (1 === tmp7) {
         dependencyMap = 0;
         const obj3 = outer1_1(709);
@@ -1072,7 +1072,7 @@ export default {
   revokeInvite(outer1_0) {
     const code = outer1_0.code;
     const channel = outer1_0.channel;
-    let obj = channel(5167);
+    let obj = channel(5168);
     obj = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: code(503).NetworkActionNames.INVITE_REVOKE, properties: obj1 };
     obj[2] = obj;
@@ -2018,10 +2018,10 @@ export default {
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = id(1403).hasFlag(num, id(7813).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = id(1403).hasFlag(num, id(7817).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
       let tmp6Result = tmp6(1403);
-      hasFlagResult = tmp6Result.hasFlag(num, tmp6(7813).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      hasFlagResult = tmp6Result.hasFlag(num, tmp6(7817).GuildInviteFlags.IS_APPLICATION_BYPASS);
     }
     if (null != guild) {
       if (!hasFlagResult) {
@@ -2447,7 +2447,7 @@ export default {
     obj = { type: "INVITE_APP_OPENING", code };
     obj1.dispatch(obj);
     if (null != format.ua) {
-      const formatted = tmp7(4662).ua.toLowerCase();
+      const formatted = tmp7(4663).ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         let tmp7Result = tmp7(709);
         obj = { type: "INVITE_APP_NOT_OPENED", code: null };
@@ -2455,13 +2455,13 @@ export default {
         tmp7Result.dispatch(obj);
       }
     }
-    const os = tmp7(4662).os;
+    const os = tmp7(4663).os;
     let family;
     if (os != null) {
       family = os.family;
     }
     if ("Android" !== family) {
-      const os2 = tmp7(4662).os;
+      const os2 = tmp7(4663).os;
       let family1;
       if (os2 != null) {
         family1 = os2.family;

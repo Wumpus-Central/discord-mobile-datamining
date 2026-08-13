@@ -42,8 +42,8 @@ export default function GuildPowerupsGameServerCard(guildId) {
       obj[4] = <View style={null}>{null}</View>;
       obj[6] = tmp6;
       obj[7] = tmp9;
-      tmp10 = jsx(tmp5(11990), { style: null, children: null });
-      const tmp5Result = tmp5(11990);
+      tmp10 = jsx(tmp5(11992), { style: null, children: null });
+      const tmp5Result = tmp5(11992);
     }
   }
   return tmp10;

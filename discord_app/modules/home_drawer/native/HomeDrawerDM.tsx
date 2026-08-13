@@ -32,8 +32,8 @@ function HomeDrawerDMExpandedChildren(channel) {
     let tmp2 = null;
     if (null != channel) {
       if (stateFromStores1(tmp.type)) {
-        let channelName = channel(4534).computeChannelName(tmp, outer1_8, memo);
-        const obj = channel(4534);
+        let channelName = channel(4535).computeChannelName(tmp, outer1_8, memo);
+        const obj = channel(4535);
       } else {
         channelName = null;
       }
@@ -42,9 +42,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(589);
-  const tmp3 = useMessagePreview(channel, { unread: channel(15537).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreview(channel, { unread: channel(15547).useBaseChannelUnreadBadgeState(channel, false).unread });
   c4 = tmp3;
-  const obj3 = channel(15537);
+  const obj3 = channel(15547);
   const items2 = [updateUserGuildSettingsInternal];
   stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_7.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -84,7 +84,7 @@ function HomeDrawerDMExpandedChildren(channel) {
         tmp5Result = tmp5(12629);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(9777).BellSlashIcon;
+        BellSlashIcon = tmp5(9781).BellSlashIcon;
       }
     } else {
       let obj = { style: null, children: null };
@@ -92,7 +92,7 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj = { variant: "text-md/medium", style: null, lineClamp: 1, color: "text-default", children: null };
       obj[1] = _undefined.titleText;
       obj[4] = stateFromStores;
-      const items = [outer1_10(channel(4340).Text, obj), outer1_10(outer1_9, { size: "xs" })];
+      const items = [outer1_10(channel(4338).Text, obj), outer1_10(outer1_9, { size: "xs" })];
       obj[1] = items;
       return outer1_11(c4, obj);
     }
@@ -105,11 +105,11 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj[1] = tmp;
       obj[4] = channel(4039).ChannelListLayoutTypes.COZY;
       obj[5] = memo.isMuted;
-      tmp2 = outer1_10(channel(9836).ChannelRowPreview, obj);
+      tmp2 = outer1_10(channel(9839).ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(15501).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(15510).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });

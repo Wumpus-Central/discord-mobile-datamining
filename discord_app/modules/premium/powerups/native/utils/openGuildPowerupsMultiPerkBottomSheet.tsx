@@ -6,5 +6,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/premiu
 
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  obj.openLazy(asyncRequireImpl(11966, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
+  obj.openLazy(asyncRequireImpl(11968, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
 };

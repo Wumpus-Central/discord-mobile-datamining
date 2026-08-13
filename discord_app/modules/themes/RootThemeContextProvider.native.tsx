@@ -26,12 +26,14 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   chatInputLegacySendButton = mobileVisualRefreshConfig.chatInputLegacySendButton;
   const obj2 = enabled(chatInputLegacySendButton[7]);
   manaTypeConsolidationExperiment = enabled(chatInputLegacySendButton[8]).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+  const obj3 = enabled(chatInputLegacySendButton[8]);
   const items1 = [enabled, chatInputFloating, chatInputLegacySendButton, manaTypeConsolidationExperiment];
+  const plainTextExperiment = enabled(chatInputLegacySendButton[9]).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
-      let tmpResult = tmp(tmp2[9]);
-      num2 = tmpResult.setThemeFlag(0, tmp(tmp2[9]).ThemeContextFlags.REDUCE_SATURATION_ENABLED);
+      let tmpResult = tmp(tmp2[10]);
+      num2 = tmpResult.setThemeFlag(0, tmp(tmp2[10]).ThemeContextFlags.REDUCE_SATURATION_ENABLED);
     }
     if (1 === contrast) {
       obj = { theme: null, flags: null, saturation: null, contrast: null, enabledExperiments: null, children: null };
@@ -39,23 +41,26 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
       obj[1] = num2;
       obj[2] = saturation;
       obj[3] = contrast;
-      obj[4] = tmp7;
-      obj[5] = children.children;
-      return jsx(tmp(tmp2[10]).RootThemeContextProvider, { theme: null, flags: null, saturation: null, contrast: null, enabledExperiments: null, children: null });
+      obj[4] = tmp8;
+      obj = { enabled: null, children: null };
+      obj[0] = plainTextExperiment;
+      obj[1] = children.children;
+      obj[5] = jsx(tmp(tmp2[12]).PlainTextExperimentProvider, { enabled: null, children: null });
+      return jsx(tmp(tmp2[11]).RootThemeContextProvider, { enabled: null, children: null });
     } else {
-      tmpResult = tmp(tmp2[9]);
+      tmpResult = tmp(tmp2[10]);
       if (contrast > 1) {
-        let REDUCED_CONTRAST_ENABLED = tmp(tmp2[9]).ThemeContextFlags.INCREASED_CONTRAST_ENABLED;
+        let REDUCED_CONTRAST_ENABLED = tmp(tmp2[10]).ThemeContextFlags.INCREASED_CONTRAST_ENABLED;
       } else {
-        REDUCED_CONTRAST_ENABLED = tmp(tmp2[9]).ThemeContextFlags.REDUCED_CONTRAST_ENABLED;
+        REDUCED_CONTRAST_ENABLED = tmp(tmp2[10]).ThemeContextFlags.REDUCED_CONTRAST_ENABLED;
       }
       tmpResult.setThemeFlag(num2, REDUCED_CONTRAST_ENABLED);
     }
   } else if (tmp4.theme === ThemeTypes.LIGHT) {
-    let setThemeFlagResult1 = tmp(tmp2[9]).setThemeFlag(0, tmp(tmp2[9]).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
-    const tmpResult1 = tmp(tmp2[9]);
+    let setThemeFlagResult1 = tmp(tmp2[10]).setThemeFlag(0, tmp(tmp2[10]).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
+    const tmpResult1 = tmp(tmp2[10]);
   } else {
-    setThemeFlagResult1 = tmp(tmp2[9]).setThemeFlag(0, tmp(tmp2[9]).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
-    const tmpResult2 = tmp(tmp2[9]);
+    setThemeFlagResult1 = tmp(tmp2[10]).setThemeFlag(0, tmp(tmp2[10]).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
+    const tmpResult2 = tmp(tmp2[10]);
   }
 };

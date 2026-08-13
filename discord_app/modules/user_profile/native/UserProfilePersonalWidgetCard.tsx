@@ -58,7 +58,7 @@ function CoverSection(arg0) {
     obj = { colors: null, style: null };
     obj[0] = closure_11;
     obj[1] = closure_5.absoluteFill;
-    tmp6 = callback(image(4765), obj);
+    tmp6 = callback(image(4766), obj);
   }
   const items2 = [tmp6, , ];
   let tmp12 = null;
@@ -191,7 +191,7 @@ export default function UserProfilePersonalWidgetCard(userId) {
   obj = { style: cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = createCacheKey();
   const tmp5 = importDefault;
-  obj[1] = callback(userId(7745).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback(userId(7749).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {

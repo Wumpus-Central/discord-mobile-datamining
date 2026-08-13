@@ -7,7 +7,7 @@ import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA";
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA";
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
@@ -51,7 +51,7 @@ function PillWrapper(expressivePressState) {
   if (shiny) {
     obj = { variant: null };
     obj[0] = variant;
-    tmp7 = callback2(tmp(4764).ButtonShine, obj);
+    tmp7 = callback2(tmp(4765).ButtonShine, obj);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {
@@ -121,7 +121,7 @@ class BasicButtonPill {
       flag = false;
     }
     ({ expressiveRiveRef, expressivePressState } = global);
-    tmp3 = f33109(str, DEFAULT_BUTTON_SIZE);
+    tmp3 = f33124(str, DEFAULT_BUTTON_SIZE);
     obj = { variant: str, size: DEFAULT_BUTTON_SIZE, style: items, pressed, shiny: flag, expressiveRiveRef, expressivePressState, children: jsx(View, obj) };
     items = [, ];
     items[0] = tmp3.pill;
@@ -152,7 +152,7 @@ class LoadingButtonPill {
     useRef = undefined;
     c2 = undefined;
     ({ expressiveRiveRef, expressivePressState } = global);
-    tmp3 = f33109(str, DEFAULT_BUTTON_SIZE);
+    tmp3 = f33124(str, DEFAULT_BUTTON_SIZE);
     useRef = noop.useRef(null);
     tmp4 = _slicedToArray(noop.useState(flag), 2);
     [tmp5, c2] = tmp4;

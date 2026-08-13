@@ -45,7 +45,7 @@ function CollectionItem(arg0) {
   if ("value" === singleStringOrSkeleton.status) {
     const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: null };
     obj4[2] = singleStringOrSkeleton.text;
-    let tmp12Result = tmp12(tmp3(4340).Text, obj4);
+    let tmp12Result = tmp12(tmp3(4338).Text, obj4);
   } else {
     tmp12Result = tmp12(tmp3(12508).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
@@ -53,7 +53,7 @@ function CollectionItem(arg0) {
   if ("value" === singleStringOrSkeleton1.status) {
     const obj5 = { variant: "text-xxs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj5[3] = singleStringOrSkeleton1.text;
-    tmp12Result = tmp12(tmp3(4340).Text, obj5);
+    tmp12Result = tmp12(tmp3(4338).Text, obj5);
   } else {
     tmp12Result = tmp12(tmp3(12508).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
   }

@@ -3,12 +3,12 @@ import importAllResult from "useSafeAreaInsets";
 import { Platform } from "useGradientBottom";
 import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes";
 import ME from "ME";
-import jsxProd from "module_4354";
+import jsxProd from "module_4355";
 import createCacheKey from "createCacheKey";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getMixedGradientColor } from "../../../client_themes/native/ThemedGradient.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { set } from "../../../core/native/ReanimatedNativeView.tsx";
 import { dismissPanel } from "../VoicePanelStateContext.tsx";
 
 let c4;
@@ -35,7 +35,7 @@ let closure_10 = importAllResult.memo(() => {
   items = [callback2().gradientWrapper, animatedStyle];
   const tmp = callback2();
   obj[1] = callback(getMixedGradientColor, { absolute: true });
-  return callback(ReanimatedNativeView, obj);
+  return callback(set, obj);
 });
 const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   const callback = importAllResult.useCallback(() => {
@@ -46,15 +46,15 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4299);
+    obj[1] = tmp(4297);
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11701), obj);
-    const tmpResult = tmp(11701);
+    let tmp5Result = tmp5(tmp(11699), obj);
+    const tmpResult = tmp(11699);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4299);
+    obj[1] = tmp(4297);
     obj[2] = callback;
     tmp5Result = tmp5(IconButton.IconButton, obj);
   }

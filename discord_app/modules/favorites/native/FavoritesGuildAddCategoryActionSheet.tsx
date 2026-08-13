@@ -29,7 +29,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj = { title: null };
   const intl = first(1236).intl;
   obj[0] = intl.string(first(1236).t["ISN+NM"]);
-  obj[3] = callback2(first(5435).BottomSheetTitleHeader, obj);
+  obj[3] = callback2(first(5436).BottomSheetTitleHeader, obj);
   const obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = first(1236).intl;
   obj1[0] = intl2.string(first(1236).t.OCAkGP);
@@ -39,15 +39,15 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj1[3] = tmp2[1];
   obj1[4] = closure_5;
   obj1[8] = callback;
-  const items1 = [callback2(first(7831).TextInput, obj1), ];
+  const items1 = [callback2(first(7835).TextInput, obj1), ];
   let obj2 = { text: null, onPress: null, disabled: null };
   const intl4 = first(1236).intl;
   obj2[0] = intl4.string(first(1236).t.CumH4u);
   obj2[1] = callback;
   obj2[2] = !result;
-  items1[1] = callback2(first(4754).Button, obj2);
+  items1[1] = callback2(first(4755).Button, obj2);
   obj[4] = items1;
-  return callback3(first(5436).BottomSheet, obj);
+  return callback3(first(5437).BottomSheet, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";

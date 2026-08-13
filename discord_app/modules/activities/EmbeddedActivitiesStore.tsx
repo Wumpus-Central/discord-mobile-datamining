@@ -64,7 +64,7 @@ function updateEmbeddedActivities(content_classification) {
       const sessionId = found1.sessionId;
     }
     let obj4 = map;
-    const obj20 = application_id(3979);
+    const obj19 = application_id(3979);
     const value1 = map.get(application_id);
     let obj5 = map4;
     let tmp12 = embeddedActivityLocationChannelId;
@@ -135,9 +135,9 @@ function updateEmbeddedActivities(content_classification) {
       if (_location.id === value1.location.id) {
         if (application_id === value1.applicationId) {
           if (someResult) {
-            let tmp58 = null;
+            let tmp61 = null;
             if (mapped1.length > 0) {
-              tmp58 = obj;
+              tmp61 = obj;
             }
             let id = _location.id;
             let value3 = obj1.get(id);
@@ -149,11 +149,11 @@ function updateEmbeddedActivities(content_classification) {
               obj1[0] = [];
               const result1 = obj1.set(id, obj1);
               value3 = obj1;
-              const tmp59 = ActivityBucket;
+              const tmp62 = ActivityBucket;
             }
-            value3.upsert(application_id, _location.id, tmp58);
-            let tmp76Result = tmp76(3979);
-            const embeddedActivityLocationChannelId1 = tmp76Result.getEmbeddedActivityLocationChannelId(_location);
+            value3.upsert(application_id, _location.id, tmp61);
+            let tmp79Result = tmp79(3979);
+            const embeddedActivityLocationChannelId1 = tmp79Result.getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value4 = map2.get(embeddedActivityLocationChannelId1);
               if (null == value4) {
@@ -162,13 +162,13 @@ function updateEmbeddedActivities(content_classification) {
                 }
                 const obj2 = Object.create(ActivityBucket.prototype);
                 obj2[0] = [];
-                const result2 = obj23.set(embeddedActivityLocationChannelId1, obj2);
+                const result2 = obj22.set(embeddedActivityLocationChannelId1, obj2);
                 value4 = obj2;
-                const tmp65 = ActivityBucket;
+                const tmp68 = ActivityBucket;
               }
-              value4.upsert(application_id, _location.id, tmp58);
-              tmp76Result = tmp76(3979);
-              let str5 = tmp76Result.getEmbeddedActivityLocationGuildId(_location);
+              value4.upsert(application_id, _location.id, tmp61);
+              tmp79Result = tmp79(3979);
+              let str5 = tmp79Result.getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
               }
@@ -179,20 +179,20 @@ function updateEmbeddedActivities(content_classification) {
                 }
                 obj3 = Object.create(ActivityBucket.prototype);
                 obj3[0] = [];
-                const result3 = obj18.set(str5, obj3);
+                const result3 = obj17.set(str5, obj3);
                 value5 = obj3;
-                const tmp71 = ActivityBucket;
+                const tmp74 = ActivityBucket;
               }
-              value5.upsert(application_id, _location.id, tmp58);
-              obj18 = map1;
-              obj23 = map2;
+              value5.upsert(application_id, _location.id, tmp61);
+              obj17 = map1;
+              obj22 = map2;
             }
           } else {
             const _Array = Array;
             const arr = Array.from(value1.userIds);
           }
           obj4.delete(value1.applicationId);
-          const ComponentDispatch = tmp76(1231).ComponentDispatch;
+          const ComponentDispatch = tmp79(1231).ComponentDispatch;
           ComponentDispatch.dispatch(constants.RELEASE_ACTIVITY_WEB_VIEW);
         }
       }
@@ -203,7 +203,10 @@ function updateEmbeddedActivities(content_classification) {
         if (value2 != null) {
           const inviterUserId = value2.inviterUserId;
         }
-        const tmp36 = combined(10652)(application_id);
+        if (launchParams != null) {
+          const renderInFramePool = launchParams.renderInFramePool;
+        }
+        const tmp36 = combined(10566)(application_id);
         if (null != tmp36) {
           if (null != obj3.getSessionId()) {
             const value6 = obj4.get(application_id);
@@ -212,7 +215,7 @@ function updateEmbeddedActivities(content_classification) {
               id = value6.location.id;
             }
             if (id !== _location.id) {
-              const embeddedActivityLocationChannelId2 = tmp76(3979).getEmbeddedActivityLocationChannelId(_location);
+              const embeddedActivityLocationChannelId2 = tmp79(3979).getEmbeddedActivityLocationChannelId(_location);
               channel = channel.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
                 const guildId = channel.getGuildId();
@@ -224,7 +227,7 @@ function updateEmbeddedActivities(content_classification) {
                     isPrivateResult = channel.isPrivate();
                   }
                 }
-                obj4 = { applicationId: null, url: null, userIds: null, participants: null, connectedSince: null, launchId: null, compositeInstanceId: null, location: null, referrerId: null, customId: null, proxyTicket: null };
+                obj4 = { applicationId: null, url: null, userIds: null, participants: null, connectedSince: null, launchId: null, compositeInstanceId: null, location: null, referrerId: null, customId: null, proxyTicket: null, renderInFramePool: null };
                 obj4[0] = application_id;
                 obj4[1] = tmp36;
                 const _Set2 = Set;
@@ -239,52 +242,55 @@ function updateEmbeddedActivities(content_classification) {
                 obj4[8] = referrerId;
                 obj4[9] = customId;
                 obj4[10] = obj.proxyTicket;
+                obj4[11] = renderInFramePool;
                 const result4 = obj4.set(application_id, obj4);
-                const ComponentDispatch2 = tmp76(1231).ComponentDispatch;
+                const ComponentDispatch2 = tmp79(1231).ComponentDispatch;
                 obj5 = { location: null, applicationId: null, isFirstActivityInChannel: null, isStart: null, participants: null, embeddedActivity: null, inviterUserId: null };
                 obj5[0] = _location;
                 obj5[1] = application_id;
                 obj5[2] = 0 === arr2.length;
-                obj5[3] = tmp78;
+                obj5[3] = tmp81;
                 obj5[4] = mapped;
                 obj5[5] = obj4;
                 obj5[6] = inviterUserId;
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj5);
-                if (tmp76Result2.shouldOpenActivityInPopoutWindow()) {
-                  let PIP = ActivityPanelModes.ACTIVITY_POPOUT_WINDOW;
-                  combined(709).wait(() => {
-                    callback(709).dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
-                  });
-                  const combinedResult = combined(709);
-                } else {
+                tmp79(10622);
+                if (true === renderInFramePool) {
+                  let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
+                  const _HermesInternal2 = HermesInternal;
+                  combined = "" + _location.id + ":" + application_id;
+                  const _Date2 = Date;
+                  const result5 = map11.set(combined, Date.now());
+                } else if (!tmp50) {
                   if (embeddedActivityLocationChannelId2 === channelId.getChannelId()) {
-                    if (!combined(10452)(embeddedActivityLocationChannelId2)) {
-                      PIP = ActivityPanelModes.PANEL;
+                    if (!combined(10366)(embeddedActivityLocationChannelId2)) {
+                      let PIP = ActivityPanelModes.PANEL;
                     }
+                    ACTIVITY_POPOUT_WINDOW = PIP;
                   }
                   PIP = ActivityPanelModes.PIP;
                 }
-                const _HermesInternal2 = HermesInternal;
-                combined = "" + _location.id + ":" + application_id;
-                const _Date2 = Date;
-                const result5 = map11.set(combined, Date.now());
+                ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.ACTIVITY_POPOUT_WINDOW;
+                combined(709).wait(() => {
+                  callback(709).dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+                });
+                const combinedResult = combined(709);
                 const tmp41 = 0 === arr2.length;
-                tmp76Result2 = tmp76(10708);
               }
-              const tmp76Result1 = tmp76(3979);
+              const tmp79Result1 = tmp79(3979);
             }
           }
         }
-        tmp78 = null == found;
+        tmp81 = null == found;
       }
-      let tmp56 = embeddedActivityLocationChannelId;
+      let tmp59 = embeddedActivityLocationChannelId;
       if (embeddedActivityLocationChannelId == null) {
-        tmp56 = null;
+        tmp59 = null;
       }
       const _HermesInternal3 = HermesInternal;
-      obj5.delete("" + application_id + ":" + tmp56);
+      obj5.delete("" + application_id + ":" + tmp59);
     }
-    const someResult1 = mapped.some((userId) => application_id(13399).isActivityParticipantCurrentUserCurrentSession(userId));
+    const someResult1 = mapped.some((userId) => application_id(13400).isActivityParticipantCurrentUserCurrentSession(userId));
   }
 }
 ActivityPanelModes = ActivityPanelModes.ActivityPanelModes;
@@ -343,7 +349,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedVisible = self.cachedVisible;
         if (cachedVisible == null) {
           const items = self.items;
-          const found = items.filter((contentClassification) => !callback(10703).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found = items.filter((contentClassification) => !callback(10617).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedVisible = found;
           cachedVisible = found;
         }
@@ -352,7 +358,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedHidden = self.cachedHidden;
         if (cachedHidden == null) {
           const items1 = self.items;
-          const found1 = items1.filter((contentClassification) => callback(10703).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found1 = items1.filter((contentClassification) => callback(10617).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedHidden = found1;
           cachedHidden = found1;
         }

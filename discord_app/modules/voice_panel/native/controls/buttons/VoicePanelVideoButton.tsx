@@ -22,7 +22,7 @@ function VideoButtonRive(arg0) {
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(7755).VideoIcon;
+    let VideoSlashIcon = tmp3(7759).VideoIcon;
   } else {
     VideoSlashIcon = tmp3(12389).VideoSlashIcon;
   }

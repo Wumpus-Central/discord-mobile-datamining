@@ -149,13 +149,13 @@ export const browserManagerSelectBrowser = function browserManagerSelectBrowser(
   let obj = set;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = enforcing.selectBrowser(tmp(4311).BrowserType.SAFARI);
+      const browser = enforcing.selectBrowser(tmp(4309).BrowserType.SAFARI);
       const obj3 = enforcing;
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = enforcing.selectBrowser(tmp(4311).BrowserType.IN_APP);
+      const browser1 = enforcing.selectBrowser(tmp(4309).BrowserType.IN_APP);
       const obj2 = enforcing;
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = enforcing.selectBrowser(tmp(4311).BrowserType.CHROME);
+      const browser2 = enforcing.selectBrowser(tmp(4309).BrowserType.CHROME);
       const obj5 = enforcing;
     }
   } else {

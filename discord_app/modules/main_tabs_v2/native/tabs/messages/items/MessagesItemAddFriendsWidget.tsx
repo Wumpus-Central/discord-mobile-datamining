@@ -5,8 +5,8 @@ import { View } from "registerAsset";
 import { InstantInviteSources } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/13268_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15299_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/13269_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15308_registerAsset.js";
 import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
@@ -168,10 +168,10 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9110);
+          const obj5 = callback(9114);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7258)(callback);
+          obj2[0] = callback2(7263)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
           return { value: "HermesInternal", done: null };

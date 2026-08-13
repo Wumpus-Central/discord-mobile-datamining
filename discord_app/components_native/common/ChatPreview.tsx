@@ -99,7 +99,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11418)(c0, first[first.length - 1], props)) {
+            if (messages(11409)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: 0, scrollPosition: 1, focusTargetId: 0 };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: 465.988, scrollPosition: -136, focusTargetId: 0 };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -521,7 +521,7 @@ prototype["render"] = function render() {
   const obj3 = { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: null };
   obj3[3] = callback(Text.Text, { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText });
   obj2[2] = callback(PressableBase.PressableOpacity, obj3);
-  tmp6Result = tmp6(tmp9(5367).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5368).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -543,10 +543,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ensureGuildLoaded];
   const stateFromStores1 = channelId(589).useStateFromStores(items1, () => outer1_8.getChannel(channelId));
   const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(5985).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(5985);
-  const isChannelContentGated = channelId(4557).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4557);
+  const isChannelSpoilerGated = channelId(5987).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(5987);
+  const isChannelContentGated = channelId(4558).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4558);
   const items2 = [setContent];
   obj = {};
   const stateFromStores2 = channelId(589).useStateFromStores(items2, () => null != content.getContent());

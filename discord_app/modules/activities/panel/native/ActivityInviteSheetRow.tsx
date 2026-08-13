@@ -4,7 +4,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { InviteSendStates } from "InviteSendStates";
-import { jsx } from "module_9179";
+import { jsx } from "module_9183";
 import createCacheKey from "createCacheKey";
 import importAllResult from "Text";
 

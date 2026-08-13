@@ -108,7 +108,7 @@ export default function TakeActionButtons(senderId) {
             let closure_0 = tmp4;
             if (null != outer1_9.getUser(outer1_0)) {
               outer1_6(true);
-              let obj2 = outer1_0(8061);
+              let obj2 = outer1_0(8065);
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
@@ -118,7 +118,7 @@ export default function TakeActionButtons(senderId) {
                 obj = { key: outer1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                 const intl = tmp4(1236).intl;
                 obj[1] = intl.string(tmp4(1236).t.gn2c6X);
-                obj[2] = tmp4(4305).CircleCheckIcon;
+                obj[2] = tmp4(4303).CircleCheckIcon;
                 obj[3] = outer1_14;
                 obj[4] = toastContainer.toastContainer;
                 obj.open(obj);
@@ -136,9 +136,9 @@ export default function TakeActionButtons(senderId) {
           throw arg1;
         } else if (arg0 !== 2) {
           callback2(false);
-          obj = v0(7825);
+          obj = v0(7829);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(outer1_0(10398).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(outer1_0(10310).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };

@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_notifications/native/ReactionNotification.tsx
 import PreviewIcon from "PreviewIcon";
-import { View } from "extractMetadataFromNotification";
+import { View } from "isReactionMilestoneNotification";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import set from "set";
 import ME from "ME";
@@ -14,7 +14,7 @@ import { Button } from "../../../design/void/native.tsx";
 import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
 import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
-import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
+import { isReactionMilestoneNotification } from "InAppNotificationUtils.tsx";
 
 let c10;
 let c9;
@@ -33,7 +33,7 @@ function ReactionNotificationBody(arg0) {
   let text;
   ({ secondaryText, messagePreview } = arg0);
   ({ text, hasMessageContent } = arg0);
-  let obj = extractMetadataFromNotification;
+  let obj = isReactionMilestoneNotification;
   const messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
   const tmp = createCacheKey();
   ({ gradientColors, gradientStyles } = useTruncatedGradientColors());
@@ -44,7 +44,7 @@ function ReactionNotificationBody(arg0) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
     obj[2] = closure_7;
     obj[3] = secondaryText;
-    tmp8Result = tmp8(tmp2(4340).Text, obj);
+    tmp8Result = tmp8(tmp2(4338).Text, obj);
   }
   children[1] = tmp8Result;
   tmp8Result = null;
@@ -56,7 +56,7 @@ function ReactionNotificationBody(arg0) {
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
       obj1[5] = gradientColors;
-      tmp8Result = tmp8(tmp2(9836).NativeChannelRowPreview, obj1);
+      tmp8Result = tmp8(tmp2(9839).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
@@ -89,7 +89,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   const React = tmp4;
   const AnimateEmoji = message(4034).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(9852);
+  let obj = message(9855);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -249,9 +249,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj1 = message(9814);
+  let obj1 = message(9818);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(9861);
+  let obj2 = message(9864);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }

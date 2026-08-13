@@ -15,8 +15,8 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   ref = undefined;
   const merged = Object.assign(ref, Object.create(null));
   ref = React.useRef(null);
-  ({ onFocus: onFocus2, onBlur: onBlur2 } = ref(6046)({ onFocus, onBlur }));
-  let obj = ref(6044);
+  ({ onFocus: onFocus2, onBlur: onBlur2 } = ref(6048)({ onFocus, onBlur }));
+  let obj = ref(6046);
   const keyboardBlurring = obj.useKeyboardBlurring(ref);
   obj = {
     ref(current) {
@@ -30,9 +30,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     onFocus: onFocus2,
     onBlur: onBlur2
   };
-  const tmp3 = ref(6046)({ onFocus, onBlur });
+  const tmp3 = ref(6048)({ onFocus, onBlur });
   const merged1 = Object.assign(merged);
-  return jsx(ref(9056), {
+  return jsx(ref(9060), {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {

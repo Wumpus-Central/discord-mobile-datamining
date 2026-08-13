@@ -21,8 +21,10 @@ createCacheKey[2] = { marginLeft: "auto" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = require("USER_PROFILE_TOOLTIP_DELAY").fileFinishedImporting("modules/user_profile/native/UserProfileBadgesEditButton.tsx");
 
-export default function UserProfileBadgesEditButton(badges) {
-  badges = badges.badges;
+export default function UserProfileBadgesEditButton(arg0) {
+  let badges;
+  let catalogBadges;
+  ({ badges, catalogBadges } = arg0);
   let _require;
   const tmp = createCacheKey();
   _require = tmp;
@@ -32,53 +34,79 @@ export default function UserProfileBadgesEditButton(badges) {
     callback(closure_2[7]).openLazy(_undefined(closure_2[9])(closure_2[8], closure_2.paths), "Hide Badges", {});
   }, []);
   if (isBadgeManagementEnabled) {
-    if (0 !== badges.length) {
-      const substr = badges.slice(0, 6);
-      const diff = badges.length - substr.length;
-      const intl = tmp2(1236).intl;
-      obj = { badge_names: null, overflow_count: null };
-      const mapped = substr.map((description) => description.description);
-      obj[0] = mapped.join(", ");
-      obj[1] = diff;
-      obj = { label: null, labelTrailing: null, content: null, accessibilityValue: null, onPress: null };
-      const intl2 = tmp2(1236).intl;
-      obj[0] = intl2.string(tmp2(1236).t.l6w3Vj);
-      const obj1 = { role: "button", variant: "text-sm/semibold", color: "text-link", style: null, onPress: null, children: null };
-      obj1[3] = tmp.hideBadgesLink;
-      obj1[4] = callback;
-      const intl3 = tmp2(1236).intl;
-      obj1[5] = intl3.string(tmp2(1236).t.XMDvpN);
-      obj[1] = callback(tmp2(4340).Text, obj1);
-      const obj2 = { style: null, "aria-hidden": true, children: null };
-      obj2[0] = tmp.content;
-      const items = [
-        substr.map((iconSrc) => {
-              const obj = { style: _undefined.badge, source: null };
-              iconSrc = iconSrc.iconSrc;
-              if (iconSrc == null) {
-                iconSrc = outer1_6(iconSrc.icon);
-              }
-              obj[1] = { uri: iconSrc };
-              return outer1_7(outer1_4, obj, iconSrc.id);
-            }),
-
-      ];
-      let tmp11Result = diff > 0;
-      if (tmp11Result) {
-        const obj3 = { variant: "text-md/normal", children: null };
-        const _HermesInternal = HermesInternal;
-        obj3[1] = "+" + diff;
-        tmp11Result = tmp11(tmp2(4340).Text, obj3);
-      }
-      items[1] = tmp11Result;
-      obj2[2] = items;
-      obj[2] = closure_8(closure_5, obj2);
-      const obj4 = { text: null };
-      obj4[0] = intl.formatToPlainString(tmp2(1236).t.AdyOTw, obj);
-      obj[3] = obj4;
-      obj[4] = tmp6;
-      return callback(tmp2(13993).UserProfileEditFormButton, obj);
+    let length;
+    if (catalogBadges != null) {
+      length = catalogBadges.length;
     }
+    if (length == null) {
+      length = badges.length;
+    }
+    const substr = badges.slice(0, 6);
+    let substr1;
+    if (catalogBadges != null) {
+      substr1 = catalogBadges.slice(0, 6);
+    }
+    if (substr1 == null) {
+      substr1 = null;
+    }
+    const _Math = Math;
+    const diff = length - Math.min(length, 6);
+    let mapped;
+    if (substr1 != null) {
+      mapped = substr1.map((name) => name.name);
+    }
+    if (mapped == null) {
+      mapped = substr.map((description) => description.description);
+    }
+    const intl = tmp2(1236).intl;
+    obj = { badge_names: null, overflow_count: null };
+    obj[0] = mapped.join(", ");
+    obj[1] = diff;
+    obj = { label: null, labelTrailing: null, content: null, accessibilityValue: null, onPress: null };
+    const intl2 = tmp2(1236).intl;
+    obj[0] = intl2.string(tmp2(1236).t.l6w3Vj);
+    const obj1 = { role: "button", variant: "text-sm/semibold", color: "text-link", style: null, onPress: null, children: null };
+    obj1[3] = tmp.hideBadgesLink;
+    obj1[4] = callback;
+    const intl3 = tmp2(1236).intl;
+    obj1[5] = intl3.string(tmp2(1236).t.XMDvpN);
+    obj[1] = callback(tmp2(4338).Text, obj1);
+    const obj2 = { style: null, "aria-hidden": true, children: null };
+    obj2[0] = tmp.content;
+    if (null != substr1) {
+      let mapped1 = substr1.map((badge) => outer1_7(outer1_1(outer1_2[14]), { badge, size: 32, style: _undefined.badge }, badge.badge_id));
+    } else {
+      mapped1 = substr.map((iconSrc) => {
+        const obj = { style: _undefined.badge, source: null };
+        iconSrc = iconSrc.iconSrc;
+        if (iconSrc == null) {
+          iconSrc = outer1_6(iconSrc.icon);
+        }
+        obj[1] = { uri: iconSrc };
+        return outer1_7(outer1_4, obj, iconSrc.id);
+      });
+    }
+    const items = [mapped1, ];
+    let tmp13Result = diff > 0;
+    if (tmp13Result) {
+      const obj3 = { variant: "text-md/normal", children: null };
+      const _HermesInternal = HermesInternal;
+      obj3[1] = "+" + diff;
+      tmp13Result = tmp13(tmp2(4338).Text, obj3);
+    }
+    items[1] = tmp13Result;
+    obj2[2] = items;
+    obj[2] = closure_8(closure_5, obj2);
+    let tmp18;
+    if (mapped.length > 0) {
+      const obj4 = { text: null };
+      obj4[0] = formatToPlainStringResult;
+      tmp18 = obj4;
+    }
+    obj[3] = tmp18;
+    obj[4] = tmp6;
+    return callback(tmp2(14001).UserProfileEditFormButton, obj);
+  } else {
+    return null;
   }
-  return null;
 };

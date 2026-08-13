@@ -32,15 +32,15 @@ export default function FamilyCenterActivityPage() {
   const items = [callback(FamilyCenterParentalConsentNotice, {}), ];
   if (0 === activeLinkUserIds.length) {
     const obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14187), {}), tmp3(tmp7(14197), {}), ];
+    const items1 = [tmp3(tmp7(14196), {}), tmp3(tmp7(14206), {}), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.dataConfirmation;
-    obj2[1] = tmp3(tmp7(11385), {});
+    obj2[1] = tmp3(tmp7(11376), {});
     items1[2] = tmp3(tmp6, obj2);
     obj1[0] = items1;
     let tmp3Result = tmp5(closure_6, obj1);
   } else {
-    tmp3Result = tmp3(tmp7(14201), {});
+    tmp3Result = tmp3(tmp7(14210), {});
   }
   items[1] = tmp3Result;
   obj[1] = items;

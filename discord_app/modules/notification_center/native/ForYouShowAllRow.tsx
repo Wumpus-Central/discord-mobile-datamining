@@ -5,7 +5,7 @@ import { AnalyticEvents } from "ME";
 import { Sections } from "SuggestedFriendSource";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/05422_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/05423_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AvatarDuoPile } from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -117,7 +117,7 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
     children: React.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: -1 };
+        const obj = { user: user.user, guildId: "Array", size: "Array" };
         const obj2 = outer1_0(outer1_2[6]);
         const tmp = outer1_7;
         const AvatarSizes = outer1_0(outer1_2[11]).AvatarSizes;

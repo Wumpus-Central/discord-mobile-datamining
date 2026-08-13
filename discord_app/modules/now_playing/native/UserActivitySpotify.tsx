@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import WEB_OPEN from "WEB_OPEN";
 import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../_runtime/08287_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08291_registerAsset.js";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { Linking } from "../../../lib/native/Linking.tsx";
@@ -258,7 +258,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: null };
   obj[0] = registerAsset;
-  obj[0] = callback(activity(4754).Button.Icon, obj);
+  obj[0] = callback(activity(4755).Button.Icon, obj);
   const intl = activity(1236).intl;
   obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
@@ -284,7 +284,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
 
     });
   };
-  obj[1] = callback(activity(4754).Button, obj);
+  obj[1] = callback(activity(4755).Button, obj);
   return callback(closure_5, obj);
 };
 export { SpotifyTrack };

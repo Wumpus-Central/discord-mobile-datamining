@@ -256,9 +256,9 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.displayNameStyles = mediumUserType2.internalBinaryRead(pos, pos.uint32(), arg2, obj.displayNameStyles);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };
@@ -2177,7 +2177,7 @@ class Badge$Type extends MessageType14 {
 }
 const prototype14 = Badge$Type.prototype;
 prototype14["create"] = function create(arr) {
-  let obj = { badge: { oneofKind: "Array" } };
+  let obj = { badge: { oneofKind: "sa" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
@@ -4361,7 +4361,7 @@ class PerkConfig$Type extends MessageType27 {
 }
 const prototype27 = PerkConfig$Type.prototype;
 prototype27["create"] = function create(arr) {
-  let obj = { source: [], kind: { oneofKind: "Array" } };
+  let obj = { source: [], kind: { oneofKind: "sa" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);

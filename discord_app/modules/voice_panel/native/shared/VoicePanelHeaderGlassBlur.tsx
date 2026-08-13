@@ -7,7 +7,7 @@ import importAllResult from "noop";
 import set from "jsxProd";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { set } from "../../../core/native/NativeView.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { set } from "../../../core/native/ReanimatedNativeView.tsx";
 import { animatedComponent } from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
 
 let c4;
@@ -57,7 +57,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
     obj = { blurAmount: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: shown(4753).withSpring, shown };
+  obj = { withSpring: shown(4754).withSpring, shown };
   fn2.__closure = obj;
   fn2.__workletHash = 5642055202507;
   fn2.__initData = closure_9;
@@ -66,7 +66,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   const obj1 = { style: items, children: null };
   items = [tmp.blur, style, animatedStyle];
   const tmp2 = shown;
-  const tmp9 = ReanimatedNativeView;
+  const tmp9 = set;
   const tmp11 = animatedComponent;
   let str = "light";
   if (obj6.isThemeDark(tmp7)) {
@@ -75,9 +75,9 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   const items1 = [StyleSheet.absoluteFillObject, blurStyle];
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
-  let tmp6Result = tmp6(5820);
+  let tmp6Result = tmp6(5821);
   const items3 = [closure_4(set, { style: tmp.stroke }), ];
-  tmp6Result = tmp6(5820);
+  tmp6Result = tmp6(5821);
   const obj3 = { style: tmp.stroke };
   obj6 = shown(1363);
   const tmp2Result = tmp2(1363);

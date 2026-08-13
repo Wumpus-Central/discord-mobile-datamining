@@ -16,10 +16,10 @@ function _transferToPlaystationWithAlert() {
       let asyncGeneratorStep = tmp5;
       const lib = lib2;
       let c6 = 1;
-      yield lib(10937).transferToPlayStation(lib, lib2.id, dependencyMap);
+      yield lib(10851).transferToPlayStation(lib, lib2.id, dependencyMap);
       if (1 === tmp8) {
         c6 = 0;
-        const obj1 = lib2(4682);
+        const obj1 = lib2(4683);
         const obj2 = { title: null, body: null };
         const intl = lib(1236).intl;
         obj2[0] = intl.string(lib(1236).t.QL1y93);

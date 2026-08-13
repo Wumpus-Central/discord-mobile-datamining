@@ -49,8 +49,8 @@ export default function UserSettingsCommunityNotifications() {
       obj[2] = items;
       return outer1_5(stateFromStores(outer1_2[8]).TableRowGroup, obj, arg0);
     });
-    obj[0] = callback(tmp2(4752).Stack, obj);
-    tmp5 = callback(tmp2(8008).Form, obj);
+    obj[0] = callback(tmp2(4753).Stack, obj);
+    tmp5 = callback(tmp2(8012).Form, obj);
   }
   return tmp5;
 };

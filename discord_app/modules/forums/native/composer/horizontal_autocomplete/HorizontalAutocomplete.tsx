@@ -10,7 +10,7 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../../_runtime/08271_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08275_registerAsset.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -115,8 +115,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5792).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5792);
+      roleIconData = tmp2(5793).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5793);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -158,16 +158,16 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAsset;
     } else {
-      let tmp2Result = tmp2(4804);
+      let tmp2Result = tmp2(4805);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = createCacheKey();
-    tmp2Result = tmp2(4534);
+    tmp2Result = tmp2(4535);
     let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = callback(channel(4340).Text, obj);
+    items[1] = callback(channel(4338).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
   },

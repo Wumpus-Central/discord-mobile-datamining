@@ -6,8 +6,8 @@ let closure_1 = {};
 let closure_2 = {};
 class StickerMessagePreviewStore extends Store {
 }
-StickerMessagePreviewStore.prototype["getStickerPreview"] = function getStickerPreview(channelId, draftType) {
-  return draftType === DraftType.FirstThreadMessage ? closure_2 : closure_1[channelId];
+StickerMessagePreviewStore.prototype["getStickerPreview"] = function getStickerPreview(channelId, ChannelMessage) {
+  return ChannelMessage === DraftType.FirstThreadMessage ? closure_2 : closure_1[channelId];
 };
 StickerMessagePreviewStore.displayName = "StickerMessagePreviewStore";
 const stickerMessagePreviewStore = new StickerMessagePreviewStore(require("dispatcher"), {

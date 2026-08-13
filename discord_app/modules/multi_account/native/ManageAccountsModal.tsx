@@ -2,7 +2,7 @@
 import DragIcon from "DragIcon";
 import initialize from "initialize";
 import importAllResult from "validateMultiAccountTokens";
-import { View } from "module_4683";
+import { View } from "module_4684";
 import fetchFingerprint from "fetchFingerprint";
 import closure_9 from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -142,8 +142,8 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = Themes.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14613).CircleMinusIcon, obj);
-    return callback2(tmp(4886).PressableOpacity, obj);
+    obj[3] = callback2(tmp(14622).CircleMinusIcon, obj);
+    return callback2(tmp(4887).PressableOpacity, obj);
   }
   let obj2 = user(589);
 }
@@ -389,14 +389,14 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(15180), {
+        return callback2(_undefined(15189), {
           handleLogin(login, password, undelete) {
-            let obj = callback(5866);
+            let obj = callback(5867);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(5866).loginReset(true);
+            callback(5867).loginReset(true);
           }
         });
       }
@@ -407,7 +407,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(8515), { isMultiAccount: true });
+        return callback2(_undefined(8519), { isMultiAccount: true });
       }
     }),
     callback2(createNativeStackNavigator.Screen, {
@@ -416,7 +416,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15179), { isMultiAccount: true });
+        return callback2(_undefined(15188), { isMultiAccount: true });
       }
     })
   ];

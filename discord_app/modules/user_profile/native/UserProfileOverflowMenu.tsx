@@ -53,7 +53,7 @@ export default function UserProfileOverflowMenu(user) {
   let closure_14;
   let id;
   let guildId1;
-  let isShopThisLookMobileEnabled;
+  let c17;
   let tmp2 = channel;
   let obj = user(channel[12]);
   let items = [analyticsLocations];
@@ -98,7 +98,7 @@ export default function UserProfileOverflowMenu(user) {
     guildId = displayProfile.guildId;
   }
   const tmp6 = null != analyticsLocations.getNickname(user.id);
-  isShopThisLookMobileEnabled = user(tmp2[20]).useIsShopThisLookMobileEnabled("UserProfileOverflowMenu");
+  const isShopThisLookMobileEnabled = user(tmp2[20]).useIsShopThisLookMobileEnabled("UserProfileOverflowMenu");
   const tmpResult1 = user(tmp2[20]);
   let obj7 = selectedVoiceChannelId;
   const equippedCollectibleSkuIds = user(tmp2[21]).useEquippedCollectibleSkuIds(user.id, guildId);
@@ -199,34 +199,25 @@ export default function UserProfileOverflowMenu(user) {
   if (channel != null) {
     guildId1 = channel.getGuildId();
   }
+  let tmp30 = isShopThisLookMobileEnabled;
   if (isShopThisLookMobileEnabled) {
-    isShopThisLookMobileEnabled = equippedCollectibleSkuIds.length > 0;
+    tmp30 = equippedCollectibleSkuIds.length > 0;
   }
-  const items6 = [];
-  if (isShopThisLookMobileEnabled) {
-    obj2 = { label: null, action: null };
-    let intl = tmp(tmp2[30]).intl;
-    obj2[0] = intl.string(tmp(tmp2[30]).t.xNdRDO);
-    obj2[1] = function action() {
-      let obj = user(channel[23]);
-      obj = { userId: id, guildId };
-      const result = obj.openShopThisLookActionSheet(obj);
-    };
-    items6.push(obj2);
-  }
+  c17 = tmp30;
   let guildId2;
   if (displayProfile != null) {
     guildId2 = displayProfile.guildId;
   }
+  const items6 = [];
   if (null != guildId2) {
-    let obj3 = { label: null, action: null };
-    let intl2 = tmp(tmp2[30]).intl;
-    obj3[0] = intl2.string(tmp(tmp2[30]).t.GISTta);
-    obj3[1] = function action() {
+    obj2 = { label: null, action: null };
+    let intl = tmp(tmp2[30]).intl;
+    obj2[0] = intl.string(tmp(tmp2[30]).t.GISTta);
+    obj2[1] = function action() {
       trackUserProfileAction({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations });
       callback(false);
     };
-    items6.push(obj3);
+    items6.push(obj2);
   }
   let guildId3;
   if (tmp7Result1Result != null) {
@@ -241,14 +232,14 @@ export default function UserProfileOverflowMenu(user) {
     tmp34 = null == guildId4;
   }
   if (tmp34) {
-    let obj4 = { label: null, action: null };
-    let intl3 = tmp(tmp2[30]).intl;
-    obj4[0] = intl3.string(tmp(tmp2[30]).t.DisZzB);
-    obj4[1] = function action() {
+    let obj3 = { label: null, action: null };
+    let intl2 = tmp(tmp2[30]).intl;
+    obj3[0] = intl2.string(tmp(tmp2[30]).t.DisZzB);
+    obj3[1] = function action() {
       trackUserProfileAction({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations });
       callback();
     };
-    items6.push(obj4);
+    items6.push(obj3);
   }
   const items7 = [];
   if (currentUser.id !== id) {
@@ -262,19 +253,30 @@ export default function UserProfileOverflowMenu(user) {
       tmp37 = hasItem;
     }
     if (tmp37) {
-      const obj5 = { label: null, variant: "destructive", action: null };
-      let intl4 = tmp(tmp2[30]).intl;
-      obj5[0] = intl4.string(tmp(tmp2[30]).t["n5zMI+"]);
-      obj5[2] = function action() {
+      let obj4 = { label: null, variant: "destructive", action: null };
+      let intl3 = tmp(tmp2[30]).intl;
+      obj4[0] = intl3.string(tmp(tmp2[30]).t["n5zMI+"]);
+      obj4[2] = function action() {
         displayProfile(channel[31]).removeRecipient(channel.id, id);
         const obj = displayProfile(channel[31]);
         displayProfile(channel[32]).hideActionSheet();
       };
-      arr2 = items7.push(obj5);
+      items7.push(obj4);
     }
     if (relationshipType !== id.FRIEND) {
+      if (tmp30) {
+        const obj5 = { label: null, action: null };
+        let intl5 = tmp(tmp2[30]).intl;
+        obj5[0] = intl5.string(tmp(tmp2[30]).t.xNdRDO);
+        obj5[1] = function action() {
+          let obj = user(channel[23]);
+          obj = { userId: id, guildId };
+          const result = obj.openShopThisLookActionSheet(obj);
+        };
+        arr2 = items6.push(obj5);
+      }
       if (isIgnored) {
-        if (!tmp41) {
+        if (!tmp42) {
           const obj6 = { label: null, action: null };
           const intl6 = tmp(tmp2[30]).intl;
           obj6[0] = intl6.string(tmp(tmp2[30]).t["8wXU9B"]);
@@ -290,7 +292,7 @@ export default function UserProfileOverflowMenu(user) {
           arr3 = items7.push(obj6);
         }
         const push = items7.push;
-        if (tmp41) {
+        if (tmp42) {
           obj7 = { label: null, action: null };
           const intl12 = tmp(tmp2[30]).intl;
           obj7[0] = intl12.string(tmp(tmp2[30]).t.XyHpKH);
@@ -329,7 +331,7 @@ export default function UserProfileOverflowMenu(user) {
               const result = outer1_1(outer1_2[38]).showBlockSuccessToast(closure_15, id);
             };
             obj[3] = user(channel[28]).ImpressionNames.BLOCK_USER_CONFIRMATION;
-            obj.openLazy(user(channel[35])(channel[39], channel.paths), isShopThisLookMobileEnabled, obj, "stack");
+            obj.openLazy(user(channel[35])(channel[39], channel.paths), c17, obj, "stack");
           };
           push(obj8);
           if (result) {
@@ -402,8 +404,8 @@ export default function UserProfileOverflowMenu(user) {
         items7.push(obj12);
       }
     } else {
-      let intl5 = tmp(tmp2[30]).intl;
-      const string = intl5.string;
+      let intl4 = tmp(tmp2[30]).intl;
+      const string = intl4.string;
       let t = tmp(tmp2[30]).t;
       if (tmp6) {
         let stringResult = string(t["8pOYUE"]);
@@ -426,11 +428,11 @@ export default function UserProfileOverflowMenu(user) {
   if (!canRing) {
     const DeveloperMode = tmp(tmp2[46]).DeveloperMode;
     const setting = DeveloperMode.getSetting();
-    let tmp51 = setting;
+    let tmp52 = setting;
     if (setting) {
-      tmp51 = tidaWebformEnabled;
+      tmp52 = tidaWebformEnabled;
     }
-    if (!tmp51) {
+    if (!tmp52) {
       const obj14 = { label: null, action: null };
       const intl14 = tmp(tmp2[30]).intl;
       obj14[0] = intl14.string(tmp(tmp2[30]).t.y5MwJy);
@@ -568,7 +570,7 @@ export default function UserProfileOverflowMenu(user) {
       const items8 = [items6, items7];
       obj19[0] = items8;
       obj19[1] = function onOpen() {
-        if (isShopThisLookMobileEnabled) {
+        if (c17) {
           const result = user(channel[53]).trackShopThisLookMenuAction(user(channel[53]).ShopThisLookMenuAction.MENU_VIEWED, guildId.ACTION_SHEET);
           const obj = user(channel[53]);
         }
@@ -595,11 +597,11 @@ export default function UserProfileOverflowMenu(user) {
       obj20[3] = callback;
       items9[1] = callback(tmp7(tmp2[57]), obj20);
       obj17[1] = items9;
-      let tmp58 = callback2(tmp(tmp2[17]).AnalyticsLocationProvider, obj17);
+      let tmp59 = callback2(tmp(tmp2[17]).AnalyticsLocationProvider, obj17);
     } else {
-      tmp58 = null;
+      tmp59 = null;
     }
-    return tmp58;
+    return tmp59;
   } else {
     const intl13 = tmp(tmp2[30]).intl;
     const string2 = intl13.string;

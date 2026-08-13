@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/ICYMICardInteractionRow.tsx
 import Separator from "Separator";
 import EMOJI_PICKER_ACTION_SHEET_KEY from "EMOJI_PICKER_ACTION_SHEET_KEY";
-import get_ActivityIndicator from "module_4354";
+import get_ActivityIndicator from "module_4355";
 import updateState from "updateState";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import recomputeGuild from "recomputeGuild";

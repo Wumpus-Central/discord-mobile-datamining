@@ -4,7 +4,7 @@ import get_ActivityIndicator from "GuildIconSizes";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12140_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12142_registerAsset.js";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
@@ -31,7 +31,7 @@ function InviteErrorBase(invite) {
   const tmp = createCacheKey();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 12137 : 12138);
+  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 12139 : 12140);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -100,7 +100,7 @@ function InviteDisabledError(onPressClose) {
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
-    obj3[2] = onPressClose(5818).GuildIconSizes.XLARGE;
+    obj3[2] = onPressClose(5819).GuildIconSizes.XLARGE;
     items[1] = callback(GuildIconSizes, obj3);
     obj1[1] = items;
     const items1 = [callback2(closure_4, obj1), , , ];
@@ -108,7 +108,7 @@ function InviteDisabledError(onPressClose) {
     obj4[0] = tmp.disabledTitle;
     const intl = onPressClose(1236).intl;
     obj4[3] = intl.string(onPressClose(1236).t.jlLX2Z);
-    items1[1] = callback(onPressClose(4340).Text, obj4);
+    items1[1] = callback(onPressClose(4338).Text, obj4);
     const obj5 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
     obj5[0] = tmp.disabledBody;
     const intl2 = onPressClose(1236).intl;
@@ -116,12 +116,12 @@ function InviteDisabledError(onPressClose) {
     const tmp10 = GuildIconSizes;
     obj6[0] = combined.getArticleURL(constants2.INVITE_DISABLED);
     obj5[3] = intl2.format(onPressClose(1236).t.RXSeLl, obj6);
-    items1[2] = callback(onPressClose(4340).Text, obj5);
+    items1[2] = callback(onPressClose(4338).Text, obj5);
     const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = onPressClose(1236).intl;
     obj7[2] = intl3.string(onPressClose(1236).t["yD/zkn"]);
     obj7[3] = handlePressClose;
-    items1[3] = callback(onPressClose(4754).Button, obj7);
+    items1[3] = callback(onPressClose(4755).Button, obj7);
     obj[0] = items1;
     return callback2(closure_9, obj);
   }

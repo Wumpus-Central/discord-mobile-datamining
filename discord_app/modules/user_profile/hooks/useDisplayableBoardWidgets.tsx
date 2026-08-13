@@ -7,14 +7,14 @@ const require = arg1;
 function isNonEmptyBoardWidget(games) {
   let tmp3 = games instanceof toSubmission.ApplicationWidget;
   if (!tmp3) {
-    let tmp4 = games instanceof tmp(7131).UserProfilePersonalWidget;
+    let tmp4 = games instanceof tmp(7137).UserProfilePersonalWidget;
     if (!tmp4) {
-      let isGameWidgetResult = tmp(7124).isGameWidget(games);
+      let isGameWidgetResult = tmp(7130).isGameWidget(games);
       if (isGameWidgetResult) {
         isGameWidgetResult = games.games.length > 0;
       }
       tmp4 = isGameWidgetResult;
-      const tmpResult = tmp(7124);
+      const tmpResult = tmp(7130);
     }
     tmp3 = tmp4;
   }

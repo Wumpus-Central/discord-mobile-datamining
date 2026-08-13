@@ -31,7 +31,7 @@ function ObscuredView(source) {
       const items = [absoluteFill.absoluteFill, tmp5];
       obj[0] = items;
       const tmp11 = absoluteFill;
-      const tmp7Result = tmp7(4744);
+      const tmp7Result = tmp7(4745);
       let str = "light";
       if (tmpResult.isAndroid()) {
         str = "dark";
@@ -83,7 +83,7 @@ let closure_12 = importAllResult.memo((onSelect) => {
     thumbnail = first;
   }
   obj[1] = thumbnail;
-  const items2 = [closure_8(onSelect(5307), obj), closure_8(ObscuredView, { source: first, index })];
+  const items2 = [closure_8(onSelect(5308), obj), closure_8(ObscuredView, { source: first, index })];
   obj[7] = items2;
   obj[1] = closure_9(closure_5, obj);
   return closure_8(onSelect(4083).View, obj);

@@ -12,14 +12,14 @@ function FamilyCenterModalCancelScreen(otherUser) {
   let cancelLinkRequest;
   const tmp = createCacheKey();
   const callback = React.useCallback(() => {
-    let arr = cancelLinkRequest(4549);
+    let arr = cancelLinkRequest(4550);
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
     const intl = otherUser(1236).intl;
     otherUser(4061).presentFailedToast(intl.string(otherUser(1236).t.R0RpRX));
   }, []);
-  let obj = otherUser(11383);
+  let obj = otherUser(11374);
   const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   cancelLinkRequest = familyCenterActions.cancelLinkRequest;
   const isCancelLoading = familyCenterActions.isCancelLoading;
@@ -27,39 +27,39 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const callback2 = React.useCallback(() => {
     cancelLinkRequest(otherUser.id);
   }, items);
-  cancelLinkRequest(38)(cancelLinkRequest(7378)(), "FamilyCenterCancelModal should only be rendered for parents.");
+  cancelLinkRequest(38)(cancelLinkRequest(7382)(), "FamilyCenterCancelModal should only be rendered for parents.");
   obj = { children: null };
   obj = { children: null };
   const obj1 = { style: tmp.header, children: null };
   const obj2 = { otherUser, iconSrc: null };
-  const tmp2 = cancelLinkRequest(7378)();
-  obj2[1] = cancelLinkRequest(8068);
-  const items1 = [callback(cancelLinkRequest(14234), obj2), , ];
+  const tmp2 = cancelLinkRequest(7382)();
+  obj2[1] = cancelLinkRequest(8072);
+  const items1 = [callback(cancelLinkRequest(14243), obj2), , ];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1236).intl;
   obj3[2] = intl.string(cancelLinkRequest(2303).HynllX);
-  items1[1] = callback(otherUser(4340).Text, obj3);
-  items1[2] = callback(cancelLinkRequest(14204), { user: otherUser });
+  items1[1] = callback(otherUser(4338).Text, obj3);
+  items1[2] = callback(cancelLinkRequest(14213), { user: otherUser });
   obj1[1] = items1;
   obj[0] = callback2(View, obj1);
-  const items2 = [callback(otherUser(7849).ModalContent, obj), ];
+  const items2 = [callback(otherUser(7853).ModalContent, obj), ];
   const obj4 = { children: null };
   const obj5 = { children: null };
   const obj6 = { variant: "destructive", disabled: isCancelLoading, loading: isCancelLoading, text: null, onPress: null };
   const intl2 = otherUser(1236).intl;
   obj6[3] = intl2.string(cancelLinkRequest(2303).mK40bk);
   obj6[4] = callback2;
-  const items3 = [callback(otherUser(4754).Button, obj6), ];
+  const items3 = [callback(otherUser(4755).Button, obj6), ];
   const obj7 = { variant: "tertiary", text: null, onPress: null };
   const intl3 = otherUser(1236).intl;
   obj7[1] = intl3.string(cancelLinkRequest(2303).czincX);
-  obj7[2] = cancelLinkRequest(4549).pop;
-  items3[1] = callback(otherUser(4754).Button, obj7);
+  obj7[2] = cancelLinkRequest(4550).pop;
+  items3[1] = callback(otherUser(4755).Button, obj7);
   obj5[0] = items3;
-  obj4[0] = callback2(otherUser(5190).ButtonGroup, obj5);
-  items2[1] = callback(otherUser(11393).ModalFooter, obj4);
+  obj4[0] = callback2(otherUser(5191).ButtonGroup, obj5);
+  items2[1] = callback(otherUser(11384).ModalFooter, obj4);
   obj[0] = items2;
-  return callback2(otherUser(7848).ModalScreen, obj);
+  return callback2(otherUser(7852).ModalScreen, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { header: null, headerText: null };
@@ -89,5 +89,5 @@ export default function FamilyCenterModalCancel(otherUser) {
   let obj = { initialRouteName: "CANCEL", screens: memo, headerBackTitle: null };
   const intl = otherUser(1236).intl;
   obj[2] = intl.string(otherUser(1236).t["13/7kX"]);
-  return callback(otherUser(11395).Modal, obj);
+  return callback(otherUser(11386).Modal, obj);
 };

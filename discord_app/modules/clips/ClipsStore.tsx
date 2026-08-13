@@ -104,7 +104,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4401);
+            obj = callback(4402);
             callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }

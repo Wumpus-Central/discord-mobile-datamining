@@ -118,8 +118,8 @@ function _handleConnectionOpen() {
                   obj2 = { guildId: null, channelId: null };
                   obj2[0] = guildId.getGuildId();
                   obj2[1] = voiceChannelId;
-                  callback(5994).muteCustomJoinSound(voiceChannelId);
-                  const obj5 = callback(5994);
+                  callback(5996).muteCustomJoinSound(voiceChannelId);
+                  const obj5 = callback(5996);
                 }
               }
               const localVoiceState = callback(12965).localVoiceState;
@@ -143,7 +143,7 @@ function _handleConnectionOpen() {
                   tmp11 = voiceChannelId;
                 }
                 const result = lastSessionVoiceChannelId.setLastSessionVoiceChannelId(tmp11);
-                obj = voiceChannelId(5169);
+                obj = voiceChannelId(5170);
                 const voiceChannel = obj.selectVoiceChannel(null);
               }
             }
@@ -514,7 +514,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((streamKey) => callback(4407).decodeStreamKey(streamKey).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((streamKey) => callback(4408).decodeStreamKey(streamKey).ownerId === id.getId());
         const allActiveStreamKeys1 = store.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((arg0) => arg0 !== closure_0);
         const item = found.forEach((streamKey) => {
@@ -897,7 +897,7 @@ let obj = {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((streamKey) => callback(4407).decodeStreamKey(streamKey).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((streamKey) => callback(4408).decodeStreamKey(streamKey).ownerId === id.getId());
         const allActiveStreamKeys1 = store.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((arg0) => arg0 !== closure_0);
         const item = found.forEach((streamKey) => {

@@ -2,7 +2,7 @@
 import { HorizontalGradient } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04765_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { usePremiumPrimaryGradientColors } from "../usePremiumPrimaryGradientColors.tsx";
 

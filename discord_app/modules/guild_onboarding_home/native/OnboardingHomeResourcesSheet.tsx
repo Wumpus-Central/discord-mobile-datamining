@@ -40,6 +40,6 @@ export default function OnboardingHomeResourcesSheet(guildId) {
     };
     return outer1_4(guildId(outer1_2[9]).ActionSheetRow, obj, label.channelId);
   });
-  obj[0] = jsx(guildId(5805).ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(guildId(5803).ActionSheet, { hasIcons: true, children: null });
+  obj[0] = jsx(guildId(5806).ActionSheetRow.Group, { hasIcons: true, children: null });
+  return jsx(guildId(5804).ActionSheet, { hasIcons: true, children: null });
 };

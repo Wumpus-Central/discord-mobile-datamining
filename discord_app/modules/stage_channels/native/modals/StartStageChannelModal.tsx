@@ -9,7 +9,7 @@ import { AnalyticEvents } from "ME";
 import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08101_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08105_registerAsset.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -71,8 +71,8 @@ class NotificationToggle {
     items[0] = require("HotspotStore").HotspotStore;
     tmp5 = jsx;
     stateFromStores = obj.useStateFromStores(items, () => {
-      const HotspotStore = callback(5874).HotspotStore;
-      return HotspotStore.hasHotspot(callback(5874).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+      const HotspotStore = callback(5875).HotspotStore;
+      return HotspotStore.hasHotspot(callback(5875).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
     });
     obj = { DEPRECATED_style: tmp.notificationToggle, label: null, onPress: null, trailing: null };
     tmp7 = View;
@@ -198,10 +198,10 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     c4 = 3;
                     c5 = 1;
                     let obj1 = { value: null, done: false };
-                    obj1[0] = outer1_2(7819).editStage(outer1_2, tmp76, tmp47);
+                    obj1[0] = outer1_2(7823).editStage(outer1_2, tmp76, tmp47);
                     return obj1;
                   } else {
-                    const obj5 = outer1_2(7819);
+                    const obj5 = outer1_2(7823);
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
@@ -215,7 +215,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
             if (1 === tmp7) {
               dependencyMap = 0;
               closure_1 = closure_2;
-              aPIError = new outer1_0(4243).APIError(closure_1);
+              aPIError = new outer1_0(4241).APIError(closure_1);
               outer1_9(aPIError);
               outer1_8(false);
             } else {
@@ -229,8 +229,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     tmp8 = closure_13;
                   }
                   if (tmp8) {
-                    obj1 = outer1_2(5877);
-                    obj1.hideHotspot(outer1_0(5874).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                    obj1 = outer1_2(5878);
+                    obj1.hideHotspot(outer1_0(5875).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
                   }
                 }
               } else if (arg0 === 1) {

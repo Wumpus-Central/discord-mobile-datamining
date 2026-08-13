@@ -77,16 +77,16 @@ function _getOrFetchApplicationForLaunch() {
               c7 = 3;
               c8 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback2(10688)(callback, callback2);
+              obj2[0] = callback2(10602)(callback, callback2);
               return obj2;
             }
           } else if (2 === tmp7) {
             c6 = 0;
             ensureGuildLoaded = participantFromServer;
             if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(10673).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(10587).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(10673).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(10587).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj2 = callback2(709);
             const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
@@ -99,7 +99,7 @@ function _getOrFetchApplicationForLaunch() {
               dependencyMap = null;
             }
             obj3[4] = dependencyMap;
-            const aPIError = new callback(4243).APIError(ensureGuildLoaded);
+            const aPIError = new callback(4241).APIError(ensureGuildLoaded);
             obj3[5] = aPIError;
             obj3[6] = PRIVATE_CHANNEL;
             obj2.dispatch(obj3);
@@ -215,7 +215,7 @@ function _confirmActivityChange() {
                       if (dependencyMap != null) {
                         dependencyMap();
                       }
-                      _undefined2(10690)(tmp, channel, () => {
+                      _undefined2(10604)(tmp, channel, () => {
                         let obj = value(table[10])();
                         obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                         obj.leaveActivity(obj);

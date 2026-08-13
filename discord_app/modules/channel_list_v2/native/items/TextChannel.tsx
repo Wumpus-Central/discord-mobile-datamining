@@ -1,5 +1,5 @@
 // discord_app/modules/channel_list_v2/native/items/TextChannel.tsx
-import importAllResult from "module_4354";
+import importAllResult from "module_4355";
 import { View } from "initialize";
 import participantFromServer from "participantFromServer";
 import isSubscriptionGated from "isSubscriptionGated";

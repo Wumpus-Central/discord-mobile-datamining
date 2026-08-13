@@ -3,20 +3,21 @@ import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 import { create } from "../../common/v1/localized_string.tsx";
+import { create } from "cta_button.tsx";
 import { create } from "help_article.tsx";
 import { create } from "theme_aware_asset.tsx";
 
 const require = arg1;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , ];
+    items = [, , , , , , , , ];
     items[0] = { no: 1, name: "deprecated_field", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
       name: "localized_text_field",
       kind: "message",
       T() {
-            return callback(7390).LocalizedString;
+            return callback(7394).LocalizedString;
           }
     };
     items[2] = { no: 3, name: "plain_text_field", kind: "scalar", T: 9 };
@@ -25,25 +26,33 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "textarea_field",
       kind: "message",
       T() {
-            return callback(7390).LocalizedString;
+            return callback(7394).LocalizedString;
           }
     };
     items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };
     items[5] = { no: 6, name: "asset_field", kind: "scalar", T: 9 };
-    obj = { no: 7, name: "themed_asset_field", kind: "message", T: null };
+    items[6] = {
+      no: 7,
+      name: "themed_asset_field",
+      kind: "message",
+      T() {
+            return callback(7404).ThemeAwareAsset;
+          }
+    };
+    obj = { no: 8, name: "help_article_field", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").ThemeAwareAsset;
+        return require("create").HelpArticle;
       }
     }
     obj[3] = T;
-    items[6] = obj;
-    items[7] = {
-      no: 8,
-      name: "help_article_field",
+    items[7] = obj;
+    items[8] = {
+      no: 9,
+      name: "cta_field",
       kind: "message",
       T() {
-            return callback(7391).HelpArticle;
+            return callback(7396).CTAButton;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
@@ -80,43 +89,51 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       if (1 === tmp5) {
         obj.deprecatedField = pos.string();
       } else if (2 === tmp5) {
-        let tmp37 = require;
-        let tmp38 = dependencyMap;
+        let tmp42 = require;
+        let tmp43 = dependencyMap;
         let LocalizedString2 = create.LocalizedString;
-        let tmp39 = LocalizedString2;
-        let tmp40 = pos;
-        let tmp41 = readUnknownField;
+        let tmp44 = LocalizedString2;
+        let tmp45 = pos;
+        let tmp46 = readUnknownField;
         obj.localizedTextField = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.localizedTextField);
       } else if (3 === tmp5) {
         obj.plainTextField = pos.string();
       } else if (4 === tmp5) {
-        let tmp32 = require;
-        let tmp33 = dependencyMap;
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
         let LocalizedString = create.LocalizedString;
-        let tmp34 = LocalizedString;
-        let tmp35 = pos;
-        let tmp36 = readUnknownField;
+        let tmp39 = LocalizedString;
+        let tmp40 = pos;
+        let tmp41 = readUnknownField;
         obj.textareaField = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.textareaField);
       } else if (5 === tmp5) {
         obj.checkboxField = pos.bool();
       } else if (6 === tmp5) {
         obj.assetField = pos.string();
       } else if (7 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let ThemeAwareAsset = create.ThemeAwareAsset;
-        let tmp29 = ThemeAwareAsset;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let tmp34 = ThemeAwareAsset;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.themedAssetField = ThemeAwareAsset.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.themedAssetField);
       } else if (8 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
+        let HelpArticle = create.HelpArticle;
+        let tmp29 = HelpArticle;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
+        obj.helpArticleField = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticleField);
+      } else if (9 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let HelpArticle = create.HelpArticle;
-        let tmp24 = HelpArticle;
+        let CTAButton = create.CTAButton;
+        let tmp24 = CTAButton;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.helpArticleField = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticleField);
+        obj.ctaField = CTAButton.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaField);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -194,6 +211,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     const joined3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (deprecatedField.ctaField) {
+    const CTAButton = create.CTAButton;
+    const tagResult8 = tag.tag(9, 01307__.WireType.LengthDelimited);
+    const joined4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -211,7 +234,7 @@ let items = [
     name: "localized_text_field",
     kind: "message",
     T() {
-      return callback(7390).LocalizedString;
+      return callback(7394).LocalizedString;
     }
   },
   { no: 3, name: "plain_text_field", kind: "scalar", T: 9 },
@@ -220,28 +243,36 @@ let items = [
     name: "textarea_field",
     kind: "message",
     T() {
-      return callback(7390).LocalizedString;
+      return callback(7394).LocalizedString;
     }
   },
   { no: 5, name: "checkbox_field", kind: "scalar", T: 8 },
   { no: 6, name: "asset_field", kind: "scalar", T: 9 },
+  {
+    no: 7,
+    name: "themed_asset_field",
+    kind: "message",
+    T() {
+      return callback(7404).ThemeAwareAsset;
+    }
+  },
 ,
 
 ];
-let obj = { no: 7, name: "themed_asset_field", kind: "message", T: null };
+let obj = { no: 8, name: "help_article_field", kind: "message", T: null };
 class T {
   constructor() {
-    return require("create").ThemeAwareAsset;
+    return require("create").HelpArticle;
   }
 }
 obj[3] = T;
-items[6] = obj;
-items[7] = {
-  no: 8,
-  name: "help_article_field",
+items[7] = obj;
+items[8] = {
+  no: 9,
+  name: "cta_field",
   kind: "message",
   T() {
-    return callback(7391).HelpArticle;
+    return callback(7396).CTAButton;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, tmp, T, AdminEditorTestComponent$Type, prototype, items);

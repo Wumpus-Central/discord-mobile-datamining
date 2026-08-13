@@ -113,7 +113,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj6[4] = { borderRadius: num };
   obj6[5] = obj1[str];
   const obj9 = {};
-  const merged = Object.assign(tmp(4340).TextStyleSheet[str2]);
+  const merged = Object.assign(tmp(4338).TextStyleSheet[str2]);
   obj9.lineHeight = undefined;
   const colors = tmp3(712).colors;
   obj9.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
