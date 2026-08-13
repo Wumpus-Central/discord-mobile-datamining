@@ -305,7 +305,7 @@ class RecyclerViewComponent {
         }
       }
     }), items1);
-    f77371 = tmp20Result;
+    f77351 = tmp20Result;
     items2 = [, ];
     items2[0] = tmp20Result;
     items2[1] = recyclerViewManager;
@@ -429,7 +429,7 @@ class RecyclerViewComponent {
       return eventResult;
     }, items4);
     result1 = recyclerViewManager.shouldMaintainVisibleContentPosition();
-    f77374 = result1;
+    f77354 = result1;
     items5 = [, ];
     items5[0] = maintainVisibleContentPosition;
     items5[1] = result1;

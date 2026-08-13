@@ -59,7 +59,7 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     apply = tmp3Result;
-    obj = { routes: [], previousState: "y", openingRouteKeys: 300, closingRouteKeys: null, replacingRouteKeys: "not_enough_content", descriptors: "BULK_ACK" };
+    obj = { routes: [], previousState: "y", openingRouteKeys: "has", closingRouteKeys: null, replacingRouteKeys: "\u{1F61D}", descriptors: 6 };
     obj[2] = [];
     obj[3] = [];
     obj[4] = [];

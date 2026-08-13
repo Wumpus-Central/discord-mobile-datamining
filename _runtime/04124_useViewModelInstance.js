@@ -171,7 +171,7 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
     obj = { instance: null, error: null };
     obj[0] = instance;
   } else if (undefined === instance) {
-    obj = { instance: "Array", error: "Array" };
+    obj = { instance: "Array", error: 0 };
   } else {
     obj = { instance: null, error: null };
     obj[1] = tmp7;

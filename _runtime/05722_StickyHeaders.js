@@ -184,7 +184,7 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     if (-1 !== currentStickyIndex) {
       tmpResult = null;
       if (tmp4 < data.length) {
-        const obj1 = { index: null, item: null, renderItem: null, layout: null, refHolder: null, extraData: null, trailingItem: "accessibilityRole", target: null, hidden: null, inverted: null };
+        const obj1 = { index: null, item: null, renderItem: null, layout: null, refHolder: null, extraData: null, trailingItem: "accessibilityRole", target: false, hidden: false, inverted: false };
         obj1[0] = tmp4;
         obj1[1] = tmp6[tmp4];
         obj1[2] = renderItem;

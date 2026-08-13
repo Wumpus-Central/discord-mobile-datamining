@@ -222,7 +222,7 @@ function parseBox(getUint32, sum) {
           }
         }
       } else {
-        parseItemLocationBoxResult = { type: "Array", length: "Array" };
+        parseItemLocationBoxResult = { type: "Array", length: 0 };
         parseItemLocationBoxResult[1] = length;
       }
       return parseItemLocationBoxResult;

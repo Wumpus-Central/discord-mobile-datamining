@@ -1,8 +1,7 @@
 // _runtime/metro/16408__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "ko",
+  locale: "th",
   pluralRuleFunction(arg0, arg1) {
     return "other";
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "ko-KP", parentLocale: "ko" });

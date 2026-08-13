@@ -1,12 +1,11 @@
 // _runtime/13189_version.js
-import { SemVer } from "13181_SemVer.js";
+import { SemVer } from "13182_SemVer.js";
 
-export default (str) => {
-  const tmp = SemVer;
-  const tmpResult = tmp(str.trim().replace(/^[=v]+/, ""), arg1);
+export default (arg0, arg1) => {
+  const tmp = SemVer(arg0, arg1);
   let version = null;
-  if (tmpResult) {
-    version = tmpResult.version;
+  if (tmp) {
+    version = tmp.version;
   }
   return version;
 };

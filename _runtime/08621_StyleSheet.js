@@ -208,7 +208,7 @@ function SceneView(arg0) {
   const items1 = [null != previousDescriptor || null != context1, title];
   const memo1 = obj2.useMemo(() => {
     if (c5) {
-      const obj = { href: "Array", title: "Array" };
+      const obj = { href: "Array", title: 0 };
       obj[1] = title;
       return obj;
     }

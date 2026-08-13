@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "b9997656a6ea3bbba288fa094cb46f69", name: "ic_hide_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 52, height: 54, scales: [1], hash: "952194349b0f8cbc08a58b40dbb32cb2", name: "connections-profile-steam-tf2", type: "png" });

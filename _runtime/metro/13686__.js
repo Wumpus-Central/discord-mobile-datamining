@@ -1,11 +1,46 @@
 // _runtime/metro/13686__.js
-import { 13687__ } from "13687__.js";
+import { all } from "../13655_all.js";
 
-export default (arg0) => {
-  const tmp = 13687__(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
+export default (arg0, arg1, arg2, arg3) => {
+  let obj = arg3;
+  if (!arg3) {
+    obj = {};
   }
-  return num;
+  let flag = obj.enumerable;
+  let name = arg1;
+  if (undefined !== obj.name) {
+    name = obj.name;
+  }
+  if (all(arg2)) {
+    tmp3(13687)(arg2, name, obj);
+  }
+  if (obj.global) {
+    if (flag) {
+      arg0[arg1] = arg2;
+    } else {
+      tmp3(13630)(arg1, arg2);
+    }
+  } else {
+    try {
+      if (obj.unsafe) {
+        if (arg0[arg1]) {
+          flag = true;
+        }
+      } else {
+        delete tmp[tmp2];
+      }
+      if (flag) {
+        arg0[arg1] = arg2;
+      } else {
+        obj = { value: null, enumerable: false, configurable: null, writable: null };
+        obj[0] = arg2;
+        obj[2] = !obj.nonConfigurable;
+        obj[3] = !obj.nonWritable;
+        tmp3(13683).f(arg0, arg1, obj);
+        const tmp3Result = tmp3(13683);
+      }
+    } catch (err) {
+    }
+  }
+  return arg0;
 };

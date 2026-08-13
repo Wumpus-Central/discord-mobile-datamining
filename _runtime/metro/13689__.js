@@ -1,12 +1,26 @@
 // _runtime/metro/13689__.js
-import { 13687__ } from "13687__.js";
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
 
-export default (arg0, arg1) => {
-  const tmp = 13687__(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = require("call")(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {
+
+  }.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = require("getOwnPropertyDescriptor");
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = require("getOwnPropertyDescriptor") && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = require("getOwnPropertyDescriptor") && getOwnPropertyDescriptor(prototype, "name").configurable;
   }
-  return tmp3;
-};
+  tmp3 = tmp5;
+}
+
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

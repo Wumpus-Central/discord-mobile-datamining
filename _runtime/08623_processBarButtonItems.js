@@ -204,7 +204,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    obj = { tintColor: null, canGoBack: null, label: null, href: "Array" };
+    obj = { tintColor: null, canGoBack: null, label: null, href: "a" };
     obj[0] = text;
     obj[1] = tmp18;
     let tmp20 = headerBackTitle;
@@ -357,7 +357,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp45 = callback3(tmp(4691).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp45;
-  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: 150, title: 0.25, titleColor: 40, titleFontFamily: true, titleFontSize: "/assets/.cache/intl/ZGVzaWdu", titleFontWeight: null, topInsetEnabled: "72a624908b343db34ae78e6d520bec11", disableTopInsetApplication: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages", disableLeftInsetApplication: "jsona", disableRightInsetApplication: 150, disableBottomInsetApplication: 0.35, translucent: 40, children: true, headerLeftBarButtonItems: "/assets/.cache/intl/ZGVzaWdu", headerRightBarButtonItems: null, experimental_userInterfaceStyle: "ecc045078c789c6ed4f029d53d356e3f" };
+  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "URLSearchParams Iterator", title: true, titleColor: "/assets/.cache/intl/ZGVzaWdu", titleFontFamily: null, titleFontSize: "86b91484df1ac0b8ccad956aae12b775", titleFontWeight: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages", topInsetEnabled: "jsona", disableTopInsetApplication: "Intl.ListFormat", disableLeftInsetApplication: false, disableRightInsetApplication: false, disableBottomInsetApplication: true, translucent: "/assets/.cache/intl/ZGVzaWdu", children: null, headerLeftBarButtonItems: "72a624908b343db34ae78e6d520bec11", headerRightBarButtonItems: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages", experimental_userInterfaceStyle: "jsona" };
   obj16[5] = tmp10;
   obj16[6] = fontSize;
   obj16[7] = headerBlurEffect;

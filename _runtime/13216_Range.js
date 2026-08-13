@@ -1,5 +1,5 @@
 // _runtime/13216_Range.js
-import { Range } from "13211_Range.js";
+import { Range } from "13212_Range.js";
 
 export default (arr) => {
   const _require = arg2;
@@ -13,7 +13,7 @@ export default (arr) => {
       if (_null3.test(arg0)) {
         let tmp = closure_1;
         if (closure_1) {
-          tmp = 1 !== _null2.compare(arg0);
+          tmp = -1 !== _null2.compare(arg0);
         }
         if (!tmp) {
           closure_1 = arg0;

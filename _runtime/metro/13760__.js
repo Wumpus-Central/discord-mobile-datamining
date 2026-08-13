@@ -1,39 +1,53 @@
 // _runtime/metro/13760__.js
-arg5.default = () => (startTimer) => {
-  let closure_0 = startTimer;
-  startTimer = startTimer.startTimer;
-  const features = {
-    benchmark(title) {
-      let closure_0 = title;
-      const items = [];
-      let closure_2 = items();
-      function step(title) {
-        let arr = items;
-        let num = 0;
-        if (0 !== items.length) {
-          num = arr[arr.length - 1].time;
-        }
-        const tmp = callback();
-        arr = arr.push({ title, time: tmp, delta: tmp - num });
+import noop from "noop";
+import map from "map";
+import _isNativeReflectConstruct from "_isNativeReflectConstruct";
+import jsxProd from "jsxProd";
+
+if (noop) {
+  const __esModule = noop.__esModule;
+}
+if (!map) {
+  let obj = { default: null };
+  obj[0] = map;
+  let tmp4 = obj;
+} else {
+  tmp4 = map;
+}
+let c0 = tmp4;
+if (!_isNativeReflectConstruct) {
+  obj = { default: null };
+  obj[0] = _isNativeReflectConstruct;
+  let tmp6 = obj;
+} else {
+  tmp6 = _isNativeReflectConstruct;
+}
+let closure_1 = tmp6;
+
+export default () => () => {
+  closure_0 = closure_0.default();
+  obj = {
+    onCommand(type) {
+      if ("storybook" === type.type) {
+        closure_0.emit("storybook", type.payload);
       }
-      items.push({ title, time: 0, delta: 0 });
-      function stop(title) {
-        if (typeof step !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        let arr = items;
-        let num = 0;
-        if (0 !== items.length) {
-          num = arr[arr.length - 1].time;
-        }
-        const tmp = callback();
-        let obj = { title, time: tmp, delta: tmp - num };
-        arr = arr.push(obj);
-        obj = { title, steps: arr };
-        title.send("benchmark.report", obj);
-      }
-      return { step, stop, last: stop };
+    },
+    features: obj
+  };
+  obj = {
+    storybookSwitcher(arg0) {
+      let closure_0 = arg0;
+      return (arg0) => {
+        let closure_0 = arg0;
+        return function StorybookSwitcherContainer(arg0) {
+          let obj = { storybookUi: closure_0, emitter: closure_0, children: null };
+          obj = {};
+          const merged = Object.assign(arg0);
+          obj[2] = <closure_0 />;
+          return <outer3_1.default />;
+        };
+      };
     }
   };
-  return { features };
+  return obj;
 };

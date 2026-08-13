@@ -1260,7 +1260,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           obj[3] = arg0;
           tmpResult = tmp(obj);
         }
-        obj = { value: "Array", children: "Array" };
+        obj = { value: "Array", children: 0 };
         obj = { value: navigationHelpers, children: null };
         const obj1 = { state: tmp58, getState: navigationHelpers.getState, children: null };
         const obj2 = { value: tmp58.routes[tmp58.index].key, children: null };

@@ -1500,8 +1500,8 @@ let items = [
   },
   {
     key: "unstable_onScroll",
-    value: function unstable_onScroll(closure_0) {
-      this._onScroll(closure_0);
+    value: function unstable_onScroll(arg0) {
+      this._onScroll(arg0);
     }
   },
   {
@@ -1607,14 +1607,14 @@ let items = [
   },
   {
     key: "unstable_onScrollBeginDrag",
-    value: function unstable_onScrollBeginDrag(closure_0) {
-      this._onScrollBeginDrag(closure_0);
+    value: function unstable_onScrollBeginDrag(arg0) {
+      this._onScrollBeginDrag(arg0);
     }
   },
   {
     key: "unstable_onScrollEndDrag",
-    value: function unstable_onScrollEndDrag(closure_0) {
-      this._onScrollEndDrag(closure_0);
+    value: function unstable_onScrollEndDrag(arg0) {
+      this._onScrollEndDrag(arg0);
     }
   },
   {
@@ -1625,8 +1625,8 @@ let items = [
   },
   {
     key: "unstable_onMomentumScrollEnd",
-    value: function unstable_onMomentumScrollEnd(closure_0) {
-      this._onMomentumScrollEnd(closure_0);
+    value: function unstable_onMomentumScrollEnd(arg0) {
+      this._onMomentumScrollEnd(arg0);
     }
   },
   {

@@ -1,9 +1,11 @@
 // _runtime/metro/13659__.js
-const tmp = require("module_13638").navigator && require("module_13638").navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
+import { all } from "../13660_all.js";
+import { 13640__ } from "13640__.js";
 
-export default str;
+export default (arg0, arg1) => {
+  let tmp4;
+  if (!13640__(arg0[arg1])) {
+    tmp4 = all(tmp);
+  }
+  return tmp4;
+};

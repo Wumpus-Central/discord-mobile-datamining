@@ -1,8 +1,4 @@
 // _runtime/13199_SemVer.js
-import { SemVer } from "13182_SemVer.js";
+import { SemVer } from "13197_SemVer.js";
 
-export default (arg0, arg1, arg2) => {
-  const obj = new SemVer(arg0, arg2);
-  const tmp = new SemVer(arg1, arg2);
-  return obj.compare(tmp) || obj.compareBuild(tmp);
-};
+export default (arg0, arg1) => SemVer(arg0, arg1, true);

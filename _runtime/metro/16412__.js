@@ -1,47 +1,21 @@
 // _runtime/metro/16412__.js
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "pl",
+let obj = {
+  locale: "zh",
   pluralRuleFunction(arg0, arg1) {
-    let arr;
-    let tmp2;
-    const parts = String(arg0).split(".");
-    [arr, tmp2] = parts;
-    const substr = arr.slice(-1);
-    const substr1 = arr.slice(-2);
-    let str2 = "other";
-    if (!arg1) {
-      if (1 != arg0) {
-        if (!tmp2) {
-          if (substr >= 2) {
-            if (substr <= 4) {
-              let str5 = "few";
-              if (substr1 >= 12) {
-                str5 = "few";
-              }
-            }
-            let str3 = str5;
-          }
-        }
-        if (!tmp2) {
-          if (1 != arr) {
-            if (0 != substr) {
-              str5 = str6;
-            }
-          }
-          str6 = "many";
-        }
-        str6 = "other";
-        if (!tmp2) {
-          str6 = "other";
-          if (substr1 >= 12) {
-            str6 = "other";
-          }
-        }
-      } else {
-        str3 = "one";
-      }
-      str2 = str3;
-    }
-    return str2;
+    return "other";
   }
-});
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans", parentLocale: "zh" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-HK", parentLocale: "zh-Hans" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-MO", parentLocale: "zh-Hans" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-SG", parentLocale: "zh-Hans" });
+obj = {
+  locale: "zh-Hant",
+  pluralRuleFunction(arg0, arg1) {
+    return "other";
+  }
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-HK", parentLocale: "zh-Hant" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-MO", parentLocale: "zh-Hant-HK" });

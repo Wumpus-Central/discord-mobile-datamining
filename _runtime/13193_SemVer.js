@@ -1,4 +1,4 @@
 // _runtime/13193_SemVer.js
-import { SemVer } from "13182_SemVer.js";
+import { SemVer } from "13183_SemVer.js";
 
-export default (arg0, arg1) => new SemVer(arg0, arg1).minor;
+export default (arg0, arg1) => new SemVer(arg0, arg1).major;

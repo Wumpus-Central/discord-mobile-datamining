@@ -232,7 +232,7 @@ function loadView(byteLength, then) {
   let xmpChunks;
   let obj = then;
   if (then === undefined) {
-    obj = { expanded: false, async: false, includeUnknown: false, domParser: "call" };
+    obj = { expanded: false, async: false, includeUnknown: false, domParser: "accessibilityRole" };
   }
   let flag = obj.expanded;
   if (flag === undefined) {

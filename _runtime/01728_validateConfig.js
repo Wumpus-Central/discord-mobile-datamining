@@ -79,8 +79,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "chat_list_android",
-      reduceMotion: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN"
+      startTimestamp: "-1",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

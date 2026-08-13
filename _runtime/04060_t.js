@@ -463,7 +463,7 @@ let fn = function t() {
     obj4[0] = 4;
     obj4[1] = blockRegex(/^(?:    [^\n]+\n*)+(?:\n *)+\n/);
     obj4[2] = function parse(arg0, arg1, arg2) {
-      const obj = { lang: "Array", content: "Array" };
+      const obj = { lang: "Array", content: 0 };
       obj[1] = arg0[0].replace(/^    /gm, "").replace(/\n+$/, "");
       return obj;
     };

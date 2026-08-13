@@ -21,7 +21,7 @@ function parseTags(byteLength, size, sum) {
             let tmp4 = module;
             let tmp5 = dependencyMap;
             if (!module(5004).iptc[uint16]) {
-              obj = { tag: "Array", tagSize: "Array" };
+              obj = { tag: "Array", tagSize: 0 };
               obj[1] = uint161;
             }
           }

@@ -53,7 +53,7 @@ export default function createNativeWrapper(displayName) {
       tmp3 = outer1_3(null);
       Object = tmp3;
       tmp4 = outer1_3(null);
-      f105886 = tmp4;
+      f105772 = tmp4;
       items = [, ];
       items[0] = tmp3;
       items[1] = tmp4;
