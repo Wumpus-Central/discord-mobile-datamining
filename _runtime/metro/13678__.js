@@ -1,13 +1,3 @@
 // _runtime/metro/13678__.js
-import { 13679__ } from "13679__.js";
 
-export default (arg0) => {
-  let num = 0;
-  {
-    num = 0;
-    if (0 !== tmp) {
-      num = 13679__(tmp);
-    }
-  }
-  return num;
-};
+export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });

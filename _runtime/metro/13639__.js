@@ -1,11 +1,7 @@
 // _runtime/metro/13639__.js
-import { 13640__ } from "13640__.js";
+import 13640__ from "13640__.js";
 
-export default (arg0) => {
-  if (13640__(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj[3] = Object.assign !== require("assign");
+obj = { assign: require("assign") };
+module_13640(obj, obj);

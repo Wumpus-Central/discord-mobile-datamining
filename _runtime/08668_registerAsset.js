@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "18d0a2a6cf6cc6fa0358c3bbfd2bce6e", name: "wumpus-mario", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3badf2b48a53beb45ce4acb0a2b90dbd", name: "MoreHorizontalIcon", type: "png" });

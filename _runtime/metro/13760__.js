@@ -1,53 +1,43 @@
 // _runtime/metro/13760__.js
-import noop from "noop";
-import map from "map";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
-import jsxProd from "jsxProd";
-
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-if (!map) {
-  let obj = { default: null };
-  obj[0] = map;
-  let tmp4 = obj;
-} else {
-  tmp4 = map;
-}
-let c0 = tmp4;
-if (!_isNativeReflectConstruct) {
-  obj = { default: null };
-  obj[0] = _isNativeReflectConstruct;
-  let tmp6 = obj;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-let closure_1 = tmp6;
-
-export default () => () => {
-  closure_0 = closure_0.default();
-  obj = {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
-      }
-    },
-    features: obj
-  };
-  obj = {
-    storybookSwitcher(arg0) {
-      let closure_0 = arg0;
-      return (arg0) => {
-        let closure_0 = arg0;
-        return function StorybookSwitcherContainer(arg0) {
-          let obj = { storybookUi: closure_0, emitter: closure_0, children: null };
-          obj = {};
-          const merged = Object.assign(arg0);
-          obj[2] = <closure_0 />;
-          return <outer3_1.default />;
-        };
-      };
+arg5.default = (createSocket) => {
+  let host;
+  let port;
+  ({ host, port } = createSocket);
+  if (null != createSocket.createSocket) {
+    let tmp7 = typeof host === "string";
+    if (typeof host === "string") {
+      tmp7 = host;
     }
-  };
-  return obj;
+    if (tmp7) {
+      tmp7 = "" !== host;
+    }
+    if (tmp7) {
+      let tmp13 = typeof port === "number";
+      if (typeof port === "number") {
+        tmp13 = port >= 1;
+      }
+      if (tmp13) {
+        tmp13 = port <= 65535;
+      }
+      if (tmp13) {
+        if (typeof tmp !== "function") {
+          const _Error4 = Error;
+          const error = new Error("invalid onCommand handler");
+          throw error;
+        }
+      } else {
+        const _Error3 = Error;
+        const error1 = new Error("invalid port");
+        throw error1;
+      }
+    } else {
+      const _Error2 = Error;
+      const error2 = new Error("invalid host");
+      throw error2;
+    }
+  } else {
+    const _Error = Error;
+    const error3 = new Error("invalid createSocket function");
+    throw error3;
+  }
 };

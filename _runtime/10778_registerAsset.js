@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 89, height: 80, scales: [1, 2], hash: "0ee8111d166277419681845b13003ed7", name: "img_empty_audience", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "44d2aa5379438547523c3d419e9ade52", name: "MusicSlashIcon", type: "png" });

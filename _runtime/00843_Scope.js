@@ -130,7 +130,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "useEffect", id: "paddingHorizontal", ip_address: "replace", username: "current" };
+        obj = { email: "Array", id: "flex", ip_address: "y", username: "HermesInternal" };
       }
       const self = this;
       this._user = obj;

@@ -3,11 +3,8 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07950___INTERNAL_VIEW_CONFIG.js";
 
-const ForeignObject = arg1;
+const FeDistantLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ForeignObject {
+class FeDistantLight {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ForeignObject);
+    tmp = _isNativeReflectConstruct(this, FeDistantLight);
     tmp2 = __esModule;
-    obj = __esModule(ForeignObject);
+    obj = __esModule(FeDistantLight);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,31 +44,18 @@ class ForeignObject {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(ForeignObject, require("_isNativeReflectConstruct"));
+require("_inherits")(FeDistantLight, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(self(7895).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = props.children;
-      return <tmp ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
+      const result = FeDistantLight(7917).warnUnimplementedFilter();
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = importDefaultResult(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_automod/images", width: 32, height: 32, scales: [1, 2, 3], hash: "c1e94f3a9063956a896dc2a0d96e8ae1", name: "ic_blocked_chat_bubble_icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cc5db5ae696f6fff236bd5ec86149ea8", name: "ClockWarningIcon", type: "png" });

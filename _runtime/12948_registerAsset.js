@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark", width: 16, height: 16, scales: [2, 3], hash: "90c1dc5d32c0284bd720743e9ec59702", name: "tier_0_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3cb1cd2fa7a6da13fc0880992d84830f", name: "ChevronLargeDownIcon", type: "png" });

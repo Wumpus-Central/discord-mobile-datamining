@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 184, height: 17, scales: [2, 3], hash: "dc6e9b555a9114d9845b29b8de00cc4e", name: "server_boost_logo_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "1e7b4b86ff7b632a5724a01e406c1753", name: "img_subheader_error_mobile", type: "png" });

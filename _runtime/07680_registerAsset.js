@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "3ffa9ed06dd765a4e4cda0729a10c2e1", name: "ic_information_filled_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 449.5, height: 245, scales: [2, 3], hash: "ee35a42e9eee806c9e4a6146b7529edb", name: "img_logo_nitro_tier_0_light", type: "png" });

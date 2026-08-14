@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "087f40a4e6d31afa070d07d1130d4217", name: "screenshare", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "a421bef75ae00154373ea36b10c7c903", name: "Camera", type: "lottie" });

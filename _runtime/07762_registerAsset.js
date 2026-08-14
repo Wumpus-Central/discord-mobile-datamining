@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 366.5, height: 180, scales: [2, 3], hash: "36372d934592de3c10481ad82af6bc9f", name: "img_longer_messages", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "30bd17a4fc8d423d981d2ea586a3ca6e", name: "BoostGemIcon", type: "png" });

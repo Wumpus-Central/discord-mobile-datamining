@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 180, height: 108, scales: [2, 3], hash: "b78926d791a6ae551c895470cfd808a1", name: "img_what_you_lose_profile_tier1_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "6a44051f0a6b82f14b7f681cb1af8576", name: "img_classic_mobile", type: "png" });

@@ -80,7 +80,7 @@ function addEventListener(arg0) {
   obj.add(arg0);
   return () => {
     if (outer1_8) {
-      outer1_8.remove(f70121);
+      outer1_8.remove(f70205);
     }
   };
 }
@@ -113,18 +113,18 @@ function useNetInfo(arg0) {
       closure_8 = tmp8;
       obj = tmp8;
     }
-    obj.add(f70121);
-    f70121 = () => {
+    obj.add(f70205);
+    f70205 = () => {
       if (outer1_8) {
-        outer1_8.remove(f70121);
+        outer1_8.remove(f70205);
       }
     };
     return () => {
-      if (typeof f70121 !== "function") {
+      if (typeof f70205 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (outer1_8) {
-        outer1_8.remove(f70121);
+        outer1_8.remove(f70205);
       }
     };
   }, []);

@@ -1,12 +1,9 @@
 // _runtime/07959__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
+import FeMergeNode from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
 
-const Marker = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,58 +23,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Marker {
+class FeMergeNode {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Marker);
+    items = [...arguments];
+    apply = undefined;
+    tmp = FeMergeNode(this, apply);
+    items1 = [...items];
     tmp2 = __esModule;
-    obj = __esModule(Marker);
+    obj = __esModule(apply);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = _undefined.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-require("_inherits")(Marker, require("_isNativeReflectConstruct"));
-const items = [
+require("_inherits")(FeMergeNode, require("_isNativeReflectConstruct"));
+let items = [
   {
     key: "render",
     value: function render() {
-      let children;
-      let markerHeight;
-      let markerWidth;
-      let preserveAspectRatio;
-      let viewBox;
-      const self = this;
-      const props = this.props;
-      let obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-      ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(7893)({ viewBox, preserveAspectRatio }));
-      obj.children = children;
-      return jsx(self(7960), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = importDefaultResult(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
 export default importDefaultResultResult;

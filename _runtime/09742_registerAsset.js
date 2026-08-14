@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "c6de0a8018201efe397c6bc1961474a0", name: "ic_minus_circle_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 40, scales: [1, 2, 3], hash: "55227139f1f67d25c138599e308898b1", name: "ic_upload_image_40px", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "fe74ca7646b268434faf18f4ad85990b", name: "img_meta_quest_light", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "1c6dca03661172aa5af3340a0d3930a2", name: "img_account_sync_tiktok_light", type: "svg" });

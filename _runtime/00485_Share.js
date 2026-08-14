@@ -12,7 +12,7 @@ class Share {
 const items = [
   {
     key: "share",
-    value: function share(message, dialogTitle, subject, SECURE_FRAMES_STREAM_BOTTOM_SHEET, mediaStagingOptions, fn) {
+    value: function share(message, dialogTitle, subject, PREMIUM_GIFT_SUCCESS_MODAL, mediaStagingOptions, fn) {
       let obj = dialogTitle;
       if (dialogTitle === undefined) {
         obj = {};

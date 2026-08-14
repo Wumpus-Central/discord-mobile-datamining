@@ -5,8 +5,10 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { extractFeFlood } from "07939_extractFeFlood.js";
+import { __INTERNAL_VIEW_CONFIG } from "metro/07956___INTERNAL_VIEW_CONFIG.js";
 
-const LinearGradient = importDefault;
+const FeFlood = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class LinearGradient {
+class FeFlood {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, LinearGradient);
+    tmp = _isNativeReflectConstruct(this, FeFlood);
     tmp2 = __esModule;
-    obj = __esModule(LinearGradient);
+    obj = __esModule(FeFlood);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,31 +48,31 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(LinearGradient, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(7957)(props, this));
-      return jsx(self(7956), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+require("_inherits")(FeFlood, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIG;
+    const merged = Object.assign(self(7939).extractFilter(this.props));
+    const merged1 = Object.assign(extractFeFlood(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

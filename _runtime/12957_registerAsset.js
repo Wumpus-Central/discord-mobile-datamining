@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 215, height: 128, scales: [2, 3], hash: "91b8f5f85a023591658822c0d3091e54", name: "guild_subscription_removal_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "616e0e1297b795db059112c52470eab4", name: "top_perk_streaming_quality", type: "png" });

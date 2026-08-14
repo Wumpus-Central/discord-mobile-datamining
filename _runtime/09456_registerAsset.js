@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0272dced0f6c0fbc37cda949ecb8a378", name: "DiceIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 128, height: 128, scales: [1], hash: "dd1fce0fb6695abbba4a340bc5cd823e", name: "nameplate_avatar_placeholder_dark_mode", type: "png" });

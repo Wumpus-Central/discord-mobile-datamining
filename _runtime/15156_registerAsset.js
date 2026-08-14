@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 20, height: 20, scales: [1, 2], hash: "a29a6c52d3f111d84d3e5afb9287492b", name: "ic_add_circle", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9dbd634929394ed3a7c5482d60abf290", name: "StopIcon", type: "png" });

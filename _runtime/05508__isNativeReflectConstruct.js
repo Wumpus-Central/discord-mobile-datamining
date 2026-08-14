@@ -1,10 +1,11 @@
 // _runtime/05508__isNativeReflectConstruct.js
-import HoverGesture from "_classCallCheck";
+import _classCallCheck from "_classCallCheck";
+import importDefaultResult from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
-import importDefaultResult from "_createClass";
+import importDefaultResult1 from "_inherits";
 
+let ExclusiveGesture = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,29 +25,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(arg0, arg1) {
-  if (undefined === arg1) {
-    let obj = { changeX: null, changeY: null };
-    ({ x: obj2[0], y: obj2[1] } = arg0);
-  } else {
-    obj = { changeX: null, changeY: null };
-    obj[0] = arg0.x - arg1.x;
-    obj[1] = arg0.y - arg1.y;
-  }
-  obj = {};
-  const merged = Object.assign(arg0);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 2074844346342;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
-class HoverGesture {
+class ComposedGesture {
   constructor() {
     self = this;
-    tmp = HoverGesture(this, HoverGesture);
+    items = [...arguments];
+    tmp = _isNativeReflectConstruct(this, ExclusiveGesture);
     tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(HoverGesture);
+    obj = _isNativeReflectConstruct(ExclusiveGesture);
     tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -56,36 +41,165 @@ class HoverGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "HoverGestureHandler";
+    tmp3Result.gestures = [];
+    tmp3Result.simultaneousGestures = [];
+    tmp3Result.requireGesturesToFail = [];
+    tmp3Result.gestures = items;
     return tmp3Result;
   }
 }
-require("_inherits")(HoverGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
+ExclusiveGesture = ComposedGesture;
+importDefaultResult1(ComposedGesture, require("_isNativeReflectConstruct").Gesture);
+let obj = {
+  key: "prepareSingleGesture",
+  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
+    if (item10006 instanceof ExclusiveGesture(5509).BaseGesture) {
+      if (item10006.relationsSnapshot == null) {
+        let obj = { simultaneousWith: null, requireToFail: null };
+        obj[0] = item10006.config.simultaneousWith;
+        obj[1] = item10006.config.requireToFail;
+        item10006.relationsSnapshot = obj;
+      }
+      obj = {};
+      const merged = Object.assign(item10006.config);
+      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
+      if (undefined === simultaneousWith) {
+        const items = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, 0);
+        let items1 = items;
+      } else {
+        items1 = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
+      }
+      obj.simultaneousWith = items1;
+      const requireToFail = item10006.relationsSnapshot.requireToFail;
+      if (undefined === requireToFail) {
+        const items2 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
+        let items3 = items2;
+      } else {
+        items3 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
+      }
+      obj.requireToFail = items3;
+      item10006.config = obj;
+    } else if (item10006 instanceof ExclusiveGesture) {
+      item10006.simultaneousGestures = simultaneousGestures;
+      item10006.requireGesturesToFail = requireGesturesToFail;
+      item10006.prepare();
+    }
+  }
+};
 let items = [
+  obj,
   {
-    key: "effect",
-    value: function effect(hoverEffect) {
-      this.config.hoverEffect = hoverEffect;
-      return this;
+    key: "prepare",
+    value: function prepare() {
+      const self = this;
+      for (const item10006 of tmp) {
+        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
+        continue;
+      }
     }
   },
   {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = changeEventCalculator;
-      const self = this;
-      let fn;
-      fn = callback2(callback(self.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+    key: "initialize",
+    value: function initialize() {
+      for (const item10006 of tmp) {
+        let initializeResult = item10006.initialize();
+        continue;
       }
-      const items = [arg0];
-      return fn(items);
+    }
+  },
+  {
+    key: "toGestureArray",
+    value: function toGestureArray() {
+      const gestures = this.gestures;
+      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
     }
   }
 ];
+const importDefaultResultResult = importDefaultResult(ComposedGesture, items);
+class SimultaneousGesture {
+  constructor() {
+    self = this;
+    tmp = _isNativeReflectConstruct(this, ExclusiveGesture);
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(ExclusiveGesture);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+ExclusiveGesture = SimultaneousGesture;
+importDefaultResult1(SimultaneousGesture, importDefaultResultResult);
+obj = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    let self = this;
+    self = this;
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items1 = [obj];
+class ExclusiveGesture {
+  constructor() {
+    self = this;
+    tmp = _isNativeReflectConstruct(this, ExclusiveGesture);
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(ExclusiveGesture);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+importDefaultResult1(ExclusiveGesture, importDefaultResultResult);
+obj = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let items = [];
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let requireGesturesToFail = self.requireGesturesToFail;
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
+        items = items.concat(tmp[num]);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items2 = [obj];
 
-export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
-export const hoverGestureHandlerProps = ["hoverEffect"];
-export const HoverGesture = importDefaultResult(HoverGesture, items);
+export const ComposedGesture = importDefaultResultResult;
+export const SimultaneousGesture = importDefaultResult(SimultaneousGesture, items1);
+export const ExclusiveGesture = importDefaultResult(ExclusiveGesture, items2);

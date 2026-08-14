@@ -1,4 +1,4 @@
 // _runtime/metro/13221__.js
-import { 13220__ } from "13220__.js";
+import { SemVer } from "../13220_SemVer.js";
 
-export default (arg0, arg1, arg2) => 13220__(arg0, arg1, ">", arg2);
+export default (arg0, arg1, arg2, arg3) => SemVer(tmp, tmp2, tmp3);

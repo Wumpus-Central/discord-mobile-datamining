@@ -1,37 +1,23 @@
 // _runtime/metro/16407__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "sv",
+  locale: "de",
   pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
-    let substr1 = Number(parts[0]) == arg0;
-    let substr = substr1;
-    if (substr1) {
-      const first = parts[0];
-      substr = first.slice(-1);
-    }
-    if (substr1) {
-      const first1 = parts[0];
-      substr1 = first1.slice(-2);
-    }
-    if (arg1) {
-      if (1 == substr) {
-        if (11 != substr1) {
-          let str4 = "one";
-        }
-        let str3 = str4;
-      }
-      str4 = "other";
-    } else {
-      str3 = "other";
+    let str2 = "other";
+    if (!arg1) {
+      let str3 = "other";
       if (1 == arg0) {
         str3 = "other";
-        if (!parts[1]) {
+        if (!str.split(".")[1]) {
           str3 = "one";
         }
       }
+      str2 = str3;
     }
-    return str3;
+    return str2;
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "sv-AX", parentLocale: "sv" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "sv-FI", parentLocale: "sv" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "de-AT", parentLocale: "de" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "de-BE", parentLocale: "de" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "de-CH", parentLocale: "de" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "de-LI", parentLocale: "de" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "de-LU", parentLocale: "de" });

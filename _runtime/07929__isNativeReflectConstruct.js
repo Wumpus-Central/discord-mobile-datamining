@@ -3,12 +3,11 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import "noop";
+import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/07930___INTERNAL_VIEW_CONFIG.js";
 
-let closure_6;
-let error;
-const FeDropShadow = importDefault;
+const Circle = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-class FeDropShadow {
+class Circle {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeDropShadow);
+    tmp = _isNativeReflectConstruct(this, Circle);
     tmp2 = __esModule;
-    obj = __esModule(FeDropShadow);
+    obj = __esModule(Circle);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -49,39 +47,39 @@ class FeDropShadow {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeDropShadow, require("_isNativeReflectConstruct"));
-let obj = {
-  key: "render",
-  value: function render() {
-    let dx;
-    let dy;
-    let result;
-    const self = this;
-    const props = this.props;
-    const _in = props.in;
-    let str = "SourceGraphic";
-    if (undefined !== _in) {
-      str = _in;
+require("_inherits")(Circle, require("_isNativeReflectConstruct"));
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      let cx;
+      let cy;
+      let r;
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, r } = props);
+      const merged = Object.assign(self(7916).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.r = r;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(7916);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIG, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
-    let obj = { children: null };
-    ({ dx, dy, result } = props);
-    const items = [callback3(FeDropShadow(7930), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(7932), { dx, dy, result: "offsetblur" }), , , ];
-    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
-    items[2] = callback3(FeDropShadow(7934), obj);
-    items[3] = callback3(FeDropShadow(7923), { in2: "offsetblur", operator: "in" });
-    obj = { result, children: null };
-    const items1 = [callback3(FeDropShadow(7938), {}), callback3(FeDropShadow(7938), { in: str })];
-    obj[1] = items1;
-    items[4] = callback4(FeDropShadow(7936), obj);
-    obj[0] = items;
-    return callback4(React.Fragment, obj);
   }
-};
-let items = [obj];
-const importDefaultResultResult = importDefaultResult(FeDropShadow, items);
-importDefaultResultResult.displayName = "FeDropShadow";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

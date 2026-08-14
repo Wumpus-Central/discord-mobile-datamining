@@ -1,4 +1,14 @@
 // _runtime/metro/13676__.js
-import { 13677__ } from "13677__.js";
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
+import { element } from "../13677_element.js";
 
-export default (arg0) => 13677__(arg0.length);
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !require("module_13645")(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
+
+export default tmp2;

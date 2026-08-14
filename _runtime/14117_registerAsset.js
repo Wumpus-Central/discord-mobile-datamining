@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 433, height: 231.5, scales: [2, 3], hash: "91d00dd928cdd63a1c9619eb92ec080e", name: "blocked_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 288, height: 128, scales: [2, 3], hash: "eadd5a45fc81983d8eab2051527e663f", name: "img_security", type: "png" });

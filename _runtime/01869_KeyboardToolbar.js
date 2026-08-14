@@ -72,7 +72,7 @@ class KeyboardToolbar {
     keyboardState = obj2.useKeyboardState((appearance) => appearance.appearance);
     _objectWithoutProperties = keyboardState;
     tmp12 = insets(useState({ current: 0, count: 0 }), 2);
-    [tmp13, f71254] = tmp12;
+    [tmp13, f71338] = tmp12;
     tmp14 = 0 === tmp13.current;
     useMemo = tmp14;
     tmp15 = tmp13.current === tmp13.count - 1;
@@ -85,7 +85,7 @@ class KeyboardToolbar {
       tmp17 = DEFAULT_OPACITY;
       icon = require("items");
     }
-    tmp18 = f71254(() => {
+    tmp18 = f71338(() => {
       const FocusedInputEvents = theme(num[10]).FocusedInputEvents;
       return FocusedInputEvents.addListener("focusDidSet", (arg0) => {
         callback(arg0);

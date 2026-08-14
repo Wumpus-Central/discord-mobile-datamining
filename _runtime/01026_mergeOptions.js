@@ -2362,7 +2362,7 @@ function Form(onSubmitError) {
   let defaultName;
   let emailLabel;
   let emailPlaceholder;
-  let f102944;
+  let f103078;
   let messagePlaceholder;
   let namePlaceholder;
   let onFormClose;
@@ -2375,7 +2375,7 @@ function Form(onSubmitError) {
   let tmp12;
   let tmp5;
   let tmp7;
-  ({ options, defaultEmail, defaultName, onSubmit: f102944, onSubmitSuccess } = onSubmitError);
+  ({ options, defaultEmail, defaultName, onSubmit: f103078, onSubmitSuccess } = onSubmitError);
   onSubmitError = onSubmitError.onSubmitError;
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
@@ -2417,13 +2417,13 @@ function Form(onSubmitError) {
   c46 = 1;
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
-  f102944 = (arg0) => {
+  f103078 = (arg0) => {
     _undefined2(arg0);
     callback(false);
   };
   c46 = 8;
   let items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
-  f102944 = (name) => {
+  f103078 = (name) => {
     let tmp2 = isEmailRequired;
     let tmp3 = isNameRequired;
     if (isNameRequired) {
@@ -2453,9 +2453,9 @@ function Form(onSubmitError) {
   c46 = 8;
   const tmp13 = fn2;
   const tmp3Result = tmp3(tmp(tmp2, null), 2);
-  closure_15 = fn2(() => f68432, items);
-  f102944 = undefined;
-  f102944 = screenshotInput((arg0) => {
+  closure_15 = fn2(() => f68516, items);
+  f103078 = undefined;
+  f103078 = screenshotInput((arg0) => {
     let closure_0 = arg0;
     let c5 = 0;
     let c6 = 0;
@@ -2572,7 +2572,7 @@ function Form(onSubmitError) {
               c4 = 1;
               c4 = closure_3;
               if (messageLabel) {
-                const debug = f102944(onSubmitSuccess[2]).debug;
+                const debug = f103078(onSubmitSuccess[2]).debug;
                 debug.error(c4);
               }
               outer1_11(c4);
@@ -2613,9 +2613,9 @@ function Form(onSubmitError) {
     screenshotInput = first;
   }
   const items1 = [screenshotInput, onSubmitSuccess, onSubmitError];
-  f102944 = function(arg0) {
+  f103078 = function(arg0) {
     const self = this;
-    const apply = f102944.apply;
+    const apply = f103078.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -2624,7 +2624,7 @@ function Form(onSubmitError) {
     return applyArgumentsResult;
   };
   c46 = 8;
-  let obj = { class: "form", onSubmit: tmp13(() => f68432, items1) };
+  let obj = { class: "form", onSubmit: tmp13(() => f68516, items1) };
   let tmp15Result = null;
   if (input) {
     tmp15Result = null;
@@ -2671,7 +2671,7 @@ function Form(onSubmitError) {
     obj6[1] = defaultEmail;
     tmp15Result4 = tmp15("input", obj6);
   }
-  tmp14 = fn2(() => f68432, []);
+  tmp14 = fn2(() => f68516, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
   let tmp15Result9 = null;
   if (input) {
@@ -2706,7 +2706,7 @@ function LabelText(arg0) {
 }
 function Dialog(onFormSubmitted) {
   onFormSubmitted = onFormSubmitted.onFormSubmitted;
-  let f68432 = onFormSubmitted;
+  let f68516 = onFormSubmitted;
   const merged = Object.assign(onFormSubmitted, Object.create(null));
   let first;
   let closure_3;
@@ -2716,17 +2716,17 @@ function Dialog(onFormSubmitted) {
   first = tmp3[0];
   closure_3 = tmp3[1];
   const items = [first];
-  f68432 = () => {
+  f68516 = () => {
     if (first) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp);
       callback(null);
     }
-    f68432();
+    f68516();
   };
   c46 = 8;
   [][0] = onFormSubmitted;
-  f68432 = (arg0, arg1) => {
+  f68516 = (arg0, arg1) => {
     merged.onSubmitSuccess(arg0, arg1);
     callback(setTimeout(() => {
       callback();
@@ -3121,7 +3121,7 @@ const fn3 = function p(__getInternalProperties) {
 const fn4 = function x(arg0, arg1) {
   let closure_0 = arg0;
   let c46 = 8;
-  return fn2(() => f68432, arg1);
+  return fn2(() => f68516, arg1);
 };
 obj = Object.create(null);
 obj[0] = fn4;

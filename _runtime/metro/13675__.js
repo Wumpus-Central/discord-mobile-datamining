@@ -1,103 +1,34 @@
 // _runtime/metro/13675__.js
-let c0 = require;
-c0 = true;
-c0 = false;
+import { all } from "../13667_all.js";
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = callback(13634)(arg0);
-    const tmp4 = callback(13676)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
-        num3 = -1;
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (all(toString)) {
+      const tmp4 = tmp(13674)(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
       }
-      return num3;
-    } else {
-      let sum = callback(13680)(arg2, tmp4);
-      if (callback) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !callback;
-        if (!callback) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+      tmpResult = tmp(13666);
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = callback(13634)(arg0);
-    const tmp4 = callback(13676)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = callback(13680)(arg2, tmp4);
-      if (callback) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !callback;
-        if (!callback) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
+  }
+  const valueOf = arg0.valueOf;
+  if (all(valueOf)) {
+    let tmp5Result = tmp5(13666);
+    const tmp8 = tmp5(13674)(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (tmp5(13667)(toString2)) {
+      tmp5Result = tmp5(13666);
+      const tmp10 = tmp5(13674)(toString2, arg0);
+      if (!tmp5Result(tmp10)) {
+        return tmp10;
       }
     }
   }
+  throw new TypeError("Can't convert object to primitive value");
 };

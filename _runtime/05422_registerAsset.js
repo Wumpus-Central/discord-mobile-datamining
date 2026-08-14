@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7726a7882d06e6e78ae64010f2194cb2", name: "ChevronSmallRightIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 30, height: 30, scales: [2, 3], hash: "3fda792f0f90666acb261765593ba984", name: "ic_loading_emoji_dark", type: "png" });

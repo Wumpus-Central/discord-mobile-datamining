@@ -1,5 +1,2 @@
 // _runtime/metro/13634__.js
-import { 13635__ } from "13635__.js";
-import { 13639__ } from "13639__.js";
-
-export default (arg0) => 13635__(13639__(arg0));
+arg5.units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];

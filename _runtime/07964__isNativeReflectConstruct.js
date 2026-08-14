@@ -3,11 +3,8 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07965___INTERNAL_VIEW_CONFIG.js";
 
-const Path = arg1;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Path {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Path);
+    tmp = _isNativeReflectConstruct(this, FeSpecularLighting);
     tmp2 = __esModule;
-    obj = __esModule(Path);
+    obj = __esModule(FeSpecularLighting);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,32 +44,19 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Path, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = {};
-      const merged = Object.assign(self(7895).extract(this, props));
-      obj.d = props.d;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const obj2 = self(7895);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIG, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+require("_inherits")(FeSpecularLighting, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeSpecularLighting(7917).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Path, items);
-importDefaultResultResult.displayName = "Path";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

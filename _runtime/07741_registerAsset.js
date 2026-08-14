@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "30bd17a4fc8d423d981d2ea586a3ca6e", name: "BoostGemIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon", width: 60, height: 60, scales: [2, 3], hash: "4e81188cb8befe97a7c2fb2d0b3c1c42", name: "CamoIcon", type: "png" });
