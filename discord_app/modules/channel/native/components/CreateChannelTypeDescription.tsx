@@ -13,12 +13,12 @@ export default function CreateChannelTypeDescription(guildId) {
   let guildProfile;
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9051);
+  let obj = fetchGuildProfile(9065);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5378).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = tmp(5399).GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;

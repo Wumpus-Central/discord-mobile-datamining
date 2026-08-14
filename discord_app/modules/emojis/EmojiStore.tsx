@@ -167,7 +167,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = callback(5256);
+      let obj = callback(5277);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -376,7 +376,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5221).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5242).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -385,7 +385,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        const obj = callback(5221);
+        const obj = callback(5242);
       }
       tmp6 = someResult;
     }
@@ -583,23 +583,28 @@ class EmojiDisambiguations {
       }
     };
     arr2 = require("parseRawEmojiObject");
-    item = arr2.forEach((names) => {
-      names = names.names;
+    item = arr2.forEach((name) => {
+      name = name.name;
+      const names = name.names;
       const substr = names.slice(1);
       const item = substr.forEach((arg0) => {
         const unicodeAliases = outer1_4.unicodeAliases;
-        return unicodeAliases.set(arg0, names.name);
+        return unicodeAliases.set(arg0, name);
       });
-      let num = map.get(names.name);
+      let num = name.get(name);
       if (num == null) {
         num = 0;
       }
       items(disambiguateEmoji[29])(0 === num, "Expected existing count to be 0");
-      const result = obj.set(names.name, num + 1);
+      if (name.uniqueName !== name) {
+        const result = obj.set(name.uniqueName, 1);
+      } else {
+        const result1 = obj.set(name, num + 1);
+      }
       const emojisByName = obj.emojisByName;
-      const result1 = emojisByName.set(names.name, names);
+      const result2 = emojisByName.set(name, name);
       const disambiguatedEmoji = obj.disambiguatedEmoji;
-      disambiguatedEmoji.push(names);
+      disambiguatedEmoji.push(name);
     });
     tmp5 = (function addGuildEmoji(guildId) {
       let tmp = guildId;

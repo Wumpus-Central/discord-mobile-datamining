@@ -4,7 +4,7 @@ import { View } from "AVERAGE_FONT_WIDTH_RATIO";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "TableRowInner";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { firstAvatarDecoration } from "../../hooks/useShopProductItems.tsx";
@@ -48,7 +48,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "getSdkMetadata", autoStatusCutout: null, "aria-hidden": "\u{1F457}" };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "LottieAnimationView", autoStatusCutout: null, "aria-hidden": null };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = c1;
     obj[4] = !stateFromStores;

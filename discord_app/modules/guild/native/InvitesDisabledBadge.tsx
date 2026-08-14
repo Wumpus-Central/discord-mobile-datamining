@@ -3,7 +3,7 @@ import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/12143_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12161_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../design/void/native.tsx";
 

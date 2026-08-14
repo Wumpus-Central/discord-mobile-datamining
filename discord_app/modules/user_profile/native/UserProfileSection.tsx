@@ -37,7 +37,7 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4191).hexOpacityToRgba(tmp3(7454).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      let borderColor = tmp3(4191).hexOpacityToRgba(tmp3(7475).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
       const tmp3Result = tmp3(4191);
     }
     obj.borderColor = borderColor;

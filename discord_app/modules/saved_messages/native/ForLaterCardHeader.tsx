@@ -18,7 +18,7 @@ function HeaderIcon(channel) {
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(5819).GuildIconSizes.XSMALL;
+    obj[1] = tmp2(5840).GuildIconSizes.XSMALL;
     let tmp6Result = callback(GuildIconSizes, obj);
     const tmp13 = GuildIconSizes;
   } else {
@@ -35,7 +35,7 @@ function HeaderIcon(channel) {
     } else {
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
-      obj1[1] = tmp6(tmp2(4841).ChatIcon, { size: "xxs" });
+      obj1[1] = tmp6(tmp2(4863).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
     }
   }
@@ -48,7 +48,7 @@ function ChannelName(channel) {
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
   const tmp5 = computeChannelName(channel, false);
-  let obj1 = channel(4805);
+  let obj1 = channel(4827);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {

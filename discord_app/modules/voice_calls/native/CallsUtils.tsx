@@ -295,10 +295,10 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   let obj = isEnabled(589);
   const items = [closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode, handleAudioRouteChanged];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const isVideoMode = isEnabled(10818).isVideoMode(closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode);
+    const isVideoMode = isEnabled(10834).isVideoMode(closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9200).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9200).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9214).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9214).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -331,7 +331,7 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
     }
     dependencyMap(isEnabled);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9221 : 9222) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9235 : 9236) };
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
@@ -366,6 +366,6 @@ export const useImmediateMaskedSpeakerStates = () => {
   const effect = React.useEffect(() => {
     callback(closure_1);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9221 : 9222) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9235 : 9236) };
   return obj;
 };

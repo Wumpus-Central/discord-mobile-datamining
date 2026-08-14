@@ -54,7 +54,7 @@ export const PromoSheet = function PromoSheet(arg0) {
       obj = {};
       const merged1 = Object.assign(graphic);
       obj.style = tmp4.graphic;
-      let tmp6Result = tmp6(tmp7(7780).Graphic, obj);
+      let tmp6Result = tmp6(tmp7(7801).Graphic, obj);
     }
     const items1 = [tmp6Result, , ];
     let str = "heading-xl/bold";
@@ -87,11 +87,11 @@ export const PromoSheet = function PromoSheet(arg0) {
     const obj3 = { children: null };
     items2[1] = tmp6Result;
     obj3[0] = items2;
-    items1[1] = tmp9(tmp7(4753).Stack, obj3);
+    items1[1] = tmp9(tmp7(4775).Stack, obj3);
     items1[2] = actions;
     obj2[1] = items1;
     obj.children = tmp9(tmp10, obj2);
-    return tmp6(gradientColor(5437).BottomSheet, obj);
+    return tmp6(gradientColor(5458).BottomSheet, obj);
   }
   tmp6Result = null;
   if (null != illustration) {

@@ -18,7 +18,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
-      const items1 = [tmp9(12424).ResolvedValueType.STRING, tmp9(12424).ResolvedValueType.NUMBER];
+      const items1 = [tmp9(12442).ResolvedValueType.STRING, tmp9(12442).ResolvedValueType.NUMBER];
       str = resolveFieldValue(subtitle_1.fields.label, items1);
     }
     if (null == iter) {
@@ -92,9 +92,9 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     if (null == iter) {
       obj = { status: "skeleton" };
     } else {
-      if (iter.type === tmp6(12424).ResolvedValueType.STRING) {
+      if (iter.type === tmp6(12442).ResolvedValueType.STRING) {
         let formatResult = iter.value;
-      } else if (iter.presentationType === tmp6(12425).ApplicationWidgetFieldPresentationType.DURATION) {
+      } else if (iter.presentationType === tmp6(12443).ApplicationWidgetFieldPresentationType.DURATION) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
         formatResult = closure_2.format(iter.value);

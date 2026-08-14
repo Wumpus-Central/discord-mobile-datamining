@@ -1,6 +1,6 @@
 // discord_app/components_native/common/Alerts.tsx
 import importAllResult from "shallowEqual";
-import get_ActivityIndicator from "module_5864";
+import get_ActivityIndicator from "module_5885";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import importDefaultResult from "initialize";
 import importDefaultResult1 from "handleUpdateVADPermission";

@@ -9,7 +9,7 @@ function getSortedDevToolsScreens() {
   {
     sortedScreenKeys = initialize.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(13905).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(13917).DevToolsScreens);
   const found = entries.filter((arg0) => {
     let obj;
     [, obj] = arg0;
@@ -47,7 +47,7 @@ export default function useSortedDevToolsScreens() {
   if (sortedScreenKeys === undefined) {
     sortedScreenKeys = initialize.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(13905).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(13917).DevToolsScreens);
   const found = entries.filter((arg0) => {
     let obj;
     [, obj] = arg0;

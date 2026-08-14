@@ -37,7 +37,7 @@ export default function MainTabsEmptyChatPanel() {
   if (obj2.useIsFavoritesGuildSelected()) {
     obj = { style: null, pointerEvents: "box-none", children: null };
     obj[0] = tmp4.container;
-    obj[2] = jsx(tmp3(15887), {});
+    obj[2] = jsx(tmp3(15905), {});
     tmp5 = <closure_4 style={null} pointerEvents="box-none">{null}</closure_4>;
   }
   return tmp5;

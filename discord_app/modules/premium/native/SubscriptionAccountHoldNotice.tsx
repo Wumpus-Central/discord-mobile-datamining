@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { SubscriptionStatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07680_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07701_registerAsset.js";
 
 let c3;
 let c4;
@@ -52,7 +52,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj3[2] = function onPress() {
       return outer1_3.openURL(subscription(outer1_2[10]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
-    items1[1] = callback(subscription(4755).Button, obj3);
+    items1[1] = callback(subscription(4777).Button, obj3);
     obj[1] = items1;
     tmp2 = callback2(closure_4, obj);
     const obj6 = subscription(4007);

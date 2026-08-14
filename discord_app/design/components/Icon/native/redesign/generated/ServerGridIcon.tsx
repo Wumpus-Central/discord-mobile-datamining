@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ServerGridIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/07764_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/07785_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

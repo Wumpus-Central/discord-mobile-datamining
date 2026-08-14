@@ -12,6 +12,6 @@ const obj = {
     callback(invite);
   }
 };
-const result = require("module_12161").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
+const result = require("module_12179").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
 
 export default obj;

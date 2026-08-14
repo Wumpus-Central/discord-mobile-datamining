@@ -11,7 +11,7 @@ import makeTimeoutKey from "makeTimeoutKey";
 import updateVoiceState from "updateVoiceState";
 import ParticipantTypes from "ParticipantTypes";
 import ME from "ME";
-import { MediaEngineContextTypes } from "DesktopSources";
+import DesktopSources from "DesktopSources";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
@@ -23,6 +23,8 @@ import { getParticipantUserKey } from "getParticipantUserKey.tsx";
 let closure_14;
 let closure_15;
 let closure_16;
+let closure_17;
+let closure_18;
 let map1;
 const require = arg1;
 function sortKey(type) {
@@ -66,6 +68,7 @@ function sortKey(type) {
 }
 ({ isStreamParticipant: map1, ParticipantTypes: closure_14 } = ParticipantTypes);
 ({ ActivityTypes: closure_15, ChannelTypes: closure_16 } = ME);
+({ MediaEngineContextTypes: closure_17, Features: closure_18 } = DesktopSources);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 let obj = { VIDEO: "VIDEO", STREAM: "STREAM", FILTERED: "FILTERED", SPEAKING: "SPEAKING", ACTIVITY: "ACTIVITY", NOT_POPPED_OUT: "NOT_POPPED_OUT" };
 let result = require("fetchFingerprint").fileFinishedImporting("modules/calls/ChannelRTCParticipants.tsx");
@@ -221,11 +224,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f74850) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f74938) {
   const self = this;
-  let closure_0 = f74850;
+  let closure_0 = f74938;
   let flag;
-  if (this.participants[f74850] != null) {
+  if (this.participants[f74938] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === outer1_14.USER) {
@@ -265,11 +268,11 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f748
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f74857, closure_1, closure_2) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f74945, closure_1, closure_2) {
   const self = this;
   let closure_0 = closure_2;
   let flag;
-  if (this.participants[f74857] != null) {
+  if (this.participants[f74945] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === outer1_14.STREAM) {
@@ -419,7 +422,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       const obj4 = getNickname;
       const tmp8 = require;
       obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, guildId);
-      obj.localVideoDisabled = localVideoDisabled.isLocalVideoDisabled(user.id);
+      obj.localVideoDisabled = _detectH265HardwareDecode.isLocalVideoDisabled(user.id);
       const poppedOutParticipants = self.poppedOutParticipants;
       obj.isPoppedOut = poppedOutParticipants.has(user.id);
       items.push(obj);
@@ -429,49 +432,51 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
     if (streamForUser == null) {
       streamForUser = obj6.getActiveStreamForUser(userId, guildId);
     }
-    if (null != streamForUser) {
-      if (streamForUser.channelId === self.channelId) {
-        const encodeStreamKeyResult = isStreamKey.encodeStreamKey(streamForUser);
-        const participant = self.getParticipant(encodeStreamKeyResult);
-        const obj12 = isStreamKey;
-        let type;
-        if (participant != null) {
-          type = participant.type;
-        }
-        let tmp18 = null;
-        if (type === constants.STREAM) {
-          let tmp19;
-          if (null != participant.maxResolution) {
-            obj = {};
-            const merged1 = Object.assign(participant.maxResolution);
-            tmp19 = obj;
+    if (_detectH265HardwareDecode.supports(constants4.VIDEO)) {
+      if (null != streamForUser) {
+        if (streamForUser.channelId === self.channelId) {
+          const encodeStreamKeyResult = isStreamKey.encodeStreamKey(streamForUser);
+          const participant = self.getParticipant(encodeStreamKeyResult);
+          const obj12 = isStreamKey;
+          let type;
+          if (participant != null) {
+            type = participant.type;
           }
-          obj1 = { maxResolution: null, maxFrameRate: null };
-          obj1[0] = tmp19;
-          obj1[1] = participant.maxFrameRate;
-          tmp18 = obj1;
+          let tmp20 = null;
+          if (type === constants.STREAM) {
+            let tmp21;
+            if (null != participant.maxResolution) {
+              obj = {};
+              const merged1 = Object.assign(participant.maxResolution);
+              tmp21 = obj;
+            }
+            obj1 = { maxResolution: null, maxFrameRate: null };
+            obj1[0] = tmp21;
+            obj1[1] = participant.maxFrameRate;
+            tmp20 = obj1;
+          }
+          const obj2 = {};
+          const merged2 = Object.assign(authStore3.getUserStreamData(userId, guildId, constants3.STREAM));
+          const merged3 = Object.assign(tmp20);
+          obj2.type = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId) ? constants.HIDDEN_STREAM : constants.STREAM;
+          obj2.id = encodeStreamKeyResult;
+          let flag2;
+          if (voiceStateForChannel != null) {
+            flag2 = voiceStateForChannel.selfVideo;
+          }
+          if (flag2 == null) {
+            flag2 = false;
+          }
+          obj2.userVideo = flag2;
+          obj2.user = user;
+          const tmp17 = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId);
+          obj2.userNick = getNickname.getName(guildId, self.channelId, user);
+          obj2.stream = streamForUser;
+          const poppedOutParticipants2 = self.poppedOutParticipants;
+          obj2.isPoppedOut = poppedOutParticipants2.has(encodeStreamKeyResult);
+          items.push(obj2);
+          const obj10 = getNickname;
         }
-        const obj2 = {};
-        const merged2 = Object.assign(authStore3.getUserStreamData(userId, guildId, MediaEngineContextTypes.STREAM));
-        const merged3 = Object.assign(tmp18);
-        obj2.type = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId) ? constants.HIDDEN_STREAM : constants.STREAM;
-        obj2.id = encodeStreamKeyResult;
-        let flag2;
-        if (voiceStateForChannel != null) {
-          flag2 = voiceStateForChannel.selfVideo;
-        }
-        if (flag2 == null) {
-          flag2 = false;
-        }
-        obj2.userVideo = flag2;
-        obj2.user = user;
-        const tmp15 = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId);
-        obj2.userNick = getNickname.getName(guildId, self.channelId, user);
-        obj2.stream = streamForUser;
-        const poppedOutParticipants2 = self.poppedOutParticipants;
-        obj2.isPoppedOut = poppedOutParticipants2.has(encodeStreamKeyResult);
-        items.push(obj2);
-        const obj10 = getNickname;
       }
     }
     return items;

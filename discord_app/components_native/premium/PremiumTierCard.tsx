@@ -5,7 +5,7 @@ import { getPremiumGradientColor } from "items";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../_runtime/04788_LinearGradient.js";
 import { keys } from "../../ConstantsIOS.tsx";
 import { PressableCard } from "../../design/components/Card/native/Card.native.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
@@ -49,11 +49,11 @@ export default function _default(children) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp2Result = tmp2(12903);
+    let tmp2Result = tmp2(12921);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(12904);
+    tmp2Result = tmp2(12922);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7435);
+    tmp2Result = tmp2(7456);
   }
   obj[4] = tmp2Result;
   obj[4] = closure_7(closure_4, obj);
@@ -69,11 +69,11 @@ export default function _default(children) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp2Result = tmp2(7373);
+    tmp2Result = tmp2(7395);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(7374);
+    tmp2Result = tmp2(7396);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7430);
+    tmp2Result = tmp2(7451);
   }
   obj[3] = tmp2Result;
   items[1] = closure_7(closure_4, obj);

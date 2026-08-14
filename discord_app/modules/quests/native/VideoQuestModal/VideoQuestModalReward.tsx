@@ -27,9 +27,9 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = withQuestName);
-  let obj = quest(14433);
+  let obj = quest(14446);
   quest = obj.useVideoQuestModalContext().quest;
-  let obj1 = quest(10420);
+  let obj1 = quest(10436);
   const items = [quest.id];
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const callback = importAllResult.useCallback(() => {
@@ -63,9 +63,9 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
   }
   items2[1] = tmp9Result;
   obj1[3] = items2;
-  items1[1] = closure_5(quest(4753).Stack, obj1);
+  items1[1] = closure_5(quest(4775).Stack, obj1);
   obj[4] = items1;
-  return closure_5(quest(4753).Stack, obj);
+  return closure_5(quest(4775).Stack, obj);
 });
 let result = require("createCacheKey").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx");
 

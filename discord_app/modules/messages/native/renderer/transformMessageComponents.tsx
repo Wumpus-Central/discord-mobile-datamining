@@ -567,11 +567,11 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            let VISUAL_PLACEHOLDER = tmp(8277).MediaGalleryItemType.IMAGE;
+            let VISUAL_PLACEHOLDER = tmp(8299).MediaGalleryItemType.IMAGE;
             let tmp4 = tmp;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              VISUAL_PLACEHOLDER = tmp(8277).MediaGalleryItemType.VIDEO;
+              VISUAL_PLACEHOLDER = tmp(8299).MediaGalleryItemType.VIDEO;
               tmp4 = tmp;
             }
             tmpResult = tmp(4532);
@@ -581,12 +581,12 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
         const size = {};
         const merged = Object.assign(file);
         let tmp4Result = tmp4(1403);
-        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, tmp4(4571).UnfurledMediaItemFlags.IS_ANIMATED);
+        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, tmp4(4593).UnfurledMediaItemFlags.IS_ANIMATED);
         if (!shouldShowMedia.shouldShowMedia) {
           size.height = 0;
           size.width = 0;
         }
-        if (VISUAL_PLACEHOLDER === tmp4(8277).MediaGalleryItemType.IMAGE) {
+        if (VISUAL_PLACEHOLDER === tmp4(8299).MediaGalleryItemType.IMAGE) {
           const obj4 = nativeStyleProperties;
           ({ proxyUrl, width: width2 } = size);
           if (width2 == null) {
@@ -598,9 +598,9 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
           }
           size.proxyUrl = obj4.getImageSrc(proxyUrl, width2, num3, !shouldShowMedia.shouldAutoPlayGifs);
         }
-        tmp4Result = tmp4(8257);
+        tmp4Result = tmp4(8279);
         size.width = tmp4Result.sanitizeMediaDimension(size.width);
-        size.height = tmp4(8257).sanitizeMediaDimension(size.height);
+        size.height = tmp4(8279).sanitizeMediaDimension(size.height);
         return size;
       }
     }
@@ -617,7 +617,7 @@ let result = require("CheckpointPersonas").fileFinishedImporting("modules/messag
 
 export default function transformMessageComponents(message, arr) {
   let obj = { type: "textDisplayComponent", parserState: null };
-  obj[1] = obj(8248).getInitialParserStateFromMessage(message.message, closure_7);
+  obj[1] = obj(8269).getInitialParserStateFromMessage(message.message, closure_7);
   obj = {};
   const merged = Object.assign(message);
   obj.markdownConfigs = { textDisplayComponent: obj };
@@ -634,10 +634,10 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            return tmp(8277).MediaGalleryItemType.IMAGE;
+            return tmp(8299).MediaGalleryItemType.IMAGE;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              return tmp(8277).MediaGalleryItemType.VIDEO;
+              return tmp(8299).MediaGalleryItemType.VIDEO;
             }
             tmpResult = tmp(4532);
           }

@@ -97,7 +97,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num == null) {
       num = 0;
     }
-    tmp6 = tmp2(11143).CHECKPOINT_PERSONA_COLORS[num];
+    tmp6 = tmp2(11159).CHECKPOINT_PERSONA_COLORS[num];
   }
   if (tmp6 != null) {
     const primaryColor = tmp6.primaryColor;
@@ -120,7 +120,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         obj[0] = num2;
         obj[1] = num3;
         let formatToPlainStringResult = intl4.formatToPlainString(tmp2(1236).t.Lr0Top, obj);
-        let AttachmentIcon = tmp2(11146).ImagesIcon;
+        let AttachmentIcon = tmp2(11162).ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
@@ -139,7 +139,7 @@ export const ForwardPreview = function ForwardPreview(message) {
           const items1 = [callback(preload, obj1), ];
           const obj3 = { style: null, size: "md", color: "white" };
           obj3[0] = tmp.playIcon;
-          items1[1] = callback(tmp2(9856).CirclePlayIcon, obj3);
+          items1[1] = callback(tmp2(9867).CirclePlayIcon, obj3);
           obj[1] = items1;
           let tmp7 = callback2(View, obj);
           let tmp8 = AttachmentIcon;
@@ -197,15 +197,15 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj10 = { count: null };
       obj10[0] = num3;
       formatToPlainStringResult = intl3.formatToPlainString(tmp2(1236).t.SJ6pPX, obj10);
-      AttachmentIcon = tmp2(9856).CirclePlayIcon;
+      AttachmentIcon = tmp2(9867).CirclePlayIcon;
     } else if (num2 > 0) {
       const intl2 = tmp2(1236).intl;
       const obj11 = { count: null };
       obj11[0] = num2;
       if (1 === num2) {
-        let ImagesIcon = tmp2(4856).ImageIcon;
+        let ImagesIcon = tmp2(4878).ImageIcon;
       } else {
-        ImagesIcon = tmp2(11146).ImagesIcon;
+        ImagesIcon = tmp2(11162).ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
       formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.h4pFfU, obj11);
@@ -215,7 +215,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj12 = { count: null };
       obj12[0] = length;
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t["89ihS8"], obj12);
-      AttachmentIcon = tmp2(9840).AttachmentIcon;
+      AttachmentIcon = tmp2(9851).AttachmentIcon;
     }
   } else {
     tmp7 = null;
@@ -227,7 +227,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     tmp33 = tmp7;
     if (null != tmp7) {
       obj13 = { shape: null, x: 28, y: 28, width: 32, height: 32, cornerRadius: 12 };
-      obj13[0] = tmp2(8341).CutoutShape.RoundedRect;
+      obj13[0] = tmp2(8363).CutoutShape.RoundedRect;
       const obj14 = { style: null, children: null };
       obj14[0] = tmp.attachmentPreviewOverflow;
       const obj15 = { cutouts: null, children: null };
@@ -313,7 +313,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     obj26[0] = obj27;
     obj26[1] = c7;
     obj26[2] = c7;
-    tmp2Result = tmp2(8292);
+    tmp2Result = tmp2(8314);
     let num5 = checkpointData.cardId;
     if (num5 == null) {
       num5 = 0;

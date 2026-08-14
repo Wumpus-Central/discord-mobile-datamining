@@ -4,7 +4,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08072_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08093_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { HeaderActionButton } from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -25,9 +25,9 @@ export default function EditGuildEventModalNavbar(screen) {
   const tmp = callback4();
   if (EditGuildEventScreens.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(8990).EditGuildEventScreens.DETAILS === screen) {
+  } else if (tmp2(9004).EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(8990).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (tmp2(9004).EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
     tmp2(1370).assertNever(screen);

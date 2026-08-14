@@ -141,7 +141,9 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                     if (tmp(tmp2[6]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
                       if (tmp(tmp2[6]).CodedLinkType.GAME_PROFILE !== type) {
                         if (tmp(tmp2[6]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                          return tmp(tmp2[19]).assertNever(type);
+                          if (tmp(tmp2[6]).CodedLinkType.USER_PROFILE !== type) {
+                            return tmp(tmp2[19]).assertNever(type);
+                          }
                         }
                       }
                     }

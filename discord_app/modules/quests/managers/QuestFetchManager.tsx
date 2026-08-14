@@ -119,12 +119,12 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[4] = initializeState.isFetchingCurrentQuests;
     obj[2] = obj;
     SentryUtils.native.addBreadcrumb(obj);
-    let tmpResult = tmp(10422);
+    let tmpResult = tmp(10438);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(500);
     if (tmpResult.isMac()) {
-      const state = tmp6(10446).getState();
-      const tmp6Result = tmp6(10446);
+      const state = tmp6(10462).getState();
+      const tmp6Result = tmp6(10462);
     }
     const obj2 = SentryUtils.native;
     tmp6 = importDefault;

@@ -5,7 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12119_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12137_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";

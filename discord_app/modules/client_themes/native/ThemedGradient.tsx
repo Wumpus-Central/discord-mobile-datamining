@@ -4,7 +4,7 @@ import { View } from "getGuildIdFromNavigationState";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { useTheme } from "../../../hooks/useTheme.tsx";

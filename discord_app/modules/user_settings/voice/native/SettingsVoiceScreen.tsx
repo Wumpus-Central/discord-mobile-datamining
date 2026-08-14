@@ -7,7 +7,7 @@ import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "combined";
-import { LegacyBaseButton } from "../../../../../_runtime/05467_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../../_runtime/05488_LegacyBaseButton.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -25,9 +25,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10839);
+    let tmp2Result = tmp2(10855);
   } else {
-    tmp2Result = tmp2(10840);
+    tmp2Result = tmp2(10856);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -70,7 +70,7 @@ let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10407);
+    let obj = callback(10421);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;

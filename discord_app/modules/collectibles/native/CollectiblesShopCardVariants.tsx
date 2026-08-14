@@ -73,7 +73,7 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 const memoResult = require("noop").memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(9395);
+  let obj = defaultVariantIndex(9409);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = callback2();
   if (obj2.getIsVariantProduct(product)) {
@@ -105,7 +105,7 @@ const memoResult = require("noop").memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7060);
+  obj2 = defaultVariantIndex(7082);
 });
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardVariants.tsx");
 

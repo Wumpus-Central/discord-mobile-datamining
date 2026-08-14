@@ -37,6 +37,7 @@ const re13 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channel
 const re14 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
 const re15 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
 const re16 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
+const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
 let result = require("DISCORD_EPOCH").fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
@@ -244,13 +245,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.fields = [];
   }
   if (null != footer.components) {
-    const transformComponentsResult = obj6(4566).transformComponents(footer.components);
+    const transformComponentsResult = obj6(4588).transformComponents(footer.components);
     let tmp40;
     if (transformComponentsResult.length > 0) {
       tmp40 = transformComponentsResult;
     }
     obj.components = tmp40;
-    const obj17 = obj6(4566);
+    const obj17 = obj6(4588);
   }
   return obj;
 };
@@ -332,6 +333,16 @@ export const isGameProfileArticleEmbed = function isGameProfileArticleEmbed(type
   }
   if (isMatch) {
     isMatch = regex9.test(type.url);
+  }
+  return isMatch;
+};
+export const isUserProfileArticleEmbed = function isUserProfileArticleEmbed(type) {
+  let isMatch = type.type === constants2.ARTICLE;
+  if (isMatch) {
+    isMatch = null != type.url;
+  }
+  if (isMatch) {
+    isMatch = regex10.test(type.url);
   }
   return isMatch;
 };

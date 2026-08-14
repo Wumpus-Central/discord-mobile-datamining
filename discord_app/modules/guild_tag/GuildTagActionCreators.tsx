@@ -73,26 +73,24 @@ function _adoptGuildIdentity() {
             return obj5;
           } else {
             lib = arg1;
-            if (lib.ok) {
-              obj = callback(table[4]);
-              const obj6 = { type: "CURRENT_USER_UPDATE", user: null };
-              const obj7 = {};
-              const merged = Object.assign(currentUser.getCurrentUser());
-              const merged1 = Object.assign(lib.body);
-              obj6[1] = obj7;
-              obj.dispatch(obj6);
-            }
+            let obj6 = callback(table[4]);
+            obj6 = { type: "CURRENT_USER_UPDATE", user: null };
+            const obj7 = {};
+            const merged = Object.assign(currentUser.getCurrentUser());
+            const merged1 = Object.assign(lib.body);
+            obj6[1] = obj7;
+            obj6.dispatch(obj6);
             constants = 0;
             c7 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = lib;
-            return obj8;
+            obj = { value: null, done: true };
+            obj[0] = lib;
+            return obj;
           }
-        } catch (tmp21) {
-          currentUser = tmp21;
+        } catch (tmp9) {
+          currentUser = tmp9;
           if (tmp4 === constants) {
             c7 = tmp2;
-            throw tmp21;
+            throw tmp9;
           } else {
             c6 = tmp;
           }

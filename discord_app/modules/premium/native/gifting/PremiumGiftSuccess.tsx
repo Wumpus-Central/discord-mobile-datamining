@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftSuccess.tsx
-import set from "set";
-import { View } from "PremiumGiftDMSuccessBody";
+import PremiumGiftDMSuccessBody from "PremiumGiftDMSuccessBody";
+import { View } from "DismissibleContent";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
+import jsxProd from "PremiumGiftingPromotionSuccessActions";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
@@ -48,6 +48,8 @@ export default function PremiumGiftSuccess() {
     }
     return id;
   });
+  let obj3 = importDefault(stateFromStores[14]);
+  const config = obj3.useConfig({ location: "PremiumGiftSuccess" });
   const items1 = [tmp8, tmp7, stateFromStores];
   const effect = React.useEffect(() => {
     let tmp = null != tmp7 && null != tmp7.reminderNotice && closure_1;
@@ -55,34 +57,55 @@ export default function PremiumGiftSuccess() {
       tmp = null != stateFromStores;
     }
     if (tmp) {
-      let obj = tmp7(stateFromStores[14]);
+      let obj = tmp7(stateFromStores[16]);
       obj = { dismissAction: null };
       obj[0] = outer1_6.INDIRECT_ACTION;
-      const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(tmp7(stateFromStores[15]).DismissibleContent.GIFTING_PROMOTION_REMINDER, stateFromStores, obj);
+      const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(tmp7(stateFromStores[17]).DismissibleContent.GIFTING_PROMOTION_REMINDER, stateFromStores, obj);
     }
   }, items1);
   if (null == recipientUser) {
     obj = { giftCodeRecord: null };
     obj[0] = giftCodeRecord;
-    let tmp13 = callback(tmp(tmp2[16]), obj);
-    let tmp12 = callback;
+    let tmp14 = callback(tmp(tmp2[18]), obj);
+    let tmp13 = callback;
   } else {
-    tmp12 = callback;
-    tmp13 = callback(tmp(tmp2[17]), {});
+    tmp13 = callback;
+    tmp14 = callback(tmp(tmp2[19]), {});
+  }
+  if (tmp8) {
+    if (config.enabled) {
+      if (selectedGiftingPromotionReward === require(stateFromStores[15]).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID) {
+        let code;
+        if (null == recipientUser) {
+          code = giftCodeRecord.code;
+        }
+        obj = { giftCode: null };
+        obj[0] = code;
+        let tmp13Result = tmp13(tmp(tmp2[20]), obj);
+        const tmpResult = tmp(tmp2[20]);
+      }
+      obj1 = { children: null };
+      obj2 = { style: null, children: null };
+      obj2[0] = tmp3.bodyContainer;
+      obj2[1] = tmp14;
+      const items2 = [tmp13(View, obj2), ];
+      obj3 = { style: null, children: null };
+      obj3[0] = tmp3.actionContainer;
+      obj3[1] = tmp13Result;
+      items2[1] = tmp13(View, obj3);
+      obj1[0] = items2;
+      return callback2(closure_8, obj1);
+    }
   }
   if (null != getOrFetchPurchase) {
-    obj = { purchase: null };
-    obj[0] = getOrFetchPurchase;
-    let tmp12Result = tmp12(tmp(tmp2[18]), obj);
+    const obj4 = { purchase: null };
+    obj4[0] = getOrFetchPurchase;
+    tmp13Result = tmp13(tmp(tmp2[21]), obj4);
   } else if (null == recipientUser) {
-    obj1 = { giftCodeRecord: null };
-    obj1[0] = giftCodeRecord;
-    tmp12Result = tmp12(tmp4(tmp2[16]).PremiumGiftSuccessActions, obj1);
+    const obj5 = { giftCodeRecord: null };
+    obj5[0] = giftCodeRecord;
+    tmp13Result = tmp13(tmp4(tmp2[18]).PremiumGiftSuccessActions, obj5);
   } else {
-    tmp12Result = tmp12(tmp4(tmp2[17]).PremiumGiftDMSuccessActions, {});
+    tmp13Result = tmp13(tmp4(tmp2[19]).PremiumGiftDMSuccessActions, {});
   }
-  obj2 = { children: null };
-  const items2 = [tmp12(View, { style: tmp3.bodyContainer, children: tmp13 }), tmp12(View, { style: tmp3.actionContainer, children: tmp12Result })];
-  obj2[0] = items2;
-  return callback2(closure_8, obj2);
 };

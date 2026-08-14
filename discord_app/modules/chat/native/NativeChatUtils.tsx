@@ -29,7 +29,7 @@ obj = {
           DCDChatManager.scrollTo(tmp15, arg1, tmp, tmp2, TOP);
         }
       } else {
-        const Commands = tmp5(10983).Commands;
+        const Commands = tmp5(10999).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
       obj2 = set;
@@ -45,7 +45,7 @@ obj = {
           DCDChatManager.scrollToBottom(tmp6, arg1);
         }
       } else {
-        const Commands = tmp2(10983).Commands;
+        const Commands = tmp2(10999).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
       obj = set;
@@ -91,7 +91,7 @@ obj = {
           DCDChatManager.scrollIntoView(tmp13, arg1, tmp, tmp2);
         }
       } else {
-        const Commands = tmp4(10983).Commands;
+        const Commands = tmp4(10999).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
       obj2 = set;
@@ -102,7 +102,7 @@ obj = {
     let forceReload;
     if (null != arg0) {
       if (obj6.isIOS()) {
-        let tmp31Result = tmp31(10984);
+        let tmp31Result = tmp31(11000);
         const andIncrementChangesetIdForChat = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
         ({ rows, forceReload } = rows);
         if (forceReload == null) {
@@ -118,7 +118,7 @@ obj = {
         obj[3] = forceReload;
         obj[2] = obj;
         SentryUtils.native.addBreadcrumb(obj);
-        const Commands = tmp31(10983).Commands;
+        const Commands = tmp31(10999).Commands;
         const _JSON2 = JSON;
         const json = JSON.stringify(rows.rows);
         const isLoadingAtTop = rows.isLoadingAtTop;
@@ -153,7 +153,7 @@ obj = {
             const _JSON = JSON;
             json2 = JSON.stringify(rows.scrollData);
           }
-          tmp31Result = tmp31(10984);
+          tmp31Result = tmp31(11000);
           const andIncrementChangesetIdForChat1 = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
           let flag = rows.HACK_iOSForceAnimations;
           if (flag == null) {
@@ -176,13 +176,13 @@ obj = {
   clearRows(arg0) {
     if (null != arg0) {
       if (obj4.isIOS()) {
-        const Commands = tmp6(10983).Commands;
-        let tmp6Result = tmp6(10984);
+        const Commands = tmp6(10999).Commands;
+        let tmp6Result = tmp6(11000);
         Commands.clearRows(arg0, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
       } else {
         const tmp2 = callback(arg0);
         if (null != tmp2) {
-          tmp6Result = tmp6(10984);
+          tmp6Result = tmp6(11000);
           enforcing.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
           const obj = enforcing;
         }

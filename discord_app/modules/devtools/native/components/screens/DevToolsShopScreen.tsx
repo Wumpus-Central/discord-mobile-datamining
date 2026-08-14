@@ -52,7 +52,7 @@ export default function DevToolsShopScreen() {
   obj3[3] = callback(FormSwitch.FormSwitch, {
     value: stateFromStores,
     onValueChange(arg0) {
-      return callback(15081).toggle("shop_disable_cache", arg0);
+      return callback(15095).toggle("shop_disable_cache", arg0);
     }
   });
   const items4 = [callback(TableRowInner.TableRow, obj3), , , , ];
@@ -60,7 +60,7 @@ export default function DevToolsShopScreen() {
   obj5[3] = callback(FormSwitch.FormSwitch, {
     value: stateFromStores1,
     onValueChange(arg0) {
-      return callback(15081).toggle("shop_include_unpublished", arg0);
+      return callback(15095).toggle("shop_include_unpublished", arg0);
     }
   });
   items4[1] = callback(TableRowInner.TableRow, obj5);
@@ -69,7 +69,7 @@ export default function DevToolsShopScreen() {
   obj7[3] = callback(FormSwitch.FormSwitch, {
     value: stateFromStores2,
     onValueChange(arg0) {
-      return callback(15081).toggle("shop_show_debug_overlay", arg0);
+      return callback(15095).toggle("shop_show_debug_overlay", arg0);
     }
   });
   items4[3] = callback(TableRowInner.TableRow, obj7);
@@ -77,7 +77,7 @@ export default function DevToolsShopScreen() {
   obj9[3] = callback(FormSwitch.FormSwitch, {
     value: stateFromStores3,
     onValueChange(arg0) {
-      return callback(15081).toggle("bypass_google_sku_sync", arg0);
+      return callback(15095).toggle("bypass_google_sku_sync", arg0);
     }
   });
   items4[4] = callback(TableRowInner.TableRow, obj9);

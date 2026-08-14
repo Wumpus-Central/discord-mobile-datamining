@@ -64,7 +64,7 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj1[3] = tmp4.button;
     items1[1] = callback(tmp2(4338).Text, obj1);
     obj[3] = items1;
-    tmp5 = callback2(tmp2(4887).PressableOpacity, obj);
+    tmp5 = callback2(tmp2(4909).PressableOpacity, obj);
   }
   return tmp5;
 };

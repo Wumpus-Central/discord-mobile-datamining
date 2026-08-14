@@ -7,7 +7,7 @@ import { GuildFeatures } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
-import { registerAsset } from "../../../../../../_runtime/16804_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/16820_registerAsset.js";
 import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
@@ -96,7 +96,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      let setOptionsResult = self(5310);
+      let setOptionsResult = self(5331);
       fn = setOptionsResult.getHeaderConditionalBackButton(this.handleCancel);
     }
     setOptionsResult = { headerLeft: null, headerRight: null };
@@ -249,7 +249,7 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
     obj[4] = navigation;
     obj[5] = tmp;
     obj[6] = guildId.contentContainerStyle;
-    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5754).NavScrim, {})];
+    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5775).NavScrim, {})];
     obj[0] = items3;
     tmp10 = callback2(closure_11, obj);
   }

@@ -22,7 +22,7 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj[2] = message.channel_id;
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
-    let tmpResult = tmp(8148);
+    let tmpResult = tmp(8169);
     obj = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
     obj[0] = application;
     obj[1] = messageAuthorWithProcessedColor.nick;
@@ -30,7 +30,7 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj[3] = tmp7;
     let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
   } else {
-    tmpResult = tmp(8148);
+    tmpResult = tmp(8169);
     const obj1 = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
     obj1[0] = application;
     obj1[1] = messageAuthorWithProcessedColor.nick;

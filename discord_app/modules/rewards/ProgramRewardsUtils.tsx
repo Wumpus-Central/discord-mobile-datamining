@@ -18,12 +18,12 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === NITRO) {
-    let tmpResult = tmp(13057);
+    let tmpResult = tmp(13075);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
     flag = false;
-    if (tmp(13054).RewardProgram.XBOX === NITRO) {
-      tmpResult = tmp(7063);
+    if (tmp(13072).RewardProgram.XBOX === NITRO) {
+      tmpResult = tmp(7085);
       flag = tmpResult.getIsCrepeEnabled(str);
     }
   }
@@ -44,22 +44,22 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === XBOX) {
-    let tmpResult = tmp(13057);
+    let tmpResult = tmp(13075);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
     flag = false;
-    if (tmp(13054).RewardProgram.XBOX === XBOX) {
-      tmpResult = tmp(7063);
+    if (tmp(13072).RewardProgram.XBOX === XBOX) {
+      tmpResult = tmp(7085);
       flag = tmpResult.getIsCrepeEnabled(str);
     }
   }
   if (flag) {
-    flag = tmp(13058).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
-    const tmpResult1 = tmp(13058);
+    flag = tmp(13076).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
+    const tmpResult1 = tmp(13076);
   }
   return flag;
 }
-let closure_5 = { [arg1(13054).RewardProgram.NITRO]: canFetchNitroProgramReward, [arg1(13054).RewardProgram.XBOX]: canFetchXboxProgramReward };
+let closure_5 = { [arg1(13072).RewardProgram.NITRO]: canFetchNitroProgramReward, [arg1(13072).RewardProgram.XBOX]: canFetchXboxProgramReward };
 const result = require("isPast").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
 export const isProgramRewardStale = function isProgramRewardStale(next_reward_date) {
@@ -86,10 +86,10 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === arg0) {
-    let tmpResult = tmp(13057);
+    let tmpResult = tmp(13075);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (tmp(13054).RewardProgram.XBOX === arg0) {
-    tmpResult = tmp(7063);
+  } else if (tmp(13072).RewardProgram.XBOX === arg0) {
+    tmpResult = tmp(7085);
     return tmpResult.getIsCrepeEnabled(str);
   } else {
     return false;
@@ -105,7 +105,7 @@ export const useIsEligibleForProgramReward = function useIsEligibleForProgramRew
   const isCrepeEnabled = apexExperiment.useIsCrepeEnabled(str);
   if (RewardProgram.RewardProgram.NITRO === arg0) {
     return obj.usePremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (tmp(13054).RewardProgram.XBOX === arg0) {
+  } else if (tmp(13072).RewardProgram.XBOX === arg0) {
     return isCrepeEnabled;
   } else {
     return false;

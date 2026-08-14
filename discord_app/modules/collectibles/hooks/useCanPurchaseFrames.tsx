@@ -35,8 +35,8 @@ export default function useCanPurchaseFrames(location) {
   });
   let tmp5 = bucket === apexExperiment.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
   if (!tmp5) {
-    tmp5 = bucket === tmp(9454).ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
-    const tmp6 = bucket === tmp(9454).ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    tmp5 = bucket === tmp(9467).ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    const tmp6 = bucket === tmp(9467).ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
   }
   if (isProfileFramesEnabled) {
     isProfileFramesEnabled = tmp5;

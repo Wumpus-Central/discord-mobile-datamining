@@ -13,7 +13,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/video_calls/nat
 export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = { gestureEnabled: true, resizeMode: null, onSingleTap: null, onDoubleTap: null, participant: null, style: null };
-  obj[1] = channel(10667).ResizeMode.CONTAIN;
+  obj[1] = channel(10683).ResizeMode.CONTAIN;
   obj[2] = function onSingleTap() {
     callback();
   };

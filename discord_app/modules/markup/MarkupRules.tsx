@@ -521,7 +521,7 @@ obj[19] = {
 obj[20] = require("getChannel").channelMention;
 obj[21] = require("getChannel").channelOrMessageUrl;
 obj[22] = require("getChannel").mediaPostLink;
-obj[23] = require("module_4788").attachmentLink;
+obj[23] = require("module_4810").attachmentLink;
 const obj10 = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["@"],
@@ -887,7 +887,7 @@ obj[33] = {
 };
 obj[34] = require("match");
 obj[35] = require("regExp");
-obj[36] = require("module_4803");
+obj[36] = require("module_4825");
 let items = [obj, ];
 const obj20 = {
   order: require("textRegexp").order,

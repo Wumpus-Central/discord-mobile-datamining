@@ -19,7 +19,7 @@ let unpackModuleId;
 const require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7267).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7289).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -101,7 +101,7 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("reinjectEphemerals").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "accessibilityRole", localCreationAnswerId: 1140851135 };
+  const obj = { text: "Array", image: "isArray", localCreationAnswerId: "a" };
   obj[2] = v1.v4();
   return obj;
 };

@@ -61,7 +61,7 @@ ApexExperiment = {
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      tmpResult = tmp(16426);
+      tmpResult = tmp(16444);
       const result1 = tmpResult.updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
@@ -277,7 +277,7 @@ ApexExperiment = {
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [callback(2007)(16431, dependencyMap.paths), callback(2007)(10423, dependencyMap.paths)];
+        const items = [callback(2007)(16449, dependencyMap.paths), callback(2007)(10439, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((arg0) => {
           const iter = arg0[Symbol.iterator]();
@@ -380,12 +380,12 @@ ApexExperiment = {
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = callback(2007)(15055, dependencyMap.paths);
-          callback(2007)(15055, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = callback(2007)(15069, dependencyMap.paths);
+          callback(2007)(15069, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = callback(2007)(15055, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = callback(2007)(15069, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -397,11 +397,11 @@ ApexExperiment = {
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2007)(5274, tmp8.paths).then((arg0) => {
+      tmp7(2007)(5295, tmp8.paths).then((arg0) => {
         arg0.default();
       });
       flag = false;
-      const promise3 = tmp7(2007)(5274, tmp8.paths);
+      const promise3 = tmp7(2007)(5295, tmp8.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -409,7 +409,7 @@ ApexExperiment = {
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2007)(13249, tmp8.paths).then((arg0) => {
+        tmp7(2007)(13261, tmp8.paths).then((arg0) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -418,7 +418,7 @@ ApexExperiment = {
           arg0.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2007)(13249, tmp8.paths);
+        const promise2 = tmp7(2007)(13261, tmp8.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -430,14 +430,14 @@ ApexExperiment = {
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2007)(16438, tmp8.paths).then((openRestrictedHoursModal) => {
+          tmp7(2007)(16456, tmp8.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2007)(16438, tmp8.paths);
+          const promise = tmp7(2007)(16456, tmp8.paths);
         }
       }
-      tmp7Result = tmp7(16437);
+      tmp7Result = tmp7(16455);
     }
   }
 };

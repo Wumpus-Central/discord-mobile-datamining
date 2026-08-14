@@ -80,7 +80,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12146), {});
+        return navigation(callback(12164), {});
       }
     };
     obj2[outer1_3.VERIFY_EMAIL] = {
@@ -95,7 +95,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12149), {});
+        return navigation(callback(12167), {});
       }
     };
     obj2[outer1_3.EMAIL_WAITLIST] = {
@@ -105,7 +105,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12152), {});
+        return navigation(callback(12170), {});
       }
     };
     obj2[outer1_3.SUBMIT_SCHOOL] = {
@@ -115,7 +115,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12154), {});
+        return navigation(callback(12172), {});
       }
     };
     obj2[outer1_3.SELECT_SCHOOL] = {
@@ -125,7 +125,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12155), {});
+        return navigation(callback(12173), {});
       }
     };
     obj2[outer1_3.VERIFY_PIN] = {
@@ -135,7 +135,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12156), {});
+        return navigation(callback(12174), {});
       }
     };
     obj2[outer1_3.SELECT_SCHOOL_SEARCH] = {
@@ -143,7 +143,7 @@ export default function HubEmailConnectionModal(arg0) {
       headerShown: false,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12159), {});
+        return navigation(callback(12177), {});
       }
     };
     obj1[0] = obj2;

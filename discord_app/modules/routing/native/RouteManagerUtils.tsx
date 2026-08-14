@@ -12,7 +12,7 @@ import { RouteParam } from "RouteParam";
 import { RouteParam as RouteParam2 } from "RouteParam";
 import { RouteParam as RouteParam3 } from "RouteParam";
 import { RouteParam as RouteParam4 } from "RouteParam";
-import { MemoryRouter } from "../../../../_runtime/10936_MemoryRouter.js";
+import { MemoryRouter } from "../../../../_runtime/10952_MemoryRouter.js";
 import { ChannelRTCActionCreators } from "../../../actions/ChannelRTCActionCreators.tsx";
 import { saveLastRoute } from "../../../actions/DefaultRouteActionCreators.tsx";
 import { showTooManyUserGuildsAlert } from "../../../actions/GuildActionCreators.tsx";
@@ -133,7 +133,7 @@ function updateSelectedChannelListener(location) {
   let voiceGuildId2;
   let voiceMessageId;
   let voiceMessageId2;
-  let obj = channel2(10936);
+  let obj = channel2(10952);
   obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(location.pathname, obj);
   let params;
@@ -180,7 +180,7 @@ function updateSelectedChannelListener(location) {
         isGuildVoiceResult = isGuildStageVoiceResult;
       }
       if (isGuildVoiceResult) {
-        let tmpResult = tmp(4554);
+        let tmpResult = tmp(4576);
         ModalActionCreators.popWithKey(tmpResult.getVoiceChannelKey(channel.id));
         const obj21 = ModalActionCreators;
       }
@@ -244,7 +244,7 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     obj8.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
-  tmpResult = tmp(10743);
+  tmpResult = tmp(10759);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
     const guild1 = showTooManyUserGuildsAlert.selectGuild(voiceGuildId2);
     const obj10 = showTooManyUserGuildsAlert;
@@ -261,14 +261,14 @@ function updateSelectedChannelListener(location) {
   const tmpResult1 = channel2(4197);
   if (!tmpResult1.isModalOpen(tmpResult2.getVoiceChannelKey(channel2.id))) {
     const obj15 = ModalActionCreators;
-    obj15.popAboveKey(tmp(4554).getVoiceChannelKey(channel2.id));
-    const tmpResult3 = tmp(4554);
+    obj15.popAboveKey(tmp(4576).getVoiceChannelKey(channel2.id));
+    const tmpResult3 = tmp(4576);
     dispatcher.wait(() => {
       channel2(outer1_2[16]).openGuildVoiceModal(channel2);
     });
     const obj17 = dispatcher;
   }
-  tmpResult2 = channel2(4554);
+  tmpResult2 = channel2(4576);
   if (tmp21) {
     setVoiceChatDrawerState(channel2.id, VoiceChatDrawerState.OPEN);
     if (tmp25) {

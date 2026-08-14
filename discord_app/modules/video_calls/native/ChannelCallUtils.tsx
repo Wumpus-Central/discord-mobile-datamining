@@ -3,10 +3,10 @@ import "report";
 import initialize from "initialize";
 import ME from "ME";
 import { jsx } from "showShareActionSheet";
-import { registerAsset } from "../../../../_runtime/08063_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10842_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16360_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16361_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08084_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10858_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16378_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16379_registerAsset.js";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
@@ -24,7 +24,7 @@ export const voiceSettings = function voiceSettings() {
   obj[0] = intl.string(getSystemLocale.t.NiTd0e);
   obj[1] = registerAsset;
   obj[2] = function onPress() {
-    let obj = callback(6059);
+    let obj = callback(6080);
     obj = { screen: constants.VOICE };
     obj.openUserSettings(obj);
     callback2(4310).hideActionSheet();
@@ -101,19 +101,19 @@ export const invite = function invite(isPrivate) {
   const dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
-      let obj = isPrivate(9114);
+      let obj = isPrivate(9128);
       obj = { source: outer1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
-      let obj = isPrivate(9114);
+      let obj = isPrivate(9128);
       obj = { source: outer1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
-        let obj = isPrivate(9114);
+        let obj = isPrivate(9128);
         obj = { source: outer1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };

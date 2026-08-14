@@ -2,7 +2,7 @@
 import { SWITCH_ACCOUNTS_MODAL_KEY } from "MAX_ACCOUNTS";
 import ME from "ME";
 import "_initialize";
-import { registerAsset } from "../../../../_runtime/16576_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16589_registerAsset.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 

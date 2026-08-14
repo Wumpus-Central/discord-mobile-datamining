@@ -34,9 +34,9 @@ export default function GuildEventsNoContent(guild) {
   let stateFromStores = obj.useStateFromStores(items, () => outer1_4.can(outer1_6.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
   obj = { icon: null, IconComponent: null };
-  obj[0] = onClose(9092);
-  obj[1] = guild(9093).CalendarIcon;
-  const items2 = [callback(onClose(7832), obj), , , ];
+  obj[0] = onClose(9106);
+  obj[1] = guild(9107).CalendarIcon;
+  const items2 = [callback(onClose(7853), obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1236).intl;
   obj1[4] = intl.string(guild(1236).t["WgZ+3D"]);

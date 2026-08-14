@@ -3,7 +3,7 @@ import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/08737_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08751_registerAsset.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -57,14 +57,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(16867)(guild_id, 3, 60);
+  const tmp4 = guild_id(16883)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(16839), {});
+    obj[1] = callback(tmp2(16855), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -79,7 +79,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
     obj1[1] = obj2;
-    const items1 = [callback(tmp2(5308), obj1), ];
+    const items1 = [callback(tmp2(5329), obj1), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: null };

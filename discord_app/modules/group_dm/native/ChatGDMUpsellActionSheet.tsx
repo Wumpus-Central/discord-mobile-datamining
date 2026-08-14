@@ -3,7 +3,7 @@ import noop from "noop";
 import { View } from "LinkIcon";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11042_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11058_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
@@ -54,7 +54,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const intl = onClick(1236).intl;
   obj3[0] = intl.string(onClick(1236).t["3PatSz"]);
   obj3[1] = callback;
-  const items2 = [callback(onClick(4755).Button, obj3), ];
+  const items2 = [callback(onClick(4777).Button, obj3), ];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { text: null, onPress: null, variant: "tertiary" };
   const intl2 = onClick(1236).intl;
@@ -62,7 +62,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj5[1] = function onPress() {
     callback(table[8]).hideActionSheet();
   };
-  obj4[1] = callback(onClick(4755).Button, obj5);
+  obj4[1] = callback(onClick(4777).Button, obj5);
   items2[1] = callback(View, obj4);
   obj1[1] = items2;
   obj[4] = callback2(View, obj1);
@@ -78,7 +78,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
   const obj2 = { padding: 16, paddingBottom: useSafeAreaInsets().bottom + 16 };
-  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(11043).TimerIcon, { size: "sm" }) }), ];
+  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(11059).TimerIcon, { size: "sm" }) }), ];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1236).intl;
   obj12[3] = intl5.string(onClick(1236).t.Fq3DJb);
@@ -86,7 +86,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj10[1] = items4;
   const items5 = [callback2(View, obj10), ];
   const obj13 = { style: tmp.secondInnerContainer, children: null };
-  const obj11 = { style: tmp.item, children: callback(onClick(11043).TimerIcon, { size: "sm" }) };
+  const obj11 = { style: tmp.item, children: callback(onClick(11059).TimerIcon, { size: "sm" }) };
   const items6 = [callback(View, { style: tmp.item, children: callback(onClick(4286).LinkIcon, { size: "sm" }) }), ];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1236).intl;
@@ -97,6 +97,6 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj9[1] = items5;
   items3[2] = callback2(View, obj9);
   obj6[0] = items3;
-  obj[5] = callback2(onClick(5439).BottomSheetScrollView, obj6);
-  return callback(onClick(5437).BottomSheet, obj);
+  obj[5] = callback2(onClick(5460).BottomSheetScrollView, obj6);
+  return callback(onClick(5458).BottomSheet, obj);
 };

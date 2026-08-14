@@ -57,14 +57,14 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
     const obj1 = { style: null, size: null, source: null };
     obj1[0] = tmp.channelIcon;
     obj1[1] = tmp2(1297).Icon.Sizes.CUSTOM;
-    obj1[2] = tmp2(4805).getChannelIcon(stateFromStores);
+    obj1[2] = tmp2(4827).getChannelIcon(stateFromStores);
     const items2 = [tmp7(tmp2(1297).Icon, obj1), ];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj2[2] = tmp6;
     items2[1] = tmp7(tmp2(4338).Text, obj2);
     obj[1] = items2;
     tmp8 = callback2(View, obj);
-    const tmp2Result = tmp2(4805);
+    const tmp2Result = tmp2(4827);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

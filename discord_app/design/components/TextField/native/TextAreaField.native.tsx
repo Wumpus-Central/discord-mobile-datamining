@@ -38,7 +38,7 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
   if (null != maxLength) {
     diff = maxLength - state.value.length;
   }
-  const result = _8Q_k1s(8023);
+  const result = _8Q_k1s(8044);
   obj = { currentLength: state.value.length, maxLength, message: null };
   const intl = _8Q_k1s(1236).intl;
   obj[2] = intl.string(_8Q_k1s(1236).t.c2Jqed);
@@ -56,11 +56,11 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
   obj2.style = items;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
   obj2.multiline = true;
-  const items1 = [callback(_8Q_k1s(6046).NativeTextInput, obj2), ];
+  const items1 = [callback(_8Q_k1s(6067).NativeTextInput, obj2), ];
   if (null == diff) {
     items1[1] = null;
     obj1.children = items1;
-    return closure_4(_8Q_k1s(6043).InputFieldContainer, obj1);
+    return closure_4(_8Q_k1s(6064).InputFieldContainer, obj1);
   } else {
     obj3 = { style: null, children: null };
     obj3[0] = tmp2.maxLengthIndicator;

@@ -82,7 +82,7 @@ export default function InAppReportsBottomButton(button) {
       };
       obj2[2] = stringResult2;
       obj2[3] = str2;
-      items1[1] = callback(tmp17(4755).Button, obj2);
+      items1[1] = callback(tmp17(4777).Button, obj2);
       tmp14Result = null;
       if (hasError) {
         const obj3 = { style: null, children: null };

@@ -70,11 +70,11 @@ function HasBadgeCoachmark(markAsDismissed) {
   const intl3 = tmp5(1236).intl;
   obj6[1] = intl3.string(markAsDismissed(1236).t.RzWDqY);
   obj6[2] = callback;
-  obj5[1] = closure_8(markAsDismissed(4755).Button, obj6);
+  obj5[1] = closure_8(markAsDismissed(4777).Button, obj6);
   items2[2] = closure_8(closure_5, obj5);
   obj[1] = items2;
   obj[2] = closure_9(closure_5, obj);
-  return closure_8(markAsDismissed(5437).BottomSheet, obj);
+  return closure_8(markAsDismissed(5458).BottomSheet, obj);
 }
 function NewBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -120,13 +120,13 @@ function NewBadgeCoachmark(markAsDismissed) {
   obj7[1] = intl3.string(messagesProxy.DZnomS);
   const obj8 = { size: "sm", color: null };
   obj8[1] = Themes.colors.CONTROL_PRIMARY_TEXT_DEFAULT;
-  obj7[2] = callback(markAsDismissed(9624).GiftIcon, obj8);
+  obj7[2] = callback(markAsDismissed(9635).GiftIcon, obj8);
   obj7[3] = callback;
-  obj6[1] = callback(markAsDismissed(4755).Button, obj7);
+  obj6[1] = callback(markAsDismissed(4777).Button, obj7);
   items2[2] = callback(closure_5, obj6);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(5437).BottomSheet, obj);
+  return callback(markAsDismissed(5458).BottomSheet, obj);
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
@@ -150,9 +150,9 @@ export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let getCurrentTier;
     let getSingleRequirementProgress;
-    const obj = { currentTier: getCurrentTier(callback(8835).BadgeId.GIFTING), giftCount: null };
+    const obj = { currentTier: getCurrentTier(callback(8849).BadgeId.GIFTING), giftCount: null };
     ({ getCurrentTier, getSingleRequirementProgress } = map);
-    const singleRequirementProgress = getSingleRequirementProgress(callback(8835).BadgeId.GIFTING);
+    const singleRequirementProgress = getSingleRequirementProgress(callback(8849).BadgeId.GIFTING);
     let current;
     if (singleRequirementProgress != null) {
       current = singleRequirementProgress.current;

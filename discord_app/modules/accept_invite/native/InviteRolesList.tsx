@@ -46,7 +46,7 @@ export default function InviteRolesList(invite) {
       obj[1] = memo.map((id) => outer1_5(roles(outer1_2[8]), { role: id, guildId: guild.id }, id.id));
       items1[1] = callback(View, obj);
       obj[2] = items1;
-      tmp2 = callback2(guild(4753).Stack, obj);
+      tmp2 = callback2(guild(4775).Stack, obj);
     }
   }
   return tmp2;

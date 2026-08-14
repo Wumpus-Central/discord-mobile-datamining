@@ -60,9 +60,9 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[1] = tmp5;
         obj[2] = tmp6;
         const tmp3 = callback(first, 3);
-        const obj2 = tmp8(7059)(obj);
+        const obj2 = tmp8(7081)(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(7059)(obj).toHsl());
+        ({ h, s, l } = tmp8(7081)(obj).toHsl());
         if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
           num2 = maybeApplyNoTextColorForLightCustomTheme.saturation;
         }
@@ -70,8 +70,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[0] = h;
         obj[1] = s * num2;
         obj[2] = l;
-        const toHslResult = tmp8(7059)(obj).toHsl();
-        return tmp8(7059)(obj).toHexString();
+        const toHslResult = tmp8(7081)(obj).toHsl();
+        return tmp8(7081)(obj).toHexString();
       } else {
         return null;
       }

@@ -1,7 +1,7 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/08749_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08763_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 
 const result = require("preload").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");

@@ -440,7 +440,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   let obj = id(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_14.getUser(id));
-  const nullableMessageAuthor = id(4573).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4595).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = React.useEffect(() => {
     let tmp2 = null != id;

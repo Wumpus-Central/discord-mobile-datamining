@@ -7,8 +7,8 @@ import jsxProd from "_initialize";
 import headerTitle from "headerTitle";
 import createCacheKey from "createCacheKey";
 import { KeyboardChatScrollView } from "../../../../../_runtime/01642_KeyboardChatScrollView.js";
-import { createStackNavigator } from "../../../../../_runtime/05825_createStackNavigator.js";
-import { registerAsset } from "../../../../../_runtime/15199_registerAsset.js";
+import { createStackNavigator } from "../../../../../_runtime/05846_createStackNavigator.js";
+import { registerAsset } from "../../../../../_runtime/15213_registerAsset.js";
 import { usePortraitOrientationOnly } from "../useOrientationLock.tsx";
 import { useWideAuthView } from "../useWideAuthView.tsx";
 import { BackgroundImage } from "atoms/BackgroundImage.tsx";
@@ -105,10 +105,10 @@ function NavigatorWithCaptchaHook() {
     obj7[1] = tmp4(712).space.PX_24;
     obj7[2] = tmp4(712).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = tmp17(tmp(5823).Navigator, obj6);
+    obj5[1] = tmp17(tmp(5844).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(8549).WideAuthScrollContext.Provider, obj);
+    let tmp17Result = tmp17(tmp(8571).WideAuthScrollContext.Provider, obj);
     tmpResult = tmp(501);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteName: null, onWillFocus: null, headerStyle: null };
@@ -119,7 +119,7 @@ function NavigatorWithCaptchaHook() {
     obj8[4] = tmp7.WELCOME;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(5823).Navigator, obj8);
+    tmp17Result = tmp17(tmp(5844).Navigator, obj8);
   }
   children[1] = tmp17Result;
   return tmp15(tmp16, { children });
@@ -201,10 +201,10 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15200).initialize();
+    callback2(15214).initialize();
     return () => callback(table[21]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(6982).trackAppUIViewed(), []);
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7004).trackAppUIViewed(), []);
   usePortraitOrientationOnly();
   let closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(outer1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });

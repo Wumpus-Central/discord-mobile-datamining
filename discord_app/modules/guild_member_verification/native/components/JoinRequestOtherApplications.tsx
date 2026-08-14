@@ -24,7 +24,7 @@ function ApplicationStatusIcon(status) {
     obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = Themes.colors.ICON_FEEDBACK_CRITICAL;
     obj[2] = Themes.colors.WHITE;
-    return callback(tmp(6039).CircleXIcon, obj);
+    return callback(tmp(6060).CircleXIcon, obj);
   } else {
     return null;
   }

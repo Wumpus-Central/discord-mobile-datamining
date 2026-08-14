@@ -24,7 +24,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1499);
   navigation = obj.useNavigation();
   [tmp5, c2] = callback1(React.useState({ type: "loading" }), 2);
-  let obj1 = modalSessionId(4560);
+  let obj1 = modalSessionId(4582);
   const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   callback = React.useCallback(() => {
@@ -192,9 +192,9 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     obj2[2] = intl.string(navigation(2821).MlFuBI);
     items3[1] = callback(tmp(4338).Text, obj2);
     obj1[3] = items3;
-    obj[0] = callback2(tmp(4753).Stack, obj1);
-    obj[0] = callback(tmp(7853).ModalContent, obj);
-    let tmp14 = callback(tmp(7852).ModalScreen, obj);
+    obj[0] = callback2(tmp(4775).Stack, obj1);
+    obj[0] = callback(tmp(7874).ModalContent, obj);
+    let tmp14 = callback(tmp(7873).ModalScreen, obj);
   } else {
     let obj3 = { children: null };
     let obj4 = { children: null };
@@ -210,12 +210,12 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
       const result = modalSessionId(_undefined[18]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(_undefined[18]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, modalSessionId(_undefined[18]).AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj7[0] = callback(tmp(4755).Button, obj8);
-    items4[1] = callback(tmp(5191).ButtonGroup, obj7);
+    obj7[0] = callback(tmp(4777).Button, obj8);
+    items4[1] = callback(tmp(5212).ButtonGroup, obj7);
     obj5[3] = items4;
-    obj4[0] = callback2(tmp(4753).Stack, obj5);
-    obj3[0] = callback(tmp(7853).ModalContent, obj4);
-    tmp14 = callback(tmp(7852).ModalScreen, obj3);
+    obj4[0] = callback2(tmp(4775).Stack, obj5);
+    obj3[0] = callback(tmp(7874).ModalContent, obj4);
+    tmp14 = callback(tmp(7873).ModalScreen, obj3);
   }
   return tmp14;
 };

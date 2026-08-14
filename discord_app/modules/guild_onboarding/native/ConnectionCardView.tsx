@@ -72,7 +72,7 @@ export default function ConnectionCardView(description) {
     const intl = tmp5(1236).intl;
     obj5[3] = intl.string(tmp5(1236).t.S0W8Z5);
     obj5[4] = !canConnect;
-    tmp4Result = tmp4(tmp5(4755).Button, obj5);
+    tmp4Result = tmp4(tmp5(4777).Button, obj5);
   }
   items2[1] = tmp4Result;
   obj[1] = items2;

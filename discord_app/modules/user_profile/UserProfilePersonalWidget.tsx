@@ -32,19 +32,24 @@ function isSectionEmpty(type) {
       tmp4 = null == type.image;
     }
     return tmp4;
-  } else if (tmp(7138).PersonalWidgetSectionType.FIELDS === type) {
+  } else if (tmp(7160).PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
     return fields.every(isFieldEmpty);
   }
   tmp = require;
 }
 function parseField(image) {
+  let is_animated;
   image = image.image;
   let tmp;
   if (null != image) {
     if ("file_id" in image) {
-      let obj = { fileId: null, width: null, height: null };
-      ({ file_id: obj[0], width: obj[1], height: obj[2] } = image);
+      let obj = { fileId: null, width: null, height: null, isAnimated: null };
+      ({ file_id: obj[0], width: obj[1], height: obj[2], is_animated } = image);
+      if (is_animated == null) {
+        is_animated = false;
+      }
+      obj[3] = is_animated;
       tmp = obj;
     }
   }
@@ -79,8 +84,8 @@ function serializeSection(type) {
       obj[0] = image;
       let obj1 = obj;
     } else {
-      obj1 = { file_id: null, width: null, height: null };
-      ({ fileId: obj3[0], width: obj3[1], height: obj3[2] } = image);
+      obj1 = { file_id: null, width: null, height: null, is_animated: null };
+      ({ fileId: obj3[0], width: obj3[1], height: obj3[2], isAnimated: obj3[3] } = image);
     }
   } else if (PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
@@ -108,8 +113,8 @@ function serializeSection(type) {
         filename = filename.filename;
         obj[0] = filename;
       } else {
-        obj = { file_id: null, width: null, height: null };
-        ({ fileId: obj2[0], width: obj2[1], height: obj2[2] } = filename);
+        obj = { file_id: null, width: null, height: null, is_animated: null };
+        ({ fileId: obj2[0], width: obj2[1], height: obj2[2], isAnimated: obj2[3] } = filename);
       }
     });
     return obj;
@@ -224,7 +229,7 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(7138).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (tmp16(7160).PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
           tmp16 = require;
@@ -329,9 +334,10 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
   } else {
     const mapped = sections.map((type) => {
       let fields;
+      let is_animated;
       let title;
       type = type.type;
-      if (callback(7138).PersonalWidgetSectionType.COVER === type) {
+      if (callback(7160).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2[0], title } = type);
         if (title == null) {
@@ -347,14 +353,18 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
         let tmp5;
         if (null != image) {
           if ("file_id" in image) {
-            obj = { fileId: null, width: null, height: null };
-            ({ file_id: obj3[0], width: obj3[1], height: obj3[2] } = image);
+            obj = { fileId: null, width: null, height: null, isAnimated: null };
+            ({ file_id: obj3[0], width: obj3[1], height: obj3[2], is_animated } = image);
+            if (is_animated == null) {
+              is_animated = false;
+            }
+            obj[3] = is_animated;
             tmp5 = obj;
           }
         }
         obj[3] = tmp5;
         return obj;
-      } else if (tmp(7138).PersonalWidgetSectionType.FIELDS === type) {
+      } else if (tmp(7160).PersonalWidgetSectionType.FIELDS === type) {
         obj = { type: null, fields: null };
         ({ type: obj[0], fields } = type);
         obj[1] = fields.map(closure_8);
@@ -364,7 +374,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     });
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
-  if (!items.some((type) => type.type === callback(7138).PersonalWidgetSectionType.FIELDS)) {
+  if (!items.some((type) => type.type === callback(7160).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
     obj[0] = PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];

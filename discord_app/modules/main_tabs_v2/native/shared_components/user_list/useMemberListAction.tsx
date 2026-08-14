@@ -17,7 +17,7 @@ let closure_12;
 let unpackModuleId;
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "isArray", listActionHeight: "accessibilityRole" };
+let closure_14 = { listActionRenderer: "r", listActionHeight: "accessibilityRole" };
 let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -63,8 +63,8 @@ export default function useMemberListAction(channel) {
   });
   let canResult = flag3.can(first.MANAGE_ROLES, channel);
   if (canResult) {
-    canResult = channel(9046).isPrivateGuildChannel(channel);
-    const tmp5Result = channel(9046);
+    canResult = channel(9060).isPrivateGuildChannel(channel);
+    const tmp5Result = channel(9060);
   }
   React = canResult;
   let tmp9 = null != channel && !flag;

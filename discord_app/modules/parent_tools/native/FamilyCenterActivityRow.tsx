@@ -61,7 +61,7 @@ const memoResult = importAllResult.memo((action) => {
     const obj4 = { variant: "text-xs/medium", color: "channels-default", children: null };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj4[2] = tmp6(7100).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    obj4[2] = tmp6(7122).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
     items2[1] = callback(tmp6(4338).Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(View, obj2);
@@ -105,8 +105,8 @@ const memoResult1 = importAllResult.memo((action) => {
     obj = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3[0], avatarText: obj3[1] } = tmp);
     obj[2] = stateFromStores;
-    let tmp6Result = tmp6(5819);
-    obj[3] = tmp2(5819).GuildIconSizes.NORMAL;
+    let tmp6Result = tmp6(5840);
+    obj[3] = tmp2(5840).GuildIconSizes.NORMAL;
     const items1 = [callback(tmp6Result, obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.text;
@@ -119,8 +119,8 @@ const memoResult1 = importAllResult.memo((action) => {
       const obj4 = { style: null, guild: null, size: null, disableColor: true };
       obj4[0] = tmp.badge;
       obj4[1] = stateFromStores;
-      tmp6Result = tmp6(8487);
-      obj4[2] = tmp6(8487).Sizes.SMALL;
+      tmp6Result = tmp6(8509);
+      obj4[2] = tmp6(8509).Sizes.SMALL;
       tmp11Result = tmp11(tmp6Result, obj4);
     }
     const items2 = [tmp11Result, ];
@@ -162,14 +162,14 @@ export default function FamilyCenterActivityRow(action) {
   action = action.action;
   let obj = getEmptyActivityFormatter;
   if (!obj.isUserAction(action)) {
-    let tmpResult = tmp(7100);
+    let tmpResult = tmp(7122);
     if (!tmpResult.isGuildAction(action)) {
-      tmpResult = tmp(7100);
+      tmpResult = tmp(7122);
       if (!tmpResult.isPurchase(action)) {
         if (!tmpResult1.isGift(action)) {
           return null;
         }
-        tmpResult1 = tmp(7100);
+        tmpResult1 = tmp(7122);
       }
     }
   }
@@ -188,7 +188,7 @@ export default function FamilyCenterActivityRow(action) {
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14216).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = tmp(14229).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         obj = { skuId: null, subscriptionPlanId: null, price: null, gifterUserId: null, claimed: null, offeredAt: null, claimedAt: null };
         obj[0] = skuId;
@@ -214,7 +214,7 @@ export default function FamilyCenterActivityRow(action) {
       obj3[0] = tmp4Result;
       return callback(View, obj3);
     }
-    tmpResult3 = tmp(7100);
+    tmpResult3 = tmp(7122);
   }
   tmpResult2 = getEmptyActivityFormatter;
 };

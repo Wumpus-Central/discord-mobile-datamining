@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   let isScreenLandscape;
   let c18;
   let tmp = callback();
-  let obj = sharedValue(8386);
+  let obj = sharedValue(8408);
   let obj1 = importAllResult;
   const ref = importAllResult.useRef(null);
   sharedValue = ref;
@@ -74,9 +74,9 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   fn.__workletHash = 23826674246;
   fn.__initData = closure_13;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj4 = sharedValue(8386);
+  let obj4 = sharedValue(8408);
   const sectionName = obj4.getSectionName(application);
-  let obj5 = sharedValue(8386);
+  let obj5 = sharedValue(8408);
   str = obj5.getSectionDescription(application);
   let tmp28Result1 = null != str;
   if (tmp28Result1) {
@@ -99,14 +99,14 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   const memo = obj1.useMemo(() => {
     let result = null;
     if (null != str) {
-      result = sharedValue(9582).parseBioReactWithCachedAST(tmp);
-      const obj = sharedValue(9582);
+      result = sharedValue(9595).parseBioReactWithCachedAST(tmp);
+      const obj = sharedValue(9595);
     }
     return result;
   }, items);
   const tmp6Result1 = first1(obj1.useState(false), 2);
-  isScreenLandscape = sharedValue(4890).useIsScreenLandscape();
-  const tmp24 = first(8902)(isScreenLandscape);
+  isScreenLandscape = sharedValue(4912).useIsScreenLandscape();
+  const tmp24 = first(8916)(isScreenLandscape);
   c18 = tmp24;
   const items1 = [isScreenLandscape, tmp24];
   const effect = obj1.useEffect(() => {
@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     }
   }, items1);
   let tmp27 = first;
-  const tmp2Result = sharedValue(4890);
+  const tmp2Result = sharedValue(4912);
   if (first) {
     tmp27 = !first1;
   }
@@ -196,7 +196,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     };
     const obj6 = { style: null };
     const absoluteFill = str.absoluteFill;
-    let tmp23Result = tmp23(5350);
+    let tmp23Result = tmp23(5371);
     if (tmp27) {
       const obj7 = { style: null, children: null };
       obj7[0] = absoluteFill;
@@ -215,7 +215,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       obj10[0] = tmp.maskFill;
       const items8 = [tmp30(tmp31, obj10), , ];
       const obj11 = { start: null, end: null, colors: null, style: null };
-      tmp23Result = tmp23(4766);
+      tmp23Result = tmp23(4788);
       obj11[0] = tmp2(691).HorizontalGradient.START;
       obj11[1] = tmp2(691).HorizontalGradient.END;
       obj11[2] = closure_11;

@@ -73,8 +73,8 @@ function BountiesCtaHeaderInner(bounties) {
   const items1 = [getOrCreateSet];
   const items2 = [bounties];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !getOrCreateSet.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
-  let obj2 = bounties(10955);
-  const QuestContent = bounties(5205).QuestContent;
+  let obj2 = bounties(10971);
+  const QuestContent = bounties(5226).QuestContent;
   const tmp6 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
   importDefault = tmp6;
   const items3 = [bounties, tmp6];
@@ -109,7 +109,7 @@ function BountiesCtaHeaderInner(bounties) {
     const intl2 = tmp2(1236).intl;
     obj4[3] = intl2.string(tmp2(1236).t["1kkbKw"]);
     obj4[4] = callback;
-    tmp13Result = callback(tmp2(4755).Button, obj4);
+    tmp13Result = callback(tmp2(4777).Button, obj4);
   }
   items6[2] = tmp13Result;
   obj2[1] = items6;
@@ -147,7 +147,7 @@ let closure_12 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14387)();
+  const tmp2 = containerRef(14400)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -167,17 +167,17 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     } else {
       const obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
       obj1[0] = closure_8;
-      obj1[1] = tmp7(7222).AdCreativeType.BOUNTY;
-      obj1[2] = tmp7(5205).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[1] = tmp7(7244).AdCreativeType.BOUNTY;
+      obj1[2] = tmp7(5226).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
-      obj1[5] = tmp7(5205).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[5] = tmp7(5226).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[6] = function children() {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
         return outer1_10(outer1_14, obj);
       };
-      tmp9Result = tmp9(tmp7(11226).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11242).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_10(_ManaContext.ThemeContextProvider, obj);

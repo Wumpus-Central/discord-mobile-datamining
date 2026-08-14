@@ -6,7 +6,7 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../intl/SlayerStorefront.messages.js";
 
 const require = arg1;
-let closure_6 = { [arg1(10144).StorefrontPlatform.DESKTOP]: "PC", [arg1(10144).StorefrontPlatform.XBOX]: "Xbox", [arg1(10144).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10144).StorefrontPlatform.SWITCH]: "Switch", [arg1(10144).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10144).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10144).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
+let closure_6 = { [arg1(10156).StorefrontPlatform.DESKTOP]: "PC", [arg1(10156).StorefrontPlatform.XBOX]: "Xbox", [arg1(10156).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10156).StorefrontPlatform.SWITCH]: "Switch", [arg1(10156).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10156).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10156).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
 let items = [require("StorefrontPlatform").StorefrontPlatform.PLAYSTATION];
 const result = require("ME").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 

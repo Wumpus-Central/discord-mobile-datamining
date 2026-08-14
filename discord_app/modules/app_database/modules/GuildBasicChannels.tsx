@@ -305,7 +305,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             outer2_15.warn("couldn't optimstically write basic_channel:", closure_1);
                             c6 = 3;
                             const obj2 = { value: null, done: true };
-                            obj2[0] = { v: "sa" };
+                            obj2[0] = { v: "title" };
                             return obj2;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

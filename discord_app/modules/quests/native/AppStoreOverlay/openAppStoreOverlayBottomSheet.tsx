@@ -30,5 +30,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     }
   };
-  obj.openLazy(_asyncRequireImpl(10552, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(_asyncRequireImpl(10568, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

@@ -14,14 +14,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   }
   ({ imageUri, staticImageUri, description, originalAsset, originalMd5 } = assetOrigin);
   if (AssetOriginTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
-    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: false };
+    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: null };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
     obj[2] = staticImageUri;
     obj[3] = description;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(8324).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(8346).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: null, originalMd5: null };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
@@ -30,8 +30,8 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[4] = originalAsset;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(8324).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
-    const obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: "r" };
+  } else if (tmp3(8346).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+    const obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;
     obj1[3] = originalAsset;

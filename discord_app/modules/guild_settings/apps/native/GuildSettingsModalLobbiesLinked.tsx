@@ -20,7 +20,7 @@ function SyncingToGamesItem(channels) {
   let dependencyMap;
   let obj = channels(1499);
   dependencyMap = obj.useNavigation();
-  const getOrFetchApplication = channels(5774).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(5795).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -35,8 +35,8 @@ function SyncingToGamesItem(channels) {
       obj[0] = channels(4535).computeChannelName(id, outer1_4, outer1_3);
       obj = { IconComponent: null };
       const obj2 = channels(4535);
-      obj[0] = channels(4805).getChannelIconComponent(id);
-      obj[1] = outer1_6(channels(5414).TableRow.Icon, obj);
+      obj[0] = channels(4827).getChannelIconComponent(id);
+      obj[1] = outer1_6(channels(5435).TableRow.Icon, obj);
       obj[3] = function onPress() {
         const obj = { channel: length, numScreensToPop: null };
         let num = 1;
@@ -49,9 +49,9 @@ function SyncingToGamesItem(channels) {
         obj[1] = num;
         outer1_2.push(outer2_5.EDIT_LINKED_LOBBY, obj);
       };
-      return outer1_6(channels(5414).TableRow, obj, id.id);
+      return outer1_6(channels(5435).TableRow, obj, id.id);
     });
-    tmp5Result = closure_6(channels(5807).TableRowGroup, obj);
+    tmp5Result = closure_6(channels(5828).TableRowGroup, obj);
     const tmp5 = closure_6;
   }
   return tmp5Result;

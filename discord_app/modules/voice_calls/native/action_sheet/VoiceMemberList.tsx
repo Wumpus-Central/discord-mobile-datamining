@@ -15,7 +15,7 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { ThemeTypes } from "sum";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09772_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09783_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { GuildEventVoiceBanner } from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
@@ -213,8 +213,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = registerAsset;
-      obj[3] = tmp4(12802).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(12802).CircularIconButton, obj);
+      obj[3] = tmp4(12820).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(12820).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -228,7 +228,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8012).FormRow, obj);
+      items[1] = callback2(tmp4(8033).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

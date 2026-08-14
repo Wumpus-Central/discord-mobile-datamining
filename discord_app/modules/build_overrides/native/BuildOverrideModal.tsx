@@ -1,6 +1,6 @@
 // discord_app/modules/build_overrides/native/BuildOverrideModal.tsx
 import "noop";
-import get_ActivityIndicator from "module_4550";
+import get_ActivityIndicator from "module_4572";
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -37,9 +37,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = createCacheKey();
   let obj = str(1363);
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13287);
+    let tmp2Result = tmp2(13299);
   } else {
-    tmp2Result = tmp2(13288);
+    tmp2Result = tmp2(13300);
   }
   tmp4 = stateFromStores(4278)();
   const items = [getCurrentBuildOverride];
@@ -50,7 +50,7 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 11237).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 11253).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }
@@ -113,15 +113,15 @@ export default function BuildOverrideModal(overrideUrl) {
       }
       const result = str(outer1_2[11]).setBuildOverrideFromLink(str);
     };
-    obj10[1] = tmp14(tmp5(4755).Button, obj11);
+    obj10[1] = tmp14(tmp5(4777).Button, obj11);
     const items5 = [tmp14(tmp13, obj10), ];
     const obj12 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1236).intl;
     obj12[0] = intl6.string(tmp5(1236).t.b5KKph);
     obj12[3] = function onPress() {
-      return stateFromStores(4550).pop();
+      return stateFromStores(4572).pop();
     };
-    items5[1] = tmp14(tmp5(4755).Button, obj12);
+    items5[1] = tmp14(tmp5(4777).Button, obj12);
     obj9[0] = items5;
     let tmp12Result = tmp12(closure_7, obj9);
   } else {
@@ -129,12 +129,12 @@ export default function BuildOverrideModal(overrideUrl) {
     const intl4 = tmp5(1236).intl;
     obj13[0] = intl4.string(tmp5(1236).t.WRkdCQ);
     obj13[2] = function onPress() {
-      return stateFromStores(4550).pop();
+      return stateFromStores(4572).pop();
     };
-    tmp12Result = tmp14(tmp5(4755).Button, obj13);
+    tmp12Result = tmp14(tmp5(4777).Button, obj13);
   }
   obj8[1] = tmp12Result;
   items4[1] = callback(closure_4, obj8);
   obj[3] = items4;
-  return closure_8(str(5368).SafeAreaPaddingView, obj);
+  return closure_8(str(5389).SafeAreaPaddingView, obj);
 };

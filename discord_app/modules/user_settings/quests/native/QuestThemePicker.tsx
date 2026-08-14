@@ -93,7 +93,7 @@ class QuestThemePicker {
         const obj = tmp(allMobileThemes[16]);
       }
     }, items5);
-    f94590 = callback;
+    f94732 = callback;
     items6 = [];
     items6[0] = callback;
     obj = { style: tmp.themeSection, children: null };
@@ -127,18 +127,18 @@ class QuestThemePicker {
       return tmp(closure_5, obj, backgroundColor.theme);
     });
     obj2 = { style: tmp.resetButton, onPress: callback1, children: null };
-    obj3 = { style: tmp.resetIcon, children: f94590(require("RefreshIcon").RefreshIcon, { size: "sm" }) };
+    obj3 = { style: tmp.resetIcon, children: f94732(require("RefreshIcon").RefreshIcon, { size: "sm" }) };
     items8 = [, ];
-    items8[0] = f94590(isSynced, obj3);
+    items8[0] = f94732(isSynced, obj3);
     obj4 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
     intl = require("getSystemLocale").intl;
     obj4[3] = intl.string(require("getSystemLocale").t.yBZMsQ);
-    items8[1] = f94590(require("Text").Text, obj4);
+    items8[1] = f94732(require("Text").Text, obj4);
     obj2[2] = items8;
     items7[1] = jsxs(useRef, obj2);
     obj1[1] = items7;
     obj[1] = jsxs(isSynced, obj1);
-    return f94590(isSynced, obj);
+    return f94732(isSynced, obj);
   }
 }
 ({ View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);

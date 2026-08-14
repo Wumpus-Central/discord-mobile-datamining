@@ -18,7 +18,7 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
     if (null == linkId) {
       return appMessageEmbed;
     } else {
-      const orFetchCustomActivityLink = tmp(12285).getOrFetchCustomActivityLink(app.id, linkId);
+      const orFetchCustomActivityLink = tmp(12303).getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
         obj = {};

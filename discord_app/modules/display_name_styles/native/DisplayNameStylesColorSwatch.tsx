@@ -2,7 +2,7 @@
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
 import { DisplayNameEffect } from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import { GummyStripes } from "effects/GummyStripes.tsx";
 

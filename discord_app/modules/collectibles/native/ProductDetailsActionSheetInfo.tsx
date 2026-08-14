@@ -5,7 +5,6 @@ import createCacheKey from "createCacheKey";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
-import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx";
 import { getBundleDescription } from "../hooks/useProductDescription.tsx";
 import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 import { PriceTag } from "InlinePriceTag.tsx";
@@ -50,27 +49,14 @@ function ProductPurchaseStatus(product) {
   }
   return closure_4(View, { children });
 }
-function BundleProductDetailsActionSheetInfo(onTrackPress) {
-  const product = onTrackPress.product;
+function BundleProductDetailsActionSheetInfo(arg0) {
+  let onTrackPress;
+  let product;
+  ({ product, onTrackPress } = arg0);
   const tmp = callback3();
-  let obj = useCollectiblesMobileFlexibleBundlesExperiment;
-  const enabled = obj.useCollectiblesMobileFlexibleBundlesExperiment("BundleProductDetailsActionSheetInfo").enabled;
-  const items = [tmp.body, ];
-  let bundleBody = enabled;
-  if (enabled) {
-    bundleBody = tmp.bundleBody;
-  }
-  obj = { style: items, children: null };
-  items[1] = bundleBody;
-  let tmp4 = !enabled;
-  if (!enabled) {
-    obj = { product: null };
-    obj[0] = product;
-    tmp4 = callback(ProductNameAndDescription, obj);
-  }
-  const items1 = [tmp4, callback(ProductPurchaseStatus, { product, onTrackPress: onTrackPress.onTrackPress })];
-  obj[1] = items1;
-  return closure_5(View, obj);
+  const items = [, ];
+  ({ body: arr[0], bundleBody: arr[1] } = tmp);
+  return callback(View, { style: items, children: callback(ProductPurchaseStatus, { product, onTrackPress }) });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { title: { marginBottom: 2 }, body: null, bundleBody: null, description: null };

@@ -2,8 +2,8 @@
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/08118_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/08119_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08139_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08140_registerAsset.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";

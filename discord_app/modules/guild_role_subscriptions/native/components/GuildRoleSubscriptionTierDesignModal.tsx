@@ -46,15 +46,15 @@ function Content() {
   let guildId;
   let tmp7;
   let tmp8;
-  const tmp3 = role(13314)();
+  const tmp3 = role(13326)();
   let obj = _useEditStateContext;
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
-  let obj1 = importAll(14528);
+  let obj1 = importAll(14541);
   [tmp7, tmp8] = callback(obj1.useRoleColor(editStateId, guildId), 2);
-  let obj2 = importAll(14528);
+  let obj2 = importAll(14541);
   _require = callback(obj2.useRoleIcon(editStateId, guildId), 2)[1];
-  let obj3 = importAll(14528);
+  let obj3 = importAll(14541);
   role = obj3.useRole(editStateId, guildId);
   const items = [role];
   const customIconSrc = React.useMemo(() => {
@@ -75,19 +75,19 @@ function Content() {
   obj = { children: null };
   const items1 = [callback2(MemberPreviews, { role }), , , , ];
   obj1 = { style: tmp3.header, children: null };
-  let tmpResult = tmp(9109);
+  let tmpResult = tmp(9123);
   const intl = tmp4(1236).intl;
   obj1[1] = intl.string(_getSystemLocale.t.sEr1zr);
   items1[1] = callback2(tmpResult, obj1);
   obj2 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  tmpResult = tmp(16889);
+  tmpResult = tmp(16905);
   const intl2 = tmp4(1236).intl;
   obj2[0] = intl2.string(_getSystemLocale.t.Glqj9m);
   obj2[1] = tmp10;
   obj2[2] = UPLOAD_SMALL_SIZE;
   obj2[3] = _pickImage.PreviewShape.SQUIRCLE;
   obj2[5] = function setImage(icon) {
-    return callback({ icon: icon.uri, unicodeEmoji: "a" });
+    return callback({ icon: icon.uri, unicodeEmoji: "r" });
   };
   obj2[6] = roleSubscriptionSettingsDisabled;
   items1[2] = callback2(tmpResult, obj2);
@@ -95,8 +95,8 @@ function Content() {
   const tmp4Result = _useRoleSubscriptionSettingsDisabled;
   const intl3 = tmp4(1236).intl;
   obj3[1] = intl3.string(_getSystemLocale.t["W7hH+z"]);
-  items1[3] = callback2(role(9109), obj3);
-  items1[4] = callback2(role(16927), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[3] = callback2(role(9123), obj3);
+  items1[4] = callback2(role(16943), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj[0] = items1;
   return callback3(closure_11, obj);
 }

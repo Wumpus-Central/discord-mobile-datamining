@@ -108,5 +108,5 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return callback(dependencyMap[2]).hideActionSheet();
     }
   };
-  obj.openLazy(_asyncRequireImpl(10258, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  obj.openLazy(_asyncRequireImpl(10272, dependencyMap.paths), "NewChannelFollower." + id, obj);
 };

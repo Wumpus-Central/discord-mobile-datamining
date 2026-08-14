@@ -73,7 +73,7 @@ function ComparisonRow(entry) {
     obj5[3] = function onPress() {
 
     };
-    items5[1] = tmp9(tmp4(4755).Button, obj5);
+    items5[1] = tmp9(tmp4(4777).Button, obj5);
     obj4[1] = items5;
     let tmp9Result = tmp7(tmp8, obj4);
   } else {
@@ -302,7 +302,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
     [tmp, arr] = arg0;
     const obj = { title: tmp, children: null };
     obj[1] = arr.map((entry) => callback(closure_8, { entry }, arg1));
-    return callback2(callback(8012).FormSection, obj, "cmp-" + tmp);
+    return callback2(callback(8033).FormSection, obj, "cmp-" + tmp);
   });
   const obj1 = { spacing: 4, style: tmp.header, children: null };
   const items2 = [callback2(Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
@@ -316,7 +316,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
     const obj = { title: null, children: null };
     obj[0] = "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)";
     obj[1] = arr.map((combo) => callback(closure_9, { combo }, arg1));
-    return callback2(callback(8012).FormSection, obj, tmp);
+    return callback2(callback(8033).FormSection, obj, tmp);
   });
   obj[1] = items1;
   return callback(closure_2, obj);

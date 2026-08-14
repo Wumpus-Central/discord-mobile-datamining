@@ -23,9 +23,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15944).trackYouTabAvatarPress();
-    const obj = callback(15944);
-    const result1 = callback(15561).showYouAccountActionSheet();
+    const result = callback(15962).trackYouTabAvatarPress();
+    const obj = callback(15962);
+    const result1 = callback(15579).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -455,7 +455,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         outer1_25(outer1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
         outer1_32.current(num, false, true);
-        outer1_6.setParams({ initialTab: "sa" });
+        outer1_6.setParams({ initialTab: "title" });
       }, 80);
     }
     return () => {

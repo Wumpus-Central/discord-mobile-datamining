@@ -159,8 +159,8 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
   }
   let obj = channel(1499);
   importDefault = obj.useNavigation();
-  const isMessageRequestRestrictedViewer = channel(11864).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(11864);
+  const isMessageRequestRestrictedViewer = channel(11880).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(11880);
   const items = [_onAcceptClick];
   const stateFromStores = channel(589).useStateFromStores(items, () => _onAcceptClick.getUser(channel.getRecipientId()));
   const obj3 = channel(589);
@@ -178,7 +178,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
 
     }
   };
-  const messageRequestActions = channel(11866).useMessageRequestActions(obj);
+  const messageRequestActions = channel(11882).useMessageRequestActions(obj);
   ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
   let tmp6 = isAcceptLoading;
   if (!isAcceptLoading) {
@@ -194,7 +194,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
     tmp6 = isOptimisticRejected;
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(11866);
+  const obj4 = channel(11882);
   const tmp7 = _onRejectClick;
   let intl = tmp(1236).intl;
   obj[1] = intl.string(channel(1236).t["e/eQVB"]);

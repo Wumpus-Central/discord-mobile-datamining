@@ -22,7 +22,7 @@ export default function MarkupGameMention(state) {
   let gameId;
   const tmp = createCacheKey();
   gameId = state.node.gameId;
-  let obj = state(4872);
+  let obj = state(4894);
   const gameMentionData = obj.useGameMentionData(gameId);
   const intl = state(1236).intl;
   const stringResult = intl.string(state(1236).t["11pdXZ"]);
@@ -55,14 +55,14 @@ export default function MarkupGameMention(state) {
     if (tmp11) {
       tmp11 = "" !== tmp8Result;
     }
-    let tmp17Result = callback(tmp2(7992).UnknownGameIcon, obj);
+    let tmp17Result = callback(tmp2(8013).UnknownGameIcon, obj);
     if (tmp11) {
       const obj1 = { style: null, source: null };
       obj1[0] = tmp.icon;
       const obj2 = { uri: null };
       obj2[0] = tmp8Result;
       obj1[1] = obj2;
-      tmp17Result = tmp17(tmp7(5308), obj1);
+      tmp17Result = tmp17(tmp7(5329), obj1);
     }
     let str2 = "button";
     if (state.noStyleAndInteraction) {

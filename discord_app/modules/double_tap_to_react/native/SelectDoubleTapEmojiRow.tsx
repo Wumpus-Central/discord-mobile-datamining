@@ -105,7 +105,7 @@ let closure_13 = importAllResult.memo((emoji) => {
   obj1[4] = url;
   obj[1] = closure_9(Emoji, obj1);
   obj[4] = closure_9(View, obj);
-  return closure_9(emoji(4887).PressableOpacity, obj);
+  return closure_9(emoji(4909).PressableOpacity, obj);
 });
 const obj8 = { height: 12, width: 12, color: require("Themes").colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx");

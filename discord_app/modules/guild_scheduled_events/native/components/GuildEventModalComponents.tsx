@@ -6,9 +6,9 @@ import { GuildFeatures } from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { registerAsset } from "../../../../../_runtime/08058_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09020_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09021_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08079_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09034_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09035_registerAsset.js";
 import { LocationIcon } from "../../../../design/components/Icon/native/redesign/generated/LocationIcon.tsx";
 import { VoiceNormalIcon } from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
@@ -74,7 +74,7 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
   const tmp = callback3();
   const items = [recurrenceRule, startDate];
   dependencyMap = recurrenceOptions.useMemo(() => startDate(paths[8]).recurrenceRuleToOption(startDate, recurrenceRule), items);
-  let obj = startDate(8991);
+  let obj = startDate(9005);
   recurrenceOptions = obj.getRecurrenceOptions(startDate);
   const found = recurrenceOptions.find((value) => value.value === closure_3);
   let label;
@@ -114,11 +114,11 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
   const intl2 = tmp2(1236).intl;
   obj2[1] = intl2.string(startDate(1236).t["59TVxL"]);
   obj2[2] = label;
-  obj2[3] = recurrenceRule(9018);
+  obj2[3] = recurrenceRule(9032);
   const intl3 = tmp2(1236).intl;
   obj2[5] = intl3.string(startDate(1236).t["59TVxL"]);
   obj2[6] = label;
-  items1[1] = callback(startDate(8712).InputButton, obj2);
+  items1[1] = callback(startDate(8726).InputButton, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 };
@@ -160,7 +160,7 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
     const intl6 = tmp(1236).intl;
     obj1[2] = intl6.string(tmp(1236).t.LgALpp);
     obj1[3] = registerAsset;
-    obj1[4] = tmp(4866).StageIcon;
+    obj1[4] = tmp(4888).StageIcon;
     obj1[5] = 0 === channelsUserCanStartStageIn.length || disabled;
     items.unshift(obj1);
   }
@@ -200,7 +200,7 @@ export const GuildEventDescription = function GuildEventDescription(onFocus) {
     }
   };
   obj[5] = description;
-  obj[2] = callback(onFocus(8021).TextArea, obj);
+  obj[2] = callback(onFocus(8042).TextArea, obj);
   return callback(View, obj);
 };
 export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
@@ -264,13 +264,13 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
       obj[3] = toDateResult;
       obj[4] = maximumDate.toDate();
       obj[6] = openLazyResult;
-      openLazyResult = obj2.openLazy(asyncRequireImpl(9024, dependencyMap.paths), "DatePicker", obj);
+      openLazyResult = obj2.openLazy(asyncRequireImpl(9038, dependencyMap.paths), "DatePicker", obj);
       obj5 = outer1_3;
-      const tmp8 = asyncRequireImpl(9024, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(9038, dependencyMap.paths);
     }
   };
   obj3[3] = disabled;
-  items[1] = callback(time(8712).InputButton, obj3);
+  items[1] = callback(time(8726).InputButton, obj3);
   obj1[1] = items;
   const items1 = [callback2(disabled, obj1), ];
   let obj4 = { style: tmp5.timeInput, children: null };
@@ -308,16 +308,16 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
       obj[3] = toDateResult;
       obj[4] = maximumDate.toDate();
       obj[6] = openLazyResult;
-      openLazyResult = obj2.openLazy(asyncRequireImpl(9024, dependencyMap.paths), "DatePicker", obj);
+      openLazyResult = obj2.openLazy(asyncRequireImpl(9038, dependencyMap.paths), "DatePicker", obj);
       obj5 = outer1_3;
-      const tmp8 = asyncRequireImpl(9024, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(9038, dependencyMap.paths);
     }
   };
   obj6[3] = disabled;
-  items2[1] = callback(time(8712).InputButton, obj6);
+  items2[1] = callback(time(8726).InputButton, obj6);
   obj4[1] = items2;
   items1[1] = callback2(disabled, obj4);
   obj[2] = items1;
-  obj[1] = callback2(time(4753).Stack, obj);
+  obj[1] = callback2(time(4775).Stack, obj);
   return callback(disabled, obj);
 };

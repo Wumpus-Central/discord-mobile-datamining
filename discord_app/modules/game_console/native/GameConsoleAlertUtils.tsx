@@ -57,7 +57,7 @@ export default {
     obj = { title, body: null, onConfirm: null };
     obj = { body, errorCodeMessage, dismissCallback: null };
     obj[2] = AlertActionCreators.close;
-    obj[1] = jsx(reconnectPlatformType(10858).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: null });
+    obj[1] = jsx(reconnectPlatformType(10874).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: null });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: null, location: null };

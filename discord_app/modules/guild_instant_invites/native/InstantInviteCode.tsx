@@ -72,7 +72,7 @@ export default function InstantInviteCode(invite) {
   const tmp = createCacheKey();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4753).Stack, obj);
+  obj[1] = callback2(invite(4775).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

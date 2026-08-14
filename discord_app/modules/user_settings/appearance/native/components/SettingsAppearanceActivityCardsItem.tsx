@@ -21,5 +21,5 @@ export default function ActivityCardsItem(animatedStyles) {
   obj[3] = function keyExtractor(title) {
     return title.title;
   };
-  return jsx(animatedStyles(7790).FlashList, { paddingVertical: null, paddingHorizontal: null });
+  return jsx(animatedStyles(7811).FlashList, { paddingVertical: null, paddingHorizontal: null });
 };

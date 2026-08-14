@@ -50,7 +50,7 @@ function MiniGuildIcon(arg0) {
   if (!selected) {
     prop = tmp4.guildPreviewIconUnselected;
   }
-  obj = { style: items1, guild: stateFromStores, size: tmp(5819).GuildIconSizes.XXSMALL, selected };
+  obj = { style: items1, guild: stateFromStores, size: tmp(5840).GuildIconSizes.XXSMALL, selected };
   items1[1] = prop;
   items1[2] = guildPreview3;
   return tmp6(GuildIconSizes, obj, "" + selected);

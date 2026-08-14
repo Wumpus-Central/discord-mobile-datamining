@@ -204,7 +204,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = store3.getRole(guild.id, id);
           }
-          let obj = { type: null, key: null, id: null, title: null, count: null, index: "Boolean" };
+          let obj = { type: null, key: null, id: null, title: null, count: null, index: "l" };
           obj[0] = obj.GROUP;
           obj[1] = id;
           obj[2] = id;
@@ -308,7 +308,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = store3.getRole(guild.id, id2);
           }
-          obj = { type: null, key: null, id: null, title: null, count: null, index: "Boolean" };
+          obj = { type: null, key: null, id: null, title: null, count: null, index: "l" };
           obj[0] = obj.GROUP;
           obj[1] = id2;
           obj[2] = id2;

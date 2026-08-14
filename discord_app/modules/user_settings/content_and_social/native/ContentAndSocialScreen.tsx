@@ -212,7 +212,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
   } else {
     obj = { node: null };
     obj[0] = tmp5;
-    tmp7 = callback2(tmp2(13947), obj);
+    tmp7 = callback2(tmp2(13959), obj);
   }
   return tmp7;
 };

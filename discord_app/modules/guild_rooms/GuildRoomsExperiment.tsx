@@ -6,3 +6,4 @@ const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-
 const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
 
 export default experiment;
+export const GUILD_ROOMS_EXPERIMENT_ID = "2026-06_guild_rooms";

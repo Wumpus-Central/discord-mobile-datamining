@@ -4,7 +4,7 @@ import get_ActivityIndicator from "GuildIconSizes";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12143_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12161_registerAsset.js";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
@@ -31,7 +31,7 @@ function InviteErrorBase(invite) {
   const tmp = createCacheKey();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 12140 : 12141);
+  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 12158 : 12159);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -100,7 +100,7 @@ function InviteDisabledError(onPressClose) {
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
-    obj3[2] = onPressClose(5819).GuildIconSizes.XLARGE;
+    obj3[2] = onPressClose(5840).GuildIconSizes.XLARGE;
     items[1] = callback(GuildIconSizes, obj3);
     obj1[1] = items;
     const items1 = [callback2(closure_4, obj1), , , ];
@@ -121,7 +121,7 @@ function InviteDisabledError(onPressClose) {
     const intl3 = onPressClose(1236).intl;
     obj7[2] = intl3.string(onPressClose(1236).t["yD/zkn"]);
     obj7[3] = handlePressClose;
-    items1[3] = callback(onPressClose(4755).Button, obj7);
+    items1[3] = callback(onPressClose(4777).Button, obj7);
     obj[0] = items1;
     return callback2(closure_9, obj);
   }

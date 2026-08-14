@@ -339,7 +339,7 @@ export default function _default(command) {
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.applicationIcon;
     obj1[1] = memo;
-    tmp22 = callback2(section(5308), obj1);
+    tmp22 = callback2(section(5329), obj1);
   }
   const items5 = [tmp22, callback2(command(4338).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
@@ -413,7 +413,7 @@ export default function _default(command) {
   }
   items5[3] = tmp19Result;
   obj[5] = items5;
-  const items8 = [c10(c6, obj), callback2(command(8012).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8012).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [c10(c6, obj), callback2(command(8033).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8033).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj[1] = items8;
   return c10(onPressOption, obj);
 };

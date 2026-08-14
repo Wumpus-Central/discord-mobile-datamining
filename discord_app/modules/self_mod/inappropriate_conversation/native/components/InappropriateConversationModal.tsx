@@ -113,7 +113,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
-  const items = [callback2(trackAnalyticsEvent(6070).SafetyChatSpotIllustration, {}), , ];
+  const items = [callback2(trackAnalyticsEvent(6091).SafetyChatSpotIllustration, {}), , ];
   obj = { style: tmp.warningText, children: null };
   obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1236).intl;
@@ -133,7 +133,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     outer1_6.openURL(outer1_9);
     trackAnalyticsEvent(trackAnalyticsEvent(outer1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [callback2(trackAnalyticsEvent(4755).Button, obj3), ];
+  const items2 = [callback2(trackAnalyticsEvent(4777).Button, obj3), ];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1236).intl;
   obj4[2] = intl4.string(trackAnalyticsEvent(1236).t.ogLlvy);
@@ -141,7 +141,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     outer1_6.openURL(outer1_10);
     trackAnalyticsEvent(trackAnalyticsEvent(outer1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = callback2(trackAnalyticsEvent(4755).Button, obj4);
+  items2[1] = callback2(trackAnalyticsEvent(4777).Button, obj4);
   obj2[1] = items2;
   items[2] = callback3(closure_7, obj2);
   obj[1] = items;

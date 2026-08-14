@@ -116,7 +116,7 @@ function renderTitle(channelName, channel, channel) {
   const tmp5 = markAllUserIdListsStale;
   let str = "";
   if (null != channel) {
-    let tmpResult = tmp(7190);
+    let tmpResult = tmp(7212);
     tmpResult = tmp(4535);
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
@@ -411,8 +411,8 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
       const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(9812).isChannelFocused();
-        const tmp3Result = tmp3(9812);
+        tmp5 = !tmp3(9823).isChannelFocused();
+        const tmp3Result = tmp3(9823);
       }
       flag = tmp5;
       const obj3 = getRootNavigationRef;
@@ -450,8 +450,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               }
             }
             content = content.content;
-            if (tmp(5931)(content)) {
-              let tmpResult = tmp(8138);
+            if (tmp(5952)(content)) {
+              let tmpResult = tmp(8159);
               content = tmpResult.stringify(content, getGuildId);
               if (null == content) {
                 const obj15 = new tmp(3)("NotificationTextUtils");
@@ -472,7 +472,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               let obj4 = isForwardMessage;
               let result = obj4.isForwardServerMessage(content);
             } else {
-              result = tmp(5959)(content);
+              result = tmp(5980)(content);
             }
             const items = [];
             if (result) {
@@ -563,8 +563,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const tmpResult1 = tmp(7188);
-                ({ content, emoji } = tmp(7188).unparseWithMeta(content, getGuildId.id, true));
+                const tmpResult1 = tmp(7210);
+                ({ content, emoji } = tmp(7210).unparseWithMeta(content, getGuildId.id, true));
                 tmp26 = emoji;
                 stringResult = content;
                 if (0 !== content.length) {
@@ -591,7 +591,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const unparseWithMetaResult = tmp(7188).unparseWithMeta(content, getGuildId.id, true);
+                const unparseWithMetaResult = tmp(7210).unparseWithMeta(content, getGuildId.id, true);
               }
             }
             if (0 === stringResult.length) {

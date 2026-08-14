@@ -30,9 +30,9 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const sourceQuestContent = isScrollingInBoundsSharedValue.sourceQuestContent;
   ({ visible, onReplay, opacityStyle } = isScrollingInBoundsSharedValue);
   const tmp = callback2();
-  let obj = isActive(10956);
+  let obj = isActive(10972);
   const isBountiesVerticalScrollExperimentEnabled = obj.useIsBountiesVerticalScrollExperimentEnabled("BountiesScrollEndCard");
-  let obj1 = isActive(14349);
+  let obj1 = isActive(14362);
   const bountyCtaInfo = obj1.getBountyCtaInfo(bounty);
   const intl = isActive(1236).intl;
   const stringResult = intl.string(isActive(1236).t["9UtZAY"]);
@@ -62,7 +62,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   obj1 = { style: tmp.backdropTint, pointerEvents: "none" };
   const items1 = [callback(closure_6, obj1), , ];
   obj2 = { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" };
-  items1[1] = callback(isScrollingInBoundsSharedValue(4766), obj2);
+  items1[1] = callback(isScrollingInBoundsSharedValue(4788), obj2);
   if (isBountiesVerticalScrollExperimentEnabled) {
     const obj3 = { style: null, pointerEvents: "box-none", children: null };
     const items2 = [tmp.overlayContent, animatedStyle];
@@ -71,7 +71,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj4[0] = bounty;
     obj4[1] = sourceQuestContent;
     obj4[2] = !isActive;
-    const items3 = [tmp10(tmp9(14352), obj4), ];
+    const items3 = [tmp10(tmp9(14365), obj4), ];
     const obj5 = { style: null, pointerEvents: "box-none", children: null };
     obj5[0] = tmp.endedCtaButtonsContainer;
     const obj6 = { bounty: null, visible: null, sourceQuestContent: null, onClose: null, showCloseButton: false, disabled: null };
@@ -82,7 +82,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
 
     };
     obj6[5] = !isActive;
-    obj5[2] = tmp10(tmp9(14354), obj6);
+    obj5[2] = tmp10(tmp9(14367), obj6);
     items3[1] = tmp10(tmp11, obj5);
     obj3[2] = items3;
     let tmp10Result = tmp8(tmp9(4083).View, obj3);
@@ -112,7 +112,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     const obj12 = { accessible: false, color: null, style: null };
     obj12[1] = tmp9(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
     obj12[2] = tmp.replayIcon;
-    items6[1] = tmp10(tmp2(9906).RetryIcon, obj12);
+    items6[1] = tmp10(tmp2(9917).RetryIcon, obj12);
     obj8[1] = items6;
     obj7[5] = tmp8(tmp9(4083).View, obj8);
     tmp10Result = tmp10(closure_4, obj7);

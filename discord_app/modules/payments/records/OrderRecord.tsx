@@ -3,27 +3,32 @@ import "toJS";
 import { BaseInvoiceRecord } from "createFromServer";
 import createFromServer from "createFromServer";
 import closure_2 from "createFromServer";
+import { PaymentGateways } from "sum";
 
-let prototype;
-prototype = function BillingFacetRecord(invoicePreview) {
-  let paymentSourceId;
-  const tmp = new prototype(new.target, new.target, invoicePreview);
-  // ThrowIfThisInitialized (0x7c)
-  ({ paymentGateway: tmp.paymentGateway, paymentSourceId } = invoicePreview);
-  if (paymentSourceId == null) {
-    paymentSourceId = null;
+let BillingFacetRecord;
+class BillingFacetRecord extends tmp2 {
+  constructor(arg0) {
+    tmp = new BillingFacetRecord(new.target, new.target, global);
+    // ThrowIfThisInitialized (0x7c)
+    ({ paymentGateway: tmp.paymentGateway, paymentSourceId } = global);
+    if (paymentSourceId == null) {
+      paymentSourceId = null;
+    }
+    tmp.paymentSourceId = paymentSourceId;
+    currency = global.currency;
+    if (currency == null) {
+      currency = null;
+    }
+    tmp.currency = currency;
+    invoicePreview = global.invoicePreview;
+    if (invoicePreview == null) {
+      invoicePreview = null;
+    }
+    tmp.invoicePreview = invoicePreview;
+    return tmp;
   }
-  tmp.paymentSourceId = paymentSourceId;
-  invoicePreview = invoicePreview.invoicePreview;
-  if (invoicePreview == null) {
-    invoicePreview = null;
-  }
-  tmp.invoicePreview = invoicePreview;
-  return tmp;
-}.prototype;
-class prototype extends tmp2 {
 }
-prototype["createFromOrder"] = function createFromOrder(billing_facet) {
+BillingFacetRecord["createFromOrder"] = function createFromOrder(billing_facet) {
   let payment_gateway;
   let payment_source_id;
   billing_facet = billing_facet.billing_facet;
@@ -33,25 +38,43 @@ prototype["createFromOrder"] = function createFromOrder(billing_facet) {
     if (payment_source_id == null) {
       payment_source_id = null;
     }
+    let currency = billing_facet.currency;
+    if (currency == null) {
+      currency = null;
+    }
     let invoiceFromOrder = BaseInvoiceRecord.createInvoiceFromOrder(billing_facet);
-    if (typeof prototype !== "function") {
+    if (typeof BillingFacetRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp9 = new prototype("Trying to call a non-function", billing_facet, prototype, new.target, payment_gateway, payment_source_id, invoiceFromOrder);
+    const tmp10 = new BillingFacetRecord("Trying to call a non-function", billing_facet, BillingFacetRecord, new.target, payment_gateway, payment_source_id, currency, invoiceFromOrder);
     // ThrowIfThisInitialized (0x7c)
-    tmp9.paymentGateway = payment_gateway;
+    tmp10.paymentGateway = payment_gateway;
     if (payment_source_id == null) {
       payment_source_id = null;
     }
-    tmp9.paymentSourceId = payment_source_id;
+    tmp10.paymentSourceId = payment_source_id;
+    if (currency == null) {
+      currency = null;
+    }
+    tmp10.currency = currency;
     if (invoiceFromOrder == null) {
       invoiceFromOrder = null;
     }
-    tmp9.invoicePreview = invoiceFromOrder;
-    tmp = tmp9;
+    tmp10.invoicePreview = invoiceFromOrder;
+    tmp = tmp10;
   }
   return tmp;
 };
+Object.defineProperty(BillingFacetRecord.prototype, "fiatCurrency", {
+  get: function fiatCurrency() {
+    let currency = null;
+    if (this.paymentGateway !== PaymentGateways.VIRTUAL_CURRENCY) {
+      currency = this.currency;
+    }
+    return currency;
+  },
+  set: undefined
+});
 let OrderRecord;
 class OrderRecord extends tmp2 {
   constructor(arg0) {
@@ -95,10 +118,10 @@ class OrderRecord extends tmp2 {
     return tmp;
   }
 }
-const prototype2 = OrderRecord.prototype;
+const prototype = OrderRecord.prototype;
 OrderRecord["createFromServer"] = function createFromServer(id) {
   let unsatisfied_constraints;
-  const obj = { id: id.id, status: id.status, revision: id.revision, orderLineItems: id.order_line_items, billingFacetRecord: prototype.createFromOrder(id), externalGatewayFacet: null, giftingFacet: null, checkoutContextRecord: null, createdAt: null, unsatisfiedConstraints: null, subscriptionFacet: null };
+  const obj = { id: id.id, status: id.status, revision: id.revision, orderLineItems: id.order_line_items, billingFacetRecord: BillingFacetRecord.createFromOrder(id), externalGatewayFacet: null, giftingFacet: null, checkoutContextRecord: null, createdAt: null, unsatisfiedConstraints: null, subscriptionFacet: null };
   let prop = id.external_gateway_facet;
   if (prop == null) {
     prop = null;
@@ -118,14 +141,14 @@ OrderRecord["createFromServer"] = function createFromServer(id) {
   obj[10] = closure_2.createFromServer(id.subscription_facet);
   return new OrderRecord(obj);
 };
-prototype2["getInvoicePreview"] = function getInvoicePreview() {
+prototype["getInvoicePreview"] = function getInvoicePreview() {
   let invoicePreview = null;
   if (null != this.billingFacetRecord) {
     invoicePreview = this.billingFacetRecord.invoicePreview;
   }
   return invoicePreview;
 };
-prototype2["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedConstraintReasonCode() {
+prototype["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedConstraintReasonCode() {
   let reason_code = null;
   if (this.unsatisfiedConstraints.length > 0) {
     reason_code = this.unsatisfiedConstraints[0].reason_code;
@@ -135,4 +158,4 @@ prototype2["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedCo
 const result = require("createFromServer").fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
 
 export default OrderRecord;
-export const BillingFacetRecord = prototype;
+export { BillingFacetRecord };

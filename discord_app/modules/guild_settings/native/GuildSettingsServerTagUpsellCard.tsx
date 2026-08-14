@@ -4,7 +4,7 @@ import get_ActivityIndicator from "set";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { useGetGuildPowerupBannerImage } from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 
@@ -66,7 +66,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
     const obj5 = { imageUrl: null, style: null };
     obj5[0] = tmp6;
     obj5[1] = tmp.powerupImage;
-    tmp10Result = tmp10(tmp5(11947), obj5);
+    tmp10Result = tmp10(tmp5(11963), obj5);
   }
   obj4[3] = tmp10Result;
   const items5 = [callback(closure_4, obj4), , ];
@@ -84,15 +84,15 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj8[3] = intl2.string(guildId(1236).t.Tg0fDm);
   items6[1] = callback(guildId(4338).Text, obj8);
   obj6[2] = items6;
-  items5[1] = closure_7(guildId(4753).Stack, obj6);
+  items5[1] = closure_7(guildId(4775).Stack, obj6);
   const obj9 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1236).intl;
   obj9[2] = intl3.string(guildId(1236).t.kMRDWs);
-  obj9[3] = callback(guildId(15413).BoostTier2Icon, { color: "white" });
+  obj9[3] = callback(guildId(15429).BoostTier2Icon, { color: "white" });
   obj9[5] = guildId.onUnlockPress;
-  items5[2] = callback(guildId(4755).Button, obj9);
+  items5[2] = callback(guildId(4777).Button, obj9);
   obj3[1] = items5;
-  items4[3] = closure_7(guildId(4753).Stack, obj3);
+  items4[3] = closure_7(guildId(4775).Stack, obj3);
   obj[1] = items4;
   return closure_7(closure_4, obj);
 };

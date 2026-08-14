@@ -14,8 +14,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = callback();
-  let obj = flag(11495);
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(9599).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  let obj = flag(11511);
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(9612).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = React.useEffect(() => {
     const intl = flag(outer1_1[6]).intl;

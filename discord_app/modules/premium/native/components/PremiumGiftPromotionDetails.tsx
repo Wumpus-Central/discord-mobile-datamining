@@ -85,12 +85,14 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/p
 
 export default function PremiumGiftPromotionDetails(imageUrl) {
   let shouldAnimate;
+  let style;
   let subtitle;
   let title;
   imageUrl = imageUrl.imageUrl;
-  ({ title, subtitle, shouldAnimate } = imageUrl);
+  ({ style, title, subtitle, shouldAnimate } = imageUrl);
   const tmp = callback2();
-  let obj = { style: tmp.container, children: null };
+  let obj = { style: items, children: null };
+  items = [tmp.container, style];
   let tmp4 = null != imageUrl;
   if (tmp4) {
     obj = { style: null, imageUrl: null, shouldAnimate: null };
@@ -99,11 +101,11 @@ export default function PremiumGiftPromotionDetails(imageUrl) {
     obj[2] = shouldAnimate;
     tmp4 = callback(AnimatedImage, obj);
   }
-  const items = [tmp4, ];
+  const items1 = [tmp4, ];
   obj = { style: tmp.textContainer, children: null };
-  const items1 = [callback(Text.Text, { variant: "text-md/bold", color: "text-default", children: title }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: subtitle })];
+  const items2 = [callback(Text.Text, { variant: "text-md/bold", color: "text-default", children: title }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: subtitle })];
+  obj[1] = items2;
+  items1[1] = closure_8(View, obj);
   obj[1] = items1;
-  items[1] = closure_8(View, obj);
-  obj[1] = items;
   return closure_8(View, obj);
 };

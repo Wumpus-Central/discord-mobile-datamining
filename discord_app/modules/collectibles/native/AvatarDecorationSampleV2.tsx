@@ -47,12 +47,12 @@ export default function AvatarDecorationSampleV2(arg0) {
   let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = tmp2(9438);
+    avatarSource = tmp2(9452);
   }
   obj = { children: null };
   obj[2] = avatarSource;
   const items1 = [closure_5(closure_3, obj), ];
-  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8340), { avatarDecoration: item, size, animate }) };
+  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8362), { avatarDecoration: item, size, animate }) };
   items1[1] = closure_5(closure_4, obj);
   obj[0] = items1;
   return closure_7(closure_6, obj);

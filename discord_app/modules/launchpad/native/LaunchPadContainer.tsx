@@ -41,12 +41,12 @@ export default function LaunchPadContainer(children) {
   updaters = undefined;
   let dependencyMap;
   const tmp = createCacheKey();
-  const tmp4 = updaters(10404)();
-  const tmp5 = updaters(16111)();
+  const tmp4 = updaters(10418)();
+  const tmp5 = updaters(16129)();
   launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(16113)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
-  const tmp7 = updaters(11426)();
+  ({ gesture, gestureRef } = updaters(16131)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
+  const tmp7 = updaters(11442)();
   dependencyMap = tmp7;
   let obj = launchPadSharedState(4083);
   const fn = function o() {
@@ -86,7 +86,7 @@ export default function LaunchPadContainer(children) {
     obj[1] = items1;
     return obj;
   };
-  obj = { interpolate: launchPadSharedState(4083).interpolate, launchPadSharedState, withSpring: launchPadSharedState(4754).withSpring, windowDimensions: tmp7, LAUNCH_PAD_SPRING_CONFIG: closure_4 };
+  obj = { interpolate: launchPadSharedState(4083).interpolate, launchPadSharedState, withSpring: launchPadSharedState(4776).withSpring, windowDimensions: tmp7, LAUNCH_PAD_SPRING_CONFIG: closure_4 };
   fn3.__closure = obj;
   fn3.__workletHash = 13886247172712;
   fn3.__initData = closure_11;
@@ -105,11 +105,11 @@ export default function LaunchPadContainer(children) {
     obj3[3] = launchPadSharedState;
     obj3[4] = launchPadPullTabState;
     obj3[5] = updaters;
-    const tmp10Result = tmp10(updaters(16114), obj3);
+    const tmp10Result = tmp10(updaters(16132), obj3);
   }
   items1[1] = tmp10Result;
   obj2[1] = items1;
   obj1[1] = closure_7(closure_3, obj2);
-  obj[1] = callback(launchPadSharedState(5467).GestureDetector, obj1);
-  return callback(updaters(15211).Provider, obj);
+  obj[1] = callback(launchPadSharedState(5488).GestureDetector, obj1);
+  return callback(updaters(15225).Provider, obj);
 };

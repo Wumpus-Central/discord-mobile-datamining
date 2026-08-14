@@ -42,7 +42,7 @@ export default function GiftingBadgeInfoActionSheet() {
   const require = tmp;
   let obj = initialize;
   let items = [map];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(tmp(8835).BadgeId.GIFTING));
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(tmp(8849).BadgeId.GIFTING));
   let obj1 = initialize;
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   const importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);

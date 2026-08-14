@@ -36,7 +36,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   if (obj1.isAndroid()) {
     obj = { style: null };
     obj[0] = tmp2.cancelIcon;
-    let tmp3Result = tmp3(tmp4(5314).ArrowLargeLeftIcon, obj);
+    let tmp3Result = tmp3(tmp4(5335).ArrowLargeLeftIcon, obj);
   } else {
     obj = { style: null, maxFontSizeMultiplier: 2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj[0] = tmp2.cancelText;

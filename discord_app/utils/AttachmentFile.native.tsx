@@ -71,13 +71,13 @@ function _getAttachmentFile() {
               return obj3;
             } else {
               items = arg1;
-              logger = lib(4893).getAttachmentPayload(lib, callback, items.name);
+              logger = lib(4915).getAttachmentPayload(lib, callback, items.name);
               c6 = 2;
-              const obj10 = lib(4893);
+              const obj10 = lib(4915);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(4901).getFileSize(items.uri);
+              obj4[0] = lib(4923).getFileSize(items.uri);
               return obj4;
             }
           } else {

@@ -1901,7 +1901,7 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            let obj1 = v0(4933);
+            let obj1 = v0(4955);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             let dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);
@@ -1955,10 +1955,10 @@ CloudUpload["isResponseUrlStale"] = function isResponseUrlStale(responseUrlSetAt
 prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
   const self = this;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
+    if (c5 === 2) {
+      c5 = 3;
       HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
@@ -1970,91 +1970,107 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
       }
     } else {
       try {
-        c3 = 2;
-        if (0 === closure_2) {
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c3 = 3;
+            c5 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            c3 = 3;
+            c5 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            let createAttachmentURL = tmp5;
-            let store = tmp2;
+            let closure_1 = tmp3;
+            let store = tmp7;
             store = undefined;
-            createAttachmentURL = undefined;
-            closure_2 = undefined;
+            closure_1 = undefined;
+            let createAttachmentURL;
             if (outer1_18.isResponseUrlStale(outer1_0.responseUrlSetAt)) {
-              closure_2 = 1;
-              c3 = 1;
+              c4 = 1;
+              c5 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(c2[16]).default.getUploadPayload(outer1_0);
+              obj1[0] = outer1_0(outer1_2[16]).default.getUploadPayload(outer1_0);
               return obj1;
             } else {
-              c3 = 3;
+              c5 = 3;
             }
           }
-        } else if (1 === tmp5) {
+        } else if (1 === tmp7) {
           if (arg0 === 1) {
-            c3 = 3;
+            c5 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            c3 = 3;
+            c5 = 3;
             const obj2 = { value: null, done: true };
             obj2[0] = arg1;
             return obj2;
           } else {
-            store = arg1;
-            const uploadTarget = outer1_0(c2[17]).getUploadTarget(store.item.target);
-            createAttachmentURL = uploadTarget.getCreateAttachmentURL(store.channelId);
-            const HTTP = outer1_0(c2[8]).HTTP;
+            closure_1 = arg1;
+            const uploadTarget = outer1_0(outer1_2[17]).getUploadTarget(outer1_0.item.target);
+            createAttachmentURL = uploadTarget.getCreateAttachmentURL(outer1_0.channelId);
+            let c3 = 1;
+            const HTTP = outer1_0(outer1_2[8]).HTTP;
             const obj3 = { url: null, body: null };
             obj3[0] = createAttachmentURL;
             const obj4 = { files: null };
-            const items = [store];
+            const items = [closure_1];
             obj4[0] = items;
             obj3[1] = obj4;
             const merged = Object.assign(store.createAttachmentUrlRetryOpts());
-            obj3.rejectWithError = false;
-            closure_2 = 2;
-            c3 = 1;
+            obj3.rejectWithError = true;
+            c4 = 3;
+            c5 = 1;
             const obj5 = { value: null, done: false };
             obj5[0] = HTTP.post(obj3);
             return obj5;
           }
+        } else if (2 === tmp7) {
+          c3 = 0;
+          c3 = createAttachmentURL;
+          if (c3 instanceof outer1_0(outer1_2[8]).HTTPResponseError) {
+            const obj6 = { response: null };
+            obj6[0] = c3;
+            throw new outer1_14("upload", obj6);
+          } else {
+            throw c3;
+          }
         } else if (arg0 === 1) {
-          c3 = 3;
+          c5 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c3 = 3;
-          const obj6 = { value: null, done: true };
-          obj6[0] = arg1;
-          return obj6;
+          c3 = 0;
+          c5 = 3;
+          const obj7 = { value: null, done: true };
+          obj7[0] = arg1;
+          return obj7;
         } else {
-          closure_2 = arg1;
-          if (closure_2.ok) {
-            const body = closure_2.body;
-            let first;
-            if (body != null) {
-              const attachments = body.attachments;
-              if (attachments != null) {
-                first = attachments[0];
-              }
+          store = arg1;
+          c3 = 0;
+          const body = store.body;
+          let first;
+          if (body != null) {
+            const attachments = body.attachments;
+            if (attachments != null) {
+              first = attachments[0];
             }
-            if (null != first) {
-              store.setResponseUrl(closure_2.body.attachments[0].upload_url);
-              store.setUploadedFilename(closure_2.body.attachments[0].upload_filename);
-            }
+          }
+          if (null != first) {
+            store.setResponseUrl(store.body.attachments[0].upload_url);
+            store.setUploadedFilename(store.body.attachments[0].upload_filename);
           }
         }
         obj = { response: null };
-        obj[0] = closure_2;
+        obj[0] = store;
         throw new outer1_14("upload", obj);
-      } catch (tmp27) {
-        c3 = tmp;
-        throw tmp27;
+      } catch (tmp40) {
+        createAttachmentURL = tmp40;
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp40;
+        } else {
+          c4 = tmp;
+        }
       }
     }
   })();

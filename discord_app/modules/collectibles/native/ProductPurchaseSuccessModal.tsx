@@ -8,7 +8,7 @@ import ME from "ME";
 import jsxProd from "LinearGradient";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../_runtime/05317_Background.js";
+import { Background } from "../../../../_runtime/05338_Background.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -410,7 +410,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       obj13[1] = tmp26;
       let tmp30Result = null != tmp25;
       if (tmp30Result) {
-        const obj14 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null, exposureLocation: "ProductPurchaseSuccessModal" };
+        const obj14 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
         ({ firstAvatarDecoration: obj35[0], firstProfileEffect: obj35[1], firstNameplate: obj35[2] } = shopProductItems);
         obj14[3] = product.previewAssets;
         obj14[6] = tmp25;

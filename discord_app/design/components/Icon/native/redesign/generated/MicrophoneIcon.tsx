@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/10847_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/10863_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

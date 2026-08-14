@@ -10,7 +10,7 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../../_runtime/08275_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08297_registerAsset.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -115,8 +115,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5793).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5793);
+      roleIconData = tmp2(5814).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5814);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -158,7 +158,7 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAsset;
     } else {
-      let tmp2Result = tmp2(4805);
+      let tmp2Result = tmp2(4827);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = createCacheKey();

@@ -16,7 +16,7 @@ import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
 import set from "set";
 import set from "initialize";
-import { registerAsset } from "../../../../_runtime/07680_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07701_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useGradientBottom } from "../../client_themes/native/ClientThemesOverrides.tsx";
@@ -119,10 +119,10 @@ function SortAndViewOptions(channel) {
     t = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
     t[1] = string3Result;
     t[2] = callback;
-    ArrowsUpDownIcon = ArrowsUpDownIcon(11596).ArrowsUpDownIcon;
+    ArrowsUpDownIcon = ArrowsUpDownIcon(11612).ArrowsUpDownIcon;
     tmp5Result = tmp5(ArrowsUpDownIcon, { size: "xxs" });
     t[4] = tmp5Result;
-    tmp5Result = tmp5(ArrowsUpDownIcon(4755).Button, t);
+    tmp5Result = tmp5(ArrowsUpDownIcon(4777).Button, t);
   } else {
     const intl = ArrowsUpDownIcon(1236).intl;
     const string = intl.string;
@@ -141,7 +141,7 @@ function SortAndViewOptions(channel) {
     obj[0] = tmp.optionsPill;
     obj = { size: "xs", style: null };
     obj[1] = tmp.sortOptionsIcon;
-    const items1 = [tmp5(ArrowsUpDownIcon(11596).ArrowsUpDownIcon, obj), , ];
+    const items1 = [tmp5(ArrowsUpDownIcon(11612).ArrowsUpDownIcon, obj), , ];
     const obj1 = { variant: "text-sm/medium", color: "interactive-text-default", style: null, children: null };
     obj1[2] = tmp.sortOptionsText;
     const intl2 = ArrowsUpDownIcon(1236).intl;
@@ -154,10 +154,10 @@ function SortAndViewOptions(channel) {
     }
     obj1[3] = string2Result;
     items1[1] = tmp5(ArrowsUpDownIcon(4338).Text, obj1);
-    items1[2] = tmp5(ArrowsUpDownIcon(9528).ChevronSmallDownIcon, { size: "xs" });
+    items1[2] = tmp5(ArrowsUpDownIcon(9541).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items1;
     obj[6] = closure_16(View, obj);
-    return tmp5(ArrowsUpDownIcon(4887).PressableOpacity, obj);
+    return tmp5(ArrowsUpDownIcon(4909).PressableOpacity, obj);
   }
 }
 function TagFilter(channel) {
@@ -174,8 +174,8 @@ function TagFilter(channel) {
     const intl3 = tmp4(1236).intl;
     obj[1] = intl3.string(tmp4(1236).t["112vVE"]);
     obj[2] = handlePress;
-    obj[4] = tmp3(tmp4(7775).TagIcon, { size: "xxs" });
-    let tmp3Result = tmp3(tmp4(4755).Button, obj);
+    obj[4] = tmp3(tmp4(7796).TagIcon, { size: "xxs" });
+    let tmp3Result = tmp3(tmp4(4777).Button, obj);
   } else {
     obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.8, style: null, onPress: null, children: null };
     const intl = tmp4(1236).intl;
@@ -200,10 +200,10 @@ function TagFilter(channel) {
     const intl2 = tmp4(1236).intl;
     obj3[3] = intl2.string(tmp4(1236).t["112vVE"]);
     items[1] = tmp3(tmp4(4338).Text, obj3);
-    items[2] = tmp3(tmp4(9528).ChevronSmallDownIcon, { size: "xs" });
+    items[2] = tmp3(tmp4(9541).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items;
     obj[5] = closure_16(View, obj);
-    tmp3Result = tmp3(tmp4(4887).PressableOpacity, obj);
+    tmp3Result = tmp3(tmp4(4909).PressableOpacity, obj);
     const tmp5 = closure_16;
   }
   return tmp3Result;

@@ -1,27 +1,34 @@
 // discord_app/modules/collectibles/shop_this_look/ShopThisLookUtils.tsx
 import { CollectiblesSKUSourceType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 const result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
 export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {
-  let tmp = null != stateFromStores;
-  if (tmp) {
-    const isAvailable = stateFromStores.isAvailable;
-    let isAvailableResult;
-    if (isAvailable != null) {
-      isAvailableResult = isAvailable();
-    }
-    tmp = true === isAvailableResult;
-  }
-  if (tmp) {
-    const tenantMetadata = stateFromStores.tenantMetadata;
-    let sourceType;
-    if (tenantMetadata != null) {
-      const collectibles = tenantMetadata.collectibles;
-      if (collectibles != null) {
-        sourceType = collectibles.sourceType;
+  let type;
+  type = stateFromStores;
+  if (null == stateFromStores) {
+    return tmp;
+  } else if (typeof type.isAvailable !== "function") {
+    let obj = SentryUtils.native;
+    obj = { extra: null };
+    obj = { skuId: null, skuType: null };
+    ({ id: obj3[0], type } = type);
+    obj[1] = type;
+    obj[0] = obj;
+    obj.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj);
+    let flag = false;
+  } else {
+    flag = type.isAvailable();
+    if (flag) {
+      const tenantMetadata = type.tenantMetadata;
+      let sourceType;
+      if (tenantMetadata != null) {
+        const collectibles = tenantMetadata.collectibles;
+        if (collectibles != null) {
+          sourceType = collectibles.sourceType;
+        }
       }
+      flag = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
     }
-    tmp = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
   }
-  return tmp;
 };

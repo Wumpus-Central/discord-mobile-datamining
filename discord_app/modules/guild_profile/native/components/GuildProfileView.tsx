@@ -5,7 +5,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 import jsxProd from "TraitEmoji";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
@@ -39,7 +39,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9307)() * useWindowDimensions().width;
+      obj[2] = tmp3(9321)() * useWindowDimensions().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1435).getGuildDiscoverySplashSource(obj);

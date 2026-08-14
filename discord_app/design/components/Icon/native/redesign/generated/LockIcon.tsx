@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/LockIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/04840_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/04862_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

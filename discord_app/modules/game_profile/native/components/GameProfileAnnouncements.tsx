@@ -21,7 +21,7 @@ function EmbedAnnouncementCard(message) {
   ({ onPress: importDefault, guildId, channelId } = message);
   const tmp = callback3();
   if (null == parser) {
-    let obj = importAll(4774);
+    let obj = importAll(4796);
     parser = obj.getParser();
   }
   const media = message.media;
@@ -39,7 +39,7 @@ function EmbedAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    let obj1 = message(9385);
+    let obj1 = message(9399);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -103,7 +103,7 @@ function EmbedAnnouncementCard(message) {
       obj9[1] = message.media.placeholder;
       obj9[2] = message.media.placeholderVersion;
       obj9[3] = tmp.mediaImage;
-      obj8[1] = tmp12(message(9387).ImageWithPlaceholder, obj9);
+      obj8[1] = tmp12(message(9401).ImageWithPlaceholder, obj9);
       tmp12Result1 = tmp12(tmp15, obj8);
     }
     items3[1] = tmp12Result1;
@@ -157,7 +157,7 @@ function EmbedAnnouncementCard(message) {
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
       obj19[1] = Themes.colors.TEXT_MUTED;
-      const items6 = [tmp12(tmp35(7700).ReactionIcon, obj19), ];
+      const items6 = [tmp12(tmp35(7721).ReactionIcon, obj19), ];
       let tmp46 = null != obj20;
       if (tmp46) {
         tmp46 = obj20.locale === tmp35(1236).intl.currentLocale;
@@ -194,7 +194,7 @@ function MessageAnnouncementCard(message) {
   ({ onPress: importDefault, guildId, channelId } = message);
   const tmp = callback3();
   if (null == parser) {
-    let obj = importAll(4774);
+    let obj = importAll(4796);
     parser = obj.getParser();
   }
   const media = message.media;
@@ -212,7 +212,7 @@ function MessageAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    let obj1 = message(9385);
+    let obj1 = message(9399);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -239,7 +239,7 @@ function MessageAnnouncementCard(message) {
     obj1[1] = message.media.placeholder;
     obj1[2] = message.media.placeholderVersion;
     obj1[3] = tmp.mediaImage;
-    obj[1] = callback(message(9387).ImageWithPlaceholder, obj1);
+    obj[1] = callback(message(9401).ImageWithPlaceholder, obj1);
     tmp13 = callback(closure_7, obj);
   }
   const items = [tmp13, ];
@@ -275,7 +275,7 @@ function MessageAnnouncementCard(message) {
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
     obj10[1] = Themes.colors.TEXT_MUTED;
-    const items3 = [tmp27(tmp28(7700).ReactionIcon, obj10), ];
+    const items3 = [tmp27(tmp28(7721).ReactionIcon, obj10), ];
     let tmp34 = null != obj11;
     if (tmp34) {
       tmp34 = obj11.locale === tmp28(1236).intl.currentLocale;
@@ -361,7 +361,7 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6[0] = date;
-    obj6[1] = message(9385).getPollExpiryLabel(poll);
+    obj6[1] = message(9399).getPollExpiryLabel(poll);
     obj5[2] = intl2.format(message(1236).t.t0FTsH, obj6);
     obj4[1] = callback(message(4338).Text, obj5);
     items[2] = callback(closure_7, obj4);

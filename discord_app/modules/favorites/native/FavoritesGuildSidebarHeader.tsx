@@ -15,6 +15,7 @@ import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 
 let closure_6;
 let error;
+let metroImportAll;
 const require = arg1;
 function EmptyBody() {
   const callback = React.useCallback(() => {
@@ -64,7 +65,7 @@ function PlaceholderRows() {
   obj[3] = items2;
   return callback3(View, obj);
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
 createCacheKey = { copy: null, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 createCacheKey = { paddingTop: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_16 };
 createCacheKey[0] = createCacheKey;
@@ -85,22 +86,35 @@ const result = require("items").fileFinishedImporting("modules/favorites/native/
 
 export default function FavoritesGuildSidebarHeader() {
   const tmp = createCacheKey();
+  const tmp2 = callback();
   let obj = { spacing: null, children: null };
   obj[0] = Themes.space.PX_8;
+  let tmp7 = null;
+  if (tmp2) {
+    obj = { style: null };
+    obj[0] = tmp.divider;
+    tmp7 = callback2(View, obj);
+  }
+  const items = [tmp7, , ];
   obj = { spacing: null, style: null, children: null };
   obj[0] = Themes.space.PX_8;
   obj[1] = tmp.copy;
-  obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(messagesProxy["1n0TGE"]);
-  const items = [callback2(Text.Heading, obj), callback2(EmptyBody, {})];
-  obj[2] = items;
-  const items1 = [callback3(Stack.Stack, obj), callback2(View, { style: tmp.divider }), ];
-  let tmp4Result = null;
+  const obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = tmp4(1236).intl;
+  obj1[2] = intl.string(messagesProxy["1n0TGE"]);
+  const items1 = [callback2(Text.Heading, obj1), callback2(EmptyBody, {})];
+  obj[2] = items1;
+  items[1] = closure_7(Stack.Stack, obj);
+  let tmp3Result = null;
   if (!tmp2) {
-    tmp4Result = callback2(PlaceholderRows, {});
+    const obj2 = { children: null };
+    const obj3 = { style: null };
+    obj3[0] = tmp.divider;
+    const items2 = [tmp10(View, obj3), tmp10(PlaceholderRows, {})];
+    obj2[0] = items2;
+    tmp3Result = tmp3(closure_8, obj2);
   }
-  items1[2] = tmp4Result;
-  obj[1] = items1;
-  return callback3(Stack.Stack, obj);
+  items[2] = tmp3Result;
+  obj[1] = items;
+  return closure_7(Stack.Stack, obj);
 };

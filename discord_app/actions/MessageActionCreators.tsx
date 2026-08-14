@@ -26,7 +26,7 @@ import ME from "ME";
 import { LinkType } from "LinkType";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
-import { t } from "../../_runtime/04544_t.js";
+import { t } from "../../_runtime/04554_t.js";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
@@ -80,7 +80,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7240);
+    let tmp3Result = tmp3(7262);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -91,7 +91,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7199);
+    tmp3Result = tmp3(7221);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -132,14 +132,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7243).getStreamerApplication(lastActiveStream, sortActivity);
+              const streamerApplication = tmp3(7265).getStreamerApplication(lastActiveStream, sortActivity);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7243);
+              const tmp3Result1 = tmp3(7265);
             }
           }
         }
@@ -648,7 +648,7 @@ let obj14 = {
           } else {
             closure_0 = arg1;
             if (closure_0.body.length > 0) {
-              obj = outer1_0(4564);
+              obj = outer1_0(4586);
               dependencyMap = 3;
               const obj5 = { value: null, done: true };
               obj5[0] = obj.createMessageRecord(closure_0.body[0]);
@@ -886,8 +886,8 @@ let obj14 = {
               closure_2 = undefined;
               dependencyMap = undefined;
               basicChannel = outer1_17.getBasicChannel(outer1_0);
-              const orCreate = outer1_1(5030).getOrCreate(outer1_0);
-              const obj13 = outer1_1(5030);
+              const orCreate = outer1_1(5052).getOrCreate(outer1_0);
+              const obj13 = outer1_1(5052);
               const databaseResult = outer1_1(1955).database();
               c1 = databaseResult;
               if (null != databaseResult) {
@@ -940,7 +940,7 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === outer1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = outer1_1(6995);
+              obj2 = outer1_1(7017);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, ClickArea, closure_2.messages);
               let obj3 = outer1_1(709);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
@@ -1010,7 +1010,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(6984).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(7006).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -2151,9 +2151,11 @@ let obj14 = {
                                               obj1.track(outer1_27.GAME_PROFILE_LINK_EMBED_SENT, obj4);
                                             } else if (tmp(tmp2[30]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
                                               if (tmp(tmp2[30]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                                const _Error = Error;
-                                                const _HermesInternal = HermesInternal;
-                                                throw Error("Unknown coded link type: " + type);
+                                                if (tmp(tmp2[30]).CodedLinkType.USER_PROFILE !== type) {
+                                                  const _Error = Error;
+                                                  const _HermesInternal = HermesInternal;
+                                                  throw Error("Unknown coded link type: " + type);
+                                                }
                                               }
                                             }
                                           }
@@ -2581,7 +2583,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(outer1_1, outer1_0);
-              let obj1 = outer1_1(7269);
+              let obj1 = outer1_1(7291);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2630,18 +2632,18 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = outer1_0(7338).MessageDataType.EDIT;
+            obj3[0] = outer1_0(7360).MessageDataType.EDIT;
             obj3[1] = obj2;
-            outer1_1(7338).enqueue(obj3, (hasErr) => {
+            outer1_1(7360).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = outer2_0(7368).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = outer2_0(7390).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = outer2_0(7338).MessageDataType.EDIT;
+                obj[0] = outer2_0(7360).MessageDataType.EDIT;
                 obj[1] = obj2;
                 let obj1 = outer2_1(709);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
@@ -2715,7 +2717,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(7269);
+              let obj1 = outer1_1(7291);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2788,7 +2790,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(7269);
+              let obj1 = outer1_1(7291);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2941,7 +2943,7 @@ let obj14 = {
                 })();
                 dependencyMap = 3;
               } else {
-                let obj1 = outer1_1(7269);
+                let obj1 = outer1_1(7291);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -3054,7 +3056,7 @@ let obj14 = {
               formatToPlainStringResult = intl.string(outer1_0(1236).t.z2gyNF);
             }
             c0 = formatToPlainStringResult;
-            obj3 = outer1_1(4683);
+            obj3 = outer1_1(4705);
             const obj4 = { title: null, body: null, confirmText: null };
             const intl3 = outer1_0(1236).intl;
             obj4[0] = intl3.string(outer1_0(1236).t.Vd1hs6);

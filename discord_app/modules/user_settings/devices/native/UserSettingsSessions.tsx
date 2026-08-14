@@ -7,9 +7,9 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/10919_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/11694_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14262_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10935_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11710_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14275_registerAsset.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -29,7 +29,7 @@ function UserSettingsSessions() {
   let otherSessions;
   let tmp7;
   const tmp = createCacheKey();
-  let obj = otherSessions(14047);
+  let obj = otherSessions(14060);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   let obj1 = otherSessions(589);
@@ -66,14 +66,14 @@ function UserSettingsSessions() {
       tmp21Result = tmp21(SessionInfo, obj2);
     }
     obj1[2] = tmp21Result;
-    const items1 = [callback2(tmp2(5807).TableRowGroup, obj1), , ];
+    const items1 = [callback2(tmp2(5828).TableRowGroup, obj1), , ];
     if (otherSessions.length > 0) {
       const obj3 = { title: null, hasIcons: true, children: null };
       const intl = tmp2(1236).intl;
       obj3[0] = intl.string(tmp2(1236).t.xx1MWc);
       const items2 = [otherSessions.map((id_hash) => callback(closure_15, { session: id_hash }, id_hash.id_hash)), tmp21(UnknownLegacySessionsInfo, {})];
       obj3[2] = items2;
-      tmp20Result = tmp20(tmp2(5807).TableRowGroup, obj3);
+      tmp20Result = tmp20(tmp2(5828).TableRowGroup, obj3);
     } else {
       let mfaEnabled;
       if (stateFromStores != null) {
@@ -92,11 +92,11 @@ function UserSettingsSessions() {
       obj4[5] = function onPress() {
         return otherSessions(outer1_2[11]).logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
       };
-      tmp21Result = tmp21(tmp2(5414).TableRow, obj4);
+      tmp21Result = tmp21(tmp2(5435).TableRow, obj4);
     }
     items1[2] = tmp21Result;
     obj[2] = items1;
-    tmp20Result = tmp20(tmp2(4753).Stack, obj);
+    tmp20Result = tmp20(tmp2(4775).Stack, obj);
   }
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { bottom: true, children: null };
@@ -105,7 +105,7 @@ function UserSettingsSessions() {
   obj7[2] = intl4.string(otherSessions(1236).t.zZp618);
   const items3 = [callback2(otherSessions(4338).Text, obj7), tmp20Result];
   obj6[1] = items3;
-  obj5[1] = callback3(otherSessions(5368).SafeAreaPaddingView, obj6);
+  obj5[1] = callback3(otherSessions(5389).SafeAreaPaddingView, obj6);
   return callback2(closure_7, obj5);
 }
 function SessionInfo(session) {
@@ -151,14 +151,14 @@ function SessionInfo(session) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAsset;
-              obj[2] = session(14263).VrHeadsetIcon;
+              obj[2] = session(14276).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAsset;
-              obj[2] = session(12251).ScreenIcon;
+              obj[2] = session(12269).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
             }
@@ -167,15 +167,15 @@ function SessionInfo(session) {
         obj = { text: null, iconSource: null, IconComponent: null };
         obj[0] = os;
         obj[1] = registerAsset;
-        obj[2] = session(8536).MobilePhoneIcon;
+        obj[2] = session(8558).MobilePhoneIcon;
         tmp9 = session;
         tmp10 = importDefault;
       }
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14047).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14047);
+        formatDateResult = tmp9(14060).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14060);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1370).isNotNullish);
@@ -190,9 +190,9 @@ function SessionInfo(session) {
         obj1[3] = { top: 5, left: 5, bottom: 5, right: 5 };
         const obj2 = { style: null, source: null };
         obj2[0] = tmp.logoutButton;
-        obj2[1] = tmp10(8072);
+        obj2[1] = tmp10(8093);
         obj1[4] = callback2(tmp9(1297).Icon, obj2);
-        tmp18 = callback2(tmp9(4887).PressableOpacity, obj1);
+        tmp18 = callback2(tmp9(4909).PressableOpacity, obj1);
       }
       const obj3 = { style: null, accessible: true, children: null };
       obj3[0] = tmp.sessionInfo;
@@ -221,7 +221,7 @@ function SessionInfo(session) {
       const obj10 = { source: null, IconComponent: null };
       obj10[0] = iconSource;
       obj10[1] = IconComponent;
-      obj9[0] = callback2(tmp9(5414).TableRow.Icon, obj10);
+      obj9[0] = callback2(tmp9(5435).TableRow.Icon, obj10);
       obj9[1] = tmp20Result;
       tmp20Result = null != _location;
       if (tmp20Result) {
@@ -249,14 +249,14 @@ function SessionInfo(session) {
       obj15[1] = items3;
       obj9[2] = closure_11(closure_6, obj15);
       obj9[3] = tmp18;
-      return callback2(tmp9(5414).TableRow, obj9);
+      return callback2(tmp9(5435).TableRow, obj9);
     }
   }
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1236).intl;
   obj16[0] = intl.string(session(1236).t.cDHCNY);
   obj16[1] = registerAsset;
-  obj16[2] = session(12251).ScreenIcon;
+  obj16[2] = session(12269).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
   obj = obj16;

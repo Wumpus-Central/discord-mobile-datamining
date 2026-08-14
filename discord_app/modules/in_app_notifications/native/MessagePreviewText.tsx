@@ -177,18 +177,18 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(9855);
+  let obj = message(9866);
   const previewableMedia = obj.usePreviewableMedia(message);
-  let obj1 = message(4573);
+  let obj1 = message(4595);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(9863);
+  let tmpResult = tmp(9874);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(9864);
+  tmpResult = tmp(9875);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -219,7 +219,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessage(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(9855).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(9866).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -243,7 +243,7 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(9818);
+      tmp(9829);
       if (null != channel) {
         const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
         obj6[0] = channel;
@@ -251,7 +251,7 @@ export default function MessagePreviewText(message) {
         obj6[3] = tmp(4039).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(9839).ChannelRowPreview, obj6);
+        return callback(tmp(9850).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };

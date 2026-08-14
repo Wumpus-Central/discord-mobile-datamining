@@ -5,7 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12111_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12129_registerAsset.js";
 import { ContactSyncError } from "ContactSyncError.tsx";
 import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 
@@ -119,7 +119,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj4[2] = intl3.string(onNext(1236).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
-  obj3[1] = callback2(onNext(4755).Button, obj4);
+  obj3[1] = callback2(onNext(4777).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
   items1[4] = callback2(ContactSyncError, { error });
   obj[1] = items1;

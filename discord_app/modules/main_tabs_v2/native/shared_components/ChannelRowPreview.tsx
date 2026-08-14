@@ -87,7 +87,7 @@ class ChannelRowPreview {
         str2 = "markup";
         if ("markup" === type) {
           tmp9 = jsx;
-          tmp10 = f47644;
+          tmp10 = f47749;
           if ("markup" === formattedMessagePreview.type) {
             content = formattedMessagePreview.markup;
           } else {

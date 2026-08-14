@@ -561,17 +561,17 @@ function trackCrash(event, hint, arg2) {
     tmp25(1208).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1208);
   }
-  const AppCrashedReasons = tmp11(13523).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(13535).AppCrashedReasons;
   const tmp19 = expandEventProperties;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7114).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(7136).MetricEvents.APP_CRASHED, tags: null };
   const items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(7109).increment(obj1, true);
+  tmp26(7131).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -650,7 +650,7 @@ export const initSentry = function initSentry() {
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6229", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@343.4.0-2+343204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6237", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@343.5.0-2+343205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           obj[0] = `/error-reporting-proxy/${str2}`;
           obj[2] = closure_16;
           obj[4] = SentryStaffDsn;
@@ -688,7 +688,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6229");
+          callback(tmp[4]).setTag("buildNumber", "6237");
           const tmp14Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
           const tmp14Result6 = callback(tmp[4]);

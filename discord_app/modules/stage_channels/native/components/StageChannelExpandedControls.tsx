@@ -21,7 +21,7 @@ const memoResult = require("noop").memo((channel) => {
   let importDefault;
   const tmp = callback();
   const tmp2 = importDefault;
-  let obj = channel(9793);
+  let obj = channel(9804);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   let obj1 = channel(589);
   const items = [createGuildRecordFromRust];
@@ -42,9 +42,9 @@ const memoResult = require("noop").memo((channel) => {
     num = 0;
   }
   const obj4 = channel(589);
-  const stageHasMedia = channel(5176).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(5197).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(10871).StreamVolumeItem, {}));
+  items5.push(jsx(channel(10887).StreamVolumeItem, {}));
   if (tmp11) {
     obj = { channel: null, disabled: null };
     obj[0] = channel;
@@ -55,16 +55,16 @@ const memoResult = require("noop").memo((channel) => {
     if (!tmp12) {
       let reachedLimit = !stageHasMedia;
       if (!stageHasMedia) {
-        reachedLimit = tmp2(9204)(channel).reachedLimit;
+        reachedLimit = tmp2(9218)(channel).reachedLimit;
       }
       tmp12 = reachedLimit;
     }
     obj[1] = tmp12;
-    items5.push(tmp9(tmp5(10871).ScreenshareButton, obj));
+    items5.push(tmp9(tmp5(10887).ScreenshareButton, obj));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
-  items5.push(jsx(channel(10871).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(10871).DeafenButton, { channel }));
+  items5.push(jsx(channel(10887).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(10887).DeafenButton, { channel }));
   obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
   return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
 });

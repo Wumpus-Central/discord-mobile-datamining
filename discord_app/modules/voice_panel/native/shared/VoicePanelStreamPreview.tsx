@@ -50,7 +50,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10917)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10933)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(589);
   const items = [reset, fetchFingerprint];
   const items1 = [stream];
@@ -112,7 +112,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   const obj3 = { style: animatedStyle, layout, children: null };
   const tmp11 = closure_7;
   const tmp12 = closure_8;
-  const tmp4 = stream(10917);
+  const tmp4 = stream(10933);
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.ownStreamTextContainer;
@@ -132,7 +132,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = tmp16(closure_9, obj6);
   }
   obj3[2] = tmp16Result;
-  items2[1] = callback(stream(8054), obj3);
+  items2[1] = callback(stream(8075), obj3);
   obj[5] = items2;
   return tmp11(tmp12, obj);
 };

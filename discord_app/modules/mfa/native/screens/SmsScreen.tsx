@@ -253,11 +253,11 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   }
-  let obj = finish(15062);
-  const screenStyles = obj.useScreenStyles(finish(8521)());
+  let obj = finish(15076);
+  const screenStyles = obj.useScreenStyles(finish(8543)());
   const tmp4 = first(React.useState(null), 2);
   dependencyMap = tmp4[1];
-  const tmp2 = finish(8521)();
+  const tmp2 = finish(8543)();
   [tmp6, c3] = first(React.useState(false), 2);
   const tmp7 = first(React.useState(""), 2);
   first = tmp7[0];
@@ -298,7 +298,7 @@ export default function SmsScreen(mfaChallenge) {
   obj[1] = tmp10;
   obj = { style: screenStyles.inputContainer, children: null };
   let obj1 = { autoFocus: true, autoCapitalize: "characters", maxLength: null, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: null, label: null, accessibilityLabel: null, placeholder: null, errorMessage: null };
-  obj1[2] = mfaChallenge(15066).SMS_CODE_LENGTH;
+  obj1[2] = mfaChallenge(15080).SMS_CODE_LENGTH;
   obj1[6] = handleChange;
   const intl3 = mfaChallenge(1236).intl;
   obj1[7] = intl3.string(mfaChallenge(1236).t["/sHnXc"]);
@@ -307,7 +307,7 @@ export default function SmsScreen(mfaChallenge) {
   const intl5 = mfaChallenge(1236).intl;
   obj1[9] = intl5.string(mfaChallenge(1236).t.tARzgo);
   obj1[10] = tmp4[0];
-  const items1 = [handleChange(mfaChallenge(7835).TextInput, obj1), ];
+  const items1 = [handleChange(mfaChallenge(7856).TextInput, obj1), ];
   let obj2 = { text: null, variant: "secondary", size: "sm", onPress: null };
   const intl6 = mfaChallenge(1236).intl;
   obj2[0] = intl6.string(mfaChallenge(1236).t.WbaP3r);
@@ -321,11 +321,11 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   };
-  items1[1] = handleChange(mfaChallenge(4755).Button, obj2);
+  items1[1] = handleChange(mfaChallenge(4777).Button, obj2);
   obj[1] = items1;
   obj[2] = _handleChange(c6, obj);
   let obj3 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(15061);
+  const tmp15 = finish(15075);
   const intl7 = mfaChallenge(1236).intl;
   obj3[1] = intl7.string(mfaChallenge(1236).t.geKm7t);
   let tmp17 = tmp6;
@@ -340,10 +340,10 @@ export default function SmsScreen(mfaChallenge) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(15066).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(15080).SMS_CODE_LENGTH;
   }
   obj3[4] = tmp6;
-  obj[3] = handleChange(finish(15064), obj3);
+  obj[3] = handleChange(finish(15078), obj3);
   obj[4] = { mfaChallenge, finish };
   return handleChange(tmp15, obj);
 };

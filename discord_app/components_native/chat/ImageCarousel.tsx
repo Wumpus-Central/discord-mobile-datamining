@@ -409,7 +409,7 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     obj[1] = items;
     return obj;
   };
-  obj = { withTiming: sharedValue(4343).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1297).STANDARD_EASING, withSpring: sharedValue(4754).withSpring };
+  obj = { withTiming: sharedValue(4343).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1297).STANDARD_EASING, withSpring: sharedValue(4776).withSpring };
   fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = closure_14;

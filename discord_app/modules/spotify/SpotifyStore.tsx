@@ -652,7 +652,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(11200).SpotifyAPI;
+    const SpotifyAPI = accountId(11216).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -798,9 +798,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(11200).getProfile(this.accountId, this.accessToken);
-  const obj = self(11200);
-  const devices = self(11200).getDevices(this.accountId, this.accessToken);
+  const profile = self(11216).getProfile(this.accountId, this.accessToken);
+  const obj = self(11216);
+  const devices = self(11216).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   let payloads;
@@ -1343,7 +1343,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(10617);
+        obj9 = device(10633);
       }
       if (null != tmp10) {
         if (!tmp22) {

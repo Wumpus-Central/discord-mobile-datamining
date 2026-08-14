@@ -26,9 +26,11 @@ let closure_15;
 let map1;
 const require = arg1;
 function watchStream(stream, forceMultiple) {
+  let channelId;
+  let guildId;
   if (null == remoteSessionId.getRemoteSessionId()) {
-    const channelId = stream.channelId;
-    if (null == stream.guildId) {
+    ({ guildId, channelId } = stream);
+    if (null == guildId) {
       const encodeStreamKeyResult = isStreamKey.encodeStreamKey(stream);
       forceMultiple = undefined;
       if (forceMultiple != null) {
@@ -39,17 +41,22 @@ function watchStream(stream, forceMultiple) {
         forceMultiple = allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
       const obj2 = isStreamKey;
+      const tmp12 = require;
       const tmp18 = importDefault;
       let obj = { type: "STREAM_WATCH", streamKey: null, allowMultiple: null };
       obj[1] = encodeStreamKeyResult;
       obj[2] = forceMultiple;
       dispatcher.dispatch(obj);
+      if (null != guildId) {
+        const result = tmp12(4538).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(4538);
+      }
       let forceFocus;
       if (forceMultiple != null) {
         forceFocus = forceMultiple.forceFocus;
       }
-      let tmp21 = true !== forceFocus;
-      if (tmp21) {
+      let tmp22 = true !== forceFocus;
+      if (tmp22) {
         if (!forceMultiple) {
           let noFocus;
           if (forceMultiple != null) {
@@ -57,11 +64,11 @@ function watchStream(stream, forceMultiple) {
           }
           forceMultiple = noFocus;
         }
-        tmp21 = forceMultiple;
+        tmp22 = forceMultiple;
       }
-      if (!tmp21) {
-        const participant = tmp18(4538).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4538);
+      if (!tmp22) {
+        const participant = tmp18(4570).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4570);
       }
       const obj3 = dispatcher;
     } else {
@@ -221,7 +228,7 @@ function _notifyStreamStart() {
       const obj2 = { event: null };
       obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(5168).post(obj1);
+      yield v0(4562).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;
@@ -403,7 +410,7 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
   let obj = _isStreamKey;
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
   ChannelActionCreators.addRecipient(arg0, id, undefined, () => {
-    const tmp = callback(outer1_2[25]);
+    const tmp = callback(outer1_2[26]);
     const call = tmp.call;
     const fn = () => {
       const channelId = closure_1.channelId;
@@ -414,7 +421,7 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = outer1_11.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          outer1_1(outer1_2[17])(tmp);
+          outer1_1(outer1_2[18])(tmp);
         }
       } else {
         const channel = outer1_9.getChannel(channelId);

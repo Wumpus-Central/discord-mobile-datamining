@@ -7,7 +7,7 @@ import { ThemeTypes } from "sum";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/14575_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/14588_registerAsset.js";
 import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";

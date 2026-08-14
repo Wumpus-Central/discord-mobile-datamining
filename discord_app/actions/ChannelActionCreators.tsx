@@ -431,8 +431,8 @@ export default {
       tmp5(4353).transitionToChannel(tmp.id, { navigationReplace: true });
       const tmp5Result = tmp5(4353);
     } else {
-      const privateChannel = tmp2(5170).selectPrivateChannel(tmp.id);
-      const tmp2Result = tmp2(5170);
+      const privateChannel = tmp2(5191).selectPrivateChannel(tmp.id);
+      const tmp2Result = tmp2(5191);
     }
     return tmp;
   },
@@ -593,7 +593,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = outer1_1(5981);
+        obj1 = outer1_1(6002);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -952,7 +952,7 @@ export default {
       const obj4 = outer1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = outer1_1(5981);
+      const obj = outer1_1(6002);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();

@@ -425,8 +425,8 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
   }
   if (canResult) {
     const result = _getPromiseableActionHandlers.openConfirmRemoveMentionRaid(() => {
-      let obj = callback(4539);
-      obj = { feedback_type: callback(7025).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+      let obj = callback(4549);
+      obj = { feedback_type: callback(7047).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(outer1_7.GUILD_AUTOMOD_FEEDBACK, obj);
       const HTTP = callback(530).HTTP;
       obj = { url: outer1_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };

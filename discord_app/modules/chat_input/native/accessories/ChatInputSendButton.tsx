@@ -61,16 +61,16 @@ let closure_12 = importAllResult.memo((type) => {
     num = closure_8;
   }
   obj = { cleanup, state, withBounce, bounceEnterDelayMs: num, children: null };
-  let tmp3Result = tmp3(11676);
+  let tmp3Result = tmp3(11692);
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     obj = { disabled: null, channelId: null };
     obj[0] = isOnCooldown;
     obj[1] = channelId;
-    let tmp7Result = tmp7(tmp3(11685), obj);
+    let tmp7Result = tmp7(tmp3(11701), obj);
   } else {
     obj1 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
     ({ button: obj4[1], buttonActive: obj4[2], iconActive: obj4[3] } = tmp5);
-    tmp3Result = tmp3(11669);
+    tmp3Result = tmp3(11685);
     obj1[4] = tmp(4288).SendMessageIcon;
     const intl = tmp(1236).intl;
     obj1[5] = intl.string(tmp(1236).t.TXNS7S);

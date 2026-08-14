@@ -48,7 +48,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
   }, items1);
   obj = { style: tmp5.doubleTapEmojiEditNudgeContainer, children: null };
   callback = React.useCallback(() => {
-    let obj = _location(8686);
+    let obj = _location(8700);
     obj = { pickerIntention: outer1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     let closure_0 = stateFromStores((arg0) => {
       let closure_0 = arg0;
@@ -143,13 +143,13 @@ function DoubleTapEmojiEditNudgeInner(location) {
     str = emoji.surrogates;
   }
   obj1[4] = str;
-  items3[1] = callback2(emoji(5400), obj1);
+  items3[1] = callback2(emoji(5421), obj1);
   const obj2 = { accessibilityRole: "button", onPress: callback, hitSlop: closure_13, style: tmp5.editButton, children: null };
   let obj3 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1236).intl;
   obj3[2] = intl2.string(_location(1236).t.bt75uw);
   obj2[4] = callback2(_location(4338).Text, obj3);
-  items3[2] = callback2(_location(4887).PressableOpacity, obj2);
+  items3[2] = callback2(_location(4909).PressableOpacity, obj2);
   obj[1] = items3;
   return tmp8(tmp9, obj);
 }

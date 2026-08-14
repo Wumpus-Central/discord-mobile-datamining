@@ -49,8 +49,8 @@ export default function getNavigationModalPresentation() {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
-        const orientation = tmp5(8944).getOrientation();
-        const tmp5Result = tmp5(8944);
+        const orientation = tmp5(8958).getOrientation();
+        const tmp5Result = tmp5(8958);
       }
       str4 = str2;
     }

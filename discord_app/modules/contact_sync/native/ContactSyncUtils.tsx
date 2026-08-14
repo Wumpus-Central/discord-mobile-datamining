@@ -1,6 +1,6 @@
 // discord_app/modules/contact_sync/native/ContactSyncUtils.tsx
 import closure_3 from "ME";
-import { NativeModules } from "module_4550";
+import { NativeModules } from "module_4572";
 import set from "set";
 import setStoredContacts from "setStoredContacts";
 import ContactSyncLandingPage from "ContactSyncLandingPage";
@@ -86,7 +86,7 @@ function _uploadContacts() {
             } else {
               const _JSON = JSON;
               dependencyMap = JSON.parse(callback);
-              let obj7 = flag(5168);
+              let obj7 = flag(4562);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
               const obj3 = { friend_list_entries: null, background: null, allowed_in_suggestions: null, include_mutual_friends_count: false };

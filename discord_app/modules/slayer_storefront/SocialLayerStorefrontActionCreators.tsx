@@ -341,7 +341,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints, arg2) {
 }
 function _fetchSocialLayerStorefrontSkuWithUrl2() {
   const self = this;
-  let tmp = callback((arg0, arg1) => {
+  const tmp = callback((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     let closure_2 = arg2;
@@ -404,26 +404,25 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
               obj2[0] = arg1;
               return obj2;
             } else {
-              let tmp = obj1;
               withGoogleSkuIds = obj1.withGoogleSkuIds;
-              tmp = withGoogleSkuIds;
-              let tmp44 = undefined !== withGoogleSkuIds;
-              if (tmp44) {
-                tmp44 = withGoogleSkuIds;
+              let tmp35 = undefined !== withGoogleSkuIds;
+              if (tmp35) {
+                tmp35 = withGoogleSkuIds;
               }
-              promotionIdOverride = tmp44;
+              promotionIdOverride = tmp35;
               countryCode = obj1.countryCode;
               paymentGateway = obj1.paymentGateway;
               paymentGateway = 1;
-              let obj10 = callback2(obj1[5]);
-              const obj3 = { type: "STORE_LISTINGS_FETCH_START", skuId: null };
+              let obj8 = callback2(obj1[5]);
+              let obj3 = { type: "STORE_LISTINGS_FETCH_START", skuId: null };
               obj3[1] = callback;
-              obj10.dispatch(obj3);
+              obj8.dispatch(obj3);
               c7 = {};
               if (promotionIdOverride) {
                 c7.with_google_sku_ids = true;
               }
-              if (!obj13.isNullOrEmpty(countryCode)) {
+              let obj10 = callback(obj1[9]);
+              if (!obj10.isNullOrEmpty(countryCode)) {
                 c7.country_code = countryCode;
               }
               if (null != paymentGateway) {
@@ -434,22 +433,22 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
                 c7.promotion_id_override = promotionIdOverride2;
               }
               const HTTP = callback(obj1[8]).HTTP;
-              let obj4 = { url: null, query: null, rejectWithError: true };
+              const obj4 = { url: null, query: null, rejectWithError: true };
               obj4[0] = callback2;
               obj4[1] = c7;
               c7 = 3;
               promotionIdOverride2 = 1;
-              let obj5 = { value: null, done: false };
+              const obj5 = { value: null, done: false };
               obj5[0] = HTTP.get(obj4);
               return obj5;
             }
           } else {
             if (2 === tmp7) {
               paymentGateway = 0;
-              let obj8 = callback2(obj1[5]);
-              const obj6 = { type: "STORE_LISTINGS_FETCH_FAIL", skuId: null };
+              let obj6 = callback2(obj1[5]);
+              obj6 = { type: "STORE_LISTINGS_FETCH_FAIL", skuId: null };
               obj6[1] = callback;
-              obj8.dispatch(obj6);
+              obj6.dispatch(obj6);
               promotionIdOverride2 = 3;
             } else if (arg0 === 1) {
               promotionIdOverride2 = 3;
@@ -463,43 +462,41 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
             } else {
               closure_9 = arg1;
               if (null != closure_9.body) {
-                if (closure_9.ok) {
-                  store_listing = closure_9.body.store_listing;
-                  storefront_metadata = closure_9.body.storefront_metadata;
+                store_listing = closure_9.body.store_listing;
+                storefront_metadata = closure_9.body.storefront_metadata;
+                obj8 = { type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS", assets: null };
+                const _Object = Object;
+                const assets = closure_9.body.assets;
+                obj8[1] = Object.fromEntries(assets.map((id) => {
+                  const items = [id.id, id];
+                  return items;
+                }));
+                callback2(obj1[5]).dispatch(obj8);
+                if (null != storefront_metadata) {
                   obj = callback2(obj1[5]);
-                  obj8 = { type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS", assets: null };
-                  const _Object = Object;
-                  const assets = closure_9.body.assets;
-                  obj8[1] = Object.fromEntries(assets.map((id) => {
-                    const items = [id.id, id];
-                    return items;
-                  }));
-                  obj.dispatch(obj8);
-                  if (null != storefront_metadata) {
-                    obj2 = callback2(obj1[5]);
-                    const obj9 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
-                    obj9[1] = store_listing.sku.application_id;
-                    obj4 = callback(obj1[6]);
-                    obj9[2] = obj4.transformStorefrontMetadataServer(storefront_metadata);
-                    obj2.dispatch(obj9);
-                  }
-                  obj5 = callback2(obj1[5]);
-                  obj10 = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: null };
-                  obj10[1] = store_listing;
-                  obj5.dispatch(obj10);
-                  paymentGateway = 0;
+                  const obj9 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
+                  obj9[1] = store_listing.sku.application_id;
+                  obj2 = callback(obj1[6]);
+                  obj9[2] = obj2.transformStorefrontMetadataServer(storefront_metadata);
+                  obj.dispatch(obj9);
                 }
+                obj3 = callback2(obj1[5]);
+                obj10 = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: null };
+                obj10[1] = store_listing;
+                obj3.dispatch(obj10);
+                paymentGateway = 0;
+                const obj18 = callback2(obj1[5]);
               }
             }
             const _Error = Error;
             const error = new Error("Failed to fetch social layer storefront SKU");
             throw error;
           }
-        } catch (tmp85) {
-          countryCode = tmp85;
+        } catch (tmp76) {
+          countryCode = tmp76;
           if (tmp4 === paymentGateway) {
             promotionIdOverride2 = tmp2;
-            throw tmp85;
+            throw tmp76;
           } else {
             c7 = tmp;
           }

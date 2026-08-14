@@ -45,7 +45,7 @@ function Callout(arg0) {
   let item;
   ({ item, acked, compactMode } = arg0);
   const tmp = createCacheKey();
-  let obj = importAll(4774);
+  let obj = importAll(4796);
   obj = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
   obj = { style: tmp.messagePreviewBarV2 };
   const parser = obj.getParser(callback3());
@@ -72,7 +72,7 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = createCacheKey();
   let SMALL = dependencyMap;
-  let obj = message_channel_id(4774);
+  let obj = message_channel_id(4796);
   const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(callback4(), closure_28, roleStyle);
   const intl = item(1236).intl;
   const stringResult = intl.string(item(1236).t.BOi07B);
@@ -127,10 +127,10 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8194)(first);
+    const tmp15 = guild_id(8215)(first);
     let result = stringResult;
     if (null != tmp15) {
-      let tmp2Result = tmp2(7265);
+      let tmp2Result = tmp2(7287);
       result = tmp2Result.formatPollResultNotificationCenterText(tmp15);
     }
   } else if (stickers.length > 0) {
@@ -238,7 +238,7 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8248).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
+  const items5 = [item(8269).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1[3] = items5;
@@ -249,7 +249,7 @@ function ForYouMessagePreviewV2(item) {
     const obj3 = { style: null, children: null };
     obj3[0] = messagePreviewIconV2.messagePreviewIconV2Container;
     if (constants3.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(10233);
+      let tmp29 = guild_id(10247);
       const obj4 = { source: null, size: null, style: null };
       obj4[0] = tmp29;
       SMALL = tmp2(1297).IconSizes.SMALL;
@@ -261,10 +261,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (tmp28.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (tmp28.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8051);
+        tmp29 = guild_id(8072);
       }
     }
-    tmp29 = guild_id(10034);
+    tmp29 = guild_id(10045);
   }
 }
 function ApplicationName(applicationId) {
@@ -745,9 +745,7 @@ const memoResult = importAllResult.memo((loadMore) => {
     loadMore(true);
   }, items2);
   const items3 = [tmp.forYouDivider, suggestedFriendAdded, onAddSuggestionAnimationFinish, stateFromStores, setting, isSoftAcked, onSoftAckItem, forceHoistItem, isForceHoisted, tmp8, callback, flag];
-  const callback1 = suggestedFriendAdded.useCallback((arg0) => {
-
-  }, items3);
+  const callback1 = suggestedFriendAdded.useCallback((arg0) => outer1_21(loadMore(onSoftAckItem[64]).ForYouLoadMore, { onPressLoad: callback }), items3);
   ref = suggestedFriendAdded.useRef(null);
   const items4 = [shouldScrollToTop];
   const effect = suggestedFriendAdded.useEffect(() => {

@@ -46,7 +46,7 @@ function handleEdit(id, isForumPost, current, source) {
         obj = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
         ({ guild_id: obj9[0], parent_id: obj9[1], id: obj9[2] } = isForumPost);
         obj[3] = id.id;
-        const items = [tmp(5788).FORUM_CHANNEL, tmp(5788).GUILD_CHANNEL];
+        const items = [tmp(5809).FORUM_CHANNEL, tmp(5809).GUILD_CHANNEL];
         obj[5] = items;
         obj = { page: null, section: null, object: null };
         obj[0] = constants3.GUILD_CHANNEL;
@@ -162,7 +162,7 @@ export const handleCopyMessageLink = function handleCopyMessageLink(channel, mes
   obj.track(constants.MESSAGE_LINK_COPIED, obj);
   const channelPermalink = allowChannelAccess.getChannelPermalink(channel.guild_id, channel.id, message_id);
   if (null != channelPermalink) {
-    let tmp3Result = tmp3(5796);
+    let tmp3Result = tmp3(5817);
     tmp3Result.copy(channelPermalink);
     tmp3Result = tmp3(4061);
     tmp3Result.presentLinkCopied();

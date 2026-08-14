@@ -25,7 +25,7 @@ export default function BenchmarkResultsList(results) {
             ({ label: obj[0], elapsedMs } = kind);
             const _HermesInternal = HermesInternal;
             obj[1] = "" + elapsedMs.toFixed(1) + " ms total";
-            let tmp5 = callback2(callback(5414).TableRow, obj, kind.id);
+            let tmp5 = callback2(callback(5435).TableRow, obj, kind.id);
           } else {
             obj = { label: null, subLabel: null };
             const meanMs = kind.meanMs;
@@ -34,10 +34,10 @@ export default function BenchmarkResultsList(results) {
             const _HermesInternal2 = HermesInternal;
             obj[0] = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
             ({ dropped, frames } = kind);
-            const FRAME_BUDGET_MS = callback(15120).FRAME_BUDGET_MS;
+            const FRAME_BUDGET_MS = callback(15134).FRAME_BUDGET_MS;
             const _HermesInternal3 = HermesInternal;
             obj[1] = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
-            tmp5 = callback2(callback(5414).TableRow, obj, kind.id);
+            tmp5 = callback2(callback(5435).TableRow, obj, kind.id);
           }
           return tmp5;
         }),

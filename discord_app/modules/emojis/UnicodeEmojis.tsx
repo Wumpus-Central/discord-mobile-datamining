@@ -4,7 +4,7 @@ import module_917631 from "module_917631";
 import module_127988 from "module_127988";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { 04004__ } from "../../../_runtime/metro/04004__.js";
-import { 13400__ } from "../../../_runtime/metro/13400__.js";
+import { 13412__ } from "../../../_runtime/metro/13412__.js";
 import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
 
 const require = arg1;
@@ -482,7 +482,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = 13400__[key10009];
+      str = 13412__[key10009];
     }
     let combined = str;
     if (flag) {

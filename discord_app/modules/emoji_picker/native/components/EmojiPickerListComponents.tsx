@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import IMAGE_SIZE from "IMAGE_SIZE";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08305_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08327_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";

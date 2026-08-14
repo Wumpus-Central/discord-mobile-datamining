@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
 
 const require = arg1;
-const result = require("module_4684").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
+const result = require("module_4706").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
 
 export default function showUserSettingsInputAlert(arg0) {
   let dependencyMap;

@@ -22,11 +22,11 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(5774)(items1), 2);
+  const tmp7 = callback(first(5795)(items1), 2);
   first = tmp7[0];
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
   const tmp = _require;
-  const tmp4 = first(5774);
+  const tmp4 = first(5795);
   const items2 = [participantFromServer];
   obj[1] = _initialize.useStateFromStores(items2, () => {
     let id;

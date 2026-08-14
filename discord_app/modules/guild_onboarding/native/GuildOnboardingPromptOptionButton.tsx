@@ -117,12 +117,12 @@ export default function PromptOptionButton(option) {
       return obj1;
     }
   }
-  obj = { selected, withTiming: option(4343).withTiming, Easing: option(4083).Easing, useReducedMotion: stateFromStores1, withSequence: option(4083).withSequence, withSpring: option(4754).withSpring };
+  obj = { selected, withTiming: option(4343).withTiming, Easing: option(4083).Easing, useReducedMotion: stateFromStores1, withSequence: option(4083).withSequence, withSpring: option(4776).withSpring };
   R.__closure = obj;
   R.__workletHash = 8281627194581;
   R.__initData = isUnseen;
   const animatedStyle = obj2.useAnimatedStyle(R);
-  const tmp8 = selected(5397)(option.guildId);
+  const tmp8 = selected(5418)(option.guildId);
   c5 = tmp8;
   num = 0;
   if (null != tmp8) {
@@ -418,7 +418,7 @@ export default function PromptOptionButton(option) {
     const obj5 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
     ({ optionTextEmoji: obj20[0], optionImageEmoji: obj20[1] } = tmp);
     let emojiURL;
-    let tmp7Result = tmp7(5400);
+    let tmp7Result = tmp7(5421);
     if (null != stateFromStores) {
       tmp7Result = tmp7(1435);
       const obj6 = { id: null, animated: null, size: null };
@@ -455,7 +455,7 @@ export default function PromptOptionButton(option) {
   obj7[1] = items9;
   items8[1] = closure_10(c5, obj7);
   obj3[8] = items8;
-  const items10 = [closure_10(option(4887).PressableOpacity, obj3), , , ];
+  const items10 = [closure_10(option(4909).PressableOpacity, obj3), , , ];
   tmp42Result = null;
   if (num > 0) {
     const obj10 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: null, children: null };
@@ -474,7 +474,7 @@ export default function PromptOptionButton(option) {
   items12 = [tmp.checkIcon, animatedStyle];
   const obj14 = { size: "xs", color: null };
   obj14[1] = selected(712).colors.WHITE;
-  obj13[1] = callback2(option(5403).CheckmarkSmallIcon, obj14);
+  obj13[1] = callback2(option(5424).CheckmarkSmallIcon, obj14);
   items10[2] = callback2(selected(4083).View, obj13);
   if (canBeNew) {
     canBeNew = !selected;

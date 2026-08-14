@@ -50,11 +50,11 @@ function InfoButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
   obj[3] = callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" });
   obj[4] = function onPress() {
-    callback2(8962).itemInteracted("info_button", "info_button", "press_info_button");
-    const obj = callback2(8962);
-    callback2(8962).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-    const obj2 = callback2(8962);
-    callback(15653).pushICYMIInfoModal({ extendedOnboarding: true });
+    callback2(8976).itemInteracted("info_button", "info_button", "press_info_button");
+    const obj = callback2(8976);
+    callback2(8976).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+    const obj2 = callback2(8976);
+    callback(15671).pushICYMIInfoModal({ extendedOnboarding: true });
   };
   return callback(IconButton.IconButton, obj);
 }
@@ -191,7 +191,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(8427).showForLaterModal(callback(8428).SavedMessageSortTypes.BOOKMARK);
+        callback(8449).showForLaterModal(callback(8450).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }
@@ -399,16 +399,16 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
   const intl = LeftBackIconWithBadge(1236).intl;
   obj6[1] = intl.string(LeftBackIconWithBadge(1236).t["13/7kX"]);
-  obj6[2] = LeftBackIconWithBadge(15589).goBack;
+  obj6[2] = LeftBackIconWithBadge(15607).goBack;
   if (inNestedNavigator) {
-    LeftBackIconWithBadge = LeftBackIconWithBadge(15591).LeftBackIconWithBadge;
+    LeftBackIconWithBadge = LeftBackIconWithBadge(15609).LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
     let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
   } else {
-    tmp4Result = tmp4(LeftBackIconWithBadge(5366).XSmallIcon, { color: "interactive-text-default" });
+    tmp4Result = tmp4(LeftBackIconWithBadge(5387).XSmallIcon, { color: "interactive-text-default" });
   }
   obj6[3] = tmp4Result;
-  tmp4Result = tmp4(LeftBackIconWithBadge(4887).PressableOpacity, obj6);
+  tmp4Result = tmp4(LeftBackIconWithBadge(4909).PressableOpacity, obj6);
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
 

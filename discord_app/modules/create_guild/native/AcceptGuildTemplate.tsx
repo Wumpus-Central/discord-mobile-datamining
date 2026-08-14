@@ -6,7 +6,7 @@ import ME from "ME";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import jsxProd from "Divider";
 import createCacheKey from "createCacheKey";
-import importAllResult from "module_8514";
+import importAllResult from "module_8536";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
 import { apply } from "../../../../_runtime/00012_apply.js";
@@ -76,7 +76,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj5[2] = createServer;
   obj5[3] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj4[1] = callback(guildTemplate(4755).Button, obj5);
+  obj4[1] = callback(guildTemplate(4777).Button, obj5);
   items1[4] = callback(closure_4, obj4);
   items1[5] = callback(Divider, { style: tmp.divider, outer: true });
   const obj7 = { style: tmp.sectionHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };

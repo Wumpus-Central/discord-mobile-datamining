@@ -5,7 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { ShopCtaEnum } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LegacyBaseButton } from "../../../../_runtime/05467_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../_runtime/05488_LegacyBaseButton.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
@@ -155,14 +155,14 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   if (name == null) {
     name = tmp8.skuId;
   }
-  let obj = onActiveItemChange(7061);
+  let obj = onActiveItemChange(7083);
   const collectibleTypeLabel = obj.getCollectibleTypeLabel(tmp8.type);
   const items1 = [items[num]];
   obj = { style: tmp.previewContainer, children: null };
   const tmp12 = onActiveItemChange;
   tmp4 = callback(callback5(product.skuId), 2);
   const items2 = [
-    callback6(onActiveItemChange(9495).IndividualProductPreview, {
+    callback6(onActiveItemChange(9508).IndividualProductPreview, {
       product: callback4(() => {
         const items = [_undefined];
         return { skuId: _undefined.skuId, type: _undefined.type, items };

@@ -543,14 +543,21 @@ prototype["supports"] = function supports(arg0) {
     return isMatch;
   }
 };
-prototype["connect"] = function connect(arg0, arg1, processPriority) {
+prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   let self = this;
   self = this;
   obj = obj(4395);
   if (!obj.supportsFeature(constants6.EXPERIMENT_CONFIG)) {
-    processPriority.experiments = undefined;
+    videoSupported.experiments = undefined;
   }
-  obj = self(4451).create(arg0, arg1, processPriority);
+  let flag = videoSupported.videoSupported;
+  if (flag == null) {
+    flag = true;
+  }
+  if (flag) {
+    flag = self.supports(constants4.VIDEO);
+  }
+  obj = self(4451).create(arg0, arg1, videoSupported, flag);
   obj.on(obj(4441).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
@@ -574,17 +581,17 @@ prototype["connect"] = function connect(arg0, arg1, processPriority) {
   let connections = self.connections;
   connections.add(obj);
   let tmpResult = tmp(4395);
-  let HIGH = processPriority.processPriority;
+  let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
   }
   tmpResult.setProcessPriority(HIGH);
-  if (null != processPriority.threadPriorityConfiguration) {
+  if (null != videoSupported.threadPriorityConfiguration) {
     tmpResult = tmp(4395);
     let voiceEngine = tmpResult.getVoiceEngine();
     let setNativeThreadsPriority = voiceEngine.setNativeThreadsPriority;
     if (setNativeThreadsPriority != null) {
-      let result = setNativeThreadsPriority(processPriority.threadPriorityConfiguration);
+      let result = setNativeThreadsPriority(videoSupported.threadPriorityConfiguration);
     }
   }
   self.emit(obj(4441).MediaEngineEvent.Connection, obj);

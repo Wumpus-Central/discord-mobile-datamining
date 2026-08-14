@@ -5,9 +5,12 @@ import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
-import { ParticipantTypes } from "ParticipantTypes";
+import ParticipantTypes from "ParticipantTypes";
 
+let c9;
+let metroImportAll;
 const require = arg1;
+({ isStreamParticipant: metroImportAll, ParticipantTypes: c9 } = ParticipantTypes);
 const result = require("getParticipants").fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
 
 export default function useExternalPipParticipant() {
@@ -17,120 +20,121 @@ export default function useExternalPipParticipant() {
   let tmp7;
   const items = [createRTCConnection];
   const channelId = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStores(items, () => channelId.getChannelId());
-  selectedParticipantStreamId = channelId;
-  focusedParticipantStreamId = React.useRef(undefined);
-  let stateFromStores1 = React.useRef(undefined);
   let tmpResult = tmp(tmp2[7]);
-  const items1 = [selectedParticipantSpeaking];
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
-    let selectedParticipantId = null;
+  const items1 = [fetchFingerprint];
+  let stateFromStores1 = tmpResult.useStateFromStores(items1, () => id.getId());
+  selectedParticipantStreamId = channelId;
+  focusedParticipantStreamId = stateFromStores1;
+  stateFromStores1 = undefined;
+  let React;
+  stateFromStores1 = React.useRef(undefined);
+  React = React.useRef(undefined);
+  tmpResult = tmp(tmp2[7]);
+  const items2 = [selectedParticipantSpeaking];
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(items2, () => {
+    let selectedParticipant = null;
     if (null != selectedParticipantStreamId) {
-      selectedParticipantId = selectedParticipantSpeaking.getSelectedParticipantId(tmp);
+      selectedParticipant = selectedParticipantSpeaking.getSelectedParticipant(tmp);
     }
-    let tmp4 = null;
-    if (null != selectedParticipantId) {
-      tmp4 = null;
-      if (null != tmp) {
-        let participant = selectedParticipantSpeaking.getParticipant(tmp, selectedParticipantId);
-        if (participant == null) {
-          participant = null;
-        }
-        tmp4 = participant;
-      }
-    }
-    if (undefined === focusedParticipantStreamId.current) {
+    if (!outer1_8(selectedParticipant)) {
+      let tmp6 = selectedParticipant;
+    } else {
+      const user = selectedParticipant.user;
       let id;
-      if (tmp4 != null) {
-        id = tmp4.id;
+      if (user != null) {
+        id = user.id;
       }
-      tmp7.current = id;
+      tmp6 = null;
+    }
+    if (undefined === stateFromStores1.current) {
+      let id1;
+      if (tmp6 != null) {
+        id1 = tmp6.id;
+      }
+      tmp7.current = id1;
       let type;
-      if (tmp4 != null) {
-        type = tmp4.type;
+      if (tmp6 != null) {
+        type = tmp6.type;
       }
-      stateFromStores1.current = type;
-      const tmp9 = stateFromStores1;
+      _undefined.current = type;
+      const tmp9 = _undefined;
     }
-    let id1;
-    if (tmp4 != null) {
-      id1 = tmp4.id;
+    let id2;
+    if (tmp6 != null) {
+      id2 = tmp6.id;
     }
-    if (focusedParticipantStreamId.current !== id1) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "accessibilityRole", focusedParticipantType: 1140851135 };
-      obj[2] = stateFromStores1.current;
+    if (stateFromStores1.current !== id2) {
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "isArray", focusedParticipantType: "a" };
+      obj[2] = _undefined.current;
     } else {
       let type1;
-      if (tmp4 != null) {
-        type1 = tmp4.type;
+      if (tmp6 != null) {
+        type1 = tmp6.type;
       }
       let tmp14;
-      if (type1 !== outer1_8.ACTIVITY) {
+      if (type1 !== outer1_9.ACTIVITY) {
         let streamId;
-        if (tmp4 != null) {
-          streamId = tmp4.streamId;
+        if (tmp6 != null) {
+          streamId = tmp6.streamId;
         }
         tmp14 = streamId;
       }
       obj = { focusedParticipantStreamId: null, focusedParticipantUserId: null, focusedParticipantType: null };
       obj[0] = tmp14;
       let type2;
-      if (tmp4 != null) {
-        type2 = tmp4.type;
+      if (tmp6 != null) {
+        type2 = tmp6.type;
       }
       let tmp17;
       if (type2 !== tmp13.ACTIVITY) {
-        let id2;
-        if (tmp4 != null) {
-          const user = tmp4.user;
-          if (user != null) {
-            id2 = user.id;
+        let id3;
+        if (tmp6 != null) {
+          const user2 = tmp6.user;
+          if (user2 != null) {
+            id3 = user2.id;
           }
         }
-        tmp17 = id2;
+        tmp17 = id3;
       }
       obj[1] = tmp17;
       let type3;
-      if (tmp4 != null) {
-        type3 = tmp4.type;
+      if (tmp6 != null) {
+        type3 = tmp6.type;
       }
       obj[2] = type3;
-      tmp13 = outer1_8;
+      tmp13 = outer1_9;
     }
     return obj;
   });
   focusedParticipantStreamId = stateFromStoresObject.focusedParticipantStreamId;
   selectedParticipantStreamId = channelId;
-  stateFromStores1 = undefined;
   React = undefined;
   selectedParticipantSpeaking = undefined;
   ({ focusedParticipantUserId, focusedParticipantType } = stateFromStoresObject);
-  tmpResult = tmp(tmp2[7]);
-  const items2 = [fetchFingerprint];
-  stateFromStores1 = tmpResult.useStateFromStores(items2, () => id.getId());
   let obj = selectedParticipantStreamId(focusedParticipantStreamId[7]);
-  const obj2 = React;
+  const obj3 = React;
   [tmp7, c3] = stateFromStores1(React.useState(0), 2);
   let tmp6 = stateFromStores1(React.useState(0), 2);
   const items3 = [selectedParticipantSpeaking];
   const items4 = [channelId, focusedParticipantStreamId, stateFromStores1, tmp7];
   selectedParticipantSpeaking = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStoresObject(items3, () => {
-    let tmp15;
-    let tmp25;
+    let tmp20;
     let tmp30;
+    let tmp35;
     if (null != selectedParticipantStreamId) {
       if (null == focusedParticipantStreamId) {
         const _Date = Date;
-        let tmp19;
+        let tmp24;
         const timestamp = Date.now();
         const participants = selectedParticipantSpeaking.getParticipants(tmp);
         let iter = participants[Symbol.iterator]();
         let nextResult = iter.next();
         while (iter !== undefined) {
           let tmp5 = nextResult;
-          if (!tmp48) {
+          if (!tmp53) {
             let tmp6 = nextResult;
-            let tmp7 = outer1_8;
-            if (tmp5.type === outer1_8.USER) {
+            let tmp7 = outer1_9;
+            if (tmp5.type === outer1_9.USER) {
               let tmp8 = nextResult;
               let user = tmp5.user;
               let id;
@@ -143,21 +147,21 @@ export default function useExternalPipParticipant() {
           }
           let tmp11 = nextResult;
           let type = tmp5.type;
-          if (outer1_8.USER === type) {
-            let tmp16 = nextResult;
+          if (outer1_9.USER === type) {
+            let tmp21 = nextResult;
             let speaking = tmp5.speaking;
             if (!speaking) {
-              let tmp17 = nextResult;
+              let tmp22 = nextResult;
               speaking = timestamp - tmp5.lastSpoke < 1000;
             }
             if (speaking) {
-              let tmp18 = tmp19;
-              speaking = null == tmp19;
+              let tmp23 = tmp24;
+              speaking = null == tmp24;
             }
             if (speaking) {
-              tmp19 = nextResult;
+              tmp24 = nextResult;
             }
-            let tmp20 = nextResult;
+            let tmp25 = nextResult;
             let voiceState = tmp5.voiceState;
             let flag;
             if (voiceState != null) {
@@ -167,53 +171,64 @@ export default function useExternalPipParticipant() {
               flag = false;
             }
             if (flag) {
-              let tmp21 = tmp25;
-              let tmp22 = null == tmp25;
-              if (!tmp22) {
-                let tmp23 = tmp25;
-                let tmp24 = nextResult;
-                tmp22 = tmp25.lastSpoke < tmp5.lastSpoke;
+              let tmp26 = tmp30;
+              let tmp27 = null == tmp30;
+              if (!tmp27) {
+                let tmp28 = tmp30;
+                let tmp29 = nextResult;
+                tmp27 = tmp30.lastSpoke < tmp5.lastSpoke;
               }
-              flag = tmp22;
+              flag = tmp27;
             }
             if (flag) {
-              tmp25 = nextResult;
-            }
-            let tmp26 = tmp30;
-            let tmp27 = null == tmp30;
-            if (!tmp27) {
-              let tmp28 = tmp30;
-              let tmp29 = nextResult;
-              tmp27 = tmp30.lastSpoke < tmp5.lastSpoke;
-            }
-            if (tmp27) {
               tmp30 = nextResult;
             }
-          } else if (tmp12.STREAM === type) {
-            let tmp50 = tmp15;
-            let tmp14 = null == tmp15;
-            if (tmp14) {
-              let tmp13 = nextResult;
-              tmp14 = null != tmp5.streamId;
+            let tmp31 = tmp35;
+            let tmp32 = null == tmp35;
+            if (!tmp32) {
+              let tmp33 = tmp35;
+              let tmp34 = nextResult;
+              tmp32 = tmp35.lastSpoke < tmp5.lastSpoke;
             }
-            if (tmp14) {
-              tmp15 = nextResult;
+            if (tmp32) {
+              tmp35 = nextResult;
+            }
+          } else if (tmp12.STREAM === type) {
+            let tmp55 = tmp20;
+            let tmp14 = null != tmp20;
+            if (!tmp14) {
+              let tmp13 = nextResult;
+              tmp14 = null == tmp5.streamId;
+            }
+            if (!tmp14) {
+              let tmp15 = outer1_8;
+              let tmp16 = nextResult;
+              let tmp17 = outer1_8(tmp5);
+              if (tmp17) {
+                let tmp18 = nextResult;
+                let tmp19 = stateFromStores1;
+                tmp17 = tmp5.user.id === stateFromStores1;
+              }
+              tmp14 = tmp17;
+            }
+            if (!tmp14) {
+              tmp20 = nextResult;
             }
           }
         }
         const obj = { selectedParticipantSpeaking: null, selectedParticipantUserId: null, selectedStreamId: null };
-        obj[0] = null != tmp19;
+        obj[0] = null != tmp24;
         let id1;
-        if (tmp19 != null) {
-          const user2 = tmp19.user;
+        if (tmp24 != null) {
+          const user2 = tmp24.user;
           if (user2 != null) {
             id1 = user2.id;
           }
         }
         if (id1 == null) {
           let id2;
-          if (tmp25 != null) {
-            const user3 = tmp25.user;
+          if (tmp30 != null) {
+            const user3 = tmp30.user;
             if (user3 != null) {
               id2 = user3.id;
             }
@@ -222,8 +237,8 @@ export default function useExternalPipParticipant() {
         }
         if (id1 == null) {
           let id3;
-          if (tmp30 != null) {
-            const user4 = tmp30.user;
+          if (tmp35 != null) {
+            const user4 = tmp35.user;
             if (user4 != null) {
               id3 = user4.id;
             }
@@ -231,17 +246,17 @@ export default function useExternalPipParticipant() {
           id1 = id3;
         }
         obj[1] = id1;
-        if (null != tmp19) {
-          let streamId = tmp19.streamId;
+        if (null != tmp24) {
+          let streamId = tmp24.streamId;
         } else {
           streamId = undefined;
-          if (tmp15 != null) {
-            streamId = tmp15.streamId;
+          if (tmp20 != null) {
+            streamId = tmp20.streamId;
           }
           if (streamId == null) {
             let streamId1;
-            if (tmp25 != null) {
-              streamId1 = tmp25.streamId;
+            if (tmp30 != null) {
+              streamId1 = tmp30.streamId;
             }
             streamId = streamId1;
           }
@@ -250,7 +265,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "call" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "applicationId" };
   }, items4);
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {
@@ -273,7 +288,7 @@ export default function useExternalPipParticipant() {
     selectedParticipantUserId = focusedParticipantUserId;
   }
   const items6 = [selectedParticipantStreamId];
-  const effect1 = obj2.useEffect(() => {
+  const effect1 = obj3.useEffect(() => {
     if (null != closure_0) {
       const useExternalPipParticipant = "useExternalPipParticipant";
       let mediaEngine = outer1_6.getMediaEngine();

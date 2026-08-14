@@ -11,25 +11,22 @@ function _fetchMessageInteractionData() {
     let closure_1 = arg1;
     let c4 = 0;
     let c5 = 0;
-    return (function*(arg0, arg1) {
-      let body = tmp2;
-      let closure_2 = tmp5;
+    return (function*(arg0, body) {
+      let asyncGeneratorStep = tmp2;
+      body = tmp5;
       const HTTP = callback(outer1_2[3]).HTTP;
       const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = c4.MESSAGE_INTERACTION_DATA(callback, callback2);
       obj1[2] = callback(outer1_2[3]).rejectWithMigratedError();
-      closure_2 = yield HTTP.get(obj1);
-      if (closure_2.ok) {
-        body = closure_2.body;
-        const obj = callback2(closure_2[2]);
-        const obj4 = { type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS", channelId: null, messageId: null, interactionData: null };
-        obj4[1] = callback;
-        obj4[2] = callback2;
-        obj4[3] = body;
-        obj.dispatch(obj4);
-        return body;
-      }
-      return null;
+      yield HTTP.get(obj1);
+      body = body.body;
+      const obj = callback2(body[2]);
+      const obj4 = { type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS", channelId: null, messageId: null, interactionData: null };
+      obj4[1] = callback;
+      obj4[2] = callback2;
+      obj4[3] = body;
+      obj.dispatch(obj4);
+      return body;
     })();
   });
   const _fetchMessageInteractionData = tmp;

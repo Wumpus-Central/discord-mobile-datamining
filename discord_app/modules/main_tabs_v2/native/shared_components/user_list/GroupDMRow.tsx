@@ -32,8 +32,8 @@ export default function GroupDMRow(channel) {
   let obj = { size: null, channel: null };
   obj[0] = channel(1297).AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel;
-  const tmp6 = onPress(9712);
-  let obj1 = channel(9713);
+  const tmp6 = onPress(9723);
+  let obj1 = channel(9724);
   const recipientsLabel = obj1.useRecipientsLabel(channel);
   obj = {};
   const merged1 = Object.assign(merged);
@@ -45,7 +45,7 @@ export default function GroupDMRow(channel) {
     tmp5Result = tmp5(tmp7(4338).Text, obj);
   }
   obj.subLabel = tmp5Result;
-  obj.icon = jsx(onPress(9712), {});
+  obj.icon = jsx(onPress(9723), {});
   obj.onPress = callback;
   if (str == null) {
     str = "";
@@ -57,11 +57,11 @@ export default function GroupDMRow(channel) {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.checked = flag;
-    tmp5Result = tmp5(tmp7(8497).TableCheckboxRow, obj1);
+    tmp5Result = tmp5(tmp7(8519).TableCheckboxRow, obj1);
   } else {
     const obj2 = {};
     const merged3 = Object.assign(obj);
-    tmp5Result = tmp5(tmp7(5414).TableRow, obj2);
+    tmp5Result = tmp5(tmp7(5435).TableRow, obj2);
   }
   return tmp5Result;
 };

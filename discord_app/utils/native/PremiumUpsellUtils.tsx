@@ -4,12 +4,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
-import { registerAsset } from "../../../_runtime/08411_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08412_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08413_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08414_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08415_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08416_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08433_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08434_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08435_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08436_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08437_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08438_registerAsset.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 

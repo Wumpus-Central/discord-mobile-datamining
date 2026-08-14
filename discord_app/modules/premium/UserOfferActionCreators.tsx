@@ -64,7 +64,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "isArray", paymentGatewayOverride: "accessibilityRole" };
+                  obj1 = { offerId: "r", paymentGatewayOverride: "accessibilityRole" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = createFromServer;

@@ -74,7 +74,7 @@ export default function ApplicationCommandDiscovery(channel) {
   closure_8 = ref.useRef(false);
   let obj2 = useCommandDiscoveryManager;
   commandDiscoveryManager = obj2.useCommandDiscoveryManager((initialSectionId) => initialSectionId.initialSectionId);
-  let obj3 = channel(9587);
+  let obj3 = channel(9600);
   obj = { context: { channel, type: "channel" }, filters: null, options: null, allowFetch: true };
   obj = { commandTypes: null, builtIns: null, applicationCommands: null };
   let items = [PermissionOverwriteType.ApplicationCommandType.CHAT];

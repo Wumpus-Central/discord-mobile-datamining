@@ -43,7 +43,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [StyleSheet.absoluteFill, animatedStyle];
   obj = { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" };
-  obj[2] = jsx(onDone(4755).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
+  obj[2] = jsx(onDone(4777).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
   return jsx(sharedValue(4083).View, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
 };
 export const useBuyNitroButtonCrossfade = function useBuyNitroButtonCrossfade(variant, stringResult) {

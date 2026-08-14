@@ -33,7 +33,7 @@ export default function ForumPostGridHeader(arg0) {
   }
   const items = [hasFlagResult, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestamp, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
-    isNew = tmp8(tmp10(11462), {});
+    isNew = tmp8(tmp10(11478), {});
   }
   items[3] = isNew;
   obj[1] = items;

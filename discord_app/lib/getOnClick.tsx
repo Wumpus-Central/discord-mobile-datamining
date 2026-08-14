@@ -72,7 +72,7 @@ function _openInviteModal() {
               return obj;
             } else {
               let obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessibilityRole", invite_instance_id: false };
+              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessibilityRole", invite_instance_id: null };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -341,7 +341,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "isArray", skuId: "accessibilityRole" };
+            result = { applicationId: "r", skuId: "accessibilityRole" };
           }
           const tmp3Result = tmp3(tmp4[26]);
         }
@@ -358,7 +358,7 @@ export default function getOnClick(url) {
         outer1_1(tmp4[27])(url);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -664,7 +664,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4331).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(10421);
+      let tmp2Result = tmp2(10437);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -816,6 +816,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8278);
+    tmp2Result1 = tmp2(8300);
   }
 };

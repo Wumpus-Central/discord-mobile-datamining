@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
-import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE";
-import { View } from "CollectiblesItemType";
+import metadata from "metadata";
+import { View } from "set";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO";
-import jsxProd from "AvatarDecorationSampleV2";
+import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
@@ -35,21 +35,21 @@ function ProfileEffectAssetPreview(item) {
     obj[0] = tmp.profileEffectContainer;
     obj = { source: null, alt: null, style: null, resizeMode: "cover" };
     obj = { uri: null };
-    obj[0] = tmp2(12204);
+    obj[0] = tmp2(12222);
     obj[0] = obj;
     obj[1] = tmp4.accessibilityLabel;
     obj[2] = tmp.profileEffect;
-    const items = [callback(tmp2(5308), obj), ];
+    const items = [callback(tmp2(5329), obj), ];
     const obj1 = { style: null, source: null, alt: null, resizeMode: "cover" };
     obj1[0] = tmp.profileEffect;
     const obj2 = { uri: null };
     obj2[0] = tmp4.thumbnailPreviewSrc;
     obj1[1] = obj2;
     obj1[2] = tmp4.title;
-    items[1] = callback(tmp2(5308), obj1);
+    items[1] = callback(tmp2(5329), obj1);
     obj[1] = items;
     tmp5 = callback2(View, obj);
-    const tmp2Result = tmp2(5308);
+    const tmp2Result = tmp2(5329);
   }
   return tmp5;
 }
@@ -66,8 +66,8 @@ function ProfileFrameAssetPreview(arg0) {
     obj[1] = width;
     obj[2] = height;
     obj[3] = tmp(712).colors.BACKGROUND_BASE_LOW;
-    tmp4 = callback(tmp(9445), obj);
-    const tmpResult = tmp(9445);
+    tmp4 = callback(tmp(9458), obj);
+    const tmpResult = tmp(9458);
   }
   return tmp4;
 }
@@ -81,24 +81,17 @@ function BundleAssetPreview(height) {
   height = height.height;
   let dependencyMap;
   let bundleWidth;
-  let rounded;
-  let c5;
+  let c4;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = width(9424);
+  let obj = width(9438);
   const shopProductItems = obj.useShopProductItems(product);
-  ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
-  let obj1 = width(9444);
   bundleWidth = small.small.bundleWidth;
-  rounded = bundleWidth;
-  if (!obj1.useCollectiblesMobileFlexibleBundlesExperiment("CollectiblesShopCheckoutDetails").enabled) {
-    const _Math = Math;
-    rounded = Math.round(1.1494252873563218 * bundleWidth);
-  }
-  const result = width / rounded;
-  c5 = result;
+  const result = width / bundleWidth;
+  c4 = result;
   let items = [tmp.bundlePreviewContainer, width, height];
-  let items1 = [tmp.bundlePreviewScale, bundleWidth, rounded, result];
+  ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
+  let items1 = [tmp.bundlePreviewScale, bundleWidth, result];
   const memo = bundleWidth.useMemo(() => {
     const items = [_undefined.bundlePreviewContainer, { width, height }];
     return items;
@@ -106,8 +99,8 @@ function BundleAssetPreview(height) {
   const items2 = [width, height];
   const memo1 = bundleWidth.useMemo(() => {
     const items = [_undefined.bundlePreviewScale, ];
-    let obj = { width: bundleWidth, height: rounded, transform: items1 };
-    obj = { scale: c5 };
+    let obj = { width: bundleWidth, height: bundleWidth, transform: items1 };
+    obj = { scale: c4 };
     items1 = [obj];
     items[1] = obj;
     return items;
@@ -115,10 +108,9 @@ function BundleAssetPreview(height) {
   obj = { style: memo, children: null };
   obj = { style: memo1, children: null };
   const memo2 = bundleWidth.useMemo(() => ({ width, height }), items2);
-  obj1 = { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "small", targetSize: memo2, exposureLocation: "CollectiblesShopCheckoutDetails" };
-  obj[1] = callback(height(9425), obj1);
-  obj[1] = callback(rounded, obj);
-  return callback(rounded, obj);
+  obj[1] = callback(height(9439), { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "small", targetSize: memo2 });
+  obj[1] = callback(c4, obj);
+  return callback(c4, obj);
 }
 function NameplateAssetPreview(item) {
   let obj = getNameplateData;
@@ -153,9 +145,9 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   if (ALL.has(product.skuId)) {
     let obj = { skuId: null, width: null, height: null };
     obj[0] = product.skuId;
-    obj[1] = tmp2(9467).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    obj[2] = tmp2(9467).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    return callback(tmp2(9467).FractionalNitroCoinIllustration, obj);
+    obj[1] = tmp2(9480).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    obj[2] = tmp2(9480).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    return callback(tmp2(9480).FractionalNitroCoinIllustration, obj);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
@@ -204,30 +196,30 @@ function ProductDetails(product) {
   const items = [, ];
   ({ type: arr[0], skuId: arr[1] } = product);
   const memo = React.useMemo(() => {
-    const ALL = product(outer1_2[18]).FractionalPremiumSKUsSets.ALL;
+    const ALL = product(outer1_2[17]).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      const intl7 = tmp(tmp2[22]).intl;
-      return intl7.string(tmp(tmp2[22]).t.DFMPWS);
+      const intl7 = tmp(tmp2[21]).intl;
+      return intl7.string(tmp(tmp2[21]).t.DFMPWS);
     } else if (tmp3.skuId === outer1_5.ORB_PROFILE_BADGE) {
-      const intl6 = tmp(tmp2[22]).intl;
-      return intl6.string(tmp(tmp2[22]).t["0+rBWT"]);
+      const intl6 = tmp(tmp2[21]).intl;
+      return intl6.string(tmp(tmp2[21]).t["0+rBWT"]);
     } else {
       const type = tmp3.type;
-      if (tmp(tmp2[17]).CollectiblesItemType.AVATAR_DECORATION === type) {
-        const intl5 = tmp(tmp2[22]).intl;
-        return intl5.string(tmp(tmp2[22]).t["7v0T9P"]);
-      } else if (tmp(tmp2[17]).CollectiblesItemType.PROFILE_EFFECT === type) {
-        const intl4 = tmp(tmp2[22]).intl;
-        return intl4.string(tmp(tmp2[22]).t.wR5wOo);
-      } else if (tmp(tmp2[17]).CollectiblesItemType.NAMEPLATE === type) {
-        const intl3 = tmp(tmp2[22]).intl;
-        return intl3.string(tmp(tmp2[22]).t.x5CoXR);
-      } else if (tmp(tmp2[17]).CollectiblesItemType.PROFILE_FRAME === type) {
-        const intl2 = tmp(tmp2[22]).intl;
-        return intl2.string(tmp(tmp2[22]).t.GWrZOd);
-      } else if (tmp(tmp2[17]).CollectiblesItemType.BUNDLE === type) {
-        const intl = tmp(tmp2[22]).intl;
-        return intl.string(tmp(tmp2[22]).t.Zr5tjn);
+      if (tmp(tmp2[16]).CollectiblesItemType.AVATAR_DECORATION === type) {
+        const intl5 = tmp(tmp2[21]).intl;
+        return intl5.string(tmp(tmp2[21]).t["7v0T9P"]);
+      } else if (tmp(tmp2[16]).CollectiblesItemType.PROFILE_EFFECT === type) {
+        const intl4 = tmp(tmp2[21]).intl;
+        return intl4.string(tmp(tmp2[21]).t.wR5wOo);
+      } else if (tmp(tmp2[16]).CollectiblesItemType.NAMEPLATE === type) {
+        const intl3 = tmp(tmp2[21]).intl;
+        return intl3.string(tmp(tmp2[21]).t.x5CoXR);
+      } else if (tmp(tmp2[16]).CollectiblesItemType.PROFILE_FRAME === type) {
+        const intl2 = tmp(tmp2[21]).intl;
+        return intl2.string(tmp(tmp2[21]).t.GWrZOd);
+      } else if (tmp(tmp2[16]).CollectiblesItemType.BUNDLE === type) {
+        const intl = tmp(tmp2[21]).intl;
+        return intl.string(tmp(tmp2[21]).t.Zr5tjn);
       } else {
         return null;
       }
@@ -270,13 +262,13 @@ function ProductPriceAmountTag(product) {
   const items = [product, hasShopDiscount, useOrbPrice];
   const memo = React.useMemo(() => {
     if (useOrbPrice) {
-      let tmpResult = tmp(tmp2[24]);
+      let tmpResult = tmp(tmp2[23]);
       const obj = { product: null, hasShopDiscount: null };
       obj[0] = closure_0;
       obj[1] = hasShopDiscount;
       const orbPrice = tmpResult.getProductOrbPrice(obj);
     } else {
-      tmpResult = tmp(tmp2[25]);
+      tmpResult = tmp(tmp2[24]);
       const priceText = tmpResult.getFormattedPriceForCollectiblesProduct(closure_0, hasShopDiscount, true);
     }
     return { orbPrice, priceText };
@@ -289,12 +281,12 @@ function ProductPriceAmountTag(product) {
     }
     let obj = { orbAmount: null };
     obj[0] = amount;
-    let tmp3Result = tmp3(hasShopDiscount(useOrbPrice[26]), obj);
-    const tmp9 = hasShopDiscount(useOrbPrice[26]);
+    let tmp3Result = tmp3(hasShopDiscount(useOrbPrice[25]), obj);
+    const tmp9 = hasShopDiscount(useOrbPrice[25]);
   } else {
     obj = { variant: "text-md/semibold", children: null };
     obj[1] = tmp2;
-    tmp3Result = tmp3(require(useOrbPrice[23]).Text, obj);
+    tmp3Result = tmp3(require(useOrbPrice[22]).Text, obj);
   }
   return tmp3Result;
 }
@@ -367,11 +359,11 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   const items1 = [tmp.productContainer, ];
   let giftProductContainer = flag3;
   const memo = React.useMemo(() => {
-    let obj = product(_undefined[29]);
+    let obj = product(_undefined[28]);
     const productNameAndTypeLabel = obj.getProductNameAndTypeLabel(closure_0);
     if (flag2) {
-      const intl = tmp(tmp2[22]).intl;
-      let tmpResult = tmp(tmp2[24]);
+      const intl = tmp(tmp2[21]).intl;
+      let tmpResult = tmp(tmp2[23]);
       obj = { product: null, hasShopDiscount: null };
       obj[0] = tmp3;
       obj[1] = _undefined;
@@ -385,9 +377,9 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
       }
       obj = { orbAmount: null };
       obj[0] = str2;
-      let str = intl.formatToPlainString(tmp(tmp2[22]).t.W4DfeF, obj);
+      let str = intl.formatToPlainString(tmp(tmp2[21]).t.W4DfeF, obj);
     } else {
-      tmpResult = tmp(tmp2[25]);
+      tmpResult = tmp(tmp2[24]);
       str = tmpResult.getFormattedPriceForCollectiblesProduct(tmp3, _undefined, true);
       if (str == null) {
         str = "";

@@ -4,7 +4,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import { apply } from "../../_runtime/00012_apply.js";
-import { noConflict } from "../../_runtime/04898_noConflict.js";
+import { noConflict } from "../../_runtime/04920_noConflict.js";
 
 const require = arg1;
 function getUploadFileSizeSum(arg0) {

@@ -29,7 +29,7 @@ import ME from "ME";
 import { StaticChannelId } from "set";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import { apply } from "../../_runtime/00012_apply.js";
-import { fuzzysearch } from "../../_runtime/05269_fuzzysearch.js";
+import { fuzzysearch } from "../../_runtime/05290_fuzzysearch.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { sortByMatchScore } from "../modules/autocompleter/sortByMatchScore.tsx";
 import { compareChannelsByScoreAndPosition } from "../modules/channel_text_area/compareChannelsByScoreAndPosition.tsx";
@@ -240,21 +240,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5269)(toLocaleLowerCaseResult, str4) || tmp12(5269)(normalizeResult, str5);
+                                let tmp28 = tmp12(5290)(toLocaleLowerCaseResult, str4) || tmp12(5290)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5269)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5290)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5269)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5290)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5269)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5290)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5269)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5290)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -388,13 +388,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5026).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5048).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5026).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5048).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5026).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5026).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5048).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5048).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }

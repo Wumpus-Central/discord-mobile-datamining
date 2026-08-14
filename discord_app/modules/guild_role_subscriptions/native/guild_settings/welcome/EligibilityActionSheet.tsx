@@ -23,10 +23,10 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
       onEnableMFAClick() {
         let obj = callback2(4310);
         obj.hideActionSheet(closure_7);
-        callback2(9070).close();
-        const obj2 = callback2(9070);
+        callback2(9084).close();
+        const obj2 = callback2(9084);
         obj = { screen: constants.ACCOUNT };
-        callback(6059).openUserSettings(obj);
+        callback(6080).openUserSettings(obj);
       },
       onRequireModeratorMFAClick() {
         outer1_1(outer1_2[4]).hideActionSheet(outer1_7);
@@ -43,6 +43,6 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItems(onRequireModeratorMFAClick.eligibility, memo) };
   items1[1] = callback(EligibilityChecklistRow, obj);
   obj[1] = items1;
-  return callback2(onRequireModeratorMFAClick(5437).BottomSheet, obj);
+  return callback2(onRequireModeratorMFAClick(5458).BottomSheet, obj);
 };
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

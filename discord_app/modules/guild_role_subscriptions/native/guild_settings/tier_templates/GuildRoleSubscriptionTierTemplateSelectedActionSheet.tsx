@@ -46,9 +46,9 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   obj3[2] = function onPress() {
     return markAsDismissed(outer1_4.UNKNOWN);
   };
-  items[4] = callback(markAsDismissed(4756).BaseTextButton, obj3);
+  items[4] = callback(markAsDismissed(4778).BaseTextButton, obj3);
   obj[1] = items;
-  obj[1] = callback2(markAsDismissed(5439).BottomSheetScrollView, obj);
+  obj[1] = callback2(markAsDismissed(5460).BottomSheetScrollView, obj);
   obj[2] = callback(View, obj);
-  return callback(markAsDismissed(5437).BottomSheet, obj);
+  return callback(markAsDismissed(5458).BottomSheet, obj);
 };

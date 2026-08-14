@@ -59,7 +59,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj1 = v0(11293);
+              let obj1 = v0(11309);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -78,7 +78,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
             const intl = outer1_0(1236).intl;
             obj2[1] = intl.string(outer1_0(1236).t["/Mmbfv"]);
-            obj2[2] = v0(9922);
+            obj2[2] = v0(9933);
             v0(4062).open(obj2);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -100,8 +100,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   }
   const tmp2 = callback();
   dependencyMap = tmp2;
-  closure_3 = _handleConfirmRemoveTimeout(userId(8129)(userId, guildId), 1)[0];
-  userId(4771)(() => {
+  closure_3 = _handleConfirmRemoveTimeout(userId(8150)(userId, guildId), 1)[0];
+  userId(4793)(() => {
     let obj = userId(_undefined[11]);
     obj = { type: outer1_7, guild_id: guildId, other_user_id: userId };
     obj.track(outer1_9.OPEN_MODAL, obj);
@@ -138,7 +138,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   const tmp11 = closure_11;
   const tmp12 = View;
   const tmp3 = userId;
-  const tmp7 = userId(4773);
+  const tmp7 = userId(4795);
   let str = userId(4534).getName(guildId, null, user);
   if (str == null) {
     str = "";

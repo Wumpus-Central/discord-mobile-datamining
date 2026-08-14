@@ -77,7 +77,7 @@ function NameplateInner(isFocused) {
   tmpResult = tmp(1946);
   const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4278)());
   const tmp6 = sharedValue(4278)();
-  const nameplateAssets = flag6(9441).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(9455).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -109,25 +109,25 @@ function NameplateInner(isFocused) {
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj[3] = items3;
-    tmp15Result = callback(tmp5(4766), obj);
+    tmp15Result = callback(tmp5(4788), obj);
     const tmp15 = callback;
-    const tmp5Result = tmp5(4766);
+    const tmp5Result = tmp5(4788);
   }
   const items4 = [tmp15Result, ];
   const tmp13 = closure_6;
-  const tmpResult1 = flag6(9441);
+  const tmpResult1 = flag6(9455);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
       const obj2 = { url: null, style: null, autoplay: true };
       obj2[0] = str;
       obj2[1] = tmp4.img;
-      let tmp17 = callback(tmp(9436).APNGPlayer, obj2);
+      let tmp17 = callback(tmp(9450).APNGPlayer, obj2);
     }
     items4[1] = tmp17;
     obj[1] = items4;
     return tmp13(tmp5(4083).View, obj);
   }
-  tmp17 = callback(tmp5(5308), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp17 = callback(tmp5(5329), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {

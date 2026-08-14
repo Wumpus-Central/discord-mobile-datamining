@@ -140,7 +140,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(4554);
+                      let obj10 = lib(4576);
                       obj10.showGuardCallAlert(callback(function*() {
                         if (dependencyMap === 2) {
                           dependencyMap = 3;
@@ -214,19 +214,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9292);
+                                const tmp8 = v0(9306);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(10946)(_slicedToArray);
+                                v0(10962)(_slicedToArray);
                                 dependencyMap = 3;
                                 tmp9 = _slicedToArray;
                               }
                               _slicedToArray = arg1;
-                              obj2 = outer1_0(4554);
+                              obj2 = outer1_0(4576);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -298,7 +298,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   _slicedToArray = arg1;
-                  obj = arr(9292);
+                  obj = arr(9306);
                   obj.ring(_slicedToArray, arr, "gdm_invite");
                 }
                 c6 = 3;

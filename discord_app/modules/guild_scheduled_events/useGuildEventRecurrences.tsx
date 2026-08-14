@@ -19,8 +19,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   let noop = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      let tmpResult = tmp(8991);
-      tmpResult = tmp(8991);
+      let tmpResult = tmp(9005);
+      tmpResult = tmp(9005);
       let _Date = Date;
       let rRule = tmpResult.getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);

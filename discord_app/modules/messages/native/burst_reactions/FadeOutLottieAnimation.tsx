@@ -91,9 +91,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       dependencyMap(true);
     };
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(first(5759), { style: null, speed: null, onAnimationFinish: null });
+    obj[1] = jsx(first(5780), { style: null, speed: null, onAnimationFinish: null });
     let tmp14Result = tmp14(first(4083).View, obj);
-    const tmp16 = first(5759);
+    const tmp16 = first(5780);
   } else {
     tmp14Result = null;
   }

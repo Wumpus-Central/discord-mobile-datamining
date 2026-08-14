@@ -32,7 +32,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
     if (undefined !== otherUser) {
       obj = { style: null, children: null };
       obj[0] = tmp.avatars;
-      obj = { size: null, user: null, guildId: "Array", avatarDecoration: "r" };
+      obj = { size: null, user: null, guildId: "Array", avatarDecoration: true };
       obj[0] = tmp2(1297).AvatarSizes.LARGE_48;
       obj[1] = stateFromStores;
       obj[3] = stateFromStores.avatarDecoration;
@@ -43,7 +43,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
       obj1[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
       obj1[2] = iconSrc;
       items1[1] = callback(tmp2(1297).Icon, obj1);
-      const obj2 = { size: null, user: null, guildId: "Array", avatarDecoration: "r" };
+      const obj2 = { size: null, user: null, guildId: "Array", avatarDecoration: true };
       obj2[0] = tmp2(1297).AvatarSizes.LARGE_48;
       obj2[1] = otherUser;
       obj2[3] = otherUser.avatarDecoration;

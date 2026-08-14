@@ -105,7 +105,7 @@ function _handleShare() {
             obj3[1] = code;
             const intl2 = callback(1236).intl;
             const obj4 = { link: null };
-            obj4[0] = code(7263)(code);
+            obj4[0] = code(7285)(code);
             obj3[2] = intl2.formatToPlainString(callback(1236).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);

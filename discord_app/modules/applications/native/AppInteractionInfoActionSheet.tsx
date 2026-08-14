@@ -31,13 +31,13 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp5;
   const memo = React.useMemo(() => outer1_8(onBack(_undefined[8]), { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9591).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9604).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9591).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9604).ApplicationIntegrationType.GUILD_INSTALL];
   }
   React = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -82,8 +82,8 @@ export default function AppInteractionInfoActionSheet(message) {
     obj[0] = tmp.itemContainer;
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
-    obj[1] = tmp10(5819).GuildIconSizes.SMALL_32;
-    const items5 = [callback(onBack(5819), obj), ];
+    obj[1] = tmp10(5840).GuildIconSizes.SMALL_32;
+    const items5 = [callback(onBack(5840), obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.itemLabel;
     obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -99,7 +99,7 @@ export default function AppInteractionInfoActionSheet(message) {
     items5[1] = callback2(id, obj1);
     obj[1] = items5;
     let tmp26 = callback2(id, obj);
-    const tmp2Result = onBack(5819);
+    const tmp2Result = onBack(5840);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -129,7 +129,7 @@ export default function AppInteractionInfoActionSheet(message) {
       items7[1] = callback2(id, obj8);
       obj6[1] = items7;
       obj5[1] = callback2(id, obj6);
-      tmp26 = callback(tmp10(4887).PressableOpacity, obj5);
+      tmp26 = callback(tmp10(4909).PressableOpacity, obj5);
     }
   }
   const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1628)().bottom }, children: null };
@@ -160,9 +160,9 @@ export default function AppInteractionInfoActionSheet(message) {
     items10[1] = tmp31(id, obj16);
     obj14[1] = items10;
     obj13[1] = tmp31(id, obj14);
-    tmp32 = callback(tmp10(4887).PressableOpacity, obj13);
+    tmp32 = callback(tmp10(4909).PressableOpacity, obj13);
   }
   items9[1] = tmp32;
   obj12[2] = items9;
-  return callback2(message(5437).BottomSheet, obj12);
+  return callback2(message(5458).BottomSheet, obj12);
 };

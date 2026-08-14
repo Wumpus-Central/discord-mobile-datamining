@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   channel = channel.channel;
   let message;
   const tmp = callback();
-  let obj = channel(12016);
+  let obj = channel(12032);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
@@ -90,7 +90,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(8248)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(8269)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
@@ -127,7 +127,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(4679);
+        tmp2Result = tmp2(4701);
       } else {
         const intl = tmp2(1236).intl;
         stringResult = intl.string(tmp2(1236).t["0KfDxM"]);

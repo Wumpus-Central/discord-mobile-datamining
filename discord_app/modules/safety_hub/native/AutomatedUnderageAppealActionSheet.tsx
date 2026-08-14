@@ -125,7 +125,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
     obj[2] = outer1_8(callback, obj);
     return outer1_8(onClose(_undefined[18]).TableRow, obj, arg1);
   });
-  obj6[0] = callback(onClose(5807).TableRowGroup, obj7);
+  obj6[0] = callback(onClose(5828).TableRowGroup, obj7);
   items6[1] = callback(callback, obj6);
   const obj8 = { style: tmp.moreInfo, children: null };
   const obj9 = { title: null, hasIcons: false, children: null };
@@ -139,8 +139,8 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   obj10[2] = function onPress() {
     return classificationId(_undefined[19]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj9[2] = callback(onClose(5414).TableRow, obj10);
-  obj8[1] = callback(onClose(5807).TableRowGroup, obj9);
+  obj9[2] = callback(onClose(5435).TableRow, obj10);
+  obj8[1] = callback(onClose(5828).TableRowGroup, obj9);
   items6[2] = callback(callback, obj8);
   const obj11 = { style: tmp.footer, children: null };
   const obj12 = {
@@ -153,7 +153,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   };
   const intl6 = onClose(1236).intl;
   obj12[3] = intl6.string(onClose(1236).t["54b8V0"]);
-  const items7 = [callback(onClose(4755).Button, obj12), ];
+  const items7 = [callback(onClose(4777).Button, obj12), ];
   const obj13 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1236).intl;
   obj13[3] = intl7.format(onClose(1236).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
@@ -162,6 +162,6 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   items6[3] = callback2(callback, obj11);
   obj1[1] = items6;
   obj[1] = callback2(callback, obj1);
-  obj[2] = callback(onClose(5439).BottomSheetScrollView, obj);
-  return callback(onClose(5437).BottomSheet, obj);
+  obj[2] = callback(onClose(5460).BottomSheetScrollView, obj);
+  return callback(onClose(5458).BottomSheet, obj);
 };

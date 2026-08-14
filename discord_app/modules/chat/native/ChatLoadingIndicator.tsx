@@ -284,7 +284,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(4887).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(4909).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { resetChangeEmailStore } from "ChangeEmailFields";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08511_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08533_registerAsset.js";
 import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

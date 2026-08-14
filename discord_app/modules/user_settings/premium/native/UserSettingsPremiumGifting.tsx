@@ -28,7 +28,7 @@ function GiftingSectionTitle(title) {
   if (useIsMobileVisualRefreshExperimentEnabled("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
-    let tmp3Result = tmp3(tmp4(5807).TableRowGroupTitle, obj);
+    let tmp3Result = tmp3(tmp4(5828).TableRowGroupTitle, obj);
   } else {
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
     obj[0] = tmp.title;

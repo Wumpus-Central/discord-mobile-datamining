@@ -779,7 +779,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         obj.hardware_enabled = outer1_9.getHardwareEncoding();
         let tmp = null;
         if (self.isOwner) {
-          tmp = tmp4(7177)();
+          tmp = tmp4(7199)();
         }
         obj.device_performance_class = tmp;
         obj.soundshare_experimental = outer1_9.getExperimentalSoundshare();
@@ -823,7 +823,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         obj.hardware_enabled = outer1_9.getHardwareEncoding();
         let tmp2 = null;
         if (self.isOwner) {
-          tmp2 = tmp4(7177)();
+          tmp2 = tmp4(7199)();
         }
         obj.device_performance_class = tmp2;
         obj.track(outer1_13.VIDEO_STREAM_ENDED, obj);

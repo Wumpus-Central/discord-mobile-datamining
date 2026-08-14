@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/05758_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/05779_registerAsset.js";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let c3;

@@ -93,7 +93,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   00038__(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(5967);
+  let tmpResult = tmp(5988);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -103,7 +103,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(5769);
+  tmpResult = tmp(5790);
   application = tmpResult.useApplication(officialApplicationId);
   const items1 = [application];
   return useMemo(() => {

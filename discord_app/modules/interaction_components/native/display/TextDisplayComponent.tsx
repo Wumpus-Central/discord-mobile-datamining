@@ -14,12 +14,12 @@ let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImp
 export default function TextDisplayComponent(content) {
   let tmp6;
   let tmp7;
-  let obj = channelId(8263);
+  let obj = channelId(8285);
   const componentContainerId = obj.useComponentContainerId();
   channelId = channelId.getChannelId();
   00038__(null != channelId, "channelId not available in TextDisplayComponent");
   let obj1 = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */;
-  let obj2 = channelId(8248);
+  let obj2 = channelId(8269);
   obj = { channelId, renderOptions: closure_6 };
   const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));
   let items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -46,13 +46,13 @@ export default function TextDisplayComponent(content) {
   obj[2] = function onTapLink(nativeEvent) {
     const result = channelId(outer1_2[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
   };
-  obj[3] = channelId(11033).contentHandlers.onLongPressLink;
-  obj[4] = channelId(11033).contentHandlers.onTapAttachmentLink;
-  obj[5] = channelId(11033).contentHandlers.onLongPressAttachmentLink;
-  obj[6] = channelId(11033).contentHandlers.onTapMention;
-  obj[7] = channelId(11033).contentHandlers.onTapTimestamp;
-  obj[8] = channelId(11033).contentHandlers.onTapInlineCode;
-  obj[9] = channelId(11033).contentHandlers.onTapEmoji;
+  obj[3] = channelId(11049).contentHandlers.onLongPressLink;
+  obj[4] = channelId(11049).contentHandlers.onTapAttachmentLink;
+  obj[5] = channelId(11049).contentHandlers.onLongPressAttachmentLink;
+  obj[6] = channelId(11049).contentHandlers.onTapMention;
+  obj[7] = channelId(11049).contentHandlers.onTapTimestamp;
+  obj[8] = channelId(11049).contentHandlers.onTapInlineCode;
+  obj[9] = channelId(11049).contentHandlers.onTapEmoji;
   obj[10] = { width: "100%" };
   return jsx(__INTERNAL_VIEW_CONFIG, { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null });
 };

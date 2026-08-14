@@ -208,7 +208,7 @@ export default function ExpandableList(items) {
         tmp4(obj);
       }
     };
-    obj5 = tmp16(tmp9(5414).TableRow, obj5);
+    obj5 = tmp16(tmp9(5435).TableRow, obj5);
     obj7[0] = obj5;
     tmp16Result = tmp16(tmp17, obj7);
   }

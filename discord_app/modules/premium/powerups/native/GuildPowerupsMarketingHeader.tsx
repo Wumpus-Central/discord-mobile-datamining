@@ -55,7 +55,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(12916)(arr);
+          let first = tmp2(12934)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];

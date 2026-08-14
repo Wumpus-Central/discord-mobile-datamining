@@ -9,7 +9,7 @@ import ME from "ME";
 import { CollectibleShopTab } from "items";
 import { CurrencyCodes } from "sum";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { keysSorter } from "../../../_runtime/05213_keysSorter.js";
+import { keysSorter } from "../../../_runtime/05234_keysSorter.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
@@ -464,7 +464,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "isArray", primaryIconLabel: "accessibilityRole" };
+          obj = { primaryIconAsset: "r", primaryIconLabel: "accessibilityRole" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -477,7 +477,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "isArray", primaryIconLabel: "accessibilityRole" };
+  return { primaryIconAsset: "r", primaryIconLabel: "accessibilityRole" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;

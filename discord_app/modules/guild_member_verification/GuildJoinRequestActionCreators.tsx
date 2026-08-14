@@ -485,7 +485,7 @@ function _updateGuildJoinRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback(7367);
+              let obj7 = callback(7389);
               const obj2 = { guildId: null, actionType: null, applicationUserId: null };
               obj2[0] = callback;
               obj2[1] = APPROVED;
@@ -511,7 +511,7 @@ function _updateGuildJoinRequest() {
                   body = body.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
                 }
                 if (body) {
-                  let obj = callback2(4683);
+                  let obj = callback2(4705);
                   obj = { title: null, body: null };
                   const intl = callback(1236).intl;
                   obj[0] = intl.string(callback(1236).t.DxJj4e);

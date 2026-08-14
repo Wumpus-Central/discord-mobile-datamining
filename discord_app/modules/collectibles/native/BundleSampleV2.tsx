@@ -8,7 +8,6 @@ import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { preload } from "../../../components_native/common/FastImage.tsx";
-import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx";
 import { NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG } from "../nameplates/native/NameplateDummyUserPreview.tsx";
 import { getNameplateData } from "../nameplates/utils.tsx";
 import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
@@ -175,34 +174,11 @@ function BundleSampleV2Composed(arg0) {
     callback(tmp11, obj4);
   }
 }
-function BundleSampleV2StaticPreview(composedFallbackProps) {
-  let disableStaticBackground;
-  let exposureLocation;
-  let mutedStaticBackground;
-  let previewAssets;
-  let targetSize;
-  composedFallbackProps = composedFallbackProps.composedFallbackProps;
-  ({ previewAssets, disableStaticBackground, mutedStaticBackground, targetSize, exposureLocation } = composedFallbackProps);
-  let obj = useCollectiblesMobileFlexibleBundlesExperiment;
-  if (obj.useCollectiblesMobileFlexibleBundlesExperiment(exposureLocation).enabled) {
-    obj = { previewAssets: null, disableBackground: null, mutedBackground: null, targetSize: null };
-    obj[0] = previewAssets;
-    obj[1] = disableStaticBackground;
-    obj[2] = mutedStaticBackground;
-    obj[3] = targetSize;
-    let tmpResult = tmp(BundleStaticPreviewContent, obj);
-  } else {
-    obj = {};
-    const merged = Object.assign(composedFallbackProps);
-    tmpResult = tmp(BundleSampleV2Composed, obj);
-  }
-  return tmpResult;
-}
 ({ PixelRatio: c3, StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
 obj = {};
-let merged = Object.assign(StyleSheet.absoluteFillObject);
+const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.overflow = "hidden";
 obj[0] = obj;
 obj = {};
@@ -246,11 +222,9 @@ const result = require("SAMPLE_PROFILE_ASPECT_RATIO").fileFinishedImporting("mod
 export default function BundleSampleV2(size) {
   let deco;
   let disableStaticBackground;
-  let exposureLocation;
   let nameplate;
   let pfx;
   let previewAssets;
-  let targetSize;
   let str = size.size;
   ({ deco, pfx, nameplate } = size);
   if (str === undefined) {
@@ -264,28 +238,24 @@ export default function BundleSampleV2(size) {
   if (flag === undefined) {
     flag = false;
   }
-  ({ exposureLocation, targetSize } = size);
-  if (exposureLocation === undefined) {
-    exposureLocation = "CollectiblesShopCardAssetTileV2";
-  }
-  let obj = { deco, pfx, nameplate, size: str };
   let fgStatic;
   if (previewAssets != null) {
     fgStatic = previewAssets.fgStatic;
   }
   if (null != fgStatic) {
-    obj = { previewAssets: null, disableStaticBackground: null, mutedStaticBackground: null, targetSize: null, composedFallbackProps: null, exposureLocation: null };
+    let obj = { previewAssets: null, disableBackground: null, mutedBackground: null, targetSize: null };
     obj[0] = previewAssets;
     obj[1] = disableStaticBackground;
     obj[2] = flag;
-    obj[3] = targetSize;
-    obj[4] = obj;
-    obj[5] = exposureLocation;
-    let tmp7 = callback(BundleSampleV2StaticPreview, obj);
+    obj[3] = size.targetSize;
+    let tmp4 = callback(BundleStaticPreviewContent, obj);
   } else {
-    obj = {};
-    const merged = Object.assign(obj);
-    tmp7 = callback(BundleSampleV2Composed, obj);
+    obj = { deco: null, pfx: null, nameplate: null, size: null };
+    obj[0] = deco;
+    obj[1] = pfx;
+    obj[2] = nameplate;
+    obj[3] = str;
+    tmp4 = callback(BundleSampleV2Composed, obj);
   }
-  return tmp7;
+  return tmp4;
 };

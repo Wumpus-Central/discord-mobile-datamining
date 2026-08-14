@@ -34,10 +34,10 @@ function _checkForNewerBuild() {
             obj[0] = arg1;
             return obj;
           } else {
-            obj = tmp2;
+            let obj3 = tmp2;
             let closure_0 = tmp5;
             closure_0 = undefined;
-            obj = undefined;
+            obj3 = undefined;
             if (null === c3) {
               c3 = 3;
               return { value: null, done: true };
@@ -60,33 +60,29 @@ function _checkForNewerBuild() {
           throw arg1;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
           closure_0 = arg1;
-          if (closure_0.ok) {
-            obj = { build: null, version: null, buildTimestamp: null, urls: null };
-            obj[0] = closure_0.body.build;
-            obj[1] = closure_0.body.version;
-            let infoResult2 = globalThis;
-            const _Date = Date;
-            const date = new Date(closure_0.body.build_timestamp);
-            obj[2] = date;
-            obj[3] = closure_0.body.urls;
-            if (obj.build <= c3.currentBuild) {
-              const _HermesInternal = HermesInternal;
-              logger.info("Update build " + obj.build + " is older than " + c3.currentBuild);
-              c3 = 3;
-            }
-            infoResult2 = logger.info("Update build " + obj.build + " is newer than " + c3.currentBuild);
-          } else {
-            throw closure_0;
+          obj3 = { build: null, version: null, buildTimestamp: null, urls: null };
+          obj3[0] = closure_0.body.build;
+          obj3[1] = closure_0.body.version;
+          let infoResult2 = globalThis;
+          const _Date = Date;
+          const date = new Date(closure_0.body.build_timestamp);
+          obj3[2] = date;
+          obj3[3] = closure_0.body.urls;
+          if (obj3.build <= c3.currentBuild) {
+            const _HermesInternal = HermesInternal;
+            logger.info("Update build " + obj3.build + " is older than " + c3.currentBuild);
+            c3 = 3;
           }
+          infoResult2 = logger.info("Update build " + obj3.build + " is newer than " + c3.currentBuild);
         }
-      } catch (tmp36) {
+      } catch (tmp24) {
         c3 = tmp;
-        throw tmp36;
+        throw tmp24;
       }
     }
   });

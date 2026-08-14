@@ -43,9 +43,9 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   const obj2 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: null };
   const intl = template(1236).intl;
   const obj3 = { price: null, interval: null };
-  let obj6 = template(5896);
+  let obj6 = template(5917);
   obj3[0] = obj6.formatPrice(price_tier, CurrencyCodes.USD);
-  obj3[1] = template(14532).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
+  obj3[1] = template(14545).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj2[2] = intl.format(template(1236).t.CgmBaG, obj3);
   items1[2] = callback(template(4338).Text, obj2);
   obj1[1] = items1;
@@ -63,7 +63,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   obj6[2] = function onPress() {
     return callback(template, closure_2);
   };
-  items2[2] = callback(template(4756).BaseTextButton, obj6);
+  items2[2] = callback(template(4778).BaseTextButton, obj6);
   obj[1] = items2;
   return callback2(View, obj);
 };

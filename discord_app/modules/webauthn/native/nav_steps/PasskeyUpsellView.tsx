@@ -7,7 +7,7 @@ import { HelpdeskArticles } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/14042_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14055_registerAsset.js";
 import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let c5;
@@ -51,9 +51,9 @@ export default function PasskeyUpsellView() {
     navigation.push(outer1_8.NAME, obj);
   }
   function onCancel() {
-    callback(14038).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14038);
-    const result = callback(14039).closePasskeyUpsellModal();
+    callback(14051).markDismissed(constants.USER_DISMISS);
+    const obj = callback(14051);
+    const result = callback(14052).closePasskeyUpsellModal();
   }
   let obj = navigation(1499);
   navigation = obj.useNavigation();
@@ -139,7 +139,7 @@ export default function PasskeyUpsellView() {
   } else {
     string3Result = string3(t3.NIFmCJ);
   }
-  items6[1] = callback(navigation(4755).Button, {
+  items6[1] = callback(navigation(4777).Button, {
     text: string3Result,
     onPress() {
       let obj = outer1_1(outer1_2[11]);
@@ -160,10 +160,10 @@ export default function PasskeyUpsellView() {
   } else {
     string4Result = string4(t4["7J6/nG"]);
   }
-  items6[2] = callback(navigation(4755).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
+  items6[2] = callback(navigation(4777).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
   obj12[1] = items6;
   items2[2] = closure_12(closure_5, obj12);
   obj[1] = items2;
   obj[2] = closure_12(tmp12, obj);
-  return callback(navigation(5368).SafeAreaPaddingView, obj);
+  return callback(navigation(5389).SafeAreaPaddingView, obj);
 };

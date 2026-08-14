@@ -22,7 +22,7 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   const intl = emojiSrc(1236).intl;
   obj[1] = intl.string(emojiSrc(1236).t.cIoudn);
   obj[2] = callback;
-  obj[1] = jsx(emojiSrc(5414).TableRow, { icon: null, label: null, onPress: null });
-  obj[0] = jsx(emojiSrc(5807).TableRowGroup, { icon: null, label: null, onPress: null });
-  return jsx(emojiSrc(5804).ActionSheet, { icon: null, label: null, onPress: null });
+  obj[1] = jsx(emojiSrc(5435).TableRow, { icon: null, label: null, onPress: null });
+  obj[0] = jsx(emojiSrc(5828).TableRowGroup, { icon: null, label: null, onPress: null });
+  return jsx(emojiSrc(5825).ActionSheet, { icon: null, label: null, onPress: null });
 };

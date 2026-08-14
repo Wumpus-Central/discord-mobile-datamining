@@ -297,8 +297,8 @@ export default function SafetyToolsActionSheet(channelId) {
         let trailing;
         ({ label, subLabel, IconComponent, icon, trailing, onPress, disabled } = arg0);
         const obj = { label, subLabel, onPress, trailing, disabled, icon: null };
-        obj[5] = callback2(callback(5420).TableRowIcon, { source: icon, IconComponent });
-        return callback2(callback(5414).TableRow, obj, arg1);
+        obj[5] = callback2(callback(5441).TableRowIcon, { source: icon, IconComponent });
+        return callback2(callback(5435).TableRow, obj, arg1);
       });
       obj[1] = stateFromStores1(channelId(warningType[44]).TableRowGroup, obj);
       return stateFromStores1(onClose, obj, buttons.sectionKey);

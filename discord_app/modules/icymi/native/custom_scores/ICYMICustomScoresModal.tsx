@@ -42,12 +42,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = lib(1236).intl;
       obj[0] = intl.string(lib(1236).t.jVshKt);
-      obj[1] = lib(8431).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(9727)());
+      obj[1] = lib(8453).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(9738)());
       return obj;
     },
     getComponent() {
-      return lib(15644).default;
+      return lib(15662).default;
     }
   };
   const items = [
@@ -56,11 +56,11 @@ export default function ICYMICustomScoresModal() {
       name: "guild",
       options(navigation) {
         const obj = { headerLeft: null };
-        obj[0] = lib(8431).getRenderModalBackImage(navigation.navigation);
+        obj[0] = lib(8453).getRenderModalBackImage(navigation.navigation);
         return obj;
       },
       getComponent() {
-        return lib(15645).default;
+        return lib(15663).default;
       }
     })
   ];

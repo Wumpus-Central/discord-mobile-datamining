@@ -40,5 +40,5 @@ export default function CollectiblesShopScreen() {
     onNavigateAway = params3.onNavigateAway;
   }
   obj[2] = onNavigateAway;
-  return jsx(tmp(14897).CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
+  return jsx(tmp(14911).CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
 };

@@ -28,9 +28,9 @@ export default function ChannelListPanelBackdrop(children) {
   let mobileQuestDockHeight;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = style(15225);
+  let obj = style(15239);
   const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  let obj1 = style(14398);
+  let obj1 = style(14411);
   mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
   obj = {

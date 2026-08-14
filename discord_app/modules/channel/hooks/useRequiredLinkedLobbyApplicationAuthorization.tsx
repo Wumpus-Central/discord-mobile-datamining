@@ -31,7 +31,16 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
     }
     return outer1_4.getApplication(parentId);
   });
-  const items3 = [authorizationsFetchState, application_id];
+  const obj3 = application_id(stateFromStores[3]);
+  const items3 = [recomputeFromAppTokens];
+  const items4 = [authorizationsFetchState, application_id];
+  const stateFromStores2 = application_id(stateFromStores[3]).useStateFromStores(items3, () => {
+    let parentId;
+    if (stateFromStores != null) {
+      parentId = stateFromStores.parentId;
+    }
+    return outer1_5.getNewestTokenForApplication(parentId);
+  });
   stateFromStores1(() => {
     let tmp = null != application_id;
     if (tmp) {
@@ -41,8 +50,8 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       const response = authorizationsFetchState(stateFromStores[4]).fetch();
       const obj = authorizationsFetchState(stateFromStores[4]);
     }
-  }, items3);
-  const items4 = [application_id, applicationOAuth2Token, authorizationsFetchState, stateFromStores];
+  }, items4);
+  const items5 = [application_id, applicationOAuth2Token, authorizationsFetchState, stateFromStores];
   stateFromStores1(() => {
     let tmp2 = null != application_id;
     if (tmp2) {
@@ -56,8 +65,8 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       const applications = authorizationsFetchState(stateFromStores[5]).fetchApplications(items, false);
       const obj = authorizationsFetchState(stateFromStores[5]);
     }
-  }, items4);
-  const items5 = [stateFromStores, authorizationsFetchState, stateFromStores1];
+  }, items5);
+  const items6 = [stateFromStores, authorizationsFetchState, stateFromStores1];
   stateFromStores1(() => {
     let tmp2 = null != stateFromStores && null != tmp.parentId;
     if (tmp2) {
@@ -71,31 +80,37 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       const applications = authorizationsFetchState(stateFromStores[5]).fetchApplications(items, false);
       const obj = authorizationsFetchState(stateFromStores[5]);
     }
-  }, items5);
-  let tmp9 = null != stateFromStores;
-  if (tmp9) {
-    tmp9 = null == stateFromStores.parentId || null != stateFromStores1;
-    const tmp10 = null == stateFromStores.parentId || null != stateFromStores1;
+  }, items6);
+  let tmp10 = null != stateFromStores;
+  if (tmp10) {
+    tmp10 = null == stateFromStores.parentId || null != stateFromStores1;
+    const tmp11 = null == stateFromStores.parentId || null != stateFromStores1;
   }
-  let tmp11 = null != application_id;
-  if (tmp11) {
-    tmp11 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp9;
-    const tmp13 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp9;
+  let tmp13 = tmp12;
+  if (null == applicationOAuth2Token && null != stateFromStores && tmp10) {
+    tmp13 = null != stateFromStores1;
   }
-  obj = { showLinkedLobbyApplicationLoadingIndicator: tmp11, requiredLinkedLobbyApplication: null };
-  let tmp14 = null;
-  if (null == applicationOAuth2Token) {
-    tmp14 = null;
-    if (null != stateFromStores) {
-      tmp14 = null;
-      if (tmp9) {
-        if (stateFromStores1 == null) {
-          stateFromStores1 = stateFromStores;
-        }
-        tmp14 = stateFromStores1;
+  if (tmp13) {
+    tmp13 = null != stateFromStores2;
+  }
+  let tmp14 = null != application_id;
+  if (tmp14) {
+    tmp14 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
+    const tmp16 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
+  }
+  obj = { showLinkedLobbyApplicationLoadingIndicator: tmp14, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null };
+  let tmp17 = null;
+  if (null == applicationOAuth2Token && null != stateFromStores && tmp10) {
+    let tmp18 = stateFromStores;
+    if (!tmp13) {
+      if (stateFromStores1 == null) {
+        stateFromStores1 = stateFromStores;
       }
+      tmp18 = stateFromStores1;
     }
+    tmp17 = tmp18;
   }
-  obj[1] = tmp14;
+  obj[1] = tmp17;
+  obj[2] = tmp13;
   return obj;
 };

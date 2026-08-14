@@ -8,7 +8,7 @@ import { jsx } from "u";
 import createFakeSharedValue from "createFakeSharedValue";
 import createCacheKey from "createCacheKey";
 import { Gesture } from "LegacyBaseButton";
-import { LegacyBaseButton } from "../../../../../../_runtime/05467_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../../../_runtime/05488_LegacyBaseButton.js";
 import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
 import { HappeningNowCardUnifiedVC } from "HappeningNowCardUnifiedVC.tsx";
 
@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "Array", isFocused: "isArray" };
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "function handleStateChangeEvent_Pnpm_eventHandlerTs1(eventWithData,callbacks,context,fillInDefaultValues){const{flattenAndFilterEvent,State,runCallback,CALLBACK_TYPE}=this.__closure;const{oldState:oldState,state:state}=eventWithData;const event=flattenAndFilterEvent(eventWithData);if(oldState===State.UNDETERMINED&&state===State.BEGAN){runCallback(CALLBACK_TYPE.BEGAN,callbacks,event);}else if((oldState===State.BEGAN||oldState===State.UNDETERMINED)&&state===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(event);runCallback(CALLBACK_TYPE.START,callbacks,event);}else if(oldState!==state&&(state===State.END||state===State.FAILED||state===State.CANCELLED)){const canceled=state===State.FAILED||state===State.CANCELLED;const endEvent={...event,canceled:canceled};if(oldState===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(endEvent);runCallback(CALLBACK_TYPE.END,callbacks,endEvent);}runCallback(CALLBACK_TYPE.FINALIZE,callbacks,endEvent);if(context){context.lastUpdateEvent=undefined;}}}", isFocused: "function handleUpdateEvent_Pnpm_eventHandlerTs2(eventWithData,handlers,changeEventCalculator,context){const{flattenAndFilterEvent,runCallback,CALLBACK_TYPE}=this.__closure;const eventWithChanges=changeEventCalculator?changeEventCalculator(eventWithData,context?context.lastUpdateEvent:undefined):eventWithData;const event=flattenAndFilterEvent(eventWithChanges);runCallback(CALLBACK_TYPE.UPDATE,handlers,event);if(context){context.lastUpdateEvent=eventWithData;}}" };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

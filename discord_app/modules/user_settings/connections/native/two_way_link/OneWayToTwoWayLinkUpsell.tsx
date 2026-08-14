@@ -72,7 +72,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   const intl = newIndicatorDismissibleContent(1236).intl;
   obj5[0] = intl.string(newIndicatorDismissibleContent(1236).t.vD60Pv);
   obj5[1] = onPress;
-  obj4[1] = callback(newIndicatorDismissibleContent(4755).Button, obj5);
+  obj4[1] = callback(newIndicatorDismissibleContent(4777).Button, obj5);
   items3[2] = callback(View, obj4);
   obj[1] = items3;
   return callback2(View, obj);

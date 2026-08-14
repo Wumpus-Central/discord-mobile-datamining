@@ -46,7 +46,7 @@ let closure_7 = require("noop").memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [callback3(callback(10502).HammerIcon, { size: "sm" }), ];
+          const items = [callback3(callback(10518).HammerIcon, { size: "sm" }), ];
           obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
           obj = { marginLeft: null };
           obj[0] = callback2(712).space.PX_8;
@@ -60,8 +60,8 @@ let closure_7 = require("noop").memo((screenKey) => {
     }
   };
   let items = [callback(createNativeStackNavigator.Screen, obj), ];
-  let merged = Object.assign(tmp(13905).DevToolsScreens);
-  let merged1 = Object.assign(tmp(13905).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(13917).DevToolsScreens);
+  let merged1 = Object.assign(tmp(13917).PerformanceTestingScreens);
   const entries = Object.entries({});
   items[1] = entries.map((arg0) => {
     let tmp;

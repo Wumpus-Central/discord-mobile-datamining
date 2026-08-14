@@ -6,7 +6,7 @@ import { canReviewGuildMemberApplications } from "../../guild_member_verificatio
 const require = arg1;
 const memoResult = require("noop").memo((guildId) => {
   guildId = guildId.guildId;
-  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 15757 : 15759), { guildId });
+  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 15775 : 15777), { guildId });
 });
 const result = require("canReviewGuildMemberApplications").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
 

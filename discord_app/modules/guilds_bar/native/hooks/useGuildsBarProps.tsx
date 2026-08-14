@@ -120,7 +120,7 @@ export default function useGuildsBarProps(arg0) {
     const result = listInsets.set({ start: top, end: mobileQuestDockHeight + youBarTotalHeight });
   }, items);
   let num = 0;
-  if (importDefault(token[34])("useGuildsBarProps")) {
+  if (importDefault(token[34])()) {
     num = 1;
   }
   let tmp2Result = tmp2(tmp3[35]);
@@ -466,11 +466,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = { children: null };
         obj[0] = items1.map((arg0) => {
           if ("unavailable-guilds" === arg0) {
-            return callback2(callback(15544), {}, arg0);
+            return callback2(callback(15562), {}, arg0);
           } else if ("empty-nux" === arg0) {
-            return callback2(callback(15545), {}, arg0);
+            return callback2(callback(15563), {}, arg0);
           } else if ("create-join-guild" === arg0) {
-            return callback2(callback(15547), {}, arg0);
+            return callback2(callback(15565), {}, arg0);
           }
         });
         return memo1(callback(token[24]), obj);

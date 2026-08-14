@@ -192,7 +192,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   } else {
     let tmp21 = callback(currentTier);
     const tmp27 = callback(nextTier);
-    const giftingBadgeProgressPercent = tmp7(12909).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const giftingBadgeProgressPercent = tmp7(12927).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
     if (null != nextTier) {
       const intl2 = tmp7(1236).intl;
       obj = { count: null, nextTier: null };
@@ -234,7 +234,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj5 = { icon: null, size: 36, style: null };
       obj5[0] = currentTier.simple_icon_url;
       obj5[2] = { margin: 4 };
-      tmp14 = callback2(tmp(10085), obj5);
+      tmp14 = callback2(tmp(10097), obj5);
     }
     let items1 = [tmp14, , ];
     const obj6 = { style: null, variant: "text-md/medium", color: "text-strong", children: null };
@@ -250,7 +250,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj7 = { icon: null, size: 36, style: null };
       obj7[0] = nextTier.simple_icon_url;
       obj7[2] = { margin: 4 };
-      tmp16Result = tmp16(tmp(10085), obj7);
+      tmp16Result = tmp16(tmp(10097), obj7);
     }
     items1[2] = tmp16Result;
     obj4[1] = items1;
@@ -292,7 +292,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const obj15 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj16 = { size: "sm", color: null };
     obj16[1] = tmp(712).unsafe_rawColors.WHITE;
-    obj15[1] = callback2(tmp7(9624).GiftIcon, obj16);
+    obj15[1] = callback2(tmp7(9635).GiftIcon, obj16);
     const intl4 = tmp7(1236).intl;
     obj15[2] = intl4.string(tmp(2399).DZnomS);
     obj15[3] = function onPress() {
@@ -300,7 +300,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       obj = { analyticsLocation, analyticsLocations };
       obj.openGiftModal(obj);
     };
-    items5[1] = callback2(tmp7(4755).Button, obj15);
+    items5[1] = callback2(tmp7(4777).Button, obj15);
     const obj17 = { style: null };
     obj17[0] = tmp3.divider;
     items5[2] = callback2(closure_6, obj17);
@@ -314,9 +314,9 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj19[2] = intl5.string(tmp(2399).WZ4cXA);
     const items6 = [callback2(tmp7(4338).Text, obj19), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(12911).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(12929).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(9528).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(9541).ChevronSmallDownIcon;
     }
     const obj20 = { color: null };
     obj20[0] = tmp(712).colors.INTERACTIVE_ICON_DEFAULT;

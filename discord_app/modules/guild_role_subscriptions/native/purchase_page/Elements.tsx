@@ -5,7 +5,7 @@ import get_ActivityIndicator from "set";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15730_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15748_registerAsset.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -118,8 +118,8 @@ export const ArrowButton = function ArrowButton(arg0) {
 };
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
   const obj = notSupported;
-  const _require = callback(importAll(14528).useSubscriptionPlan(listingId), 1)[0];
-  const obj2 = importAll(14528);
+  const _require = callback(importAll(14541).useSubscriptionPlan(listingId), 1)[0];
+  const obj2 = importAll(14541);
   const tmp2 = _require;
   const items = [addSubscriptionPlan];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_8.get(id.id));
@@ -127,8 +127,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(5896).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(5896);
+    str = "" + tmp2(5917).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(5917);
   }
   return str;
 };

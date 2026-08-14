@@ -72,6 +72,6 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(8117)(roleStyle));
+  const merged = Object.assign(tmp6(8138)(roleStyle));
   return obj;
 };

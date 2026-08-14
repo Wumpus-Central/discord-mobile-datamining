@@ -38,7 +38,7 @@ function _getSubscriptionSkusViaListings() {
           let closure_0 = arg0;
           let c2 = 0;
           let c1 = 0;
-          return (/* F120453 */ function*() { ... })();
+          return (/* F120601 */ function*() { ... })();
         });
         return function() {
           const self = this;
@@ -153,32 +153,32 @@ function _getSkusHandler() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const result = socket(13820).validateTransportType(socket.transport);
+              const result = socket(13832).validateTransportType(socket.transport);
               callback = socket.application.id;
               if (null == callback) {
                 const obj2 = { errorCode: null };
                 obj2[0] = constants.INVALID_COMMAND;
-                const tmp32 = new callback(10711)(obj2, "No application.");
+                const tmp32 = new callback(10727)(obj2, "No application.");
                 throw tmp32;
               } else {
                 if (obj18.isTestModeForApplication(callback)) {
-                  let tmp65Result = tmp65(7630);
+                  let tmp65Result = tmp65(7651);
                   constants = 2;
                   c7 = 1;
                   const obj3 = { value: null, done: false };
                   obj3[0] = tmp65Result.fetchTestSKUsForApplication(callback, false);
                   return obj3;
                 } else {
-                  tmp65Result = tmp65(13821);
+                  tmp65Result = tmp65(13833);
                   constants = 3;
                   c7 = 1;
                   const obj4 = { value: null, done: false };
                   obj4[0] = tmp65Result.fetchAllStoreListingsForApplication(callback);
                   return obj4;
                 }
-                obj18 = socket(7632);
+                obj18 = socket(7653);
               }
-              const obj17 = socket(13820);
+              const obj17 = socket(13832);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {
@@ -284,7 +284,7 @@ function getEntitlementsHandler(socket) {
     const tmp9 = new prototype(obj, "No application.");
     throw tmp9;
   } else {
-    return importAll(6909).fetchUserEntitlementsForApplication(id);
+    return importAll(6930).fetchUserEntitlementsForApplication(id);
   }
 }
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);

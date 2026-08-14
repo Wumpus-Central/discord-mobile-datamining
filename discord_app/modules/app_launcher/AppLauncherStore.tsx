@@ -6,7 +6,7 @@ const require = arg1;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(9599).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(9612).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
@@ -17,7 +17,7 @@ function handleDismissWithDismissed() {
 function handleSetActiveCommand() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.COMMAND;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(9599).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(9612).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
@@ -25,7 +25,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-let obj = { show: false, entrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, lastShownEntrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: require("AppLauncherEntrypoint").AppLauncherCloseReason.DISMISSED, initialState: "Boolean" };
+let obj = { show: false, entrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, lastShownEntrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: require("AppLauncherEntrypoint").AppLauncherCloseReason.DISMISSED, initialState: "l" };
 class AppLauncherStore extends Store {
 }
 const prototype = AppLauncherStore.prototype;

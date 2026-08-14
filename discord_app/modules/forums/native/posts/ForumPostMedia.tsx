@@ -81,9 +81,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     obj = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = callback2(ref(11458), obj);
+    let tmp6Result = callback2(ref(11474), obj);
     let tmp12 = callback2;
-    const tmp19 = ref(11458);
+    const tmp19 = ref(11474);
   } else {
     if (tmp3Result.isAndroid()) {
       obj = {};
@@ -99,7 +99,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(500);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(5954).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(5975).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj2 = { style: null, ref: null, children: null };
@@ -109,12 +109,12 @@ function ForumPostMedia(obscureReason) {
         const obj3 = { androidRippleConfig: null, activeOpacity: 0, onPress: null, children: null };
         obj3[0] = ANDROID_FOREGROUND_RIPPLE;
         obj3[2] = function onPress() {
-          let obj = ref(7842);
-          obj = { entryPoint: obscureReason(7844).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
+          let obj = ref(7863);
+          obj = { entryPoint: obscureReason(7865).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
           const result = obj.showAgeVerificationGetStartedModal(obj);
         };
         obj3[3] = tmp6Result;
-        obj2[2] = tmp12(tmp3(4887).PressableOpacity, obj3);
+        obj2[2] = tmp12(tmp3(4909).PressableOpacity, obj3);
         let tmp12Result = tmp12(closure_5, obj2);
       }
       return tmp12Result;
@@ -136,7 +136,7 @@ function ForumPostMedia(obscureReason) {
       return onPressResult;
     };
     obj5[3] = tmp6Result;
-    obj4[2] = tmp12(tmp3(4887).PressableOpacity, obj5);
+    obj4[2] = tmp12(tmp3(4909).PressableOpacity, obj5);
     tmp12Result = tmp12(closure_5, obj4);
   } else {
     const obj6 = { style: null, ref: null, children: null };

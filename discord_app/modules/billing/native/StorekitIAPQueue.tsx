@@ -115,7 +115,7 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
     _queue.push(outer1_2(function*() {
       const dependencyMap = tmp3;
       let c3 = 1;
-      let obj1 = callback(7467);
+      let obj1 = callback(7488);
       obj1 = { skus: null };
       obj1[0] = outer1_0;
       const products = obj1.getProducts(obj1);

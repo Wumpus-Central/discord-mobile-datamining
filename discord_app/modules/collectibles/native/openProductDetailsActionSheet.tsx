@@ -35,7 +35,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9485, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9498, tmp2.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   let analyticsLocations;
@@ -46,5 +46,5 @@ export const openProductDetailsActionSheetForSku = function openProductDetailsAc
   let obj = openCollectiblesShop;
   obj.productDetailsOpened(skuId);
   obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9485, dependencyMap.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9498, dependencyMap.paths), c3, obj, stack);
 };

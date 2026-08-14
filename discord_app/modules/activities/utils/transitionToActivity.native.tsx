@@ -16,16 +16,16 @@ export default function transitionToActivity(arg0, _location) {
     const isModalOpenResult = tmpResult.isModalOpen(ChannelCallCameraPreview);
     let tmp4 = !isModalOpenResult;
     if (!isModalOpenResult) {
-      tmp4 = tmp15(10366)(embeddedActivityLocationChannelId);
+      tmp4 = tmp15(10380)(embeddedActivityLocationChannelId);
     }
     if (tmp4) {
-      tmp15(10946)(embeddedActivityLocationChannelId);
+      tmp15(10962)(embeddedActivityLocationChannelId);
     }
     selfEmbeddedActivityForLocation = selfEmbeddedActivityForLocation.getSelfEmbeddedActivityForLocation(_location);
     if (null != selfEmbeddedActivityForLocation) {
-      if (tmp15(10366)(embeddedActivityLocationChannelId)) {
-        let tmp15Result = tmp15(4538);
-        tmpResult = tmp(10615);
+      if (tmp15(10380)(embeddedActivityLocationChannelId)) {
+        let tmp15Result = tmp15(4570);
+        tmpResult = tmp(10631);
         obj = { applicationId: null, instanceId: null };
         ({ applicationId: obj5[0], compositeInstanceId: obj5[1] } = selfEmbeddedActivityForLocation);
         const participant = tmp15Result.selectParticipant(embeddedActivityLocationChannelId, tmpResult.getEmbeddedActivityParticipantId(obj));
@@ -33,8 +33,8 @@ export default function transitionToActivity(arg0, _location) {
         tmp15Result.hideActionSheet();
         setVoiceChatDrawerState(embeddedActivityLocationChannelId, VoiceChatDrawerState.CLOSED);
       } else {
-        const result = tmp(10588).updateActivityPanelMode(ActivityPanelModes.PANEL);
-        const tmpResult1 = tmp(10588);
+        const result = tmp(10604).updateActivityPanelMode(ActivityPanelModes.PANEL);
+        const tmpResult1 = tmp(10604);
       }
     }
   }

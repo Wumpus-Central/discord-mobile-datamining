@@ -40,7 +40,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         result = result1;
       }
       obj[1] = !result;
-      const activityApplications = tmp(11482).useActivityApplications(obj);
+      const activityApplications = tmp(11498).useActivityApplications(obj);
       let flag = false;
       for (const item10042 of activityApplications) {
         if (null != stateFromStores.getEntry(item10042.id)) {
@@ -60,7 +60,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
     }
   }
   let obj2 = channelId(589);
-  let tmp7 = callback(channelId(6065).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
+  let tmp7 = callback(channelId(6086).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
   obj = { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };
   return obj;
 };

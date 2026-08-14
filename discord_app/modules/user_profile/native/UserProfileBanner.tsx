@@ -5,21 +5,12 @@ import { View } from "get ActivityIndicator";
 import { BANNER_HEIGHT } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "n";
 
 let error;
 let metroImportAll;
 const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
-createCacheKey = { bannerContainer: { position: "relative" }, gifTag: null, gifTagText: null };
-createCacheKey = { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto", backgroundColor: null };
-const importDefaultResultResult = require("n")(require("Themes").unsafe_rawColors.WHITE);
-createCacheKey[5] = require("n")(require("Themes").unsafe_rawColors.WHITE).alpha(0.9).css();
-createCacheKey[1] = createCacheKey;
-const alphaResult = require("n")(require("Themes").unsafe_rawColors.WHITE).alpha(0.9);
-createCacheKey[2] = { color: require("Themes").unsafe_rawColors.PRIMARY_800, fontSize: 14 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").unsafe_rawColors.PRIMARY_800, fontSize: 14 };
+let closure_9 = createCacheKey.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");
 
 export default function UserProfileBanner(displayProfile) {
@@ -48,7 +39,7 @@ export default function UserProfileBanner(displayProfile) {
   let closure_8;
   let source;
   const tmp = source();
-  const GifAutoPlay = displayProfile(bannerSafeArea[8]).GifAutoPlay;
+  const GifAutoPlay = displayProfile(bannerSafeArea[6]).GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
   const tmp5 = bannerHeight(React.useState(false), 2);
   first = tmp5[0];
@@ -57,7 +48,7 @@ export default function UserProfileBanner(displayProfile) {
   if (!setting) {
     tmp7 = first;
   }
-  let tmp2Result = tmp2(tmp3[9]);
+  let tmp2Result = tmp2(tmp3[7]);
   let obj = { user: displayProfile.user, guildId: null, pendingAvatarSrc: null, displayProfile: null };
   let guildId;
   if (displayProfile != null) {
@@ -80,7 +71,7 @@ export default function UserProfileBanner(displayProfile) {
   }
   source = null;
   if (null != bannerURL) {
-    tmp2Result = tmp2(tmp3[10]);
+    tmp2Result = tmp2(tmp3[8]);
     source = tmp2Result.makeSource(bannerURL);
   }
   function renderBanner() {
@@ -109,7 +100,7 @@ export default function UserProfileBanner(displayProfile) {
     if (displayProfile != null) {
       banner = displayProfile.banner;
     }
-    return closure_7(outer1_1(bannerSafeArea[11]), obj, banner);
+    return closure_7(outer1_1(bannerSafeArea[9]), obj, banner);
   }
   const obj1 = { style: tmp.bannerContainer, children: null };
   if (tmp2Result1.isAnimatedImageURL(bannerURL)) {
@@ -119,20 +110,18 @@ export default function UserProfileBanner(displayProfile) {
         obj2[0] = function onPress() {
           callback(!first);
         };
-        const intl = tmp2(tmp3[13]).intl;
-        obj2[2] = intl.string(tmp2(tmp3[13]).t["3fzj/l"]);
+        const intl = tmp2(tmp3[11]).intl;
+        obj2[2] = intl.string(tmp2(tmp3[11]).t["3fzj/l"]);
         const items = [renderBanner(), ];
-        let tmp12Result = !tmp7;
+        let tmp12Result = null;
         if (!tmp7) {
-          const obj3 = { label: null, style: null, textStyle: null };
-          const intl2 = tmp2(tmp3[13]).intl;
-          obj3[0] = intl2.string(tmp2(tmp3[13]).t.I5gL2H);
-          ({ gifTag: obj8[1], gifTagText: obj8[2] } = tmp);
-          tmp12Result = tmp12(tmp2(tmp3[14]).Caption, obj3);
+          const obj3 = { style: null };
+          obj3[0] = tmp.gifTag;
+          tmp12Result = tmp12(importDefault(tmp3[12]), obj3);
         }
         items[1] = tmp12Result;
         obj2[3] = items;
-        let renderBannerResult = closure_8(tmp2(tmp3[12]).PressableOpacity, obj2);
+        let renderBannerResult = closure_8(tmp2(tmp3[10]).PressableOpacity, obj2);
         const tmp14 = closure_8;
       }
       obj1[1] = renderBannerResult;

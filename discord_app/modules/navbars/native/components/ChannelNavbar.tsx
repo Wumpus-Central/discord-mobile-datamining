@@ -438,7 +438,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(4805);
+    let tmp2Result = tmp2(4827);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;

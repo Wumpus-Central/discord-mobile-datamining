@@ -59,7 +59,7 @@ function SuggestionRow(suggestion) {
   obj[6] = function onPress() {
     return onSelect(suggestion.suggested_user.id);
   };
-  return callback(suggestion(8497).TableCheckboxRow, obj);
+  return callback(suggestion(8519).TableCheckboxRow, obj);
 }
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
@@ -103,7 +103,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   const tmp4 = first(React.useState(reduced), 2);
   first = tmp4[0];
   React = tmp4[1];
-  let obj3 = friendSuggestions(4761);
+  let obj3 = friendSuggestions(4783);
   const fontScale = obj3.useFontScale();
   const sum = onSubmit(712).space.PX_16 + onSubmit(712).space.PX_32 + 40;
   let items1 = [first];
@@ -185,13 +185,13 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj[0] = obj1;
   obj[1] = memo;
   obj[2] = callback1;
-  const items5 = [callback(friendSuggestions(7790).FlashList, obj), , ];
+  const items5 = [callback(friendSuggestions(7811).FlashList, obj), , ];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   const someResult = keys.some((arg0) => first[arg0]);
   obj2[1] = friendSuggestions(691).VerticalGradient.START;
   obj2[2] = friendSuggestions(691).VerticalGradient.END;
   obj2[4] = items;
-  items5[1] = callback(onSubmit(4766), obj2);
+  items5[1] = callback(onSubmit(4788), obj2);
   obj3 = { style: tmp.redesignButton, children: null };
   obj4 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1236).intl;
@@ -207,7 +207,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
   };
   obj4[4] = !someResult;
-  obj3[1] = callback(friendSuggestions(4755).Button, obj4);
+  obj3[1] = callback(friendSuggestions(4777).Button, obj4);
   items5[2] = callback(callback, obj3);
   obj[1] = items5;
   return callback2(callback, obj);

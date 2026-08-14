@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import TableRowGroupTitle from "TableRowGroupTitle";
 import { View } from "BottomSheetModal";
 import jsxProd from "jsxProd";
-import { BottomSheetModal } from "../../../../../../_runtime/05439_BottomSheetModal.js";
+import { BottomSheetModal } from "../../../../../../_runtime/05460_BottomSheetModal.js";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -27,7 +27,7 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      obj = { user: null, size: null, guildId: "Array" };
+      obj = { user: null, size: null, guildId: "r" };
       obj[0] = bot;
       obj[1] = tmp(1297).AvatarSizes.XSMALL;
       tmp6Result = tmp6(tmp(1297).Avatar, obj);
@@ -41,7 +41,7 @@ function IdentityApplicationRow(arg0) {
     }
     obj[2] = description;
     obj[3] = onPress;
-    return closure_6(tmp(5414).TableRow, obj);
+    return closure_6(tmp(5435).TableRow, obj);
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -83,7 +83,7 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(7010);
+  let tmp3Result = tmp3(7032);
   const platforms = tmp3Result.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
@@ -107,7 +107,7 @@ export default function SelectConnectionActionSheet(arg0) {
       let tmp = null;
       if (null != application) {
         let obj = { icon: null, label: null, subLabel: null, onPress: null };
-        obj = { user: null, size: null, guildId: "Array" };
+        obj = { user: null, size: null, guildId: "r" };
         obj[0] = application.bot;
         obj[1] = outer1_0(outer1_2[6]).AvatarSizes.XSMALL;
         obj[0] = outer1_6(outer1_0(outer1_2[6]).Avatar, obj);
@@ -163,7 +163,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const intl4 = tmp3(1236).intl;
     items.push(intl4.string(tmp3(1236).t.y3ZnnU));
   }
-  tmp3Result = tmp3(9005);
+  tmp3Result = tmp3(9019);
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
@@ -182,7 +182,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(9191).SegmentedControl, obj2);
+    obj1[0] = tmp2(tmp3(9205).SegmentedControl, obj2);
     let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;

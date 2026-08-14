@@ -8,7 +8,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "transitionTo";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/15755_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15773_registerAsset.js";
 import { useResourceChannels } from "../useResourceChannels.tsx";
 
 let c10;
@@ -36,9 +36,9 @@ function ResourceChannelRow(channelId) {
   const items2 = [reinjectEphemerals];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => outer1_8.getMessages(channelId));
   const firstResult = stateFromStores2.first();
-  let obj4 = channelId(8454);
+  let obj4 = channelId(8476);
   const forumPostMediaProperties = obj4.useForumPostMediaProperties(firstResult, false);
-  let obj5 = channelId(8454);
+  let obj5 = channelId(8476);
   let length;
   const firstMediaIsEmbed = obj5.useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
@@ -48,9 +48,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(11456);
+  let tmp2Result = tmp2(11472);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(15754)(firstResult);
+  const tmp11 = stateFromStores(15772)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -135,7 +135,7 @@ function ResourceChannelRow(channelId) {
               obj9[0] = stateFromStores;
               obj9[1] = first;
               obj9[2] = firstMediaIsEmbed;
-              tmp2Result = tmp2(8454);
+              tmp2Result = tmp2(8476);
               if (flag == null) {
                 flag = false;
               }
@@ -146,14 +146,14 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(11456).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(11472).ForumPostMediaThumbnail, obj9);
             }
           }
         }
       }
       items5[2] = tmp19Result2;
       obj[2] = items5;
-      return closure_13(tmp2(4887).PressableOpacity, obj);
+      return closure_13(tmp2(4909).PressableOpacity, obj);
     }
   }
   return null;
@@ -197,7 +197,7 @@ export default function GuildHomeResources(guildId) {
     };
     const intl2 = guildId(1236).intl;
     obj2[1] = intl2.string(guildId(1236).t["3iCBUn"]);
-    items[2] = callback(guildId(4755).Button, obj2);
+    items[2] = callback(guildId(4777).Button, obj2);
     obj[1] = items;
     let tmp6 = callback2(closure_4, obj);
   } else {

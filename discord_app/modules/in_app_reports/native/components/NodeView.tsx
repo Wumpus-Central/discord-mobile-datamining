@@ -122,7 +122,7 @@ function ChildItem(child) {
   const items2 = [closure_17(closure_6, obj1), callback2(Arrow, {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
-  return callback2(child(4887).PressableHighlight, obj);
+  return callback2(child(4909).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   let importDefault;

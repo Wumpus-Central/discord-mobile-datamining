@@ -386,7 +386,7 @@ export default function GiftCodeRedeemStart(giftCode) {
         obj21[1] = callback;
         let tmp30Result3 = null != tmp25;
         if (tmp30Result3) {
-          const obj22 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null, exposureLocation: "GiftCodeRedeemStart" };
+          const obj22 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
           obj22[0] = firstAvatarDecoration;
           obj22[1] = firstProfileEffect;
           obj22[2] = firstNameplate;

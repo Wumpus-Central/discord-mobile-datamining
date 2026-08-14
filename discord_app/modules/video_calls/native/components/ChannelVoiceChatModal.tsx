@@ -22,7 +22,7 @@ export default function ChannelVoiceChatModal(channel) {
     str = "";
   }
   const tmp5 = ModalStackNavigator;
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(4866).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(4888).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

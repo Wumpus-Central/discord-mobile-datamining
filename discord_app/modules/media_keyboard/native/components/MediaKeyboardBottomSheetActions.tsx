@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { n } from "../../../../../_runtime/00689_n.js";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
@@ -139,7 +139,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
       obj[3] = accessibilityLabel.text;
       items[1] = outer1_6(onHeightChange(4338).Text, obj);
       obj[6] = items;
-      return outer1_7(onHeightChange(4887).PressableOpacity, obj, arg1);
+      return outer1_7(onHeightChange(4909).PressableOpacity, obj, arg1);
     })
   });
   items2[1] = callback(closure_5, obj1);

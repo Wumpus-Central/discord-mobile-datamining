@@ -13,18 +13,11 @@ function _fetchAuthSessions() {
     const obj1 = { url: null, rejectWithError: false };
     obj1[0] = outer1_4.AUTH_SESSIONS;
     closure_0 = yield HTTP.get(obj1);
-    if (closure_0 != null) {
-      let ok = closure_0.ok;
+    const body = closure_0.body;
+    if (body != null) {
+      const user_sessions = body.user_sessions;
     }
-    if (ok) {
-      const body = closure_0.body;
-      let user_sessions;
-      if (body != null) {
-        user_sessions = body.user_sessions;
-      }
-      ok = null != user_sessions;
-    }
-    if (ok) {
+    if (null != user_sessions) {
       const obj = callback(709);
       const obj4 = { type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: null };
       obj4[1] = closure_0.body.user_sessions;
@@ -76,9 +69,9 @@ function _logOutSessions() {
               return obj;
             } else {
               const table = tmp3;
-              let lib = tmp2;
+              let callback2 = tmp2;
               let HTTP;
-              lib = undefined;
+              callback2 = undefined;
               const _Array = Array;
               if (Array.isArray(items)) {
                 items = arr2;
@@ -109,25 +102,19 @@ function _logOutSessions() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            lib = arg1;
-            let ok;
-            if (lib != null) {
-              ok = lib.ok;
-            }
-            if (ok) {
-              obj = lib(table[3]);
-              const obj4 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: null };
-              obj4[1] = items;
-              obj.dispatch(obj4);
-            }
+            callback2 = arg1;
+            obj = callback2(table[3]);
+            const obj4 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: null };
+            obj4[1] = items;
+            obj.dispatch(obj4);
             constants = 3;
             const obj5 = { value: null, done: true };
-            obj5[0] = lib;
+            obj5[0] = callback2;
             return obj5;
           }
-        } catch (tmp22) {
+        } catch (tmp18) {
           constants = tmp;
-          throw tmp22;
+          throw tmp18;
         }
       }
     })();

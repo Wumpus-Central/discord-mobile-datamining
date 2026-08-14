@@ -182,7 +182,7 @@ function _trackAppUIViewedAsync() {
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", handleClearCaches);
             const obj8 = callback2(10);
-            callback(7180).ttiRecorded(getHash);
+            callback(7202).ttiRecorded(getHash);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -204,7 +204,7 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F120289 */ function() { ... });
+                  callback(9).setTTICallback(/* F120437 */ function() { ... });
                   callback3();
                   let c25 = null;
                 }, 15 * callback(687).Millis.SECOND);
@@ -458,7 +458,7 @@ function _trackAppUIViewed() {
           obj4[0] = arg1;
           return obj4;
         } else {
-          const cumulativeCPUUsage = callback(7181).getCumulativeCPUUsage();
+          const cumulativeCPUUsage = callback(7203).getCumulativeCPUUsage();
           let usage;
           if (cumulativeCPUUsage != null) {
             usage = cumulativeCPUUsage.usage;
@@ -489,7 +489,7 @@ function _trackAppUIViewed() {
           obj3.track(APP_UI_VIEWED2.APP_UI_VIEWED2, theme, { logEventProperties: true });
           let closure_26 = theme;
           if (alertStartupMetrics.alertStartupMetrics) {
-            obj4 = callback(4684);
+            obj4 = callback(4706);
             const obj5 = { importer: null };
             obj5[0] = function importer() {
               return callback(paths[28])(paths[27], paths.paths).then((arg0) => {
@@ -509,7 +509,7 @@ function _trackAppUIViewed() {
             };
             obj4.openLazy(obj5);
           }
-          const obj14 = callback(7181);
+          const obj14 = callback(7203);
           if (obj7.runningTTIAutomation()) {
             (function logToDevice(json) {
               let obj = {};

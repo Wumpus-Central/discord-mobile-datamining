@@ -5,8 +5,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08779_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16075_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08793_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16093_registerAsset.js";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 let c4;
@@ -93,14 +93,14 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     const tmp = outer1_2;
     const result = markAsDismissed(outer1_2[17]).navigateToAppIconSettings();
   };
-  const items5 = [callback(markAsDismissed(4755).Button, obj7), ];
+  const items5 = [callback(markAsDismissed(4777).Button, obj7), ];
   const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
   obj8[1] = intl4.string(markAsDismissed(1236).t.iSrIIZ);
   obj8[2] = callback;
-  items5[1] = callback(markAsDismissed(4755).Button, obj8);
+  items5[1] = callback(markAsDismissed(4777).Button, obj8);
   obj6[1] = items5;
   items4[1] = callback2(closure_5, obj6);
   obj[2] = items4;
-  return callback2(markAsDismissed(5437).BottomSheet, obj);
+  return callback2(markAsDismissed(5458).BottomSheet, obj);
 };

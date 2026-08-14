@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10791_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10807_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
@@ -77,8 +77,8 @@ function ChannelBenefitRow(benefit) {
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
-    channelIcon = tmp2(4805).getChannelIcon(channelWithTemplateFallback);
-    const tmp2Result = tmp2(4805);
+    channelIcon = tmp2(4827).getChannelIcon(channelWithTemplateFallback);
+    const tmp2Result = tmp2(4827);
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

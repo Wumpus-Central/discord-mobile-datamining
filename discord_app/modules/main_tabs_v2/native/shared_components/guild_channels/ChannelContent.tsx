@@ -94,13 +94,13 @@ function ChannelContentComponent(arg0) {
     if (tmp10Result) {
       const obj6 = { size: "xxs", color: "icon-muted", style: null };
       obj6[2] = tmp.channelTraitIcon;
-      tmp10Result = tmp10(tmp2(4864).LockIcon, obj6);
+      tmp10Result = tmp10(tmp2(4886).LockIcon, obj6);
     }
     const items3 = [tmp10Result, , ];
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(8007).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(8028).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {

@@ -110,6 +110,11 @@ export default {
         }
         obj[5] = id;
         obj.trackWithMetadata(outer1_7.INVITE_SENT, obj);
+        const activitySessionKey = activity(channel[9]).getActivitySessionKey(tmp2);
+        if (null != activitySessionKey) {
+          activity(tmp[10]).markChannelInvited(activitySessionKey, tmp5.id);
+          const tmp8Result = activity(tmp[10]);
+        }
         return Promise.resolve(channel);
       }, (arg0) => Promise.reject(arg0));
     }

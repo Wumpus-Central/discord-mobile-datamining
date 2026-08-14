@@ -12,13 +12,13 @@ export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSetti
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16716);
+      return callback(16732);
     },
     darker() {
-      return callback(16717);
+      return callback(16733);
     },
     light() {
-      return callback(16718);
+      return callback(16734);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSetti
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16716);
+      return callback(16732);
     },
     darker() {
-      return callback(16717);
+      return callback(16733);
     },
     light() {
-      return callback(16718);
+      return callback(16734);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16716);
+      return callback(16732);
     },
     darker() {
-      return callback(16717);
+      return callback(16733);
     },
     light() {
-      return callback(16718);
+      return callback(16734);
     }
   };
   obj = {};

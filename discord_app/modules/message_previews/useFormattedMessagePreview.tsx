@@ -377,9 +377,9 @@ function formatMessagePreview(type, isBlocked) {
                 tmp21 = obj50;
               } else if (type.type === tmp4(686).MessageTypes.VOICE_SESSION) {
                 const obj52 = { type: "text", text: null };
-                obj52[1] = tmp4(8216).getVoiceSessionMessageContent(type);
+                obj52[1] = tmp4(8237).getVoiceSessionMessageContent(type);
                 tmp21 = obj52;
-                const tmp4Result = tmp4(8216);
+                const tmp4Result = tmp4(8237);
               }
             }
           }
@@ -440,7 +440,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
     return user;
   });
-  tmpResult = tmp(4573);
+  tmpResult = tmp(4595);
   obj = { message, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmpResult.useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 };
   return formatMessagePreview(message, obj);
 };

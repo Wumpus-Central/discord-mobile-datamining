@@ -184,7 +184,7 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let closure_12 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_13 = { [arg1(5816).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_13 = { [arg1(5837).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 let closure_16 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
 const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   let customStatusActivity;

@@ -2,7 +2,7 @@
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";

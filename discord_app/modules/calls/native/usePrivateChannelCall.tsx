@@ -19,7 +19,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
     if (null != channel) {
       if (channel.isPrivate()) {
         let obj = { text: null, accessibilityHint: null, inCall: null };
-        ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(9680)(channel, callback2));
+        ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(9691)(channel, callback2));
         return obj;
       }
     }
@@ -108,8 +108,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = obj1.isPrivate();
           }
           if (isPrivateResult) {
-            outer1_1(9680)(channel, closure_1).onPress();
-            const obj3 = outer1_1(9680)(channel, closure_1);
+            outer1_1(9691)(channel, closure_1).onPress();
+            const obj3 = outer1_1(9691)(channel, closure_1);
           }
           if (dependencyMap != null) {
             dependencyMap();

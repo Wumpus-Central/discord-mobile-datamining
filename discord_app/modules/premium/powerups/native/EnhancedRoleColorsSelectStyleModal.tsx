@@ -117,9 +117,9 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             message.message.roleColor = undefined;
             const result = outer2_0(1986).extractColorStringsFromServerColors(id.colors);
             const obj = outer2_0(1986);
-            message.message.roleColors = outer2_0(8115).processColorStrings(result);
+            message.message.roleColors = outer2_0(8136).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = outer2_1(12637);
+            message.message.avatarURL = outer2_1(12655);
           }
         };
         const items1 = [outer1_9(outer1_1(_undefined[16]), obj), ];

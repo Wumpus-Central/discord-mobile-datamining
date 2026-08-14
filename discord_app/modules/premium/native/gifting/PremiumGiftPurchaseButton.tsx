@@ -36,7 +36,7 @@ function RewardPreview(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp3.nameplateWrapper;
     const obj1 = { nameplate: null, fullOpacity: true, animate: true };
-    let tmpResult = tmp(9440);
+    let tmpResult = tmp(9454);
     let obj8 = getNameplateData;
     obj1[0] = obj8.getNameplateData(collectiblesItem);
     obj[1] = callback(tmpResult, obj1);
@@ -60,7 +60,7 @@ function RewardPreview(arg0) {
     if (isAvatarDecorationRecord(collectiblesItem)) {
       obj = { style: null, useAngle: true, angle: null, angleCenter: null, colors: null };
       obj[0] = tmp3.selectedRewardBannerGradient;
-      tmpResult = tmp(4766);
+      tmpResult = tmp(4788);
       if (gradientAngle == null) {
         gradientAngle = 90;
       }
@@ -74,7 +74,7 @@ function RewardPreview(arg0) {
       const obj7 = { size: null, asset: null };
       obj7[0] = Button.AvatarSizes.NORMAL;
       obj7[1] = collectiblesItem.asset;
-      obj6[1] = callback(tmp(10165), obj7);
+      obj6[1] = callback(tmp(10177), obj7);
       items1[1] = callback(closure_5, obj6);
       obj8 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
       obj8[0] = tmp3.selectedRewardText;
@@ -85,7 +85,7 @@ function RewardPreview(arg0) {
       tmp7Result = callback2(closure_13, obj5);
       const tmp7 = callback2;
       const tmp8 = closure_13;
-      const tmpResult1 = tmp(10165);
+      const tmpResult1 = tmp(10177);
     }
   }
   return tmp7Result;
@@ -93,7 +93,7 @@ function RewardPreview(arg0) {
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, chooseRewardContainer: null, gradientBackdrop: null, chooseRewardText: null, backgroundImage: null, inAppFlowImage: null, inAppFlowImageLargeTilted: null, singleAvatarContainer: null, selectedRewardRow: null, selectedRewardBannerContainer: null, selectedRewardBannerGradient: null, selectedRewardText: null, nameplateWrapper: null };
+  let obj = { container: null, chooseRewardContainer: null, gradientBackdrop: null, chooseRewardText: null, backgroundImage: null, inAppFlowImage: null, inAppFlowImageLargeTilted: null, singleAvatarContainer: null, selectedRewardRow: null, selectedRewardBannerContainer: null, selectedRewardBannerGradient: null, selectedRewardText: null, nameplateWrapper: null, promoDetails: null };
   obj = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_12 + arg0, paddingHorizontal: Themes.space.PX_16, gap: Themes.space.PX_8 };
   const merged = Object.assign(Themes.shadows.SHADOW_TOP_HIGH);
   obj[0] = obj;
@@ -125,6 +125,8 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
   obj[11] = { flex: 1 };
   const obj3 = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_16 };
   obj[12] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: Themes.radii.sm, overflow: "hidden" };
+  const obj5 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: Themes.radii.sm, overflow: "hidden" };
+  obj[13] = { paddingVertical: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16, borderRadius: Themes.radii.md, backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
   return obj;
 });
 const result = require("map").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseButton.tsx");
@@ -150,7 +152,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   let tmp3 = callback3(useSafeAreaInsetsKeyboardAware().insets.bottom);
   let obj = defaultSelection(1499);
   importDefault = obj.useNavigation();
-  let obj1 = defaultSelection(9660);
+  let obj1 = defaultSelection(9671);
   const nativeGiftContext = obj1.useNativeGiftContext();
   ({ onPurchase: c2, isPurchasing, allRewards: c3, claimableRewards } = nativeGiftContext);
   selectedGiftingPromotionReward = nativeGiftContext.selectedGiftingPromotionReward;
@@ -159,7 +161,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   let obj2 = defaultSelection(589);
   let items = [c9];
   const stateFromStores = obj2.useStateFromStores(items, () => _undefined3.getCurrentUser());
-  let obj3 = defaultSelection(7466);
+  let obj3 = defaultSelection(7487);
   const canPurchaseIAP = obj3.useCanPurchaseIAP(productId);
   let obj4 = defaultSelection(589);
   let items1 = [c10];
@@ -193,14 +195,16 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     tmp12 = null == selectedGiftingPromotionReward;
   }
   c10 = tmp12;
-  const GiftingBadgeExperiment = tmp4(9627).GiftingBadgeExperiment;
+  let tmpResult = tmp(10102);
+  const config = tmpResult.useConfig({ location: "PremiumGiftPurchaseButton" });
+  const GiftingBadgeExperiment = tmp4(9638).GiftingBadgeExperiment;
   let tmp4Result = tmp4(589);
   const items2 = [setSelectedGiftingPromotionReward];
   const stateFromStoresObject = tmp4Result.useStateFromStoresObject(items2, () => {
     let getNextTier;
     let getRemainingToNextTier;
     ({ getNextTier, getRemainingToNextTier } = setSelectedGiftingPromotionReward);
-    return { nextTier: getNextTier(defaultSelection(_undefined[27]).BadgeId.GIFTING), giftsToNextTier: getRemainingToNextTier(defaultSelection(_undefined[27]).BadgeId.GIFTING) };
+    return { nextTier: getNextTier(defaultSelection(_undefined[29]).BadgeId.GIFTING), giftsToNextTier: getRemainingToNextTier(defaultSelection(_undefined[29]).BadgeId.GIFTING) };
   });
   const nextTier = stateFromStoresObject.nextTier;
   const items3 = [tmp10, claimableRewards, setSelectedGiftingPromotionReward];
@@ -219,15 +223,15 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   if (colors == null) {
     colors = [];
   }
-  let tmp15 = colors;
+  let tmp16 = colors;
   if (colors.length <= 0) {
     const _String = String;
     const items4 = [String(tmp(712).colors.BACKGROUND_BRAND), ];
     const _String2 = String;
     items4[1] = String(tmp(712).colors.BACKGROUND_BRAND);
-    tmp15 = items4;
+    tmp16 = items4;
   }
-  tmp4Result = tmp4(10160);
+  tmp4Result = tmp4(10172);
   const product = tmp4Result.useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
   const intl = tmp4(1236).intl;
   const string = intl.string;
@@ -245,28 +249,101 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   if (stateFromStores1 != null) {
     prop = stateFromStores1.mobileBackgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl = defaultSelection(10087).useThemeAndReducedMotionAwareAssetUrl(prop);
-  const tmp4Result1 = defaultSelection(10087);
+  const themeAndReducedMotionAwareAssetUrl = defaultSelection(10099).useThemeAndReducedMotionAwareAssetUrl(prop);
+  const tmp4Result1 = defaultSelection(10099);
   let asset;
   if (stateFromStores1 != null) {
     asset = stateFromStores1.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = defaultSelection(10087).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const themeAndReducedMotionAwareAssetUrl1 = defaultSelection(10099).useThemeAndReducedMotionAwareAssetUrl(asset);
   let first;
   if (product != null) {
     first = product.items[0];
   }
   obj = { style: tmp3.container, children: null };
+  if (tmp11) {
+    if (config.enabled) {
+      if (selectedGiftingPromotionReward === tmp4(10178).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID) {
+        obj = { style: null, imageUrl: null, title: null, subtitle: null };
+        obj[0] = tmp3.promoDetails;
+        obj[1] = themeAndReducedMotionAwareAssetUrl1;
+        tmpResult = tmp(10105);
+        const intl4 = tmp4(1236).intl;
+        obj[2] = intl4.string(tmp(2367)["P+DDLh"]);
+        const intl5 = tmp4(1236).intl;
+        obj[3] = intl5.string(tmp(2367).dOZh6X);
+        let tmp27Result = callback(tmpResult, obj);
+      }
+      const items5 = [tmp27Result, , ];
+      let tmp41 = !tmp12;
+      if (!tmp12) {
+        obj1 = { variant: "text-sm/normal", children: null };
+        const intl6 = tmp4(1236).intl;
+        obj2 = { paidURL: null };
+        obj2[0] = tmp(1993).getArticleURL(HelpdeskArticles.PAID_TERMS);
+        obj1[1] = intl6.format(tmp4(1236).t.hYoGUM, obj2);
+        tmp41 = callback(tmp4(4338).Text, obj1);
+        const tmpResult1 = tmp(1993);
+      }
+      items5[1] = tmp41;
+      obj3 = { loading: null, variant: null, text: null, disabled: null, onPress: null };
+      obj3[0] = isPurchasing;
+      obj3[1] = str;
+      obj3[2] = stringResult;
+      let tmp45 = !canPurchaseIAP;
+      if (canPurchaseIAP) {
+        tmp45 = isPurchasing;
+      }
+      obj3[3] = tmp45;
+      let fn;
+      if (!isPurchasing) {
+        fn = () => {
+          let obj = defaultSelection(_undefined[43]);
+          obj.dismissKeyboard();
+          if (c10) {
+            if (c8) {
+              if (c8) {
+                _undefined2(tmp(tmp2[30]).PaymentFlowStep.REWARD_SKU_SELECT);
+                obj = { defaultHighlightedReward: null, allRewards: null, claimableRewards: null, onSelect: null };
+                obj[0] = defaultSelection;
+                let items = c3;
+                if (c3 == null) {
+                  items = [];
+                }
+                obj[1] = items;
+                let items1 = claimableRewards;
+                if (claimableRewards == null) {
+                  items1 = [];
+                }
+                obj[2] = items1;
+                obj[3] = function onSelect(arg0) {
+                  callback(arg0);
+                  navigation.navigate(outer1_0(outer1_2[31]).PremiumGiftScreens.CUSTOMIZATION);
+                };
+                navigation.navigate(tmp(tmp2[31]).PremiumGiftScreens.REWARD_SELECT, obj);
+              }
+            }
+          }
+          _undefined(() => {
+            navigation.navigate(outer1_0(outer1_2[31]).PremiumGiftScreens.SUCCESS);
+          });
+        };
+      }
+      obj3[4] = fn;
+      items5[2] = callback(tmp4(4777).Button, obj3);
+      obj[1] = items5;
+      return tmp24(tmp25, obj);
+    }
+  }
   if (tmp12) {
     if (tmp9) {
-      obj = { style: null, children: null };
-      obj[0] = tmp3.chooseRewardContainer;
-      obj1 = { style: null, pointerEvents: "none", children: null };
-      obj1[0] = tmp3.gradientBackdrop;
-      obj2 = { style: null, useAngle: true, angle: null, angleCenter: null, colors: null };
-      obj2[0] = claimableRewards.absoluteFillObject;
+      obj4 = { style: null, children: null };
+      obj4[0] = tmp3.chooseRewardContainer;
+      const obj5 = { style: null, pointerEvents: "none", children: null };
+      obj5[0] = tmp3.gradientBackdrop;
+      const obj6 = { style: null, useAngle: true, angle: null, angleCenter: null, colors: null };
+      obj6[0] = claimableRewards.absoluteFillObject;
       let num3;
-      let tmpResult = tmp(4766);
       if (stateFromStores1 != null) {
         const gradient3 = stateFromStores1.gradient;
         if (gradient3 != null) {
@@ -276,118 +353,60 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
       if (num3 == null) {
         num3 = 90;
       }
-      obj2[2] = num3;
-      obj2[3] = { x: 0.5, y: 0.5 };
-      obj2[4] = colors;
-      const items5 = [callback(tmpResult, obj2), ];
-      let tmp32Result = null != themeAndReducedMotionAwareAssetUrl;
-      if (tmp32Result) {
-        obj3 = { style: null, resizeMode: "cover", source: null };
-        obj3[0] = tmp3.backgroundImage;
-        obj4 = { uri: null };
-        obj4[0] = themeAndReducedMotionAwareAssetUrl;
-        obj3[2] = obj4;
-        tmp32Result = tmp32(tmp(5308), obj3);
+      obj6[2] = num3;
+      obj6[3] = { x: 0.5, y: 0.5 };
+      obj6[4] = colors;
+      const items6 = [callback(tmp(4788), obj6), ];
+      let tmp33Result = null != themeAndReducedMotionAwareAssetUrl;
+      if (tmp33Result) {
+        const obj7 = { style: null, resizeMode: "cover", source: null };
+        obj7[0] = tmp3.backgroundImage;
+        const obj8 = { uri: null };
+        obj8[0] = themeAndReducedMotionAwareAssetUrl;
+        obj7[2] = obj8;
+        tmp33Result = tmp33(tmp(5329), obj7);
       }
-      items5[1] = tmp32Result;
-      obj1[2] = items5;
-      const items6 = [tmp23(tmp24, obj1), , ];
-      tmp32Result = null != themeAndReducedMotionAwareAssetUrl1;
-      if (tmp32Result) {
-        let inAppFlowImageLargeTilted = assetVariant === tmp4(7406).GiftCustomizationBanner_AssetVariant.LARGE_TILTED;
-        const items7 = [tmp3.inAppFlowImage, ];
-        tmpResult = tmp(5308);
+      items6[1] = tmp33Result;
+      obj5[2] = items6;
+      const items7 = [tmp24(tmp25, obj5), , ];
+      tmp33Result = null != themeAndReducedMotionAwareAssetUrl1;
+      if (tmp33Result) {
+        let inAppFlowImageLargeTilted = assetVariant === tmp4(7427).GiftCustomizationBanner_AssetVariant.LARGE_TILTED;
+        const items8 = [tmp3.inAppFlowImage, ];
         if (inAppFlowImageLargeTilted) {
           inAppFlowImageLargeTilted = tmp3.inAppFlowImageLargeTilted;
         }
-        const obj5 = { style: null, resizeMode: "contain", source: null };
-        items7[1] = inAppFlowImageLargeTilted;
-        obj5[0] = items7;
-        const obj6 = { uri: null };
-        obj6[0] = themeAndReducedMotionAwareAssetUrl1;
-        obj5[2] = obj6;
-        tmp32Result = tmp32(tmpResult, obj5);
+        const obj9 = { style: null, resizeMode: "contain", source: null };
+        items8[1] = inAppFlowImageLargeTilted;
+        obj9[0] = items8;
+        const obj10 = { uri: null };
+        obj10[0] = themeAndReducedMotionAwareAssetUrl1;
+        obj9[2] = obj10;
+        tmp33Result = tmp33(tmp(5329), obj9);
+        const tmpResult3 = tmp(5329);
       }
-      items6[1] = tmp32Result;
-      const obj7 = { style: null, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-      obj7[0] = tmp3.chooseRewardText;
+      items7[1] = tmp33Result;
+      const obj11 = { style: null, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
+      obj11[0] = tmp3.chooseRewardText;
       const intl3 = tmp4(1236).intl;
-      obj7[3] = intl3.string(tmp4(1236).t.cMiNit);
-      items6[2] = callback(tmp4(4338).Text, obj7);
-      obj[1] = items6;
-      let tmp26Result = tmp23(tmp24, obj);
+      obj11[3] = intl3.string(tmp4(1236).t.cMiNit);
+      items7[2] = callback(tmp4(4338).Text, obj11);
+      obj4[1] = items7;
+      tmp27Result = tmp24(tmp25, obj4);
+      const tmpResult2 = tmp(4788);
     }
-    const items8 = [tmp26Result, , ];
-    let tmp38 = !tmp12;
-    if (!tmp12) {
-      const obj8 = { variant: "text-sm/normal", children: null };
-      const intl4 = tmp4(1236).intl;
-      const obj9 = { paidURL: null };
-      obj9[0] = tmp(1993).getArticleURL(HelpdeskArticles.PAID_TERMS);
-      obj8[1] = intl4.format(tmp4(1236).t.hYoGUM, obj9);
-      tmp38 = callback(tmp4(4338).Text, obj8);
-      const tmpResult1 = tmp(1993);
-    }
-    items8[1] = tmp38;
-    const obj10 = { loading: null, variant: null, text: null, disabled: null, onPress: null };
-    obj10[0] = isPurchasing;
-    obj10[1] = str;
-    obj10[2] = stringResult;
-    let tmp42 = !canPurchaseIAP;
-    if (canPurchaseIAP) {
-      tmp42 = isPurchasing;
-    }
-    obj10[3] = tmp42;
-    let fn;
-    if (!isPurchasing) {
-      fn = () => {
-        let obj = defaultSelection(_undefined[39]);
-        obj.dismissKeyboard();
-        if (c10) {
-          if (c8) {
-            if (c8) {
-              _undefined2(tmp(tmp2[28]).PaymentFlowStep.REWARD_SKU_SELECT);
-              obj = { defaultHighlightedReward: null, allRewards: null, claimableRewards: null, onSelect: null };
-              obj[0] = defaultSelection;
-              let items = c3;
-              if (c3 == null) {
-                items = [];
-              }
-              obj[1] = items;
-              let items1 = claimableRewards;
-              if (claimableRewards == null) {
-                items1 = [];
-              }
-              obj[2] = items1;
-              obj[3] = function onSelect(arg0) {
-                callback(arg0);
-                navigation.navigate(outer1_0(outer1_2[29]).PremiumGiftScreens.CUSTOMIZATION);
-              };
-              navigation.navigate(tmp(tmp2[29]).PremiumGiftScreens.REWARD_SELECT, obj);
-            }
-          }
-        }
-        _undefined(() => {
-          navigation.navigate(outer1_0(outer1_2[29]).PremiumGiftScreens.SUCCESS);
-        });
-      };
-    }
-    obj10[4] = fn;
-    items8[2] = callback(tmp4(4755).Button, obj10);
-    obj[1] = items8;
-    return tmp23(tmp24, obj);
   }
   if (null != first) {
     if (tmp11) {
       if (null != selectedGiftingPromotionReward) {
-        const obj11 = { style: null, children: null };
-        obj11[0] = tmp3.selectedRewardRow;
         const obj12 = { style: null, children: null };
-        obj12[0] = tmp3.selectedRewardBannerContainer;
-        const obj13 = { collectiblesItem: null, currentUser: null, gradientColors: null, gradientAngle: null };
-        obj13[0] = first;
-        obj13[1] = stateFromStores;
-        obj13[2] = tmp15;
+        obj12[0] = tmp3.selectedRewardRow;
+        const obj13 = { style: null, children: null };
+        obj13[0] = tmp3.selectedRewardBannerContainer;
+        const obj14 = { collectiblesItem: null, currentUser: null, gradientColors: null, gradientAngle: null };
+        obj14[0] = first;
+        obj14[1] = stateFromStores;
+        obj14[2] = tmp16;
         let angle;
         if (stateFromStores1 != null) {
           const gradient2 = stateFromStores1.gradient;
@@ -395,19 +414,19 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
             angle = gradient2.angle;
           }
         }
-        obj13[3] = angle;
-        obj12[1] = callback(RewardPreview, obj13);
-        const items9 = [callback(tmp24, obj12), ];
-        let tmp28Result = !tmp10;
+        obj14[3] = angle;
+        obj13[1] = callback(RewardPreview, obj14);
+        const items9 = [callback(tmp25, obj13), ];
+        let tmp29Result = !tmp10;
         if (!tmp10) {
-          const obj14 = { variant: "tertiary", size: "sm", icon: null, accessibilityLabel: null, onPress: null };
-          obj14[2] = tmp28(tmp4(9721).PencilIcon, { size: "sm" });
+          const obj15 = { variant: "tertiary", size: "sm", icon: null, accessibilityLabel: null, onPress: null };
+          obj15[2] = tmp29(tmp4(9732).PencilIcon, { size: "sm" });
           const intl2 = tmp4(1236).intl;
-          obj14[3] = intl2.string(tmp4(1236).t.bt75uw);
-          obj14[4] = function onPress() {
+          obj15[3] = intl2.string(tmp4(1236).t.bt75uw);
+          obj15[4] = function onPress() {
             let tmp = selectedGiftingPromotionReward;
             if (c8) {
-              _undefined2(defaultSelection(_undefined[28]).PaymentFlowStep.REWARD_SKU_SELECT);
+              _undefined2(defaultSelection(_undefined[30]).PaymentFlowStep.REWARD_SKU_SELECT);
               if (null == tmp) {
                 tmp = defaultSelection;
               }
@@ -425,38 +444,38 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
               obj[2] = items1;
               obj[3] = function onSelect(arg0) {
                 callback(arg0);
-                navigation.navigate(outer1_0(outer1_2[29]).PremiumGiftScreens.CUSTOMIZATION);
+                navigation.navigate(outer1_0(outer1_2[31]).PremiumGiftScreens.CUSTOMIZATION);
               };
-              navigation.navigate(defaultSelection(_undefined[29]).PremiumGiftScreens.REWARD_SELECT, obj);
+              navigation.navigate(defaultSelection(_undefined[31]).PremiumGiftScreens.REWARD_SELECT, obj);
               const tmp3 = defaultSelection;
               const tmp4 = _undefined;
             }
           };
-          tmp28Result = tmp28(tmp4(7796).IconButton, obj14);
+          tmp29Result = tmp29(tmp4(7817).IconButton, obj15);
         }
-        items9[1] = tmp28Result;
-        obj11[1] = items9;
-        tmp26Result = tmp23(tmp24, obj11);
-        const tmp29 = RewardPreview;
+        items9[1] = tmp29Result;
+        obj12[1] = items9;
+        tmp27Result = tmp24(tmp25, obj12);
+        const tmp30 = RewardPreview;
       }
     }
   }
-  tmp26Result = null;
+  tmp27Result = null;
   if (GiftingBadgeExperiment.useConfig({ location: "PremiumGiftPurchaseButton" }).enabled) {
-    tmp26Result = null;
+    tmp27Result = null;
     if (null != nextTier) {
-      const obj15 = { giftsToNextTier: null, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
-      obj15[0] = stateFromStoresObject.giftsToNextTier;
+      const obj16 = { giftsToNextTier: null, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
+      obj16[0] = stateFromStoresObject.giftsToNextTier;
       let str2 = nextTier.name;
       if (str2 == null) {
         str2 = "";
       }
-      obj15[1] = str2;
-      obj15[2] = nextTier.simple_icon_url;
-      obj15[3] = tmp(5788).PREMIUM_GIFT_CUSTOMIZATION;
-      tmp26Result = callback(tmp(10094), obj15);
-      const tmp26 = callback;
-      const tmpResult2 = tmp(10094);
+      obj16[1] = str2;
+      obj16[2] = nextTier.simple_icon_url;
+      obj16[3] = tmp(5809).PREMIUM_GIFT_CUSTOMIZATION;
+      tmp27Result = callback(tmp(10106), obj16);
+      const tmp27 = callback;
+      const tmpResult4 = tmp(10106);
     }
   }
 };

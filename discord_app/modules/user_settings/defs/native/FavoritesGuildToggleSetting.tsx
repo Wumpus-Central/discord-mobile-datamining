@@ -2,6 +2,7 @@
 import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useFavoritesAccess } from "../../../favorites/FavoritesHooks.tsx";
+import { computeIsFavoritesGuildVisible } from "../../../favorites/hooks/useIsFavoritesGuildVisible.tsx";
 import { messagesProxy } from "../../../favorites/intl/FavoritesGuild.messages.js";
 
 const toggle = createToggle.createToggle({
@@ -13,7 +14,9 @@ const toggle = createToggle.createToggle({
   usePredicate() {
     return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
-  useValue: require("computeIsFavoritesGuildEnabled").useIsFavoritesGuildEnabled,
+  useValue() {
+    return computeIsFavoritesGuildVisible(false);
+  },
   onValueChange: require("getNextPositionFromChannels").setFavoritesGuildVisibilityFromSettings
 });
 const obj = {
@@ -25,7 +28,9 @@ const obj = {
   usePredicate() {
     return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
-  useValue: require("computeIsFavoritesGuildEnabled").useIsFavoritesGuildEnabled,
+  useValue() {
+    return computeIsFavoritesGuildVisible(false);
+  },
   onValueChange: require("getNextPositionFromChannels").setFavoritesGuildVisibilityFromSettings
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");

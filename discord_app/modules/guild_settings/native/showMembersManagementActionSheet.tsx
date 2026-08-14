@@ -20,7 +20,7 @@ export default function showMembersManagementActionSheet(guild) {
   };
   const items = [obj];
   if (canPrune == null) {
-    let tmpResult = tmp(5926);
+    let tmpResult = tmp(5947);
     canPrune = tmpResult.canPruneGuildMembers(guild, authStore.getCurrentUser());
   }
   if (canPrune) {
@@ -34,7 +34,7 @@ export default function showMembersManagementActionSheet(guild) {
     };
     items.push(obj);
   }
-  tmpResult = tmp(5801);
+  tmpResult = tmp(5822);
   const result = tmpResult.showSimpleActionSheet({ key: "GuildSettingsMembersMore", options: items, hasIcons: false });
 };
 export const getMembersManagementActions = function getMembersManagementActions(guild) {
@@ -53,8 +53,8 @@ export const getMembersManagementActions = function getMembersManagementActions(
   };
   const items = [obj];
   if (canPrune == null) {
-    canPrune = tmp(5926).canPruneGuildMembers(guild, authStore.getCurrentUser());
-    const tmpResult = tmp(5926);
+    canPrune = tmp(5947).canPruneGuildMembers(guild, authStore.getCurrentUser());
+    const tmpResult = tmp(5947);
   }
   if (canPrune) {
     obj = { label: null, action: null, variant: "destructive" };

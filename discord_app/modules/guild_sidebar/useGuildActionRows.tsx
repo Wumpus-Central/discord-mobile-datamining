@@ -79,9 +79,6 @@ export default function useGuildActionRows(id) {
         let items2 = [tmp3(1377).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
-      if (canUseGuildSpace) {
-        items3.push(ChannelListGuildActionRow.GUILD_SPACE);
-      }
       if (hasItem) {
         items3.push(ChannelListGuildActionRow.GUILD_HUB_HEADER_OPTIONS);
       }
@@ -92,12 +89,15 @@ export default function useGuildActionRows(id) {
               if (stateFromStores.length > 0) {
                 items3.push(ChannelListGuildActionRow.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR);
               }
-              let tmp38 = !hasItem;
+              let tmp36 = !hasItem;
               if (!hasItem) {
-                tmp38 = canSeeOnboardingHome;
+                tmp36 = canSeeOnboardingHome;
               }
-              if (tmp38) {
+              if (tmp36) {
                 items3.push(ChannelListGuildActionRow.GUILD_HOME);
+              }
+              if (canUseGuildSpace) {
+                items3.push(ChannelListGuildActionRow.GUILD_SPACE);
               }
               if (tmp2) {
                 items3.push(ChannelListGuildActionRow.GUILD_SCHEDULED_EVENTS);
@@ -146,11 +146,11 @@ export default function useGuildActionRows(id) {
           }
         }
       }
-      let tmp35 = id.premiumProgressBarEnabled && mobileBoostProgressBarEnabled;
-      if (tmp35) {
-        tmp35 = tmp20 > 0;
+      let tmp33 = id.premiumProgressBarEnabled && mobileBoostProgressBarEnabled;
+      if (tmp33) {
+        tmp33 = tmp20 > 0;
       }
-      if (tmp35) {
+      if (tmp33) {
         items3.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
       }
     }

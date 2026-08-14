@@ -59,8 +59,8 @@ function SurveyOverrideActionSheet() {
   }), 2);
   const first = tmp[0];
   let obj = { header: null, children: null };
-  obj[0] = callback2(first(5436).BottomSheetTitleHeader, { title: "Survey Override" });
-  const items = [callback2(first(7835).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
+  obj[0] = callback2(first(5457).BottomSheetTitleHeader, { title: "Survey Override" });
+  const items = [callback2(first(7856).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -85,9 +85,9 @@ function SurveyOverrideActionSheet() {
     }
     outer1_1(outer1_3[16]).hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = callback2(first(4755).Button, obj);
+  items[1] = callback2(first(4777).Button, obj);
   obj[1] = items;
-  return closure_10(first(5804).ActionSheet, obj);
+  return closure_10(first(5825).ActionSheet, obj);
 }
 function SurveyInfo() {
   let obj = initialize;
@@ -138,8 +138,8 @@ function ChangelogOverrideActionSheet() {
   const tmp = callback(importAllResult.useState(() => handleUserSettingsProtoStoreChange.overrideId()), 2);
   const first = tmp[0];
   let obj = { header: null, children: null };
-  obj[0] = callback2(first(5436).BottomSheetTitleHeader, { title: "Changelog Override" });
-  const items = [callback2(first(7835).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
+  obj[0] = callback2(first(5457).BottomSheetTitleHeader, { title: "Changelog Override" });
+  const items = [callback2(first(7856).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";
@@ -164,9 +164,9 @@ function ChangelogOverrideActionSheet() {
     }
     outer1_1(outer1_3[16]).hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = callback2(first(4755).Button, obj);
+  items[1] = callback2(first(4777).Button, obj);
   obj[1] = items;
-  return closure_10(first(5804).ActionSheet, obj);
+  return closure_10(first(5825).ActionSheet, obj);
 }
 function ChangelogInfo() {
   let obj = { title: "Changelog", hasIcons: false, children: null };

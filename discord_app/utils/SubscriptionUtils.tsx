@@ -100,8 +100,8 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     const tmp9 = null != table[subscriptionPlanId];
     const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!addSubscriptionPlan.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(5918).fetchSubscriptionPlansForSKU(result, closure_1);
-      const tmp12Result = tmp12(5918);
+      const subscriptionPlansForSKU = tmp12(5939).fetchSubscriptionPlansForSKU(result, closure_1);
+      const tmp12Result = tmp12(5939);
     }
     const obj3 = getPremiumPlanItem;
   }

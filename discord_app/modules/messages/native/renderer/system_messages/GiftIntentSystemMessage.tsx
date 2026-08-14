@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/08103_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08124_registerAsset.js";
 import { createGiftIntentEmbed } from "../row_data/embeds/GiftIntentEmbed.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 
@@ -19,9 +19,9 @@ export const createGiftIntentSystemMessage = function createGiftIntentSystemMess
     obj = {};
     const merged = Object.assign(createCommonMessage(message));
     obj.giftIntentInfo = giftIntentEmbed;
-    let tmpResult = tmp(8230);
+    let tmpResult = tmp(8251);
     obj.ephemeralIndication = tmpResult.createEphemeralIndication(message);
-    tmpResult = tmp(8100);
+    tmpResult = tmp(8121);
     obj.iconUrl = tmpResult.getAssetUriForEmbed(registerAsset);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = callback(theme));
     return obj;

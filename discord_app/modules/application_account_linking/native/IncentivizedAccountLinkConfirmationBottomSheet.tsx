@@ -33,8 +33,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   } else {
     if (tmpResult.isAndroid()) {
       let obj2 = { url: null, style: null };
-      let tmp4Result = tmp4(8345);
-      obj2[0] = tmp4(14921);
+      let tmp4Result = tmp4(8367);
+      obj2[0] = tmp4(14935);
       const obj3 = { width: null, height: null };
       obj3[0] = c7;
       obj3[1] = c7;
@@ -45,8 +45,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     } else {
       const obj4 = { source: null, resizeMode: "contain", style: null };
       const obj5 = { uri: null };
-      tmp4Result = tmp4(5308);
-      obj5[0] = tmp4(14921);
+      tmp4Result = tmp4(5329);
+      obj5[0] = tmp4(14935);
       obj4[0] = obj5;
       const obj6 = { width: null, height: null };
       obj6[0] = c7;

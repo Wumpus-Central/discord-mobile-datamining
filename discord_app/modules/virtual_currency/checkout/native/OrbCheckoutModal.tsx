@@ -29,7 +29,7 @@ function OrbCheckoutModalContent(orbBalance) {
   if (tmp6) {
     obj = { error: null };
     obj[0] = orbRedemptionError.message;
-    tmp6 = callback4(tmp(12223).OrbCheckoutErrorCard, obj);
+    tmp6 = callback4(tmp(12241).OrbCheckoutErrorCard, obj);
   }
   const items = [tmp6, , ];
   if (product == null) {

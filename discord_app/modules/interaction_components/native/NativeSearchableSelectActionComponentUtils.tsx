@@ -4,7 +4,7 @@ import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
-import { registerAsset } from "../../../../_runtime/08275_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08297_registerAsset.js";
 import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
 

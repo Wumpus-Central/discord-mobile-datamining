@@ -38,7 +38,7 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj[5] = str;
-    obj.children = tmp(9842).renderMessagePreviewMarkup(obj);
+    obj.children = tmp(9853).renderMessagePreviewMarkup(obj);
     return jsx(tmp(4338).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }

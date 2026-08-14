@@ -45,11 +45,11 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   let variant;
   ({ isExpanded, variant } = arg0);
   const tmp = callback();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14403).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14416).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   const dependencyMap = tmp5;
-  let obj = activeQuestDockMode(14404);
+  let obj = activeQuestDockMode(14417);
   youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
   let obj1 = activeQuestDockMode(4083);
   const fn = function n() {
@@ -111,7 +111,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
       return;
     }
   }
-  obj1 = { withSpring: activeQuestDockMode(4754).withSpring, isDefaultVariant: tmp5, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  obj1 = { withSpring: activeQuestDockMode(4776).withSpring, isDefaultVariant: tmp5, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   M.__closure = obj1;
   M.__workletHash = 7055026667171;
   M.__initData = closure_13;
@@ -135,21 +135,21 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   }
   const obj9 = activeQuestDockMode(4083);
   const tmp2 = activeQuestDockMode;
-  O.__closure = { withSpring: activeQuestDockMode(4754).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  O.__closure = { withSpring: activeQuestDockMode(4776).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   O.__workletHash = 14421154962041;
   O.__initData = closure_14;
   const animatedStyle3 = obj9.useAnimatedStyle(O);
   obj3 = { style: items, children: null };
   items = [tmp.dragHandleWrapper, animatedStyle];
-  const obj2 = { withSpring: activeQuestDockMode(4754).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  const obj2 = { withSpring: activeQuestDockMode(4776).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   const tmp12 = windowDimensions;
   obj4 = { style: animatedStyle1, layout: null, children: null };
-  const tmp13 = windowDimensions(8054);
+  const tmp13 = windowDimensions(8075);
   const tmp14 = closure_8;
-  obj4[1] = activeQuestDockMode(14401).dimensionsLayoutTransition;
+  obj4[1] = activeQuestDockMode(14414).dimensionsLayoutTransition;
   const obj5 = { style: items1, children: null };
   items1 = [tmp.dragHandleOverlay, animatedStyle3];
-  const tmp15 = windowDimensions(8054);
+  const tmp15 = windowDimensions(8075);
   const intl = activeQuestDockMode(1236).intl;
   const string = intl.string;
   const t = activeQuestDockMode(1236).t;
@@ -158,13 +158,13 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   } else {
     stringResult = string(t.Yplnt6);
   }
-  obj5[1] = closure_7(activeQuestDockMode(5752).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
-  const items2 = [closure_7(windowDimensions(8054), obj5), ];
+  obj5[1] = closure_7(activeQuestDockMode(5773).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
+  const items2 = [closure_7(windowDimensions(8075), obj5), ];
   obj6 = { style: items3, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   items3 = [tmp.dragHandleOverlay, animatedStyle2];
-  const tmp16 = windowDimensions(8054);
-  obj6[4] = closure_7(tmp2(5752).ActionSheetHeaderBar, { variant: "default" });
-  items2[1] = closure_7(tmp12(8054), obj6);
+  const tmp16 = windowDimensions(8075);
+  obj6[4] = closure_7(tmp2(5773).ActionSheetHeaderBar, { variant: "default" });
+  items2[1] = closure_7(tmp12(8075), obj6);
   obj4[2] = items2;
   obj3[1] = tmp14(tmp15, obj4);
   return closure_7(tmp13, obj3);

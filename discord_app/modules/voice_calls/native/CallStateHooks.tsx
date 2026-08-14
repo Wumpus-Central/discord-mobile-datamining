@@ -60,7 +60,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10742)();
+  const tmp3 = id(10758)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = initialize.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { RoleFlags } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09112_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09126_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
@@ -31,7 +31,7 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(16790);
+    const tmpResult = tmp(16806);
     let Icon = tmp(1297).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
@@ -62,6 +62,6 @@ export default function InRolePromptNotice(role) {
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(16790).isRolePowerful(role);
+    isRolePowerfulResult = tmp(16806).isRolePowerful(role);
   }
 };

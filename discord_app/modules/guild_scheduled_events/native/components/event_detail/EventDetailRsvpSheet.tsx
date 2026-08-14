@@ -7,7 +7,7 @@ import { Fonts } from "sum";
 import jsxProd from "isRemainingUsersGroup";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../../_runtime/09195_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/09209_registerAsset.js";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../../../design/void/Form/native/index.tsx";
@@ -232,7 +232,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = callback3();
-  analyticsLocations = analyticsLocations(5768)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5789)().analyticsLocations;
   let obj = eventUser(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getUser(eventUser.user_id));
@@ -257,7 +257,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9180);
+  let tmp2Result = tmp2(9194);
   if (member != null) {
     nick = member.nick;
   }
@@ -271,7 +271,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj[3] = function onPress() {
     analyticsLocations(outer1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8012).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8033).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };

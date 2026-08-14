@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/VoiceNormalSpoilerIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/04818_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/04840_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

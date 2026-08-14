@@ -147,13 +147,15 @@ function resolveMessageCodedLinks(content) {
                                     if (tmp(tmp2[4]).CodedLinkType.EXPERIMENT !== type) {
                                       if (tmp(tmp2[4]).CodedLinkType.GAME_PROFILE !== type) {
                                         if (tmp(tmp2[4]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                          if (tmp(tmp2[4]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                            const embedApplication = tmp(tmp2[8]).getEmbedApplication(code);
-                                            const tmpResult1 = tmp(tmp2[8]);
-                                          } else {
-                                            const _Error = Error;
-                                            const _HermesInternal = HermesInternal;
-                                            throw Error("Unknown coded link type: " + type);
+                                          if (tmp(tmp2[4]).CodedLinkType.USER_PROFILE !== type) {
+                                            if (tmp(tmp2[4]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
+                                              const embedApplication = tmp(tmp2[8]).getEmbedApplication(code);
+                                              const tmpResult1 = tmp(tmp2[8]);
+                                            } else {
+                                              const _Error = Error;
+                                              const _HermesInternal = HermesInternal;
+                                              throw Error("Unknown coded link type: " + type);
+                                            }
                                           }
                                         }
                                       }

@@ -1,5 +1,7 @@
 // discord_app/modules/premium/promotions/MarketingComponentRecord.tsx
 import "toJS";
+import { MurmurHashV3 } from "../../../../_runtime/01217_MurmurHashV3.js";
+import { set } from "../../../utils/Durations.tsx";
 
 const require = arg1;
 let MarketingComponentRecord;
@@ -11,7 +13,8 @@ class MarketingComponentRecord extends tmp2 {
     return tmp;
   }
 }
-MarketingComponentRecord["createFromServer"] = function createFromServer(start_date, start_date2) {
+const prototype = MarketingComponentRecord.prototype;
+MarketingComponentRecord["createFromServer"] = function createFromServer(start_date, startDate) {
   let component_type;
   let id;
   let str = "utf-8";
@@ -27,64 +30,76 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     const _Date2 = Date;
     date1 = new Date(start_date.end_date);
   }
-  start_date = undefined;
-  if (start_date2 != null) {
-    start_date = start_date2.start_date;
+  startDate = undefined;
+  if (startDate != null) {
+    startDate = startDate.startDate;
   }
-  let date2 = null;
-  if (null != start_date) {
-    const _Date3 = Date;
-    date2 = new Date(start_date2.start_date);
+  if (startDate == null) {
+    startDate = null;
   }
-  let end_date;
-  if (start_date2 != null) {
-    end_date = start_date2.end_date;
+  let endDate;
+  if (startDate != null) {
+    endDate = startDate.endDate;
   }
-  let date3 = null;
-  if (null != end_date) {
-    const _Date4 = Date;
-    date3 = new Date(start_date2.end_date);
+  if (endDate == null) {
+    endDate = null;
   }
   ({ id, component_type } = start_date);
-  const PremiumMarketingComponentProperties = textDecoder(7392).PremiumMarketingComponentProperties;
+  const PremiumMarketingComponentProperties = textDecoder(7413).PremiumMarketingComponentProperties;
   const fromBinary = PremiumMarketingComponentProperties.fromBinary;
   const obj2 = textDecoder(1307);
   function readerFactory(buf) {
-    const binaryReader = new textDecoder(outer1_1[2]).BinaryReader(buf, textDecoder);
+    const binaryReader = new textDecoder(outer1_2[2]).BinaryReader(buf, textDecoder);
     return binaryReader;
   }
   const fromBinaryResult = fromBinary(obj2.base64decode(start_date.properties), { readUnknownField: true, readerFactory });
   const promotion_id = start_date.promotion_id;
-  let tmp18 = date;
+  let tmp12 = date;
   if (date == null) {
-    tmp18 = date2;
+    tmp12 = startDate;
   }
-  let tmp19 = date1;
+  let tmp13 = date1;
   if (date1 == null) {
-    tmp19 = date3;
+    tmp13 = endDate;
   }
   if (typeof MarketingComponentRecord !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
-  const tmp20 = new MarketingComponentRecord(str, obj, obj2, readerFactory, PremiumMarketingComponentProperties, fromBinary, MarketingComponentRecord, new.target, id, component_type, fromBinaryResult, promotion_id);
+  const tmp14 = new MarketingComponentRecord(str, obj, obj2, readerFactory, PremiumMarketingComponentProperties, fromBinary, MarketingComponentRecord, new.target, id, component_type, fromBinaryResult, promotion_id);
   // ThrowIfThisInitialized (0x7c)
-  tmp20.id = id;
-  tmp20.componentType = component_type;
-  tmp20.properties = fromBinaryResult;
-  tmp20.promotionId = promotion_id;
-  tmp20.startDate = date;
-  tmp20.endDate = date1;
-  tmp20.effectiveStartDate = tmp18;
-  tmp20.effectiveEndDate = tmp19;
-  return tmp20;
+  tmp14.id = id;
+  tmp14.componentType = component_type;
+  tmp14.properties = fromBinaryResult;
+  tmp14.promotionId = promotion_id;
+  tmp14.startDate = date;
+  tmp14.endDate = date1;
+  tmp14.effectiveStartDate = tmp12;
+  tmp14.effectiveEndDate = tmp13;
+  return tmp14;
 };
-Object.defineProperty(MarketingComponentRecord.prototype, "isTimed", {
+Object.defineProperty(prototype, "isTimed", {
   get: function isTimed() {
     return null != this.startDate || null != this.endDate;
   },
   set: undefined
 });
-const result = require("module_1307").fileFinishedImporting("modules/premium/promotions/MarketingComponentRecord.tsx");
+prototype["isIncludedInRollout"] = function isIncludedInRollout(id, date) {
+  const self = this;
+  if (this.isTimed) {
+    if (null != self.effectiveStartDate) {
+      const effectiveStartDate = self.effectiveStartDate;
+      const time = date.getTime();
+      const diff = time - effectiveStartDate.getTime();
+      const _Math = Math;
+      const _Math2 = Math;
+      const result = 10000 * Math.min(1, Math.max(0, 0.2 * (diff / set.Millis.HOUR)));
+      const _HermesInternal = HermesInternal;
+      return MurmurHashV3.v3("" + self.promotionId + ":" + id) % 10000 < result;
+    }
+  }
+  return true;
+};
+let result = require("module_1307").fileFinishedImporting("modules/premium/promotions/MarketingComponentRecord.tsx");
 
 export default MarketingComponentRecord;

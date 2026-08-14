@@ -29,8 +29,8 @@ function PremiumFeatureUpsellPill(featureName) {
   let useTier0UpsellContent;
   let dependencyMap;
   let loading;
-  let obj = featureName(8410);
-  let obj1 = featureName(8732);
+  let obj = featureName(8432);
+  let obj1 = featureName(8746);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = callback(useTier0UpsellContent);
@@ -39,19 +39,19 @@ function PremiumFeatureUpsellPill(featureName) {
   const fn = () => useTier0UpsellContent(_undefined[13])(featureName);
   let tmpResult = tmp(4007);
   const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(tmp6);
-  if (featureName(8421).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  if (featureName(8443).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     const intl4 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     let formatResult = intl4.format(tmp(1236).t["tw/SSq"], obj);
-  } else if (tmp(8421).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(8443).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     const intl3 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     formatResult = intl3.format(tmp(1236).t.gMVjeS, obj);
-  } else if (tmp(8421).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(8443).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     const intl2 = tmp(1236).intl;
     obj1 = { maxFileSize: null, nitroTierName: null, onClick: null };
     tmpResult = tmp(4007);
@@ -59,19 +59,19 @@ function PremiumFeatureUpsellPill(featureName) {
     obj1[1] = premiumTypeDisplayName;
     obj1[2] = fn;
     formatResult = intl2.format(tmp(1236).t.zzyLEK, obj1);
-  } else if (tmp(8421).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(8443).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     const intl = tmp(1236).intl;
     const obj2 = { nitroTierName: null, onClick: null };
     obj2[0] = premiumTypeDisplayName;
     obj2[1] = fn;
     formatResult = intl.format(tmp(1236).t.lyxfbj, obj2);
-  } else if (tmp(8421).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(8443).EntitlementFeatureNames.APP_ICONS === featureName) {
     const intl6 = tmp(1236).intl;
     const obj3 = { onClick: null };
     obj3[0] = fn;
     formatResult = intl6.format(tmp(1236).t.x2dQxN, obj3);
   }
-  const tmp10 = useTier0UpsellContent(8777)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
+  const tmp10 = useTier0UpsellContent(8791)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
   loading = tmp10.loading;
   const items = [tmp4.container, , ];
   if (flag) {
@@ -82,7 +82,7 @@ function PremiumFeatureUpsellPill(featureName) {
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
   const obj6 = { source: null, style: null, disableColor: true };
-  obj6[0] = useTier0UpsellContent(useTier0UpsellContent ? 8778 : 8779);
+  obj6[0] = useTier0UpsellContent(useTier0UpsellContent ? 8792 : 8793);
   obj6[1] = tmp4.nitroWheel;
   const items1 = [closure_12(featureName(1297).Icon, obj6), closure_12(featureName(4338).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
   obj5[1] = items1;

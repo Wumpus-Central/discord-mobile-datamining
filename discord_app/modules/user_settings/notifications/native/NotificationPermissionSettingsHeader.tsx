@@ -32,7 +32,7 @@ const result = require("ME").fileFinishedImporting("modules/user_settings/notifi
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = createCacheKey();
-  let obj = canSeePushNotificationNudge(11839);
+  let obj = canSeePushNotificationNudge(11855);
   canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
@@ -55,7 +55,7 @@ export default function NotificationPermissionSettingsHeader() {
     obj2[0] = tmp.iconCircle;
     const obj3 = { size: "md", color: null };
     obj3[1] = Themes.colors.ICON_STRONG;
-    obj2[1] = callback(tmp2(9781).BellSlashIcon, obj3);
+    obj2[1] = callback(tmp2(9792).BellSlashIcon, obj3);
     const items1 = [callback(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1236).intl;
@@ -72,11 +72,11 @@ export default function NotificationPermissionSettingsHeader() {
     const intl3 = tmp2(1236).intl;
     obj7[1] = intl3.string(tmp2(1236).t["5xWOXv"]);
     obj7[2] = tmp6;
-    obj6[1] = callback(tmp2(4755).Button, obj7);
+    obj6[1] = callback(tmp2(4777).Button, obj7);
     items1[3] = callback(View, obj6);
     obj1[1] = items1;
     obj[2] = callback2(View, obj1);
-    obj[1] = callback(tmp2(5416).Card, obj);
+    obj[1] = callback(tmp2(5437).Card, obj);
     tmp7 = callback(View, obj);
   }
   return tmp7;

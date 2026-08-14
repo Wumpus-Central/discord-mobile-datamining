@@ -73,7 +73,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     obj[1] = items1;
     obj[1] = closure_7(View, obj);
     obj2[1] = closure_6(View, obj);
-    tmp5Result = tmp5(tmp2(5437).BottomSheet, obj2);
+    tmp5Result = tmp5(tmp2(5458).BottomSheet, obj2);
     const obj13 = combined;
   }
   return tmp5Result;

@@ -218,10 +218,10 @@ function sendRequest(arg0, signal) {
                 tmp17 = callback;
               }
               if (tmp.rejectWithError) {
-                obj = { method: null, url: null, ok: null, status: null, body: null, text: null, headers: null, retryAfter: null };
+                obj = { method: null, url: null, status: null, body: null, text: null, headers: null, retryAfter: null };
                 obj[0] = c0;
                 obj[1] = tmp.url;
-                ({ ok: obj3[2], status: obj3[3], body: obj3[4], text: obj3[5], headers: obj3[6], retryAfter: obj3[7] } = obj);
+                ({ status: obj3[2], body: obj3[3], text: obj3[4], headers: obj3[5], retryAfter: obj3[6] } = obj);
                 callback2(new obj(obj));
               } else {
                 callback2(obj);
@@ -475,7 +475,7 @@ const set1 = new Set([429, 503]);
 class HTTPResponseError extends Error {
   constructor(arg0) {
     ({ method, url, status } = global);
-    ({ ok, body, text, headers, retryAfter } = global);
+    ({ body, text, headers, retryAfter } = global);
     substr = [...arguments].slice();
     replaced = url.replace(/\d+/g, "xxx");
     items = ["" + method.toUpperCase() + " " + replaced + " [" + status + "]", ...substr];
@@ -484,7 +484,7 @@ class HTTPResponseError extends Error {
     applyWithNewTargetResult.name = "HTTPResponseError";
     applyWithNewTargetResult.method = method;
     applyWithNewTargetResult.url = url;
-    applyWithNewTargetResult.ok = ok;
+    applyWithNewTargetResult.ok = false;
     applyWithNewTargetResult.status = status;
     applyWithNewTargetResult.body = body;
     applyWithNewTargetResult.text = text;

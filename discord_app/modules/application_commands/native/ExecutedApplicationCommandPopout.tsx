@@ -695,7 +695,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(outer1_3[38]);
     }
   }, items1);
-  obj = { value: messageId(5768)(messageId(5788).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(5789)(messageId(5809).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -738,6 +738,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_21(channelId(5437).BottomSheet, obj);
-  return closure_21(channelId(5768).AnalyticsLocationProvider, obj);
+  obj[1] = closure_21(channelId(5458).BottomSheet, obj);
+  return closure_21(channelId(5789).AnalyticsLocationProvider, obj);
 };

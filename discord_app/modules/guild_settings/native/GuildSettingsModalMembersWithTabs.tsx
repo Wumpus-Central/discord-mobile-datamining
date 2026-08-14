@@ -112,12 +112,12 @@ const memoResult = importAllResult.memo((guildId) => {
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
         const obj = { source: null, accessibilityLabel: null, ref: null };
-        obj[0] = callback2(9100);
+        obj[0] = callback2(9114);
         const intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.ogxXGq);
         obj[2] = ref.ref;
         const merged1 = Object.assign(merged);
-        return callback3(callback(6051).HeaderActionButton, obj);
+        return callback3(callback(6072).HeaderActionButton, obj);
       }
     };
     return outer1_9(guildId(num[18]).ContextMenu, obj);

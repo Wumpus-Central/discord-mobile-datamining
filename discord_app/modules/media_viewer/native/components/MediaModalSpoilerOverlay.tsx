@@ -54,13 +54,13 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
     obj[0] = str;
     obj[1] = token;
     obj[2] = absoluteFill.absoluteFill;
-    const items1 = [closure_6(tmp3(4745), obj), ];
+    const items1 = [closure_6(tmp3(4767), obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = items2.spoilerOverlayContainer;
     const obj2 = { style: null, children: null };
     if (source.obscure) {
       obj2[0] = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(4851).ImageWarningIcon, { size: "lg", color: "white" }), ];
+      items2 = [tmp9(tmp(4873).ImageWarningIcon, { size: "lg", color: "white" }), ];
       const obj3 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
       const intl2 = tmp(1236).intl;
       stringResult = intl2.string(tmp(1236).t.SpxcUR);
@@ -82,7 +82,7 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
     items1[1] = obj1;
     obj[1] = items1;
     closure_7(tmp3(4083).View, obj);
-    const tmp3Result = tmp3(4745);
+    const tmp3Result = tmp3(4767);
     const tmp8 = absoluteFill;
   }
 });

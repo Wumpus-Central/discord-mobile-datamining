@@ -134,9 +134,9 @@ export default function getChannelA11yLabel(mentionCount) {
         const obj6 = { start: null };
         obj6[0] = voiceChannelStartTime;
         const _Date = Date;
-        obj5[0] = tmp(8285).formatActiveA11yTimestamp(obj6, Date.now());
+        obj5[0] = tmp(8307).formatActiveA11yTimestamp(obj6, Date.now());
         items1.push(intl7.formatToPlainString(tmp(1236).t.JQtsGh, obj5));
-        const tmpResult = tmp(8285);
+        const tmpResult = tmp(8307);
       }
       if (tmp16) {
         const intl8 = tmp(1236).intl;

@@ -62,10 +62,10 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        callback2(11295).close();
-        const obj = callback2(11295);
-        callback2(9070).close();
-        const obj2 = callback2(9070);
+        callback2(11311).close();
+        const obj = callback2(11311);
+        callback2(9084).close();
+        const obj2 = callback2(9084);
         const result = callback(4061).showTransferOwnershipSuccess();
       };
       obj[2] = outer1_3(function*() {
@@ -132,5 +132,5 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1236).intl;
   obj[2] = intl.string(guild(1236).t["13/7kX"]);
-  return jsx(guild(5823).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  return jsx(guild(5844).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 };

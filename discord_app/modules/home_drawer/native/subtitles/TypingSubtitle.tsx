@@ -22,11 +22,11 @@ export default function TypingSubtitle(arg0) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(4805).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(4805);
+    channelIconComponentWithGuild = tmp(4827).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(4827);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(4850).TextIcon;
+    channelIconComponentWithGuild = tmp(4872).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;

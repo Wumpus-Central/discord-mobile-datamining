@@ -5,7 +5,7 @@ import { AnalyticEvents } from "ME";
 import { Sections } from "SuggestedFriendSource";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/05423_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/05444_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AvatarDuoPile } from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";

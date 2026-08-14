@@ -5,8 +5,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/15453_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15454_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15468_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15469_registerAsset.js";
 
 let c4;
 let c5;
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   const callback1 = importAllResult.useCallback(() => {
     outer1_1(outer1_2[10]).open(null, guild.id, null, null);
   }, items3);
-  let obj1 = guild(14407);
+  let obj1 = guild(14420);
   obj = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
   obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
@@ -63,7 +63,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     const intl = tmp2(1236).intl;
     obj2[1] = intl.string(tmp2(1236).t["Yhi9/N"]);
     obj2[2] = callback;
-    obj1[1] = callback(tmp2(8015).RowButton, obj2);
+    obj1[1] = callback(tmp2(8036).RowButton, obj2);
     canCustomizeGuild = callback(tmp8, obj1);
   }
   const items5 = [canCustomizeGuild, ];
@@ -87,7 +87,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     const intl4 = tmp2(1236).intl;
     obj9[3] = intl4.string(tmp2(1236).t["63PyJQ"]);
     obj9[4] = callback1;
-    obj8[1] = tmp11(tmp2(4756).BaseTextButton, obj9);
+    obj8[1] = tmp11(tmp2(4778).BaseTextButton, obj9);
     canCreateChannel = tmp11(tmp8, obj8);
   }
   items6[3] = canCreateChannel;

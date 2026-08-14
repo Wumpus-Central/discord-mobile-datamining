@@ -77,16 +77,16 @@ function _getOrFetchApplicationForLaunch() {
               c7 = 3;
               c8 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback2(10604)(callback, callback2);
+              obj2[0] = callback2(10620)(callback, callback2);
               return obj2;
             }
           } else if (2 === tmp7) {
             c6 = 0;
             ensureGuildLoaded = participantFromServer;
             if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(10589).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(10605).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(10589).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(10605).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj2 = callback2(709);
             const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
@@ -215,7 +215,7 @@ function _confirmActivityChange() {
                       if (dependencyMap != null) {
                         dependencyMap();
                       }
-                      _undefined2(10606)(tmp, channel, () => {
+                      _undefined2(10622)(tmp, channel, () => {
                         let obj = value(table[10])();
                         obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                         obj.leaveActivity(obj);

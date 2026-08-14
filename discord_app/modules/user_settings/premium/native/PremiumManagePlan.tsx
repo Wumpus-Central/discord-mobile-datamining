@@ -19,7 +19,7 @@ import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07750_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07771_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
 import { ArrowLargeLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
@@ -499,7 +499,7 @@ function FractionalPremiumCredits(durationText) {
   if (showPremiumFeaturesCard) {
     obj = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj[0] = closure_27.TIER_2;
-    showPremiumFeaturesCard = callback3(tmp(8673), obj);
+    showPremiumFeaturesCard = callback3(tmp(8687), obj);
   }
   const items = [showPremiumFeaturesCard, ];
   obj = { style: tmp3.extraInfoContainer, children: null };
@@ -518,7 +518,7 @@ function FractionalPremiumCredits(durationText) {
   const obj5 = { style: tmp3.fpRowIcon, children: null };
   const obj6 = { style: null, start: null, end: null, colors: null, children: null };
   const obj7 = { padding: 6, borderRadius: null };
-  tmpResult = tmp(4766);
+  tmpResult = tmp(4788);
   obj7[1] = Themes.radii.sm;
   obj6[0] = obj7;
   obj6[1] = { x: 0, y: 0 };
@@ -705,7 +705,7 @@ export default function PremiumManagePlan() {
   const tmp = createCacheKey();
   const rect = useSafeAreaInsets();
   const top = rect.top;
-  let obj = navigation(7685);
+  let obj = navigation(7706);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
   let obj1 = navigation(1499);
   navigation = obj1.useNavigation();
@@ -733,15 +733,15 @@ export default function PremiumManagePlan() {
       isSubscriptionFetching = obj.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      obj = navigation(4664);
+      obj = navigation(4686);
       const subscriptions = obj.fetchSubscriptions();
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(5918).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(5918);
+      const premiumSubscriptionPlans = navigation(5939).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(5939);
     }
   });
-  let obj7 = navigation(8211);
+  let obj7 = navigation(8232);
   let isInReverseTrial = obj7.useIsInReverseTrial();
   const tmp9 = callback2(obj4.useStateFromStoresArray(items2, () => {
     const items = [reset.getPremiumTypeSubscription(), reset.hasFetchedSubscriptions()];
@@ -805,7 +805,7 @@ export default function PremiumManagePlan() {
   obj = { style: tmp.background, children: null };
   const items5 = [tmp.topBlur, ];
   let num = 0;
-  let tmp2Result = tmp2(4744);
+  let tmp2Result = tmp2(4766);
   if (!youBarSettingsOutsideSafeAreaTop) {
     num = top;
   }
@@ -833,7 +833,7 @@ export default function PremiumManagePlan() {
   if (isInReverseTrial) {
     obj3 = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj3[0] = closure_27.TIER_2;
-    isInReverseTrial = tmp29(tmp2(8673), obj3);
+    isInReverseTrial = tmp29(tmp2(8687), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -844,7 +844,7 @@ export default function PremiumManagePlan() {
     obj4 = { premiumType: null, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole: null };
     obj4[0] = closure_27.TIER_2;
     obj4[4] = premiumGroupRole;
-    tmp29Result = tmp29(tmp2(8673), obj4);
+    tmp29Result = tmp29(tmp2(8687), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
@@ -877,25 +877,25 @@ export default function PremiumManagePlan() {
       }
     };
     obj7[2] = tmp10;
-    const items10 = [tmp29(tmp2(7641), obj7), ];
+    const items10 = [tmp29(tmp2(7662), obj7), ];
     obj8 = { style: null, subscription: null };
     obj8[0] = tmp.billingInfo;
     obj8[1] = tmp10;
-    items10[1] = tmp29(tmp2(7681), obj8);
+    items10[1] = tmp29(tmp2(7702), obj8);
     obj6[0] = items10;
     tmp27Result = tmp27(tmp28, obj6);
   }
   items9[4] = tmp27Result;
   const obj9 = { style: tmp.accountCredit, creditListContainerStyle: tmp.accountCreditList, currentSubscription: tmp10, entitlements: stateFromStores2, hasPremiumGroup: null };
   let flag = result;
-  tmp2Result = tmp2(7683);
+  tmp2Result = tmp2(7704);
   if (result == null) {
     flag = false;
   }
   obj9[4] = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = roundFPCountdownUnits(tmp12.endsAt, navigation(12797).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnits(tmp12.endsAt, navigation(12815).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1236).intl;
   obj10[2] = intl.string(navigation(1236).t.QXx2gs);

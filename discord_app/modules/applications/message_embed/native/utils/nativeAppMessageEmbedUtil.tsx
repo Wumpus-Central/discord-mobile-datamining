@@ -16,7 +16,7 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
     return tmp;
   } else {
     if (obj5.hasFetchedColors(id2)) {
-      let tmp6Result = tmp6(8283);
+      let tmp6Result = tmp6(8305);
       const heroColors = tmp6Result.getHeroColors(id2);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
@@ -28,7 +28,7 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
       }
       return tmp5;
     } else {
-      tmp6(8282).maybeFetchColors(id2);
+      tmp6(8304).maybeFetchColors(id2);
       return tmp;
     }
     obj5 = hasFetchedColors;

@@ -1,6 +1,6 @@
 // discord_app/utils/ClipboardUtils.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
-import { useClipboard } from "../../_runtime/05797_useClipboard.js";
+import { useClipboard } from "../../_runtime/05818_useClipboard.js";
 
 function _copy() {
   const self = this;

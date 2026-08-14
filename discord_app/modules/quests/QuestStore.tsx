@@ -40,26 +40,25 @@ function initializeState() {
   const set5 = new Set();
   const map11 = new Map();
   const map12 = new Map();
-  const map13 = new Map();
-  if (null != c39) {
+  if (null != c38) {
     const _clearTimeout = clearTimeout;
+    clearTimeout(c38);
+    c38 = null;
+  }
+  let c27 = null;
+  let c28 = null;
+  if (null != c39) {
+    const _clearTimeout2 = clearTimeout;
     clearTimeout(c39);
     c39 = null;
   }
-  let c28 = null;
-  let c29 = null;
-  if (null != c40) {
-    const _clearTimeout2 = clearTimeout;
-    clearTimeout(c40);
-    c40 = null;
-  }
+  const map13 = new Map();
   const map14 = new Map();
   const map15 = new Map();
   const map16 = new Map();
   const map17 = new Map();
-  const map18 = new Map();
-  let c43 = null;
-  let c45 = null;
+  let c42 = null;
+  let c44 = null;
 }
 function updateQuestData(questId, result2) {
   map = new Map(map);
@@ -151,7 +150,7 @@ function _runExpirationCheck() {
     const _Math = Math;
     const _Date = Date;
     const bound = Math.max(5000, result - Date.now() + 2000);
-    if (bound <= c47) {
+    if (bound <= c46) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
         callback2();
@@ -160,15 +159,15 @@ function _runExpirationCheck() {
   }
 }
 let map = new Map();
+let c38 = null;
 let c39 = null;
-let c40 = null;
-let closure_41 = 30 * require("set").Millis.SECOND;
-let closure_42 = 10 * require("set").Millis.MINUTE;
-let c43 = null;
-let c44 = false;
-let c45 = null;
+let closure_40 = 30 * require("set").Millis.SECOND;
+let closure_41 = 10 * require("set").Millis.MINUTE;
+let c42 = null;
+let c43 = false;
+let c44 = null;
 let map1 = new Map();
-let c47 = 864000000;
+let c46 = 864000000;
 initializeState();
 class QuestStore extends Store {
 }
@@ -236,8 +235,8 @@ prototype["isFetchingQuestToDeliverByPlacement"] = function isFetchingQuestToDel
 };
 prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
   let value;
-  if (closure_32 != null) {
-    value = closure_32.get(QUEST_HOME_BANNER_DESKTOP);
+  if (closure_31 != null) {
+    value = closure_31.get(QUEST_HOME_BANNER_DESKTOP);
   }
   let tmp3 = null == value;
   if (!tmp3) {
@@ -254,33 +253,27 @@ prototype["getQuestPreviewOverride"] = function getQuestPreviewOverride(QUEST_BA
   }
   return value;
 };
-Object.defineProperty(prototype, "questToDeliverForPlacement", {
-  get: function questToDeliverForPlacement() {
-    return closure_25;
-  },
-  set: undefined
-});
 Object.defineProperty(prototype, "questEnrollmentBlockedUntil", {
   get: function questEnrollmentBlockedUntil() {
-    return closure_28;
+    return closure_27;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "questAccessSuspendedUntil", {
   get: function questAccessSuspendedUntil() {
-    return closure_29;
+    return closure_28;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isQuestAccessSuspended", {
   get: function isQuestAccessSuspended() {
-    return null != closure_29;
+    return null != closure_28;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "questAdDecisionByPlacement", {
   get: function questAdDecisionByPlacement() {
-    return closure_30;
+    return closure_29;
   },
   set: undefined
 });
@@ -338,7 +331,7 @@ prototype["getOptimisticProgress"] = function getOptimisticProgress(id, WATCH_VI
   return value;
 };
 prototype["getExpiredQuestsMap"] = function getExpiredQuestsMap() {
-  return closure_27;
+  return closure_26;
 };
 prototype["isQuestExpired"] = function isQuestExpired(arg0) {
   let flag = store3.get(arg0);
@@ -348,16 +341,16 @@ prototype["isQuestExpired"] = function isQuestExpired(arg0) {
   return flag;
 };
 prototype["getQuestLoadedViaPreview"] = function getQuestLoadedViaPreview(arg0) {
-  return closure_33.get(arg0);
+  return closure_32.get(arg0);
 };
 prototype["isFetchingQuestHomeHero"] = function isFetchingQuestHomeHero() {
-  return c44;
+  return c43;
 };
 prototype["getQuestHomeHero"] = function getQuestHomeHero() {
-  return c45;
+  return c44;
 };
 prototype["getLastFetchedQuestHomeHero"] = function getLastFetchedQuestHomeHero() {
-  return c43;
+  return c42;
 };
 Object.defineProperty(prototype, "isFetchingEarnedQuestToDeliver", {
   get: function isFetchingEarnedQuestToDeliver() {
@@ -377,22 +370,22 @@ prototype["isFetchingEarnedQuestToDeliverByPlacement"] = function isFetchingEarn
 };
 Object.defineProperty(prototype, "earnedQuestForPlacement", {
   get: function earnedQuestForPlacement() {
-    return closure_26;
+    return closure_25;
   },
   set: undefined
 });
 QuestStore.displayName = "QuestStore";
 const questStore = new QuestStore(require("dispatcher"), {
   LOGOUT: function handleLogout() {
-    if (null != c39) {
+    if (null != c38) {
       const _clearTimeout = clearTimeout;
+      clearTimeout(c38);
+      c38 = null;
+    }
+    if (null != c39) {
+      const _clearTimeout2 = clearTimeout;
       clearTimeout(c39);
       c39 = null;
-    }
-    if (null != c40) {
-      const _clearTimeout2 = clearTimeout;
-      clearTimeout(c40);
-      c40 = null;
     }
     initializeState();
     const state = store5.getState();
@@ -439,13 +432,13 @@ const questStore = new QuestStore(require("dispatcher"), {
       let tmp13 = mapped;
       let tmp14 = dependencyMap;
       let tmp15 = dependencyMap;
-      let obj5 = mapped(7204);
+      let obj5 = mapped(7226);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5205).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(5226).QuestContent.QUEST_BAR)) {
         let tmp17 = tmp12;
         let tmp18 = tmp14;
-        let tmp13Result = tmp13(7212);
+        let tmp13Result = tmp13(7234);
         let obj1 = { location: null };
         let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
@@ -465,8 +458,8 @@ const questStore = new QuestStore(require("dispatcher"), {
       let result2 = map2.set(item10116.id, item10116);
       continue;
     }
-    if (closure_33 != null) {
-      const values = closure_33.values();
+    if (closure_32 != null) {
+      const values = closure_32.values();
     }
     for (const item10131 of values) {
       let tmp26 = item10131;
@@ -479,16 +472,16 @@ const questStore = new QuestStore(require("dispatcher"), {
         let tmp32 = mapped;
         let tmp33 = dependencyMap;
         let tmp34 = dependencyMap;
-        let obj10 = mapped(7204);
+        let obj10 = mapped(7226);
         let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
     }
     (function _startExpirationChecker() {
-      if (null != c39) {
+      if (null != c38) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(c39);
-        c39 = null;
+        clearTimeout(c38);
+        c38 = null;
       }
       callback();
     })();
@@ -512,13 +505,13 @@ const questStore = new QuestStore(require("dispatcher"), {
         const _Date = Date;
         const time = date1.getTime();
         const diff = time - Date.now();
-        if (diff <= closure_47) {
+        if (diff <= closure_46) {
           const _setTimeout = setTimeout;
           const _Math = Math;
           timeout = setTimeout(() => {
-            let c40 = null;
-            let c29 = null;
-            closure_51.emitChange();
+            let c39 = null;
+            let c28 = null;
+            closure_50.emitChange();
           }, Math.max(diff, 0));
         }
       }
@@ -582,16 +575,15 @@ const questStore = new QuestStore(require("dispatcher"), {
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function handleFetchQuestToDeliverFailure(placement) {
     placement = placement.placement;
-    set7.delete(placement);
     let closure_13 = Date.now();
     let c4 = false;
     map = new Map(map);
     const result = map.set(placement, false);
     let value = store4.get(placement);
     if (null == value) {
-      const tmp9 = new fails(closure_41, closure_42);
-      const result1 = store4.set(placement, tmp9);
-      value = tmp9;
+      const tmp8 = new fails(closure_40, closure_41);
+      const result1 = store4.set(placement, tmp8);
+      value = tmp8;
     }
     const timestamp = Date.now();
     const result2 = map.set(placement, timestamp + value.fail());
@@ -678,7 +670,7 @@ const questStore = new QuestStore(require("dispatcher"), {
           let tmp24 = map3;
           let tmp25 = tmp36;
           let tmp26 = tmp38;
-          let tmp37Result = tmp37(7204);
+          let tmp37Result = tmp37(7226);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }
@@ -1466,13 +1458,13 @@ const questStore = new QuestStore(require("dispatcher"), {
     }
   },
   QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function handleFetchQuestHomeHeroBegin(placement) {
-    let c44 = true;
+    let c43 = true;
     map = new Map(map);
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function handleFetchQuestHomeHeroSuccess(fetchedAt) {
-    let c44 = false;
-    let closure_43 = Date.now();
+    let c43 = false;
+    let closure_42 = Date.now();
     map = new Map(map);
     const result = map.set(fetchedAt.placement, false);
     const questHomeHero = fetchedAt.questHomeHero;
@@ -1490,7 +1482,7 @@ const questStore = new QuestStore(require("dispatcher"), {
     const result1 = map1.set(fetchedAt.placement, obj);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
-    let c44 = false;
+    let c43 = false;
     map = new Map(map);
     const result = map.set(placement.placement, false);
   }

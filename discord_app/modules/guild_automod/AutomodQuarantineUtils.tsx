@@ -39,7 +39,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
     if (id == null) {
       guildId = outer1_8.getGuildId();
     }
-    let obj = { nick: "isArray", bio: "accessibilityRole" };
+    let obj = { nick: "r", bio: "accessibilityRole" };
     let guild = outer1_6.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

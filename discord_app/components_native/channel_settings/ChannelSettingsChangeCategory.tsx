@@ -264,16 +264,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5414).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(5807).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5435).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(5828).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4753).Stack, obj);
-  return closure_13(first(8012).Form, obj);
+  obj[1] = closure_14(first(4775).Stack, obj);
+  return closure_13(first(8033).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };

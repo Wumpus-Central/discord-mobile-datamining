@@ -131,9 +131,9 @@ function _fetchQuestHomeBounties() {
               const obj1 = { value: null, done: false };
               obj1[0] = outer1_7(tmp5, outer1_3(function*() {
                 let uuid = tmp2;
-                let obj5 = outer1_0(6971);
+                let obj5 = outer1_0(6992);
                 uuid = yield obj5.getSession();
-                const uuid2 = outer1_0(7226).getOrRefreshAdSession();
+                const uuid2 = outer1_0(7248).getOrRefreshAdSession();
                 const HTTP = outer1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
                 obj3[0] = outer1_6.QUESTS_GET_DECISIONS;

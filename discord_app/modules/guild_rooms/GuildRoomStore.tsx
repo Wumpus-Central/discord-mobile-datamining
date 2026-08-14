@@ -3,7 +3,7 @@ import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";
-import { Store } from "initialize";
+import { PersistedStore } from "initialize";
 import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 
 const require = arg1;
@@ -36,14 +36,36 @@ let c16 = null;
 let closure_17 = {};
 const map2 = new Map();
 let c19 = false;
-let closure_20 = {};
-class GuildRoomStore extends Store {
+let c20 = false;
+let c21 = false;
+let closure_22 = {};
+class GuildRoomStore extends PersistedStore {
 }
 const prototype = GuildRoomStore.prototype;
-prototype["initialize"] = function initialize() {
+prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
   this.waitFor(fetchFingerprint, createRTCConnection, handleConnectionOpen);
   const items = [handleConnectionOpen];
   this.syncWith(items, handleSelectedChannelStoreChange);
+  let flag;
+  if (rememberVideoOverlayVisibility != null) {
+    flag = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  if (flag) {
+    let flag2;
+    if (rememberVideoOverlayVisibility != null) {
+      flag2 = rememberVideoOverlayVisibility.videoOverlayVisibility;
+    }
+    if (flag2 == null) {
+      flag2 = false;
+    }
+    flag = flag2;
+  }
+};
+prototype["getState"] = function getState() {
+  return { videoOverlayVisibility: c19, rememberVideoOverlayVisibility: c20 };
 };
 prototype["getRoom"] = function getRoom(channelId) {
   let tmp = dependencyMap[channelId];
@@ -94,6 +116,14 @@ prototype["getNotes"] = function getNotes(closure_1) {
   }
   return value;
 };
+prototype["getVideoOverlayVisibility"] = function getVideoOverlayVisibility() {
+  return c19;
+};
+prototype["getRememberVideoOverlayVisibility"] = function getRememberVideoOverlayVisibility() {
+  return c20;
+};
+GuildRoomStore.displayName = "GuildRoomStore";
+GuildRoomStore.persistKey = "GuildRoomStore";
 obj = {
   GUILD_ROOM_CONNECT: function handleConnect(room) {
     let objects;
@@ -134,16 +164,19 @@ obj = {
       const map = new Map(dependencyMap2[roomId]);
       map.delete(userId);
       dependencyMap2[roomId] = map;
-      let tmp9 = c19;
-      if (c19) {
-        tmp9 = userId === store.getId();
+      let tmp4 = c21;
+      if (c21) {
+        tmp4 = userId === store.getId();
       }
-      if (tmp9) {
+      if (tmp4) {
         closure_17[roomId] = true;
-        c19 = false;
+        c21 = false;
       }
       if (userId === store.getId()) {
         delete tmp[tmp2];
+        if (!c20) {
+          let c19 = false;
+        }
       }
     }
   },
@@ -200,11 +233,14 @@ obj = {
   GUILD_ROOM_LOCAL_POSITION_REQUESTED: function handleLocalPositionRequested(position) {
     position = position.position;
   },
+  GUILD_ROOM_LOCAL_POSITION_CLEARED: function handleLocalPositionCleared() {
+    let c16 = null;
+  },
   GUILD_ROOM_TOGGLE_LAYOUT: function handleToggleLayout(roomId) {
     roomId = roomId.roomId;
     dependencyMap3[roomId] = !dependencyMap3[roomId];
     if (roomId.clearLayout) {
-      let c19 = true;
+      let c21 = true;
     }
   },
   GUILD_ROOM_LOCAL_UPDATE: function handleLocalUpdate(arg0) {
@@ -258,7 +294,7 @@ obj = {
     }
   },
   GUILD_ROOM_PENDING_NOTE_START: function handlePendingNoteStart(roomId) {
-    closure_20[roomId.roomId] = { position: null };
+    closure_22[roomId.roomId] = { position: null };
   },
   GUILD_ROOM_PENDING_NOTE_PLACE: function handlePendingNotePlace(roomId) {
     roomId = roomId.roomId;
@@ -272,7 +308,13 @@ obj = {
     }
   },
   GUILD_ROOM_PENDING_NOTE_DELETE: handleNoteCreateComplete,
-  GUILD_ROOM_NOTE_CREATE_COMPLETE: handleNoteCreateComplete
+  GUILD_ROOM_NOTE_CREATE_COMPLETE: handleNoteCreateComplete,
+  GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function handleSetVideoOverlayVisibility(value) {
+    value = value.value;
+  },
+  GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function handleSetRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
+    let closure_20 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
+  }
 };
 const guildRoomStore = new GuildRoomStore(require("dispatcher"), obj);
 let result = require("createRTCConnection").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");

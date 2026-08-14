@@ -188,7 +188,7 @@ export default function OneTimeLoginModal(token) {
   let obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
   const tmp11 = getMixedGradientColor;
-  const items7 = [callback(callback3, { source: token(13278), style: tmp.logo }), ];
+  const items7 = [callback(callback3, { source: token(13290), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];
   let obj5 = { variant: "text-lg/semibold", children: null };
@@ -209,7 +209,7 @@ export default function OneTimeLoginModal(token) {
   obj8[1] = intl3.string(token(1236).t.FIEwfG);
   obj8[3] = callback;
   obj8[4] = tmp.link;
-  items10[1] = callback(token(8519).LinkButton, obj8);
+  items10[1] = callback(token(8541).LinkButton, obj8);
   obj6[1] = items10;
   items9[1] = callback2(callback1, obj6);
   obj1[1] = items9;

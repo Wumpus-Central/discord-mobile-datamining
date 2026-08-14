@@ -39,7 +39,7 @@ export default function GuildPowerupsWarning(warnings) {
     obj[0] = tmp.contentContainer;
     const obj1 = { color: null, size: "md" };
     obj1[0] = manaTypeConsolidationExperiment(712).colors.TEXT_FEEDBACK_WARNING;
-    let items = [callback(tmp2(7838).CircleErrorIcon, obj1), , , ];
+    let items = [callback(tmp2(7859).CircleErrorIcon, obj1), , , ];
     const obj2 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
     obj2[2] = tmp.text;
     obj2[3] = tmp7;

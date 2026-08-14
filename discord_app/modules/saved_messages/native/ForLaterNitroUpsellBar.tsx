@@ -29,18 +29,18 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
   const tmp = createCacheKey();
-  analyticsLocations = analyticsLocations(5768)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5789)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   let obj = { style: tmp.container, children: null };
   const callback = React.useCallback(() => analyticsLocations(outer1_2[8])(isReminder, analyticsLocations), items);
   if (isAtLimit) {
     obj = { color: "text-feedback-warning", style: null };
     obj[1] = tmp.icon;
-    let tmp7Result = tmp7(isReminder(8007).WarningIcon, obj);
+    let tmp7Result = tmp7(isReminder(8028).WarningIcon, obj);
     let tmp10 = tmp7;
   } else {
     obj = { source: null, style: null };
-    obj[0] = tmp2(8779);
+    obj[0] = tmp2(8793);
     obj[1] = tmp.icon;
     tmp7Result = tmp7(closure_4, obj);
     tmp10 = tmp7;
@@ -68,9 +68,9 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     obj1[3] = items2;
     items1[1] = tmp5(isReminder(4338).Text, obj1);
     if (isAtLimit) {
-      let Button = tmp2(9562);
+      let Button = tmp2(9575);
     } else {
-      Button = tmp12(4755).Button;
+      Button = tmp12(4777).Button;
     }
     obj5 = { size: "sm", text: null, onPress: null };
     const intl3 = tmp12(1236).intl;

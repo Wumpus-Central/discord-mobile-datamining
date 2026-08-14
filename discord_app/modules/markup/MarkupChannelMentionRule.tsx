@@ -51,7 +51,7 @@ function getChannel(id, arr) {
     obj[3] = tmpResult.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4787);
+    tmpResult = tmp(4809);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
     obj[7] = tmp(4536).canViewChannel(channel);
     obj[8] = isSubscriptionGated;

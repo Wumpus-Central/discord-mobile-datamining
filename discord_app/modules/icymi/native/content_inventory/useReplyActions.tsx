@@ -6,7 +6,7 @@ import { DraftType } from "handleChanged";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { EmojiIntention } from "set";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { jsx } from "module_8962";
+import { jsx } from "module_8976";
 
 const require = arg1;
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");

@@ -195,9 +195,11 @@ export default {
                                       if (tmp(tmp2[2]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
                                         if (tmp(tmp2[2]).CodedLinkType.GAME_PROFILE !== type) {
                                           if (tmp(tmp2[2]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                            const _Error = Error;
-                                            const _HermesInternal = HermesInternal;
-                                            throw Error("Unknown coded link type: " + type);
+                                            if (tmp(tmp2[2]).CodedLinkType.USER_PROFILE !== type) {
+                                              const _Error = Error;
+                                              const _HermesInternal = HermesInternal;
+                                              throw Error("Unknown coded link type: " + type);
+                                            }
                                           }
                                         }
                                       }

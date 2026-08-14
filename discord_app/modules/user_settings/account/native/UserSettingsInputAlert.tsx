@@ -9,7 +9,7 @@ let c3;
 let c4;
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "apply" };
+let closure_5 = { input: "", error: "ti" };
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -100,9 +100,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7835).TextInput, obj);
+    items[1] = callback(self(7856).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4753).Stack, obj);
+    return closure_4(self(4775).Stack, obj);
   }
   error = self.state.error;
 };

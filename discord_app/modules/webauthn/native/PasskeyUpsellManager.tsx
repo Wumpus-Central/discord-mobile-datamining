@@ -41,8 +41,8 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                     const obj6 = PasskeyUpsellActionCreators;
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(5871).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(5871);
+                    const webAuthnCredentials = tmp(5892).fetchWebAuthnCredentials();
+                    const tmpResult1 = tmp(5892);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;

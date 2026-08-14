@@ -46,20 +46,20 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = tmp22(13275).hasRedirectedToGuild(outer1_4);
+              obj1[0] = tmp22(13287).hasRedirectedToGuild(outer1_4);
               return obj1;
             } else {
               dependencyMap = 3;
             }
-            obj6 = outer1_0(13275);
+            obj6 = outer1_0(13287);
             tmp22 = outer1_0;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          v0(5906)(outer1_5.CHANNEL(null, id.id));
-          const tmp9 = v0(5906);
+          v0(5927)(outer1_5.CHANNEL(null, id.id));
+          const tmp9 = v0(5927);
         }
         dependencyMap = 3;
         obj = { value: null, done: true };

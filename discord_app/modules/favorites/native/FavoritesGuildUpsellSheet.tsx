@@ -15,7 +15,7 @@ let result = require("ME").fileFinishedImporting("modules/favorites/native/Favor
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(9760).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(9771).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -29,7 +29,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
   let importDefault;
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpened(str).analyticsLocations;
   importDefault = React.useCallback(() => {
-    callback(4310).hideActionSheet(analyticsLocations(9762).FAVORITES_UPSELL_SHEET_KEY);
+    callback(4310).hideActionSheet(analyticsLocations(9773).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1236).intl;
   const tmp8 = messagesProxy;
@@ -44,7 +44,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
     formatToPlainStringResult = intl2.string(tmp3(3047)["WaP/lz"]);
   }
   obj[1] = formatToPlainStringResult;
-  obj[2] = closure_6(analyticsLocations(6317).FavoritesSpotIllustration, {});
+  obj[2] = closure_6(analyticsLocations(6338).FavoritesSpotIllustration, {});
   obj = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp7(1236).intl;
   obj[2] = intl3.string(analyticsLocations(1236).t.pj0XBN);
@@ -52,11 +52,11 @@ export default function FavoritesGuildUpsellSheet(limit) {
     callback();
     callback(outer1_2[14])({ analyticsLocations });
   };
-  const items = [closure_6(analyticsLocations(4755).Button, obj), ];
+  const items = [closure_6(analyticsLocations(4777).Button, obj), ];
   const intl4 = tmp7(1236).intl;
   const tmp3Result = messagesProxy;
   const obj1 = { children: null };
-  items[1] = closure_6(analyticsLocations(4755).Button, {
+  items[1] = closure_6(analyticsLocations(4777).Button, {
     size: "lg",
     variant: "secondary",
     text: intl4.string("limit_reached" === str2 ? tmp3Result.PprSsy : tmp3Result["+dSwhE"]),
@@ -68,6 +68,6 @@ export default function FavoritesGuildUpsellSheet(limit) {
     }
   });
   obj1[0] = items;
-  obj[3] = closure_7(analyticsLocations(5191).ButtonGroup, obj1);
-  return closure_6(analyticsLocations(7778).PromoSheet, obj);
+  obj[3] = closure_7(analyticsLocations(5212).ButtonGroup, obj1);
+  return closure_6(analyticsLocations(7799).PromoSheet, obj);
 };

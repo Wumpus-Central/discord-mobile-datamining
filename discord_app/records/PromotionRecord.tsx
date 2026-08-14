@@ -1,5 +1,6 @@
 // discord_app/records/PromotionRecord.tsx
 import "toJS";
+import createFromServer from "createFromServer";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { CountryListMode } from "../modules/premium/promotions/constants.tsx";
 
@@ -49,11 +50,9 @@ const prototype = PromotionRecord.prototype;
 PromotionRecord["createFromServer"] = function createFromServer(id) {
   let allowed_countries;
   let partner_id;
-  const obj = { id: id.id, trialId: id.trial_id, startDate: null, endDate: null, outboundRedemptionEndDate: null, inboundHeaderText: null, inboundBodyText: null, inboundHelpCenterLink: null, outboundTitle: null, outboundRedemptionModalBody: null, outboundTermsAndConditions: null, outboundRedemptionPageLink: null, outboundRedemptionUrlFormat: null, flags: null, inboundRestrictedCountries: null, outboundRestrictedCountries: null, allowedCountries: null, countryListMode: null, promotionType: null, partnerId: null, marketingComponents: null, rewardSkuIds: null, bogoRewardEnabled: null, promotionKey: null };
-  obj[2] = new Date(id.start_date);
   const date = new Date(id.start_date);
-  const tmp = PromotionRecord;
-  obj[3] = new Date(id.end_date);
+  const date1 = new Date(id.end_date);
+  const obj = { id: id.id, trialId: id.trial_id, startDate: date, endDate: date1, outboundRedemptionEndDate: null, inboundHeaderText: null, inboundBodyText: null, inboundHelpCenterLink: null, outboundTitle: null, outboundRedemptionModalBody: null, outboundTermsAndConditions: null, outboundRedemptionPageLink: null, outboundRedemptionUrlFormat: null, flags: null, inboundRestrictedCountries: null, outboundRestrictedCountries: null, allowedCountries: null, countryListMode: null, promotionType: null, partnerId: null, marketingComponents: null, rewardSkuIds: null, bogoRewardEnabled: null, promotionKey: null };
   let date2 = null;
   if (null != id.outbound_redemption_end_date) {
     const _Date = Date;
@@ -107,7 +106,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   obj[16] = allowed_countries;
   let BLOCKLIST = id.country_list_mode;
   if (BLOCKLIST == null) {
-    BLOCKLIST = CountryListMode.CountryListMode.BLOCKLIST;
+    BLOCKLIST = date(date1[2]).CountryListMode.BLOCKLIST;
   }
   obj[17] = BLOCKLIST;
   ({ promotion_type: obj[18], partner_id } = id);
@@ -119,7 +118,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   if (marketing_components == null) {
     marketing_components = [];
   }
-  obj[20] = marketing_components;
+  obj[20] = marketing_components.map((arg0) => outer1_2.createFromServer(arg0, { startDate: date, endDate: date1 }));
   const metadata = id.metadata;
   let reward_sku_ids;
   if (metadata != null) {
@@ -163,7 +162,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
     str9 = "";
   }
   obj[23] = str9;
-  return new tmp(obj);
+  return new PromotionRecord(obj);
 };
 Object.defineProperty(prototype, "isBogo", {
   get: function isBogo() {
@@ -193,10 +192,10 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (tmp(7390).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (tmp(7390).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (tmp(7390).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (tmp(7390).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(7438).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(7438).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(7438).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(7438).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }
@@ -208,6 +207,6 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return inboundRestrictedCountries.includes(arg0);
   }
 };
-const result = require("hasFlag").fileFinishedImporting("records/PromotionRecord.tsx");
+const result = require("CountryListMode").fileFinishedImporting("records/PromotionRecord.tsx");
 
 export default PromotionRecord;

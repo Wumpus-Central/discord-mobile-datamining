@@ -453,7 +453,7 @@ function _fetchStorefrontPrices() {
             obj = body(709);
             let obj2 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
             obj2[1] = callback;
-            obj2 = callback(5893);
+            obj2 = callback(5914);
             obj2[2] = obj2.transformStorefrontPricesServer(body);
             obj.dispatch(obj2);
             dependencyMap = 0;

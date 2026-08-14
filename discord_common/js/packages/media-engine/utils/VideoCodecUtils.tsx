@@ -70,7 +70,7 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
   items.push({ name: "H265", encode: !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE), decode: tmp8 });
   return items;
 };
-export const filterVideoCodecs = function filterVideoCodecs(arg0, experimentCodecs) {
+export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -89,7 +89,7 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, experimentCode
   }
   let items;
   let set;
-  const combined = experimentCodecs.concat(items);
+  const combined = arr.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
     const mapped = encode;

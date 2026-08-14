@@ -43,8 +43,8 @@ export const isWishlistableCollectiblesProduct = function isWishlistableCollecti
     if (tmp5) {
       let tmp6 = selectedProduct.type === tmp(1949).CollectiblesItemType.PROFILE_FRAME;
       if (tmp6) {
-        tmp6 = !tmp(9401).getIsProfileFrameGiftingEnabled("isWishlistableCollectiblesProduct");
-        const tmpResult = tmp(9401);
+        tmp6 = !tmp(9415).getIsProfileFrameGiftingEnabled("isWishlistableCollectiblesProduct");
+        const tmpResult = tmp(9415);
       }
       tmp5 = !tmp6;
     }

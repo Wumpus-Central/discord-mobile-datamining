@@ -1,11 +1,11 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx
 import combined from "combined";
-import get_ActivityIndicator from "module_9070";
+import get_ActivityIndicator from "module_9084";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleFormInit from "handleFormInit";
 import ME from "ME";
-import jsxProd from "module_16820";
+import jsxProd from "module_16836";
 import createCacheKey from "createCacheKey";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 

@@ -1,17 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfilePersonalWidgetCard.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import _slicedToArray from "_slicedToArray";
+import NitroWheelIcon from "NitroWheelIcon";
+import get_ActivityIndicator from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import { ThemeTypes } from "ME";
-import jsxProd from "jsxProd";
+import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { Divider } from "UserProfileCard.tsx";
+import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { GifTag } from "GifTag.tsx";
 
 let c10;
-let c4;
 let c5;
-let c9;
 let closure_6;
+let error;
+let unpackModuleId;
 const require = arg1;
 function PersonalWidgetText(lineClamp) {
   const variant = lineClamp.variant;
@@ -19,148 +24,229 @@ function PersonalWidgetText(lineClamp) {
   let children = lineClamp.children;
   const items = [children, variant, color];
   children = React.useMemo(() => {
-    let obj = variant(children[7]);
+    let obj = variant(children[8]);
     obj = { textVariant: variant, linkVariant: variant, textColor: color };
     return obj.parsePersonalWidgetReact(children, undefined, obj);
   }, items);
-  return callback(variant(children[8]).Text, { variant, color, lineClamp: lineClamp.lineClamp, children });
+  return callback2(variant(children[9]).Text, { variant, color, lineClamp: lineClamp.lineClamp, children });
 }
-function CoverSection(arg0) {
-  let section;
-  let userId;
-  ({ userId, section } = arg0);
-  const tmp = createCacheKey();
-  const image = section.image;
-  const items = [userId, image];
-  const memo = React.useMemo(() => {
+function useWidgetImage(userId, image, disableInteraction) {
+  const _require = userId;
+  const GifAutoPlay = _require(first[10]).GifAutoPlay;
+  const setting = GifAutoPlay.useSetting();
+  let obj = React;
+  let tmp2 = callback(React.useState(false), 2);
+  let closure_1 = tmp2[1];
+  first = setting;
+  if (!setting) {
+    first = tmp2[0];
+  }
+  let tmp4 = null;
+  if (null != image) {
+    tmp4 = null;
+    if ("fileId" in image) {
+      tmp4 = image;
+    }
+  }
+  callback = tmp4;
+  const items = [userId, tmp4, first];
+  const memo = obj.useMemo(() => {
     let tmp2 = null;
-    if (null != image) {
-      let tmp3 = null;
-      if ("fileId" in tmp) {
-        const obj = { uri: null };
-        obj[0] = userId(outer1_2[9]).getWidgetAssetURL(userId, tmp.fileId);
-        tmp3 = obj;
-        const obj2 = userId(outer1_2[9]);
+    if (null != _slicedToArray) {
+      let obj = userId(first[11]);
+      let isAnimated = tmp.isAnimated;
+      if (isAnimated) {
+        isAnimated = first;
       }
-      tmp2 = tmp3;
+      obj = { uri: null };
+      obj = { animated: null };
+      obj[0] = isAnimated;
+      obj[0] = obj.getWidgetAssetURL(userId, tmp.fileId, obj);
+      tmp2 = obj;
+      const tmp5 = userId;
     }
     return tmp2;
   }, items);
-  const items1 = [tmp.coverContent, ];
+  obj = { source: memo, showGifTag: null, canToggleAnimation: null, toggleAnimation: null };
+  let isAnimated = null != tmp4;
+  callback = obj.useCallback(() => callback((arg0) => !arg0), []);
+  if (isAnimated) {
+    isAnimated = tmp4.isAnimated;
+  }
+  if (isAnimated) {
+    isAnimated = !first;
+  }
+  if (isAnimated) {
+    isAnimated = !disableInteraction;
+  }
+  obj[1] = isAnimated;
+  obj[2] = null != tmp4 && tmp4.isAnimated && !setting && !disableInteraction;
+  obj[3] = callback;
+  return obj;
+}
+function CoverSection(section) {
+  let canToggleAnimation;
+  let disableInteraction;
+  let showGifTag;
+  let toggleAnimation;
+  let userId;
+  section = section.section;
+  ({ userId, disableInteraction } = section);
+  const tmp = createCacheKey();
+  const tmp2 = useWidgetImage(userId, section.image, disableInteraction);
+  const source = tmp2.source;
+  const items = [tmp.coverContent, ];
   let prop = null;
-  if (null != memo) {
+  ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
+  if (null != source) {
     prop = tmp.coverContentWithImage;
   }
-  let obj = { style: items1, children: null };
-  items1[1] = prop;
+  let obj = { style: items, pointerEvents: "box-none", children: null };
+  items[1] = prop;
   let tmp6 = null;
-  if (null != memo) {
-    obj = { colors: null, style: null };
-    obj[0] = closure_11;
-    obj[1] = closure_5.absoluteFill;
-    tmp6 = callback(image(4766), obj);
+  if (null != source) {
+    obj = { colors: null, style: null, pointerEvents: "none" };
+    obj[0] = closure_12;
+    obj[1] = closure_6.absoluteFill;
+    tmp6 = callback2(LinearGradient, obj);
   }
-  const items2 = [tmp6, , ];
+  const items1 = [tmp6, , ];
   let tmp12 = null;
   if ("" !== section.title) {
     obj = { variant: "heading-xl/semibold", color: "text-strong", lineClamp: 1, children: null };
     obj[3] = section.title;
-    tmp12 = callback(PersonalWidgetText, obj);
+    tmp12 = callback2(PersonalWidgetText, obj);
   }
-  items2[1] = tmp12;
+  items1[1] = tmp12;
   let tmp15 = null;
   if ("" !== section.subtitle) {
     const obj1 = { variant: "text-sm/medium", color: "text-default", lineClamp: 3, children: null };
     obj1[3] = section.subtitle;
-    tmp15 = callback(PersonalWidgetText, obj1);
+    tmp15 = callback2(PersonalWidgetText, obj1);
   }
-  items2[2] = tmp15;
-  obj[1] = items2;
-  const tmp3Result = closure_10(closure_6, obj);
-  let tmp19 = tmp3Result;
-  if (null != memo) {
+  items1[2] = tmp15;
+  obj[2] = items1;
+  const tmp3Result = closure_11(closure_7, obj);
+  let tmp27Result1 = tmp3Result;
+  if (null != source) {
     const obj2 = { theme: null, primaryColor: null, secondaryColor: null, children: null };
     obj2[0] = ThemeTypes.DARK;
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.coverContainer;
-    const obj4 = { source: null, style: null, resizeMode: "cover" };
-    obj4[0] = memo;
-    obj4[1] = closure_5.absoluteFill;
-    const items3 = [callback(closure_4, obj4), tmp3Result];
-    obj3[1] = items3;
-    obj2[3] = tmp3(tmp4, obj3);
-    tmp19 = callback(userId(4072).ThemeContextProvider, obj2);
-  }
-  return tmp19;
-}
-function FieldRow(arg0) {
-  let field;
-  let userId;
-  ({ userId, field } = arg0);
-  const tmp = createCacheKey();
-  const image = field.image;
-  const items = [userId, image];
-  const memo = React.useMemo(() => {
-    let tmp2 = null;
-    if (null != image) {
-      let tmp3 = null;
-      if ("fileId" in tmp) {
-        const obj = { uri: null };
-        obj[0] = userId(outer1_2[9]).getWidgetAssetURL(userId, tmp.fileId);
-        tmp3 = obj;
-        const obj2 = userId(outer1_2[9]);
-      }
-      tmp2 = tmp3;
+    if (canToggleAnimation) {
+      const obj4 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      obj4[0] = closure_6.absoluteFill;
+      obj4[1] = toggleAnimation;
+      const intl = tmp28(1236).intl;
+      obj4[3] = intl.string(tmp28(1236).t.MxXgrL);
+      const obj5 = { source: null, style: null, resizeMode: "cover" };
+      obj5[0] = source;
+      obj5[1] = closure_6.absoluteFill;
+      obj4[4] = tmp27(preload, obj5);
+      let tmp27Result = tmp27(closure_5, obj4);
+      let tmp20 = importDefault;
+    } else {
+      tmp20 = importDefault;
+      const obj6 = { source: null, style: null, resizeMode: "cover" };
+      obj6[0] = source;
+      obj6[1] = closure_6.absoluteFill;
+      tmp27Result = tmp27(preload, obj6);
     }
-    return tmp2;
-  }, items);
-  let obj = { style: tmp.fieldRow, children: null };
-  let tmp5 = null;
-  if (null != memo) {
-    obj = { source: null, style: null, resizeMode: "cover" };
-    obj[0] = memo;
+    const items2 = [tmp27Result, tmp3Result, ];
+    tmp27Result = null;
+    if (showGifTag) {
+      const obj7 = { style: null };
+      obj7[0] = tmp.gifTag;
+      tmp27Result = tmp27(tmp20(8904), obj7);
+    }
+    items2[2] = tmp27Result;
+    obj3[1] = items2;
+    obj2[3] = tmp3(tmp4, obj3);
+    tmp27Result1 = tmp27(ManaContext.ThemeContextProvider, obj2);
+  }
+  return tmp27Result1;
+}
+function FieldRow(field) {
+  let canToggleAnimation;
+  let disableInteraction;
+  let showGifTag;
+  let toggleAnimation;
+  let userId;
+  field = field.field;
+  ({ userId, disableInteraction } = field);
+  const tmp = createCacheKey();
+  const tmp2 = useWidgetImage(userId, field.image, disableInteraction);
+  const source = tmp2.source;
+  let tmp3 = null;
+  ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
+  if (null != source) {
+    let obj = { source: null, style: null, resizeMode: "cover" };
+    obj[0] = source;
     obj[1] = tmp.fieldImage;
-    tmp5 = callback(closure_4, obj);
+    tmp3 = callback2(preload, obj);
   }
-  const items1 = [tmp5, ];
-  obj = { style: tmp.fieldContent, children: null };
-  let tmp8 = null;
+  obj = { style: tmp.fieldRow, children: null };
+  let tmp7Result = tmp3;
+  if (null != tmp3) {
+    tmp7Result = tmp3;
+    if (canToggleAnimation) {
+      obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      obj[0] = toggleAnimation;
+      const intl = getSystemLocale.intl;
+      obj[2] = intl.string(getSystemLocale.t.MxXgrL);
+      const items = [tmp3, ];
+      let tmp13 = null;
+      if (showGifTag) {
+        const obj1 = { style: null };
+        obj1[0] = tmp.gifTagSmall;
+        tmp13 = callback2(GifTag, obj1);
+      }
+      items[1] = tmp13;
+      obj[3] = items;
+      tmp7Result = tmp7(closure_5, obj);
+      const tmp10 = closure_5;
+    }
+  }
+  const items1 = [tmp7Result, ];
+  const obj2 = { style: tmp.fieldContent, children: null };
+  let tmp16 = null;
   if ("" !== field.title) {
-    const obj1 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
-    obj1[3] = field.title;
-    tmp8 = callback(PersonalWidgetText, obj1);
+    const obj3 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
+    obj3[3] = field.title;
+    tmp16 = callback2(PersonalWidgetText, obj3);
   }
-  const items2 = [tmp8, ];
-  let tmp11 = null;
+  const items2 = [tmp16, ];
+  let tmp19 = null;
   if ("" !== field.description) {
-    let obj2 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
-    obj2[3] = field.description;
-    tmp11 = callback(PersonalWidgetText, obj2);
+    const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
+    obj4[3] = field.description;
+    tmp19 = callback2(PersonalWidgetText, obj4);
   }
-  items2[1] = tmp11;
-  obj[1] = items2;
-  items1[1] = closure_10(closure_6, obj);
+  items2[1] = tmp19;
+  obj2[1] = items2;
+  items1[1] = closure_11(closure_7, obj2);
   obj[1] = items1;
-  return closure_10(closure_6, obj);
+  return closure_11(closure_7, obj);
 }
 function FieldsSection(arg0) {
+  let importDefault;
   let require;
   let section;
-  ({ userId: require, section } = arg0);
+  ({ userId: require, section, disableInteraction: importDefault } = arg0);
   let tmp2 = null;
   if (0 !== section.fields.length) {
     const obj = { style: null, children: null };
     obj[0] = tmp.fieldsContainer;
     const fields = section.fields;
-    obj[1] = fields.map((field) => outer1_9(outer1_15, { userId: closure_0, field }, field.key));
-    tmp2 = callback(closure_6, obj);
+    obj[1] = fields.map((field) => outer1_10(outer1_17, { userId: closure_0, field, disableInteraction: closure_1 }, field.key));
+    tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
 }
-({ Image: c4, StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = ["rgba(7, 7, 9, 0)", "rgba(7, 7, 9, 0.8)"];
-createCacheKey = { coverContainer: null, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null };
+({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
+({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+let closure_12 = ["rgba(7, 7, 9, 0)", "rgba(7, 7, 9, 0.8)"];
+createCacheKey = { coverContainer: null, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
 createCacheKey = { borderRadius: require("Themes").radii.md, overflow: "hidden", justifyContent: "flex-end" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: require("Themes").space.PX_4 };
@@ -172,26 +258,32 @@ let obj3 = { gap: require("Themes").space.PX_12 };
 createCacheKey[4] = { gap: require("Themes").space.PX_12 };
 let obj4 = { gap: require("Themes").space.PX_12 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-const obj5 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
 createCacheKey[6] = { width: require("Themes").space.PX_48, height: require("Themes").space.PX_48, borderRadius: require("Themes").radii.sm };
 createCacheKey[7] = { flex: 1 };
+let obj6 = { width: require("Themes").space.PX_48, height: require("Themes").space.PX_48, borderRadius: require("Themes").radii.sm };
+createCacheKey[8] = { position: "absolute", top: require("Themes").space.PX_8, left: require("Themes").space.PX_8 };
+let obj7 = { position: "absolute", top: require("Themes").space.PX_8, left: require("Themes").space.PX_8 };
+createCacheKey[9] = { position: "absolute", top: require("Themes").space.PX_4, left: require("Themes").space.PX_4 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj6 = { width: require("Themes").space.PX_48, height: require("Themes").space.PX_48, borderRadius: require("Themes").radii.sm };
-const result = require("fetchFingerprint").fileFinishedImporting("modules/user_profile/native/UserProfilePersonalWidgetCard.tsx");
+const obj8 = { position: "absolute", top: require("Themes").space.PX_4, left: require("Themes").space.PX_4 };
+const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfilePersonalWidgetCard.tsx");
 
-export default function UserProfilePersonalWidgetCard(userId) {
-  let cardStyle;
+export default function UserProfilePersonalWidgetCard(style) {
   let disableInteraction;
-  userId = userId.userId;
-  const widget = userId.widget;
-  ({ cardStyle, disableInteraction } = userId);
+  let widget;
+  const userId = style.userId;
+  ({ widget, disableInteraction } = style);
+  if (disableInteraction === undefined) {
+    disableInteraction = false;
+  }
   let obj = userId(589);
   const items = [fetchFingerprint];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getId() === userId);
-  obj = { style: cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
+  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getId() === userId);
+  obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = createCacheKey();
-  const tmp5 = importDefault;
-  obj[1] = callback(userId(7749).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  const tmp5 = disableInteraction;
+  obj[1] = callback2(userId(7770).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -201,29 +293,31 @@ export default function UserProfilePersonalWidgetCard(userId) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(12417), obj);
+    tmp4Result = tmp4(tmp5(12435), obj);
   }
   obj[3] = tmp4Result;
-  const tmp6 = Divider;
+  const tmp6 = disableInteraction(5836);
   const sections = widget.sections;
-  obj[4] = callback(closure_6, {
+  obj[4] = callback2(closure_7, {
     style: tmp.sectionsContainer,
     children: sections.map((type) => {
       type = type.type;
       if ("cover" === type) {
-        let obj = { userId: null, section: null };
+        let obj = { userId: null, section: null, disableInteraction: null };
         obj[0] = userId;
         obj[1] = type;
-        return outer1_9(outer1_14, obj, arg1);
+        obj[2] = disableInteraction;
+        return outer1_10(outer1_16, obj, arg1);
       } else if ("fields" === type) {
-        obj = { userId: null, section: null };
+        obj = { userId: null, section: null, disableInteraction: null };
         obj[0] = userId;
         obj[1] = type;
-        return outer1_9(outer1_16, obj, arg1);
+        obj[2] = disableInteraction;
+        return outer1_10(outer1_18, obj, arg1);
       } else {
         return null;
       }
     })
   });
-  return callback(tmp6, obj);
+  return callback2(tmp6, obj);
 };

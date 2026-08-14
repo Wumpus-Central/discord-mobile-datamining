@@ -372,9 +372,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(16652);
-    const reportIncomingCallResult = self(16652).reportIncomingCall(channelId, channelName, tmp19);
-    self(16652).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(16665);
+    const reportIncomingCallResult = self(16665).reportIncomingCall(channelId, channelName, tmp19);
+    self(16665).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         outer1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -383,7 +383,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       outer1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(16652).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(16665).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         outer1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -397,7 +397,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   let closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(16652);
+  obj = self(16665);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -885,7 +885,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   let closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(16652);
+  obj = self(16665);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1041,7 +1041,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(16652);
+            obj = self(16665);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

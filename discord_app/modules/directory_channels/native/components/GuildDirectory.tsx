@@ -10,7 +10,7 @@ import ME from "ME";
 import jsxProd from "HubProgressHeader";
 import createCacheKey from "createCacheKey";
 import ArrayResult from "TTIFirstContentfulPaint";
-import { registerAsset } from "../../../../../_runtime/12089_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12107_registerAsset.js";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -63,7 +63,7 @@ function renderItem(item) {
     let obj = { children: null };
     obj[0] = item.header;
     return callback(GuildDirectoryHeaderRowItem, obj);
-  } else if (tmp2(12088).RowType.ENTRY === type) {
+  } else if (tmp2(12106).RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
     return callback(GuildDirectoryRow, obj);
@@ -138,7 +138,7 @@ function GuildDirectoryFooter(hideFooter) {
       obj[0] = tmp.footer;
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.addIcon;
-      obj1[1] = callback(tmp2(12171).PlusMediumIcon, {});
+      obj1[1] = callback(tmp2(12189).PlusMediumIcon, {});
       const items = [callback(closure_5, obj1), ];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp2(1236).intl;
@@ -146,7 +146,7 @@ function GuildDirectoryFooter(hideFooter) {
       items[1] = callback(tmp2(4338).Text, obj2);
       obj[1] = items;
       obj[3] = callback2(closure_5, obj);
-      tmp4 = callback(tmp2(4887).PressableOpacity, obj);
+      tmp4 = callback(tmp2(4909).PressableOpacity, obj);
     }
   }
   return tmp4;
@@ -201,9 +201,9 @@ export default function GuildDirectory(channel) {
   let obj1 = React;
   dependencyMap = React.useRef(null);
   let bottom = guildId(1628)().bottom;
-  let obj2 = channel(12087);
+  let obj2 = channel(12105);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(12087);
+  let obj3 = channel(12105);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
@@ -341,8 +341,8 @@ export default function GuildDirectory(channel) {
         obj2 = { guild: null, channel: null };
         obj2[0] = onPressSearch;
         obj2[1] = channel;
-        items9[1] = callback(guildId(12172), obj2);
-        items9[2] = callback(tmp2(11346).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = callback(guildId(12190), obj2);
+        items9[2] = callback(tmp2(11362).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj[1] = items9;
         let tmp23 = callback2(currentCategoryId, obj);
       }

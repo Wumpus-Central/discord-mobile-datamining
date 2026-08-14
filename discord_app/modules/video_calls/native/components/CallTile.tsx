@@ -8,11 +8,11 @@ import ParticipantTypes from "ParticipantTypes";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/10510_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10918_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10919_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10920_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10921_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10526_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10934_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10935_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10936_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10937_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 

@@ -89,6 +89,6 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   obj1[1] = items3;
   items1[1] = closure_6(closure_2, obj1);
   obj4[1] = items1;
-  obj[1] = closure_6(stateFromStores(4753).Stack, obj4);
+  obj[1] = closure_6(stateFromStores(4775).Stack, obj4);
   return callback(closure_2, obj);
 };

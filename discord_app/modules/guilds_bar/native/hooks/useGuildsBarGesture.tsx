@@ -278,7 +278,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         if (null != GUILDS) {
           const type = item.type;
           if (renderDefaultEmpty.FastListItemTypes.SECTION !== type) {
-            if (tmp10(8053).FastListItemTypes.ITEM === type) {
+            if (tmp10(8074).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
                 if (GUILDS.type !== tmp12.FOLDER) {
@@ -647,7 +647,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "isArray", overSpecs: "accessibilityRole" });
+    state.setStateShallow({ dragSpecs: "r", overSpecs: "accessibilityRole" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};

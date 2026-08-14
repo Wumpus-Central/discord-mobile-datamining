@@ -1,40 +1,49 @@
 // discord_app/modules/user_profile/hooks/useUserProfileActivity.tsx
 import { useMemo } from "noop";
 import map from "map";
+import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import sortActivity from "sortActivity";
+import { Features } from "DesktopSources";
 
-let closure_6 = [];
-let closure_7 = [];
-let result = require("sortActivity").fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
+let closure_8 = [];
+let closure_9 = [];
+let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
 
 export default function useUserProfileActivity(arg0) {
   const _require = arg0;
-  let obj = _require(stateFromStores1[4]);
-  const items = [sortActivity];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getActivities(closure_0));
-  const tmp = stateFromStores(stateFromStores1[3])(arg0);
-  const items1 = [map];
-  stateFromStores1 = _require(stateFromStores1[4]).useStateFromStores(items1, () => outer1_4.getUserOutbox(closure_0));
-  const items2 = [stateFromStores, ];
-  let entries;
-  if (stateFromStores1 != null) {
-    entries = stateFromStores1.entries;
+  let obj = _require(stateFromStores2[5]);
+  const items = [_detectH265HardwareDecode];
+  const stateFromStores = obj.useStateFromStores(items, () => _detectH265HardwareDecode.supports(constants.VIDEO));
+  let tmp4 = null;
+  if (stateFromStores) {
+    tmp4 = stateFromStores1(stateFromStores2[6])(arg0);
   }
-  items2[1] = entries;
-  const tmp4Result = useMemo(() => {
-    let obj = callback(stateFromStores1[5]);
-    let userProfileLiveActivities = obj.getUserProfileLiveActivities(stateFromStores);
+  let tmpResult = tmp(tmp2[5]);
+  const items1 = [sortActivity];
+  stateFromStores1 = tmpResult.useStateFromStores(items1, () => outer1_6.getActivities(closure_0));
+  tmpResult = tmp(tmp2[5]);
+  const items2 = [map];
+  stateFromStores2 = tmpResult.useStateFromStores(items2, () => outer1_4.getUserOutbox(closure_0));
+  const items3 = [stateFromStores1, ];
+  let entries;
+  if (stateFromStores2 != null) {
+    entries = stateFromStores2.entries;
+  }
+  items3[1] = entries;
+  const tmp7Result = useMemo(() => {
+    let obj = callback(stateFromStores2[7]);
+    let userProfileLiveActivities = obj.getUserProfileLiveActivities(stateFromStores1);
     let found;
-    if (stateFromStores1 != null) {
-      const entries = stateFromStores1.entries;
+    if (stateFromStores2 != null) {
+      const entries = stateFromStores2.entries;
       found = entries.filter((traits) => {
         let length = traits;
         const userProfileLiveActivities = traits;
-        const isEntryLiveResult = userProfileLiveActivities(outer1_2[6]).isEntryLive(traits);
+        const isEntryLiveResult = userProfileLiveActivities(outer1_2[8]).isEntryLive(traits);
         if (isEntryLiveResult) {
           return !isEntryLiveResult;
         } else {
-          let tmpResult = tmp(tmp2[7]);
+          let tmpResult = tmp(tmp2[9]);
           if (tmpResult.isListenedSessionEntry(length)) {
             length = length.extra.entries.length;
             let tmp6 = length > 0;
@@ -43,42 +52,42 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((party) => {
                 let result = null != party;
                 if (result) {
-                  result = traits(outer1_2[8]).isMatchingListeningActivity(traits, party);
-                  const obj = traits(outer1_2[8]);
+                  result = traits(outer1_2[10]).isMatchingListeningActivity(traits, party);
+                  const obj = traits(outer1_2[10]);
                 }
                 return result;
               });
             }
             let result = tmp6;
           } else {
-            tmpResult = tmp(tmp2[7]);
+            tmpResult = tmp(tmp2[9]);
             if (tmpResult.isWatchedMediaEntry(length)) {
               result = !userProfileLiveActivities.some((details) => {
                 let result = null != details;
                 if (result) {
-                  result = traits(outer1_2[8]).isMatchingWatchActivity(traits, details);
-                  const obj = traits(outer1_2[8]);
+                  result = traits(outer1_2[10]).isMatchingWatchActivity(traits, details);
+                  const obj = traits(outer1_2[10]);
                 }
                 return result;
               });
             } else {
-              result = tmp(tmp2[7]).isRecentActivityEntry(length);
-              const tmpResult1 = tmp(tmp2[7]);
+              result = tmp(tmp2[9]).isRecentActivityEntry(length);
+              const tmpResult1 = tmp(tmp2[9]);
             }
           }
         }
       });
     }
     if (0 === userProfileLiveActivities.length) {
-      userProfileLiveActivities = outer1_6;
+      userProfileLiveActivities = outer1_8;
     }
     obj = { live: userProfileLiveActivities, recent: null };
     if (null == found) {
-      found = outer1_7;
+      found = outer1_9;
     }
     obj[1] = found;
     return obj;
-  }, items2);
-  obj = { live: tmp4Result.live, recent: tmp4Result.recent, stream: tmp, outbox: stateFromStores1 };
+  }, items3);
+  obj = { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };
   return obj;
 };

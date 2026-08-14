@@ -50,7 +50,7 @@ const memoResult = importAllResult.memo(() => {
   const animatedStyle = obj1.useAnimatedStyle(fn);
   obj = { style: animatedStyle, pointerEvents: "none", children: null };
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
-  obj[2] = jsx(stateFromStores(5416).Card, { variant: "secondary", style: callback2().postPlaceholder });
+  obj[2] = jsx(stateFromStores(5437).Card, { variant: "secondary", style: callback2().postPlaceholder });
   return jsx(timingConfig(4083).View, { style: animatedStyle, pointerEvents: "none", children: null });
 });
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");

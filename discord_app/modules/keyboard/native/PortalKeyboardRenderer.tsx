@@ -117,7 +117,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     tmp3 = outer1_6;
   }, items1);
   obj = { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem };
-  const tmp11 = jsx(id(4689).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
+  const tmp11 = jsx(id(4711).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
   if (flag) {
     obj = { children: null };
     obj[0] = tmp11;
@@ -125,7 +125,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   } else {
     const obj1 = { value: true, children: null };
     obj1[1] = tmp11;
-    tmp10Result = tmp10(tmp5(8770).PortalKeyboardInModalContext.Provider, obj1);
+    tmp10Result = tmp10(tmp5(8784).PortalKeyboardInModalContext.Provider, obj1);
   }
   return tmp10Result;
 };

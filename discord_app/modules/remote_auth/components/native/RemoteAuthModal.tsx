@@ -6,10 +6,10 @@ import { Endpoints } from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import { apply } from "../../../../../_runtime/00012_apply.js";
-import { registerAsset } from "../../../../../_runtime/13278_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13280_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13282_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13283_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13290_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13292_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13294_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13295_registerAsset.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { ActivityIndicator } from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -101,7 +101,7 @@ function RemoteAuthLogin(arg0) {
     tmp10 = !tmp5;
   }
   obj = { children: null };
-  obj = { source: tmp7(13281), style: tmp.mainImage };
+  obj = { source: tmp7(13293), style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   const obj1 = { variant: "heading-md/extrabold", children: null };
   const intl = getSystemLocale.intl;

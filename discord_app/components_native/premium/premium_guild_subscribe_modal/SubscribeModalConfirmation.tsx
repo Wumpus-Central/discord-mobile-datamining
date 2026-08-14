@@ -12,8 +12,8 @@ import { BoostPurchaseIntent } from "BoostedGuildTiers";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../_runtime/08494_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12945_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08516_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12963_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -107,7 +107,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = createCacheKey();
-  let obj = prop(12955);
+  let obj = prop(12973);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   let obj1 = prop(589);
   const items = [createGuildRecordFromRust];
@@ -154,7 +154,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     const obj7 = { style: null, guild: null };
     obj7[0] = tmp.guildPreview;
     obj7[1] = stateFromStores;
-    items2[1] = callback(onPremiumGuildSubscribe(12946), obj7);
+    items2[1] = callback(onPremiumGuildSubscribe(12964), obj7);
     const obj8 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj8[0] = tmp.previewHeader;
     const intl4 = tmp2(1236).intl;
@@ -171,8 +171,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10[3] = Gradients.PREMIUM_GUILD;
     const obj11 = { guild: null };
     obj11[0] = guild;
-    obj10[4] = callback(onPremiumGuildSubscribe(12946), obj11);
-    items2[3] = callback(onPremiumGuildSubscribe(4766), obj10);
+    obj10[4] = callback(onPremiumGuildSubscribe(12964), obj11);
+    items2[3] = callback(onPremiumGuildSubscribe(4788), obj10);
     obj5[1] = items2;
     items1[3] = callback2(closure_7, obj5);
     const obj12 = { slots: null };
@@ -189,11 +189,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj14[3] = isModifyingSubscription;
-    obj13[1] = callback(tmp2(4755).Button, obj14);
+    obj13[1] = callback(tmp2(4777).Button, obj14);
     items1[5] = callback(closure_7, obj13);
     obj[0] = items1;
     tmp8 = callback2(closure_21, obj);
-    const tmp15 = onPremiumGuildSubscribe(4766);
+    const tmp15 = onPremiumGuildSubscribe(4788);
   }
   return tmp8;
 }

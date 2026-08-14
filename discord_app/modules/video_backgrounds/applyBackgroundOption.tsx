@@ -165,7 +165,7 @@ function _applyBackgroundOption() {
                     }
                   }
                 }
-                const tmp24 = callback2(9216)()[tmp59];
+                const tmp24 = callback2(9230)()[tmp59];
                 const isVideo = tmp24.isVideo;
                 module_38 = isVideo;
                 if (isVideo == null) {

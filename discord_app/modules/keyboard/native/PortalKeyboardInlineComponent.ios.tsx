@@ -20,11 +20,11 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   id = importAllResult.useId();
   const tmp2 = id(4207)();
   dependencyMap = tmp2;
-  let tmp4 = id(6047)({ includeCustomKeyboard: false });
+  let tmp4 = id(6068)({ includeCustomKeyboard: false });
   importAllResult = tmp4;
   let tmp3 = id(1894)();
   keyboardContextForType = messagesRef(4207).useKeyboardContextForType(messagesRef(1626).KeyboardTypes.SYSTEM);
-  id(4771)(() => () => {
+  id(4793)(() => () => {
     const PortalKeyboardUIStore = outer1_0(outer1_2[8]).PortalKeyboardUIStore;
     const field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;

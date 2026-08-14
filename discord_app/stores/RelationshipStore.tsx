@@ -101,7 +101,7 @@ let closure_15 = {};
 let c16 = 0;
 let c17 = 0;
 let c18 = 0;
-let closure_19 = { friends: "useEffect", blocked: "paddingHorizontal", ignored: "replace", blockedOrIgnored: "current" };
+let closure_19 = { friends: "Array", blocked: "flex", ignored: "y", blockedOrIgnored: "HermesInternal" };
 const set3 = new Set();
 const map1 = new Map();
 class RelationshipStore extends Store {

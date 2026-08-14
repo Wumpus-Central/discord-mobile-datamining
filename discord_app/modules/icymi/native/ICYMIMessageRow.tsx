@@ -35,7 +35,7 @@ class MessageRowContent {
     if (flag2 === undefined) {
       flag2 = false;
     }
-    tmp = f62386();
+    tmp = f62523();
     tmp2 = message;
     tmp3 = closure_2;
     context = __esModule.useContext(require("context").ICYMIContext);
@@ -143,7 +143,7 @@ function ReplyMessageContent(message) {
   ({ channel, guild } = message);
   const tmp = callback3();
   let obj = importAllResult;
-  const context = importAllResult.useContext(message(15641).ICYMIContext);
+  const context = importAllResult.useContext(message(15659).ICYMIContext);
   let obj1 = message(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_10.getUser(message.author.id));
@@ -157,7 +157,7 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(15641).ICYMIContext).width;
+  const width = obj.useContext(tmp2(15659).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
@@ -194,7 +194,7 @@ function ReplyMessageContent(message) {
     obj9[1] = channel;
     obj9[2] = guild;
     obj7[1] = callback(MessageRowContent, obj9);
-    items4[1] = callback(tmp2(15641).ICYMIContext.Provider, obj7);
+    items4[1] = callback(tmp2(15659).ICYMIContext.Provider, obj7);
     obj3[1] = items4;
     items3[1] = callback2(View, obj3);
     obj1[1] = items3;
@@ -352,7 +352,7 @@ export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   let stateFromStores;
   ({ message, messageContext, visible } = arg0);
-  let obj = gravityMessage(8961);
+  let obj = gravityMessage(8975);
   gravityMessage = obj.useGravityMessage(message);
   const items = [ensureGuildLoaded];
   stateFromStores = gravityMessage(589).useStateFromStores(items, () => outer1_5.getChannel(gravityMessage.getChannelId()));

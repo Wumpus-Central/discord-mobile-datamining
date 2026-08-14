@@ -315,7 +315,13 @@ const memoResult = importAllResult.memo((questContent) => {
   }
   const tmp3Result18 = tmp3(tmp4[31]);
   const isQuestAccessSuspended = tmp3(tmp4[16]).useIsQuestAccessSuspended();
-  obj = { disabled: true, onPressDisabled: tmp10(tmp4[32]) };
+  obj = {
+    disabled: true,
+    onPressDisabled() {
+      callback({ questId: quest.id, questContent: QUEST_HOME_MOBILE, questContentCTA: outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent });
+      quest(QUEST_HOME_MOBILE[32])();
+    }
+  };
   const tmp3Result19 = tmp3(tmp4[16]);
   const questFormattedDate1 = tmp3(tmp4[16]).useQuestFormattedDate(quest.config.expiresAt, { month: "numeric", day: "numeric" });
   const tmp3Result20 = tmp3(tmp4[16]);
@@ -516,12 +522,12 @@ const memoResult = importAllResult.memo((questContent) => {
               } else {
                 let closure_0 = tmp2;
                 outer1_5.log("Enrolling in quest");
-                outer1_0(10422);
+                outer1_0(10438);
                 let obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
                 if (!outer1_20) {
                   if (!outer1_14) {
-                    let START_QUEST = tmp31(7233).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp31(7255).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
                   obj1[2] = outer1_4;
@@ -529,7 +535,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   v0 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp31(7233).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp31(7255).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -545,7 +551,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = openQuestAccessSuspendedBottomSheet;
-                  v0(14431)(obj);
+                  v0(14444)(obj);
                   dependencyMap = 3;
                 }
                 callback2();

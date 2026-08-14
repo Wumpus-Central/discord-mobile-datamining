@@ -648,9 +648,9 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(10672).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(10688).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
-  const WindowVisibilityVideoManager2 = tmp5(10672).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(10688).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
@@ -1096,7 +1096,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13144).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13155).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -1104,22 +1104,22 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   }
   let tmp8Result = tmp8(500);
   if (tmp8Result.isIOS()) {
-    const mode = tmp3(13145).getConfig({ location: "_chooseExperiments" }).mode;
+    const mode = tmp3(13156).getConfig({ location: "_chooseExperiments" }).mode;
     if ("standard" === mode) {
       items.push("ios_video_stabilization_standard");
     } else if ("low_latency" === mode) {
       items.push("ios_video_stabilization_low_latency");
     }
-    const tmp3Result = tmp3(13145);
+    const tmp3Result = tmp3(13156);
   }
   tmp8Result = tmp8(500);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(10668).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(10668);
+    isAndroidResult = tmp8(10684).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(10684);
   }
   if (isAndroidResult) {
-    items.push(tmp8(10668).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(10684).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1708,16 +1708,17 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   persistentCodesEnabled = persistentCodesEnabled.getPersistentCodesEnabled();
   staticAuthSessionId = staticAuthSessionId.getStaticAuthSessionId();
   let tmp2Result = tmp2(4420);
-  obj = { ssrc, address: _sfuEndpoint.address, port: _sfuEndpoint.port, modes: _sfuEndpoint.modes, experiments: self._selectedExperiments, streamParameters, qosEnabled: null, signingKeyId: null, processPriority: null, threadPriorityConfiguration: null };
+  obj = { ssrc, address: _sfuEndpoint.address, port: _sfuEndpoint.port, modes: _sfuEndpoint.modes, experiments: self._selectedExperiments, streamParameters, videoSupported: null, qosEnabled: null, signingKeyId: null, processPriority: null, threadPriorityConfiguration: null };
   ({ context, userId } = self);
-  obj[6] = obj.getQoS();
-  let tmp8;
+  obj[6] = obj.supports(constants5.VIDEO);
+  obj[7] = obj.getQoS();
+  let tmp9;
   if (persistentCodesEnabled) {
-    tmp8 = staticAuthSessionId;
+    tmp9 = staticAuthSessionId;
   }
-  obj[7] = tmp8;
-  obj[8] = processPriority;
-  obj[9] = threadPriorityConfiguration;
+  obj[8] = tmp9;
+  obj[9] = processPriority;
+  obj[10] = threadPriorityConfiguration;
   let merged = Object.assign(self.getExtraConnectionOptions());
   const connectResult = mediaEngine.connect(context, userId, obj);
   dependencyMap = connectResult;
@@ -1779,7 +1780,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       bitrate = AV1StreamBitrateReductionExperiment.getConfig({ location: "RTCConnection" }).bitrate;
     }
   });
-  if (obj.supports(tmp14.IMAGE_QUALITY_MEASUREMENT)) {
+  if (obj.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
     const result1 = connectResult.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
   }
   const result2 = connectResult.setVideoEncoderExperiments(obj.getVideoEncoderExperiments(self.context, self.getVoiceParticipantType()));
@@ -2063,7 +2064,6 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, _handleOutboundLossRate.bind(self));
   const _handleLocalVideoDisabled = self._handleLocalVideoDisabled;
   connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, _handleLocalVideoDisabled.bind(self));
-  tmp14 = constants5;
   const tmp2Result1 = _set;
   connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Stats, create.create());
   const _handleRemoteStreamsReady = self._handleRemoteStreamsReady;
@@ -2187,22 +2187,22 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13156).VideoQuality(self._connection);
+      const videoQuality = new self(13167).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13157).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13168).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13157).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13168).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13156).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13167).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2319,60 +2319,62 @@ prototype["_handleVideo"] = function _handleVideo(arg0, userId, audioSSRC, arg3,
   self = this;
   let closure_1 = userId;
   let closure_0 = arg3;
-  if (null != this._connection) {
-    if (self.userId !== userId) {
-      if (null != self._localMediaSinkWantsManager) {
-        const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
-        _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
-        const mapped = arr.map((rid) => ({ type: outer1_28.VIDEO, rid: rid.rid, ssrc: rid.ssrc, rtxSsrc: rid.rtxSsrc, quality: rid.quality, active: closure_0 > 0 }));
-        if (0 === mapped.length) {
-          let obj = { type: null, rid: "100", ssrc: null, rtxSsrc: null, quality: 100, active: null };
-          obj[0] = constants7.VIDEO;
-          obj[2] = arg3;
-          obj[3] = arg3 + 1;
-          obj[5] = arg3 > 0;
-          mapped.push(obj);
-        }
-        const _localMediaSinkWantsManager2 = self._localMediaSinkWantsManager;
-        _localMediaSinkWantsManager2.setVideoSSRCs(userId, mapped);
-      } else {
-        const items = [];
-        const iter = arr[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp4 = nextResult;
-          let tmp5 = null != nextResult.ssrc;
-          if (tmp5) {
-            let tmp6 = nextResult;
-            tmp5 = null != tmp4.quality;
+  if (store2.supports(constants5.VIDEO)) {
+    if (null != self._connection) {
+      if (self.userId !== userId) {
+        if (null != self._localMediaSinkWantsManager) {
+          const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
+          _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
+          const mapped = arr.map((rid) => ({ type: outer1_28.VIDEO, rid: rid.rid, ssrc: rid.ssrc, rtxSsrc: rid.rtxSsrc, quality: rid.quality, active: closure_0 > 0 }));
+          if (0 === mapped.length) {
+            let obj = { type: null, rid: "100", ssrc: null, rtxSsrc: null, quality: 100, active: null };
+            obj[0] = constants7.VIDEO;
+            obj[2] = arg3;
+            obj[3] = arg3 + 1;
+            obj[5] = arg3 > 0;
+            mapped.push(obj);
           }
-          if (tmp5) {
-            obj = { ssrc: null, quality: null, active: null };
-            let tmp7 = nextResult;
-            ({ ssrc: obj[0], quality: obj[1], active } = tmp4);
-            if (active == null) {
-              active = true;
+          const _localMediaSinkWantsManager2 = self._localMediaSinkWantsManager;
+          _localMediaSinkWantsManager2.setVideoSSRCs(userId, mapped);
+        } else {
+          const items = [];
+          const iter = arr[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp5 = nextResult;
+            let tmp6 = null != nextResult.ssrc;
+            if (tmp6) {
+              let tmp7 = nextResult;
+              tmp6 = null != tmp5.quality;
             }
-            obj[2] = active;
-            arr = items.push(obj);
+            if (tmp6) {
+              obj = { ssrc: null, quality: null, active: null };
+              let tmp8 = nextResult;
+              ({ ssrc: obj[0], quality: obj[1], active } = tmp5);
+              if (active == null) {
+                active = true;
+              }
+              obj[2] = active;
+              arr = items.push(obj);
+            }
+            continue;
           }
-          continue;
-        }
-        const _goLiveQualityManager = self._goLiveQualityManager;
-        if (_goLiveQualityManager != null) {
-          _goLiveQualityManager.setUserID(userId);
-        }
-        const _goLiveQualityManager2 = self._goLiveQualityManager;
-        if (_goLiveQualityManager2 != null) {
-          const result = _goLiveQualityManager2.updateAudioAndVideoStreamInfo(audioSSRC, items);
-        }
-      }
-      if (arr != null) {
-        const item = arr.forEach((quality) => {
-          if (100 === quality.quality) {
-            self.emit(callback(outer1_3[35]).RTCConnectionEvent.VideoSourceQualityChanged, self.guildId, self.channelId, closure_1, quality.maxResolution, quality.maxFrameRate, self.context);
+          const _goLiveQualityManager = self._goLiveQualityManager;
+          if (_goLiveQualityManager != null) {
+            _goLiveQualityManager.setUserID(userId);
           }
-        });
+          const _goLiveQualityManager2 = self._goLiveQualityManager;
+          if (_goLiveQualityManager2 != null) {
+            const result = _goLiveQualityManager2.updateAudioAndVideoStreamInfo(audioSSRC, items);
+          }
+        }
+        if (arr != null) {
+          const item = arr.forEach((quality) => {
+            if (100 === quality.quality) {
+              self.emit(callback(outer1_3[35]).RTCConnectionEvent.VideoSourceQualityChanged, self.guildId, self.channelId, closure_1, quality.maxResolution, quality.maxFrameRate, self.context);
+            }
+          });
+        }
       }
     }
   }

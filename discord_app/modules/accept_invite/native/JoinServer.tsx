@@ -132,7 +132,7 @@ export default function JoinServer(arg0) {
   obj10[3] = submitting;
   obj10[4] = submitting;
   obj10[5] = onDone;
-  items5[1] = callback(navigation(4755).Button, obj10);
+  items5[1] = callback(navigation(4777).Button, obj10);
   items5[2] = callback(OrSeparator, {});
   const obj11 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl8 = tmp4(1236).intl;
@@ -140,7 +140,7 @@ export default function JoinServer(arg0) {
   const intl9 = tmp4(1236).intl;
   obj11[3] = intl9.string(navigation(1236).t["MOqX/G"]);
   obj11[4] = callback;
-  items5[3] = callback(navigation(4755).Button, obj11);
+  items5[3] = callback(navigation(4777).Button, obj11);
   obj8[0] = items5;
   items4[1] = closure_9(closure_10, obj8);
   obj[2] = items4;

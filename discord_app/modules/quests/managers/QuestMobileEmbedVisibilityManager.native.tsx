@@ -236,7 +236,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(9812).isChannelFocused();
+      let isChannelFocusedResult = applyArgumentsResult(9823).isChannelFocused();
       applyArgumentsResult(4197);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;

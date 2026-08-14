@@ -9,7 +9,7 @@ import jsxProd from "getSubscriptionPlaceholderPatternSource";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import { apply } from "../../../../_runtime/00012_apply.js";
-import { registerAsset } from "../../../../_runtime/12838_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12856_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSubscriptionPlaceholderPatternSource } from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -116,7 +116,7 @@ function GuildBoostSlot(guildBoostSlot) {
       const intl2 = guildBoostSlot(1236).intl;
       obj3[2] = intl2.string(guildBoostSlot(1236).t.jqqLb6);
       obj2[2] = tmp6(guildBoostSlot(4338).Text, obj3);
-      tmp6Result = tmp6(guildBoostSlot(4887).PressableOpacity, obj2);
+      tmp6Result = tmp6(guildBoostSlot(4909).PressableOpacity, obj2);
     }
     obj[2] = tmp6Result;
     obj[3] = tmp;
@@ -166,7 +166,7 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const intl2 = found(1236).intl;
     obj2[2] = intl2.string(found(1236).t["7KyPor"]);
     obj1[2] = callback(found(4338).Text, obj2);
-    obj[1] = callback(found(4887).PressableOpacity, obj1);
+    obj[1] = callback(found(4909).PressableOpacity, obj1);
     obj[2] = 0 === found.length;
     tmp4 = callback(GuildBoostSlotsInventoryRow, obj);
   }
@@ -275,7 +275,7 @@ function BoostedGuild(arg0) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(12843), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(12861), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
   const items4 = [closure_12(closure_5, obj1), closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj[1] = items4;
@@ -325,8 +325,8 @@ const result = require("handleThemeChange").fileFinishedImporting("modules/premi
 export default function GuildBoostSlotsInventory() {
   const tmp = createCacheKey();
   const effect = React.useEffect(() => {
-    const subscriptions = callback(4664).fetchSubscriptions();
-    const obj = callback(4664);
+    const subscriptions = callback(4686).fetchSubscriptions();
+    const obj = callback(4686);
     const guildBoostSlots = valueResult(4238).fetchGuildBoostSlots();
   }, []);
   let obj = initialize;

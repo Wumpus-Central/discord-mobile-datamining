@@ -51,12 +51,12 @@ function VerifiedIcon(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp.verifiedIconContainer;
     obj = { source: null, color: null };
-    obj[0] = tmp4(11027);
+    obj[0] = tmp4(11043);
     obj[1] = PLATFORM_TWITTER;
     const merged = Object.assign(obj);
     const items = [callback(tmp2(1297).Icon, obj), ];
     obj1 = { source: null, color: null };
-    obj1[0] = tmp4(11028);
+    obj1[0] = tmp4(11044);
     obj1[1] = WHITE;
     const merged1 = Object.assign(obj);
     items[1] = callback(tmp2(1297).Icon, obj1);
@@ -465,7 +465,7 @@ let closure_20 = importAllResult.memo((application) => {
 const memoResult = importAllResult.memo((applicationRoleConnection) => {
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp = callback3();
-  let obj = applicationRoleConnection(11022);
+  let obj = applicationRoleConnection(11038);
   const roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
   let obj1 = getAvatarURL;
   obj = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
@@ -519,7 +519,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     obj7[0] = tmp4(1297).Icon.Sizes.MEDIUM;
     obj7[1] = applicationIconSource;
     obj6[2] = callback(tmp4(1297).Icon, obj7);
-    return callback(tmp4(5414).TableRow, obj6);
+    return callback(tmp4(5435).TableRow, obj6);
   } else {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.connectionRow;
@@ -592,7 +592,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(589).useStateFromStores(items1, () => obj.hidePersonalInformation);
   const obj3 = userId(589);
   const tmp2 = theme;
-  ({ connections, appIdentities } = theme(12542)(userId));
+  ({ connections, appIdentities } = theme(12560)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => outer1_13(outer1_19, { account, theme, locale: closure_2, userId }, account.id)), 0);
@@ -615,14 +615,14 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
       const intl2 = tmp5(1236).intl;
       obj[1] = intl2.string(tmp5(1236).t["3fe7U5"]);
       obj[2] = items2;
-      let tmp12Result = tmp12(tmp5(5807).TableRowGroup, obj);
+      let tmp12Result = tmp12(tmp5(5828).TableRowGroup, obj);
     } else {
       obj1 = { children: null };
       obj1[0] = items2;
-      tmp12Result = tmp12(tmp5(5815).UserProfileCardRows, obj1);
+      tmp12Result = tmp12(tmp5(5836).UserProfileCardRows, obj1);
     }
     obj[3] = tmp12Result;
-    return closure_13(tmp2(5815), obj);
+    return closure_13(tmp2(5836), obj);
   }
   return null;
 };
@@ -653,11 +653,11 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
         const intl2 = tmp5(1236).intl;
         obj[1] = intl2.string(tmp5(1236).t.PHjkRE);
         obj[2] = mapped;
-        let tmp9Result = tmp9(tmp5(5807).TableRowGroup, obj);
+        let tmp9Result = tmp9(tmp5(5828).TableRowGroup, obj);
       } else {
         const obj1 = { children: null };
         obj1[0] = mapped;
-        tmp9Result = tmp9(tmp5(5815).UserProfileCardRows, obj1);
+        tmp9Result = tmp9(tmp5(5836).UserProfileCardRows, obj1);
       }
       obj[3] = tmp9Result;
       return closure_13(Divider, obj);

@@ -7,7 +7,7 @@ import { MobileSetting } from "MobileSetting";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10012_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10023_registerAsset.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
@@ -57,7 +57,7 @@ function VideoUploadQualityNitroUpsell() {
     items2[1] = tmp7(tmp(4338).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(5416).Card, obj1);
+    obj[1] = tmp7(tmp(5437).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;

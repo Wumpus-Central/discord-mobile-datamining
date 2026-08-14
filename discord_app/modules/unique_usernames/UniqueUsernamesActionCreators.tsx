@@ -20,99 +20,49 @@ export default {
       num = 1500;
     }
     return callback(function*() {
-      if (constants === 2) {
+      let closure_1 = tmp3;
+      outer1_1(outer1_2[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
+      let c3 = 1;
+      const HTTP = outer1_0(outer1_2[4]).HTTP;
+      const obj1 = { url: null, query: null, timeout: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+      obj1[0] = constants.POMELO_SUGGESTIONS_UNAUTHED;
+      if (null != outer1_0) {
+        const obj2 = { global_name: null };
+        obj2[0] = outer1_0;
+        const tmp17 = obj2;
+      }
+      obj1[1] = tmp17;
+      obj1[2] = outer1_1;
+      yield HTTP.get(obj1);
+      if (1 === tmp7) {
+        c3 = 0;
         constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+      } else if (arg0 === 1) {
+        constants = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        constants = 3;
+        const obj4 = { value: null, done: true };
+        obj4[0] = arg1;
+        return obj4;
       } else {
-        try {
-          constants = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let closure_0 = tmp7;
-              closure_0 = undefined;
-              outer1_1(outer1_2[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
-              let c3 = 1;
-              const HTTP = outer1_0(outer1_2[4]).HTTP;
-              const obj1 = { url: null, query: null, timeout: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-              obj1[0] = constants.POMELO_SUGGESTIONS_UNAUTHED;
-              let tmp19;
-              if (null != outer1_0) {
-                const obj2 = { global_name: null };
-                obj2[0] = outer1_0;
-                tmp19 = obj2;
-              }
-              obj1[1] = tmp19;
-              obj1[2] = outer1_1;
-              c4 = 2;
-              constants = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-            } else if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              constants = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              closure_0 = arg1;
-              if (!closure_0.ok) {
-                c3 = 0;
-              } else {
-                const body = closure_0.body;
-                let username;
-                if (body != null) {
-                  username = body.username;
-                }
-              }
-              obj = outer1_1(outer1_2[3]);
-              const obj5 = { type: "UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS", suggestion: null, source: null };
-              obj5[1] = closure_0.body;
-              obj5[2] = closure_0;
-              c3 = 0;
-              constants = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = obj.dispatch(obj5);
-              return obj6;
-            }
-            constants = 3;
-          }
-        } catch (tmp21) {
-          let closure_2 = tmp21;
-          if (tmp4 === c3) {
-            constants = tmp2;
-            throw tmp21;
-          } else {
-            c4 = tmp;
-          }
+        let closure_0 = arg1;
+        const body = closure_0.body;
+        let username;
+        if (body != null) {
+          username = body.username;
+        }
+        if (null == username) {
+          c3 = 0;
         }
       }
+      const obj = outer1_1(outer1_2[3]);
+      const obj5 = { type: "UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS", suggestion: null, source: null };
+      obj5[1] = closure_0.body;
+      obj5[2] = closure_0;
+      c3 = 0;
+      return obj.dispatch(obj5);
     })();
   },
   attemptUsername(arg0, arg1, arg2, expandEventProperties) {

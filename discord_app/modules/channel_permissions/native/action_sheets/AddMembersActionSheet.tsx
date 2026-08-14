@@ -210,7 +210,7 @@ class AddMembersBody {
     tmp33 = Fragment;
     tmp35 = length;
     obj4 = { accessibilityLabel: null, placeholder: null, tags: null, onChangeText: null, onRemove: null };
-    tmp8Result = require("module_9058");
+    tmp8Result = require("module_9072");
     intl5 = require("getSystemLocale").intl;
     obj4[0] = intl5.string(require("getSystemLocale").t["5h0QOP"]);
     intl6 = require("getSystemLocale").intl;
@@ -411,7 +411,7 @@ export default function AddMembersActionSheet(channel) {
         }
       });
       let dependencyMap = 1;
-      yield outer1_0(9047).savePermissionUpdates(outer1_0.id, items);
+      yield outer1_0(9061).savePermissionUpdates(outer1_0.id, items);
       if (1 === tmp7) {
         dependencyMap = 0;
         let c5 = 3;
@@ -473,7 +473,7 @@ export default function AddMembersActionSheet(channel) {
       }
       let obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(5436).BottomSheetTitleHeader, obj);
+      obj1[1] = tmp11(tmp4(5457).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null, inActionSheet: true };
@@ -484,7 +484,7 @@ export default function AddMembersActionSheet(channel) {
       obj3[4] = tmp2[1];
       obj2[1] = tmp11(AddMembersBody, obj3);
       obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(5437).BottomSheet, obj1);
+      return tmp11(tmp4(5458).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1236).intl;

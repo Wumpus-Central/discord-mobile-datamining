@@ -53,7 +53,7 @@ export default function ConnectAccountStep(clientId) {
     }
     return currentUser;
   });
-  let obj2 = platformType(5041);
+  let obj2 = platformType(5063);
   const value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
@@ -91,7 +91,7 @@ export default function ConnectAccountStep(clientId) {
     const items4 = [callback(tmp5(1297).Avatar, obj3), , ];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8653).MoreHorizontalIcon, obj4);
+    items4[1] = callback(tmp5(8667).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
     obj5[1] = tmp5(1297).AvatarSizes.XLARGE;
@@ -134,7 +134,7 @@ export default function ConnectAccountStep(clientId) {
     };
     const intl3 = tmp5(1236).intl;
     obj13[3] = intl3.string(tmp5(1236).t.S0W8Z5);
-    items7[2] = callback(tmp5(4755).Button, obj13);
+    items7[2] = callback(tmp5(4777).Button, obj13);
     obj10[1] = items7;
     items6[2] = callback2(View, obj10);
     const obj14 = { style: null, children: null };

@@ -29,5 +29,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4702).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(4724).Freeze, { freeze, placeholder, children: children.children });
 };

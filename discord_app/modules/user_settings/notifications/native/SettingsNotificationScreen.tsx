@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationScreen.tsx
-import importAllResult from "module_13947";
+import importAllResult from "module_13959";
 import { View } from "NotificationPermissionSettingsHeader";
 import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore";
 import { MobileSetting } from "MobileSetting";
@@ -49,7 +49,7 @@ function SystemNotificationsSubLabel() {
     obj2[0] = tmp.cardContent;
     obj3 = { color: null };
     obj3[0] = Themes.unsafe_rawColors.YELLOW_300;
-    const items1 = [callback(tmp2(7838).CircleErrorIcon, obj3), ];
+    const items1 = [callback(tmp2(7859).CircleErrorIcon, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
@@ -59,7 +59,7 @@ function SystemNotificationsSubLabel() {
     items1[1] = callback(View, obj4);
     obj2[1] = items1;
     obj1[2] = tmp8(View, obj2);
-    obj[1] = callback(tmp2(5416).Card, obj1);
+    obj[1] = callback(tmp2(5437).Card, obj1);
     showReactivationPrompt = callback(View, obj);
   }
   children[1] = showReactivationPrompt;
@@ -74,8 +74,8 @@ obj[1] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[2] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7101).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
-  let obj = isFamilyCenterV3Enabled(7101);
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7123).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  let obj = isFamilyCenterV3Enabled(7123);
   let tmp2 = !apexExperiment.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];

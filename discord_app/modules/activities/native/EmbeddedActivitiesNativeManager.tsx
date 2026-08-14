@@ -11,7 +11,7 @@ import set from "set";
 import "getShelfItemTrackingProperties";
 import set from "ensureGuildLoaded";
 import { v1 } from "../../../../_runtime/00514_v1.js";
-import { registerAsset } from "../../../../_runtime/09922_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/09933_registerAsset.js";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";

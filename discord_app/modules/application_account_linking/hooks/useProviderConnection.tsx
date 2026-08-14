@@ -67,8 +67,8 @@ export const useProviderConnection = function useProviderConnection(provider_id)
               } else {
                 let c5 = 1;
                 let obj4 = outer2_1(outer2_2[4]);
-                let c1 = tmp29;
-                if (tmp29 == null) {
+                let c1 = tmp27;
+                if (tmp27 == null) {
                   c1 = "Account Linking";
                 }
                 const obj2 = { location: null };
@@ -76,7 +76,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
                 c3 = 2;
                 c6 = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = obj4.authorize(tmp30, obj2);
+                obj3[0] = obj4.authorize(tmp28, obj2);
                 return obj3;
               }
             }
@@ -97,19 +97,19 @@ export const useProviderConnection = function useProviderConnection(provider_id)
             return obj5;
           } else {
             closure_0 = arg1;
-            if (!closure_0.ok) {
-              obj = { success: false };
-              c5 = 0;
-              c6 = 3;
-            } else {
-              const body = closure_0.body;
-              let url;
-              if (body != null) {
-                url = body.url;
-              }
+            const body = closure_0.body;
+            let url;
+            if (body != null) {
+              url = body.url;
             }
-            const obj6 = { success: true, url: null };
-            obj6[1] = closure_0.body.url;
+            if (null != url) {
+              const obj6 = { success: true, url: null };
+              obj6[1] = closure_0.body.url;
+            } else {
+              obj = { success: false };
+            }
+            c5 = 0;
+            c6 = 3;
           }
         } catch (tmp18) {
           let noop = tmp18;

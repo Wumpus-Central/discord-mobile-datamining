@@ -4,8 +4,8 @@ import set from "set";
 import { View } from "SearchField";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/12565_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/12566_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12583_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12584_registerAsset.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -35,7 +35,7 @@ function GuildList(recipientId) {
   let dependencyMap;
   let callback;
   dependencyMap = createCacheKey();
-  let obj = recipientId(12562);
+  let obj = recipientId(12580);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {
@@ -60,7 +60,7 @@ function GuildList(recipientId) {
     }
     obj = { paddingTop: null, paddingBottom: null };
     obj[0] = num;
-    obj[1] = source(5409)().insets.bottom + source(712).space.PX_16;
+    obj[1] = source(5430)().insets.bottom + source(712).space.PX_16;
     obj[1] = obj;
     obj[2] = items;
     obj[3] = function renderSectionHeader(section) {
@@ -82,7 +82,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj[6] = EmptyGuildList;
-    return closure_6(tmp(9518).UserProfileStackedActionSheetSectionList, obj);
+    return closure_6(tmp(9531).UserProfileStackedActionSheetSectionList, obj);
   }
   const obj1 = { title: null, data: null };
   const intl = tmp(1236).intl;

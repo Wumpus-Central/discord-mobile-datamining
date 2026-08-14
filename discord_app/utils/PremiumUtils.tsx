@@ -73,17 +73,17 @@ function getPremiumPlanItem(subscription) {
   const items = subscription.items;
   return items.find((planId) => set.has(planId.planId));
 }
-function getDefaultPrice(PREMIUM_MONTH_TIER_2, arg1, flag, currency, arg4) {
+function getDefaultPrice(PREMIUM_MONTH_TIER_2, arg1, flag, currency, flag2) {
   flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let flag2 = flag;
+  flag2 = flag;
   if (flag === undefined) {
     flag2 = false;
   }
-  let flag3 = arg4;
-  if (arg4 === undefined) {
+  let flag3 = flag2;
+  if (flag2 === undefined) {
     flag3 = true;
   }
   let paymentSourceId = store.defaultPaymentSourceId;
@@ -666,7 +666,7 @@ function getPlanDescription(arg0) {
   const tmp4 = getPrice(dependencyMap3[planId].id, false, false, obj, true);
   const interval = tmp.interval;
   const tmp5 = planIdsForSkus;
-  let obj1 = planIdsForSkus(5896);
+  let obj1 = planIdsForSkus(5917);
   if (constants7.MONTH === interval) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.FPybU7);
@@ -1706,26 +1706,29 @@ function isPremiumGuildSubscriptionCanceled(subscription) {
   }
   return tmp3;
 }
-function getFormattedPriceForPlan(id, arg1, arg2, flag) {
+function getFormattedPriceForPlan(id, arg1, arg2, flag, flag2) {
   if (flag === undefined) {
     flag = false;
   }
+  if (flag2 === undefined) {
+    flag2 = true;
+  }
   if (null != arg1) {
     try {
-      let tmp5 = getPrice(id.id, false, flag, arg1);
+      let tmp7 = getPrice(id.id, false, flag, arg1, flag2);
     } catch (err) {
-      tmp5 = getDefaultPrice(tmp.id, false, tmp3);
+      tmp7 = getDefaultPrice(tmp.id, false, tmp3, undefined, tmp2);
     }
   } else {
-    tmp5 = getDefaultPrice(id.id, false, flag);
+    tmp7 = getDefaultPrice(id.id, false, flag, undefined, flag2);
   }
-  const formatPriceResult = formatSingleCurrencyPrice.formatPrice(tmp5.amount, tmp5.currency);
-  let tmp10 = id.currency !== constants8.USD;
-  if (tmp10) {
-    tmp10 = true === arg2;
+  const formatPriceResult = formatSingleCurrencyPrice.formatPrice(tmp7.amount, tmp7.currency);
+  let tmp15 = id.currency !== constants8.USD;
+  if (tmp15) {
+    tmp15 = true === arg2;
   }
   let combined = formatPriceResult;
-  if (tmp10) {
+  if (tmp15) {
     combined = formatPriceResult.concat("*");
   }
   return combined;
@@ -2604,8 +2607,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.SHOP_DISCOUNTS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13396);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13396).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13408);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13408).COLLECTIBLES, currentUser);
     }
     return isCrepeEnabled;
   },
@@ -2620,8 +2623,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.MORE_QUEST_ORBS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13396);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13396).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13408);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13408).QUEST_ORB_MULTIPLIER, perks);
     }
     return isCrepeEnabled;
   },

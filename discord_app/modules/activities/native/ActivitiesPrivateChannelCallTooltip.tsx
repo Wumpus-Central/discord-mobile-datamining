@@ -59,7 +59,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const intl3 = tmp2(1236).intl;
   obj4[0] = intl3.string(num(1236).t["NX+WJN"]);
   obj4[1] = onClosePress.onClosePress;
-  obj3[1] = jsx(num(4755).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj3[1] = jsx(num(4777).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj[1] = jsx(num(1297).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null });
   return jsx(ReanimatedRexport.View, { style: items1, children: null });

@@ -22,15 +22,15 @@ function AppealSignalRadioRow(signal) {
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { style: signal.rowStyle, label: null, onPress: null, trailing: null, accessibilityRole: null, accessibilityState: null };
   obj = { text: null };
-  obj[0] = signal(7849).getAppealSignalDisplayText(signal);
-  obj[1] = callback(signal(8012).FormRow.Label, obj);
+  obj[0] = signal(7870).getAppealSignalDisplayText(signal);
+  obj[1] = callback(signal(8033).FormRow.Label, obj);
   obj[2] = function onPress() {
     return callback(signal);
   };
-  obj[3] = callback(signal(8012).FormRow.Radio, { selected });
+  obj[3] = callback(signal(8033).FormRow.Radio, { selected });
   obj[4] = accessibilityRole;
   obj[5] = accessibilityState;
-  return callback(signal(8012).FormRow, obj);
+  return callback(signal(8033).FormRow, obj);
 }
 ({ AppealIngestionSignal: c4, AppealIngestionSignalOrder: c5 } = SafetyHubView);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -73,18 +73,18 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = createCacheKey();
   c1 = tmp;
-  let obj = isDsaEligible(11337);
+  let obj = isDsaEligible(11353);
   dependencyMap = obj.useSafetyHubAppealSignal();
   const intl = isDsaEligible(1236).intl;
   const intl2 = isDsaEligible(1236).intl;
   const stringResult = intl.string(isDsaEligible(1236).t["C5q+pW"]);
   obj = { children: null };
-  const items = [callback(isDsaEligible(11352).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
+  const items = [callback(isDsaEligible(11368).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.form, children: null };
   const obj2 = { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: null };
   obj2[2] = closure_5.map((signal) => outer1_6(outer1_9, { signal, selected: signal === closure_2, rowStyle: _undefined.formRow, onSelect: handleAppealSignalSelect }, "formrow-" + arg1));
-  const items1 = [callback(isDsaEligible(8012).FormSection, obj2), ];
+  const items1 = [callback(isDsaEligible(8033).FormSection, obj2), ];
   const obj3 = { style: tmp.disclaimer, children: null };
   const obj4 = { variant: "text-sm/normal", children: null };
   const intl3 = isDsaEligible(1236).intl;
@@ -92,8 +92,8 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj3[1] = callback(isDsaEligible(4338).Text, obj4);
   items1[1] = callback(handleAppealSignalSelect, obj3);
   obj1[1] = items1;
-  obj[1] = callback2(isDsaEligible(8012).Form, obj1);
+  obj[1] = callback2(isDsaEligible(8033).Form, obj1);
   items[1] = callback(handleAppealSignalSelect, obj);
   obj[0] = items;
-  return callback2(isDsaEligible(11352).AppealIngestionModalScreen, obj);
+  return callback2(isDsaEligible(11368).AppealIngestionModalScreen, obj);
 };

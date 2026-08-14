@@ -1,22 +1,4 @@
 // discord_common/js/packages/i18n/i18n.tsx
-import 16386__ from "../../../../_runtime/metro/16386__.js";
-import 16387__ from "../../../../_runtime/metro/16387__.js";
-import 16388__ from "../../../../_runtime/metro/16388__.js";
-import 16389__ from "../../../../_runtime/metro/16389__.js";
-import 16390__ from "../../../../_runtime/metro/16390__.js";
-import 16391__ from "../../../../_runtime/metro/16391__.js";
-import 16392__ from "../../../../_runtime/metro/16392__.js";
-import 16393__ from "../../../../_runtime/metro/16393__.js";
-import 16394__ from "../../../../_runtime/metro/16394__.js";
-import 16395__ from "../../../../_runtime/metro/16395__.js";
-import 16396__ from "../../../../_runtime/metro/16396__.js";
-import 16397__ from "../../../../_runtime/metro/16397__.js";
-import 16398__ from "../../../../_runtime/metro/16398__.js";
-import 16399__ from "../../../../_runtime/metro/16399__.js";
-import 16400__ from "../../../../_runtime/metro/16400__.js";
-import 16401__ from "../../../../_runtime/metro/16401__.js";
-import 16402__ from "../../../../_runtime/metro/16402__.js";
-import 16403__ from "../../../../_runtime/metro/16403__.js";
 import 16404__ from "../../../../_runtime/metro/16404__.js";
 import 16405__ from "../../../../_runtime/metro/16405__.js";
 import 16406__ from "../../../../_runtime/metro/16406__.js";
@@ -27,11 +9,29 @@ import 16410__ from "../../../../_runtime/metro/16410__.js";
 import 16411__ from "../../../../_runtime/metro/16411__.js";
 import 16412__ from "../../../../_runtime/metro/16412__.js";
 import 16413__ from "../../../../_runtime/metro/16413__.js";
+import 16414__ from "../../../../_runtime/metro/16414__.js";
+import 16415__ from "../../../../_runtime/metro/16415__.js";
+import 16416__ from "../../../../_runtime/metro/16416__.js";
+import 16417__ from "../../../../_runtime/metro/16417__.js";
+import 16418__ from "../../../../_runtime/metro/16418__.js";
+import 16419__ from "../../../../_runtime/metro/16419__.js";
+import 16420__ from "../../../../_runtime/metro/16420__.js";
+import 16421__ from "../../../../_runtime/metro/16421__.js";
+import 16422__ from "../../../../_runtime/metro/16422__.js";
+import 16423__ from "../../../../_runtime/metro/16423__.js";
+import 16424__ from "../../../../_runtime/metro/16424__.js";
+import 16425__ from "../../../../_runtime/metro/16425__.js";
+import 16426__ from "../../../../_runtime/metro/16426__.js";
+import 16427__ from "../../../../_runtime/metro/16427__.js";
+import 16428__ from "../../../../_runtime/metro/16428__.js";
+import 16429__ from "../../../../_runtime/metro/16429__.js";
+import 16430__ from "../../../../_runtime/metro/16430__.js";
+import 16431__ from "../../../../_runtime/metro/16431__.js";
 import { EventEmitter } from "EventEmitter";
 import { format } from "parse.tsx";
 
 let require = arg1;
-global.IntlMessageFormat = require("module_16377");
+global.IntlMessageFormat = require("module_16395");
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -137,11 +137,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(16419);
+        obj = self(16437);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(16419).getMessage(tmp7, tmp);
+          return self(16437).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -170,7 +170,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("module_16418"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("module_16436"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {
@@ -348,7 +348,7 @@ prototype["_fetchMessages"] = function _fetchMessages(outer1_2) {
     return tmp();
   }
 };
-let result = require("module_16387").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
+let result = require("module_16405").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
 export const getSystemLocale = require("getSystemLocale").getSystemLocale;
 export { I18N };

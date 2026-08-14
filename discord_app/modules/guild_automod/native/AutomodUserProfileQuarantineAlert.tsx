@@ -11,7 +11,7 @@ import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import jsxProd from "GuildMemberFlags";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11321_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11337_registerAsset.js";
 import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
@@ -69,8 +69,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(getSystemLocale.t.TBeZmG);
   }
   const tmp = callback2(arg0, closure_4);
-  const tmp2Result = tmp2(11322);
-  [require, tmp8] = callback(tmp2(11322).useOpenFixQuarantinedProfileModal({ guildId }), 2);
+  const tmp2Result = tmp2(11338);
+  [require, tmp8] = callback(tmp2(11338).useOpenFixQuarantinedProfileModal({ guildId }), 2);
   if (!tmp8) {
     const intl3 = tmp2(1236).intl;
     stringResult = intl3.string(tmp2(1236).t.FFj5Dt);
@@ -150,7 +150,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
       return guildId(outer1_2[21]).getAutomodReason(automodQuarantinedGuildMemberFlags);
     }
   }, items4);
-  stateFromStores(4771)(() => {
+  stateFromStores(4793)(() => {
     let obj = stateFromStores(outer1_2[23]);
     obj = { type: outer1_12, guild_id: guildId, other_user_id: stateFromStores };
     obj.track(outer1_13.OPEN_MODAL, obj);

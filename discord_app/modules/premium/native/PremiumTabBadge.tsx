@@ -7,8 +7,8 @@ import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures";
 import { Gradients } from "items";
 import jsxProd from "DismissibleContent";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
-import { registerAsset } from "../../../../_runtime/14294_registerAsset.js";
+import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
+import { registerAsset } from "../../../../_runtime/14307_registerAsset.js";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { MarketingComponentType } from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
@@ -124,25 +124,25 @@ export default function PremiumTabBadge() {
   if (stateFromStores != null) {
     trialId = stateFromStores.trialId;
   }
-  tmp2Result = tmp2(6065);
+  tmp2Result = tmp2(6086);
   if (trialId === closure_6) {
     if (!tmp7) {
       let items1 = [tmp2(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
     }
     [tmp14, r10051] = callback(tmp11(items1, undefined, true), 2);
-    tmp2(6065);
+    tmp2(6086);
     if (!tmp7) {
       if (hasTier2Premium) {
         let items2 = [tmp2(1377).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD];
       }
       let tmp12Result = tmp12(tmp16(items2, undefined, true), 2);
       [tmp18, r10063] = tmp12Result;
-      const isEligibleSenderForReferralProgram = tmp2(8207).useIsEligibleSenderForReferralProgram();
-      const tmp2Result2 = tmp2(8207);
-      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8206).useIsReferralProgramEntrypointBadgeAcknowledged();
-      const tmp2Result3 = tmp2(8206);
-      const promotionMarketingComponent = tmp2(7688).usePromotionMarketingComponent(tmp2(7692).MarketingComponentType.PREMIUM_TAB);
-      const tmp2Result5 = tmp2(6065);
+      const isEligibleSenderForReferralProgram = tmp2(8228).useIsEligibleSenderForReferralProgram();
+      const tmp2Result2 = tmp2(8228);
+      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8227).useIsReferralProgramEntrypointBadgeAcknowledged();
+      const tmp2Result3 = tmp2(8227);
+      const promotionMarketingComponent = tmp2(7709).usePromotionMarketingComponent(tmp2(7713).MarketingComponentType.PREMIUM_TAB);
+      const tmp2Result5 = tmp2(6086);
       let prop = null;
       if (null != promotionMarketingComponent) {
         prop = null;
@@ -281,7 +281,7 @@ export default function PremiumTabBadge() {
           tmp2Result7 = tmp2(500);
         }
       }
-      const tmp2Result4 = tmp2(7688);
+      const tmp2Result4 = tmp2(7709);
     }
     items2 = [];
     const tmp13 = callback(tmp11(items1, undefined, true), 2);

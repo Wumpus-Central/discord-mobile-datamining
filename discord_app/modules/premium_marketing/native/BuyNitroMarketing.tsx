@@ -54,7 +54,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: null, productId: "a" };
+    obj = { tier: null, productId: "r" };
     obj[0] = initialTier;
     tmp7 = obj;
   }

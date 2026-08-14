@@ -10,7 +10,7 @@ import { Routes } from "ME";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "useMemberActionsForChannel";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11254_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11270_registerAsset.js";
 import { newMemberActionFromServer } from "../GuildOnboardingHomeTypes.tsx";
 import { useMemberActionsForChannel } from "../MemberActionUtils.tsx";
 
@@ -70,7 +70,7 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     const obj1 = { uri: null };
-    let tmp5Result = tmp5(5308);
+    let tmp5Result = tmp5(5329);
     tmp5Result = tmp5(1435);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
@@ -374,7 +374,7 @@ let closure_18 = { code: "function MemberActionChatInputBannerTsx1(){const{useRe
 let closure_19 = { code: "function MemberActionChatInputBannerTsx2(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(5884);
+  let obj = channel(5905);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [trackCommunicationDisabled];
   const stateFromStores = channel(647).useStateFromStores(items, () => {

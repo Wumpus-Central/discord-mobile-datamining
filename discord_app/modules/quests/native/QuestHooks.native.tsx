@@ -94,8 +94,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7204);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5205).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7226);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5226).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -104,14 +104,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10420);
+  tmpResult = tmp(10436);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7222).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7222).AdCreativeType.QUEST === type) {
+    if (tmp(7244).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7244).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;

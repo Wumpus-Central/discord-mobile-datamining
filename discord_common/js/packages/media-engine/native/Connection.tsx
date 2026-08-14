@@ -480,8 +480,8 @@ class Connection extends tmp4 {
   }
 }
 const prototype = Connection.prototype;
-Connection["create"] = function create(arg0, _0) {
-  const obj = new Connection(arg0, _0, true);
+Connection["create"] = function create(arg0, _0, arg2, videoSupported) {
+  const obj = new Connection(arg0, _0, videoSupported);
   obj.initialize(arg2);
   return obj;
 };
@@ -497,18 +497,24 @@ Connection["createReplay"] = function createReplay(arg0, arg1) {
     let conn = obj.conn;
     conn.setOnVideoCallback(obj.handleVideo);
     const codecCapabilities = voiceEngine.getCodecCapabilities((arg0) => {
-      let obj = outer1_0(outer1_2[7]);
+      outer1_0(outer1_2[7]);
+      let obj = videoSupported;
       obj = { type: "audio", name: outer1_14.OPUS, priority: 1, payloadType: 120 };
       const items = [obj];
-      const experimentCodecs = obj.getExperimentCodecs(codecs.experimentFlags);
-      const obj3 = outer1_0(outer1_2[7]);
-      HermesBuiltin.arraySpread(outer1_0(outer1_2[7]).filterVideoCodecs(arg0, experimentCodecs).map((name) => {
-        const sum = 101 + 2 * arg1;
-        return { type: "video", name: name.name, priority: arg1 + 1, payloadType: sum, rtxPayloadType: sum + 1, encode: name.encode, decode: name.decode };
-      }), 1);
-      codecs.codecs = items;
-      codecs.setCodecs(outer1_14.OPUS, outer1_14.H264, closure_0);
-      const conn = codecs.conn;
+      if (videoSupported.videoSupported) {
+        const tmpResult = outer1_0(outer1_2[7]);
+        let mapped = outer1_0(outer1_2[7]).filterVideoCodecs(arg0, tmp4).map((name) => {
+          const sum = 101 + 2 * arg1;
+          return { type: "video", name: name.name, priority: arg1 + 1, payloadType: sum, rtxPayloadType: sum + 1, encode: name.encode, decode: name.decode };
+        });
+        const filterVideoCodecsResult = outer1_0(outer1_2[7]).filterVideoCodecs(arg0, tmp4);
+      } else {
+        mapped = [];
+      }
+      HermesBuiltin.arraySpread(mapped, 1);
+      obj.codecs = items;
+      obj.setCodecs(outer1_14.OPUS, outer1_14.H264, closure_0);
+      const conn = obj.conn;
       conn.startReplay();
     });
   }, arg1);
@@ -591,20 +597,24 @@ prototype["initialize"] = function initialize(address) {
             const parseNativeCodecsResult = createVoiceConnection(fnResult[7]).parseNativeCodecs(arg0);
             obj = { type: "audio", name: outer2_14.OPUS, priority: 1, payloadType: 120 };
             let items = [obj];
-            const obj2 = createVoiceConnection(fnResult[7]);
-            const tmp4 = outer1_4.lastOverrideCodecDenylist.length > 0;
-            let result = createVoiceConnection(fnResult[7]).filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, tmp4);
-            HermesBuiltin.arraySpread(result.map((name) => {
-              const sum = 101 + 2 * arg1;
-              return { type: "video", name: name.name, priority: arg1 + 1, payloadType: sum, rtxPayloadType: sum + 1, encode: name.encode, decode: name.decode };
-            }), 1);
+            if (outer1_4.videoSupported) {
+              let result = createVoiceConnection(fnResult[7]).filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, tmp7);
+              let mapped = result.map((name) => {
+                const sum = 101 + 2 * arg1;
+                return { type: "video", name: name.name, priority: arg1 + 1, payloadType: sum, rtxPayloadType: sum + 1, encode: name.encode, decode: name.decode };
+              });
+              const tmp3Result = createVoiceConnection(fnResult[7]);
+            } else {
+              mapped = [];
+            }
+            HermesBuiltin.arraySpread(mapped, 1);
             outer1_4.codecs = items;
             const map = new Map(parseNativeCodecsResult.map((arg0) => {
               const items = [, ];
               ({ name: arr[0], encode: arr[1] } = arg0);
               return items;
             }));
-            codecs = outer1_4.codecs;
+            codecs = tmp.codecs;
             outer1_4.initialCodecs = codecs.map((type) => {
               const obj = {};
               const merged = Object.assign(type);
@@ -1775,7 +1785,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         lib(error);
-        return { v: "sa" };
+        return { v: "title" };
       } else {
         const items = [];
         if (!callback(self[11])(lib.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {

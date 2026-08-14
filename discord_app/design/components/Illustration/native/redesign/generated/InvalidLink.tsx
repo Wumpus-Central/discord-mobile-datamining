@@ -12,13 +12,13 @@ export const getInvalidLinkSource = function getInvalidLinkSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(10393);
+      return callback(10407);
     },
     darker() {
-      return callback(11247);
+      return callback(11263);
     },
     light() {
-      return callback(10394);
+      return callback(10408);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useInvalidLinkSource = function useInvalidLinkSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10393);
+      return callback(10407);
     },
     darker() {
-      return callback(11247);
+      return callback(11263);
     },
     light() {
-      return callback(10394);
+      return callback(10408);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const InvalidLink = function InvalidLink(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10393);
+      return callback(10407);
     },
     darker() {
-      return callback(11247);
+      return callback(11263);
     },
     light() {
-      return callback(10394);
+      return callback(10408);
     }
   };
   obj = {};

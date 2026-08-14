@@ -61,9 +61,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj6[2] = function onPress() {
     return markAsDismissed(outer1_4.UNKNOWN);
   };
-  items2[5] = callback(markAsDismissed(4755).Button, obj6);
+  items2[5] = callback(markAsDismissed(4777).Button, obj6);
   obj[1] = items2;
-  obj[1] = callback2(markAsDismissed(5439).BottomSheetScrollView, obj);
+  obj[1] = callback2(markAsDismissed(5460).BottomSheetScrollView, obj);
   obj[2] = callback(View, obj);
-  return callback(markAsDismissed(5437).BottomSheet, obj);
+  return callback(markAsDismissed(5458).BottomSheet, obj);
 };

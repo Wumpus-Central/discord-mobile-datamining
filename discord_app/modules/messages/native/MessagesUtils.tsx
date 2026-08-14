@@ -455,7 +455,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(8661);
+    tmp36Result = tmp36(8675);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
@@ -464,12 +464,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (true === !reaction.me_burst) {
         let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(8662);
+          tmp12Result = tmp12(8676);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7267).ReactionTypes;
+    const ReactionTypes = tmp12(7289).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = tmp12(4311).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
       const tmp12Result2 = tmp12(4311);
@@ -481,12 +481,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7268).removeReaction(obj);
+      tmp12(7290).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7268);
+            const tmp12Result4 = tmp12(7290);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
@@ -500,14 +500,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(8461).openMemberVerificationModal(guildId1);
+          return tmp12(8483).openMemberVerificationModal(guildId1);
         }
       }
     }
     tmp12Result1 = tmp12(4000);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(8662);
+    const tmp12Result7 = tmp12(8676);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -539,7 +539,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   let obj = { postId: id, location };
   const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = tmp4(4539);
+    let tmp4Result = tmp4(4549);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
@@ -547,7 +547,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   tmp4Result = tmp4(4311);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5796);
+    const tmp4Result1 = tmp4(5817);
     let result2;
     if (true === flag) {
       result2 = tmp9(11).castChannelIdAsMessageId(id);
@@ -556,7 +556,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result1.copy(tmp4(4527).getChannelPermalink(guildId, id, result2));
     const tmp4Result2 = tmp4(4527);
   } else {
-    const tmp4Result3 = tmp4(5796);
+    const tmp4Result3 = tmp4(5817);
     tmp4Result3.copy(tmp4(4527).getChannelLinkToCopy(channel, channel1));
     const tmp4Result4 = tmp4(4527);
   }

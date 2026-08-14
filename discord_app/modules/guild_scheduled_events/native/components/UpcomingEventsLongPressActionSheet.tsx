@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/native/components/UpcomingEventsLongPressActionSheet.tsx
-import "module_5302";
+import "module_5323";
 import { View } from "registerAsset";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -29,29 +29,29 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const tmp = callback2();
   const tmp6 = closure_8;
   const tmp8 = stateFromStores1;
-  obj1[1] = guildId(5819).GuildIconSizes.LARGE;
-  obj[1] = callback(stateFromStores1(5819), obj1);
+  obj1[1] = guildId(5840).GuildIconSizes.LARGE;
+  obj[1] = callback(stateFromStores1(5840), obj1);
   obj[0] = callback(View, obj);
   const intl = guildId(1236).intl;
   obj[1] = intl.string(guildId(1236).t.tlopTM);
-  const items2 = [callback(guildId(5436).BottomSheetTitleHeader, obj), , ];
+  const items2 = [callback(guildId(5457).BottomSheetTitleHeader, obj), , ];
   const obj2 = { leading: null, label: null, onPress: null };
   const obj3 = { source: null };
-  obj3[0] = stateFromStores1(11809);
+  obj3[0] = stateFromStores1(11825);
   obj2[0] = callback(guildId(1297).Icon, obj3);
   const obj4 = { text: null };
   const intl2 = guildId(1236).intl;
   obj4[0] = intl2.string(guildId(1236).t.e6RscS);
-  obj2[1] = callback(guildId(8012).FormLabel, obj4);
+  obj2[1] = callback(guildId(8033).FormLabel, obj4);
   obj2[2] = function onPress() {
     guildId(outer1_2[15]).ackGuildFeature(guildId, outer1_6.GUILD_EVENT);
     const obj = guildId(outer1_2[15]);
     stateFromStores1(outer1_2[16]).hideActionSheet();
   };
-  items2[1] = callback(guildId(8012).FormRow, obj2);
+  items2[1] = callback(guildId(8033).FormRow, obj2);
   const obj5 = { leading: null, label: null, onPress: null };
   const obj6 = { source: null };
-  obj6[0] = tmp8(stateFromStores1 ? 11810 : 11811);
+  obj6[0] = tmp8(stateFromStores1 ? 11826 : 11827);
   obj5[0] = callback(guildId(1297).Icon, obj6);
   const intl3 = tmp2(1236).intl;
   const string = intl3.string;
@@ -62,14 +62,14 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
     stringResult = string(t.ONG3Yz);
   }
   const obj7 = { children: null };
-  obj5[1] = callback(guildId(8012).FormLabel, { text: stringResult });
+  obj5[1] = callback(guildId(8033).FormLabel, { text: stringResult });
   obj5[2] = function onPress() {
     let obj = stateFromStores1(outer1_2[19]);
     obj = { mute_scheduled_events: !stateFromStores1 };
     const NotificationLabel = guildId(outer1_2[20]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = callback(guildId(8012).FormRow, obj5);
+  items2[2] = callback(guildId(8033).FormRow, obj5);
   obj7[0] = items2;
-  return tmp6(guildId(5804).ActionSheet, obj7);
+  return tmp6(guildId(5825).ActionSheet, obj7);
 };

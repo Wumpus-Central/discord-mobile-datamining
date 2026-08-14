@@ -118,8 +118,8 @@ export default function MobileSurvey() {
       obj[3] = stateFromStores(outer1_2[14]);
       return outer1_7(lib(outer1_2[12]).Icon, obj);
     };
-    tmp5 = jsx(stateFromStores(4773), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(4773);
+    tmp5 = jsx(stateFromStores(4795), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(4795);
   }
   return tmp5;
 };

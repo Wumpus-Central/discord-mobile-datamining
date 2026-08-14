@@ -839,7 +839,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1236).t.MWp6H7;
           obj16[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
           const obj19 = {};
-          obj19[__3TkD(7817).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1236).t.XYZMbL;
+          obj19[__3TkD(7838).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1236).t.XYZMbL;
           __3TkD = obj19;
           obj16[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj16[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1236).t.gb1Owj;
@@ -1724,7 +1724,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             found = dependencyMap;
             if (set.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1236).t["PyEa+J"];
-            } else if (found(16698).GuildFeedItemTypes.FORUM_POST === newValue) {
+            } else if (found(16714).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1236).t.hCuAb1;
             } else {
               return found(1236).t["UZ+U3A"];
@@ -2098,6 +2098,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   found = callback;
                   found = outer1_3;
                   let intl = callback(outer1_3[17]).intl;
+                  found = outer1_3;
                   found = intl.string(callback(outer1_3[17]).t.ZNQyiR);
                 }
                 tmp3 = found;
@@ -2671,14 +2672,17 @@ export const transformLogs = function transformLogs(arr, arg1) {
         found = Object.assign(result1.options);
         let type = result1.options.type;
         if (outer1_27.USER === type) {
-          let tag = result1.options.id;
+          let id = result1.options.id;
           found = outer1_13;
-          found = outer1_13.getUser(tag);
+          found = outer1_13.getUser(id);
           found = null != found && true;
           if (found) {
-            tag = found.tag;
+            found = items;
+            found = outer1_3;
+            id = items(outer1_3[25]).getUserTag(found);
+            const obj4 = items(outer1_3[25]);
           }
-          obj.subtarget = tag;
+          obj.subtarget = id;
         } else if (found.ROLE === type) {
           let role_name = result1.options.role_name;
           found = outer1_24;
@@ -2743,8 +2747,11 @@ export const transformLogs = function transformLogs(arr, arg1) {
           found = callback;
           found = outer1_3;
           found = items;
-          found = items(outer1_3[30]);
-          const obj4 = callback(outer1_3[29]);
+          found = outer1_3;
+          found = items;
+          found = outer1_3;
+          found = items(outer1_3[31]);
+          const obj5 = callback(outer1_3[30]);
           let str5;
           if (found != null) {
             str5 = found.event_exception_id;
@@ -2752,9 +2759,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
           if (str5 == null) {
             str5 = "0";
           }
-          obj.subtarget = obj4.dateFormat(found(items(outer1_3[19]).extractTimestamp(str5)), "LL");
+          obj.subtarget = obj5.dateFormat(found(items(outer1_3[19]).extractTimestamp(str5)), "LL");
           options = obj;
-          const obj5 = items(outer1_3[19]);
+          const obj6 = items(outer1_3[19]);
         }
       } else {
         options = result1.options;
@@ -2825,22 +2832,25 @@ export const transformLogs = function transformLogs(arr, arg1) {
               newValue.subtarget = name;
               role = newValue;
             } else if (role.USER === type) {
-              let tag = role.id;
+              let id2 = role.id;
               role = outer2_13;
-              role = outer2_13.getUser(tag);
+              role = outer2_13.getUser(id2);
               role = null;
               role = null != role && true;
               if (role) {
-                tag = role.tag;
+                role = items;
+                role = outer2_3;
+                id2 = items(outer2_3[25]).getUserTag(role);
+                const obj25 = items(outer2_3[25]);
               }
-              newValue.subtarget = tag;
+              newValue.subtarget = id2;
               role = newValue;
             } else {
               role = newValue;
               if (role.CHANNEL === type) {
                 role = items;
                 role = outer2_3;
-                const obj26 = items(outer2_3[25])(tmp2.id);
+                const obj27 = items(outer2_3[26])(tmp2.id);
                 if (role.id === str23.toString()) {
                   role = lib;
                   const intl11 = lib(role[17]).intl;
@@ -2863,7 +2873,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   newValue.subtarget = id;
                   role = newValue;
                 }
-                str23 = items(outer2_3[25])(tmp2.id).subtract(1);
+                str23 = items(outer2_3[26])(tmp2.id).subtract(1);
               }
             }
           } else {
@@ -2948,16 +2958,16 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           if (null != newValue.newValue) {
                             role = lib;
                             role = outer2_3;
-                            const obj20 = lib(outer2_3[26]);
-                            newValue18 = lib(outer2_3[26]).int2hex(newValue.newValue).toUpperCase();
-                            const str21 = lib(outer2_3[26]).int2hex(newValue.newValue);
+                            const obj20 = lib(outer2_3[27]);
+                            newValue18 = lib(outer2_3[27]).int2hex(newValue.newValue).toUpperCase();
+                            const str21 = lib(outer2_3[27]).int2hex(newValue.newValue);
                           }
                           if (null != newValue.oldValue) {
                             role = lib;
                             role = outer2_3;
-                            const obj21 = lib(outer2_3[26]);
-                            oldValue18 = lib(outer2_3[26]).int2hex(newValue.oldValue).toUpperCase();
-                            const str22 = lib(outer2_3[26]).int2hex(newValue.oldValue);
+                            const obj21 = lib(outer2_3[27]);
+                            oldValue18 = lib(outer2_3[27]).int2hex(newValue.oldValue).toUpperCase();
+                            const str22 = lib(outer2_3[27]).int2hex(newValue.oldValue);
                           }
                           role = outer2_9;
                           if (!oldValue18) {
@@ -2979,27 +2989,27 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             const newValue17 = newValue.newValue;
                             role = lib;
                             role = outer2_3;
-                            const obj16 = lib(outer2_3[26]);
-                            role = lib(outer2_3[26]).int2hex(newValue17[0]).toUpperCase();
-                            const str13 = lib(outer2_3[26]).int2hex(newValue17[0]);
-                            const obj17 = lib(outer2_3[26]);
+                            const obj16 = lib(outer2_3[27]);
+                            role = lib(outer2_3[27]).int2hex(newValue17[0]).toUpperCase();
+                            const str13 = lib(outer2_3[27]).int2hex(newValue17[0]);
+                            const obj17 = lib(outer2_3[27]);
                             role = globalThis;
                             const _HermesInternal = HermesInternal;
-                            newValue16 = "" + role + ", " + lib(outer2_3[26]).int2hex(newValue17[1]).toUpperCase();
-                            const str14 = lib(outer2_3[26]).int2hex(newValue17[1]);
+                            newValue16 = "" + role + ", " + lib(outer2_3[27]).int2hex(newValue17[1]).toUpperCase();
+                            const str14 = lib(outer2_3[27]).int2hex(newValue17[1]);
                           }
                           if (null != newValue.oldValue) {
                             const oldValue17 = newValue.oldValue;
                             role = lib;
                             role = outer2_3;
-                            const obj18 = lib(outer2_3[26]);
-                            role = lib(outer2_3[26]).int2hex(oldValue17[0]).toUpperCase();
-                            const str17 = lib(outer2_3[26]).int2hex(oldValue17[0]);
-                            const obj19 = lib(outer2_3[26]);
+                            const obj18 = lib(outer2_3[27]);
+                            role = lib(outer2_3[27]).int2hex(oldValue17[0]).toUpperCase();
+                            const str17 = lib(outer2_3[27]).int2hex(oldValue17[0]);
+                            const obj19 = lib(outer2_3[27]);
                             role = globalThis;
                             const _HermesInternal2 = HermesInternal;
-                            oldValue16 = "" + role + ", " + lib(outer2_3[26]).int2hex(oldValue17[1]).toUpperCase();
-                            const str18 = lib(outer2_3[26]).int2hex(oldValue17[1]);
+                            oldValue16 = "" + role + ", " + lib(outer2_3[27]).int2hex(oldValue17[1]).toUpperCase();
+                            const str18 = lib(outer2_3[27]).int2hex(oldValue17[1]);
                           }
                           role = outer2_9;
                           if (!oldValue16) {
@@ -3021,23 +3031,23 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let label = newValue.newValue;
                             role = items;
                             role = outer2_3;
-                            role = items(outer2_3[27]).getMaxAgeOptionByValue(label);
+                            role = items(outer2_3[28]).getMaxAgeOptionByValue(label);
                             if (null !== role) {
                               label = role.label;
                             }
                             newValue15 = label;
-                            const obj14 = items(outer2_3[27]);
+                            const obj14 = items(outer2_3[28]);
                           }
                           if (null != newValue.oldValue) {
                             let label2 = newValue.oldValue;
                             role = items;
                             role = outer2_3;
-                            role = items(outer2_3[27]).getMaxAgeOptionByValue(label2);
+                            role = items(outer2_3[28]).getMaxAgeOptionByValue(label2);
                             if (null !== role) {
                               label2 = role.label;
                             }
                             oldValue15 = label2;
-                            const obj15 = items(outer2_3[27]);
+                            const obj15 = items(outer2_3[28]);
                           }
                           role = outer2_9;
                           if (!oldValue15) {
@@ -3103,8 +3113,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   role = outer2_30[key10535];
                                   role = outer2_2;
                                   role = outer2_3;
-                                  let obj25 = outer2_2(outer2_3[22]);
-                                  if (obj25.hasFlag(role, role)) {
+                                  let obj26 = outer2_2(outer2_3[22]);
+                                  if (obj26.hasFlag(role, role)) {
                                     role = items1.push(role);
                                   }
                                   let roleResult = role(role[22]);
@@ -3255,7 +3265,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     if (null != mapped) {
                                       role = lib;
                                       role = outer2_3;
-                                      const mapped1 = mapped.map(lib(outer2_3[28]).actionTypeToName);
+                                      const mapped1 = mapped.map(lib(outer2_3[29]).actionTypeToName);
                                       role = mapped1.join(", ");
                                     }
                                     newValue11 = role;
@@ -3267,7 +3277,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     if (null != mapped2) {
                                       role = lib;
                                       role = outer2_3;
-                                      const mapped3 = mapped2.map(lib(outer2_3[28]).actionTypeToName);
+                                      const mapped3 = mapped2.map(lib(outer2_3[29]).actionTypeToName);
                                       role = mapped3.join(", ");
                                     }
                                     oldValue11 = role;
@@ -3292,7 +3302,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
                                   role = lib;
                                   role = outer2_3;
-                                  const eventTypeToName = lib(outer2_3[28]).eventTypeToName;
+                                  const eventTypeToName = lib(outer2_3[29]).eventTypeToName;
                                   ({ newValue: newValue10, oldValue: oldValue10 } = newValue);
                                   role = null;
                                   if (null != newValue.newValue) {
@@ -3321,7 +3331,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
                                   role = lib;
                                   role = outer2_3;
-                                  const triggerTypeToName = lib(outer2_3[28]).triggerTypeToName;
+                                  const triggerTypeToName = lib(outer2_3[29]).triggerTypeToName;
                                   ({ newValue: newValue9, oldValue: oldValue9 } = newValue);
                                   role = null;
                                   if (null != newValue.newValue) {
@@ -3550,19 +3560,19 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               ({ newValue, oldValue } = newValue);
                                               if (null != newValue.newValue) {
                                                 newValue2 = newValue.newValue;
-                                                obj = lib(outer2_3[29]);
+                                                obj = lib(outer2_3[30]);
                                                 const _Date = Date;
                                                 const date = new Date(newValue2);
-                                                newValue = obj.dateFormat(items(outer2_3[30])(date), "LLLL");
-                                                let tmp7 = items(outer2_3[30]);
+                                                newValue = obj.dateFormat(items(outer2_3[31])(date), "LLLL");
+                                                let tmp7 = items(outer2_3[31]);
                                               }
                                               if (null != newValue.oldValue) {
                                                 oldValue2 = newValue.oldValue;
-                                                obj1 = lib(outer2_3[29]);
+                                                obj1 = lib(outer2_3[30]);
                                                 const _Date2 = Date;
                                                 const date1 = new Date(oldValue2);
-                                                oldValue = obj1.dateFormat(items(outer2_3[30])(date1), "LLLL");
-                                                const tmp17 = items(outer2_3[30]);
+                                                oldValue = obj1.dateFormat(items(outer2_3[31])(date1), "LLLL");
+                                                const tmp17 = items(outer2_3[31]);
                                               }
                                               if (!oldValue) {
                                                 oldValue = newValue.oldValue;

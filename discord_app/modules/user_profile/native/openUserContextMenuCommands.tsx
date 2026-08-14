@@ -8,7 +8,7 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   let userId;
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8838);
+  let obj = analyticsLocations(8852);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj2 = ACTION_SHEET_HEIGHT_HALF;

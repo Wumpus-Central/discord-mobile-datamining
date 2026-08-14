@@ -144,14 +144,14 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
           return obj2;
         } else {
           let captureAdUserAction = outer1_0;
-          if (obj12.shouldMigrateToAdAnalyticsInterface(outer1_0(9566).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
-            captureAdUserAction = captureAdUserAction(9567).captureAdUserAction;
+          if (obj12.shouldMigrateToAdAnalyticsInterface(outer1_0(9579).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
+            captureAdUserAction = captureAdUserAction(9580).captureAdUserAction;
             let obj3 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
-            obj3[0] = outer1_0(9571).AdUserActionType.CLICK_INTERNAL;
-            obj3[1] = outer1_0(7222).AdCreativeType.QUEST;
+            obj3[0] = outer1_0(9584).AdUserActionType.CLICK_INTERNAL;
+            obj3[1] = outer1_0(7244).AdCreativeType.QUEST;
             obj3[2] = closure_0;
-            obj3[3] = outer1_0(7233).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
-            obj3[4] = outer1_0(5205).QuestContent.QUEST_BOTTOM_SHEET;
+            obj3[3] = outer1_0(7255).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
+            obj3[4] = outer1_0(5226).QuestContent.QUEST_BOTTOM_SHEET;
             obj3[5] = c1;
             let id;
             if (noop != null) {
@@ -164,14 +164,14 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj3[7] = questContentPosition;
             captureAdUserAction(obj3);
-            const captureAdUserActionResult = captureAdUserAction(9567);
+            const captureAdUserActionResult = captureAdUserAction(9580);
             obj6 = noop;
             obj7 = outer1_4;
           } else {
             const obj4 = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
             obj4[0] = closure_0;
-            obj4[1] = outer1_0(5205).QuestContent.QUEST_BOTTOM_SHEET;
-            obj4[2] = outer1_0(7233).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
+            obj4[1] = outer1_0(5226).QuestContent.QUEST_BOTTOM_SHEET;
+            obj4[2] = outer1_0(7255).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
             obj2 = noop;
             let questContentPosition1;
             if (noop != null) {
@@ -185,11 +185,11 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj4[4] = id1;
             obj4[5] = c1;
-            const result = captureAdUserAction(7223).trackQuestContentClicked(obj4);
-            const captureAdUserActionResult2 = captureAdUserAction(7223);
+            const result = captureAdUserAction(7245).trackQuestContentClicked(obj4);
+            const captureAdUserActionResult2 = captureAdUserAction(7245);
           }
           dependencyMap = 3;
-          obj12 = outer1_0(9566);
+          obj12 = outer1_0(9579);
         }
       } catch (tmp36) {
         dependencyMap = tmp;

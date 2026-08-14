@@ -549,8 +549,8 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8402);
-            let obj2 = callback(8404);
+            obj1 = callback(8424);
+            let obj2 = callback(8426);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
@@ -567,11 +567,11 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(6965);
+          const obj8 = channel(6986);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7188).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(7210).parse(id, closure_3), true, obj3);
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1533,8 +1533,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(5907).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(5907);
+    size(5928).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(5928);
   }
 };
 items[sum10 + 1] = obj32;

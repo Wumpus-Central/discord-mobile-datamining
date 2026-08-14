@@ -48,7 +48,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? outer1_8.TIER_0 : outer1_8.TIER_2;
-          callback2(6933)(obj, dependencyMap);
+          callback2(6954)(obj, dependencyMap);
         }
       }
     }
@@ -58,15 +58,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4664).fetchSubscriptions();
-          const obj2 = callback(4664);
+          resolved = callback(4686).fetchSubscriptions();
+          const obj2 = callback(4686);
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7637).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7637);
+          resolved1 = callback(7658).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7658);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);

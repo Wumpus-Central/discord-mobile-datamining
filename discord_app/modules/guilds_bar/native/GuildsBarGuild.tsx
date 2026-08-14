@@ -246,9 +246,9 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
         tmp8 = guildId;
         tmp9 = c2;
         obj = guildId(c2[31]);
-        tmp10 = f97091;
+        tmp10 = f97241;
         str = "animate-always";
-        targetOriginY = obj.withSpring(guildId.targetOriginY, f97091, "animate-always");
+        targetOriginY = obj.withSpring(guildId.targetOriginY, f97241, "animate-always");
       } else {
         targetOriginY = guildId.targetOriginY;
       }
@@ -257,9 +257,9 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
         tmp11 = guildId;
         tmp12 = c2;
         obj3 = guildId(c2[31]);
-        tmp13 = f97091;
+        tmp13 = f97241;
         str2 = "animate-always";
-        targetHeight = obj3.withSpring(guildId.targetHeight, f97091, "animate-always");
+        targetHeight = obj3.withSpring(guildId.targetHeight, f97241, "animate-always");
       } else {
         targetHeight = guildId.targetHeight;
       }

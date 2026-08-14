@@ -17,7 +17,7 @@ class GiftIconCoachmark$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(7404).ThemeAwareAsset;
+            return callback(7425).ThemeAwareAsset;
           }
     };
     obj = { no: 5, name: "header_localized", kind: "message", T: null };
@@ -33,7 +33,7 @@ class GiftIconCoachmark$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7394).LocalizedString;
+            return callback(7415).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftIconCoachmark", items, T);
@@ -183,7 +183,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(7404).ThemeAwareAsset;
+      return callback(7425).ThemeAwareAsset;
     }
   },
 ,
@@ -202,7 +202,7 @@ items[5] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7394).LocalizedString;
+    return callback(7415).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.GiftIconCoachmark", items, tmp, T, GiftIconCoachmark$Type, prototype, items);

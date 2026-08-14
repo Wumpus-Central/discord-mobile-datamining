@@ -4,7 +4,7 @@ import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import importDefaultResult from "module_4083";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 
 let c4;
 let c5;

@@ -75,10 +75,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 const obj1 = { value: null, done: false };
-                obj1[0] = outer1_2(16844).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = outer1_2(16860).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = outer1_2(16844);
+                let obj2 = outer1_2(16860);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };

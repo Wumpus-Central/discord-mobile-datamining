@@ -14,7 +14,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-let obj = { typingChannelId: "Array", typingChannelName: "accessibilityRole", typingUserIds: 1140851135 };
+let obj = { typingChannelId: "Array", typingChannelName: "isArray", typingUserIds: "a" };
 obj[2] = [];
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 

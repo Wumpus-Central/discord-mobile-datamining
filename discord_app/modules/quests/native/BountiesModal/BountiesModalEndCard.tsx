@@ -2,7 +2,7 @@
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { BountiesEndCardPressableCta } from "BountiesEndCardPressableCta.tsx";
 

@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockUnenrolledBody.tsx
 import closure_3 from "QuestsExperimentLocations";
-import importAllResult from "openQuestAccessSuspendedBottomSheet";
+import importAllResult from "useTrackQuestEventWithImpression";
 import { View } from "items";
 import initializeState from "initializeState";
 import QuestDockMode from "QuestDockMode";
@@ -45,8 +45,8 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   const items = [QuestDockMode];
   const stateFromStores = obj2.useStateFromStores(items, () => obj.prevRestingQuestDockMode === constants.EXPANDED);
   let obj3 = questCreative(isMobileActivityQuest[12]);
-  const items1 = [initializeState];
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => outer1_6.isEnrolling(questCreative.id));
+  const items1 = [trackQuestContentClickedWithImpression];
+  const stateFromStores1 = obj3.useStateFromStores(items1, () => trackQuestContentClickedWithImpression.isEnrolling(questCreative.id));
   let obj4 = questCreative(isMobileActivityQuest[13]);
   hasWatchVideoOnMobileTasks = obj4.useHasWatchVideoOnMobileTasks(questCreative.config);
   let obj5 = questCreative(isMobileActivityQuest[14]);
@@ -66,135 +66,105 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   setRestingQuestDockMode = obj1.useContext(tmp(tmp2[18]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
   let tmpResult = tmp(tmp2[14]);
   const isQuestAccessSuspended = tmpResult.useIsQuestAccessSuspended();
-  const items2 = [questCreative.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity, isQuestAccessSuspended];
+  tmpResult = tmp(tmp2[19]);
+  trackQuestContentClickedWithImpression = tmpResult.useTrackQuestContentClickedWithImpression();
+  const items2 = [questCreative.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity, isQuestAccessSuspended, trackQuestContentClickedWithImpression];
   const callback = obj1.useCallback(launchMobileActivity(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
+    let c0 = 0;
+    if (outer1_5) {
+      const obj1 = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
+      obj1[0] = outer1_0.id;
+      obj1[1] = outer1_0(5226).QuestContent.QUEST_BAR_MOBILE;
+      obj1[2] = outer1_0(7255).QuestContentCTA.QUEST_ACCESS_SUSPENDED;
+      obj1[3] = outer1_0(5226).QuestContent.QUEST_BAR_MOBILE;
+      outer1_6(obj1);
+      v0(14438)();
+    }
+    const obj4 = outer1_0(10438);
+    const obj3 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
+    obj3[0] = outer1_0(7255).QuestContentCTA.ACCEPT_QUEST;
+    obj3[1] = outer1_0(5226).QuestContent.QUEST_BAR_MOBILE;
+    obj3[2] = outer1_0(5226).QuestContent.QUEST_BAR_MOBILE;
+    yield obj4.enrollInQuest(outer1_0.id, obj3);
+    if (1 === tmp4) {
       if (arg0 === 1) {
+        let dependencyMap = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        dependencyMap = 3;
+        const obj5 = { value: null, done: true };
+        obj5[0] = arg1;
+        return obj5;
+      } else if (dependencyMap) {
+        v0 = 2;
+        dependencyMap = 1;
+        const obj6 = { value: null, done: false };
+        obj6[0] = outer1_3();
+        return obj6;
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        dependencyMap = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = tmp2;
-            if (outer1_5) {
-              v0(14425)();
-              dependencyMap = 3;
-            } else {
-              let obj4 = outer1_0(10422);
-              const obj1 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
-              obj1[0] = outer1_0(7233).QuestContentCTA.ACCEPT_QUEST;
-              obj1[1] = outer1_0(5205).QuestContent.QUEST_BAR_MOBILE;
-              obj1[2] = outer1_0(5205).QuestContent.QUEST_BAR_MOBILE;
-              v0 = 1;
-              dependencyMap = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj4.enrollInQuest(outer1_0.id, obj1);
-              return obj2;
-            }
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else if (dependencyMap) {
-            v0 = 2;
-            dependencyMap = 1;
-            obj4 = { value: null, done: false };
-            obj4[0] = outer1_3();
-            return obj4;
-          } else if (v0) {
-            const obj5 = { questId: null, sourceQuestContent: null };
-            obj5[0] = outer1_0.id;
-            obj5[1] = outer1_0(5205).QuestContent.QUEST_BAR_MOBILE;
-            v0(14431)(obj5);
-            outer1_4(outer1_8.COLLAPSED);
-            const tmp13 = v0(14431);
-          }
-        } else if (arg0 === 1) {
-          dependencyMap = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback(outer1_8.COLLAPSED);
+        if (v0) {
+          const obj7 = { questId: null, sourceQuestContent: null };
+          obj7[0] = outer1_0.id;
+          obj7[1] = outer1_0(5226).QuestContent.QUEST_BAR_MOBILE;
+          v0(14444)(obj7);
+          outer1_4(outer1_8.COLLAPSED);
+          const tmp12 = v0(14444);
         }
         dependencyMap = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp34) {
-        dependencyMap = tmp;
-        throw tmp34;
       }
+    } else if (arg0 === 1) {
+      dependencyMap = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      callback(outer1_8.COLLAPSED);
     }
+    return arg1;
   }), items2);
-  tmpResult = tmp(tmp2[24]);
-  const primaryCtaCopy = tmpResult.usePrimaryCtaCopy({ quest: questCreative, application: mobileActivityQuest.questApplication, shortText: true });
-  obj = { quest: questCreative, location: constants.QUESTS_BAR_MOBILE, taskDetails: questTaskDetails, sourceQuestContent: tmp(tmp2[22]).QuestContent.QUEST_BAR_MOBILE };
-  const questsInstructionsToWinReward = questCreative(isMobileActivityQuest[24]).useQuestsInstructionsToWinReward(obj);
+  const primaryCtaCopy = questCreative(isMobileActivityQuest[25]).usePrimaryCtaCopy({ quest: questCreative, application: mobileActivityQuest.questApplication, shortText: true });
+  const tmpResult1 = questCreative(isMobileActivityQuest[25]);
+  obj = { quest: questCreative, location: constants.QUESTS_BAR_MOBILE, taskDetails: questTaskDetails, sourceQuestContent: tmp(tmp2[20]).QuestContent.QUEST_BAR_MOBILE };
+  const questsInstructionsToWinReward = questCreative(isMobileActivityQuest[25]).useQuestsInstructionsToWinReward(obj);
   obj = { visible: tmp13, glow: true, style: null, children: null };
   const items3 = [tmp5.wrapper, ];
   obj1 = { paddingBottom: null };
-  let tmp4Result = tmp4(tmp2[25]);
+  let tmp4Result = tmp4(tmp2[26]);
   obj1[0] = Math.max(hasWatchVideoOnMobileTasks(isMobileActivityQuest[15])().bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM);
   items3[1] = obj1;
   obj[2] = items3;
   obj2 = { style: tmp5.rewardContentWrapper, children: null };
-  const items4 = [callback(hasWatchVideoOnMobileTasks(isMobileActivityQuest[26]), {}), ];
+  const items4 = [callback(hasWatchVideoOnMobileTasks(isMobileActivityQuest[27]), {}), ];
   obj3 = { style: tmp5.rewardContent, children: null };
-  let tmp23 = !stateFromStores;
-  tmp4Result = tmp4(tmp2[27]);
+  let tmp24 = !stateFromStores;
+  tmp4Result = tmp4(tmp2[28]);
   if (stateFromStores) {
-    tmp23 = !isRendered;
+    tmp24 = !isRendered;
   }
-  obj4 = { paused: tmp23, height: 80, width: 80, quest: questCreative, style: tmp5.questDockRewardTile, withAnimation: null };
-  let tmp24 = stateFromStores;
+  obj4 = { paused: tmp24, height: 80, width: 80, quest: questCreative, style: tmp5.questDockRewardTile, withAnimation: null };
+  let tmp25 = stateFromStores;
   if (stateFromStores) {
-    tmp24 = isRendered;
+    tmp25 = isRendered;
   }
-  obj4[5] = tmp24;
+  obj4[5] = tmp25;
   const items5 = [callback(tmp4Result, obj4), ];
   obj5 = { style: tmp5.rewardContentCopy, children: null };
-  let tmp21Result = shouldShowBonusOrbsUX;
+  let tmp22Result = shouldShowBonusOrbsUX;
   if (shouldShowBonusOrbsUX) {
     obj6 = { style: null, children: null };
     obj6[0] = tmp5.premiumRewardPerkPill;
     obj7 = { questId: null, orbMultiplierEligibility: null };
     obj7[0] = questCreative.config.id;
     obj7[1] = questOrbMultiplierEligibility;
-    obj6[1] = tmp21(tmp(tmp2[28]).QuestOrbMultiplierPerkPill, obj7);
-    tmp21Result = tmp21(tmp20, obj6);
+    obj6[1] = tmp22(tmp(tmp2[29]).QuestOrbMultiplierPerkPill, obj7);
+    tmp22Result = tmp22(tmp21, obj6);
   }
-  const items6 = [tmp21Result, , ];
+  const items6 = [tmp22Result, , ];
   obj8 = { style: tmp5.titleRow, children: null };
   const obj9 = { variant: "heading-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp(tmp2[30]).intl;
-  obj9[2] = intl.format(questCreative(isMobileActivityQuest[30]).t.EQa7os, { questName: questCreative.config.messages.questName });
-  obj8[1] = callback(questCreative(isMobileActivityQuest[29]).Text, obj9);
+  const intl = tmp(tmp2[31]).intl;
+  obj9[2] = intl.format(questCreative(isMobileActivityQuest[31]).t.EQa7os, { questName: questCreative.config.messages.questName });
+  obj8[1] = callback(questCreative(isMobileActivityQuest[30]).Text, obj9);
   items6[1] = callback(isQuestAccessSuspended, obj8);
-  items6[2] = callback(questCreative(isMobileActivityQuest[29]).Text, { color: "text-default", variant: "text-sm/normal", children: questsInstructionsToWinReward });
+  items6[2] = callback(questCreative(isMobileActivityQuest[30]).Text, { color: "text-default", variant: "text-sm/normal", children: questsInstructionsToWinReward });
   obj5[1] = items6;
   items5[1] = closure_12(isQuestAccessSuspended, obj5);
   obj3[1] = items5;
@@ -205,8 +175,8 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   const items8 = [callback(isQuestAccessSuspended, { style: tmp5.questDockCtaSaparator }), ];
   const obj10 = { questName: questCreative.config.messages.questName };
   const obj12 = { style: tmp5.questDockCtaSaparator };
-  const tmpResult1 = questCreative(isMobileActivityQuest[24]);
-  items8[1] = callback(isQuestAccessSuspended, { style: tmp5.questDockCtaRow, children: callback(questCreative(isMobileActivityQuest[31]).ShinyButton, obj14) });
+  const tmpResult2 = questCreative(isMobileActivityQuest[25]);
+  items8[1] = callback(isQuestAccessSuspended, { style: tmp5.questDockCtaRow, children: callback(questCreative(isMobileActivityQuest[32]).ShinyButton, obj14) });
   obj11[1] = items8;
   items7[1] = closure_12(isQuestAccessSuspended, obj11);
   obj[3] = items7;

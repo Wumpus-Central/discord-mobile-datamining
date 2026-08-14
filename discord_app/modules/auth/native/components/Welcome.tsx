@@ -14,8 +14,8 @@ import { InviteTypes } from "InviteSendStates";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12674_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13278_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12692_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13290_registerAsset.js";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -54,7 +54,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       00038__(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "a" };
+      obj = { user: null, guildId: "r" };
       const tmp12 = new createdAt(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -67,7 +67,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "a" };
+      obj = { user: null, guildId: "r" };
       const tmp33 = new createdAt(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;
@@ -226,9 +226,9 @@ export default function Welcome() {
   const items5 = [initialize];
   const stateFromStores3 = obj6.useStateFromStores(items5, () => store2.getCanUseMultiAccountMobile());
   importDefault(stateFromStores[27])(() => {
-    let obj = arr(stateFromStores[28]);
+    let obj = navigation(stateFromStores[28]);
     obj.trackAppUIViewed();
-    const result = arr(stateFromStores[28]).trackAppLaunchCompleted();
+    const result = navigation(stateFromStores[28]).trackAppLaunchCompleted();
     let tmp6 = null;
     if (null != stateFromStores) {
       tmp6 = null;
@@ -236,8 +236,8 @@ export default function Welcome() {
         tmp6 = outer1_19[tmp5.type];
       }
     }
-    const obj2 = arr(stateFromStores[28]);
-    const tmp = arr;
+    const obj2 = navigation(stateFromStores[28]);
+    const tmp = navigation;
     obj = { last_logout_ts: null, invite_type: null, guild_id: null, channel_id: null, invite_code: null };
     const Storage = tmp(tmp2[30]).Storage;
     obj[0] = Storage.get(outer1_15.LOGOUT_TIMESTAMP_KEY);
@@ -287,12 +287,12 @@ export default function Welcome() {
     variant: "primary-overlay",
     onPress: function handlePressRegister() {
       if (nameFromUser) {
-        arr = arr.push(outer1_16.AGE_GATE_UNDERAGE, { fromRegister: true });
+        navigation.navigate(outer1_16.AGE_GATE_UNDERAGE, { fromRegister: true });
       } else {
-        const nextAuthState = arr(stateFromStores[34]).getNextAuthState(outer1_16.WELCOME);
-        const StackActions = arr(stateFromStores[35]).StackActions;
-        arr.dispatch(StackActions.push(nextAuthState));
-        const obj = arr(stateFromStores[34]);
+        const nextAuthState = navigation(stateFromStores[34]).getNextAuthState(outer1_16.WELCOME);
+        const CommonActions = navigation(stateFromStores[35]).CommonActions;
+        navigation.dispatch(CommonActions.navigate(nextAuthState));
+        const obj = navigation(stateFromStores[34]);
         callback(stateFromStores[29]).track(outer1_14.REGISTER_VIEWED);
         const obj2 = callback(stateFromStores[29]);
       }
@@ -306,7 +306,7 @@ export default function Welcome() {
     size: "lg",
     variant: "secondary-overlay",
     onPress: function handlePressLogin() {
-      arr = arr.push(outer1_16.LOGIN);
+      navigation.navigate(outer1_16.LOGIN);
       callback(stateFromStores[29]).track(outer1_14.LOGIN_VIEWED, { source: "welcome" });
     },
     text: null

@@ -570,7 +570,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7106).mapConversation);
+      const mapped = rawConversations.map(set(7128).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = tmp3.peek(channelId);
       if (isJump) {
@@ -1138,7 +1138,7 @@ obj = {
           }
           let flag = null != message;
           if (flag) {
-            const updateMessageRecordResult = id(4564).updateMessageRecord(value.message, message);
+            const updateMessageRecordResult = id(4586).updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
             value = null;
             if (null != value.conversationId) {
@@ -1162,7 +1162,7 @@ obj = {
                 flag = true;
               }
             }
-            const obj = id(4564);
+            const obj = id(4586);
           }
           return flag;
         }

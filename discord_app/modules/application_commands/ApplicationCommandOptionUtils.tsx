@@ -340,7 +340,7 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
     closure_5 = locale;
     en_US = numberParts.numberParts[locale];
     if (en_US == null) {
-      en_US = tmp11(10041).numberParts["en-US"];
+      en_US = tmp11(10052).numberParts["en-US"];
     }
     const _RegExp = RegExp;
     ({ group, decimal } = en_US);

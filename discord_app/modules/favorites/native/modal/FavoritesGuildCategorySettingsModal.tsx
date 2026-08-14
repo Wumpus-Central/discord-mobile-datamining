@@ -144,12 +144,12 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/fav
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(9725)().onGoBack;
+  onGoBack = onGoBack(9736)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1236).intl;
   obj[1] = intl.string(categoryId(1236).t["/uELTj"]);
   obj[2] = function render() {
     return outer1_8(outer1_11, { categoryId, onGoBack });
   };
-  return callback(onGoBack(9726), obj);
+  return callback(onGoBack(9737), obj);
 };

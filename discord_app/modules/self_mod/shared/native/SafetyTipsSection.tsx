@@ -20,7 +20,7 @@ export default function SafetyTipsContainer(children) {
   let showHeader = children.showHeader;
   const tmp = createCacheKey();
   let obj = { style: tmp.image, children: null };
-  obj[1] = callback(safetyTips(6070).SafetyBookletSpotIllustration, {});
+  obj[1] = callback(safetyTips(6091).SafetyBookletSpotIllustration, {});
   const items = [callback(View, obj), , ];
   if (showHeader) {
     obj = { style: null, variant: "heading-xl/semibold", children: null };
@@ -33,8 +33,8 @@ export default function SafetyTipsContainer(children) {
   const obj1 = { spacing: 8, align: "center", justify: "center", children: null };
   const items1 = [showHeader, callback(safetyTips(4338).Text, { style: tmp.text, accessibilityRole: "header", variant: "text-md/medium", color: "text-default", children: children.description })];
   obj1[3] = items1;
-  items[1] = closure_5(safetyTips(4753).Stack, obj1);
+  items[1] = closure_5(safetyTips(4775).Stack, obj1);
   items[2] = callback(View, { style: tmp.tips, children: safetyTips.map((tip) => outer1_4(outer1_1(outer1_2[9]), { index: arg1 + 1, tip, end: arg1 === safetyTips.length - 1 }, arg1)) });
   obj[1] = items;
-  return closure_5(safetyTips(4753).Stack, obj);
+  return closure_5(safetyTips(4775).Stack, obj);
 };

@@ -9,7 +9,7 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { Pagination } from "../../../../../_runtime/10095_Pagination.js";
+import { Pagination } from "../../../../../_runtime/10107_Pagination.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
@@ -61,7 +61,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   let React;
   const tmp = createCacheKey();
-  let obj = width(4741);
+  let obj = width(4763);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const tmp5 = mapped(React.useState(0), 2);
   const first = tmp5[0];
@@ -187,7 +187,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   let dependencyMap;
   let callback;
   const tmp = createCacheKey();
-  analyticsLocations = first(5768)().analyticsLocations;
+  analyticsLocations = first(5789)().analyticsLocations;
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];

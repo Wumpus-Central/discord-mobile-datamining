@@ -143,7 +143,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => recomputeAffinities.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8224).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8245).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = recomputeAffinities.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -152,7 +152,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8224);
+          const highestAffinityResult = highestAffinity(8245);
         }
         sampleSizeResult = _null;
       }

@@ -3,7 +3,7 @@ import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { CircularProgress } from "../../../../../_runtime/14366_CircularProgress.js";
+import { CircularProgress } from "../../../../../_runtime/14379_CircularProgress.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ArrowSmallUpIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

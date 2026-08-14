@@ -4,10 +4,13 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import items from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { NameplateUser } from "../nameplates/native/NameplateProductPreview.tsx";
+import { ProfileEffectUserPreview } from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
 import { ProfileFrameUserPreview } from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
+import { AvatarDecorationProductPreview } from "AvatarDecorationProductPreview.tsx";
 
 let StyleSheet;
 let c3;
@@ -44,17 +47,18 @@ function ProfilePreviewWrapper(children) {
   obj[2] = callback2(closure_4, obj);
   return callback(closure_3, obj);
 }
-class ProfileEffectPreview {
-  constructor(arg0) {
-    ({ profileEffect, profileEffectRestartKey, width, handlePreviewPress, onTrackPress } = global);
-    tmp = jsxs();
-    obj = require("useCurrentUser");
-    obj = { handlePreviewPress, onTrackPress, children: null };
-    currentUser = obj.useCurrentUser();
-    obj1 = { user: currentUser, profileEffect, profileEffectRestartKey, maxWidth: width, style: tmp.profilePreview };
-    obj[2] = jsx(require("ProfileEffectUserPreview"), obj1);
-    return jsx(ProfilePreviewWrapper, obj);
-  }
+function ProfileEffectPreview(arg0) {
+  let handlePreviewPress;
+  let onTrackPress;
+  let profileEffect;
+  let width;
+  ({ profileEffect, width, handlePreviewPress, onTrackPress } = arg0);
+  let obj = useCurrentUser;
+  obj = { handlePreviewPress, onTrackPress, children: null };
+  const currentUser = obj.useCurrentUser();
+  obj = { user: currentUser, profileEffect, maxWidth: width, style: createCacheKey().profilePreview };
+  obj[2] = callback(ProfileEffectUserPreview, obj);
+  return callback(ProfilePreviewWrapper, obj);
 }
 function ProfileFramePreview(arg0) {
   let handlePreviewPress;
@@ -69,29 +73,25 @@ function ProfileFramePreview(arg0) {
   obj[2] = callback(ProfileFrameUserPreview, obj);
   return callback(ProfilePreviewWrapper, obj);
 }
-class AvatarDecorationPreview {
-  constructor(arg0) {
-    ({ handlePreviewPress, onTrackPress } = global);
-    obj = {
-      onPress() {
-            if (closure_1 != null) {
-              tmp(outer1_6.FULL_PROFILE_PREVIEW);
-            }
-            if (closure_0 != null) {
-              tmp4();
-            }
-          },
-      style: jsxs().collectiblePreview,
-      children: jsx(require("AvatarDecorationProductPreview"), { product: global.product })
-    };
-    return jsx(Pressable, obj);
-  }
+function AvatarDecorationPreview(product) {
+  let importDefault;
+  let require;
+  ({ handlePreviewPress: require, onTrackPress: importDefault } = product);
+  return callback(closure_3, {
+    onPress() {
+      if (closure_1 != null) {
+        tmp(outer1_6.FULL_PROFILE_PREVIEW);
+      }
+      if (closure_0 != null) {
+        tmp4();
+      }
+    },
+    style: createCacheKey().collectiblePreview,
+    children: callback(AvatarDecorationProductPreview, { product: product.product })
+  });
 }
-class NameplatePreview {
-  constructor(arg0) {
-    obj = { style: jsxs().collectiblePreview, children: jsx(require("NameplateUser"), { product: global.product }) };
-    return jsx(View, obj);
-  }
+function NameplatePreview(product) {
+  return callback(closure_4, { style: createCacheKey().collectiblePreview, children: callback(NameplateUser, { product: product.product }) });
 }
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ EXTERNAL_PRODUCT_SKU_IDS: c5, ShopCtaEnum: closure_6 } = items);
@@ -110,9 +110,6 @@ createCacheKey[3] = obj1;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = require("items").fileFinishedImporting("modules/collectibles/native/IndividualProductPreview.tsx");
 
-export { ProfileEffectPreview };
-export { AvatarDecorationPreview };
-export { NameplatePreview };
 export const IndividualProductPreview = function IndividualProductPreview(arg0) {
   let handlePreviewPress;
   let onTrackPress;
@@ -147,11 +144,11 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   } else if (tmp(1949).CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = tmp(679).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = callback(tmp(9607).FractionalNitroPreview, {});
+      let tmp5 = callback(tmp(9620).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = callback(tmp(9610).OrbBadgePreview, {});
+        tmp5 = callback(tmp(9623).OrbBadgePreview, {});
       }
     }
     return tmp5;

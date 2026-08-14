@@ -4,8 +4,8 @@ import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/10011_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10012_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10022_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10023_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     obj10[0] = items3;
     obj10[1] = onPress;
     obj10[3] = tmp2Result;
-    let tmp4Result = tmp4(tmp6(4887).PressableOpacity, obj10);
+    let tmp4Result = tmp4(tmp6(4909).PressableOpacity, obj10);
   } else {
     const obj11 = { style: null, children: null };
     const items4 = [tmp.section, style];

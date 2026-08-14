@@ -2,7 +2,7 @@
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Button";
-import get_ActivityIndicator from "module_8514";
+import get_ActivityIndicator from "module_8536";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
@@ -244,7 +244,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.hint;
         obj4[1] = obj1.message;
-        tmp19Result = tmp19(tmp20(8518), obj4);
+        tmp19Result = tmp19(tmp20(8540), obj4);
       }
     }
     items3[3] = tmp19Result;
@@ -255,7 +255,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj6[2] = intl4.string(tmp3(1236).t.i4jeWR);
     obj6[3] = handleSubmit;
     obj6[4] = tmp7;
-    obj5[1] = callback(tmp3(4755).Button, obj6);
+    obj5[1] = callback(tmp3(4777).Button, obj6);
     items3[4] = callback(_handleSubmit, obj5);
     obj[1] = items3;
     items2[1] = closure_11(_handleSubmit, obj);

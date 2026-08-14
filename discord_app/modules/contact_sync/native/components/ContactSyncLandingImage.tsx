@@ -3,8 +3,8 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12108_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12109_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12126_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12127_registerAsset.js";
 
 let c3;
 let c4;

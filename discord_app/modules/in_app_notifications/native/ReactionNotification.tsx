@@ -56,7 +56,7 @@ function ReactionNotificationBody(arg0) {
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
       obj1[5] = gradientColors;
-      tmp8Result = tmp8(tmp2(9839).NativeChannelRowPreview, obj1);
+      tmp8Result = tmp8(tmp2(9850).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
@@ -89,7 +89,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   const React = tmp4;
   const AnimateEmoji = message(4034).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(9855);
+  let obj = message(9866);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -249,9 +249,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj1 = message(9818);
+  let obj1 = message(9829);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(9864);
+  let obj2 = message(9875);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }

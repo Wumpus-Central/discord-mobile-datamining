@@ -36,7 +36,7 @@ function ClearAllHistory(searchContext) {
   const intl2 = searchContext(1236).intl;
   obj[2] = intl2.string(searchContext(1236).t.LFTAUp);
   obj[4] = jsx(searchContext(4338).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(4887).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(4909).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };

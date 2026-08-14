@@ -50,7 +50,7 @@ function PlaceholderCommandRow(isFirstRow) {
 class CommandRow {
   constructor(arg0) {
     command = global.command;
-    f109414 = command;
+    f109557 = command;
     ({ onPressCommand, context } = global);
     ({ section, location, sectionName } = global);
     entrypoint = undefined;
@@ -58,7 +58,7 @@ class CommandRow {
     onPressSend = undefined;
     tmp2 = section;
     ({ isFirstRow, isLastRow, onExecuteCommand, installOnDemand, icon } = global);
-    tmp = f109414;
+    tmp = f109557;
     obj = require("context");
     entrypoint = obj.useAppLauncherContext().entrypoint;
     tmp3 = onPressSend(true, true);
@@ -81,7 +81,7 @@ class CommandRow {
     fn = undefined;
     if (installOnDemand) {
       tmp5 = location;
-      f109414 = location((arg0) => {
+      f109557 = location((arg0) => {
         let closure_0 = arg0;
         let c2 = 0;
         let c3 = 0;

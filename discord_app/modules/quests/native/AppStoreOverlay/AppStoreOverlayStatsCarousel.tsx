@@ -28,10 +28,10 @@ function AppStoreOverlayStatCardItem(stat) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(10554);
+      let tmp9Result = tmp9(10570);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(10554);
+    tmp9Result = tmp9(10570);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };

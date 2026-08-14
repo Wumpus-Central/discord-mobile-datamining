@@ -25,7 +25,7 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(9796);
+      const tmp14Result = tmp14(9807);
     }
     obj6 = shouldRefreshAttachmentUrl;
     tmp14 = require;
@@ -58,7 +58,7 @@ let result = require("isDiscordProxiedAssetUrl").fileFinishedImporting("modules/
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  let obj = sortedFavoriteGIFs(9983);
+  let obj = sortedFavoriteGIFs(9994);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   obj = {

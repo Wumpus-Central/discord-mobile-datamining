@@ -24,43 +24,43 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
     obj[4] = analyticsLocations;
     obj.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj);
     if ("system" === found.theme) {
-      let tmpResult = tmp(14484);
+      let tmpResult = tmp(14497);
       const result = tmpResult.resetBackgroundGradientPreset();
-      tmpResult = tmp(11406);
+      tmpResult = tmp(11422);
       tmpResult.resetCustomTheme();
       obj = { theme: null };
       obj[0] = found.theme;
-      return tmp(8747).saveClientTheme(obj);
+      return tmp(8761).saveClientTheme(obj);
     } else if (found.type === tmp(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
       const customThemeBaseTheme = tmp(1347).getCustomThemeBaseTheme(found.theme);
       const tmpResult2 = tmp(1347);
-      const result1 = tmp(14484).resetBackgroundGradientPreset();
-      const tmpResult3 = tmp(14484);
-      tmp(11406).updateCustomTheme(found.customThemeSettings, customThemeBaseTheme);
-      const tmpResult4 = tmp(11406);
+      const result1 = tmp(14497).resetBackgroundGradientPreset();
+      const tmpResult3 = tmp(14497);
+      tmp(11422).updateCustomTheme(found.customThemeSettings, customThemeBaseTheme);
+      const tmpResult4 = tmp(11422);
       const obj1 = { customUserThemeSettings: null, theme: null };
       obj1[0] = found.customThemeSettings;
       obj1[1] = customThemeBaseTheme;
-      return tmp(8747).saveClientTheme(obj1);
+      return tmp(8761).saveClientTheme(obj1);
     } else {
       if (found.type === tmp(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-        const result2 = tmp(14484).updateBackgroundGradientPreset(found.id);
-        const tmpResult6 = tmp(14484);
-        tmp(11406).resetCustomTheme();
-        const tmpResult7 = tmp(11406);
+        const result2 = tmp(14497).updateBackgroundGradientPreset(found.id);
+        const tmpResult6 = tmp(14497);
+        tmp(11422).resetCustomTheme();
+        const tmpResult7 = tmp(11422);
         ({ id: obj10[0], theme: obj10[1] } = found);
-        let saveClientThemeResult = tmp(8747).saveClientTheme({ backgroundGradientPresetId: null, theme: null });
+        let saveClientThemeResult = tmp(8761).saveClientTheme({ backgroundGradientPresetId: null, theme: null });
         const obj2 = { backgroundGradientPresetId: null, theme: null };
-        const tmpResult8 = tmp(8747);
+        const tmpResult8 = tmp(8761);
       } else {
-        const result3 = tmp(14484).resetBackgroundGradientPreset();
-        const tmpResult9 = tmp(14484);
-        tmp(11406).resetCustomTheme();
-        const tmpResult10 = tmp(11406);
+        const result3 = tmp(14497).resetBackgroundGradientPreset();
+        const tmpResult9 = tmp(14497);
+        tmp(11422).resetCustomTheme();
+        const tmpResult10 = tmp(11422);
         const obj3 = { theme: null };
         obj3[0] = found.theme;
-        saveClientThemeResult = tmp(8747).saveClientTheme(obj3);
-        const tmpResult11 = tmp(8747);
+        saveClientThemeResult = tmp(8761).saveClientTheme(obj3);
+        const tmpResult11 = tmp(8761);
       }
       return saveClientThemeResult;
     }

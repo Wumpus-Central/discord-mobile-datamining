@@ -11,7 +11,7 @@ import jsxProd from "ManaContext";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/08072_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08093_registerAsset.js";
 import { callback } from "../../../../actions/ConnectedAccountsActionCreators.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -66,7 +66,7 @@ function Integration(integration) {
     obj1[0] = legacyClassComponentStyles.integrationContainerInternal;
     obj2 = { guild: null, size: null, style: null };
     obj2[0] = integration.guild;
-    obj2[1] = tmp(5819).GuildIconSizes.SMALL;
+    obj2[1] = tmp(5840).GuildIconSizes.SMALL;
     obj2[2] = legacyClassComponentStyles.integrationGuildIcon;
     const items4 = [callback3(GuildIconSizes, obj2), , ];
     const obj3 = { style: null, children: null };
@@ -114,7 +114,7 @@ function Integration(integration) {
       stringResult = string(RXvQQu.XpeFYr);
     }
     obj7[4] = stringResult;
-    obj7 = tmp8(tmp(4755).Button, obj7);
+    obj7 = tmp8(tmp(4777).Button, obj7);
     obj6[1] = obj7;
     callback3(View, obj6);
     const tmp9 = View;
@@ -172,7 +172,7 @@ const PureComponent = importAllResult.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f111077 = applyArgumentsResult;
+    f111226 = applyArgumentsResult;
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
@@ -219,9 +219,9 @@ class ConnectedAccount extends PureComponent {
       const account = lib.props.account;
       applyArgumentsResult(outer1_2[13]).disconnect(account.type, account.id);
     };
-    f111077 = undefined;
+    f111226 = undefined;
     closure_1 = applyArgumentsResult;
-    f111077 = RowSwitch((arg0) => {
+    f111226 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -279,9 +279,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f111077 = undefined;
+    f111226 = undefined;
     closure_1 = applyArgumentsResult;
-    f111077 = RowSwitch((arg0) => {
+    f111226 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -339,9 +339,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f111077 = undefined;
+    f111226 = undefined;
     closure_1 = applyArgumentsResult;
-    f111077 = RowSwitch((arg0) => {
+    f111226 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -380,9 +380,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f111077 = undefined;
+    f111226 = undefined;
     closure_1 = applyArgumentsResult;
-    f111077 = RowSwitch((arg0) => {
+    f111226 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -509,37 +509,37 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  let obj1 = account(5165);
+  let obj1 = account(5187);
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(11022);
+    let tmp2Result = tmp2(11038);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
   } else if (tmp6.STEAM === type) {
-    tmp2Result = tmp2(11022);
+    tmp2Result = tmp2(11038);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
     if (tmp6.BLUESKY !== type) {
       if (tmp6.TWITTER !== type) {
         if (tmp6.MASTODON !== type) {
           if (tmp6.EBAY === type) {
-            redditMetadataItems = tmp2(11022).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(11022);
+            redditMetadataItems = tmp2(11038).generateEbayMetadataItems(metadata);
+            const tmp2Result1 = tmp2(11038);
           } else if (tmp6.PAYPAL === type) {
-            redditMetadataItems = tmp2(11022).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(11022);
+            redditMetadataItems = tmp2(11038).generatePaypalMetadataItems(metadata);
+            const tmp2Result2 = tmp2(11038);
           } else {
             redditMetadataItems = [];
             if (tmp6.TIKTOK === type) {
-              redditMetadataItems = tmp2(11022).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(11022);
+              redditMetadataItems = tmp2(11038).generateTikTokMetadataItems(metadata);
+              const tmp2Result3 = tmp2(11038);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11022).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(11022);
+    redditMetadataItems = tmp2(11038).generateTwitterMetadataItems(metadata);
+    const tmp2Result4 = tmp2(11038);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -560,7 +560,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    let obj12 = self(5041);
+    let obj12 = self(5063);
     const value = obj12.get(account.type);
     let hasMetadata;
     if (value != null) {
@@ -587,7 +587,7 @@ prototype["renderMetadata"] = function renderMetadata() {
       items1[2] = callback3(View, obj4);
       let obj5 = { style: null, children: null };
       obj5[0] = tmp.addDetailsButton;
-      let string = tmp2(4755).Button;
+      let string = tmp2(4777).Button;
       const intl6 = tmp2(1236).intl;
       const string2 = intl6.string;
       let Button = tmp2(1236).t;
@@ -604,7 +604,7 @@ prototype["renderMetadata"] = function renderMetadata() {
       items1[3] = callback3(View, obj5);
       const obj7 = { style: null, children: null };
       obj7[0] = tmp.learnMoreButton;
-      Button = tmp2(4755).Button;
+      Button = tmp2(4777).Button;
       const obj8 = { text: null, variant: "secondary", size: "sm", onPress: null };
       intl2 = tmp2(1236).intl;
       string = intl2.string;
@@ -640,9 +640,9 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj10[0] = tmp.metadataRefreshIcon;
     obj10[1] = tmp2(1297).Icon.Sizes.SMALL;
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10069);
+      let tmp9Result = tmp9(10081);
     } else {
-      tmp9Result = tmp9(14282);
+      tmp9Result = tmp9(14295);
     }
     obj10[2] = tmp9Result;
     obj9[6] = callback3(tmp2(1297).Icon, obj10);
@@ -651,7 +651,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj12 = { style: null, children: null };
     obj12[0] = tmp.metadataItemsContainer;
     obj12[1] = redditMetadataItems;
-    const items3 = [callback3(View, obj12), callback3(tmp2(4887).PressableOpacity, obj9)];
+    const items3 = [callback3(View, obj12), callback3(tmp2(4909).PressableOpacity, obj9)];
     obj11[1] = items3;
     return callback4(View, obj11);
   }
@@ -750,7 +750,7 @@ prototype["render"] = function render() {
   obj3[1] = registerAsset;
   obj2[4] = closure_14(Button.Icon, obj3);
   obj1[3] = closure_14(PressableBase.PressableOpacity, obj2);
-  tmp7Result = tmp7(tmp8(4753).Stack, obj1);
+  tmp7Result = tmp7(tmp8(4775).Stack, obj1);
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
   const result2 = self.renderActivityCheckRow();

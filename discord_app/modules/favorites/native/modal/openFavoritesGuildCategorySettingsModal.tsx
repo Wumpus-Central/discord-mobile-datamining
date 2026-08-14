@@ -6,5 +6,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/favori
 export default function openFavoritesGuildCategorySettingsModal(categoryId) {
   let obj = ModalActionCreators;
   obj = { categoryId };
-  obj.pushLazy(asyncRequireImpl(15310, dependencyMap.paths), obj);
+  obj.pushLazy(asyncRequireImpl(15324, dependencyMap.paths), obj);
 };

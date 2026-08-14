@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     overrideParams = obj.useKeyboardContextForType(entrypoint(1626).KeyboardTypes.APP_LAUNCHER);
   }
   const tmp4 = callback2();
-  const accessibilityNativeStackOptions = entrypoint(5823).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = entrypoint(5844).useAccessibilityNativeStackOptions();
   const initialRouteName = overrideParams.initialRouteName;
   let obj12 = callback(overrideParams, closure_3);
   const items = [entrypoint];
@@ -104,7 +104,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   items2[3] = closure_8(createNativeStackNavigator.Screen, obj10);
   obj[2] = items2;
   obj[1] = closure_9(createNativeStackNavigator.Navigator, obj);
-  obj14[0] = closure_8(entrypoint(5768).AnalyticsLocationProvider, obj);
+  obj14[0] = closure_8(entrypoint(5789).AnalyticsLocationProvider, obj);
   obj13[0] = closure_8(entrypoint(1500).NavigationContainer, obj14);
   let tmp19 = "customId" in overrideParams;
   const children = tmp8(tmp5(1500).NavigationIndependentTree, obj13);
@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     entrypointParams = { customId: null, referrerId: null };
     const obj15 = { customId: null, referrerId: null };
   }
-  return closure_8(entrypoint(9598).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
+  return closure_8(entrypoint(9611).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
 });
 const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");
 

@@ -56,11 +56,11 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7257)(obj);
+  const tmp3 = file(7279)(obj);
   const require = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(6965).receiveMessage(channel_id, tmp3, true, obj);
+  file(6986).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
     file(709).wait(() => file(outer1_2[16]).restoreFailedUpload(tmp3.id, file));
     const tmpResult = file(709);
@@ -381,7 +381,7 @@ function _writeMessage(arg0, id) {
 class LocalMessageCacheManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f110858 = applyArgumentsResult;
+    f111003 = applyArgumentsResult;
     // PrivateIsIn (0x32)
     if (tmp) {
       str = "Cannot initialize private field twice.";
@@ -745,9 +745,9 @@ class LocalMessageCacheManager extends tmp3 {
           continue;
         }
       };
-      f110858 = undefined;
+      f111003 = undefined;
       closure_1 = applyArgumentsResult;
-      f110858 = _rehydrateFailedMessages((arg0) => {
+      f111003 = _rehydrateFailedMessages((arg0) => {
         let closure_0 = arg0;
         let c2 = 0;
         let c1 = 0;

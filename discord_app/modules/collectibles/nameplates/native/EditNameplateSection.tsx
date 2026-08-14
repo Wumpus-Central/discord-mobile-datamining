@@ -87,8 +87,8 @@ const memoResult1 = importAllResult.memo((nameplate) => {
   }, items1);
   const obj = { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: null };
   const items2 = [callback3().nameplate, { borderRadius: 6 }];
-  obj[5] = callback(setSelectedNameplate(9440), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 });
-  return callback(nameplate(8335).EditCollectiblesListItemProduct, obj);
+  obj[5] = callback(setSelectedNameplate(9454), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 });
+  return callback(nameplate(8357).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 const result = require("fromServer").fileFinishedImporting("modules/collectibles/nameplates/native/EditNameplateSection.tsx");

@@ -21,8 +21,8 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     return null;
   } else {
     if (arg0 === tmp(1940).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8201).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8201);
+      let priceString = tmp(8222).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(8222);
     } else {
       priceString = null;
       if (null != tmp4) {

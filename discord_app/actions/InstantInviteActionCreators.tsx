@@ -20,7 +20,7 @@ import { StaticChannelRoute } from "set";
 import { StreamTypes } from "StreamIssueReportReasons";
 import { InviteTargetTypes } from "InviteSendStates";
 import { STAGE_INVITE_STATE_KEY } from "MAX_STAGE_TOPIC_LENGTH";
-import { format } from "../../_runtime/04663_format.js";
+import { format } from "../../_runtime/04685_format.js";
 import { getInviteDynamicLinkTemplate } from "../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx";
 import { generateDynamicLink } from "../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -674,7 +674,7 @@ export default {
       obj[1] = arg0;
       tmp(709).dispatch(obj);
       const tmpResult = tmp(709);
-      nextPromise = tmp(9382)(arg0, arg1, arg2).then((arg0) => {
+      nextPromise = tmp(9396)(arg0, arg1, arg2).then((arg0) => {
         let code;
         let invite;
         ({ invite, code } = arg0);
@@ -693,7 +693,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(9382)(arg0, arg1, arg2);
+      const promise = tmp(9396)(arg0, arg1, arg2);
     }
     return nextPromise;
   },
@@ -1040,7 +1040,7 @@ export default {
         return obj.exact(obj);
       };
       obj1[1] = obj2;
-      yield outer1_1(5168).get(obj1);
+      yield outer1_1(4562).get(obj1);
       if (1 === tmp7) {
         dependencyMap = 0;
         const obj3 = outer1_1(709);
@@ -1072,7 +1072,7 @@ export default {
   revokeInvite(outer1_0) {
     const code = outer1_0.code;
     const channel = outer1_0.channel;
-    let obj = channel(5168);
+    let obj = channel(4562);
     obj = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: code(503).NetworkActionNames.INVITE_REVOKE, properties: obj1 };
     obj[2] = obj;
@@ -2010,26 +2010,26 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(12735).onOpenHubInvite(closure_0);
-        const obj6 = obj(12735);
+        obj(12753).onOpenHubInvite(closure_0);
+        const obj6 = obj(12753);
       }
     }
     let num = closure_0.flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = id(1403).hasFlag(num, id(7817).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = id(1403).hasFlag(num, id(7838).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
       let tmp6Result = tmp6(1403);
-      hasFlagResult = tmp6Result.hasFlag(num, tmp6(7817).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      hasFlagResult = tmp6Result.hasFlag(num, tmp6(7838).GuildInviteFlags.IS_APPLICATION_BYPASS);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (closure_0.new_member) {
-          tmp6Result = tmp6(12736);
+          tmp6Result = tmp6(12754);
           if (tmp6Result.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(12736).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result1 = tmp6(12736);
+            const result1 = tmp6(12754).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result1 = tmp6(12754);
           }
         }
       }
@@ -2447,7 +2447,7 @@ export default {
     obj = { type: "INVITE_APP_OPENING", code };
     obj1.dispatch(obj);
     if (null != format.ua) {
-      const formatted = tmp7(4663).ua.toLowerCase();
+      const formatted = tmp7(4685).ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         let tmp7Result = tmp7(709);
         obj = { type: "INVITE_APP_NOT_OPENED", code: null };
@@ -2455,13 +2455,13 @@ export default {
         tmp7Result.dispatch(obj);
       }
     }
-    const os = tmp7(4663).os;
+    const os = tmp7(4685).os;
     let family;
     if (os != null) {
       family = os.family;
     }
     if ("Android" !== family) {
-      const os2 = tmp7(4663).os;
+      const os2 = tmp7(4685).os;
       let family1;
       if (os2 != null) {
         family1 = os2.family;
@@ -2483,7 +2483,7 @@ export default {
           const _HermesInternal = HermesInternal;
           let combined = "discord://" + substr;
         }
-        tmp7Result = tmp7(12740);
+        tmp7Result = tmp7(12758);
         tmp7Result.launch(combined, (arg0) => {
           let obj = outer1_1(outer1_3[39]);
           if (arg0) {
@@ -2506,7 +2506,7 @@ export default {
       tmp20 = _require;
       const obj4 = _getInviteDynamicLinkTemplate;
     }
-    let tmp20Result = tmp20(12738);
+    let tmp20Result = tmp20(12756);
     const attemptId = tmp20Result.generateAttemptId();
     let str7 = "friend_invite";
     if (2 !== arg4) {

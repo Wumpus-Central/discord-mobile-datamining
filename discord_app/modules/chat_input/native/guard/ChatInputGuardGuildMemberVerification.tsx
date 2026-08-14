@@ -5,17 +5,17 @@ import { TextAreaCta } from "TextAreaCta";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importAllResult from "module_11883";
-import { registerAsset } from "../../../../../_runtime/11881_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/11882_registerAsset.js";
+import importAllResult from "module_11899";
+import { registerAsset } from "../../../../../_runtime/11897_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11898_registerAsset.js";
 import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
-const memoResult = require("module_11883").memo(function ChatInputGuardGuildMemberVerification(guildId) {
+const memoResult = require("module_11899").memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
-  let obj = guildId(8478);
+  let obj = guildId(8500);
   const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
@@ -45,7 +45,7 @@ const memoResult = require("module_11883").memo(function ChatInputGuardGuildMemb
       obj[1] = intl.string(guildId(outer1_2[10]).t["13tjTU"]);
       const result = guildId(outer1_2[12]).openMemberVerificationCancelPendingAlert(obj);
     };
-    const tmp7 = jsx(tmp2(5366).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(5387).XSmallIcon, {});
   } else {
     let intl = tmp2(1236).intl;
     stringResult = intl.string(tmp2(1236).t.rEBKvg);
@@ -68,10 +68,10 @@ const memoResult = require("module_11883").memo(function ChatInputGuardGuildMemb
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(11883);
+    obj[1] = tmp2(11899);
     obj[2] = !stateFromStores;
-    tmp13Result = tmp13(tmp14(5759), obj);
-    const tmp14Result = tmp14(5759);
+    tmp13Result = tmp13(tmp14(5780), obj);
+    const tmp14Result = tmp14(5780);
   }
   const obj1 = { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null };
   const intl4 = tmp2(1236).intl;

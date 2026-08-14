@@ -248,13 +248,13 @@ export default {
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
-                        let tmp34Result = tmp34(8139);
+                        let tmp34Result = tmp34(8160);
                         const intl5 = tmp34(1236).intl;
                         const obj14 = { guildName: null };
                         obj14[0] = guild.name;
                         astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(tmp34(1236).t.wt3ZUM, obj14));
-                      } else if (tmp34(8143).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        tmp34Result = tmp34(8139);
+                      } else if (tmp34(8164).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        tmp34Result = tmp34(8160);
                         const intl4 = tmp34(1236).intl;
                         obj15 = { guildName: null };
                         obj15[0] = guild.name;
@@ -263,8 +263,8 @@ export default {
                         const intl3 = tmp34(1236).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(8139).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
-                        const tmp34Result1 = tmp34(8139);
+                        astToStringResult6 = tmp34(8160).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
+                        const tmp34Result1 = tmp34(8160);
                       }
                     }
                   }

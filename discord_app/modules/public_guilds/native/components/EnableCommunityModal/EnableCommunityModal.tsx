@@ -21,17 +21,17 @@ function HeaderBackButton(arg0) {
   const intl = getSystemLocale.intl;
   return HeaderBackImage.getHeaderTextButton(intl.string(getSystemLocale.t["13/7kX"]), onModalClose)(arg0);
 }
-const result = require("module_16820").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
+const result = require("module_16836").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
 
 export default function EnableCommunityModal() {
   const memo = React.useMemo(() => {
     function headerRight() {
       const obj = { source: null, onPress: null, accessibilityLabel: null };
-      obj[0] = callback2(8072);
+      obj[0] = callback2(8093);
       obj[1] = closure_5;
       const intl = callback(1236).intl;
       obj[2] = intl.string(callback(1236).t.cpT0Cq);
-      return callback3(callback(6051).HeaderActionButton, obj);
+      return callback3(callback(6072).HeaderActionButton, obj);
     }
     let obj = {
       headerRight,
@@ -40,7 +40,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16823), {});
+        return callback3(callback2(16839), {});
       }
     };
     obj = {
@@ -49,7 +49,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16835), {});
+        return callback3(callback2(16851), {});
       }
     };
     obj = {
@@ -58,7 +58,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16836), {});
+        return callback3(callback2(16852), {});
       }
     };
     return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };

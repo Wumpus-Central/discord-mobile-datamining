@@ -16,7 +16,7 @@ const pressable = createToggle.createPressable({
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl(14157, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(14170, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
@@ -32,7 +32,7 @@ let obj = {
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl(14157, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(14170, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

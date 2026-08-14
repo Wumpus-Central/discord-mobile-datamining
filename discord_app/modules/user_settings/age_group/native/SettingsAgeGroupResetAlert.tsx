@@ -47,7 +47,7 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(13098).resetAgeVerification();
+              obj1[0] = outer1_0(13109).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -68,7 +68,7 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4685);
+            obj = outer1_0(4707);
             obj.dismissAlert(outer1_6);
             navigation.goBack();
             dependencyMap = 0;

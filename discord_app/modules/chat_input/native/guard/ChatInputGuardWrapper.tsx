@@ -35,6 +35,7 @@ export default function ChatInputGuardWrapper(channel) {
   let onJumpToPresent;
   let requiredLinkedLobbyApplication;
   let screenIndex;
+  let shouldRelaunchLinkedLobbyApplication;
   let showLinkedLobbyApplicationLoadingIndicator;
   let showMemberVerificationModal;
   let user;
@@ -118,7 +119,7 @@ export default function ChatInputGuardWrapper(channel) {
     return isLurkingResult;
   }, items7);
   const tmp2Result2 = channel(tmp3[12]);
-  ({ showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication } = guildId(tmp3[20])(channel.linkedLobby));
+  ({ showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication } = guildId(tmp3[20])(channel.linkedLobby));
   guildId(tmp3[21])(channel.id);
   if (tmp11) {
     obj = { channel: null };
@@ -319,10 +320,11 @@ export default function ChatInputGuardWrapper(channel) {
               }
             }
           }
-          const obj20 = { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null };
+          const obj20 = { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null };
           obj20[0] = showLinkedLobbyApplicationLoadingIndicator;
           obj20[1] = requiredLinkedLobbyApplication;
-          tmp21Result = jsx(tmp7(tmp3[40]), { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null });
+          obj20[2] = shouldRelaunchLinkedLobbyApplication;
+          tmp21Result = jsx(tmp7(tmp3[40]), { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null });
           tmp23 = jsx;
         }
       }

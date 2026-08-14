@@ -235,7 +235,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5768)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5789)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = importAllResult.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -250,7 +250,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: items1, onPress: callback, children: null };
   items1 = [callback2().container, channel.containerStyle];
   obj[2] = callback(ChannelNameHeaderContent, { channel });
-  return callback(channel(4887).PressableOpacity, obj);
+  return callback(channel(4909).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   let channel;

@@ -13,17 +13,17 @@ if (PlatformTypes.isAndroid()) {
 }
 let result = require("enforcing").fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
 
-export const showShareActionSheet = function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) {
+export const showShareActionSheet = function showShareActionSheet(source, PREMIUM_GIFT_SUCCESS_MODAL) {
   let mediaFallbackUrl;
   let mediaStagingOptions;
   const _require = source;
-  let tmp = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
-  const importDefault = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
+  let tmp = PREMIUM_GIFT_SUCCESS_MODAL;
+  const importDefault = PREMIUM_GIFT_SUCCESS_MODAL;
   if (null != source.source) {
     let mediaShareParams = _require(fn[3]).getMediaShareParams(source.source);
     const obj2 = _require(fn[3]);
   } else {
-    mediaShareParams = { mediaFallbackUrl: "isArray", mediaStagingOptions: "accessibilityRole" };
+    mediaShareParams = { mediaFallbackUrl: "r", mediaStagingOptions: "accessibilityRole" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {
@@ -32,7 +32,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
   if (null != mediaStagingOptions) {
     let obj = { onCancel: null };
     obj[0] = function onCancel() {
-      return SECURE_FRAMES_STREAM_BOTTOM_SHEET(fn[2]).cancelPendingShare();
+      return PREMIUM_GIFT_SUCCESS_MODAL(fn[2]).cancelPendingShare();
     };
     fn = _require(fn[4]).showSharePreparingModal(obj);
     const obj3 = _require(fn[4]);
@@ -88,11 +88,11 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
       const obj = source(fn[3]);
     }
   }).catch((arg0) => {
-    let str = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
-    if (SECURE_FRAMES_STREAM_BOTTOM_SHEET == null) {
+    let str = PREMIUM_GIFT_SUCCESS_MODAL;
+    if (PREMIUM_GIFT_SUCCESS_MODAL == null) {
       str = "";
     }
-    SECURE_FRAMES_STREAM_BOTTOM_SHEET(fn[5]).captureException(arg0, { tags: { location: str } });
+    PREMIUM_GIFT_SUCCESS_MODAL(fn[5]).captureException(arg0, { tags: { location: str } });
     if (source.iOSOnlyShareCallback != null) {
       iOSOnlyShareCallback(false, null);
     }

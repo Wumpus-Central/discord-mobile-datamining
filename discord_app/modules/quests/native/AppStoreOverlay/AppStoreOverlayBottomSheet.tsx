@@ -5,7 +5,7 @@ import { View } from "ACTION_SHEET_HEIGHT_HALF";
 import ME from "ME";
 import jsxProd from "preload";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04766_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c9;
@@ -35,8 +35,8 @@ function AppStoreOverlayFooter(arg0) {
   const intl = token(1236).intl;
   obj2[1] = intl.string(token(1236).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(token(4755).Button, obj2);
-  items1[1] = callback(token(5368).SafeAreaPaddingView, obj1);
+  obj1[1] = callback(token(4777).Button, obj2);
+  items1[1] = callback(token(5389).SafeAreaPaddingView, obj1);
   obj[2] = items1;
   return callback2(View, obj);
 }

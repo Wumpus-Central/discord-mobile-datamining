@@ -87,16 +87,16 @@ export default function ExploreServersRow(visible) {
           } else {
             let closure_0 = tmp4;
             dependencyMap(true);
-            v0(8962).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v0(8962);
+            v0(8976).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v0(8976);
             const obj1 = { itemId: "caught_up", itemType: "caught_up", actionParameters: null };
             obj1[2] = { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null };
-            v0(8962).feedItemActioned(obj1);
-            const obj6 = v0(8962);
+            v0(8976).feedItemActioned(obj1);
+            const obj6 = v0(8976);
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = outer1_0(15657).maybeFetchGuildDiscoveryCategories();
+            obj2[0] = outer1_0(15675).maybeFetchGuildDiscoveryCategories();
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -125,10 +125,10 @@ export default function ExploreServersRow(visible) {
     }
   }), []);
   const callback1 = React.useCallback(() => {
-    sharedValue(8962).itemInteracted("caught_up", "caught_up", "press_home");
-    const obj = sharedValue(8962);
-    sharedValue(8962).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
-    const obj2 = sharedValue(8962);
+    sharedValue(8976).itemInteracted("caught_up", "caught_up", "press_home");
+    const obj = sharedValue(8976);
+    sharedValue(8976).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
+    const obj2 = sharedValue(8976);
     const rootNavigationRef = visible(4198).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
@@ -247,7 +247,7 @@ export default function ExploreServersRow(visible) {
   const obj4 = { style: tmp.textContainer, children: null };
   obj5 = { style: items1, children: null };
   items1 = [tmp.iconWrapper, animatedStyle];
-  obj5[1] = callback3(visible(12355).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" });
+  obj5[1] = callback3(visible(12373).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" });
   const items2 = [callback3(sharedValue(4083).View, obj5), , ];
   obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: items3, children: null };
   items3 = [tmp.headerText, animatedStyle1];
@@ -267,21 +267,21 @@ export default function ExploreServersRow(visible) {
   obj10[1] = intl3.string(visible(1236).t.lNJYV8);
   obj10[4] = callback;
   obj10[5] = tmp4[0];
-  const items6 = [callback3(visible(4755).Button, obj10), ];
+  const items6 = [callback3(visible(4777).Button, obj10), ];
   const obj11 = { size: "md", text: null, grow: true, variant: "secondary", onPress: null };
   const intl4 = visible(1236).intl;
   obj11[1] = intl4.string(visible(1236).t.AGrUbj);
   obj11[4] = callback1;
-  items6[1] = callback3(visible(4755).Button, obj11);
+  items6[1] = callback3(visible(4777).Button, obj11);
   obj9[1] = items6;
   items5[1] = callback4(View, obj9);
   obj3[1] = items5;
-  const items7 = [callback4(View, obj3), callback3(visible(15679).Separator, {}), ];
+  const items7 = [callback4(View, obj3), callback3(visible(15697).Separator, {}), ];
   const obj12 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
   obj12[1] = visible(691).VerticalGradient.START;
   obj12[2] = visible(691).VerticalGradient.END;
   let obj6 = { size: "custom", style: tmp.icon, color: "background-brand" };
-  const tmp11 = sharedValue(4766);
+  const tmp11 = sharedValue(4788);
   const obj20 = sharedValue(689)(token);
   const items8 = [sharedValue(689)(token).alpha(0.2).hex(), ];
   const alphaResult = sharedValue(689)(token).alpha(0.2);

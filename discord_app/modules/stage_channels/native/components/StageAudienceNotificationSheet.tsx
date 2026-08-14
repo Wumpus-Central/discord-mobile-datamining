@@ -6,10 +6,10 @@ import { STAGE_AUDIENCE_NOTICE_SHEET_KEY as closure_5 } from "MAX_STAGE_TOPIC_LE
 import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08011_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08046_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08047_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08048_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08032_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08067_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08069_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -73,7 +73,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl2 = tmp2(1236).intl;
   obj6[3] = intl2.string(channelId(1236).t.sBDfo6);
   obj4[1] = callback(channelId(4338).Text, obj6);
-  const items2 = [callback(channelId(8012).FormRow, obj4), , , ];
+  const items2 = [callback(channelId(8033).FormRow, obj4), , , ];
   const obj7 = { leading: null, label: null };
   const obj8 = { source: null };
   obj8[0] = registerAsset;
@@ -82,7 +82,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl3 = tmp2(1236).intl;
   obj9[3] = intl3.string(channelId(1236).t.x58YtH);
   obj7[1] = callback(channelId(4338).Text, obj9);
-  items2[1] = callback(channelId(8012).FormRow, obj7);
+  items2[1] = callback(channelId(8033).FormRow, obj7);
   const obj10 = { leading: null, label: null };
   const obj11 = { source: null };
   obj11[0] = registerAsset;
@@ -91,19 +91,19 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl4 = tmp2(1236).intl;
   obj12[3] = intl4.string(channelId(1236).t.XtVqla);
   obj10[1] = callback(channelId(4338).Text, obj12);
-  items2[2] = callback(channelId(8012).FormRow, obj10);
+  items2[2] = callback(channelId(8033).FormRow, obj10);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj13 = { leading: null, label: null };
     const obj14 = { source: null };
-    obj14[0] = tmp7(8049);
+    obj14[0] = tmp7(8070);
     obj13[0] = tmp6(BulletIcon, obj14);
     const obj15 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj15[0] = tmp.headerBullet;
     const intl6 = tmp2(1236).intl;
     obj15[3] = intl6.string(tmp2(1236).t.nDsbJg);
     obj13[1] = tmp6(tmp2(4338).Text, obj15);
-    tmp6Result = tmp6(tmp2(8012).FormRow, obj13);
+    tmp6Result = tmp6(tmp2(8033).FormRow, obj13);
   }
   const obj16 = { children: null };
   items2[3] = tmp6Result;
@@ -116,7 +116,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl5 = tmp2(1236).intl;
   obj18[0] = intl5.string(channelId(1236).t.obLqZ8);
   obj18[1] = handleDismiss;
-  obj17[1] = callback(channelId(4755).Button, obj18);
+  obj17[1] = callback(channelId(4777).Button, obj18);
   items3[1] = callback(View, obj17);
   obj[1] = items3;
   obj16[0] = closure_8(View, obj);

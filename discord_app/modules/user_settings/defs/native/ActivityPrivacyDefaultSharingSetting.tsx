@@ -49,15 +49,15 @@ createToggle = {
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
     let obj = useIsInActivityPrivacyCopyExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = tmp2(14163);
+      let tmp2Result = tmp2(14176);
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = tmp2(14163);
+        tmp2Result = tmp2(14176);
         const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14991, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(15005, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALF;
       }
     }

@@ -4,7 +4,7 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES";
 import { AnalyticEvents } from "ME";
-import { fuzzysearch } from "../../../../_runtime/05269_fuzzysearch.js";
+import { fuzzysearch } from "../../../../_runtime/05290_fuzzysearch.js";
 import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 const require = arg1;
