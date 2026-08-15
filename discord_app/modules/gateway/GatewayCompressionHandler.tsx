@@ -1,6 +1,6 @@
 // discord_app/modules/gateway/GatewayCompressionHandler.tsx
 import { NativeModules } from "get ActivityIndicator";
-import { 13004__ } from "../../../_runtime/metro/13004__.js";
+import { 13207__ } from "../../../_runtime/metro/13207__.js";
 import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 import { get } from "../../utils/ProcessArgs.tsx";
@@ -91,7 +91,7 @@ const fn2 = (arg0) => {
   let handleFlushEnd;
   tmp = new tmp(arg0, new.target, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)
-  tmp._pako = 13004__;
+  tmp._pako = 13207__;
   tmp._usesZstd = false;
   tmp._zstdDecoder = null;
   tmp._zstdStream = null;
@@ -219,7 +219,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = 13004__;
+  applyArgumentsResult._pako = 13207__;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;
@@ -284,7 +284,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const isAndroidResult = set.isAndroid();
   if (supportsZstdResult) {
     if (isAndroidResult) {
-      const _default2 = tmp2(13003).default;
+      const _default2 = tmp2(13206).default;
       if (_default2 != null) {
         const result = _default2.enableZstdStreamSupport(self._socketId);
       }
@@ -293,7 +293,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
       const result1 = DCDCompressionManager2.enableZstdStreamSupport(self._socketId, 0);
     }
   } else if (isAndroidResult) {
-    const _default = tmp2(13003).default;
+    const _default = tmp2(13206).default;
     if (_default != null) {
       const result2 = _default.enableZlibStreamSupport(self._socketId);
     }
@@ -327,7 +327,7 @@ prototype5["close"] = function close() {
   this._socketId = null;
   if (null !== _socketId) {
     if (obj.isAndroid()) {
-      const _default = tmp(13003).default;
+      const _default = tmp(13206).default;
       if (_default != null) {
         const result = _default.disableZlibStreamSupport(_socketId);
       }
@@ -366,7 +366,7 @@ prototype6["close"] = function close() {
 
 };
 items.push(NullGatewayCompressionHandler);
-let result = require("module_13004").fileFinishedImporting("modules/gateway/GatewayCompressionHandler.tsx");
+let result = require("module_13207").fileFinishedImporting("modules/gateway/GatewayCompressionHandler.tsx");
 
 export const getCompressionHandler = function getCompressionHandler(closure_10) {
   const ProcessArgs = get.ProcessArgs;

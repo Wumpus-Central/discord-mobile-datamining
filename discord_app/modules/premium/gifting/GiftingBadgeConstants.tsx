@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/GiftingBadgeConstants.tsx
-import { getSingleRequirementThreshold as closure_0 } from "map";
+import { getSingleRequirementThreshold as closure_0 } from "initialize";
 
 const result = require("set").fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");
 

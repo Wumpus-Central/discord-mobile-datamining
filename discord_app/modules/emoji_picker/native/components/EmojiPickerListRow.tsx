@@ -74,10 +74,10 @@ function EmojiItem(emoji) {
     obj1[1] = tmp.image;
     const tmp15 = preload;
     if (tmp7Result.isThemeDark(theme.theme)) {
-      tmp8 = 5422;
+      tmp8 = 6931;
       let tmp14Result = tmp14(tmp8);
     } else {
-      tmp14Result = tmp14(5423);
+      tmp14Result = tmp14(6932);
     }
     obj1[2] = tmp14Result;
     const obj2 = { uri: null };
@@ -96,7 +96,7 @@ function EmojiItem(emoji) {
     }
     items1[1] = disabled;
     obj[5] = items1;
-    return closure_8(emoji(4909).PressableOpacity, obj);
+    return closure_8(emoji(5433).PressableOpacity, obj);
   }
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);

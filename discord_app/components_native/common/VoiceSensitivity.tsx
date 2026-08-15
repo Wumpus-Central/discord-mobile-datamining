@@ -109,7 +109,7 @@ export default function VoiceSensitivity(auto) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -150,7 +150,7 @@ export default function VoiceSensitivity(auto) {
                 mediaEngine.on(outer2_0(outer2_2[16]).MediaEngineEvent.VoiceActivity, outer1_12);
               }
               c2 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp17) {
             c2 = tmp;

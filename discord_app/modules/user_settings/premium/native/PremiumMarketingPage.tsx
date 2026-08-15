@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/PremiumMarketingPage.tsx
 import Text from "Text";
 import MarketingComponentType from "MarketingComponentType";
-import get_ActivityIndicator from "module_4083";
+import get_ActivityIndicator from "module_4115";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { FractionalPremiumStates } from "GuildFeatures";
@@ -233,7 +233,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
       tmp24Result = "marketingPageBanner" === promotionMarketingComponent1.properties.properties.oneofKind;
     }
     if (tmp24Result) {
-      const obj6 = { style: null, bannerFields: null, analyticsPage: "Marketing Page Banner Tile", onPaymentSuccess: null, onPaymentDismiss: null, componentId: null };
+      const obj6 = { style: null, bannerFields: null, analyticsPage: "Marketing Page Banner Tile", onPaymentSuccess: null, onPaymentDismiss: null, componentId: null, promotionId: null };
       const items9 = [, , ];
       ({ sectionWithPadding: arr11[0], sectionWidth: arr11[1] } = tmp4);
       const obj7 = { marginBottom: null };
@@ -243,7 +243,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
       obj6[1] = promotionMarketingComponent1.properties.properties.marketingPageBanner;
       obj6[3] = onPaymentSuccess;
       obj6[4] = onPaymentDismiss;
-      obj6[5] = promotionMarketingComponent1.id;
+      ({ id: obj19[5], promotionId: obj19[6] } = promotionMarketingComponent1);
       tmp24Result = tmp24(tmp6(tmp2[34]), obj6);
       const tmp6Result1 = tmp6(tmp2[34]);
     }

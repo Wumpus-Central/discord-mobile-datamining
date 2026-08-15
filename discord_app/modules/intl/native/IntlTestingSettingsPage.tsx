@@ -7,7 +7,7 @@ import { setAppLocale } from "_setAppLocale";
 import closure_9 from "_getSystemLocale";
 import jsxProd from "messagesProxy";
 import createCacheKey from "createCacheKey";
-import { t } from "../../../../_runtime/03943_t.js";
+import { t } from "../../../../_runtime/03975_t.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
 import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
@@ -44,7 +44,7 @@ function TestLocaleSelector() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -79,7 +79,7 @@ function TestLocaleSelector() {
             obj = outer1_1(outer1_2[11]);
             obj.updateLocale(closure_0);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           c4 = tmp;
@@ -198,7 +198,7 @@ export default function IntlTestingSettingsPage() {
   obj6[1] = intl6.format(messagesProxy.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4338).Text, obj) };
+      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4734).Text, obj) };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
       return callback2(closure_6, obj);
     }

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/gifting/GiftBadgePostPurchase.tsx
 import GiftingBadgeIcon from "GiftingBadgeIcon";
 import { View } from "HapticFeedbackTypes";
-import map from "map";
+import initialize from "initialize";
 import getTierForProgress from "getTierForProgress";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "UNSAFE_isDismissibleContentDismissed";
@@ -31,9 +31,9 @@ function PostPurchaseFooter(onSendGift) {
   }, items);
   let obj = { style: callback6(useSafeAreaInsets().bottom).footer, children: null };
   const callback1 = React.useCallback(() => {
-    let arr = callback(4572);
+    let arr = callback(5260);
     arr = arr.pop();
-    const rootNavigationRef = onSendGift(4198).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(4230).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
@@ -41,16 +41,16 @@ function PostPurchaseFooter(onSendGift) {
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: null };
   obj[1] = Themes.colors.CONTROL_PRIMARY_TEXT_DEFAULT;
-  obj[2] = callback4(onSendGift(9635).GiftIcon, obj);
+  obj[2] = callback4(onSendGift(9589).GiftIcon, obj);
   const intl = onSendGift(1236).intl;
   obj[3] = intl.string(messagesProxy.g86YiI);
   obj[4] = callback;
-  const items1 = [callback4(onSendGift(4777).Button, obj), ];
+  const items1 = [callback4(onSendGift(4745).Button, obj), ];
   const obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1236).intl;
   obj1[2] = intl2.string(messagesProxy["sa/cfM"]);
   obj1[3] = callback1;
-  items1[1] = callback4(onSendGift(4777).Button, obj1);
+  items1[1] = callback4(onSendGift(4745).Button, obj1);
   obj[1] = items1;
   return callback5(View, obj);
 }
@@ -88,7 +88,7 @@ function LevelUpScreen(arg0) {
   ({ simulatedProgress, currentTier, onSendGift } = arg0);
   const tmp3 = callback6(useSafeAreaInsets().bottom);
   const effect = React.useEffect(() => {
-    const result = callback(4311).triggerHapticFeedback(callback2(4312).IMPACT_HEAVY);
+    const result = callback(4343).triggerHapticFeedback(callback2(4344).IMPACT_HEAVY);
   }, []);
   let obj = { style: tmp3.screenContainer, children: null };
   obj = { style: tmp3.content, children: null };
@@ -97,7 +97,7 @@ function LevelUpScreen(arg0) {
   if (tmp7Result) {
     const obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
-    tmp7Result = tmp7(tmp(10097), obj1);
+    tmp7Result = tmp7(tmp(10302), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];
@@ -127,8 +127,8 @@ function LevelUpScreen(arg0) {
       str2 = "";
     }
     obj7[1] = str2;
-    obj6[3] = intl2.format(tmp(2399)["6QVlxw"], obj7);
-    tmp7Result = tmp7(tmp9(4338).Text, obj6);
+    obj6[3] = intl2.format(tmp(2431)["6QVlxw"], obj7);
+    tmp7Result = tmp7(tmp9(4734).Text, obj6);
   }
   items2[1] = tmp7Result;
   obj4[1] = items2;
@@ -159,21 +159,21 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[8] = { width: "100%", gap: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 + arg0 };
   return obj;
 });
-let result = require("map").fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
+let result = require("initialize").fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
 
 export default function GiftBadgePostPurchase(arg0) {
   let currentProgress;
   let onSendGift;
   ({ currentProgress, onSendGift } = arg0);
   const effect = React.useEffect(() => {
-    let obj = callback(4164);
+    let obj = callback(4196);
     obj = { dismissAction: constants.INDIRECT_ACTION };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
   }, []);
   let obj = initialize;
-  const items = [map];
+  const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    badgeById = badgeById.getBadgeById(callback(8849).BadgeId.GIFTING);
+    badgeById = badgeById.getBadgeById(callback(8932).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;
@@ -252,7 +252,7 @@ export default function GiftBadgePostPurchase(arg0) {
         }
         const obj3 = { tierName: null };
         obj3[0] = name1;
-        str = intl.formatToPlainString(tmp27(2399).bwyQt8, obj3);
+        str = intl.formatToPlainString(tmp27(2431).bwyQt8, obj3);
       }
       obj2[2] = str;
       obj2[3] = sum;

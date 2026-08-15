@@ -15,7 +15,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/video_calls/nat
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(4793)(() => {
+  channel(4761)(() => {
     callback();
   });
   const obj = {
@@ -36,5 +36,5 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj[3] = stageStreamContainer;
-  return tmp3(channel(10897), obj);
+  return tmp3(channel(12584), obj);
 };

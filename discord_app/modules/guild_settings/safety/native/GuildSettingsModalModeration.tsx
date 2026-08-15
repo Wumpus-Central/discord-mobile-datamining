@@ -52,8 +52,8 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
     obj1[1] = DEFAULT2 === tmp6.AGE_RESTRICTED;
     obj1[2] = tmp8;
     obj1[3] = tmp7;
-    obj[3] = callback(tmp3(5829).TableSwitchRow, obj1);
-    tmp9 = callback(tmp3(5828).TableRowGroup, obj, "filter-section");
+    obj[3] = callback(tmp3(7178).TableSwitchRow, obj1);
+    tmp9 = callback(tmp3(6286).TableRowGroup, obj, "filter-section");
     const obj4 = combined;
   }
   return tmp9;
@@ -125,7 +125,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14162).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14194).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj[5] = verificationLevelOptions.map((arg0) => {
     let color;
     let desc;
@@ -154,7 +154,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj[3] = tmp5;
     return outer1_10(self(outer1_2[18]).TableRadioRow, obj, "level-" + value);
   });
-  return callback(self(8051).TableRadioGroup, obj, "level-section");
+  return callback(self(8101).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -172,7 +172,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   };
   const obj3 = combined;
   const features = guild.features;
-  const contentFilterOptions = self(14162).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14194).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
     let desc;
     let disabled;
@@ -188,7 +188,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj[3] = tmp2;
     return outer1_10(self(outer1_2[18]).TableRadioRow, obj, "filter-" + value);
   });
-  return callback(self(8051).TableRadioGroup, obj, "filter-section");
+  return callback(self(8101).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   let guild;
@@ -238,7 +238,7 @@ export default function ConnectedGuildSettingsModalModeration(contentContainerSt
   let hasChanges;
   let submitting;
   let guild;
-  let obj = guild(1499);
+  let obj = guild(1500);
   const navigation = obj.useNavigation();
   const items = [handleFormInit];
   const stateFromStoresObject = guild(589).useStateFromStoresObject(items, () => {

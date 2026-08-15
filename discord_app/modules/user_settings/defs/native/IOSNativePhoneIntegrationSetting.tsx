@@ -9,7 +9,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.V6D0wU);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
@@ -26,7 +26,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.V6D0wU);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {

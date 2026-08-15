@@ -118,5 +118,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return callback(tmp9(5825).ActionSheet, { children });
+  return callback(tmp9(7175).ActionSheet, { children });
 };

@@ -2,8 +2,8 @@
 import noop from "noop";
 import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import map from "map";
-import { getSingleRequirementThreshold as closure_7 } from "map";
+import initialize from "initialize";
+import { getSingleRequirementThreshold as closure_7 } from "initialize";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -41,8 +41,8 @@ export default function GiftingBadgeInfoActionSheet() {
   const tmp = createCacheKey();
   const require = tmp;
   let obj = initialize;
-  let items = [map];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(tmp(8849).BadgeId.GIFTING));
+  let items = [initialize];
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(tmp(8932).BadgeId.GIFTING));
   let obj1 = initialize;
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   const importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);

@@ -9,7 +9,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XxRj7f);
@@ -28,7 +28,7 @@ const createStaticResult = createToggle.createStatic({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XxRj7f);

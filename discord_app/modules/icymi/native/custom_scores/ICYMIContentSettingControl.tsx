@@ -1,14 +1,14 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx
 import _slicedToArray from "_slicedToArray";
 import TableSwitchRow from "TableSwitchRow";
-import { View } from "module_15669";
+import { View } from "module_15719";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import filterStaffGuild from "filterStaffGuild";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15666_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15667_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15668_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15716_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15717_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15718_registerAsset.js";
 import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -88,7 +88,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(8975).ICYMICustomScore.MORE === tmp3) {
+    if (tmp4(9056).ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -130,10 +130,10 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   let obj = id(589);
   const items = [filterStaffGuild];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getCustomGuildScore(id));
-  let obj1 = id(8975);
+  let obj1 = id(9056);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(8975).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(9056).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {
@@ -163,12 +163,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(1236).intl;
   obj[2] = intl.string(id(1236).t.Clq6km);
-  const items3 = [callback2(id(4338).Text, obj), , , , ];
+  const items3 = [callback2(id(4734).Text, obj), , , , ];
   obj = { variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = id(1236).intl;
   obj1 = { guildName: guild.name };
   obj[2] = intl2.format(id(1236).t["0DhU2P"], obj1);
-  items3[1] = callback2(id(4338).Text, obj);
+  items3[1] = callback2(id(4734).Text, obj);
   let tmp11Result = null;
   if (!tmp5) {
     const obj2 = { style: null, children: null };
@@ -189,12 +189,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const obj6 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
   const intl3 = tmp(1236).intl;
   obj6[2] = intl3.string(id(1236).t.oujX73);
-  obj5[1] = callback2(id(5829).TableSwitchRow, obj6);
+  obj5[1] = callback2(id(7178).TableSwitchRow, obj6);
   items3[3] = callback2(View, obj5);
   const obj7 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1236).intl;
   obj7[3] = intl4.string(id(1236).t.vRVs07);
-  items3[4] = callback2(id(4338).Text, obj7);
+  items3[4] = callback2(id(4734).Text, obj7);
   obj4[0] = items3;
   return closure_9(View, obj4);
 };

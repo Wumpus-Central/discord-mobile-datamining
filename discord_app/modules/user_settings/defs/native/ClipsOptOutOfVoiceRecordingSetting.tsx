@@ -22,7 +22,7 @@ function _updateClipsAllowVoiceRecording() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -38,7 +38,7 @@ function _updateClipsAllowVoiceRecording() {
               return obj;
             } else {
               const callback2 = tmp4;
-              const ClipsAllowVoiceRecording = callback(4034).ClipsAllowVoiceRecording;
+              const ClipsAllowVoiceRecording = callback(4066).ClipsAllowVoiceRecording;
               dependencyMap = 1;
               c3 = 1;
               const obj1 = { value: null, done: false };
@@ -57,7 +57,7 @@ function _updateClipsAllowVoiceRecording() {
             obj = callback2(709);
             obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -84,7 +84,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["wW9/zQ"]);
   },
-  parent: require("MobileSetting").MobileSetting.CLIPS,
+  parent: require("MobileUserSettings").MobileUserSettings.CLIPS,
   useValue: require("explicitContentFromProto").ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;

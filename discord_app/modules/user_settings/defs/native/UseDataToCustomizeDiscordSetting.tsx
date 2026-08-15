@@ -15,7 +15,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.MNKzyg);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     const items = [hasConsented];
     return initialize.useStateFromStores(items, () => hasConsented.hasConsented(constants.PERSONALIZATION));
@@ -24,7 +24,7 @@ createToggle = {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
       const obj3 = handleRequestSuccess;
-      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14181).showDataPrivacyRateLimitAlert(message.message));
+      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14213).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
       let obj = set;
@@ -40,7 +40,7 @@ createToggle = {
       obj[4] = componentDidMount.Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.PERSONALIZATION];
-        return callback(14180).setConsents([], items);
+        return callback(14212).setConsents([], items);
       };
       obj.show(obj);
     }

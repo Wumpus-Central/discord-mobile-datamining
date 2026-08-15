@@ -26,7 +26,7 @@ import ME from "ME";
 import { LinkType } from "LinkType";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
-import { t } from "../../_runtime/04554_t.js";
+import { t } from "../../_runtime/04486_t.js";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
@@ -80,7 +80,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7262);
+    let tmp3Result = tmp3(4369);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -91,7 +91,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7221);
+    tmp3Result = tmp3(7446);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -132,14 +132,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7265).getStreamerApplication(lastActiveStream, sortActivity);
+              const streamerApplication = tmp3(7487).getStreamerApplication(lastActiveStream, sortActivity);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7265);
+              const tmp3Result1 = tmp3(7487);
             }
           }
         }
@@ -165,13 +165,13 @@ function trackInvite(channelId) {
     obj.message_id = messageId;
     obj.send_type = constants4.DIRECT_MESSAGE;
     obj.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-    let inviteInstanceId = tmp3(4328).getInviteInstanceId(result.baseCode, messageId);
+    let inviteInstanceId = tmp3(4360).getInviteInstanceId(result.baseCode, messageId);
     if (inviteInstanceId == null) {
       inviteInstanceId = null;
     }
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
-    const tmp3Result2 = tmp3(4328);
+    const tmp3Result2 = tmp3(4360);
     collectGuildAnalyticsMetadata.trackWithMetadata(constants.INVITE_SENT, obj);
     const obj13 = collectGuildAnalyticsMetadata;
   } else {
@@ -195,13 +195,13 @@ function trackInvite(channelId) {
       obj2.message_id = messageId;
       obj2.send_type = constants4.DIRECT_MESSAGE;
       obj2.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-      let inviteInstanceId1 = tmp3(4328).getInviteInstanceId(result.baseCode, messageId);
+      let inviteInstanceId1 = tmp3(4360).getInviteInstanceId(result.baseCode, messageId);
       if (inviteInstanceId1 == null) {
         inviteInstanceId1 = null;
       }
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
-      const tmp3Result3 = tmp3(4328);
+      const tmp3Result3 = tmp3(4360);
       collectGuildAnalyticsMetadata.trackWithMetadata(constants.INVITE_SENT, obj2);
       const obj8 = collectGuildAnalyticsMetadata;
     }
@@ -606,7 +606,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -648,14 +648,14 @@ let obj14 = {
           } else {
             closure_0 = arg1;
             if (closure_0.body.length > 0) {
-              obj = outer1_0(4586);
+              obj = outer1_0(4803);
               dependencyMap = 3;
               const obj5 = { value: null, done: true };
               obj5[0] = obj.createMessageRecord(closure_0.body[0]);
               return obj5;
             } else {
               dependencyMap = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } catch (tmp11) {
@@ -864,7 +864,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -886,8 +886,8 @@ let obj14 = {
               closure_2 = undefined;
               dependencyMap = undefined;
               basicChannel = outer1_17.getBasicChannel(outer1_0);
-              const orCreate = outer1_1(5052).getOrCreate(outer1_0);
-              const obj13 = outer1_1(5052);
+              const orCreate = outer1_1(4996).getOrCreate(outer1_0);
+              const obj13 = outer1_1(4996);
               const databaseResult = outer1_1(1955).database();
               c1 = databaseResult;
               if (null != databaseResult) {
@@ -940,7 +940,7 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === outer1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = outer1_1(7017);
+              obj2 = outer1_1(5082);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, ClickArea, closure_2.messages);
               let obj3 = outer1_1(709);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
@@ -975,7 +975,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1010,7 +1010,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(7006).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(5068).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -1230,7 +1230,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1537,7 +1537,7 @@ let obj14 = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -2462,7 +2462,7 @@ let obj14 = {
               if (null == ensureGuildLoaded) {
                 c6 = 0;
                 c8 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 throwTypeErrorResult = c3;
                 throwTypeErrorResult = ensureGuildLoaded;
@@ -2480,7 +2480,7 @@ let obj14 = {
             }
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (throwTypeErrorResult) {
             messageReference = throwTypeErrorResult;
             throwTypeErrorResult = c6;
@@ -2548,7 +2548,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2583,7 +2583,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(outer1_1, outer1_0);
-              let obj1 = outer1_1(7291);
+              let obj1 = outer1_1(7512);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2632,18 +2632,18 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = outer1_0(7360).MessageDataType.EDIT;
+            obj3[0] = outer1_0(5040).MessageDataType.EDIT;
             obj3[1] = obj2;
-            outer1_1(7360).enqueue(obj3, (hasErr) => {
+            outer1_1(5040).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = outer2_0(7390).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = outer2_0(7608).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = outer2_0(7360).MessageDataType.EDIT;
+                obj[0] = outer2_0(5040).MessageDataType.EDIT;
                 obj[1] = obj2;
                 let obj1 = outer2_1(709);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
@@ -2675,7 +2675,7 @@ let obj14 = {
               outer2_55.focusMessage(obj1);
             });
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           dependencyMap = tmp;
@@ -2699,7 +2699,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2717,7 +2717,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(7291);
+              let obj1 = outer1_1(7512);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2747,7 +2747,7 @@ let obj14 = {
               const obj9 = outer1_0(530);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -2772,7 +2772,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2790,7 +2790,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(7291);
+              let obj1 = outer1_1(7512);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2820,7 +2820,7 @@ let obj14 = {
               const obj9 = outer1_0(530);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -2845,7 +2845,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2886,7 +2886,7 @@ let obj14 = {
             obj2[3] = outer1_0(outer1_3[51]).rejectWithMigratedError();
             HTTP.patch(obj2);
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c2 = tmp;
@@ -2914,7 +2914,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2943,7 +2943,7 @@ let obj14 = {
                 })();
                 dependencyMap = 3;
               } else {
-                let obj1 = outer1_1(7291);
+                let obj1 = outer1_1(7512);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -3013,7 +3013,7 @@ let obj14 = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -3056,7 +3056,7 @@ let obj14 = {
               formatToPlainStringResult = intl.string(outer1_0(1236).t.z2gyNF);
             }
             c0 = formatToPlainStringResult;
-            obj3 = outer1_1(4705);
+            obj3 = outer1_1(4827);
             const obj4 = { title: null, body: null, confirmText: null };
             const intl3 = outer1_0(1236).intl;
             obj4[0] = intl3.string(outer1_0(1236).t.Vd1hs6);

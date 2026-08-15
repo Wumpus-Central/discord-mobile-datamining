@@ -10,7 +10,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.JqV7IC);
   },
-  parent: require("MobileSetting").MobileSetting.ADVANCED,
+  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
   useValue: require("useLaunchPadType"),
   onValueChange: function onLaunchpadSettingValueChange(arg0) {
     if (LaunchPadTypes.GESTURE_FULL === arg0) {
@@ -64,7 +64,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.JqV7IC);
   },
-  parent: require("MobileSetting").MobileSetting.ADVANCED,
+  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
   useValue: require("useLaunchPadType"),
   onValueChange: function onLaunchpadSettingValueChange(arg0) {
     if (LaunchPadTypes.GESTURE_FULL === arg0) {

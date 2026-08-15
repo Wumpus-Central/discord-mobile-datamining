@@ -13,7 +13,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["EgvHH/"]);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
     let stateFromStores = useIsMobileVisualRefreshExperimentEnabled("DarkModeThemeSetting");
     const items = [handleThemeChange];
@@ -34,6 +34,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
 
 export default createToggle;

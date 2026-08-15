@@ -6,7 +6,7 @@ obj = {
   useTitle() {
     return "Table Row";
   },
-  parent: require("MobileSetting").MobileSetting.DESIGN_SYSTEMS,
+  parent: require("MobileUserSettings").MobileUserSettings.DESIGN_SYSTEMS,
   screen: obj
 };
 obj = {

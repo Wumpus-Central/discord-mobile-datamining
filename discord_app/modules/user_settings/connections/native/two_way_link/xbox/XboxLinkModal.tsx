@@ -3,7 +3,7 @@ import noop from "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import { PlatformTypes } from "ME";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08093_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08143_registerAsset.js";
 import { HeaderActionButton } from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 
@@ -22,12 +22,12 @@ const result = require("ME").fileFinishedImporting("modules/user_settings/connec
 
 export default function XboxLinkModal(locationStack) {
   let twoWayLinkStyles;
-  let obj = twoWayLinkStyles(10477);
+  let obj = twoWayLinkStyles(9756);
   twoWayLinkStyles = obj.useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = React.useMemo(() => {
     function onClose() {
-      return callback(10471).hideModal();
+      return callback(9750).hideModal();
     }
     function blank() {
       return null;
@@ -38,7 +38,7 @@ export default function XboxLinkModal(locationStack) {
       headerTitle: blank,
       headerStyle: onClose.navHeader,
       render() {
-        return callback2(callback(10474), {});
+        return callback2(callback(9753), {});
       }
     };
     obj = {
@@ -46,10 +46,10 @@ export default function XboxLinkModal(locationStack) {
       headerRight: outer1_7,
       headerStyle: onClose.navHeader,
       headerTitle() {
-        return callback2(onClose(10478).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
-        return callback2(callback(10479), {});
+        return callback2(callback(9758), {});
       }
     };
     obj = {
@@ -57,13 +57,13 @@ export default function XboxLinkModal(locationStack) {
       headerRight: outer1_7,
       headerStyle: onClose.navHeader,
       headerTitle() {
-        return callback2(onClose(10478).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         let callbackCode;
         let callbackState;
         ({ callbackCode, callbackState } = arg0);
-        return callback2(callback(10483), { callbackCode, callbackState });
+        return callback2(callback(9762), { callbackCode, callbackState });
       }
     };
     return {
@@ -76,7 +76,7 @@ export default function XboxLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
-          return callback2(callback(10524), {});
+          return callback2(callback(9837), {});
         }
       },
       [outer1_4.EDUCATION]: {
@@ -99,9 +99,9 @@ export default function XboxLinkModal(locationStack) {
       }
     };
   }, items);
-  const accountLinkStepTracking = twoWayLinkStyles(10535).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
+  const accountLinkStepTracking = twoWayLinkStyles(9796).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
   obj = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1236).intl;
   obj[3] = intl.string(twoWayLinkStyles(1236).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(5844).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null });
+  return jsx(twoWayLinkStyles(6312).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null });
 };

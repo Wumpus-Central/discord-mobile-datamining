@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
 import isIterable from "isIterable";
 import identity from "identity";
-import { isIterable } from "../../../../../../_runtime/03974_isIterable.js";
+import { isIterable } from "../../../../../../_runtime/04006_isIterable.js";
 import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { NativeModules } from "../../../../../lib/pushnotification/PushNotification.tsx";
 
@@ -20,7 +20,7 @@ function _initializeAndroidNotificationSettingsStore() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -46,7 +46,7 @@ function _initializeAndroidNotificationSettingsStore() {
               isIterable = 2;
               c4 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(10764).getLightsEnabled();
+              obj1[0] = outer1_1(11579).getLightsEnabled();
               return obj1;
             }
             obj16 = outer1_0(500);
@@ -66,7 +66,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj2;
             } else {
               callback = arg1;
-              let obj8 = callback2(10764);
+              let obj8 = callback2(11579);
               isIterable = 3;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -85,7 +85,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj4;
             } else {
               callback2 = arg1;
-              let obj5 = callback2(10764);
+              let obj5 = callback2(11579);
               isIterable = 4;
               c4 = 1;
               obj5 = { value: null, done: false };
@@ -104,7 +104,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj6;
             } else {
               dependencyMap = arg1;
-              obj2 = callback2(10764);
+              obj2 = callback2(11579);
               isIterable = 5;
               c4 = 1;
               const obj7 = { value: null, done: false };

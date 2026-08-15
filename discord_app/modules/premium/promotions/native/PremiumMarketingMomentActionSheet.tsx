@@ -4,7 +4,7 @@ import { View } from "items";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AnalyticsPages } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "module_4058";
+import jsxProd from "module_4090";
 import createCacheKey from "createCacheKey";
 
 let c9;
@@ -91,7 +91,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   let tmp5Result = tmp5(tmp3[12]);
   obj[0] = markAsDismissed(promotionId[13]).ImpressionTypes.HALFSHEET;
   obj[1] = markAsDismissed(promotionId[13]).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  obj = { component_type: tmp2(tmp3[14]).MarketingComponentType.MOBILE_BOTTOM_SHEET, component_id: component_id.componentId, dismissible_content: bottomSheetData.dismissibleContent };
+  obj = { component_type: tmp2(tmp3[14]).MarketingComponentType.MOBILE_BOTTOM_SHEET, component_id: component_id.componentId, dismissible_content: bottomSheetData.dismissibleContent, promotion_id: promotionId };
   obj[2] = obj;
   tmp5Result(obj);
   let tmp2Result = tmp2(tmp3[15]);

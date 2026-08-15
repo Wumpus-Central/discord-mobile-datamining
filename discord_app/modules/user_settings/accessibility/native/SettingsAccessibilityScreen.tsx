@@ -2,7 +2,7 @@
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import updateExistingSettings from "updateExistingSettings";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import ME from "ME";
 import { jsx } from "jsxProd";
 

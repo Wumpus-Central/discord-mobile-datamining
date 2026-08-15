@@ -15,7 +15,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.opw5ls);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useSecureFramesPersistentCodesValue() {
     const items = [items];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

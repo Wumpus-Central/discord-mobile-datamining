@@ -21,12 +21,12 @@ let prototype = function VideoGuardBannerManager() {
     if (tmp) {
       let videoEnabled = initialize.hasShownBanner();
       if (!videoEnabled) {
-        const VideoGuardExperiment = applyArgumentsResult(13178).VideoGuardExperiment;
+        const VideoGuardExperiment = applyArgumentsResult(13106).VideoGuardExperiment;
         videoEnabled = VideoGuardExperiment.getConfig({ location: "VideoGuardBannerManager" }).videoEnabled;
       }
       if (!videoEnabled) {
-        const result = applyArgumentsResult(16677).presentVideoGuardBanner();
-        const obj = applyArgumentsResult(16677);
+        const result = applyArgumentsResult(16723).presentVideoGuardBanner();
+        const obj = applyArgumentsResult(16723);
         callback(709).dispatch({ type: "VIDEO_GUARD_BANNER_SHOWN" });
         const obj2 = callback(709);
       }

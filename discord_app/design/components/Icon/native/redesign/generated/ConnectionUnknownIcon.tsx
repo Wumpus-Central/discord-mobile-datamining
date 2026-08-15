@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/15604_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15654_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

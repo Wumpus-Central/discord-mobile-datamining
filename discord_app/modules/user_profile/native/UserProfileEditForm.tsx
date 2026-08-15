@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileEditForm.tsx
 import setPendingChanges from "setPendingChanges";
 import get_ActivityIndicator from "asyncRequireImpl";
-import map from "map";
+import initialize from "initialize";
 import zustandStore from "zustandStore";
 import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET";
 import ME from "ME";
@@ -80,8 +80,8 @@ function EditUserProfileBanner(user) {
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ DISPLAY_NAME_MAX_LENGTH: c9, PRONOUNS_MAX_LENGTH: c10 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: require("registerAsset"), staticImageUri: require("registerAsset"), description: "", originalAsset: "ti" };
-let result = require("map").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
+let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: require("registerAsset"), staticImageUri: require("registerAsset"), description: "", originalAsset: "accessibilityRole" };
+let result = require("initialize").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 
 export default function UserProfileEditForm(currentUser) {
   let autoFocusElement;

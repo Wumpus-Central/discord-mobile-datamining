@@ -17,7 +17,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["3340dY"]);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
     let stateFromStores = useIsMobileVisualRefreshExperimentEnabled("SyncThemeSetting");
     const items = [handleThemeChange];

@@ -25,7 +25,7 @@ export default function EditCredentialModal(credential) {
   let first;
   let React;
   const tmp = createCacheKey();
-  let obj = credential(1499);
+  let obj = credential(1500);
   navigation = obj.useNavigation();
   [tmp6, c2] = first(React.useState(false), 2);
   const tmp7 = first(React.useState(""), 2);
@@ -47,7 +47,7 @@ export default function EditCredentialModal(credential) {
   obj[6] = credential.name;
   obj[7] = tmp6;
   obj[8] = credential(1297).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [callback(credential(8033).FormInput, obj), callback(credential(8033).FormDivider, {}), ];
+  const items1 = [callback(credential(8083).FormInput, obj), callback(credential(8083).FormDivider, {}), ];
   const obj1 = {
     onPress() {
       _undefined(true);
@@ -93,7 +93,7 @@ export default function EditCredentialModal(credential) {
   obj1[2] = tmp6;
   const intl2 = tmp2(1236).intl;
   obj1[4] = intl2.string(credential(1236).t["7asiR3"]);
-  items1[2] = callback(credential(4777).Button, obj1);
+  items1[2] = callback(credential(4745).Button, obj1);
   obj[1] = items1;
-  return closure_6(credential(8033).Form, obj);
+  return closure_6(credential(8083).Form, obj);
 };

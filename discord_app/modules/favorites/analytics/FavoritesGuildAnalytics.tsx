@@ -16,9 +16,9 @@ export function consumeNextFavoritesGuildViewSource() {
   const manual_browsing = "manual_browsing";
   return manual_browsing;
 }
-export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAddToFavorites(source, type, length) {
+export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAddToFavorites(source, type, total_favorites) {
   let obj = expandEventProperties;
-  obj = { source, channel_type: type, total_favorites: length };
+  obj = { source, channel_type: type, total_favorites };
   obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, obj);
 };
 export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(channel_type, length) {

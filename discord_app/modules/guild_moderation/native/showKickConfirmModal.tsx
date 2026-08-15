@@ -7,5 +7,5 @@ const result = require("KickConfirmModal").fileFinishedImporting("modules/guild_
 export default function showKickConfirmModal(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ModalActionCreators.pushLazy(asyncRequireImpl(11323, dependencyMap.paths), closure_0);
+  ModalActionCreators.pushLazy(asyncRequireImpl(11036, dependencyMap.paths), closure_0);
 };

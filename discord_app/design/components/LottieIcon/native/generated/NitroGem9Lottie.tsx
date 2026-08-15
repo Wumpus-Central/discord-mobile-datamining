@@ -1,7 +1,7 @@
 // discord_app/design/components/LottieIcon/native/generated/NitroGem9Lottie.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../../../_runtime/13486_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/13518_registerAsset.js";
 import { LottieIcon } from "../LottieIcon.tsx";
 
 const require = arg1;

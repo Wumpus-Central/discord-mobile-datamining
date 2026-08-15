@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import createToggle from "createToggle";
 import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -15,7 +15,7 @@ const pressable = createToggle.createPressable({
     return intl.string(getSystemLocale.t["FP+a42"]);
   },
   parent() {
-    return MobileSetting.SENSITIVE_CONTENT_FILTERS;
+    return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentGuildsSettingValue() {
     const obj = useExplicitContentSettingOrDefault;

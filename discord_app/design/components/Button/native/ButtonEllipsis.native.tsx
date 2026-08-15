@@ -1,7 +1,7 @@
 // discord_app/design/components/Button/native/ButtonEllipsis.native.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { Easing } from "module_4083";
+import { Easing } from "module_4115";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
@@ -64,7 +64,7 @@ function EllipsisCircle(offset) {
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { duration: 500, easing: null };
-obj[1] = Easing.inOut(require("module_4083").Easing.quad);
+obj[1] = Easing.inOut(require("module_4115").Easing.quad);
 let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -97,12 +97,12 @@ function withEllipsisAnimation(arg0, value) {
   const obj2 = ReanimatedRexport;
   return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true));
 }
-obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4083").withDelay, withRepeat: require("module_4083").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
+obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4115").withDelay, withRepeat: require("module_4115").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
 withEllipsisAnimation.__closure = obj;
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
 let closure_8 = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-let result = require("module_4083").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
+let result = require("module_4115").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 
 export const Ellipsis = function Ellipsis(arg0) {
   let obj = { style: { flexDirection: "row" }, children: null };

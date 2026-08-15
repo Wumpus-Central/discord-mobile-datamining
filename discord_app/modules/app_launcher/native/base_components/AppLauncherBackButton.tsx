@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 
 const require = arg1;
@@ -12,7 +12,7 @@ export default function AppLauncherBackButton(onPress) {
   const navigation = obj.useNavigation();
   const canGoBackResult = navigation.canGoBack();
   obj = { size: "sm", variant: "secondary-overlay", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
-  obj[2] = importDefault(canGoBackResult ? 5336 : 5388);
+  obj[2] = importDefault(canGoBackResult ? 6317 : 6369);
   obj[3] = onPress.onPress;
   const intl = tmp(1236).intl;
   const t = tmp(1236).t;

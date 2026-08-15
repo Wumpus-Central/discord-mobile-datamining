@@ -17,10 +17,10 @@ export const isValidFormResponse = function isValidFormResponse(required) {
       return false;
     } else {
       if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4168).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4168).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4168).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4168).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (tmp4(4200).VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (tmp4(4200).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (tmp4(4200).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (tmp4(4200).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
                 return tmp4(1370).assertNever(field_type);

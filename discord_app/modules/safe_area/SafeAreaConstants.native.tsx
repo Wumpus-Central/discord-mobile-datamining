@@ -1,5 +1,5 @@
 // discord_app/modules/safe_area/SafeAreaConstants.native.tsx
-import { initialWindowMetrics } from "module_1631";
+import { initialWindowMetrics } from "module_1632";
 
 let insets;
 if (initialWindowMetrics != null) {

@@ -33,7 +33,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         v0 = tmp;
         throw tmp9;
@@ -122,7 +122,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
             if (hasItem) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const HTTP = outer1_0(outer1_2[7]).HTTP;
               const obj4 = { url: "/users/@me/app-transaction-ids", body: null, rejectWithError: true };
@@ -139,7 +139,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
         }
         c3 = 0;
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else if (arg0 === 1) {
       c5 = 3;

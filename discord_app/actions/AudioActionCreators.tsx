@@ -623,7 +623,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -643,7 +643,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = v0(9223)("debug_logging_enabled", outer1_0, outer1_6.getDebugLogging());
+              obj1[0] = v0(9658)("debug_logging_enabled", outer1_0, outer1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -660,7 +660,7 @@ obj = {
             obj3[1] = closure_0;
             obj.dispatch(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -710,7 +710,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -730,7 +730,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = v0(9223)("audio_subsystem", outer1_0, outer1_6.getAudioSubsystem());
+              obj1[0] = v0(9658)("audio_subsystem", outer1_0, outer1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -747,7 +747,7 @@ obj = {
             obj3[1] = closure_0;
             obj.dispatch(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

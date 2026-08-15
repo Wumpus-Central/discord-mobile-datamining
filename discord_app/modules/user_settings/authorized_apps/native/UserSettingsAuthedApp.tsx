@@ -39,7 +39,7 @@ function WarningLabel(children) {
 }
 function AuthorizedAppTwoWay(application) {
   let navigation;
-  let obj = navigation(1499);
+  let obj = navigation(1500);
   navigation = obj.useNavigation();
   const items = [navigation];
   obj = { text: null };

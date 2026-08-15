@@ -2,7 +2,7 @@
 import emitChanges from "emitChanges";
 import fetchFingerprint from "fetchFingerprint";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/07771_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07989_registerAsset.js";
 import { createReferralTrialEmbedRedeemable } from "../row_data/embeds/ReferralTrialEmbed.tsx";
 import { createReferralTrialEmbedRedesign } from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
@@ -21,11 +21,11 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
     return null;
   } else {
     relevantUserTrialOffer = relevantUserTrialOffer.getRelevantUserTrialOffer(referralTrialOfferId);
-    let referrer_id;
+    let referrerId;
     if (relevantUserTrialOffer != null) {
-      referrer_id = relevantUserTrialOffer.referrer_id;
+      referrerId = relevantUserTrialOffer.referrerId;
     }
-    if (referrer_id === id) {
+    if (referrerId === id) {
       const obj3 = createReferralTrialEmbedRedeemable;
       const referralTrialEmbedRedeemable = obj3.createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedeemable) {
@@ -35,7 +35,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessage(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = createCacheKey(theme);
-        obj.iconUrl = tmp8(8121).getAssetUriForEmbed(registerAsset);
+        obj.iconUrl = tmp8(8171).getAssetUriForEmbed(registerAsset);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
@@ -50,7 +50,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessage(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = createCacheKey(theme);
-        obj.iconUrl = tmp23(8121).getAssetUriForEmbed(registerAsset);
+        obj.iconUrl = tmp23(8171).getAssetUriForEmbed(registerAsset);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

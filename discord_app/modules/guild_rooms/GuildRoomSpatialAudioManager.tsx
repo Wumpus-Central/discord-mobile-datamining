@@ -6,7 +6,7 @@ import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
-import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
+import resolveCreatingNotes from "resolveCreatingNotes";
 import "initialize";
 import { experiment } from "GuildRoomsExperiment.tsx";
 import { computeLivingRoomWorldPoints } from "GuildRoomSpatialAudio.tsx";

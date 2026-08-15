@@ -4,7 +4,7 @@ import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import identity from "identity";
 import createToggle from "createToggle";
-import { isIterable } from "../../../../../_runtime/03974_isIterable.js";
+import { isIterable } from "../../../../../_runtime/04006_isIterable.js";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _onFindYourFriendsDeletionPress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -65,7 +65,7 @@ function _onFindYourFriendsDeletionPress() {
             const aPIError = new callback(585).APIError(callback2);
             callback = aPIError.getAnyErrorMessage();
             if (null != callback) {
-              let obj2 = callback2(4062);
+              let obj2 = callback2(4094);
               obj2 = { key: "FIND_YOUR_FRIENDS_DELETION", content: null };
               obj2[1] = callback;
               obj2.open(obj2);
@@ -116,7 +116,7 @@ identity = {
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: function useIsFindYourFriendsDeletionDisabled() {
     return callback2((isLoading) => isLoading.isLoading, isIterable.shallow);
   },
@@ -140,6 +140,6 @@ identity = {
   }
 };
 identity = createToggle.createPressable(identity);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
 
 export default identity;

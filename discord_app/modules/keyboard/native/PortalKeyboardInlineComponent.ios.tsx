@@ -18,13 +18,13 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   let field1;
   let closure_7;
   id = importAllResult.useId();
-  const tmp2 = id(4207)();
+  const tmp2 = id(4239)();
   dependencyMap = tmp2;
-  let tmp4 = id(6068)({ includeCustomKeyboard: false });
+  let tmp4 = id(7349)({ includeCustomKeyboard: false });
   importAllResult = tmp4;
-  let tmp3 = id(1894)();
-  keyboardContextForType = messagesRef(4207).useKeyboardContextForType(messagesRef(1626).KeyboardTypes.SYSTEM);
-  id(4793)(() => () => {
+  let tmp3 = id(1895)();
+  keyboardContextForType = messagesRef(4239).useKeyboardContextForType(messagesRef(1627).KeyboardTypes.SYSTEM);
+  id(4761)(() => () => {
     const PortalKeyboardUIStore = outer1_0(outer1_2[8]).PortalKeyboardUIStore;
     const field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
@@ -38,9 +38,9 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
       tmpResult.closePortalKeyboard();
     }
   });
-  let PortalKeyboardUIStore = messagesRef(4208).PortalKeyboardUIStore;
+  let PortalKeyboardUIStore = messagesRef(4240).PortalKeyboardUIStore;
   field = PortalKeyboardUIStore.useField("keyboard");
-  const PortalKeyboardUIStore2 = messagesRef(4208).PortalKeyboardUIStore;
+  const PortalKeyboardUIStore2 = messagesRef(4240).PortalKeyboardUIStore;
   field1 = PortalKeyboardUIStore2.useField("state");
   closure_7 = importAllResult.useRef(false);
   const items = [messagesRef.channelId, id, field, field1, tmp2, messagesRef, keyboardContextForType, tmp3, tmp4];

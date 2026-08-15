@@ -19,6 +19,7 @@ import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { NativeCheckoutStoreProvider } from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
 import { PremiumPlanActionSheetHeader } from "PremiumPlanActionSheetHeader.tsx";
 
@@ -76,31 +77,31 @@ function Header(arg0) {
   00038__(null != premiumType, "If isPaymentSuccess is true, a value must be given for selectedPremiumType. Or premiumType must be given.");
   let tmp9 = null != trialOffer && null != premiumType;
   if (tmp9) {
-    const subscription_trial = trialOffer.subscription_trial;
-    let sku_id;
-    if (subscription_trial != null) {
-      sku_id = subscription_trial.sku_id;
+    const subscriptionTrial = trialOffer.subscriptionTrial;
+    let skuId;
+    if (subscriptionTrial != null) {
+      skuId = subscriptionTrial.skuId;
     }
-    let tmp11 = sku_id === tmp6(4007).getSkuIdForPremiumType(premiumType);
-    if (tmp11) {
-      let tmp12 = !orderRequired;
-      if (orderRequired) {
-        let subscriptionTrialId;
-        if (orderRecord != null) {
-          const subscriptionFacet = orderRecord.subscriptionFacet;
-          if (subscriptionFacet != null) {
-            const subscriptionPreview = subscriptionFacet.subscriptionPreview;
-            if (subscriptionPreview != null) {
-              subscriptionTrialId = subscriptionPreview.subscriptionTrialId;
-            }
+    tmp9 = skuId === tmp6(4039).getSkuIdForPremiumType(premiumType);
+    const tmp6Result = tmp6(4039);
+  }
+  let tmp11 = tmp9;
+  if (tmp11) {
+    let tmp12 = !orderRequired;
+    if (orderRequired) {
+      let subscriptionTrialId;
+      if (orderRecord != null) {
+        const subscriptionFacet = orderRecord.subscriptionFacet;
+        if (subscriptionFacet != null) {
+          const subscriptionPreview = subscriptionFacet.subscriptionPreview;
+          if (subscriptionPreview != null) {
+            subscriptionTrialId = subscriptionPreview.subscriptionTrialId;
           }
         }
-        tmp12 = trialOffer.trial_id === subscriptionTrialId;
       }
-      tmp11 = tmp12;
+      tmp12 = trialOffer.trialId === subscriptionTrialId;
     }
-    tmp9 = tmp11;
-    const tmp6Result = tmp6(4007);
+    tmp11 = tmp12;
   }
   trialOffer = null;
   return callback3(PremiumPlanActionSheetHeader, { premiumType, trialOffer, discountOffer });
@@ -153,44 +154,44 @@ function PlanOption(premiumItem) {
   let obj = premiumItem(589);
   const items = [updateProduct];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_12.getProduct(premiumItem.productId));
-  let obj1 = premiumItem(7398);
+  let obj1 = premiumItem(7616);
   let checkoutPlanPriceString = obj1.useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
   ({ orderRequired, orderRecord } = useNativeCheckoutStore((orderRequired) => ({ orderRequired: orderRequired.orderRequired, orderRecord: orderRequired.orderRecord })));
   const premiumTier = premiumItem.premiumTier;
   let tmp9 = null != trialOffer && null != premiumTier;
   if (tmp9) {
-    const subscription_trial = trialOffer.subscription_trial;
-    let sku_id;
-    if (subscription_trial != null) {
-      sku_id = subscription_trial.sku_id;
+    const subscriptionTrial = trialOffer.subscriptionTrial;
+    let skuId;
+    if (subscriptionTrial != null) {
+      skuId = subscriptionTrial.skuId;
     }
-    let obj2 = first(4007);
-    let tmp12 = sku_id === obj2.getSkuIdForPremiumType(premiumTier);
-    if (tmp12) {
-      let tmp13 = !orderRequired;
-      if (orderRequired) {
-        let subscriptionTrialId;
-        if (orderRecord != null) {
-          const subscriptionFacet = orderRecord.subscriptionFacet;
-          if (subscriptionFacet != null) {
-            const subscriptionPreview = subscriptionFacet.subscriptionPreview;
-            if (subscriptionPreview != null) {
-              subscriptionTrialId = subscriptionPreview.subscriptionTrialId;
-            }
+    let obj2 = first(4039);
+    tmp9 = skuId === obj2.getSkuIdForPremiumType(premiumTier);
+  }
+  let tmp12 = tmp9;
+  if (tmp12) {
+    let tmp13 = !orderRequired;
+    if (orderRequired) {
+      let subscriptionTrialId;
+      if (orderRecord != null) {
+        const subscriptionFacet = orderRecord.subscriptionFacet;
+        if (subscriptionFacet != null) {
+          const subscriptionPreview = subscriptionFacet.subscriptionPreview;
+          if (subscriptionPreview != null) {
+            subscriptionTrialId = subscriptionPreview.subscriptionTrialId;
           }
         }
-        tmp13 = trialOffer.trial_id === subscriptionTrialId;
       }
-      tmp12 = tmp13;
+      tmp13 = trialOffer.trialId === subscriptionTrialId;
     }
-    tmp9 = tmp12;
+    tmp12 = tmp13;
   }
-  let tmp4Result = tmp4(4007);
+  let tmp4Result = tmp4(4039);
   const tierDisplayNameByPlanId = tmp4Result.getTierDisplayNameByPlanId(premiumItem.basePlanId);
-  let obj4 = first(4007);
+  let obj4 = first(4039);
   const intervalString = obj4.getIntervalString(premiumItem.interval, false);
-  let tmp18 = tmp9;
-  if (!tmp9) {
+  let tmp18 = tmp12;
+  if (!tmp12) {
     tmp18 = null != discountOffer;
   }
   if (!tmp18) {
@@ -220,15 +221,15 @@ function PlanOption(premiumItem) {
   }
   let formatRateResult = null;
   if (null != discountedPriceString) {
-    tmp4Result = tmp4(5917);
+    tmp4Result = tmp4(5316);
     formatRateResult = tmp4Result.formatRate(discountedPriceString, tmp24.interval, tmp24.intervalCount);
   }
-  if (tmp9) {
+  if (tmp12) {
     const intl = tmp4(1236).intl;
     obj = { price: null };
-    obj[0] = tmp4(5917).formatPrice(0, USD, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    obj[0] = tmp4(5316).formatPrice(0, USD, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     let formatToPlainStringResult = intl.formatToPlainString(tmp4(1236).t.hXcaLT, obj);
-    const tmp4Result1 = tmp4(5917);
+    const tmp4Result1 = tmp4(5316);
   } else {
     formatToPlainStringResult = discountedPriceString;
     if (null == discountedPriceString) {
@@ -245,7 +246,7 @@ function PlanOption(premiumItem) {
   if (checkoutPlanPriceString == null) {
     tmp28 = closure_18;
   }
-  const tmp4Result2 = premiumItem(5917);
+  const tmp4Result2 = premiumItem(5316);
   if (first > 0) {
     const items1 = [tmp.planOptionPriceContainer, ];
     obj = { transform: null };
@@ -277,7 +278,7 @@ function PlanOption(premiumItem) {
     combined = "" + tierDisplayNameByPlanId + " " + intervalString;
   }
   obj3[2] = combined;
-  const items3 = [closure_35(premiumItem(4338).Text, obj3), ];
+  const items3 = [closure_35(premiumItem(4734).Text, obj3), ];
   obj4 = { style: planOptionPriceContainer, children: null };
   const obj5 = { style: tmp.planOptionDiscountContainer, children: null };
   if (null == customBadgeComponent) {
@@ -309,10 +310,10 @@ function PlanOption(premiumItem) {
   }
   obj9[2] = str8;
   obj9[3] = formatToPlainStringResult;
-  items4[1] = closure_35(premiumItem(4338).Text, obj9);
+  items4[1] = closure_35(premiumItem(4734).Text, obj9);
   obj5[1] = items4;
   const items5 = [closure_36(closure_8, obj5), , ];
-  if (!tmp9) {
+  if (!tmp12) {
     items5[1] = null;
     const obj10 = { style: null, onLayout: null, children: null };
     obj10[0] = tmp.discountSubTextContainer;
@@ -347,7 +348,7 @@ function PlanOption(premiumItem) {
           }
           obj12[1] = num2;
           obj11[2] = intl6.formatToPlainString(tmp4(1236).t["02Gmgm"], obj12);
-          tmp32Result = tmp32(tmp4(4338).Text, obj11);
+          tmp32Result = tmp32(tmp4(4734).Text, obj11);
         }
       }
     }
@@ -372,7 +373,7 @@ function PlanOption(premiumItem) {
       }
       obj14[1] = num3;
       obj13[2] = intl7.formatToPlainString(tmp4(1236).t["vZk+c/"], obj14);
-      tmp32Result1 = tmp32(tmp4(4338).Text, obj13);
+      tmp32Result1 = tmp32(tmp4(4734).Text, obj13);
     }
     items6[1] = tmp32Result1;
     obj10[2] = items6;
@@ -407,7 +408,7 @@ function PlanOption(premiumItem) {
       formatToPlainStringResult1 = intl4.formatToPlainString(tmp4(1236).t.v9QeON, obj17);
     }
     obj15[2] = formatToPlainStringResult1;
-    tmp32(tmp4(4338).Text, obj15);
+    tmp32(tmp4(4734).Text, obj15);
   }
 }
 function PremiumPlanSelectionActionSheetCTA(isPaymentSuccess) {
@@ -496,7 +497,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -536,7 +537,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
                   }
                 }
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -548,7 +549,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
               return obj;
             } else if (null == arg1) {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
             callback2(found);
           } catch (tmp18) {
@@ -612,33 +613,33 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
   premiumDiscountOffer = tmp4Result.usePremiumDiscountOffer();
   let tmp19 = null != premiumTrialOffer && null != premiumType;
   if (tmp19) {
-    const subscription_trial = premiumTrialOffer.subscription_trial;
-    let sku_id;
-    if (subscription_trial != null) {
-      sku_id = subscription_trial.sku_id;
+    const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+    let skuId;
+    if (subscriptionTrial != null) {
+      skuId = subscriptionTrial.skuId;
     }
     let tmp13Result = tmp13(tmp5[17]);
-    let tmp21 = sku_id === tmp13Result.getSkuIdForPremiumType(premiumType);
-    if (tmp21) {
-      let tmp22 = !orderRequired;
-      if (orderRequired) {
-        let subscriptionTrialId;
-        if (tmp15 != null) {
-          const subscriptionFacet = tmp15.subscriptionFacet;
-          if (subscriptionFacet != null) {
-            const subscriptionPreview = subscriptionFacet.subscriptionPreview;
-            if (subscriptionPreview != null) {
-              subscriptionTrialId = subscriptionPreview.subscriptionTrialId;
-            }
+    tmp19 = skuId === tmp13Result.getSkuIdForPremiumType(premiumType);
+  }
+  let tmp21 = tmp19;
+  if (tmp21) {
+    let tmp22 = !orderRequired;
+    if (orderRequired) {
+      let subscriptionTrialId;
+      if (tmp15 != null) {
+        const subscriptionFacet = tmp15.subscriptionFacet;
+        if (subscriptionFacet != null) {
+          const subscriptionPreview = subscriptionFacet.subscriptionPreview;
+          if (subscriptionPreview != null) {
+            subscriptionTrialId = subscriptionPreview.subscriptionTrialId;
           }
         }
-        tmp22 = premiumTrialOffer.trial_id === subscriptionTrialId;
       }
-      tmp21 = tmp22;
+      tmp22 = premiumTrialOffer.trialId === subscriptionTrialId;
     }
-    tmp19 = tmp21;
+    tmp21 = tmp22;
   }
-  c13 = tmp19;
+  c13 = tmp21;
   const tmp16 = useNativeCheckoutStore((patchOrderLineItems) => ({ patchOrderLineItems: patchOrderLineItems.patchOrderLineItems, isPatchOrderLoading: patchOrderLineItems.isPatchOrderLoading, orderRequired: patchOrderLineItems.orderRequired }));
   const discountedPremiumProductInfo = productId1(tmp5[34]).useDiscountedPremiumProductInfo(premiumDiscountOffer, premiumItems);
   ({ discountedProduct, discountedPriceString } = discountedPremiumProductInfo);
@@ -698,7 +699,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(obj);
   });
   const items4 = [memo, basePurchaseFlowAnalyticsFields, tmp29, analyticsLocations2, handlePremiumPurchase, result, onPaymentDismiss, onPaymentSuccess, tmp15, first];
-  const items5 = [tmp19, result];
+  const items5 = [tmp21, result];
   const callback = obj2.useCallback(userIsEligibleForBogoPromotion(() => {
     let closure_0 = arg0;
     let c5 = 0;
@@ -716,7 +717,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -898,7 +899,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
     }
     return stringResult;
   }, items5);
-  const items6 = [tmp2, first, tmp19, discountedPriceString, memo1, tmp.legalDisclaimerText];
+  const items6 = [tmp2, first, tmp21, discountedPriceString, memo1, tmp.legalDisclaimerText];
   const memo2 = obj2.useMemo(() => {
     if (premiumType) {
       return null;
@@ -1055,11 +1056,11 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
       let obj11 = { convertToMajorUnits: null };
       obj11[0] = tmp4(tmp5[58]).isAndroid();
       if (flag) {
-        flag = !tmp19;
+        flag = !tmp21;
       }
       let obj12 = { style: null, children: null };
       obj12[0] = tmp.contentSelectPlan;
-      if (tmp19) {
+      if (tmp21) {
         const obj13 = { variant: "text-md/normal", color: "text-strong", style: null, children: null };
         obj13[2] = tmp.trialDisclaimer;
         let intl2 = tmp4(tmp5[19]).intl;
@@ -1250,7 +1251,7 @@ let obj2 = { height: 1, width: "100%", backgroundColor: require("Themes").colors
 let result = require("_slicedToArray").fileFinishedImporting("modules/premium/native/PremiumPlanSelectionActionSheet.tsx");
 
 export default function PremiumPlanSelectionActionSheetWithOrderCTX(predicate) {
-  const NitroACOMSubscriptionExperiment = TIER_2(7478).NitroACOMSubscriptionExperiment;
+  const NitroACOMSubscriptionExperiment = TIER_2(7696).NitroACOMSubscriptionExperiment;
   let obj = TIER_2(500);
   if (obj.isIOS()) {
     if (NitroACOMSubscriptionExperiment.useConfig({ location: "PremiumPlanSelectionActionSheetWithOrderCTX" }).enabled) {
@@ -1294,59 +1295,66 @@ export default function PremiumPlanSelectionActionSheetWithOrderCTX(predicate) {
       fn3 = (interval, interval2) => interval2.interval - interval.interval;
     }
     const tmp13 = callback(predicate, closure_3);
-    let tmpResult = tmp(6979);
+    let tmpResult = tmp(7418);
     const premiumTrialOffer = tmpResult.usePremiumTrialOffer();
-    let trial_id;
-    if (premiumTrialOffer != null) {
-      trial_id = premiumTrialOffer.trial_id;
+    const premiumType = predicate.premiumType;
+    let tmp16 = null != premiumTrialOffer && null != premiumType;
+    if (tmp16) {
+      const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+      let skuId;
+      if (subscriptionTrial != null) {
+        skuId = subscriptionTrial.skuId;
+      }
+      let obj2 = getPremiumPlanItem;
+      tmp16 = skuId === obj2.getSkuIdForPremiumType(premiumType);
     }
-    let tmp17;
-    if (null != trial_id) {
+    let tmp19;
+    if (tmp16) {
       obj = { subscription_preview: null };
       obj = { subscription_trial_id: null };
-      obj[0] = trial_id;
+      obj[0] = premiumTrialOffer.trialId;
       obj[0] = obj;
-      tmp17 = obj;
+      tmp19 = obj;
     }
-    tmpResult = tmp(7409);
+    tmpResult = tmp(7627);
     const isEligibleForBogoOffer = tmpResult.useIsEligibleForBogoOffer();
     if (null == fn3) {
-      let premiumBundlesWithPredicate = tmp(6939).getPremiumBundlesWithPredicate(fn);
-      const tmpResult1 = tmp(6939);
+      let premiumBundlesWithPredicate = tmp(7378).getPremiumBundlesWithPredicate(fn);
+      const tmpResult1 = tmp(7378);
     } else {
-      const premiumBundlesWithPredicate1 = tmp(6939).getPremiumBundlesWithPredicate(fn);
+      const premiumBundlesWithPredicate1 = tmp(7378).getPremiumBundlesWithPredicate(fn);
       premiumBundlesWithPredicate = premiumBundlesWithPredicate1.sort(fn3);
-      const tmpResult2 = tmp(6939);
+      const tmpResult2 = tmp(7378);
     }
     if (isEligibleForBogoOffer) {
       fn2 = (interval) => interval.interval === constants.MONTH;
     }
     const found = premiumBundlesWithPredicate.find(fn2);
     if (null != found) {
-      const subscriptionItemsForProduct = tmp(6939).getSubscriptionItemsForProduct(found.productId);
+      const subscriptionItemsForProduct = tmp(7378).getSubscriptionItemsForProduct(found.productId);
       let mapped = subscriptionItemsForProduct.map((planId) => {
         const obj = { subscriptionPlanId: planId.planId, skuId: null, quantity: null };
-        const obj2 = TIER_2(4007);
-        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback(4007).getSkuIdForPlan(planId.planId));
+        const obj2 = TIER_2(4039);
+        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback(4039).getSkuIdForPlan(planId.planId));
         obj[2] = planId.quantity;
         return obj;
       });
-      const tmpResult3 = tmp(6939);
+      const tmpResult3 = tmp(7378);
     } else {
       const obj1 = { subscriptionPlanId: null, skuId: null, quantity: 1 };
       obj1[0] = closure_21.PREMIUM_YEAR_TIER_2;
-      obj1[1] = tmp(4007).castPremiumSubscriptionAsSkuId(TIER_22.TIER_2);
+      obj1[1] = tmp(4039).castPremiumSubscriptionAsSkuId(TIER_22.TIER_2);
       mapped = [obj1];
-      const tmpResult4 = tmp(4007);
+      const tmpResult4 = tmp(4039);
     }
-    let obj2 = { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null };
+    obj2 = { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null };
     obj2[0] = GOOGLE;
     obj2[1] = GOOGLE === tmp3.APPLE_ADVANCED_COMMERCE;
     obj2[2] = [];
     obj2[3] = mapped;
-    obj2[6] = tmp17;
+    obj2[6] = tmp19;
     obj2[7] = function onOrderRetryCancellation() {
-      return callback(4310).hideActionSheet(closure_24);
+      return callback(4342).hideActionSheet(closure_24);
     };
     const obj3 = {};
     const merged = Object.assign(tmp13);

@@ -9,7 +9,7 @@ import ME from "ME";
 import { CollectibleShopTab } from "items";
 import { CurrencyCodes } from "sum";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { keysSorter } from "../../../_runtime/05234_keysSorter.js";
+import { keysSorter } from "../../../_runtime/04376_keysSorter.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";

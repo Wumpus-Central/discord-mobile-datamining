@@ -2,7 +2,7 @@
 import frozen from "frozen";
 import importDefaultResult from "set";
 import SubscriptionPlans from "SubscriptionPlans";
-import map from "map";
+import initialize from "initialize";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import closure_8 from "frozen";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -20,8 +20,8 @@ let tmp7;
 const require = arg1;
 let c4 = importDefaultResult;
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = GuildFeatures);
-let closure_16 = new require("map")("NativeGiftContext");
-const tmp4 = new require("map")("NativeGiftContext");
+let closure_16 = new require("initialize")("NativeGiftContext");
+const tmp4 = new require("initialize")("NativeGiftContext");
 [closure_17, tmp6, tmp7] = importDefaultResult(require("createDefinedContext")(), 3);
 const importDefaultResultResult = importDefaultResult(require("createDefinedContext")(), 3);
 let result = require("noop").fileFinishedImporting("modules/payments/native/NativeGiftContext.tsx");
@@ -271,7 +271,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     constants = undefined;
     table = undefined;
     jsx = undefined;
-    obj = { orderId: "a", planId: false, planSelection: false, giftInfo: "a" };
+    obj = { orderId: "a", planId: "capitalize", planSelection: null, giftInfo: null };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;
@@ -358,7 +358,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -451,10 +451,10 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               return obj9;
                             } else {
                               outer1_0 = arg1;
-                              if (outer1_13.current.orderId !== map) {
+                              if (outer1_13.current.orderId !== initialize) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               } else {
                                 outer1_7 = revision.revision;
                                 v0(revision);
@@ -472,10 +472,10 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               return obj10;
                             } else {
                               createEmptyPromotionsByType = arg1;
-                              if (outer1_13.current.orderId !== map) {
+                              if (outer1_13.current.orderId !== initialize) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -488,7 +488,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             return obj;
                           } else {
                             createEmptyPromotionsByType = arg1;
-                            if (outer1_13.current.orderId === map) {
+                            if (outer1_13.current.orderId === initialize) {
                               outer1_13.current.giftInfo = outer1_6;
                               outer1_2(createEmptyPromotionsByType);
                             }
@@ -502,7 +502,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       } catch (tmp68) {
                         closure_2 = tmp68;
                         if (tmp4 === v0) {
@@ -527,7 +527,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -620,10 +620,10 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               return obj9;
                             } else {
                               outer1_0 = arg1;
-                              if (outer1_13.current.orderId !== map) {
+                              if (outer1_13.current.orderId !== initialize) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               } else {
                                 outer1_7 = revision.revision;
                                 v0(revision);
@@ -641,10 +641,10 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               return obj10;
                             } else {
                               createEmptyPromotionsByType = arg1;
-                              if (outer1_13.current.orderId !== map) {
+                              if (outer1_13.current.orderId !== initialize) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -657,7 +657,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             return obj;
                           } else {
                             createEmptyPromotionsByType = arg1;
-                            if (outer1_13.current.orderId === map) {
+                            if (outer1_13.current.orderId === initialize) {
                               outer1_13.current.giftInfo = outer1_6;
                               outer1_2(createEmptyPromotionsByType);
                             }
@@ -671,7 +671,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       } catch (tmp68) {
                         closure_2 = tmp68;
                         if (tmp4 === v0) {
@@ -756,7 +756,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

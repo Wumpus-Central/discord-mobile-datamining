@@ -4,9 +4,9 @@ import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import importDefaultResult from "module_4083";
+import importDefaultResult from "module_4115";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { BottomSheetModal } from "../../../_runtime/05460_BottomSheetModal.js";
+import { BottomSheetModal } from "../../../_runtime/06952_BottomSheetModal.js";
 import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import { set } from "../../modules/core/native/NativeView.tsx";
 import { ReanimatedRexport } from "../../modules/reanimated/ReanimatedRexport.tsx";
@@ -2790,7 +2790,7 @@ prototype4["render"] = function render() {
 };
 FastList.defaultProps = { batchesToRender: 12, contentInset: { top: 0, right: 0, left: 0, bottom: 0 }, disableLegacyGestureHandling: false, disableRecyclingOnFullCompute: false, stickyHeaderFooter: false };
 let closure_29 = { code: "function FastListTsx2(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
-const animatedComponent = require("module_4083").createAnimatedComponent(FastList);
+const animatedComponent = require("module_4115").createAnimatedComponent(FastList);
 let result = require("noop").fileFinishedImporting("lib/native/FastList.tsx");
 
 export default FastList;

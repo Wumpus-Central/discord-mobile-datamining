@@ -13,7 +13,7 @@ export default function XboxLinkDiscordConsent(arg0) {
   let callbackState;
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  let obj = navigation(1499);
+  let obj = navigation(1500);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -24,9 +24,9 @@ export default function XboxLinkDiscordConsent(arg0) {
     navigation.push(outer1_3.ERROR);
   }, items1);
   obj = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: null, scopes: null, onNext: null, onError: null };
-  obj[3] = navigation(10523).ConsoleOAuthApplications.XBOX_APPLICATION_ID;
+  obj[3] = navigation(9788).ConsoleOAuthApplications.XBOX_APPLICATION_ID;
   obj[4] = XBOX_CLIENT_SCOPES;
   obj[5] = callback;
   obj[6] = callback1;
-  return jsx(navigation(10485).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: null, scopes: null, onNext: null, onError: null });
+  return jsx(navigation(9764).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: null, scopes: null, onNext: null, onError: null });
 };

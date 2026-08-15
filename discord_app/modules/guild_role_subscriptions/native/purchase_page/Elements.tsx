@@ -5,7 +5,7 @@ import get_ActivityIndicator from "set";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15748_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15798_registerAsset.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -78,7 +78,7 @@ export const TruncatedText = function TruncatedText(lineClamp) {
         callback(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    const items = [closure_9(num(4338).Text, obj), first];
+    const items = [closure_9(num(4734).Text, obj), first];
     obj[3] = items;
     return closure_10(closure_6, obj);
   } else {
@@ -94,7 +94,7 @@ export const TruncatedText = function TruncatedText(lineClamp) {
     }
     const obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
     obj1[2] = stringResult;
-    t = tmp7(num(4338).Text, obj1);
+    t = tmp7(num(4734).Text, obj1);
     obj[1] = t;
     closure_9(closure_7, obj);
     const tmp8 = closure_7;
@@ -118,8 +118,8 @@ export const ArrowButton = function ArrowButton(arg0) {
 };
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
   const obj = notSupported;
-  const _require = callback(importAll(14541).useSubscriptionPlan(listingId), 1)[0];
-  const obj2 = importAll(14541);
+  const _require = callback(importAll(14573).useSubscriptionPlan(listingId), 1)[0];
+  const obj2 = importAll(14573);
   const tmp2 = _require;
   const items = [addSubscriptionPlan];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_8.get(id.id));
@@ -127,8 +127,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(5917).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(5917);
+    str = "" + tmp2(5316).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(5316);
   }
   return str;
 };

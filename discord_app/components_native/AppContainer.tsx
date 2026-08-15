@@ -10,7 +10,7 @@ import { isStaticChannelRoute } from "set";
 import jsxProd from "getChannelDetailsFromRoute";
 import createCacheKey from "createCacheKey";
 import ReanimatedRexport from "../modules/reanimated/ReanimatedRexport.tsx";
-import { createStandardNavigationFactories } from "../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../_runtime/01501_createStandardNavigationFactories.js";
 import { useNavigationTheme } from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
 import { useTheme } from "../hooks/useTheme.tsx";
 import { _maybeBackfillMissingBreadcrumbsFromTelemetryRing } from "../modules/errors/native/SentryInitUtils.tsx";
@@ -31,7 +31,7 @@ function GestureWrapper(children) {
   let isScreenLandscape;
   const tmp = createCacheKey();
   c0 = tmp;
-  isScreenLandscape = isScreenLandscape(4912).useIsScreenLandscape();
+  isScreenLandscape = isScreenLandscape(8944).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
     const items = [_undefined.flex, ];
@@ -92,7 +92,7 @@ function AppNavigationContainer(children) {
     outer1_7();
   }, []);
   const memo = React.useMemo(() => {
-    const tmp = callback(4199)();
+    const tmp = callback(4231)();
     let name;
     if (tmp != null) {
       const first = tmp.routes[0];
@@ -100,7 +100,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(13892).log("Initial Screen: " + name);
+    callback(13924).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -163,7 +163,7 @@ createCacheKey = { flex: { flex: 1 }, rootBackgroundColor: null };
 createCacheKey = { backgroundColor: require("Themes").colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 createCacheKey[1] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = module_4083.configureReanimatedLogger({ level: require("module_4083").ReanimatedLogLevel.error, strict: false });
+let result = module_4115.configureReanimatedLogger({ level: require("module_4115").ReanimatedLogLevel.error, strict: false });
 try {
   require("enableScreens").enableFreeze();
   let obj6 = require("enableScreens");
@@ -179,11 +179,11 @@ try {
     const appEntryKey = children.appEntryKey;
     let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = memo(13893).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(13925).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
-        let obj = memo(4083);
+        let obj = memo(4115);
         const fn = function e() {
           RNScreensTurboModule.RNScreensTurboModule = RNScreensTurboModule;
         };
@@ -208,8 +208,8 @@ try {
     }, []);
     riveAppStatePlaybackExperiment = undefined;
     memo = undefined;
-    let obj = memo(13893);
-    riveAppStatePlaybackExperiment = memo(15157).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = memo(13925);
+    riveAppStatePlaybackExperiment = memo(15206).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveAppStatePlaybackExperiment];
     memo = React.useMemo(() => {
       const items = [];

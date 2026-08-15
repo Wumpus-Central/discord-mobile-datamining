@@ -8,7 +8,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["7j5bMU"]);
   },
-  parent: require("MobileSetting").MobileSetting.PREMIUM,
+  parent: require("MobileUserSettings").MobileUserSettings.PREMIUM,
   unsearchable: true,
   screen: obj
 };

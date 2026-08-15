@@ -12,7 +12,7 @@ import { ThreadListSection } from "../../../../../threads/native/components/rede
 const require = arg1;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(5951);
+  let obj = channel(7234);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo((searchContext) => {
   return tmp4;
 });
 const memoResult1 = importAllResult.memo(() => {
-  let obj = channelId(1500);
+  let obj = channelId(1501);
   channelId = obj.useRoute().params.channelId;
   const items = [ensureGuildLoaded];
   const stateFromStores = channelId(647).useStateFromStores(items, () => outer1_5.getChannel(channelId));

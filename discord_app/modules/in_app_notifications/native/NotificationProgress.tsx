@@ -23,7 +23,7 @@ export default function NotificationProgress(percent) {
   first = tmp2[0];
   dependencyMap = tmp2[1];
   callback = React.useCallback((nativeEvent) => callback(nativeEvent.nativeEvent.layout.width), []);
-  let obj = percent(4083);
+  let obj = percent(4115);
   const fn = function s() {
     let obj = percent;
     let value = percent;
@@ -40,6 +40,6 @@ export default function NotificationProgress(percent) {
   obj = { onLayout: callback, style: tmp.progressContainerBottom, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items = [tmp.progress, animatedStyle];
-  obj[2] = jsx(first(4083).View, { style: items });
+  obj[2] = jsx(first(4115).View, { style: items });
   return <View onLayout={callback} style={tmp.progressContainerBottom}>{null}</View>;
 };

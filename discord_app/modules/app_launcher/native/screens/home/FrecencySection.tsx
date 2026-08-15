@@ -113,7 +113,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(11511).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(11224).getAppLauncherIconSource(app.section.application);
     let obj = { style: null, disabled: null, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     obj[0] = disabled ? tmp.appContainerDisabled : tmp.appContainer;
     obj[1] = disabled;
@@ -140,15 +140,15 @@ function FrecentApp(app) {
       obj = { style: null, source: null };
       obj[0] = tmp.appIcon;
       obj[1] = appLauncherIconSource;
-      tmp3 = callback2(onAppSelected(5329), obj);
+      tmp3 = callback2(onAppSelected(5449), obj);
     }
     const items = [tmp3, ];
     obj = { submitting: null, style: null };
     obj[0] = submitting;
     obj[1] = tmp.submittingOverlay;
-    items[1] = callback2(app(11520).SubmittingOverlay, obj);
+    items[1] = callback2(app(11236).SubmittingOverlay, obj);
     obj[6] = items;
-    return closure_12(app(4909).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(5433).PressableOpacity, obj, app.applicationId);
   }
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);

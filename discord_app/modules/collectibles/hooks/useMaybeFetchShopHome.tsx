@@ -79,7 +79,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   const tmp13 = callback2(() => {
     const obj = {};
     const merged = Object.assign(dependencyMap);
-    obj.variantsReturnStyle = HOME(7118).ShopVariantsReturnStyle.VARIANTS_GROUP;
+    obj.variantsReturnStyle = HOME(5355).ShopVariantsReturnStyle.VARIANTS_GROUP;
     obj.includeBundles = true;
     obj.includeDynamicBlocks = true;
     obj.shopHomeConfig = c11;
@@ -88,7 +88,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   }, items3);
   c12 = tmp13;
   const items4 = [tmp3[3], tmp13];
-  const tmp14 = callback2(() => !HOME(7070).areRequestOptionsEqual(c7, c12), items4);
+  const tmp14 = callback2(() => !HOME(5300).areRequestOptionsEqual(c7, c12), items4);
   c13 = tmp14;
   const obj3 = _initialize;
   const tmp12 = callback2;
@@ -121,8 +121,8 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
             tmp8 = c10;
           }
           if (tmp8) {
-            const collectiblesShopHome = HOME(7070).fetchCollectiblesShopHome(HOME, c12, _slicedToArray);
-            const obj = HOME(7070);
+            const collectiblesShopHome = HOME(5300).fetchCollectiblesShopHome(HOME, c12, _slicedToArray);
+            const obj = HOME(5300);
           }
         }
         tmp7 = null != c8 && Date.now() - c6 < c10;
@@ -135,7 +135,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     fetchShopHomeError: tmp8,
     shopBlocks: tmp4,
     refreshShopHome: stateFromStores1(() => {
-      const collectiblesShopHome = HOME(7070).fetchCollectiblesShopHome(HOME, c12, _slicedToArray);
+      const collectiblesShopHome = HOME(5300).fetchCollectiblesShopHome(HOME, c12, _slicedToArray);
     }, items7)
   };
   return obj;

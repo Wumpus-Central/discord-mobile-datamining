@@ -3,7 +3,7 @@ import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { LegacyBaseButton } from "../../../../_runtime/05488_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../_runtime/06377_LegacyBaseButton.js";
 
 const require = arg1;
 let closure_2 = ["children"];

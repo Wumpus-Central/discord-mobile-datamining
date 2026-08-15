@@ -41,7 +41,7 @@ function GuildTemplatesJoinFooter(trigger) {
   const onHeightChange = trigger.onHeightChange;
   let dependencyMap;
   const tmp = createCacheKey();
-  let obj = trigger(1499);
+  let obj = trigger(1500);
   dependencyMap = obj.useNavigation();
   if (trigger === constants2.NUF) {
     const intl2 = tmp2(1236).intl;
@@ -58,14 +58,14 @@ function GuildTemplatesJoinFooter(trigger) {
     }, items),
     children: null
   };
-  items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1628)().bottom }];
+  items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1629)().bottom }];
   obj = { style: tmp.footerContainer, children: null };
   const obj1 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1236).intl;
   obj1[3] = intl3.string(trigger(1236).t["N+Mi/U"]);
   const items2 = [
-    callback3(trigger(4338).Text, obj1),
-    callback3(trigger(4777).Button, {
+    callback3(trigger(4734).Text, obj1),
+    callback3(trigger(4745).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -93,12 +93,12 @@ function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = { Icon: null, message: null, onPress: null };
-  obj[0] = guildTemplate(12147).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id];
+  obj[0] = guildTemplate(11884).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id];
   obj[1] = guildTemplate.label;
   obj[2] = function onPress() {
     return onGuildTemplatePress(guildTemplate);
   };
-  return callback3(onGuildTemplatePress(11771), obj);
+  return callback3(onGuildTemplatePress(11491), obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ getGuildTemplatesMap: error, GuildTemplateId: metroImportAll } = GuildTemplateId);

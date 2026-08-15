@@ -12,18 +12,18 @@ export const getScreens = function getScreens(isModal) {
   obj = {
     title: "",
     render() {
-      return callback2(callback(14050), {});
+      return callback2(callback(14082), {});
     }
   };
   obj = { title: null, render: null, headerLeft: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["0N1s81"]);
   obj[1] = function render() {
-    return callback2(callback(14057), {});
+    return callback2(callback(14089), {});
   };
   let headerCloseButton;
   if (isModal) {
-    let tmp2Result = tmp2(5331);
+    let tmp2Result = tmp2(6314);
     headerCloseButton = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreators.closePasskeyUpsellModal);
   }
   obj[2] = headerCloseButton;
@@ -31,7 +31,7 @@ export const getScreens = function getScreens(isModal) {
   const obj1 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(14062), {});
+      return callback2(callback(14094), {});
     },
     title: null
   };
@@ -40,7 +40,7 @@ export const getScreens = function getScreens(isModal) {
   obj[WebAuthnScreens.EDIT] = obj1;
   const obj2 = {
     render() {
-      return callback2(callback(14063), {});
+      return callback2(callback(14095), {});
     },
     title: null
   };
@@ -50,7 +50,7 @@ export const getScreens = function getScreens(isModal) {
   const obj3 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(14066), {});
+      return callback2(callback(14098), {});
     },
     title: null,
     headerLeft: null
@@ -59,14 +59,14 @@ export const getScreens = function getScreens(isModal) {
   obj3[1] = intl4.string(getSystemLocale.t["cY/IOu"]);
   let headerCloseButton1;
   if (isModal) {
-    tmp2Result = tmp2(5331);
+    tmp2Result = tmp2(6314);
     headerCloseButton1 = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreators.closePasskeyUpsellModal);
   }
   obj3[2] = headerCloseButton1;
   obj[WebAuthnScreens.NAME] = obj3;
   const obj4 = {
     render() {
-      return callback2(callback(14067), {});
+      return callback2(callback(14099), {});
     },
     title: null
   };

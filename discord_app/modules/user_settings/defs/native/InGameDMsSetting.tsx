@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["ms+Tme"]);
   },
-  parent: require("MobileSetting").MobileSetting.CONNECTED_GAMES,
+  parent: require("MobileUserSettings").MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return React.useMemo(() => {
       let obj = { value: callback(1306).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL, label: null };

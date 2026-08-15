@@ -95,12 +95,12 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(table[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(7716)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(7934)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(5789)().analyticsLocations;
+  analyticsLocations = tmp3(7139)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.f3Pet9);
@@ -122,7 +122,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj[5] = onClose;
   const items = [tmp.alert, ];
   let shortHeightAlert = null;
-  if (analyticsLocations(1493)().height <= 580) {
+  if (analyticsLocations(1494)().height <= 580) {
     shortHeightAlert = tmp.shortHeightAlert;
   }
   items[1] = shortHeightAlert;
@@ -130,7 +130,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj = { style: tmp.closeContainer, children: null };
   obj = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
   const obj1 = { source: null };
-  obj1[0] = analyticsLocations(8093);
+  obj1[0] = analyticsLocations(8143);
   obj[3] = callback(Button.Icon, obj1);
   obj[1] = callback(PressableBase.PressableOpacity, obj);
   const items1 = [callback(closure_4, obj), ];
@@ -141,8 +141,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
     },
     children: null
   };
-  const tmp3Result = analyticsLocations(4795);
-  const items2 = [callback(closure_5, { source: analyticsLocations(10037), style: tmp.imageHeader }), , ];
+  const tmp3Result = analyticsLocations(4763);
+  const items2 = [callback(closure_5, { source: analyticsLocations(10242), style: tmp.imageHeader }), , ];
   const obj4 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = tmp9(1236).intl;
   if (priceString == null) {
@@ -151,7 +151,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj5 = { children: null };
   obj4[2] = intl3.format(getSystemLocale.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = callback(Text.Text, obj4);
-  const obj3 = { source: analyticsLocations(10037), style: tmp.imageHeader };
+  const obj3 = { source: analyticsLocations(10242), style: tmp.imageHeader };
   const tmp13 = closure_6;
   items2[2] = callback(closure_4, { style: tmp.perks, children: items.map((perk) => callback(closure_18, { perk, isLastPerk: arg1 === length.length - 1 }, arg1)) });
   obj2[2] = items2;

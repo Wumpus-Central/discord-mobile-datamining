@@ -221,20 +221,20 @@ function EditSection(guildId) {
   let trackUserProfileAction;
   let dependencyMap;
   let useBadges;
-  let obj = guildId(8851);
+  let obj = guildId(8934);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = guildId(589);
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_8.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(10195)();
-  useBadges = trackUserProfileAction(10195)({ guild: stateFromStores });
-  obj = { style: trackUserProfileAction(8898)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
+  dependencyMap = trackUserProfileAction(9536)();
+  useBadges = trackUserProfileAction(9536)({ guild: stateFromStores });
+  obj = { style: trackUserProfileAction(8982)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const tmp = trackUserProfileAction;
-  const tmp3 = trackUserProfileAction(8898)();
+  const tmp3 = trackUserProfileAction(8982)();
   obj = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
   obj1 = { size: "sm", color: null };
   obj1[1] = trackUserProfileAction(712).colors.WHITE;
-  obj[1] = callback(guildId(9732).PencilIcon, obj1);
+  obj[1] = callback(guildId(9925).PencilIcon, obj1);
   if (null != stateFromStores) {
     const intl2 = tmp4(1236).intl;
     let stringResult = intl2.string(tmp4(1236).t.HmFaFB);
@@ -245,29 +245,29 @@ function EditSection(guildId) {
   obj[2] = stringResult;
   obj[3] = function onPress() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
-    trackUserProfileAction(4310).hideActionSheet();
-    trackUserProfileAction(10587)();
+    trackUserProfileAction(4342).hideActionSheet();
+    trackUserProfileAction(8706)();
     dependencyMap();
   };
-  obj[2] = callback(guildId(4777).Button, obj);
+  obj[2] = callback(guildId(4745).Button, obj);
   let tmp6Result;
   if (null != stateFromStores) {
     const obj2 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj3 = { size: "sm", color: null };
     obj3[1] = tmp(712).colors.WHITE;
-    obj2[1] = tmp6(tmp4(9732).PencilIcon, obj3);
+    obj2[1] = tmp6(tmp4(9925).PencilIcon, obj3);
     const intl3 = tmp4(1236).intl;
     obj2[2] = intl3.string(tmp4(1236).t["PKQB/H"]);
     obj2[3] = function onPress() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
-      trackUserProfileAction(4310).hideActionSheet();
-      trackUserProfileAction(10587)();
+      trackUserProfileAction(4342).hideActionSheet();
+      trackUserProfileAction(8706)();
       callback();
     };
-    tmp6Result = tmp6(tmp4(4777).Button, obj2);
+    tmp6Result = tmp6(tmp4(4745).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12358), obj);
+  return callback(trackUserProfileAction(12093), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let containerBackground;
@@ -279,7 +279,7 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(12426), {});
+    isCurrentUser = callback(tmp(12173), {});
   }
   const items1 = [isCurrentUser, callback(WidgetRenderer, { userId, isVisible, cardStyle: items })];
   obj[1] = items1;

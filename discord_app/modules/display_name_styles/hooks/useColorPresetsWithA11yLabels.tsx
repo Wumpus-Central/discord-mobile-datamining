@@ -14,7 +14,7 @@ export default function useColorPresetsWithA11yLabels(arg0) {
     obj = { number: arg1 + 1, hexList: null };
     const mapped = arr.map(callback(688).int2hex);
     obj[1] = mapped.join(", ");
-    obj[1] = intl.formatToPlainString(callback2(2661).FHfTsV, obj);
+    obj[1] = intl.formatToPlainString(callback2(2693).FHfTsV, obj);
     return obj;
   }), items);
 };

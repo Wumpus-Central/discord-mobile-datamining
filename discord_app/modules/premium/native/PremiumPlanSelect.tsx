@@ -15,13 +15,13 @@ import items from "items";
 import { ItemPurchaseType } from "CustomCheckoutFlow";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
-import { registerAsset } from "../../../../_runtime/12898_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12899_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12900_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12901_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12902_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12903_registerAsset.js";
+import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
+import { registerAsset } from "../../../../_runtime/12975_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12976_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12977_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12978_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12979_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12980_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
 import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -487,7 +487,7 @@ function PlanSection(showBoostOnlyLabels) {
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = showBoostOnlyLabels.label;
     obj[2] = mapped;
-    let tmp7Result = tmp7(shouldShowModernBoostFlow(5828).TableRowGroup, obj);
+    let tmp7Result = tmp7(shouldShowModernBoostFlow(6286).TableRowGroup, obj);
   } else {
     obj = { children: null };
     obj[0] = mapped;
@@ -508,18 +508,18 @@ function CurrentPlanRow(subscription) {
   const tmp = callback5();
   if (subscription.showCurrentPlan) {
     if (null != subscription) {
-      productIdFromSubscription = subscription(6939).getProductIdFromSubscription(subscription, true);
-      let obj4 = subscription(6939);
+      productIdFromSubscription = subscription(7378).getProductIdFromSubscription(subscription, true);
+      let obj4 = subscription(7378);
       const tmp13 = subscription;
-      const premiumBundledItemsFromProductId = subscription(6939).getPremiumBundledItemsFromProductId(productIdFromSubscription);
+      const premiumBundledItemsFromProductId = subscription(7378).getPremiumBundledItemsFromProductId(productIdFromSubscription);
       const premiumTier = premiumBundledItemsFromProductId.premiumTier;
       if (null != premiumTier) {
         let PREMIUM_GUILD = callback2(premiumTier);
       } else {
         PREMIUM_GUILD = constants6.PREMIUM_GUILD;
       }
-      const obj5 = subscription(6939);
-      toggledIntervalProduct = tmp13(6939).getToggledIntervalProduct(productIdFromSubscription);
+      const obj5 = subscription(7378);
+      toggledIntervalProduct = tmp13(7378).getToggledIntervalProduct(productIdFromSubscription);
       let obj = { style: null, colors: null, start: null, end: null, children: null };
       obj[0] = tmp.currentPlanGradient;
       obj[1] = PREMIUM_GUILD;
@@ -529,7 +529,7 @@ function CurrentPlanRow(subscription) {
       obj[1] = subscription;
       obj[2] = analyticsLoadId;
       let tmp11 = null == toggledIntervalProduct;
-      const tmp13Result = tmp13(6939);
+      const tmp13Result = tmp13(7378);
       if (tmp11) {
         tmp11 = subscription.status !== constants5.CANCELED;
       }
@@ -561,8 +561,8 @@ function CurrentPlanRow(subscription) {
                     let obj = {};
                     const merged = Object.assign(arg0);
                     obj.productId = outer1_1;
-                    obj.continueWithUpsell = outer3_3(/* F120589 */ function() { ... });
-                    obj.continueWithDefault = outer3_3(/* F120590 */ function() { ... });
+                    obj.continueWithUpsell = outer3_3(/* F120772 */ function() { ... });
+                    obj.continueWithDefault = outer3_3(/* F120773 */ function() { ... });
                     return outer3_32(closure_0, obj);
                   };
                 });
@@ -988,7 +988,7 @@ let closure_46 = importAllResult.forwardRef(function PremiumPlanSelect(isBoostPu
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1021,8 +1021,8 @@ let closure_46 = importAllResult.forwardRef(function PremiumPlanSelect(isBoostPu
                 const obj1 = { value: null, done: false };
                 obj1[0] = v0(modifySubscriptionItemsForProduct.map((planId) => {
                   const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                  const obj2 = callback(4007);
-                  obj[0] = obj2.castPremiumSubscriptionAsSkuId(callback2(4007).getSkuIdForPlan(planId.planId));
+                  const obj2 = callback(4039);
+                  obj[0] = obj2.castPremiumSubscriptionAsSkuId(callback2(4039).getSkuIdForPlan(planId.planId));
                   ({ planId: obj[1], quantity: obj[2] } = planId);
                   obj[3] = constants.SUBSCRIPTION;
                   return obj;

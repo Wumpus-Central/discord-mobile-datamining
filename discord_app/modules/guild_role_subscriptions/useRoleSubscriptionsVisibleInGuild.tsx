@@ -84,7 +84,7 @@ export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscri
     tmp5 = stateFromStores;
   }
   const obj2 = _useShouldHideGuildPurchaseEntryPoints;
-  const guildEligibleForGuildProducts = tmp3(5940).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp3(7224).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {

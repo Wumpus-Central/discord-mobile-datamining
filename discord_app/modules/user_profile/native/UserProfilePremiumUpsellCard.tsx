@@ -20,15 +20,15 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   isTryItOut = isTryItOut.isTryItOut;
   let navigation;
   let analyticsLocations;
-  let obj = navigation(1499);
+  let obj = navigation(1500);
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
-  const tmp3 = callback(analyticsLocations(1628)().bottom);
-  let nitroTrialCtaOverride = navigation(6978).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(6978);
-  const tmp8 = analyticsLocations(5809);
+  const tmp3 = callback(analyticsLocations(1629)().bottom);
+  let nitroTrialCtaOverride = navigation(7417).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7417);
+  const tmp8 = analyticsLocations(7159);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(5789)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(7139)(items).analyticsLocations;
   const items1 = [navigation];
   callback = React.useCallback(() => {
     analyticsLocations(outer1_2[9]).setSection(outer1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -42,7 +42,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     analyticsLocations(outer1_2[10])(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(5789);
+  const tmp7 = analyticsLocations(7139);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1236).intl;
@@ -66,6 +66,6 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj[4] = jsx(navigation(4338).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14013), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  obj[4] = jsx(navigation(4734).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
+  return jsx(tmp(14045), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

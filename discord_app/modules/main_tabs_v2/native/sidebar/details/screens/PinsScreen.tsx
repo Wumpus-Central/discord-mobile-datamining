@@ -13,7 +13,7 @@ obj = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(() => {
-  let obj = channelId(1502);
+  let obj = channelId(1503);
   channelId = obj.useRoute().params.channelId;
   const items = [ensureGuildLoaded];
   const stateFromStores = channelId(589).useStateFromStores(items, () => {
@@ -25,7 +25,7 @@ const memoResult = require("noop").memo(() => {
     return guild_id;
   });
   const obj2 = channelId(589);
-  const channelDetailsSearchContext = channelId(11746).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(11466).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: callback().container, children: jsx(InitialPinsScreen, obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;

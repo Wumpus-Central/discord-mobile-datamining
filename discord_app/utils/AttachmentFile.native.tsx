@@ -23,7 +23,7 @@ function _getAttachmentFile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -71,13 +71,13 @@ function _getAttachmentFile() {
               return obj3;
             } else {
               items = arg1;
-              logger = lib(4915).getAttachmentPayload(lib, callback, items.name);
+              logger = lib(4830).getAttachmentPayload(lib, callback, items.name);
               c6 = 2;
-              const obj10 = lib(4915);
+              const obj10 = lib(4830);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(4923).getFileSize(items.uri);
+              obj4[0] = lib(4838).getFileSize(items.uri);
               return obj4;
             }
           } else {
@@ -153,7 +153,7 @@ function _cancelGetAttachmentFile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -185,7 +185,7 @@ function _cancelGetAttachmentFile() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c1 = tmp;

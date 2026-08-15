@@ -48,8 +48,8 @@ function watchStream(stream, forceMultiple) {
       obj[2] = forceMultiple;
       dispatcher.dispatch(obj);
       if (null != guildId) {
-        const result = tmp12(4538).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
-        const tmp12Result = tmp12(4538);
+        const result = tmp12(9862).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(9862);
       }
       let forceFocus;
       if (forceMultiple != null) {
@@ -67,8 +67,8 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = tmp18(4570).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4570);
+        const participant = tmp18(8666).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(8666);
       }
       const obj3 = dispatcher;
     } else {
@@ -105,7 +105,7 @@ function _fetchStreamPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -128,7 +128,7 @@ function _fetchStreamPreview() {
               dependencyMap = undefined;
               if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
                 let obj5 = callback;
-                let result = callback(4408);
+                let result = callback(4531);
                 let HTTP = result.encodeStreamKey;
                 if (null != tmp55) {
                   let CALL = outer1_16.GUILD;
@@ -228,7 +228,7 @@ function _notifyStreamStart() {
       const obj2 = { event: null };
       obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(4562).post(obj1);
+      yield v0(5227).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;

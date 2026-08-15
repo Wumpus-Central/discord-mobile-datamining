@@ -31,8 +31,8 @@ function canEveryoneRoleViewEvent(guildEvent, items1) {
     const channel = obj.getChannel(tmp4);
     let canEveryoneRoleResult = null != channel;
     if (canEveryoneRoleResult) {
-      canEveryoneRoleResult = importAll(3994).canEveryoneRole(Permissions.VIEW_CHANNEL, channel);
-      const obj3 = importAll(3994);
+      canEveryoneRoleResult = importAll(4026).canEveryoneRole(Permissions.VIEW_CHANNEL, channel);
+      const obj3 = importAll(4026);
     }
     return canEveryoneRoleResult;
   }

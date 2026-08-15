@@ -5,8 +5,8 @@ import ME from "ME";
 import { jsx } from "jsxProd";
 import identity from "identity";
 import createToggle from "createToggle";
-import { t } from "../../../../../_runtime/03943_t.js";
-import { isIterable } from "../../../../../_runtime/03974_isIterable.js";
+import { t } from "../../../../../_runtime/03975_t.js";
+import { isIterable } from "../../../../../_runtime/04006_isIterable.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { saveProfileAndAccountRequest } from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -23,8 +23,8 @@ function useIsHarvestRequestDisabled() {
   let tmp6 = null == stateFromStores;
   if (!tmp6) {
     if (!harvestDisabledResult) {
-      harvestDisabledResult = tmp(14184).harvestDisabled(tmp4, stateFromStores);
-      const tmpResult = tmp(14184);
+      harvestDisabledResult = tmp(14216).harvestDisabled(tmp4, stateFromStores);
+      const tmpResult = tmp(14216);
     }
     tmp6 = harvestDisabledResult;
   }
@@ -37,7 +37,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XAHCgJ);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useTrailing: function useHarvestRequestSettingTrailing() {
     let tmp = null;
     if (callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow)) {
@@ -77,8 +77,8 @@ obj = {
     let tmp6 = null == stateFromStores;
     if (!tmp6) {
       if (!harvestDisabledResult) {
-        harvestDisabledResult = tmp(14184).harvestDisabled(tmp4, stateFromStores);
-        const tmpResult = tmp(14184);
+        harvestDisabledResult = tmp(14216).harvestDisabled(tmp4, stateFromStores);
+        const tmpResult = tmp(14216);
       }
       tmp6 = harvestDisabledResult;
     }
@@ -101,7 +101,7 @@ obj = {
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/RequestYourDataSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/RequestYourDataSetting.tsx");
 
 export default route;
 export const fetchHarvestStatus = function fetchHarvestStatus() {

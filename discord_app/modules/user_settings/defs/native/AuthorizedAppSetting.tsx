@@ -6,7 +6,7 @@ obj = {
   useTitle() {
     return "";
   },
-  parent: require("MobileSetting").MobileSetting.AUTHORIZED_APPS,
+  parent: require("MobileUserSettings").MobileUserSettings.AUTHORIZED_APPS,
   unsearchable: true,
   screen: obj
 };

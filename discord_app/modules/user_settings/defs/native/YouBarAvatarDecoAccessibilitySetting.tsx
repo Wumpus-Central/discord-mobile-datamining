@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["34XN2f"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
     return initialize.useStateFromStores(items, () => obj.animateYouBarAvatarDeco);

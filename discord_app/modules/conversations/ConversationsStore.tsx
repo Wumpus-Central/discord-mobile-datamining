@@ -165,11 +165,14 @@ function handleReaction(channelId) {
     if (null == message) {
       return false;
     } else {
-      if (obj.shouldApplyReaction(channelId)) {
+      if (obj2.shouldApplyReaction(channelId)) {
         const tmp4 = store.getId() === userId;
         if ("MESSAGE_REACTION_ADD" === type) {
           const message2 = value.message;
-          let addReactionResult = message2.addReaction(emoji, tmp4, channelId.colors, reactionType);
+          const obj = { colors: null, reactionType: null };
+          obj[0] = channelId.colors;
+          obj[1] = reactionType;
+          let addReactionResult = message2.addReaction(emoji, tmp4, obj);
         } else {
           message = value.message;
           addReactionResult = message.removeReaction(emoji, tmp4, reactionType);
@@ -198,7 +201,7 @@ function handleReaction(channelId) {
       } else {
         return false;
       }
-      obj = messageId(4000);
+      obj2 = messageId(4032);
     }
   }
 }
@@ -570,7 +573,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7128).mapConversation);
+      const mapped = rawConversations.map(set(5017).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = tmp3.peek(channelId);
       if (isJump) {
@@ -1138,7 +1141,7 @@ obj = {
           }
           let flag = null != message;
           if (flag) {
-            const updateMessageRecordResult = id(4586).updateMessageRecord(value.message, message);
+            const updateMessageRecordResult = id(4803).updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
             value = null;
             if (null != value.conversationId) {
@@ -1162,7 +1165,7 @@ obj = {
                 flag = true;
               }
             }
-            const obj = id(4586);
+            const obj = id(4803);
           }
           return flag;
         }

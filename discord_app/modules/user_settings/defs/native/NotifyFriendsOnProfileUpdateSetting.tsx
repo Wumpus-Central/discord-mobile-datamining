@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["6goWcz"]);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue: require("explicitContentFromProto").NotifyFriendsOnProfileUpdate.useSetting,
   onValueChange: require("onNotifyFriendsOnProfileUpdateSettingsChanged").onNotifyFriendsOnProfileUpdateSettingsChanged
 });
@@ -25,7 +25,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["6goWcz"]);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue: require("explicitContentFromProto").NotifyFriendsOnProfileUpdate.useSetting,
   onValueChange: require("onNotifyFriendsOnProfileUpdateSettingsChanged").onNotifyFriendsOnProfileUpdateSettingsChanged
 };

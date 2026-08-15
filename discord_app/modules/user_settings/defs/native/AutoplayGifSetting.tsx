@@ -7,7 +7,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["9ptHSs"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").GifAutoPlay.useSetting,
   onValueChange: require("explicitContentFromProto").GifAutoPlay.updateSetting
 });
@@ -16,7 +16,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["9ptHSs"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").GifAutoPlay.useSetting,
   onValueChange: require("explicitContentFromProto").GifAutoPlay.updateSetting
 };

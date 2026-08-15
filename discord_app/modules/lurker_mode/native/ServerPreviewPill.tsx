@@ -8,7 +8,7 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 createCacheKey = { pill: null, text: null };
-createCacheKey = { position: "absolute", top: require("Themes").space.PX_16, left: require("Themes").space.PX_16, paddingHorizontal: 10, paddingVertical: require("Themes").space.PX_4, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.WHITE };
+createCacheKey = { paddingHorizontal: 10, paddingVertical: require("Themes").space.PX_4, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.WHITE };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: require("Themes").colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);

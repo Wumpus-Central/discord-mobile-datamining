@@ -5,8 +5,8 @@ import { View } from "registerAsset";
 import { InstantInviteSources } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/13282_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15313_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/13314_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15362_registerAsset.js";
 import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
@@ -39,7 +39,7 @@ function _getFriendInviteCode() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -66,7 +66,7 @@ function _getFriendInviteCode() {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj2 = code(4061);
+          let obj2 = code(4093);
           const intl = code(1236).intl;
           obj2.presentError(intl.string(code(1236).t.R0RpRX));
           c5 = 3;
@@ -134,7 +134,7 @@ function _handleShare() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -168,13 +168,13 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9128);
+          const obj5 = callback(8918);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7285)(callback);
+          obj2[0] = callback2(7506)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp7) {
         c3 = tmp;
@@ -215,7 +215,7 @@ function _handleLink() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -252,7 +252,7 @@ function _handleLink() {
           obj = callback(table[11]);
           obj.handleCopy(callback, null, constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp15) {
         c3 = tmp;

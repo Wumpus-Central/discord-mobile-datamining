@@ -2,7 +2,7 @@
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { 01631__ } from "../../../_runtime/metro/01631__.js";
+import { 01632__ } from "../../../_runtime/metro/01632__.js";
 import { EMPTY_SAFE_AREA_INSETS } from "SafeAreaConstants.native.tsx";
 
 const require = arg1;
@@ -10,9 +10,9 @@ let closure_6 = { position: "absolute", width: 0, height: 0 };
 const result = require("jsxProd").fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export const SafeAreaReporter = function SafeAreaReporter() {
-  let obj = safeAreaInsets(1631);
+  let obj = safeAreaInsets(1632);
   safeAreaInsets = obj.useSafeAreaInsets();
-  const appEntryKey = safeAreaInsets(1496).useAppEntryKey();
+  const appEntryKey = safeAreaInsets(1497).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
   const layoutEffect = React.useLayoutEffect(() => {
     safeAreaInsets(ref[8]).batchUpdates(() => {
@@ -168,5 +168,5 @@ export const SafeAreaProvider = function SafeAreaProvider(arg0) {
   obj[0] = EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_METRICS;
   obj[1] = children;
   obj[2] = style;
-  return jsx(01631__.SafeAreaProvider, { initialMetrics: null, children: null, style: null });
+  return jsx(01632__.SafeAreaProvider, { initialMetrics: null, children: null, style: null });
 };

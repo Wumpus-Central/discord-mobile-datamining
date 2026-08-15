@@ -1,6 +1,6 @@
 // discord_app/modules/guild_rooms/GuildRoomManager.tsx
 import fetchFingerprint from "fetchFingerprint";
-import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
+import resolveCreatingNotes from "resolveCreatingNotes";
 import "initialize";
 import { _guildRoomConnect } from "GuildRoomActionCreators.native.tsx";
 import { experiment } from "GuildRoomsExperiment.tsx";

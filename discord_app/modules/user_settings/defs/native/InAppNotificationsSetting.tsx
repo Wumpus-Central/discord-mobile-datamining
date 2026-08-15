@@ -10,7 +10,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.rqEZdu);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: function useInAppNotificationsSettingValue() {
     const FocusMode = explicitContentFromProto.FocusMode;
     const setting = FocusMode.useSetting();
@@ -43,7 +43,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.rqEZdu);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: function useInAppNotificationsSettingValue() {
     const FocusMode = explicitContentFromProto.FocusMode;
     const setting = FocusMode.useSetting();

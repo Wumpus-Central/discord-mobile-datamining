@@ -9,7 +9,7 @@ let c3;
 let c4;
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "ti" };
+let closure_5 = { input: "", error: "accessibilityRole" };
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -82,7 +82,7 @@ prototype["renderContent"] = function renderContent() {
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: null };
       obj[1] = helpText;
-      tmp7 = callback(tmp5(4338).Text, obj);
+      tmp7 = callback(tmp5(4734).Text, obj);
     }
     const items = [tmp7, ];
     obj = { label: null, placeholder: null, secureTextEntry: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
@@ -100,9 +100,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7856).TextInput, obj);
+    items[1] = callback(self(8071).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4775).Stack, obj);
+    return closure_4(self(4733).Stack, obj);
   }
   error = self.state.error;
 };

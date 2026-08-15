@@ -2,7 +2,7 @@
 import "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/10906_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12593_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useSelectedParticipant } from "../../useSelectedParticipant.tsx";
 import { ChannelCallNavigatorIcon } from "ChannelCallNavigatorIcon.tsx";
@@ -45,12 +45,12 @@ export const GridButton = function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1236).intl;
       obj[0] = intl.string(channel(1236).t.HK4JIu);
-      obj[1] = tmp(10907);
+      obj[1] = tmp(12594);
       obj[2] = function onPress() {
         return outer1_1(outer1_2[11]).selectParticipant(channel.id, null);
       };
-      tmp4 = jsx(tmp(10792), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-      const tmpResult = tmp(10792);
+      tmp4 = jsx(tmp(12522), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+      const tmpResult = tmp(12522);
     }
   }
   return tmp4;

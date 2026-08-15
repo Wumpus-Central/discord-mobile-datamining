@@ -8,7 +8,7 @@ export default function subscribeToSafeAreaInsets(arg0) {
   if (arg1 === undefined) {
     DEFAULT_APP_ENTRY_KEY = _context.DEFAULT_APP_ENTRY_KEY;
   }
-  return DEFAULT_APP_ENTRY_KEY(1629).subscribe((arg0, arg1) => {
+  return DEFAULT_APP_ENTRY_KEY(1630).subscribe((arg0, arg1) => {
     const safeAreaInsets = arg0.byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets;
     if (safeAreaInsets !== arg1.byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets) {
       callback(safeAreaInsets);

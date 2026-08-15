@@ -12,7 +12,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.c445ix);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate() {
     return useIsMobileVisualRefreshExperimentEnabled("SameAsDeviceThemeSetting");
   },

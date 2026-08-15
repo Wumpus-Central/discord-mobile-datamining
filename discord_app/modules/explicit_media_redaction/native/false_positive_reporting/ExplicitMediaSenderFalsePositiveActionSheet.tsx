@@ -22,28 +22,28 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   React = attachments1.map((filename) => filename.filename);
   obj = {
     onSuccess() {
-      channelId(11134).handleSuccess(outer1_5);
-      const obj = channelId(11134);
-      const result = messageId(11386).disableFalsePositiveButton(channelId, messageId);
+      channelId(10871).handleSuccess(outer1_5);
+      const obj = channelId(10871);
+      const result = messageId(11099).disableFalsePositiveButton(channelId, messageId);
     },
     onError() {
-      return channelId(11134).handleError();
+      return channelId(10871).handleError();
     },
     report() {
-      return channelId(7139).reportFailedSendFalsePositive(channelId, messageId, dependencyMap, noop);
+      return channelId(5027).reportFailedSendFalsePositive(channelId, messageId, dependencyMap, noop);
     }
   };
-  const explicitMediaActions = channelId(11133).useExplicitMediaActions(obj);
+  const explicitMediaActions = channelId(10870).useExplicitMediaActions(obj);
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
   if (stateFromStores.attachments.length <= 0) {
-    messageId(4310).hideActionSheet();
-    const obj4 = messageId(4310);
+    messageId(4342).hideActionSheet();
+    const obj4 = messageId(4342);
   }
   const items1 = [reportFalsePositive];
   const callback = React.useCallback(() => {
     reportFalsePositive();
   }, items1);
   obj = { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: null };
-  obj[4] = channelId(7129).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW;
-  return jsx(channelId(11134).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: null });
+  obj[4] = channelId(5001).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW;
+  return jsx(channelId(10871).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: null });
 };

@@ -8,7 +8,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jf5GGb);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   onPress: function onAccountDisablePress() {
     handleDisableAccount(false);
   }
@@ -18,7 +18,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jf5GGb);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   onPress: function onAccountDisablePress() {
     handleDisableAccount(false);
   }

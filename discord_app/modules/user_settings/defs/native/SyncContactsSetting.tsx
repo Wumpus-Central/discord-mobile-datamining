@@ -13,7 +13,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uSvEy7);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
     const contactSyncAccount = _uploadContacts.useContactSyncAccount();
     const obj = _uploadContacts;
@@ -30,6 +30,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
 
 export default createToggle;

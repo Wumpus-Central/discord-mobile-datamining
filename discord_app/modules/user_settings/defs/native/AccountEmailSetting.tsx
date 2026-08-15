@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
     const items = [mergeGuildAvatar];
     return initialize.useStateFromStores(items, () => {

@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import { UserSettingsPath } from "MAX_FAVORITES";
 import ME from "ME";
-import { keysSorter } from "../../../_runtime/05234_keysSorter.js";
+import { keysSorter } from "../../../_runtime/04376_keysSorter.js";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { WebUserSettings } from "UserSettingsKeys.tsx";
 

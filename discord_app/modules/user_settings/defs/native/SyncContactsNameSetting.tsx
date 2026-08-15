@@ -12,11 +12,11 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.nAsWKy);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl(14170, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(14202, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
@@ -28,11 +28,11 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.nAsWKy);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl(14170, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(14202, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

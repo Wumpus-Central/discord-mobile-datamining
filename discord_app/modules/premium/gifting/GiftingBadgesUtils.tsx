@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
-import { getSingleRequirementThreshold as closure_2 } from "map";
+import { getSingleRequirementThreshold as closure_2 } from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { apexExperiment } from "experiments/GiftingBadgeDesktopExperiment.tsx";
 import { apexExperiment } from "experiments/GiftingBadgeExperiment.tsx";
@@ -78,7 +78,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4164);
+  tmpResult = tmp(4196);
   const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;

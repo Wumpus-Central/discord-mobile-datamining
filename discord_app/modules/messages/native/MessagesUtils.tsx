@@ -137,7 +137,7 @@ function _handleTapNavBar() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -178,7 +178,7 @@ function _handleTapNavBar() {
                     const findMessageIndexResult = findMessageIndex(tmp10Result.castChannelIdAsMessageId(channel.id));
                     if (null == findMessageIndexResult) {
                       c3 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     } else {
                       const obj4 = { animated: null };
                       obj4[0] = !useReducedMotion;
@@ -279,10 +279,10 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       obj[1] = tmp13;
       let str3 = "video";
       if (!obj9.isVideoFile(tmp13.filename)) {
-        let tmp18Result = tmp18(4532);
+        let tmp18Result = tmp18(4811);
         let str4 = "audio";
         if (!tmp18Result.isAudioFile(tmp13.filename)) {
-          tmp18Result = tmp18(4532);
+          tmp18Result = tmp18(4811);
           let str5 = "file";
           if (tmp18Result.isImageFile(tmp13.filename)) {
             str5 = "image";
@@ -455,7 +455,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(8675);
+    tmp36Result = tmp36(10455);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
@@ -464,15 +464,15 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (true === !reaction.me_burst) {
         let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(8676);
+          tmp12Result = tmp12(10456);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7289).ReactionTypes;
+    const ReactionTypes = tmp12(7510).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
-      const result2 = tmp12(4311).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
-      const tmp12Result2 = tmp12(4311);
+      const result2 = tmp12(4343).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
+      const tmp12Result2 = tmp12(4343);
       obj = { channelId: null, messageId: null, emoji: null, location: null, options: null };
       obj[0] = channel.id;
       obj[1] = messageId;
@@ -481,18 +481,18 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7290).removeReaction(obj);
+      tmp12(7511).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7290);
+            const tmp12Result4 = tmp12(7511);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
             if (!flag) {
-              const result3 = tmp12(4311).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
-              const tmp12Result5 = tmp12(4311);
+              const result3 = tmp12(4343).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
+              const tmp12Result5 = tmp12(4343);
             }
           }
         }
@@ -500,14 +500,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(8483).openMemberVerificationModal(guildId1);
+          return tmp12(8522).openMemberVerificationModal(guildId1);
         }
       }
     }
-    tmp12Result1 = tmp12(4000);
+    tmp12Result1 = tmp12(4032);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(8676);
+    const tmp12Result7 = tmp12(10456);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -539,26 +539,26 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   let obj = { postId: id, location };
   const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = tmp4(4549);
+    let tmp4Result = tmp4(5042);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
   }
-  tmp4Result = tmp4(4311);
+  tmp4Result = tmp4(4343);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5817);
+    const tmp4Result1 = tmp4(7167);
     let result2;
     if (true === flag) {
       result2 = tmp9(11).castChannelIdAsMessageId(id);
       const tmp9Result = tmp9(11);
     }
-    tmp4Result1.copy(tmp4(4527).getChannelPermalink(guildId, id, result2));
-    const tmp4Result2 = tmp4(4527);
+    tmp4Result1.copy(tmp4(4979).getChannelPermalink(guildId, id, result2));
+    const tmp4Result2 = tmp4(4979);
   } else {
-    const tmp4Result3 = tmp4(5817);
-    tmp4Result3.copy(tmp4(4527).getChannelLinkToCopy(channel, channel1));
-    const tmp4Result4 = tmp4(4527);
+    const tmp4Result3 = tmp4(7167);
+    tmp4Result3.copy(tmp4(4979).getChannelLinkToCopy(channel, channel1));
+    const tmp4Result4 = tmp4(4979);
   }
   const obj2 = trackForumChannelSeenBatch;
   tmp9 = importDefault;

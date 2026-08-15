@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Ksh3ik);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
     const tmp = useIsMobileVisualRefreshExperimentEnabled("AppearanceThemePickerSetting");
     const items = [handleThemeChange];

@@ -2,7 +2,7 @@
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
-import { keysSorter } from "../../../_runtime/05234_keysSorter.js";
+import { keysSorter } from "../../../_runtime/04376_keysSorter.js";
 import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 let c5;
@@ -19,10 +19,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(8965).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(8965).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };
@@ -31,7 +31,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
   let guild_id;
   let obj = keysSorter;
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
-  const NONE = importAll(3994).NONE;
+  const NONE = importAll(4026).NONE;
   try {
     let str2 = "0";
     if (null != parsed.permissions) {

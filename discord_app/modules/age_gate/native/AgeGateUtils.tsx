@@ -64,9 +64,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
       }
       obj = { guildId: null };
       obj[0] = id;
-      obj2.pushLazy(tmp(2007)(8743, tmp2.paths), obj);
+      obj2.pushLazy(tmp(2007)(9347, tmp2.paths), obj);
       flag2 = true;
-      const tmp12 = tmp(2007)(8743, tmp2.paths);
+      const tmp12 = tmp(2007)(9347, tmp2.paths);
     }
     return flag2;
   } else {
@@ -84,8 +84,8 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
         const tmp9 = getUncachedChannelPermissions.can(Permissions.ADMINISTRATOR, guild) || getUncachedChannelPermissions.can(Permissions.MANAGE_GUILD, guild) || getUncachedChannelPermissions.can(Permissions.KICK_MEMBERS, guild) || getUncachedChannelPermissions.can(Permissions.BAN_MEMBERS, guild);
         let nsfwAllowed = currentUser.nsfwAllowed;
         if (nsfwAllowed) {
-          nsfwAllowed = tmp(8415).getViewNsfwGuildsOrDefault();
-          const tmpResult = tmp(8415);
+          nsfwAllowed = tmp(8454).getViewNsfwGuildsOrDefault();
+          const tmpResult = tmp(8454);
         }
         let tmp11 = !tmp9;
         if (!tmp9) {

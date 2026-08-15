@@ -7,7 +7,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["5bK9vw"]);
   },
-  parent: require("MobileSetting").MobileSetting.CHAT,
+  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
   useValue: require("explicitContentFromProto").RenderEmbeds.useSetting,
   onValueChange: require("explicitContentFromProto").RenderEmbeds.updateSetting
 });
@@ -16,7 +16,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["5bK9vw"]);
   },
-  parent: require("MobileSetting").MobileSetting.CHAT,
+  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
   useValue: require("explicitContentFromProto").RenderEmbeds.useSetting,
   onValueChange: require("explicitContentFromProto").RenderEmbeds.updateSetting
 };

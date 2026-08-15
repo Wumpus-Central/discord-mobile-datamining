@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
 import { jsx } from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/07901_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
 
 let result = require("set").fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");
 

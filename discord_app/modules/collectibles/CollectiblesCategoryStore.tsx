@@ -11,7 +11,7 @@ function updateCategoriesAndProducts(map) {
     const items = [storeListingId.storeListingId, storeListingId];
     return items;
   }));
-  const productsFromCategories = map1(7083).getProductsFromCategories(map, true);
+  const productsFromCategories = map1(5313).getProductsFromCategories(map, true);
   map1 = new Map(productsFromCategories.map((skuId) => {
     const items = [skuId.skuId, skuId];
     return items;
@@ -21,8 +21,8 @@ function updateCategoriesAndProducts(map) {
       const result = map1.set(skuId.skuId, skuId);
     }
   });
-  const obj = map1(7083);
-  const productsFromCategories1 = map1(7083).getProductsFromCategories(map, false);
+  const obj = map1(5313);
+  const productsFromCategories1 = map1(5313).getProductsFromCategories(map, false);
   const map2 = new Map(productsFromCategories1.map((storeListingId) => {
     const items = [storeListingId.storeListingId, storeListingId];
     return items;

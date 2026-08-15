@@ -50,8 +50,8 @@ const memoResult = importAllResult.memo((channel) => {
   if (arr3 == null) {
     arr3 = NO_VOICE_STATES;
   }
-  let tmp2Result = tmp2(5210);
-  const stageParticipantsCount = tmp2Result.useStageParticipantsCount(channel.id, tmp2(5204).StageChannelParticipantNamedIndex.AUDIENCE);
+  let tmp2Result = tmp2(6708);
+  const stageParticipantsCount = tmp2Result.useStageParticipantsCount(channel.id, tmp2(6703).StageChannelParticipantNamedIndex.AUDIENCE);
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
   const items3 = [channel.id];
@@ -72,12 +72,12 @@ const memoResult = importAllResult.memo((channel) => {
     const result = channel(outer1_3[23]).openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = computeChannelName(channel, false);
-  tmp2Result = tmp2(9804);
+  tmp2Result = tmp2(8675);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  let tmp5Result = tmp5(15328);
+  let tmp5Result = tmp5(15378);
   const intl = tmp2(1236).intl;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
@@ -109,7 +109,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj2[0] = channel;
     obj2[1] = selected;
     obj2[2] = collapsed;
-    tmp5Result = tmp5(15437);
+    tmp5Result = tmp5(15487);
     if (!hasMedia) {
       let tmp20 = channel.userLimit > 0;
       if (tmp20) {
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj4[1] = collapsed;
       obj4[2] = arr3;
       obj4[3] = stageParticipantsCount;
-      obj3[1] = tmp12(tmp5(15333), obj4);
+      obj3[1] = tmp12(tmp5(15383), obj4);
       tmp12Result = tmp12(View, obj3);
     }
     obj.children = tmp12Result;

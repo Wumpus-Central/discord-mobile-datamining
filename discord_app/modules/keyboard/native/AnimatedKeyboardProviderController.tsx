@@ -4,14 +4,14 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import mutable from "noop";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import importAllResult from "noop";
-import { KeyboardChatScrollView } from "../../../../_runtime/01642_KeyboardChatScrollView.js";
+import { KeyboardChatScrollView } from "../../../../_runtime/01643_KeyboardChatScrollView.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let c3;
 let obj1;
 const require = arg1;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const mutable1 = module_4083.makeMutable(require("module_4083").KeyboardState.UNKNOWN);
+const mutable1 = module_4115.makeMutable(require("module_4115").KeyboardState.UNKNOWN);
 let closure_6 = { code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}" };
 let closure_7 = { code: "function AnimatedKeyboardProviderControllerTsx2(e){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e.height);}" };
 let closure_8 = { code: "function AnimatedKeyboardProviderControllerTsx3(e){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);}" };
@@ -20,9 +20,9 @@ let closure_9 = require("noop").memo(() => {
   obj = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
-      let OPEN = callback(4083).KeyboardState.CLOSED;
+      let OPEN = callback(4115).KeyboardState.CLOSED;
     } else {
-      OPEN = callback(4083).KeyboardState.OPEN;
+      OPEN = callback(4115).KeyboardState.OPEN;
     }
     const result = store2.set(OPEN);
   };
@@ -40,9 +40,9 @@ let closure_9 = require("noop").memo(() => {
   obj[1] = fn2;
   const fn3 = function e(height) {
     if (0 === height.height) {
-      let OPEN = callback(4083).KeyboardState.CLOSED;
+      let OPEN = callback(4115).KeyboardState.CLOSED;
     } else {
-      OPEN = callback(4083).KeyboardState.OPEN;
+      OPEN = callback(4115).KeyboardState.OPEN;
     }
     const result = store2.set(OPEN);
     const result1 = store.set(height.height);
@@ -64,6 +64,6 @@ let obj = {
   animatedKeyboardHeight: mutable,
   animatedKeyboardState: mutable1
 };
-let result = require("module_4083").fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProviderController.tsx");
+let result = require("module_4115").fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProviderController.tsx");
 
 export default obj;

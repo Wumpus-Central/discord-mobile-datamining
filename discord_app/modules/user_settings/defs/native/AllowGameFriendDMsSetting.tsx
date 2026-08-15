@@ -7,7 +7,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XpBObB);
   },
-  parent: require("MobileSetting").MobileSetting.CONNECTED_GAMES,
+  parent: require("MobileUserSettings").MobileUserSettings.CONNECTED_GAMES,
   useValue: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.useSetting,
   onValueChange: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.updateSetting,
   useSearchTerms() {
@@ -22,7 +22,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XpBObB);
   },
-  parent: require("MobileSetting").MobileSetting.CONNECTED_GAMES,
+  parent: require("MobileUserSettings").MobileUserSettings.CONNECTED_GAMES,
   useValue: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.useSetting,
   onValueChange: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.updateSetting,
   useSearchTerms() {

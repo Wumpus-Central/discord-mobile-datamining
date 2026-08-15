@@ -5,7 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
+import { trimTrailingPunctuation } from "../coded_links/findCodedLinks.tsx";
 import { MAX_THUMBNAIL_COUNT } from "MediaPostThumbnailUtils.tsx";
 
 let closure_6;
@@ -121,7 +121,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[13] = name;
     let channelName;
     if (null != parentChannel) {
-      tmp17Result = tmp17(4535);
+      tmp17Result = tmp17(4984);
       channelName = tmp17Result.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
     }
     obj[14] = channelName;
@@ -136,16 +136,16 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
 export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(url) {
   let tryParseChannelPathResult;
   if (null != url) {
-    const parseURLSafelyResult = getPathsFromURL.parseURLSafely(url);
+    const parseURLSafelyResult = trimTrailingPunctuation.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmp2Result = tmp2(4326);
+      let tmp2Result = tmp2(4358);
       const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmp2Result = tmp2(4536);
+        tmp2Result = tmp2(4488);
         tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
       }
     }
-    const obj = getPathsFromURL;
+    const obj = trimTrailingPunctuation;
   }
   if (null != tryParseChannelPathResult) {
     let channelId = tryParseChannelPathResult.threadId;
@@ -159,16 +159,16 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
 };
 export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPath(url) {
   if (null != url) {
-    const parseURLSafelyResult = getPathsFromURL.parseURLSafely(url);
+    const parseURLSafelyResult = trimTrailingPunctuation.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmpResult = tmp(4326);
+      let tmpResult = tmp(4358);
       const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmpResult = tmp(4536);
+        tmpResult = tmp(4488);
         return tmpResult.tryParseChannelPath(result);
       }
     }
-    const obj = getPathsFromURL;
+    const obj = trimTrailingPunctuation;
   }
 };
 export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {

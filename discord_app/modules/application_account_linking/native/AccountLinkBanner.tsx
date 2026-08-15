@@ -60,7 +60,7 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = callback(closure_4, obj6);
     obj3[1] = items3;
     items2[1] = callback2(closure_4, obj3);
-    const obj7 = { user: null, size: null, guildId: "r" };
+    const obj7 = { user: null, size: null, guildId: "Array" };
     obj7[0] = stateFromStores;
     obj7[1] = tmp2(tmp3[17]).AvatarSizes.LARGE_48;
     items2[2] = callback(tmp2(tmp3[17]).Avatar, obj7);
@@ -237,17 +237,17 @@ export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBan
     return 0;
   } else if (bannerSize === apexExperiment.MobileAccountLinkingBannerSize.LARGE) {
     const sum = PX_8 + PX_12 + closure_16 + PX_16;
-    let tmp3Result = tmp3(9515);
+    let tmp3Result = tmp3(9288);
     const sum1 = sum + tmp3Result.scaleTextLineHeight(c17, fontScale) + PX_4;
-    tmp3Result = tmp3(9515);
+    tmp3Result = tmp3(9288);
     const sum2 = sum1 + 2 * tmp3Result.scaleTextLineHeight(c18, fontScale) + PX_162;
-    sum3 = sum2 + tmp3(4781).MEDIUM_BUTTON_HEIGHT + PX_12;
+    sum3 = sum2 + tmp3(4749).MEDIUM_BUTTON_HEIGHT + PX_12;
     let num = sum3 + PX_82;
   } else {
     num = 0;
-    if (bannerSize === tmp3(15406).MobileAccountLinkingBannerSize.MEDIUM) {
+    if (bannerSize === tmp3(15456).MobileAccountLinkingBannerSize.MEDIUM) {
       const sum4 = PX_8 + PX_12 + 48 + PX_122;
-      num = sum4 + tmp3(4781).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
+      num = sum4 + tmp3(4749).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
     }
   }
 };

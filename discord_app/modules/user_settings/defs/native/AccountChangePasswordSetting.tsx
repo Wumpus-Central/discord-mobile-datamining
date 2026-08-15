@@ -8,7 +8,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["CIGa+7"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   screen: obj
 };
 obj = {

@@ -44,7 +44,7 @@ let closure_2 = require("set")((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ let closure_2 = require("set")((arg0) => {
           return obj;
         }
         table = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         table = tmp;
         throw tmp9;

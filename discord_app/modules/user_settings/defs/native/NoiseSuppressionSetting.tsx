@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.t8Qhib);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     const items = [_detectH265HardwareDecode];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());

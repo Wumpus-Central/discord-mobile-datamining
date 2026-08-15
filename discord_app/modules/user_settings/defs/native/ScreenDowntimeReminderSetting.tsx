@@ -18,7 +18,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.TummoQ);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [DesktopNotificationTypes];
     return initialize.useStateFromStores(items, () => obj.screenDowntimeReminder);

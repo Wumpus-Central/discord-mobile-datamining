@@ -41,9 +41,9 @@ function ContentTimestamp(entry) {
   } else {
     obj = { variant: "text-sm/medium", style: null, children: null };
     obj[1] = tmp.text;
-    obj[2] = tmp2(8307).formatEndedTimestamp(entry, tmp6);
-    tmp7Result = tmp7(tmp2(4338).Text, obj);
-    const tmp2Result = tmp2(8307);
+    obj[2] = tmp2(8348).formatEndedTimestamp(entry, tmp6);
+    tmp7Result = tmp7(tmp2(4734).Text, obj);
+    const tmp2Result = tmp2(8348);
   }
   return tmp7Result;
 }
@@ -80,7 +80,7 @@ export const GameTimestampBadge = function GameTimestampBadge(entry) {
   const isEntryActiveResult = obj.isEntryActive(entry);
   const tmp2 = require;
   obj = { style: tmp.icon, color: obj.isEntryActive(entry) ? colors.STATUS_POSITIVE : colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
-  const items = [callback(tmp2(8825).GameControllerIcon, obj), callback(ContentTimestamp, { entry })];
+  const items = [callback(tmp2(9430).GameControllerIcon, obj), callback(ContentTimestamp, { entry })];
   obj[1] = items;
   return callback2(View, obj);
 };
@@ -88,15 +88,15 @@ export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
   let obj = calculateTimestampDurations;
   if (obj.isEntryMarathon(entry)) {
-    let tmpResult = tmp(8307);
+    let tmpResult = tmp(8348);
     const colors = Themes.colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
-    tmpResult = tmp(8307);
+    tmpResult = tmp(8348);
     const text = tmpResult.getMarathonDescription(entry).text;
     let tmp7 = null;
     if (null != text) {
       obj = { Icon: null, iconColor: null, text: null };
-      obj[0] = tmp(11059).TimerIcon;
+      obj[0] = tmp(10793).TimerIcon;
       obj[1] = tmp6;
       obj[2] = text;
       tmp7 = callback(BaseBadge, obj);
@@ -111,7 +111,7 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(12371).NewUserIcon;
+    obj[0] = tmp(12106).NewUserIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.keY6mW);
     obj[2] = Themes.colors.STATUS_POSITIVE;
@@ -127,7 +127,7 @@ export const StreakBadge = function StreakBadge(entry) {
     tmp4 = null;
     if (streakCount >= 2) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(12373).FlashIcon;
+      obj[0] = tmp(12108).FlashIcon;
       const intl = tmp(1236).intl;
       obj = { days: null };
       obj[0] = streakCount;
@@ -144,9 +144,9 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(12375).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== tmp(12110).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(12290).FireIcon;
+      obj[0] = tmp(9526).FireIcon;
       const intl = tmp(1236).intl;
       obj[1] = intl.string(tmp(1236).t.TsWCdW);
       obj[2] = Themes.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -160,7 +160,7 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(9917).RetryIcon;
+    obj[0] = tmp(10123).RetryIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.adnLsB);
     obj[2] = Themes.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -175,7 +175,7 @@ export const TopGameBadge = function TopGameBadge(entry) {
     return null;
   } else {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(7792).TrophyIcon;
+    obj[0] = tmp(8010).TrophyIcon;
     obj = { children: null };
     const intl = tmp(1236).intl;
     const items = [intl.string(tmp(1236).t["/50eHi"]), ": ", ];

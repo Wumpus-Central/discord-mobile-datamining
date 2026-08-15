@@ -2,12 +2,12 @@
 import set from "set";
 import get_ActivityIndicator from "createToggle";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "combined";
-import { LegacyBaseButton } from "../../../../../_runtime/05488_LegacyBaseButton.js";
+import { LegacyBaseButton } from "../../../../../_runtime/06377_LegacyBaseButton.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -25,9 +25,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10855);
+    let tmp2Result = tmp2(12562);
   } else {
-    tmp2Result = tmp2(10856);
+    tmp2Result = tmp2(12563);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -58,7 +58,7 @@ function SystemProcessingSubLabel() {
       const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
     };
     obj[1] = intl.format(tmp(1236).t.EUNgko, obj);
-    tmp3 = callback(tmp(4338).Text, obj);
+    tmp3 = callback(tmp(4734).Text, obj);
   }
   return tmp3;
 }
@@ -70,7 +70,7 @@ let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10421);
+    let obj = callback(10669);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;

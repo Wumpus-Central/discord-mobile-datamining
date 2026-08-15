@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.OAOUoQ);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
     return useMessagePreview.useMessagePreviewSetting();
   },
@@ -24,17 +24,17 @@ createToggle = {
       let obj = { label: null, value: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t["8K53DF"]);
-      obj[1] = callback(4039).MessagePreviewTypes.ALL;
+      obj[1] = callback(4071).MessagePreviewTypes.ALL;
       const items = [obj, , ];
       obj = { label: null, value: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t.Gw11zg);
-      obj[1] = callback(4039).MessagePreviewTypes.UNREADS;
+      obj[1] = callback(4071).MessagePreviewTypes.UNREADS;
       items[1] = obj;
       obj = { label: null, value: null };
       const intl3 = callback(1236).intl;
       obj[0] = intl3.string(callback(1236).t.R2Ok7F);
-      obj[1] = callback(4039).MessagePreviewTypes.NONE;
+      obj[1] = callback(4071).MessagePreviewTypes.NONE;
       items[2] = obj;
       return items;
     }, []);

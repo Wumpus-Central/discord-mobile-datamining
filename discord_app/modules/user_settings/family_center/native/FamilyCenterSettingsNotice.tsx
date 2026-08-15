@@ -9,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(7403);
+  let obj = activeLinkUserIds(7621);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { label: null, noticeType: null, labelHook: null, count: null };
   obj[0] = messagesProxy.i284fU;

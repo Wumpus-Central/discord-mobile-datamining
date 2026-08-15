@@ -4,18 +4,18 @@ const result = require("VoiceLockIcon").fileFinishedImporting("modules/guild_rol
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {
   if (set.ChannelTypes.GUILD_TEXT === type) {
-    return tmp(4870).TextLockIcon;
+    return tmp(6874).TextLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_VOICE === type) {
-    return tmp(4889).VoiceLockIcon;
+    return tmp(6893).VoiceLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_STAGE_VOICE === type) {
-    return tmp(4887).StageLockIcon;
+    return tmp(6891).StageLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_FORUM === type) {
-    return tmp(4877).ForumLockIcon;
+    return tmp(6881).ForumLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_MEDIA === type) {
-    return tmp(4876).ImageLockIcon;
+    return tmp(6880).ImageLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_ANNOUNCEMENT === type) {
-    return tmp(4884).AnnouncementsLockIcon;
+    return tmp(6888).AnnouncementsLockIcon;
   } else {
-    return tmp(4870).TextLockIcon;
+    return tmp(6874).TextLockIcon;
   }
 };

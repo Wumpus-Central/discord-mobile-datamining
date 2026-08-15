@@ -23,8 +23,8 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: null, threadName: null, threadOnClick: null };
   obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (null != channel) {
-    let content = tmp(4535).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
-    const tmpResult = tmp(4535);
+    let content = tmp(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+    const tmpResult = tmp(4984);
   } else {
     content = message.content;
   }

@@ -23,7 +23,7 @@ import importDefaultResult3 from "DEFAULT_FRECENCY";
 import { PersistedStore } from "initialize";
 import set from "getHash";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03943_t.js";
+import { t } from "../../../_runtime/03975_t.js";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
 import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
@@ -76,7 +76,7 @@ function _loadSavedEmojis() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -167,7 +167,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = callback(5277);
+      let obj = callback(6766);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -313,7 +313,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    const obj = callback(3980);
+    const obj = callback(4012);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       let c33 = null;
@@ -376,7 +376,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5242).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(6732).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -385,7 +385,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        const obj = callback(5242);
+        const obj = callback(6732);
       }
       tmp6 = someResult;
     }
@@ -1146,7 +1146,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   let closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(4330).escape(formatted);
+  const escapeResult = formatted(4362).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;

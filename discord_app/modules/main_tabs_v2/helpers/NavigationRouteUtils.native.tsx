@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import set from "getRootNavigationRef";
-import { createStandardNavigationFactories } from "../../../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 import { CREATE_THREAD_SCREEN_KEY } from "../Types.tsx";
@@ -261,7 +261,7 @@ export const navigateToChannel = function navigateToChannel(channelId) {
         if (null != tmp5) {
           if (tmp5.params.channelId === channelId) {
             const obj3 = {};
-            const CommonActions = tmp(1500).CommonActions;
+            const CommonActions = tmp(1501).CommonActions;
             const obj4 = { channelId: null, guildId: null, messageId: null };
             obj4[0] = channelId;
             obj4[1] = guildId;
@@ -304,7 +304,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   let forceNavigate;
   let guildId;
   let screen;
-  let obj = icymiScreen(4198);
+  let obj = icymiScreen(4230);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -328,7 +328,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
             obj[1] = channelId;
             obj[2] = drawerOpen.drawerOpen;
             obj[1] = obj;
-            let tmpResult = tmp(4198);
+            let tmpResult = tmp(4230);
             const rootNavigationRef1 = tmpResult.getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
@@ -336,7 +336,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   const rootState = rootNavigationRef1.getRootState();
                   const routes = rootState.routes;
                   const found = routes.filter((name) => "modal" === name.name);
-                  tmpResult = tmp(4199);
+                  tmpResult = tmp(4231);
                   const obj1 = { name: "tabs", key: null, params: null };
                   const _HermesInternal = HermesInternal;
                   obj1[1] = "tabs-" + tmp(514).v4();
@@ -344,7 +344,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   const items = [obj1];
                   const items1 = [];
                   HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmpResult.wrapRouteForRootNavigator(items), 0));
-                  let CommonActions = tmp(1500).CommonActions;
+                  let CommonActions = tmp(1501).CommonActions;
                   const obj2 = {};
                   const merged = Object.assign(rootState);
                   obj2.routes = items1;
@@ -396,8 +396,8 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   let flag = !tmp;
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
-      const CommonActions = callback(1500).CommonActions;
-      return CommonActions.reset(callback(4199).getInitialAuthState());
+      const CommonActions = callback(1501).CommonActions;
+      return CommonActions.reset(callback(4231).getInitialAuthState());
     });
     flag = true;
   }
@@ -417,10 +417,10 @@ export const pushModal = function pushModal(arg0) {
   }
   let flag = !tmp4;
   if (!tmp4) {
-    tmp(4205).dismissKeyboard();
+    tmp(4237).dismissKeyboard();
     rootNavigationRef.navigate("modal", arg0);
     flag = true;
-    const tmpResult = tmp(4205);
+    const tmpResult = tmp(4237);
   }
   return flag;
 };

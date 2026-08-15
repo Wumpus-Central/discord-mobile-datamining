@@ -36,7 +36,7 @@ export default function ConnectGuardianModal(route) {
   let dependencyMap;
   onComplete = route.route.params.onComplete;
   const tmp = createCacheKey();
-  let obj = onComplete(16615);
+  let obj = onComplete(16667);
   connectGuardianGate = obj.useConnectGuardianGate();
   dependencyMap = React.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
@@ -61,7 +61,7 @@ export default function ConnectGuardianModal(route) {
     const items1 = [, ];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
     obj[0] = items1;
-    obj[1] = callback(tmp4(5884).ActivityIndicator, {});
+    obj[1] = callback(tmp4(5446).ActivityIndicator, {});
     let tmp9 = callback(View, obj);
   } else {
     obj = { style: null, children: null };
@@ -71,13 +71,13 @@ export default function ConnectGuardianModal(route) {
     const obj2 = { style: null, variant: "heading-xl/bold", color: "text-default", children: null };
     obj2[0] = tmp.title;
     const intl = tmp4(1236).intl;
-    obj2[3] = intl.string(tmp2(2303).ITlV6p);
-    const items2 = [callback(tmp4(4338).Text, obj2), ];
+    obj2[3] = intl.string(tmp2(2335).ITlV6p);
+    const items2 = [callback(tmp4(4734).Text, obj2), ];
     const obj3 = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
     obj3[0] = tmp.description;
     const intl2 = tmp4(1236).intl;
-    obj3[3] = intl2.format(tmp2(2303).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = callback(tmp4(4338).Text, obj3);
+    obj3[3] = intl2.format(tmp2(2335).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+    items2[1] = callback(tmp4(4734).Text, obj3);
     obj1[1] = items2;
     const items3 = [callback2(View, obj1), , , ];
     const obj4 = { style: null, children: null };
@@ -85,10 +85,10 @@ export default function ConnectGuardianModal(route) {
     const obj5 = { style: null, variant: "text-md/semibold", color: "text-default", children: null };
     obj5[0] = tmp.scanPrompt;
     const intl3 = tmp4(1236).intl;
-    obj5[3] = intl3.string(tmp2(2303).Mi60fm);
-    const items4 = [callback(tmp4(4338).Text, obj5), ];
+    obj5[3] = intl3.string(tmp2(2335).Mi60fm);
+    const items4 = [callback(tmp4(4734).Text, obj5), ];
     ({ linkCode: obj9[1], expiresAt: obj9[2], refresh: obj9[3] } = connectGuardianGate);
-    items4[1] = callback(tmp4(14206).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = callback(tmp4(14238).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj4[1] = items4;
     items3[1] = callback2(View, obj4);
     const obj7 = { style: null };
@@ -97,7 +97,7 @@ export default function ConnectGuardianModal(route) {
     const obj8 = { style: null, children: null };
     const items5 = [tmp.footer, ];
     const obj9 = { paddingBottom: null };
-    obj9[0] = connectGuardianGate(1628)().bottom + tmp2(712).space.PX_16;
+    obj9[0] = connectGuardianGate(1629)().bottom + tmp2(712).space.PX_16;
     items5[1] = obj9;
     obj8[0] = items5;
     const obj10 = { variant: "primary", size: "lg", text: null, onPress: null };
@@ -110,7 +110,7 @@ export default function ConnectGuardianModal(route) {
       }
       return tmpResult;
     };
-    obj8[1] = callback(tmp4(4777).Button, obj10);
+    obj8[1] = callback(tmp4(4745).Button, obj10);
     items3[3] = callback(View, obj8);
     obj[1] = items3;
     tmp9 = callback2(View, obj);

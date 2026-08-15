@@ -29,7 +29,7 @@ function FamilyCenterActivityBannerButton() {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    let tmp7Result = tmp2(14201);
+    let tmp7Result = tmp2(14233);
     tmp7Result = tmp7(tmp5 ? tmp7Result.FamilyCenterParentQRCodeButton : tmp7Result.FamilyCenterTeenQRCodeButton, {});
     obj[1] = tmp7Result;
     tmp7Result = tmp7(closure_3, obj);
@@ -68,7 +68,7 @@ export default function FamilyCenterActivityBanner() {
   obj = { style: tmp4.container, children: null };
   obj = { source: null, style: null };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(messagesProxy.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(messagesProxy.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj[0] = tmp(tmp3 ? 14208 : 14209);
+  obj[0] = tmp(tmp3 ? 14240 : 14241);
   obj[1] = tmp4.art;
   const items = [closure_5(closure_4, obj), , , ];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };

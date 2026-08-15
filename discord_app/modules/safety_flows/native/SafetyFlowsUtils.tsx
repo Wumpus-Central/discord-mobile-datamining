@@ -2,7 +2,7 @@
 import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { registerAsset } from "../../../../_runtime/09933_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08764_registerAsset.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
@@ -61,7 +61,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
-      if (task_type === tmp14(17038).TaskType.EMAIL_VERIFICATION) {
+      if (task_type === tmp14(17084).TaskType.EMAIL_VERIFICATION) {
         const currentUser = authStore.getCurrentUser();
         let email;
         if (currentUser != null) {
@@ -69,7 +69,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
         }
         tmp = tmp16;
         if (null != email) {
-          const items = [tmp14(17038).SafetyFlowScreens.VERIFY_EMAIL];
+          const items = [tmp14(17084).SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
         }
       }
@@ -78,7 +78,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     if (null != tmp5) {
       closure_1.push(tmp5[0]);
     } else {
-      closure_1.push(tmp14(17038).SafetyFlowScreens.UPDATE_APP);
+      closure_1.push(tmp14(17084).SafetyFlowScreens.UPDATE_APP);
     }
   }
 }
@@ -89,7 +89,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;
-    if (task_type === tmp(17038).TaskType.EMAIL_VERIFICATION) {
+    if (task_type === tmp(17084).TaskType.EMAIL_VERIFICATION) {
       const currentUser = authStore.getCurrentUser();
       let email;
       if (currentUser != null) {
@@ -97,7 +97,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
       }
       tmp5 = tmp3;
       if (null != email) {
-        const items = [tmp(17038).SafetyFlowScreens.VERIFY_EMAIL];
+        const items = [tmp(17084).SafetyFlowScreens.VERIFY_EMAIL];
         tmp5 = items;
       }
     }
@@ -131,7 +131,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
             callback = arg1;
             outer2_8(callback, callback);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp15) {
           c4 = tmp;

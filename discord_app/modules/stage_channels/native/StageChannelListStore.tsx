@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import identity from "identity";
-import { isIterable } from "../../../../_runtime/03974_isIterable.js";
+import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 
 const require = arg1;
 let closure_4 = identity.createWithEqualityFn((arg0) => {
@@ -27,7 +27,7 @@ export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillSc
     const items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, first(3974).shallow), 2);
+  }, first(4006).shallow), 2);
   first = tmp[0];
   const dependencyMap = tmp3;
   let items = [tmp[1]];

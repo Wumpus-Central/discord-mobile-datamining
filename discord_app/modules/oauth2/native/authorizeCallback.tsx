@@ -29,19 +29,19 @@ export default function authorizeCallback(arg0) {
     }
     ({ host, pathname, searchParams } = toURLSafeResult);
     if (null != host) {
-      let tmp8Result = tmp8(1486);
+      let tmp8Result = tmp8(1487);
       if (tmp8Result.isDiscordHostname(host)) {
         if (null != pathname) {
           if (null != pathname.match(closure_5)) {
-            tmp8Result = tmp8(4572);
+            tmp8Result = tmp8(5260);
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl(10613, tmp9.paths), obj, closure_3);
+            tmp8Result.pushLazy(asyncRequireImpl(12427, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
-              const tmp8Result1 = tmp8(4572);
+              const tmp8Result1 = tmp8(5260);
               if (searchParams != null) {
                 str = "error_description";
                 const str2 = searchParams.get("error_description");
@@ -61,8 +61,8 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl(10499, tmp9.paths), obj, closure_4);
-              const tmp17 = asyncRequireImpl(10499, tmp9.paths);
+              tmp8Result1.pushLazy(asyncRequireImpl(9776, tmp9.paths), obj, closure_4);
+              const tmp17 = asyncRequireImpl(9776, tmp9.paths);
             }
           }
         }
@@ -82,6 +82,6 @@ export default function authorizeCallback(arg0) {
     const tmp8Result2 = Linking;
   } else if (!canceled) {
     obj = ModalActionCreators;
-    obj.pushLazy(asyncRequireImpl(10499, dependencyMap.paths), undefined, closure_4);
+    obj.pushLazy(asyncRequireImpl(9776, dependencyMap.paths), undefined, closure_4);
   }
 };

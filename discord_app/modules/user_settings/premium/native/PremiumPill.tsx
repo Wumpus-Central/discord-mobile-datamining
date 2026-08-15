@@ -59,14 +59,16 @@ export const PremiumPill = (discountOffer) => {
   const tmp6 = callback(tmp5);
   const items = [trialOffer];
   const memo = premiumType.useMemo(() => {
-    let str;
+    let expiresAt;
     if (trialOffer != null) {
-      str = trialOffer.expires_at;
+      expiresAt = tmp.expiresAt;
     }
-    if (str == null) {
-      str = "";
+    let num = NaN;
+    if (null != expiresAt) {
+      expiresAt = tmp.expiresAt;
+      num = expiresAt.getTime();
     }
-    return Date.parse(str);
+    return num;
   }, items);
   const tmp8 = flag(flag2[6])(memo, 60000);
   callback = tmp8;

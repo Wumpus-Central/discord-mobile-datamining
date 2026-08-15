@@ -36,7 +36,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     tmp6 = id;
   }
   muteDeafenIconState = _isStableVoiceStateEqual.useMuteDeafenIconState(tmp6, guildId);
-  let tmp4Result = tmp4(9243);
+  let tmp4Result = tmp4(9678);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
     tmp8 = id;
@@ -59,14 +59,14 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     return voicePlatformForChannel;
   }, items2);
   let tmp13;
-  let tmp2Result = tmp2(10890);
+  let tmp2Result = tmp2(12135);
   if (arg0 === stateFromStores.STREAM) {
     tmp13 = id;
   }
-  tmp2Result = tmp2(10839);
+  tmp2Result = tmp2(12136);
   showTileVolumeIndicator = tmp2Result.useConfig({ location: "useVoicePanelCardUserStateIcons" }).showTileVolumeIndicator;
   if (showTileVolumeIndicator) {
-    showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4441).MediaEngineContextTypes.STREAM).effectiveVolume;
+    showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4569).MediaEngineContextTypes.STREAM).effectiveVolume;
   }
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
@@ -84,7 +84,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
       icon() {
         const obj = { size: "xs", color: null };
         obj[1] = callback2(712).colors.STATUS_WARNING;
-        return callback3(callback(7859).CircleErrorIcon, obj);
+        return callback3(callback(8074).CircleErrorIcon, obj);
       },
       content: null
     };

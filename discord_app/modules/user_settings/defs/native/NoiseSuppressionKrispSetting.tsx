@@ -12,7 +12,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.t8Qhib);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue() {
     return handleAutomaticGainControlChange.useSelectedNoiseSuppressionOption();
   },

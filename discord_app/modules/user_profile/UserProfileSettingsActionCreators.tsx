@@ -2,7 +2,7 @@
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
-import { isEqual } from "../../../_runtime/04504_isEqual.js";
+import { isEqual } from "../../../_runtime/04632_isEqual.js";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
 

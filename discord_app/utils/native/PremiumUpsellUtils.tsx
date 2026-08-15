@@ -4,12 +4,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
-import { registerAsset } from "../../../_runtime/08433_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08434_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08435_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08436_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08437_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08438_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08472_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08473_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08474_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08475_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08476_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08477_registerAsset.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 
@@ -34,14 +34,14 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
   }
   let tmp4 = hasItem;
   if (hasItem) {
-    let sku_id;
+    let skuId;
     if (premiumTrialOffer != null) {
-      let subscription_trial = premiumTrialOffer.subscription_trial;
-      if (subscription_trial != null) {
-        sku_id = subscription_trial.sku_id;
+      let subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+      if (subscriptionTrial != null) {
+        skuId = subscriptionTrial.skuId;
       }
     }
-    tmp4 = sku_id === TIER_0.TIER_0;
+    tmp4 = skuId === TIER_0.TIER_0;
   }
   let closure_5 = tmp4;
   const items1 = [initialUpsellKey, tmp4];
@@ -105,17 +105,17 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
     onViewAllPerks: callback,
     getNitroText: premiumTrialOffer.useMemo(() => {
       if (hasItem) {
-        let sku_id;
+        let skuId;
         if (premiumTrialOffer != null) {
-          const subscription_trial = premiumTrialOffer.subscription_trial;
-          if (subscription_trial != null) {
-            sku_id = subscription_trial.sku_id;
+          const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+          if (subscriptionTrial != null) {
+            skuId = subscriptionTrial.skuId;
           }
         }
-        if (outer1_8.TIER_0 === sku_id) {
+        if (outer1_8.TIER_0 === skuId) {
           const intl4 = initialUpsellKey(analyticsLocation[6]).intl;
           return intl4.string(initialUpsellKey(analyticsLocation[6]).t.hz78hE);
-        } else if (tmp8.TIER_2 === sku_id) {
+        } else if (tmp8.TIER_2 === skuId) {
           const intl3 = initialUpsellKey(analyticsLocation[6]).intl;
           return intl3.string(initialUpsellKey(analyticsLocation[6]).t["Gd/XHF"]);
         }

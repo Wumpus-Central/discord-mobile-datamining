@@ -2,7 +2,7 @@
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
-import importDefaultResult from "module_4083";
+import importDefaultResult from "module_4115";
 import { useAccessibilityViewIsModalToggle } from "useAccessibilityViewIsModalToggle.native.tsx";
 
 const forwardRefResult = require("noop").forwardRef((accessibilityViewIsModal, ref) => {
@@ -33,7 +33,7 @@ const forwardRefResult = require("noop").forwardRef((accessibilityViewIsModal, r
   const merged1 = Object.assign(merged);
   return <View ref={arg1} nativeID={nativeID} collapsable={null} onAccessibilityEscape={null} accessibilityViewIsModal={null} />;
 });
-const animatedComponent = require("module_4083").createAnimatedComponent(forwardRefResult);
+const animatedComponent = require("module_4115").createAnimatedComponent(forwardRefResult);
 const result = require("jsxProd").fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 
 export const AccessibilityView = forwardRefResult;

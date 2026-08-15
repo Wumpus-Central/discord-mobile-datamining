@@ -12,7 +12,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.cDgKte);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
     currentUser = currentUser.getCurrentUser();
     let verified;

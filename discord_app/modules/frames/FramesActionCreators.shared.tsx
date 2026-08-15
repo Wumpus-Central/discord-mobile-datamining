@@ -34,7 +34,7 @@ function _launchFrame() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(10589);
+                  let obj9 = callback(8711);
                   const result = obj9.leaveCurrentEmbeddedActivity();
                   callback6();
                 }
@@ -102,15 +102,15 @@ function _launchFrame() {
                 c5 = 4;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = callback(10604).createProxyTicket(callback, callback3(callback2));
+                obj5[0] = callback(8701).createProxyTicket(callback, callback3(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
             callback3 = intent;
-            c5 = callback2(10590)();
-            let obj7 = callback(10602);
+            c5 = callback2(8712)();
+            let obj7 = callback(8725);
             c5 = 3;
             c6 = 1;
             const obj6 = { value: null, done: false };
@@ -244,7 +244,7 @@ function _refreshProxyTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -296,8 +296,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = dispatcher;
-            dispatcher = applicationId(10590)();
-            let obj8 = callback(10602);
+            dispatcher = applicationId(8712)();
+            let obj8 = callback(8725);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

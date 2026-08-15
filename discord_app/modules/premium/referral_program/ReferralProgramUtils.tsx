@@ -13,8 +13,8 @@ import { useIsEligibleSenderForReferralProgram } from "hooks/useIsEligibleSender
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
-export const getReferralTrialOfferExpirationCopy = function getReferralTrialOfferExpirationCopy(arg0) {
-  const diff = arg0 - Date.now();
+export const getReferralTrialOfferExpirationCopy = function getReferralTrialOfferExpirationCopy(time) {
+  const diff = time - Date.now();
   const result = diff / set.Millis.HOUR;
   if (result > 24) {
     const intl3 = getSystemLocale.intl;
@@ -54,13 +54,14 @@ export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBa
   if (null == trialOffer) {
     return false;
   } else {
-    let tmp = undefined !== trialOffer.referrer_id;
+    let tmp = null != trialOffer.referrerId;
     const _Date = Date;
+    const tmp2 = !trialOffer.isRedeemed();
     const date = new Date(DISCORD_EPOCH.extractTimestamp(trialOffer.id));
     const _Date2 = Date;
     const date1 = new Date();
     if (tmp) {
-      tmp = undefined === trialOffer.redeemed_at;
+      tmp = tmp2;
     }
     if (tmp) {
       tmp = date1 >= date;
@@ -94,12 +95,12 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      let tmpResult = tmp(4164);
+      let tmpResult = tmp(4196);
       tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
     }
     let tmp6 = tmp8;
   } else {
-    tmpResult = tmp(4164);
+    tmpResult = tmp(4196);
     tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
   if (isEligibleSenderForReferralProgram) {

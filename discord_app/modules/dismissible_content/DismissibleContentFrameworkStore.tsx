@@ -1,14 +1,17 @@
 // discord_app/modules/dismissible_content/DismissibleContentFrameworkStore.tsx
 import { AnalyticEvents } from "ME";
 import { PersistedStore } from "initialize";
-import set from "isSingleUseDismissibleContent";
+import set from "set";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { set } from "DismissibleContentFatigueConfig.tsx";
 import { isSingleUseDismissibleContent } from "DismissibleContentTypes.tsx";
 
+let c4 = new require("isSingleUseDismissibleContent")("DCF");
+let c5 = false;
 let obj = { numberOfDCsShownToday: 0, dailyCapPeriodStart: null, dismissibleContentSeenDuringSession: null, dailyCapOverridden: false, newUserMinAgeRequiredOverridden: false, renderedAtTimestamps: null, lastDismissed: null, seenForGuildId: null };
 let set = new Set();
 obj[2] = set;
+const tmp2 = new require("isSingleUseDismissibleContent")("DCF");
 obj[5] = new Map();
 let map = new Map();
 obj[7] = new Map();
@@ -75,7 +78,7 @@ prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, clo
   if (null != PASSWORDLESS_UPSELL) {
     let result = null != closure_1;
     if (result) {
-      const obj = isSingleUseDismissibleContent;
+      let obj = isSingleUseDismissibleContent;
       result = obj.isGuildDismissibleContent(PASSWORDLESS_UPSELL);
     }
     if (result) {
@@ -104,6 +107,17 @@ prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, clo
   if (tmp12) {
     obj.numberOfDCsShownToday = 0;
     obj.dailyCapPeriodStart = null;
+    let c5 = false;
+  }
+  let tmp17 = tmp16;
+  if (obj.numberOfDCsShownToday >= 3) {
+    tmp17 = !c5;
+  }
+  if (tmp17) {
+    c5 = true;
+    obj = { shown_dcs: null };
+    obj[0] = obj.numberOfDCsShownToday;
+    tmp2.info("Daily cap in effect, suppressing fatigable content until tomorrow", obj);
   }
   return obj.numberOfDCsShownToday >= 3;
 };
@@ -118,6 +132,7 @@ const items = [
 DismissibleContentFrameworkStore.migrations = items;
 obj = {
   LOGOUT: function handleLogout() {
+    let c5 = false;
     const obj = {};
     const merged = Object.assign(obj);
     obj.dismissibleContentSeenDuringSession = new Set();
@@ -141,7 +156,7 @@ obj = {
     const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(dismissibleContent)) {
       if (!obj.dailyCapOverridden) {
-        let result1 = isSingleUseDismissibleContent.isGuildDismissibleContent(dismissibleContent);
+        let result1 = tmp2(1378).isGuildDismissibleContent(dismissibleContent);
         if (result1) {
           result1 = null != guildId;
         }
@@ -168,12 +183,18 @@ obj = {
               obj.dailyCapPeriodStart = date1.getTime();
             }
             obj.numberOfDCsShownToday = obj.numberOfDCsShownToday + 1;
+            if (3 === obj.numberOfDCsShownToday) {
+              obj = { dismissible_content: null, shown_dcs: null };
+              obj[0] = dismissibleContent;
+              obj[1] = obj.numberOfDCsShownToday;
+              tmp2.info("Daily cap reached", obj);
+            }
             if (obj.numberOfDCsShownToday > 3) {
               obj = { cap_type: "daily_cap", dismissible_content: null, shown_dcs: null };
               obj[1] = dismissibleContent;
               obj[2] = obj.numberOfDCsShownToday;
               expandEventProperties.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
-              const obj6 = expandEventProperties;
+              const obj7 = expandEventProperties;
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
@@ -183,7 +204,7 @@ obj = {
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
         }
-        const tmp2Result = isSingleUseDismissibleContent;
+        const tmp2Result = tmp2(1378);
       }
     }
   },
@@ -205,6 +226,7 @@ obj = {
     obj.lastDismissed = tmp3;
   },
   DCF_RESET: function resetStore() {
+    let c5 = false;
     obj.dailyCapPeriodStart = null;
     obj.numberOfDCsShownToday = 0;
     obj.dismissibleContentSeenDuringSession = new Set();

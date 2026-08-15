@@ -5,7 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12129_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11866_registerAsset.js";
 import { ContactSyncError } from "ContactSyncError.tsx";
 import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 
@@ -59,7 +59,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -95,7 +95,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             callback();
           }
           table = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp11) {
         table = tmp;
@@ -108,18 +108,18 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   let obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
   obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
-  items1[1] = callback2(onNext(4338).Text, obj1);
+  items1[1] = callback2(onNext(4734).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
   const intl2 = onNext(1236).intl;
   obj2[2] = intl2.string(onNext(1236).t.G8zcHt);
-  items1[2] = callback2(onNext(4338).Text, obj2);
+  items1[2] = callback2(onNext(4734).Text, obj2);
   const obj3 = { style: tmp.buttonContainer, children: null };
   const obj4 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1236).intl;
   obj4[2] = intl3.string(onNext(1236).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
-  obj3[1] = callback2(onNext(4777).Button, obj4);
+  obj3[1] = callback2(onNext(4745).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
   items1[4] = callback2(ContactSyncError, { error });
   obj[1] = items1;

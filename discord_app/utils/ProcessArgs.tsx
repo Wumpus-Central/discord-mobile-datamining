@@ -39,7 +39,7 @@ prototype["isEnvVariableTrue"] = function isEnvVariableTrue(DISCORD_DISALLOW_POP
   if (undefined === set) {
     return false;
   } else {
-    const tmpResult = tmp(3972);
+    const tmpResult = tmp(4004);
     let tmp5;
     if (tmpResult != null) {
       const _process = tmpResult.process;

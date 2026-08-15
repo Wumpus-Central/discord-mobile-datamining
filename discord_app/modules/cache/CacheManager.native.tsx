@@ -49,8 +49,8 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
     isConnectedResult = connected.isConnected();
   }
   if (isConnectedResult) {
-    tmp(14838).writeCaches();
-    const tmpResult = tmp(14838);
+    tmp(14878).writeCaches();
+    const tmpResult = tmp(14878);
   }
   return false;
 };

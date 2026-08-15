@@ -21,8 +21,8 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     return null;
   } else {
     if (arg0 === tmp(1940).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8222).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8222);
+      let priceString = tmp(8268).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(8268);
     } else {
       priceString = null;
       if (null != tmp4) {
@@ -30,7 +30,7 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
         obj = { primaryName: null, premiumGroupProductName: null };
         obj[0] = tmp4;
         obj[1] = callback();
-        priceString = intl.format(tmp3(2885).Nu9LNm, obj);
+        priceString = intl.format(tmp3(2917).Nu9LNm, obj);
       }
     }
     let str = "...";
@@ -42,10 +42,10 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
       obj = { helpCenterLink: null, premiumGroupProductName: null };
       obj[0] = closure_5;
       obj[1] = callback();
-      let formatResult = intl3.format(tmp3(2885)["+R/K74"], obj);
+      let formatResult = intl3.format(tmp3(2917)["+R/K74"], obj);
     } else {
       const intl2 = tmp(1236).intl;
-      const tmp3Result = tmp3(2885);
+      const tmp3Result = tmp3(2917);
       obj1 = { helpCenterLink: null };
       obj1[0] = closure_5;
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);

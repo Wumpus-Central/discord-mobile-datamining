@@ -46,7 +46,7 @@ export default function useUploadAvatar(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -68,14 +68,14 @@ export default function useUploadAvatar(guildId) {
             originalMd5 = undefined;
             c3 = undefined;
             let closure_4;
-            outer1_1(4310).hideActionSheet();
-            const obj13 = outer1_1(4310);
+            outer1_1(4342).hideActionSheet();
+            const obj13 = outer1_1(4342);
             let obj1 = { size: null };
             obj1[0] = outer1_7;
             originalMd5 = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = outer1_1(4923).openImagePicker(obj1);
+            obj2[0] = outer1_1(4838).openImagePicker(obj1);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -95,7 +95,7 @@ export default function useUploadAvatar(guildId) {
           } else {
             let canUseAnimatedAvatarResult = base64;
             if (!base64) {
-              obj = outer1_1(4007);
+              obj = outer1_1(4039);
               canUseAnimatedAvatarResult = obj.canUseAnimatedAvatar(c3);
             }
             c3 = canUseAnimatedAvatarResult;
@@ -108,24 +108,24 @@ export default function useUploadAvatar(guildId) {
               }
             }
           }
-          obj1 = outer1_0(13975);
+          obj1 = outer1_0(14007);
           const obj4 = { imageUri: null, description: null, originalMd5: null };
           obj4[0] = base64;
-          obj3 = outer1_0(8345);
+          obj3 = outer1_0(8384);
           obj4[1] = obj3.generateAvatarDescription();
           obj4[2] = originalMd5;
           closure_4 = obj1.createPendingImage(obj4);
           if (outer1_1) {
-            let tmp28Result = tmp28(8338);
+            let tmp28Result = tmp28(8377);
             tmp28Result.setTryItOutAvatar(outer1_4);
           } else {
-            tmp28Result = tmp28(8335);
+            tmp28Result = tmp28(8374);
             const obj5 = { guildId: null, avatar: null };
             obj5[0] = closure_0;
             obj5[1] = outer1_4;
             tmp28Result.setPendingChanges(obj5);
-            const result = outer1_0(8337).announcePendingAvatarChange("set");
-            const obj7 = outer1_0(8337);
+            const result = outer1_0(8376).announcePendingAvatarChange("set");
+            const obj7 = outer1_0(8376);
           }
         }
       } catch (tmp38) {

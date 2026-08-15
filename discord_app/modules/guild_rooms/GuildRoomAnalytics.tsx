@@ -3,7 +3,7 @@ import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";
-import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
+import resolveCreatingNotes from "resolveCreatingNotes";
 import { AnalyticEvents } from "ME";
 import { GuildRoomBackgrounds } from "../../../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
@@ -49,12 +49,12 @@ export const trackGuildRoomObjectInteracted = function trackGuildRoomObjectInter
   interactionType = interactionType.interactionType;
   let channelId = interactionType;
   let merged = Object.assign(interactionType, Object.create(null));
-  let f75550 = merged;
+  let f84270 = merged;
   channelId = merged.channelId;
-  f75550 = (arg0) => {
-    let obj = f75550(table[8]);
+  f84270 = (arg0) => {
+    let obj = f84270(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f75550));
+    const merged = Object.assign(outer1_9(f84270));
     obj.interaction_type = channelId;
     const merged1 = Object.assign(arg0);
     obj.trackWithMetadata(outer1_8.GUILD_ROOM_OBJECT_INTERACTED, obj);
@@ -93,20 +93,20 @@ export const trackGuildRoomObjectInteracted = function trackGuildRoomObjectInter
     let merged1 = Object.assign(getBaseProperties(merged));
     obj.interaction_type = interactionType;
     const merged2 = Object.assign(obj);
-    f75550(4549).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OBJECT_INTERACTED, obj);
-    const obj3 = f75550(4549);
+    f84270(5042).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OBJECT_INTERACTED, obj);
+    const obj3 = f84270(5042);
   }
 };
 export const trackGuildRoomInteracted = function trackGuildRoomInteracted(interactionType) {
   interactionType = interactionType.interactionType;
   let channelId = interactionType;
   let merged = Object.assign(interactionType, Object.create(null));
-  let f75551 = merged;
+  let f84271 = merged;
   channelId = merged.channelId;
-  f75551 = (arg0) => {
-    let obj = f75551(table[8]);
+  f84271 = (arg0) => {
+    let obj = f84271(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f75551));
+    const merged = Object.assign(outer1_9(f84271));
     obj.interaction_type = channelId;
     const merged1 = Object.assign(arg0);
     obj.trackWithMetadata(outer1_8.GUILD_ROOM_INTERACTED, obj);
@@ -145,24 +145,24 @@ export const trackGuildRoomInteracted = function trackGuildRoomInteracted(intera
     let merged1 = Object.assign(getBaseProperties(merged));
     obj.interaction_type = interactionType;
     const merged2 = Object.assign(obj);
-    f75551(4549).trackWithMetadata(AnalyticEvents.GUILD_ROOM_INTERACTED, obj);
-    const obj3 = f75551(4549);
+    f84271(5042).trackWithMetadata(AnalyticEvents.GUILD_ROOM_INTERACTED, obj);
+    const obj3 = f84271(5042);
   }
 };
 export const trackGuildRoomLayoutToggled = function trackGuildRoomLayoutToggled(location) {
   const _location = location.location;
   let channelId = _location;
   const guildRoomOpen = location.guildRoomOpen;
-  let f75552 = guildRoomOpen;
+  let f84272 = guildRoomOpen;
   let merged = Object.assign(location, Object.create(null));
   let dependencyMap = merged;
   channelId = merged.channelId;
-  f75552 = (arg0) => {
-    let obj = f75552(table[8]);
+  f84272 = (arg0) => {
+    let obj = f84272(table[8]);
     obj = {};
     const merged = Object.assign(outer1_9(table));
     obj.location = channelId;
-    obj.guild_room_open = f75552;
+    obj.guild_room_open = f84272;
     const merged1 = Object.assign(arg0);
     obj.trackWithMetadata(outer1_8.GUILD_ROOM_LAYOUT_TOGGLED, obj);
   };
@@ -201,20 +201,20 @@ export const trackGuildRoomLayoutToggled = function trackGuildRoomLayoutToggled(
     obj.location = _location;
     obj.guild_room_open = guildRoomOpen;
     const merged2 = Object.assign(obj);
-    f75552(4549).trackWithMetadata(AnalyticEvents.GUILD_ROOM_LAYOUT_TOGGLED, obj);
-    const obj3 = f75552(4549);
+    f84272(5042).trackWithMetadata(AnalyticEvents.GUILD_ROOM_LAYOUT_TOGGLED, obj);
+    const obj3 = f84272(5042);
   }
 };
 export const trackGuildRoomOpened = function trackGuildRoomOpened(location) {
   const _location = location.location;
   let channelId = _location;
   let merged = Object.assign(location, Object.create(null));
-  let f75553 = merged;
+  let f84273 = merged;
   channelId = merged.channelId;
-  f75553 = (arg0) => {
-    let obj = f75553(table[8]);
+  f84273 = (arg0) => {
+    let obj = f84273(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f75553));
+    const merged = Object.assign(outer1_9(f84273));
     obj.location = channelId;
     const merged1 = Object.assign(arg0);
     obj.trackWithMetadata(outer1_8.GUILD_ROOM_OPENED, obj);
@@ -253,8 +253,8 @@ export const trackGuildRoomOpened = function trackGuildRoomOpened(location) {
     let merged1 = Object.assign(getBaseProperties(merged));
     obj.location = _location;
     const merged2 = Object.assign(obj);
-    f75553(4549).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OPENED, obj);
-    const obj3 = f75553(4549);
+    f84273(5042).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OPENED, obj);
+    const obj3 = f84273(5042);
   }
 };
 export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(arg0) {
@@ -265,11 +265,11 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
   let timeout = merged;
   channelId = merged.channelId;
   fn = (arg0) => {
-    let obj = fn(4549);
+    let obj = fn(5042);
     obj = {};
     const merged = Object.assign(outer1_9(items3));
     const point = items1;
-    let findSeatResult = channelId(4542).findSeat(items1);
+    let findSeatResult = channelId(9866).findSeat(items1);
     let str;
     if (findSeatResult != null) {
       str = findSeatResult.name;
@@ -357,12 +357,12 @@ export const trackGuildRoomUserInteracted = function trackGuildRoomUserInteracte
   interactionType = interactionType.interactionType;
   let channelId = interactionType;
   let merged = Object.assign(interactionType, Object.create(null));
-  let f75555 = merged;
+  let f84275 = merged;
   channelId = merged.channelId;
-  f75555 = (arg0) => {
-    let obj = f75555(table[8]);
+  f84275 = (arg0) => {
+    let obj = f84275(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f75555));
+    const merged = Object.assign(outer1_9(f84275));
     obj.interaction_type = channelId;
     const merged1 = Object.assign(arg0);
     obj.trackWithMetadata(outer1_8.GUILD_ROOM_USER_INTERACTED, obj);
@@ -401,14 +401,14 @@ export const trackGuildRoomUserInteracted = function trackGuildRoomUserInteracte
     let merged1 = Object.assign(getBaseProperties(merged));
     obj.interaction_type = interactionType;
     const merged2 = Object.assign(obj);
-    f75555(4549).trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_INTERACTED, obj);
-    const obj3 = f75555(4549);
+    f84275(5042).trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_INTERACTED, obj);
+    const obj3 = f84275(5042);
   }
 };
 export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(channelId) {
   channelId = channelId.channelId;
-  const f75556 = (arg0) => {
-    let obj = f75556(table[8]);
+  const f84276 = (arg0) => {
+    let obj = f84276(table[8]);
     obj = {};
     const merged = Object.assign(outer1_9(channelId));
     const merged1 = Object.assign(arg0);
@@ -447,8 +447,8 @@ export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(
     obj = {};
     let merged = Object.assign(getBaseProperties(channelId));
     let merged1 = Object.assign(obj);
-    f75556(4549).trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_CONNECTED, obj);
-    const obj3 = f75556(4549);
+    f84276(5042).trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_CONNECTED, obj);
+    const obj3 = f84276(5042);
   }
 };
 export const trackGuildRoomUserDisconnected = function trackGuildRoomUserDisconnected(channelId) {

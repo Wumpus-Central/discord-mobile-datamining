@@ -19,3 +19,11 @@ export default function useIsGameCommunityServerPreview(arg0) {
     return type === outer1_3.GAME_COMMUNITY_UPSELL;
   }, items1);
 };
+export const isGameCommunityServerPreview = function isGameCommunityServerPreview(id) {
+  lurkingSourceForGuild = lurkingSourceForGuild.getLurkingSourceForGuild(id);
+  let type;
+  if (lurkingSourceForGuild != null) {
+    type = lurkingSourceForGuild.type;
+  }
+  return type === JoinGuildSources.GAME_COMMUNITY_UPSELL;
+};

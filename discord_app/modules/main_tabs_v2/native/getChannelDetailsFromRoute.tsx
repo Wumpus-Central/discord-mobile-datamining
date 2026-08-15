@@ -12,7 +12,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
-    const coerceGuildsRouteResult = tmp(4197).coerceGuildsRoute(currentRoute);
+    const coerceGuildsRouteResult = tmp(4229).coerceGuildsRoute(currentRoute);
     if (null != coerceGuildsRouteResult) {
       const params = coerceGuildsRouteResult.params;
       let guildId;

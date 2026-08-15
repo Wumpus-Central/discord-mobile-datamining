@@ -74,7 +74,7 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
         return outer1_1(closure_0);
       }
     };
-    const items = [callback(value(8033).FormRadioRow, obj), callback(value(8033).FormDivider, {})];
+    const items = [callback(value(8083).FormRadioRow, obj), callback(value(8083).FormDivider, {})];
     obj[0] = items;
     return callback2(React.Fragment, obj, value);
   });
@@ -93,7 +93,7 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
           return outer1_2(closure_0);
         }
       };
-      const items = [callback(value(8033).FormRadioRow, obj), callback(value(8033).FormDivider, {})];
+      const items = [callback(value(8083).FormRadioRow, obj), callback(value(8083).FormDivider, {})];
       obj[0] = items;
       return callback2(React.Fragment, obj, value);
     })
@@ -131,7 +131,7 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
         return outer1_5(closure_0);
       }
     };
-    const items = [callback(label(8033).FormRadioRow, obj), callback(label(8033).FormDivider, {})];
+    const items = [callback(label(8083).FormRadioRow, obj), callback(label(8083).FormDivider, {})];
     obj[0] = items;
     return callback2(React.Fragment, obj, label);
   });
@@ -153,7 +153,7 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     obj[3] = function onPress() {
       return outer1_6(closure_0);
     };
-    const items = [closure_4(tmp(8033).FormRadioRow, obj), closure_4(tmp(8033).FormDivider, {})];
+    const items = [closure_4(tmp(8083).FormRadioRow, obj), closure_4(tmp(8083).FormDivider, {})];
     obj[0] = items;
     let str2 = "disabled";
     if (true === arg0) {

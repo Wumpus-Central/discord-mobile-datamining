@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubStore.tsx
 import SafetyHubView from "SafetyHubView";
 import { Store } from "initialize";
-import { createAggregator } from "../../../_runtime/11349_createAggregator.js";
+import { createAggregator } from "../../../_runtime/11062_createAggregator.js";
 import { ContentIdType } from "SafetyHubModels.tsx";
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
@@ -209,18 +209,18 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      for (const key10007 in closure_6) {
-        let tmp7 = key10007;
+      for (const key10002 in closure_6) {
+        let tmp7 = key10002;
         let tmp8 = dependencyMap;
-        if (!dependencyMap[key10007].is_coppa) {
+        if (!dependencyMap[key10002].is_coppa) {
           continue;
         } else {
-          let tmp3 = dependencyMap;
+          let tmp = dependencyMap;
           let obj = { status: null };
-          let tmp4 = require;
-          let tmp5 = dependencyMap;
+          let tmp2 = require;
+          let tmp3 = dependencyMap;
           obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
-          dependencyMap[key10007].appeal_status = obj;
+          dependencyMap[key10002].appeal_status = obj;
           continue;
         }
         continue;

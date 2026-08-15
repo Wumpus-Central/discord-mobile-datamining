@@ -23,8 +23,8 @@ const require = arg1;
 function UseAnimatedPosition(animatedPosition) {
   animatedPosition = animatedPosition.animatedPosition;
   let animatedPosition2;
-  animatedPosition2 = animatedPosition(5460).useBottomSheet().animatedPosition;
-  const obj = animatedPosition(5460);
+  animatedPosition2 = animatedPosition(6952).useBottomSheet().animatedPosition;
+  const obj = animatedPosition(6952);
   const fn = function n() {
     return animatedPosition2.get();
   };
@@ -37,7 +37,7 @@ function UseAnimatedPosition(animatedPosition) {
   fn2.__closure = { animatedPosition };
   fn2.__workletHash = 15360670503044;
   fn2.__initData = closure_20;
-  const animatedReaction = animatedPosition(4083).useAnimatedReaction(fn, fn2);
+  const animatedReaction = animatedPosition(4115).useAnimatedReaction(fn, fn2);
   return null;
 }
 function ActionSheetAlignedView(children) {

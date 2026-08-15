@@ -52,7 +52,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -203,7 +203,7 @@ obj = {
     if (set.has(obj2.validateApplication(socket.application))) {
       obj = { screen: null };
       obj[0] = constants3.CONNECTIONS;
-      tmp(6080).openUserSettings(obj);
+      tmp(7360).openUserSettings(obj);
     } else {
       obj = { errorCode: null };
       obj[0] = constants2.UNAUTHORIZED_FOR_APPLICATION;
@@ -263,7 +263,7 @@ obj[RPCCommands.SHARE_LINK] = createRPCCommand.createRPCCommand(RPCCommands.SHAR
         const tmp10 = new prototype(obj, "This application cannot access this API");
         throw tmp10;
       }
-      tmpResult = tmp(7655);
+      tmpResult = tmp(7873);
     }
     const obj2 = recurseReplaceContentTree;
     tmp = require;

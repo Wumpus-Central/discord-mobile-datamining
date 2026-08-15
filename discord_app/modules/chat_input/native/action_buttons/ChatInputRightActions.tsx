@@ -31,7 +31,7 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounce(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThread, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "setInitialState" });
+  obj.children = callback2(renderChatInputActionButtonGiftAndThread, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "#297071" });
   return callback2(ReanimatedRexport.View, obj);
 }
 let c4 = importAllResult;
@@ -54,9 +54,9 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   let callback;
   let importAllResult;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
-  let obj = channel(4065);
+  let obj = channel(4097);
   const token = obj.useToken(onPressAction(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  let obj1 = channel(4065);
+  let obj1 = channel(4097);
   const sum = token + 2 * obj1.useToken(onPressAction(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = callback3();
@@ -83,15 +83,15 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     obj = { item: null, renderItem: null };
     obj[0] = tmp15;
     obj[1] = tmp10;
-    tmp14Result = callback2(tmp(4711).TransitionItem, obj);
+    tmp14Result = callback2(tmp(4668).TransitionItem, obj);
     const tmp14 = callback2;
   }
   const items1 = [tmp14Result, ];
   obj1 = { active: null, showKeyboardIcon: null, onPress: null };
-  obj1[0] = keyboardType === channel(1626).KeyboardTypes.EXPRESSION;
+  obj1[0] = keyboardType === channel(1627).KeyboardTypes.EXPRESSION;
   obj1[1] = showKeyboardIcon;
   obj1[2] = onPressExpression;
-  items1[1] = callback2(onPressAction(11635), obj1);
+  items1[1] = callback2(onPressAction(11352), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

@@ -2,7 +2,7 @@
 import dispatcher from "dispatcher";
 import { DraftType } from "handleChanged";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { registerAsset } from "../../../../_runtime/08675_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10455_registerAsset.js";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
@@ -27,7 +27,7 @@ function _sendShareMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -75,13 +75,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7210).parse(lib2, lib2);
+              constants = lib2(7436).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8427);
+                let obj2 = lib2(8466);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8412).Future();
-              let obj3 = lib2(6986);
+              future = new lib(8451).Future();
+              let obj3 = lib2(7427);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
               obj2[2] = c4;

@@ -40,13 +40,13 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.nC2XBl);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: useOfficialMessageStyleSettingOptions
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
+let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
 
 export default createToggle;
 export { useOfficialMessageStyleSettingValue };

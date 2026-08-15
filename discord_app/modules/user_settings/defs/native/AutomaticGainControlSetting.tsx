@@ -10,7 +10,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.cUMdH0);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue: function useAutomaticGainControlSettingValue() {
     const items = [_detectH265HardwareDecode];
     return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());

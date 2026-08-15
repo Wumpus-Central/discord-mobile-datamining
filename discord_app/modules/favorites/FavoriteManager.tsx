@@ -1,8 +1,10 @@
 // discord_app/modules/favorites/FavoriteManager.tsx
+import items from "items";
 import "initialize";
 import { getNextPositionFromChannels } from "FavoritesActionCreators.tsx";
 
-const require = arg1;
+let c3;
+let obj1;
 function handleChannelDelete(channel) {
   const result = getNextPositionFromChannels.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
 }
@@ -24,14 +26,18 @@ function handleCategoryExpandAll(guildId) {
     const tmpResult = getNextPositionFromChannels;
   }
 }
+function handleLogout() {
+  callback(closure_2);
+}
+({ NO_SUGGESTIONS: obj1, setFavoritesGuildSuggestions: c3 } = items);
 let prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { CHANNEL_DELETE: handleChannelDelete, CATEGORY_COLLAPSE: handleCategoryCollapse, CATEGORY_EXPAND: handleCategoryExpand, CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll, CATEGORY_EXPAND_ALL: handleCategoryExpandAll };
+  applyArgumentsResult.actions = { CHANNEL_DELETE: handleChannelDelete, CATEGORY_COLLAPSE: handleCategoryCollapse, CATEGORY_EXPAND: handleCategoryExpand, CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll, CATEGORY_EXPAND_ALL: handleCategoryExpandAll, LOGOUT: handleLogout };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
+class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("initialize").fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
+let result = require("getFavoritesAwareGuildName").fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
 export default prototype;

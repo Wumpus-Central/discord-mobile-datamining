@@ -11,7 +11,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["St+DJK"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSyncSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
     return initialize.useStateFromStores(items, () => "auto" === obj.rawPrefersReducedMotion);

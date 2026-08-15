@@ -45,10 +45,10 @@ function GuildEventsListHeader(arg0) {
         const obj2 = guild(outer1_2[12]);
       }
     };
-    tmp3Result = tmp3(tmp4(9039).ActionSheetHeaderPressableText, obj);
+    tmp3Result = tmp3(tmp4(8829).ActionSheetHeaderPressableText, obj);
   }
   obj[1] = tmp3Result;
-  return jsx(guild(5457).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
+  return jsx(guild(6949).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
 }
 let closure_10 = createCacheKey.createStyles({ container: { flex: 1 } });
 let result = require("generateOldThreadCutoff").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsListActionSheet.tsx");
@@ -56,7 +56,7 @@ let result = require("generateOldThreadCutoff").fileFinishedImporting("modules/g
 export default function GuildEventsListActionSheet(guild) {
   guild = guild.guild;
   let arr;
-  arr = arr(9101)(guild.id);
+  arr = arr(8891)(guild.id);
   const items = [arr, guild.id];
   const tmp = callback();
   const effect = React.useEffect(() => {
@@ -79,7 +79,7 @@ export default function GuildEventsListActionSheet(guild) {
     };
     let result = obj.openGuildEventDetails(obj);
   }, items1);
-  arr(4793)(() => {
+  arr(4761)(() => {
     let obj = arr(outer1_2[17]);
     obj = { type: outer1_6, guild_id: guild.id, guild_events_count: arr.length };
     obj.track(outer1_7.OPEN_MODAL, obj);
@@ -99,8 +99,8 @@ export default function GuildEventsListActionSheet(guild) {
   obj = { style: tmp.container, children: null };
   const obj1 = { inActionSheet: true, events: arr, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null };
   const ref = React.useRef(generateOldThreadCutoff.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
-  obj1[5] = arr(5390)(ref);
-  obj[1] = jsx(arr(9104), { inActionSheet: true, events: arr, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null });
+  obj1[5] = arr(6804)(ref);
+  obj[1] = jsx(arr(8894), { inActionSheet: true, events: arr, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null });
   obj[5] = <View style={tmp.container}>{null}</View>;
-  return jsx(guild(5458).BottomSheet, { style: tmp.container, children: null });
+  return jsx(guild(6950).BottomSheet, { style: tmp.container, children: null });
 };

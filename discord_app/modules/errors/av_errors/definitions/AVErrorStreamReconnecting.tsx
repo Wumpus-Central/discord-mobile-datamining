@@ -8,9 +8,9 @@ export const AVErrorStreamReconnectingDefinition = {
     activeStreams = activeStreams.activeStreams;
     const found = activeStreams.filter((state) => state.state === constants.RECONNECTING);
     return found.map((currentUserActiveStream) => {
-      const obj = { type: callback(9233).AVError.STREAM_RECONNECTING };
-      const obj2 = callback(17009);
-      const merged = Object.assign(obj2.getStreamErrorContext(callback(4408).encodeStreamKey(currentUserActiveStream)));
+      const obj = { type: callback(9668).AVError.STREAM_RECONNECTING };
+      const obj2 = callback(17055);
+      const merged = Object.assign(obj2.getStreamErrorContext(callback(4531).encodeStreamKey(currentUserActiveStream)));
       return obj;
     });
   },

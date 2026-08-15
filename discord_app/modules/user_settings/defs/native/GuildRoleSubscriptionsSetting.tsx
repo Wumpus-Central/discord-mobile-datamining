@@ -10,7 +10,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.trSpHX);
   },
-  parent: require("MobileSetting").MobileSetting.PREMIUM,
+  parent: require("MobileUserSettings").MobileUserSettings.PREMIUM,
   IconComponent: require("TicketIcon").TicketIcon,
   usePredicate: function useHasGuildRoleSubscriptionsSetting() {
     return useUserRoleSubscriptionRelationship() === constants.SUBSCRIBED;

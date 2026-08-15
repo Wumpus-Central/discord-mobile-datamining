@@ -15,12 +15,12 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   const obj = initialize;
   const items1 = [HotspotStore.HotspotStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {
-    const HotspotStore = callback(5896).HotspotStore;
-    return HotspotStore.hasHotspot(callback(5896).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
+    const HotspotStore = callback(7193).HotspotStore;
+    return HotspotStore.hasHotspot(callback(7193).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
   });
   const obj2 = initialize;
   const items2 = [mergeGuildAvatar];
-  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(4007).isPremium(currentUser.getCurrentUser()));
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(4039).isPremium(currentUser.getCurrentUser()));
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }

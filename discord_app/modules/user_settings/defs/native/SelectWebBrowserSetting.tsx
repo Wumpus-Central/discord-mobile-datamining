@@ -49,7 +49,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["C+DkPu"]);
   },
-  parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
+  parent: require("MobileUserSettings").MobileUserSettings.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
     return NativeModules.useBrowserManagerSelectedBrowser();
   },
@@ -63,7 +63,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["C+DkPu"]);
   },
-  parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
+  parent: require("MobileUserSettings").MobileUserSettings.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
     return NativeModules.useBrowserManagerSelectedBrowser();
   },

@@ -50,7 +50,7 @@ export default function AppLauncherChoicesActionSheet(option) {
   ({ initChoiceIndex, onDismiss } = option);
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  const bottom = onChoiceSelect(1628)().bottom;
+  const bottom = onChoiceSelect(1629)().bottom;
   let obj = option(500);
   let sum = bottom;
   if (!obj.isIOS()) {
@@ -132,11 +132,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   if (tmp13) {
     obj = { onChange: null };
     obj[0] = callback;
-    tmp16 = callback(tmp3(11628).AppLauncherListSearchBar, obj);
+    tmp16 = callback(tmp3(11345).AppLauncherListSearchBar, obj);
   }
   const items3 = [tmp16, ];
   if (0 === first.length) {
-    let tmp20 = callback(tmp3(11628).AppLauncherListEmptyState, {});
+    let tmp20 = callback(tmp3(11345).AppLauncherListEmptyState, {});
   } else {
     const obj1 = { scrollable: null, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     obj1[0] = tmp13;
@@ -156,5 +156,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj[4] = items3;
-  return closure_8(option(11627).AppLauncherCommandOptionActionSheet, obj);
+  return closure_8(option(11344).AppLauncherCommandOptionActionSheet, obj);
 };

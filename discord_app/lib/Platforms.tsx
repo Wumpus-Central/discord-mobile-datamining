@@ -20,7 +20,7 @@ import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import importDefaultResult from "registerAsset";
-import { useIsRiotSocialSDKMigrationEnabled } from "../modules/application_account_linking/experiments/socialSDKMigration.tsx";
+import { apexExperiment } from "../modules/application_account_linking/experiments/socialSDKMigration.tsx";
 import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 
 let obj = { type: PlatformTypes.TWITCH, name: "Twitch", color: null, icon: null, enabled: true, getPlatformUserUrl: null, domains: null };
@@ -47,18 +47,14 @@ obj2[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"
 const obj4 = {
   replacedBy: ApplicationIdentityAppIds.BATTLENET,
   getMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = apexExperiment.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
-  },
-  useMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
-    return battlenetSocialSDKMigrationExperiment.useConfig({ location }).enabled;
   },
   helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
   deprecationDate: null
 };
 const obj3 = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset"), blackSVG: require("registerAsset") };
-obj4[4] = new Date("2026-09-22Z-07:00");
+obj4[3] = new Date("2026-09-22Z-07:00");
 obj2[5] = obj4;
 items[2] = obj2;
 const obj5 = { type: PlatformTypes.BLUESKY, name: "Bluesky", icon: null, enabled: true, getPlatformUserUrl: null, isFederated: true, hasMetadata: true };
@@ -87,21 +83,14 @@ const obj10 = { lightPNG: require("registerAsset"), darkPNG: require("registerAs
 obj11[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset") };
 const obj13 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
-  getMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled;
-    obj = { location };
-    return obj.getIsRiotSocialSDKMigrationEnabled(obj);
-  },
-  useMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled;
-    obj = { location };
-    return obj.useIsRiotSocialSDKMigrationEnabled(obj);
+  getMigrationExperimentEnabled() {
+    return true;
   },
   helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
   deprecationDate: null
 };
 const obj12 = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset") };
-obj13[4] = new Date("2026-07-10Z-07:00");
+obj13[3] = new Date("2026-07-10Z-07:00");
 obj11[5] = obj13;
 items[6] = obj11;
 const obj14 = { type: PlatformTypes.STEAM, name: "Steam", color: null, icon: null, enabled: true, getPlatformUserUrl: null, hasMetadata: true };
@@ -191,21 +180,14 @@ const obj37 = { lightPNG: require("registerAsset"), darkPNG: require("registerAs
 obj38[2] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset"), blackSVG: require("registerAsset") };
 const obj40 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
-  getMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled;
-    obj = { location };
-    return obj.getIsRiotSocialSDKMigrationEnabled(obj);
-  },
-  useMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled;
-    obj = { location };
-    return obj.useIsRiotSocialSDKMigrationEnabled(obj);
+  getMigrationExperimentEnabled() {
+    return true;
   },
   helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
   deprecationDate: null
 };
 const obj39 = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset"), blackSVG: require("registerAsset") };
-obj40[4] = new Date("2026-07-10Z-07:00");
+obj40[3] = new Date("2026-07-10Z-07:00");
 obj38[4] = obj40;
 items[19] = obj38;
 const obj41 = { type: PlatformTypes.ROBLOX, name: "Roblox", icon: null, enabled: true, getPlatformUserUrl: null };

@@ -10,7 +10,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["9CSZJm"]);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
     const items = [getUserAgnosticState];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());

@@ -20,11 +20,11 @@ function getFocusedChannelId() {
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const currentRoute = rootNavigationRef.getCurrentRoute();
-      const coerceChannelRouteResult = params(4197).coerceChannelRoute(currentRoute);
+      const coerceChannelRouteResult = params(4229).coerceChannelRoute(currentRoute);
       if (tmp2 != coerceChannelRouteResult) {
         return coerceChannelRouteResult.params.channelId;
       } else if (isChatLockedOpen) {
-        const coerceGuildsRouteResult = params(4197).coerceGuildsRoute(currentRoute);
+        const coerceGuildsRouteResult = params(4229).coerceGuildsRoute(currentRoute);
         let tmp6;
         if (tmp2 != coerceGuildsRouteResult) {
           const params2 = coerceGuildsRouteResult.params;
@@ -36,14 +36,14 @@ function getFocusedChannelId() {
         }
         return tmp6;
       }
-      const paramsResult = params(4197);
+      const paramsResult = params(4229);
     }
   }
   if (tmp2 !== c9) {
     return c9;
   } else {
     const tmp19 = getInitialGuildState();
-    let routes2 = params(4197);
+    let routes2 = params(4229);
     let tmp8;
     if (tmp19 != tmp2) {
       const routes = tmp19.routes;
@@ -62,7 +62,7 @@ function getFocusedChannelId() {
     if (tmp2 == num2) {
       c9 = tmp9;
     } else {
-      routes2 = params(4197);
+      routes2 = params(4229);
       if (!isChatLockedOpen) {
         const state = num2.state;
         let tmp10;
@@ -109,7 +109,7 @@ function getFocusedChannelId() {
     }
     const coerceTabsRouteResult = routes2.coerceTabsRoute(tmp13);
     if (tmp2 != coerceTabsRouteResult) {
-      params = params(4197).coerceGuildsRoute;
+      params = params(4229).coerceGuildsRoute;
       routes2 = coerceTabsRouteResult.state;
       let tmp16;
       if (routes2 != tmp2) {
@@ -136,7 +136,7 @@ function getFocusedChannelId() {
         }
         tmp9 = paramsResult3;
       }
-      const paramsResult2 = params(4197);
+      const paramsResult2 = params(4229);
     }
   }
 }

@@ -45,8 +45,8 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
         items1 = [items.USERNAME];
       }
       showUserProfileResult[3] = items1;
-      showUserProfileResult = importAll(11412).showUserProfile(showUserProfileResult);
-      const obj2 = importAll(11412);
+      showUserProfileResult = importAll(11124).showUserProfile(showUserProfileResult);
+      const obj2 = importAll(11124);
     }
   }
 };

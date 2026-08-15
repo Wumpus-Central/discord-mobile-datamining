@@ -15,7 +15,7 @@ import { UnreadSetting } from "ReadStateTypes";
 import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes";
 import jsxProd from "transitionToChannel";
 import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/07901_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
 
 let CHANNEL_MARGIN_VERTICAL;
 let closure_17;

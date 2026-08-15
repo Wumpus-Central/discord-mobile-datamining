@@ -9,7 +9,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.ahKIJO);
   },
-  parent: require("MobileSetting").MobileSetting.FAMILY_CENTER,
+  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER,
   unsearchable: true,
   screen: obj
 };

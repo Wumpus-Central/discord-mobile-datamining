@@ -9,8 +9,8 @@ const result = require("coerceMainRoute").fileFinishedImporting("modules/activit
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
   let tmp = useIsActivityFocused(channelId);
-  const isModalOpen = channelId(4197).useIsModalOpen(ChannelCallCameraPreview);
-  const obj = channelId(4197);
+  const isModalOpen = channelId(4229).useIsModalOpen(ChannelCallCameraPreview);
+  const obj = channelId(4229);
   const items = [getParticipants];
   const items1 = [channelId];
   const stateFromStores = channelId(589).useStateFromStores(items, () => outer1_3.getChatOpen(channelId), items1);

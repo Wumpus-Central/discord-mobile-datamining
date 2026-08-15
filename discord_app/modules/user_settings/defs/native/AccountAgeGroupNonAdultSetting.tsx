@@ -11,7 +11,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
     const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
     const intl = getSystemLocale.intl;
@@ -49,7 +49,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
     const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
     const intl = getSystemLocale.intl;

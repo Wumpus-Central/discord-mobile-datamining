@@ -13,7 +13,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["FP+a42"]);
   },
-  parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
+  parent: require("MobileUserSettings").MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentGuildsSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
     return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();
@@ -58,7 +58,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["FP+a42"]);
   },
-  parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
+  parent: require("MobileUserSettings").MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentGuildsSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
     return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();

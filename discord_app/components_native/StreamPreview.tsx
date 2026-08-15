@@ -37,9 +37,9 @@ DefaultFallback.prototype["render"] = function render() {
   let obj = { style: tmp.wrapper, children: null };
   obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = tmp6(10931);
+    let tmp6Result = tmp6(12617);
   } else {
-    tmp6Result = tmp6(10932);
+    tmp6Result = tmp6(12618);
   }
   obj[2] = tmp6Result;
   obj[1] = closure_6(closure_3, obj);

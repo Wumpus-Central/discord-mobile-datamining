@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx
 import importAllResult from "SPRING_CONFIG";
-import { View } from "module_11747";
+import { View } from "module_11467";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -163,8 +163,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     const channels = outer1_6.getChannels(guild.id);
     const result = guild(outer1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, outer1_11.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(11820).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(11820);
+  const shouldShowInvitesDisabledNotif = guild(11545).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(11545);
   const tmp5 = useEventsButtonProps(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {

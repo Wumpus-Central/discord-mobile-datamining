@@ -27,13 +27,6 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
       }
       if (null != trialId) {
         const userTrialOffer = ref.getUserTrialOffer(promotionByTypeAndId.trialId);
-        if (null != userTrialOffer) {
-          if (null != userTrialOffer.expires_at) {
-            const _Date = Date;
-            const _Date2 = Date;
-            const parsed = Date.parse(userTrialOffer.expires_at);
-          }
-        }
         return null;
       }
       return marketingComponentByType;

@@ -10,7 +10,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["pS+K2L"]);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
     const items = [_detectH265HardwareDecode];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {

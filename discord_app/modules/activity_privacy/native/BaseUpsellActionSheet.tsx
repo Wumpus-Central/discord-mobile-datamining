@@ -25,7 +25,7 @@ function StoreGuildIcon(guildId) {
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(guildId));
   obj = { guild: stateFromStores, size: null };
-  obj[1] = guildId(5840).GuildIconSizes.XSMALL;
+  obj[1] = guildId(7188).GuildIconSizes.XSMALL;
   return callback(GuildIconSizes, obj);
 }
 function GuildCard(guildIds) {
@@ -164,17 +164,17 @@ export default function BaseUpsellActionSheet(toastContent) {
   let obj = { startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
-  const items1 = [callback(toastContent(4338).Text, obj), callback(toastContent(4338).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), callback(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
+  const items1 = [callback(toastContent(4734).Text, obj), callback(toastContent(4734).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), callback(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
   const obj2 = { style: tmp.buttonsContainer, children: null };
-  const items2 = [callback(toastContent(4777).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
+  const items2 = [callback(toastContent(4745).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
   const obj3 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1236).intl;
   obj3[2] = intl.string(toastContent(1236).t.X1rGEm);
   obj3[3] = callback1;
-  items2[1] = callback(toastContent(4777).Button, obj3);
+  items2[1] = callback(toastContent(4745).Button, obj3);
   obj2[1] = items2;
   items1[3] = callback2(closure_5, obj2);
   obj[1] = items1;
   obj[1] = callback2(closure_5, obj);
-  return callback(toastContent(5458).BottomSheet, obj);
+  return callback(toastContent(6950).BottomSheet, obj);
 };

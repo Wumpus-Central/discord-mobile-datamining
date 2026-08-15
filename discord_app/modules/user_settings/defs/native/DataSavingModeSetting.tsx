@@ -12,7 +12,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ix8XIj);
   },
-  parent: require("MobileSetting").MobileSetting.CHAT,
+  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
   useValue: function useDataSavingModeSettingValue() {
     const items = [CHANNEL_SIDEBAR_WIDTH];
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);

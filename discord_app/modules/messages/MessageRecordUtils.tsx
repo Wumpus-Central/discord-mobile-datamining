@@ -7,11 +7,11 @@ import fetchFingerprint from "fetchFingerprint";
 import markAllUserIdListsStale from "markAllUserIdListsStale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
-import { t } from "../../../_runtime/03943_t.js";
+import { t } from "../../../_runtime/03975_t.js";
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 import { _resolveGiftCode } from "../../utils/GiftCodeUtils.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
+import { trimTrailingPunctuation } from "../coded_links/findCodedLinks.tsx";
 import { flattenComponents } from "../interaction_components/InteractionComponentUtils.tsx";
 import { transformMessagePoll } from "../polls/transformMessagPoll.tsx";
 import { getStickerExtensionFromFormatType } from "../stickers/StickersUtils.tsx";
@@ -60,7 +60,7 @@ function createMinimalMessageRecord(timestamp) {
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
   } else {
-    items1 = getPathsFromURL(timestamp.content);
+    items1 = trimTrailingPunctuation(timestamp.content);
   }
   obj.codedLinks = items1;
   tmp = new tmp(obj);
@@ -166,7 +166,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4600);
+  let tmp9Result = tmp9(4819);
   obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
@@ -176,7 +176,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4601);
+  tmp9Result = tmp9(4381);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {

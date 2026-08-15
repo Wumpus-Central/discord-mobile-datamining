@@ -20,9 +20,9 @@ function ClickableGameIcon(game) {
   enabled = undefined;
   ({ style, activityLevel } = game);
   const obj = { gameId: game.id, source: null, trackEntryPointImpression: null };
-  obj[1] = game(9347).GameProfileSources.GuildProfileGames;
+  obj[1] = game(9101).GameProfileSources.GuildProfileGames;
   obj[2] = enabled;
-  const tmp3Result = onPressFallback(9336)(obj);
+  const tmp3Result = onPressFallback(9519)(obj);
   dependencyMap = tmp3Result;
   if (enabled) {
     enabled = null != tmp3Result;
@@ -37,7 +37,7 @@ function ClickableGameIcon(game) {
       }
     }, items);
   }
-  return callback(onPressFallback(12288), { style, game, activityLevel, onPress });
+  return callback(onPressFallback(9524), { style, game, activityLevel, onPress });
 }
 function FavoriteGame(game) {
   let activityLevel;

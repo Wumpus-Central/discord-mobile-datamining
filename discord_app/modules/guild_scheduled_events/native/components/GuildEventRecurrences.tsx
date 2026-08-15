@@ -39,7 +39,7 @@ export default function GuildEventRecurrences(guildEventId) {
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1236).intl;
   obj[1] = intl.string(guildEventId(1236).t["D/jjoa"]);
-  const items = [callback(guildEventId(4338).Text, obj), , ];
+  const items = [callback(guildEventId(4734).Text, obj), , ];
   obj = {
     style: tmp2.scrollView,
     ref,
@@ -66,7 +66,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = callback(tmp8(4777).Button, obj1);
+    canViewMoreRecurrences = callback(tmp8(4745).Button, obj1);
   }
   items[2] = canViewMoreRecurrences;
   obj[1] = items;

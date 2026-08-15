@@ -48,10 +48,11 @@ export const ThreadCreationStarterMessage = function ThreadCreationStarterMessag
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getMessage(closure_1, closure_0));
   let tmp3 = null;
   if (null != stateFromStores) {
-    obj = { rowGenerator: null, message: null };
+    obj = { rowGenerator: null, message: null, style: null };
     obj[0] = obj;
     obj[1] = stateFromStores;
-    tmp3 = jsx(DCDChatItem, { rowGenerator: null, message: null });
+    obj[2] = { overflow: "visible" };
+    tmp3 = jsx(DCDChatItem, { rowGenerator: null, message: null, style: null });
   }
   return tmp3;
 };

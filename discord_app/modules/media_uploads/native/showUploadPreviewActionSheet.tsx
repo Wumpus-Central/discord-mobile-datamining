@@ -4,5 +4,5 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetA
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/media_uploads/native/showUploadPreviewActionSheet.tsx");
 
 export default function showUploadPreviewActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(10063, dependencyMap.paths), "UploadPreviewActionSheet", arg0);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(10268, dependencyMap.paths), "UploadPreviewActionSheet", arg0);
 };

@@ -7,7 +7,7 @@ import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items";
 import jsxProd from "render";
 import set from "set";
 import set from "get ActivityIndicator";
-import { registerAsset } from "../../_runtime/08126_registerAsset.js";
+import { registerAsset } from "../../_runtime/08176_registerAsset.js";
 import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
 import { render } from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import { useSafeAreaInsets } from "../modules/safe_area/useSafeAreaInsets.native.tsx";

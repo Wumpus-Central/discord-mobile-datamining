@@ -15,7 +15,7 @@ let metroImportAll;
 let obj = arg1;
 function updateUserGuildSettings(closure_0, arg1, INFREQUENT_USER_ACTION) {
   let closure_1 = arg1;
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70070), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70184), INFREQUENT_USER_ACTION);
 }
 function updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, arg1) {
   const self = this;
@@ -119,7 +119,7 @@ class UserSettingsProtoActionCreators {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ class UserSettingsProtoActionCreators {
                   if (code === outer1_7.INVALID_USER_SETTINGS_DATA) {
                     const logger3 = outer1_0.logger;
                     logger3.log("Reloading do to invalid data");
-                    const item1 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0());
+                    const item1 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0(c5));
                     const ifNecessary = outer1_0.loadIfNecessary(true);
                     let tmp57 = config;
                     const errorCallbacks = outer1_0.getEditInfo().editInfo.errorCallbacks;
@@ -202,7 +202,7 @@ class UserSettingsProtoActionCreators {
                 }
                 const logger2 = outer1_0.logger;
                 logger2.log("Unknown user settings error");
-                const item2 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0());
+                const item2 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0(c5));
                 tmp57 = config;
                 const errorCallbacks1 = outer1_0.getEditInfo().editInfo.errorCallbacks;
               } else {
@@ -254,7 +254,7 @@ class UserSettingsProtoActionCreators {
             }
             c3 = 0;
             config = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           config = 3;
         } catch (tmp82) {
@@ -282,9 +282,9 @@ prototype["getEditInfo"] = function getEditInfo() {
 prototype["getCurrentValue"] = function getCurrentValue() {
   return this.getEditInfo().proto;
 };
-prototype["updateAsync"] = function updateAsync(favorites, arg1, INFREQUENT_USER_ACTION, onSaveFailed) {
+prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_USER_ACTION, onSaveFailed) {
   let closure_0 = favorites;
-  let closure_1 = arg1;
+  let closure_1 = update;
   let closure_2 = INFREQUENT_USER_ACTION;
   const self = this;
   return onSaveFailed(function*() {
@@ -299,7 +299,7 @@ prototype["updateAsync"] = function updateAsync(favorites, arg1, INFREQUENT_USER
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -355,7 +355,7 @@ prototype["updateAsync"] = function updateAsync(favorites, arg1, INFREQUENT_USER
             const tmp44 = closure_2;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -471,7 +471,7 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -498,7 +498,7 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
             const editInfo = outer1_1.getEditInfo().editInfo;
             if (!outer1_0) {
               isDirty = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
             const logger = outer1_1.logger;
             logger.log("Loading proto");
@@ -625,15 +625,15 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   let closure_0 = arg0;
-  return obj.updateAsync("guilds", (arg0) => f70073(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (arg0) => f70187(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   let closure_0 = arg1;
   closure_0 = id;
-  const f70063 = (arg0) => {
+  const f70177 = (arg0) => {
     arg0.guildThemeSourcePreference = closure_0;
   };
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70070), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70184), UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 obj = Object.create(UserSettingsProtoActionCreators.prototype);
 obj.beforeSendCallbacks = [];
@@ -650,7 +650,7 @@ obj.persistChanges = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -724,7 +724,7 @@ obj.persistChanges = importDefaultResult(function*() {
               if (code === outer1_7.INVALID_USER_SETTINGS_DATA) {
                 const logger3 = outer1_0.logger;
                 logger3.log("Reloading do to invalid data");
-                const item1 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0());
+                const item1 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0(c5));
                 const ifNecessary = outer1_0.loadIfNecessary(true);
                 let tmp57 = config;
                 const errorCallbacks = outer1_0.getEditInfo().editInfo.errorCallbacks;
@@ -733,7 +733,7 @@ obj.persistChanges = importDefaultResult(function*() {
             }
             const logger2 = outer1_0.logger;
             logger2.log("Unknown user settings error");
-            const item2 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0());
+            const item2 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0(c5));
             tmp57 = config;
             const errorCallbacks1 = outer1_0.getEditInfo().editInfo.errorCallbacks;
           } else {
@@ -785,7 +785,7 @@ obj.persistChanges = importDefaultResult(function*() {
         }
         c3 = 0;
         config = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
       config = 3;
     } catch (tmp82) {
@@ -817,7 +817,7 @@ obj.persistChanges = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -891,7 +891,7 @@ obj.persistChanges = importDefaultResult(function*() {
               if (code === outer1_7.INVALID_USER_SETTINGS_DATA) {
                 const logger3 = outer1_0.logger;
                 logger3.log("Reloading do to invalid data");
-                const item1 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0());
+                const item1 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0(c5));
                 const ifNecessary = outer1_0.loadIfNecessary(true);
                 let tmp57 = config;
                 const errorCallbacks = outer1_0.getEditInfo().editInfo.errorCallbacks;
@@ -900,7 +900,7 @@ obj.persistChanges = importDefaultResult(function*() {
             }
             const logger2 = outer1_0.logger;
             logger2.log("Unknown user settings error");
-            const item2 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0());
+            const item2 = outer1_0.getEditInfo().editInfo.errorCallbacks.forEach((arg0) => arg0(c5));
             tmp57 = config;
             const errorCallbacks1 = outer1_0.getEditInfo().editInfo.errorCallbacks;
           } else {
@@ -952,7 +952,7 @@ obj.persistChanges = importDefaultResult(function*() {
         }
         c3 = 0;
         config = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
       config = 3;
     } catch (tmp82) {
@@ -1001,17 +1001,17 @@ export { setGuildThemeSourcePreferenceOverride };
 export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeSourcePreferenceOverride(closure_0) {
   obj = obj(1306).GuildThemeSourcePreference.UNSPECIFIED;
   obj = closure_0;
-  const f70063 = (arg0) => {
+  const f70177 = (arg0) => {
     arg0.guildThemeSourcePreference = closure_0;
   };
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70070), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70184), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateUserChannelSettings = function updateUserChannelSettings(arg0, arg1, arg2, INFREQUENT_USER_ACTION) {
   let closure_0 = arg1;
-  let f70070 = arg2;
+  let f70184 = arg2;
   closure_0 = arg0;
-  f70070 = (channels) => callback(outer1_2[9]).mutateUserChannelSettingsInternal(channels, callback, f70070);
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70070), INFREQUENT_USER_ACTION);
+  f70184 = (channels) => callback(outer1_2[9]).mutateUserChannelSettingsInternal(channels, callback, f70184);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f70184), INFREQUENT_USER_ACTION);
 };
 export const addDismissedContent = function addDismissedContent(closure_0) {
   let obj = closure_0;
@@ -1074,7 +1074,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f70073 = (guilds) => {
+  const f70187 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1094,7 +1094,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", (arg0) => f70073(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (arg0) => f70187(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync("userContent", (arg0) => {

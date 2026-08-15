@@ -2,7 +2,7 @@
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08097_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08147_registerAsset.js";
 import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;

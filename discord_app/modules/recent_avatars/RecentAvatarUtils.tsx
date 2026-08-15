@@ -1,6 +1,6 @@
 // discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
 import { Endpoints } from "ME";
-import { parse } from "../../../_runtime/01483_parse.js";
+import { parse } from "../../../_runtime/01484_parse.js";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 import { AssetOriginTypes } from "../profile_customization/ProfilePendingImageTypes.tsx";
@@ -131,7 +131,7 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     const _Date = Date;
     const date = new Date();
     const intl2 = tmp3(1236).intl;
-    if (assetOrigin === tmp3(8346).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+    if (assetOrigin === tmp3(8385).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
       let DYil93 = tmp3(1236).t.eC2sZi;
     } else {
       DYil93 = tmp3(1236).t.DYil93;

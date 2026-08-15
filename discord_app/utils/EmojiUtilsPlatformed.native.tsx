@@ -40,7 +40,7 @@ function _getEmojiColors() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -145,9 +145,9 @@ obj[1] = function filterUnsupportedEmojis(emojis) {
   if (!obj.isAndroid()) {
     found = apply.filter(emojis, (unicodeVersion) => {
       unicodeVersion = unicodeVersion.unicodeVersion;
-      const systemVersionMajor = callback(4322).getSystemVersionMajor();
-      const obj = callback(4322);
-      const systemVersionMinor = callback(4322).getSystemVersionMinor();
+      const systemVersionMajor = callback(4354).getSystemVersionMajor();
+      const obj = callback(4354);
+      const systemVersionMinor = callback(4354).getSystemVersionMinor();
       let flag = true;
       if (unicodeVersion > 8) {
         if (9 === unicodeVersion) {

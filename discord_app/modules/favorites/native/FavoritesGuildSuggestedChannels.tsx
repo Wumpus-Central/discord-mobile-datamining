@@ -25,7 +25,7 @@ const result = require("items").fileFinishedImporting("modules/favorites/native/
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = callback6();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabled("FavoritesGuildSuggestedChannels");
-  let obj = arr(15319);
+  let obj = arr(15369);
   const categoryStyles = obj.useCategoryStyles(tmp4);
   arr = callback();
   const tmp7 = callback2();
@@ -53,7 +53,7 @@ export default function FavoritesGuildSuggestedChannels() {
     obj[2] = categoryStyles;
     obj[3] = tmp4;
     obj[4] = memo;
-    const items2 = [tmp5(15319).renderCategoryItem(obj), ];
+    const items2 = [tmp5(15369).renderCategoryItem(obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.rows;
     obj1[1] = arr.map((result) => {
@@ -77,7 +77,7 @@ export default function FavoritesGuildSuggestedChannels() {
     items2[1] = callback4(View, obj1);
     obj[1] = items2;
     tmp10 = callback5(View, obj);
-    const tmp5Result = tmp5(15319);
+    const tmp5Result = tmp5(15369);
   }
   return tmp10;
 };

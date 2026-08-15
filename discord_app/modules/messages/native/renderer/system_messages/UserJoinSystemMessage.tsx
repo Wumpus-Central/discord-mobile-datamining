@@ -27,21 +27,21 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
       if (tmp10) {
         tmp10 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);
       }
-      let tmpResult = tmp(8170);
+      let tmpResult = tmp(8216);
       if (tmpResult.computeIsStickerReplyEnabled(guildId, channel, message, tmp10)) {
-        tmpResult = tmp(8171);
-        transformStickerResult = tmpResult.transformSticker(tmp(8174).pickWelcomeSticker(message.id));
-        const tmpResult1 = tmp(8174);
+        tmpResult = tmp(8217);
+        transformStickerResult = tmpResult.transformSticker(tmp(8220).pickWelcomeSticker(message.id));
+        const tmpResult1 = tmp(8220);
       }
     }
   }
   obj = { content: null, sticker: null, stickerLabel: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp4(8137)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp4(8187)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(systemMessageUserJoinMobile, obj);
   obj[1] = transformStickerResult;
   const intl2 = tmp(1236).intl;
   obj[2] = intl2.string(getSystemLocale.t["7Tj6HT"]);
-  const merged = Object.assign(tmp4(8138)(roleStyle));
+  const merged = Object.assign(tmp4(8188)(roleStyle));
   return obj;
 };

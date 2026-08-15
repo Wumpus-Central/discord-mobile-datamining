@@ -2,8 +2,8 @@
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
 import { SafetyHubPolicyNoticeKeys } from "SafetyHubView";
-import { t } from "../../../../../../../_runtime/03943_t.js";
-import { registerAsset } from "../../../../../../../_runtime/08029_registerAsset.js";
+import { t } from "../../../../../../../_runtime/03975_t.js";
+import { registerAsset } from "../../../../../../../_runtime/08079_registerAsset.js";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 import { frozen } from "../../EmbedUtils.tsx";
 

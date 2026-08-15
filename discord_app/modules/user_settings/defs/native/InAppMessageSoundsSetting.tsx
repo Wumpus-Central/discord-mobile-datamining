@@ -15,7 +15,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["wls+Ax"]);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
   usePredicate: require("isMetaQuest").isMetaQuest
@@ -29,7 +29,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["wls+Ax"]);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
   usePredicate: require("isMetaQuest").isMetaQuest

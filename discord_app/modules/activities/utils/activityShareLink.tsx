@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/activityShareLink.tsx
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-const items = [require("getPathsFromURL").parseQuestsEmbedCode];
+const items = [require("trimTrailingPunctuation").parseQuestsEmbedCode];
 const result = require("getSystemLocale").fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
 export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(c3, closure_14, closure_12) {

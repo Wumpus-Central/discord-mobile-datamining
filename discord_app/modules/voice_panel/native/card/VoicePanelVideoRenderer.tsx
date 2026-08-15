@@ -9,7 +9,7 @@ import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE";
 import jsxProd from "u";
 import DCDVideoRenderer from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4083";
+import importDefaultResult from "module_4115";
 
 let closure_12;
 let unpackModuleId;
@@ -1051,8 +1051,8 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         tmp4 = streamKey;
         if (!obj.cheapWorkletShallowEqual(streamKey, tmp)) {
           tmp2Result = tmp2(tmp3[8]);
-          tmp5 = f99866;
-          tmp6 = tmp2Result.runOnJS(f99866)();
+          tmp5 = f100049;
+          tmp6 = tmp2Result.runOnJS(f100049)();
         }
       }
       return;

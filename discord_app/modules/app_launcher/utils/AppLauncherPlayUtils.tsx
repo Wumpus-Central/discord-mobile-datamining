@@ -26,7 +26,7 @@ function _launchActivityInBotDM() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -68,14 +68,14 @@ function _launchActivityInBotDM() {
               const obj2 = { applicationId: null };
               obj2[0] = callback;
               if (obj14.tryLaunchAsFrame(obj2)) {
-                let obj7 = callback(10601);
+                let obj7 = callback(8723);
                 const result = obj7.stashPendingFrameLaunch(callback, { isStart: true });
                 c4 = 3;
                 const obj3 = { value: null, done: true };
                 obj3[0] = Promise.resolve(true);
                 return obj3;
               } else {
-                let obj4 = callback2(4355);
+                let obj4 = callback2(4770);
                 obj4 = { recipientIds: null };
                 obj4[0] = callback2;
                 c3 = 2;
@@ -84,7 +84,7 @@ function _launchActivityInBotDM() {
                 obj5[0] = obj4.openPrivateChannel(obj4);
                 return obj5;
               }
-              obj14 = callback(10600);
+              obj14 = callback(8722);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {
@@ -107,7 +107,7 @@ function _launchActivityInBotDM() {
               c3 = 3;
               c4 = 1;
               const obj8 = { value: null, done: false };
-              obj8[0] = callback2(10964)(obj7);
+              obj8[0] = callback2(8746)(obj7);
               return obj8;
             }
           } else if (arg0 === 1) {

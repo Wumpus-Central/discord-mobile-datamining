@@ -29,9 +29,9 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   let callback;
-  let obj = bounty(10467);
+  let obj = bounty(10687);
   callback = obj.useGetQuestImpressionId();
-  let obj1 = bounty(4083);
+  let obj1 = bounty(4115);
   const fn = function y() {
     let obj = bounty(outer1_2[5]);
     let num = 0;
@@ -41,12 +41,12 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     obj = { opacity: obj.withTiming(num, bounty(outer1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: bounty(4343).withTiming, visible, timingStandard: bounty(4346).timingStandard };
+  obj = { withTiming: bounty(4664).withTiming, visible, timingStandard: bounty(4667).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 11417131685254;
   fn.__initData = closure_6;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(14362);
+  bounty(14394);
   if (visible) {
     obj = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -60,7 +60,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj = { content: bounty(outer1_2[11]).QuestContent.VIDEO_MODAL_END_CARD, ctaContent: bounty(outer1_2[12]).QuestContentCTA.OPEN_GAME_LINK, impressionId: callback(), sourceQuestContent: closure_2 };
       const result = obj.openAdGameLinkDirectly(obj, obj);
     };
-    const items1 = [callback(tmp2(4777).Button, obj1), ];
+    const items1 = [callback(tmp2(4745).Button, obj1), ];
     let tmp9Result = null;
     if (showCloseButton) {
       const obj2 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -68,11 +68,11 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj2[1] = intl.string(tmp2(1236).t.cpT0Cq);
       obj2[3] = flag;
       obj2[4] = bounty.onClose;
-      tmp9Result = tmp9(tmp2(4777).Button, obj2);
+      tmp9Result = tmp9(tmp2(4745).Button, obj2);
     }
     items1[1] = tmp9Result;
     obj[1] = items1;
-    visible = closure_4(visible(4083).View, obj);
+    visible = closure_4(visible(4115).View, obj);
     const tmp7 = closure_4;
     tmp9 = callback;
   }

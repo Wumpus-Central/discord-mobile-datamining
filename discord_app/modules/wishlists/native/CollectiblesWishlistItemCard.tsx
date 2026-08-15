@@ -17,55 +17,42 @@ export default function CollectiblesWishlistItemCard(sku) {
   const size = sku.size;
   const merged = Object.assign(sku, Object.create(null));
   let memo;
-  let WishlistItemCardOverlay = size;
   let obj = sku(size[4]);
-  const isProfileFrameGiftingEnabled = obj.useIsProfileFrameGiftingEnabled("CollectiblesWishlistItemCard");
   const items = [initialize];
   const items1 = [sku.id, wishlistOwnerId];
-  const stateFromStores = sku(size[5]).useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     let hasSentGiftResult = null != wishlistOwnerId;
     if (hasSentGiftResult) {
       hasSentGiftResult = outer1_5.hasSentGift(sku.id, tmp);
     }
     return hasSentGiftResult;
   }, items1);
-  const obj2 = sku(size[5]);
   const items2 = [sku];
-  const productNameAndTypeFromSku = sku(size[6]).getProductNameAndTypeFromSku(sku);
+  const productNameAndTypeFromSku = sku(size[5]).getProductNameAndTypeFromSku(sku);
   memo = memo.useMemo(() => outer1_4(sku), items2);
   const items3 = [memo, size];
-  let type;
   const callback = memo.useCallback(() => {
     let tmp2 = null;
     if (null != memo) {
       const obj = { collectiblesItemData: null, size: null };
       obj[0] = tmp;
       obj[1] = size;
-      tmp2 = outer1_6(sku(size[7]).CollectiblesPreview, obj);
+      tmp2 = outer1_6(sku(size[6]).CollectiblesPreview, obj);
     }
     return tmp2;
   }, items3);
-  if (memo != null) {
-    type = memo.type;
-  }
-  if ("single" === type) {
-    if (memo.item.type === tmp2(WishlistItemCardOverlay[8]).CollectiblesItemType.PROFILE_FRAME) {
-      if (!isProfileFrameGiftingEnabled) {
-        return null;
-      }
-    }
-  }
   obj = { accessibilityLabel: productNameAndTypeFromSku, renderPreview: callback, source: sku.source, size };
-  const obj3 = sku(size[6]);
-  const tmp10 = jsx;
+  const obj2 = sku(size[5]);
+  let tmp2 = sku;
+  const tmp3 = size;
+  const tmp8 = jsx;
   const merged1 = Object.assign(merged);
   if (!flag) {
     if (!stateFromStores) {
       let OWNED = merged.overlay;
     }
     obj.overlay = OWNED;
-    tmp10(tmp11, obj);
+    return tmp8(tmp9, obj);
   }
-  WishlistItemCardOverlay = tmp2(WishlistItemCardOverlay[9]).WishlistItemCardOverlay;
-  OWNED = WishlistItemCardOverlay.OWNED;
+  OWNED = tmp2(tmp3[7]).WishlistItemCardOverlay.OWNED;
 };

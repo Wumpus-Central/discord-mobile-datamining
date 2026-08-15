@@ -18,7 +18,7 @@ export default function trackFavoritesGuildViewed() {
   obj = { source: null, total_favorites: null, is_xp_enabled: null, is_premium_tier_2: null };
   const obj3 = expandEventProperties;
   obj[0] = setNextFavoritesGuildViewSource.consumeNextFavoritesGuildViewSource();
-  obj[1] = favoritesCount.getFavoritesCount();
+  obj[1] = favoritesCountAgainstLimit.getFavoritesCountAgainstLimit();
   obj[2] = obj.getFavoritesAccess().isExperimentEnabled;
   obj[3] = isPremiumExactlyResult;
   obj3.track(AnalyticEvents.FAVORITES_GUILD_VIEWED, obj);

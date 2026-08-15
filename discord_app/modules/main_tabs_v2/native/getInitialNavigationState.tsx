@@ -82,9 +82,9 @@ function computeInitialNavigationStateWithoutLogging() {
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };
-      const RouteParam3 = tmp(4183).RouteParam;
-      const tmpResult = tmp(4170);
-      const RouteParam4 = tmp(4183).RouteParam;
+      const RouteParam3 = tmp(4215).RouteParam;
+      const tmpResult = tmp(4202);
+      const RouteParam4 = tmp(4215).RouteParam;
       obj[0] = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(lastNonVoiceRoute.lastNonVoiceRoute, obj);
       let flag = false;

@@ -45,7 +45,7 @@ function _handleToggleVideo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -249,8 +249,8 @@ export const showTabletRequirementAlert = function showTabletRequirementAlert() 
   obj.show(obj);
 };
 export const handleDisconnect = function handleDisconnect(channel) {
-  const result = importAll(1891).dismissGlobalKeyboard();
-  const obj = importAll(1891);
+  const result = importAll(1892).dismissGlobalKeyboard();
+  const obj = importAll(1892);
   const result1 = openChannelCallModal.dismissVoiceChannelScreens(channel, () => {
     const voiceChannel = callback(table[20]).selectVoiceChannel(null);
   });
@@ -295,10 +295,10 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   let obj = isEnabled(589);
   const items = [closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode, handleAudioRouteChanged];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const isVideoMode = isEnabled(10834).isVideoMode(closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode);
+    const isVideoMode = isEnabled(9886).isVideoMode(closure_9, handleConnectionOpen, reset, updateVoiceState, _detectH265HardwareDecode);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9214).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9214).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9649).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9649).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -331,7 +331,7 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
     }
     dependencyMap(isEnabled);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9235 : 9236) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9670 : 9671) };
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
@@ -366,6 +366,6 @@ export const useImmediateMaskedSpeakerStates = () => {
   const effect = React.useEffect(() => {
     callback(closure_1);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9235 : 9236) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9670 : 9671) };
   return obj;
 };

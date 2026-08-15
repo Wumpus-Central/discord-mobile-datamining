@@ -13,12 +13,12 @@ export default function CreateChannelTypeDescription(guildId) {
   let guildProfile;
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9065);
+  let obj = fetchGuildProfile(8855);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5399).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = tmp(6910).GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;
@@ -38,7 +38,7 @@ export default function CreateChannelTypeDescription(guildId) {
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["2Ab4Id"]);
-    obj[0] = jsx(tmp(4338).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    obj[0] = jsx(tmp(4734).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
     tmp9 = <View variant="text-sm/normal" color="text-subtle">{null}</View>;
   }
   return tmp9;

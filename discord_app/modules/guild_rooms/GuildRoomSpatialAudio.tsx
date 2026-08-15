@@ -1,6 +1,6 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudio.tsx
 import fetchFingerprint from "fetchFingerprint";
-import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
+import resolveCreatingNotes from "resolveCreatingNotes";
 import getName from "getName";
 
 let c5;
@@ -58,7 +58,7 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   let obj = channelId(589);
   const items = [fetchFingerprint];
   stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  let interactionsEnabled = stateFromStores(4569).useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
+  let interactionsEnabled = stateFromStores(9882).useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
   if (interactionsEnabled) {
     interactionsEnabled = null != guildId;
   }
@@ -68,9 +68,9 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   }
   dependencyMap = tmp5;
   obj = { available: interactionsEnabled, worldPoints: null };
-  const obj2 = stateFromStores(4569);
+  const obj2 = stateFromStores(9882);
   const tmp = channelId;
-  const items1 = [handleSelectedChannelStoreChange];
+  const items1 = [resolveCreatingNotes];
   const items2 = [tmp5, channelId, stateFromStores];
   obj[1] = channelId(589).useStateFromStores(items1, () => {
     if (c2) {

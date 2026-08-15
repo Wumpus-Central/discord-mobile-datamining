@@ -23,7 +23,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
     }
     return result;
   });
-  tmpResult = tmp(5905);
+  tmpResult = tmp(5283);
   let guild_id;
   if (getGuildId != null) {
     guild_id = getGuildId.guild_id;

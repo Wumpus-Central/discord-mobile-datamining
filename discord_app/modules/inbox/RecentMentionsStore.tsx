@@ -100,7 +100,7 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(7167)(message, id)) {
+        if (!tmp2(5386)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof hasFlag)) {
             message = store2.getMessage(message.channel_id, message.id);
@@ -116,7 +116,7 @@ function parseMessage(message, channelId) {
           obj[2] = !closure_23.everyoneFilter;
           obj[3] = !closure_23.roleFilter;
           let tmp20 = null;
-          if (tmp2(4600)(obj)) {
+          if (tmp2(4819)(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
               tmp2ResultResult = generateOldThreadCutoff.ackMessageId(channel.id) !== tmp12.id;
@@ -127,8 +127,8 @@ function parseMessage(message, channelId) {
               obj[1] = id;
               obj[2] = updateUserGuildSettingsInternal.isSuppressEveryoneEnabled(channel.getGuildId());
               obj[3] = updateUserGuildSettingsInternal.isSuppressRolesEnabled(channel.getGuildId());
-              tmp2ResultResult = tmp2(4600)(obj);
-              const tmp2Result = tmp2(4600);
+              tmp2ResultResult = tmp2(4819)(obj);
+              const tmp2Result = tmp2(4819);
             }
             tmp20 = tmp12;
             if (tmp2ResultResult) {
@@ -587,10 +587,11 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
+      let obj = isMentioned;
+      obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
-      if (obj2.isRawMessageMentioned(obj)) {
+      if (obj.isRawMessageMentioned(obj)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -622,7 +623,6 @@ obj = {
           }
         }
       }
-      obj2 = isMentioned;
     }
     return false;
   },
@@ -633,8 +633,8 @@ obj = {
         const findIndexResult = apply.findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
-          substr[findIndexResult] = id(4586).updateMessageRecord(tmp7, message.message);
-          const obj2 = id(4586);
+          substr[findIndexResult] = id(4803).updateMessageRecord(tmp7, message.message);
+          const obj2 = id(4803);
         }
       }
     }

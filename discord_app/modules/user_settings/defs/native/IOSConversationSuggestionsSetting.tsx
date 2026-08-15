@@ -2,7 +2,7 @@
 import noop from "noop";
 import identity from "identity";
 import createToggle from "createToggle";
-import { isIterable } from "../../../../../_runtime/03974_isIterable.js";
+import { isIterable } from "../../../../../_runtime/04006_isIterable.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 
@@ -14,7 +14,7 @@ identity = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.J8foZq);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = React.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
@@ -39,6 +39,6 @@ identity = {
   }
 };
 identity = createToggle.createToggle(identity);
-let result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
+let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
 
 export default identity;

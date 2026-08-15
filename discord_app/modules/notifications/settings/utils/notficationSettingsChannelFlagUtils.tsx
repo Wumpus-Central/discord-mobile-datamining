@@ -63,23 +63,23 @@ export const updateChannelPreset = function updateChannelPreset(guild_id, id, ar
     const obj4 = NotificationSettingsModalActionCreators;
     let obj = { message_notifications: null, flags: null };
     obj[0] = UserNotificationSettings.ALL_MESSAGES;
-    let tmp2Result = tmp2(9887);
+    let tmp2Result = tmp2(10091);
     obj[1] = tmp2Result.withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ALL_MESSAGES);
-    const result = obj4.updateChannelOverrideSettings(guild_id, id, obj, tmp2(5318).NotificationLabels.PresetAll);
-  } else if (arg2 === tmp2(4553).Presets.MENTIONS) {
+    const result = obj4.updateChannelOverrideSettings(guild_id, id, obj, tmp2(6795).NotificationLabels.PresetAll);
+  } else if (arg2 === tmp2(5046).Presets.MENTIONS) {
     obj = NotificationSettingsModalActionCreators;
     obj = { message_notifications: null, flags: null };
     obj[0] = UserNotificationSettings.ONLY_MENTIONS;
-    tmp2Result = tmp2(9887);
+    tmp2Result = tmp2(10091);
     obj[1] = tmp2Result.withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS);
-    const result1 = obj.updateChannelOverrideSettings(guild_id, id, obj, tmp2(5318).NotificationLabels.PresetMentions);
-  } else if (arg2 === tmp2(4553).Presets.NOTHING) {
+    const result1 = obj.updateChannelOverrideSettings(guild_id, id, obj, tmp2(6795).NotificationLabels.PresetMentions);
+  } else if (arg2 === tmp2(5046).Presets.NOTHING) {
     const obj7 = NotificationSettingsModalActionCreators;
     const obj1 = { message_notifications: null, flags: null };
     obj1[0] = UserNotificationSettings.NO_MESSAGES;
-    obj1[1] = tmp2(9887).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS);
-    const result2 = obj7.updateChannelOverrideSettings(guild_id, id, obj1, tmp2(5318).NotificationLabels.PresetNothing);
-    const tmp2Result1 = tmp2(9887);
+    obj1[1] = tmp2(10091).withChannelUnreadFlags(channelIdFlags, constants.UNREADS_ONLY_MENTIONS);
+    const result2 = obj7.updateChannelOverrideSettings(guild_id, id, obj1, tmp2(6795).NotificationLabels.PresetNothing);
+    const tmp2Result1 = tmp2(10091);
   }
 };
 export const updateChannelToGuildDefault = function updateChannelToGuildDefault(guild_id, id) {

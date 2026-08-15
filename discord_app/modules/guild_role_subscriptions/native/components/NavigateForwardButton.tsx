@@ -2,7 +2,7 @@
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/14536_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14568_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";

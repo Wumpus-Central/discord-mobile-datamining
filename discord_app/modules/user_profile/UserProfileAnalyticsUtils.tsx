@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileAnalyticsUtils.tsx
-import map from "map";
+import initialize from "initialize";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";
 import recomputeAffinities from "recomputeAffinities";
@@ -378,9 +378,9 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
     }
     if (!tmp5) {
       trackResult = {};
-      let tmpResult = tmp(4549);
+      let tmpResult = tmp(5042);
       const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guildId));
-      tmpResult = tmp(4549);
+      tmpResult = tmp(5042);
       const merged1 = Object.assign(tmpResult.collectChannelAnalyticsMetadataFromId(channelId));
       const merged2 = Object.assign(getTrackUserProfileProperties(userId));
       userId = userId.userId;

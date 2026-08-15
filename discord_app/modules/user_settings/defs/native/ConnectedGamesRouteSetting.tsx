@@ -8,7 +8,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.YpCiMt);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL,
   IconComponent: require("FriendsIcon").FriendsIcon,
   screen: obj
 };

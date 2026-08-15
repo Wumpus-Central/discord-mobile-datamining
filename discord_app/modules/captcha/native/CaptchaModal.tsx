@@ -5,7 +5,7 @@ import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUI
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -47,7 +47,7 @@ export default function CaptchaModal(arg0) {
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(8543)());
+  const tmp2 = callback2(onReject(8582)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -69,7 +69,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16451)({ onReject, analyticsType: memo });
+  callback = onReject(16501)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

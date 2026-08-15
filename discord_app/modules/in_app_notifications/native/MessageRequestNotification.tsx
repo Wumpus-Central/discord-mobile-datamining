@@ -20,23 +20,23 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = React.useCallback(() => {
-    numMutualGuilds(9831).clearNotification();
-    const obj = numMutualGuilds(9831);
-    const rootNavigationRef = author(4198).getRootNavigationRef();
+    numMutualGuilds(10031).clearNotification();
+    const obj = numMutualGuilds(10031);
+    const rootNavigationRef = author(4230).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
   let obj = { icon: null, header: null, children: null, onPress: null, notification: null };
-  obj = { user: author, size: null, guildId: "r" };
+  obj = { user: author, size: null, guildId: "Array" };
   obj[1] = author(1297).AvatarSizes.NORMAL;
-  obj[0] = jsx(author(1297).Avatar, { user: author, size: null, guildId: "r" });
+  obj[0] = jsx(author(1297).Avatar, { user: author, size: null, guildId: "Array" });
   obj[1] = memo;
   obj = { text: null };
   let intl = author(1236).intl;
   obj[0] = intl.string(author(1236).t["Bx4/Lf"]);
-  obj[2] = jsx(author(9848).SystemMessageText, { text: null });
+  obj[2] = jsx(author(10048).SystemMessageText, { text: null });
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(author(9907).NotificationPressable, { text: null });
+  return jsx(author(10113).NotificationPressable, { text: null });
 };

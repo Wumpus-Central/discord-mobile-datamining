@@ -3,9 +3,9 @@ import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/07901_inlineStyles.js";
-import { registerAsset } from "../../../../../_runtime/09252_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09253_registerAsset.js";
+import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
+import { registerAsset } from "../../../../../_runtime/09687_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09688_registerAsset.js";
 import { Button } from "../../../../design/void/native.tsx";
 import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
 
@@ -46,7 +46,7 @@ obj = { tintColor: require("Themes").colors.ICON_FEEDBACK_CRITICAL };
 obj[0] = obj;
 createCacheKey = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = createCacheKey;
-obj[2] = { tintColor: "title" };
+obj[2] = { tintColor: "r" };
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
   let alwaysWhite;
@@ -66,13 +66,13 @@ const memoResult = importAllResult.memo((arg0) => {
     let obj = { style: null, size: "xs" };
     items[1] = redTint;
     obj[0] = items;
-    return callback(tmp2(9244).HeadphonesDenyIcon, obj);
-  } else if (tmp2(9243).MuteDeafenIconState.DEAFENED === state) {
+    return callback(tmp2(9679).HeadphonesDenyIcon, obj);
+  } else if (tmp2(9678).MuteDeafenIconState.DEAFENED === state) {
     obj = { style: null, size: "xs" };
     const items1 = [style];
     obj[0] = items1;
-    return callback(tmp2(9246).HeadphonesSlashIcon, obj);
-  } else if (tmp2(9243).MuteDeafenIconState.MUTED_SERVER === state) {
+    return callback(tmp2(9681).HeadphonesSlashIcon, obj);
+  } else if (tmp2(9678).MuteDeafenIconState.MUTED_SERVER === state) {
     const items2 = [style, ];
     let redTint1 = null;
     if (!alwaysWhite) {
@@ -81,17 +81,17 @@ const memoResult = importAllResult.memo((arg0) => {
     const obj1 = { style: null, size: "xs" };
     items2[1] = redTint1;
     obj1[0] = items2;
-    return callback(tmp2(9248).MicrophoneDenyIcon, obj1);
-  } else if (tmp2(9243).MuteDeafenIconState.MUTED_LOCAL === state) {
+    return callback(tmp2(9683).MicrophoneDenyIcon, obj1);
+  } else if (tmp2(9678).MuteDeafenIconState.MUTED_LOCAL === state) {
     const obj2 = { style: null, size: "xs" };
     const items3 = [style];
     obj2[0] = items3;
-    return callback(tmp2(9248).MicrophoneDenyIcon, obj2);
-  } else if (tmp2(9243).MuteDeafenIconState.MUTED === state) {
+    return callback(tmp2(9683).MicrophoneDenyIcon, obj2);
+  } else if (tmp2(9678).MuteDeafenIconState.MUTED === state) {
     const obj3 = { style: null, size: "xs" };
     const items4 = [style];
     obj3[0] = items4;
-    return callback(tmp2(9250).MicrophoneSlashIcon, obj3);
+    return callback(tmp2(9685).MicrophoneSlashIcon, obj3);
   } else {
     tmp2(1370).assertNever(state);
   }
@@ -106,11 +106,11 @@ const memoResult1 = importAllResult.memo((state) => {
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
     return callback(tmp3(1297).Icon, obj);
-  } else if (tmp3(9243).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
+  } else if (tmp3(9678).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
     obj = {};
     const merged2 = Object.assign(merged);
     return callback(VideoDisabledSvgIcon, obj);
-  } else if (tmp3(9243).VideoIconState.VIDEO_ACTIVE === state) {
+  } else if (tmp3(9678).VideoIconState.VIDEO_ACTIVE === state) {
     const obj1 = {};
     const merged3 = Object.assign(merged);
     obj1.source = registerAsset;

@@ -20,7 +20,7 @@ function _fetchVideoFilterAssets() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -118,7 +118,7 @@ function _uploadVideoFilterAsset() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -158,7 +158,7 @@ function _uploadVideoFilterAsset() {
           } else if (1 === tmp7) {
             constants = 0;
             callback = mergeGuildAvatar;
-            const tmp24 = new callback(9228)(callback);
+            const tmp24 = new callback(9663)(callback);
             throw tmp24;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -220,7 +220,7 @@ function _deleteVideoFilterAsset() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -256,9 +256,9 @@ function _deleteVideoFilterAsset() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            lib2 = lib(9229).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
-            const obj7 = lib(9229);
-            let result = lib(9226).isCustomBackgroundOption(lib2);
+            lib2 = lib(9664).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
+            const obj7 = lib(9664);
+            let result = lib(9661).isCustomBackgroundOption(lib2);
             if (result) {
               result = lib2.id === lib.id;
             }
@@ -270,7 +270,7 @@ function _deleteVideoFilterAsset() {
             obj4[1] = lib;
             obj.dispatch(obj4);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -336,7 +336,7 @@ function _saveLastUsedBackgroundOption() {
             obj3.dispatch(obj5);
             c4 = 3;
           }
-          obj12 = lib(9226);
+          obj12 = lib(9661);
         }
       } else if (arg0 === 1) {
         c4 = 3;

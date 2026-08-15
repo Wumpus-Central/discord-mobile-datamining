@@ -9,7 +9,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.UVl5Hz);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return !HideFriendRequestNotes.useSetting();
@@ -27,7 +27,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.UVl5Hz);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return !HideFriendRequestNotes.useSetting();

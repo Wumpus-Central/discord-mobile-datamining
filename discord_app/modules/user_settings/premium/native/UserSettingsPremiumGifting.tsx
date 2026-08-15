@@ -2,7 +2,7 @@
 import getSystemLocale from "getSystemLocale";
 import importAllResult from "useBlockedPaymentsConfig";
 import get_ActivityIndicator from "apply";
-import map from "map";
+import initialize from "initialize";
 import addEntitlement from "addEntitlement";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
@@ -28,12 +28,12 @@ function GiftingSectionTitle(title) {
   if (useIsMobileVisualRefreshExperimentEnabled("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
-    let tmp3Result = tmp3(tmp4(5828).TableRowGroupTitle, obj);
+    let tmp3Result = tmp3(tmp4(6286).TableRowGroupTitle, obj);
   } else {
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
     obj[0] = tmp.title;
     obj[4] = title;
-    tmp3Result = tmp3(tmp4(4338).Text, obj);
+    tmp3Result = tmp3(tmp4(4734).Text, obj);
   }
   return tmp3Result;
 }
@@ -109,7 +109,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   const GiftingBadgeExperiment = _require(stateFromStoresArray[21]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "gift_inventory" }).enabled;
   let obj5 = _require(stateFromStoresArray[16]);
-  const items2 = [map];
+  const items2 = [initialize];
   const stateFromStores = obj5.useStateFromStores(items2, () => badgeById.getBadgeById(_undefined(stateFromStoresArray[22]).BadgeId.GIFTING));
   [tmp14, c6] = memo(undefined.useState(false), 2);
   let obj6 = _require(stateFromStoresArray[23]);

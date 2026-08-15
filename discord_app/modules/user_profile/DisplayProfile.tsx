@@ -151,7 +151,7 @@ Object.defineProperty(prototype, "canEditThemes", {
   set: undefined
 });
 Object.defineProperty(prototype, "application", {
-  get: function application(channelId, arg1, action) {
+  get: function application(setOrientationLockState, arg1) {
     return this._userProfile.application;
   },
   set: undefined

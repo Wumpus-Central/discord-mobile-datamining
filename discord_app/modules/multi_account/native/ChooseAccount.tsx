@@ -53,7 +53,7 @@ export default function ChooseAccount() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -93,10 +93,10 @@ export default function ChooseAccount() {
                 intl2 = tmp31(1236).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1236).t["ETE/oC"]);
-                obj1 = outer1_1(4706).confirm(obj1);
+                obj1 = outer1_1(4656).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = outer1_1(4706);
+                const obj8 = outer1_1(4656);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -108,13 +108,13 @@ export default function ChooseAccount() {
               return obj3;
             } else {
               if (arg1) {
-                obj = outer1_1(4310);
+                obj = outer1_1(4342);
                 obj.hideActionSheet();
-                obj1 = outer1_2(11861);
+                obj1 = outer1_2(11589);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp23) {
             c4 = tmp;
@@ -144,7 +144,7 @@ export default function ChooseAccount() {
   let intl2 = _getSystemLocale.intl;
   obj[2] = intl2.string(_getSystemLocale.t["0M5fN7"]);
   obj[1] = callback(_Text.Text, obj);
-  obj[2] = multiAccountUsers(13292);
+  obj[2] = multiAccountUsers(13324);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -220,7 +220,7 @@ export default function ChooseAccount() {
   let obj3 = { themedColor: null, size: null, source: null };
   obj3[0] = multiAccountUsers(712).colors.TEXT_LINK;
   obj3[1] = _Button.Icon.Sizes.SMALL_20;
-  obj3[2] = multiAccountUsers(15170);
+  obj3[2] = multiAccountUsers(15219);
   obj2[0] = callback(_Form.FormRow.Icon, obj3);
   let intl3 = _getSystemLocale.intl;
   obj2[1] = intl3.string(_getSystemLocale.t.bPP34Q);
@@ -245,5 +245,5 @@ export default function ChooseAccount() {
   items[1] = callback(_Form.FormRow, obj2);
   obj1[1] = items;
   obj[5] = callback2(View, obj1);
-  return callback(multiAccountUsers(8570), obj);
+  return callback(multiAccountUsers(8609), obj);
 };

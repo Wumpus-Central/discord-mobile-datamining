@@ -120,15 +120,15 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
   let experiments;
   let overridesInfo;
   ({ colors, baseColors } = getEmbedThemeColors(closure_2));
-  let obj = experimentTreatmentFromEmbedURL(8271);
+  let obj = experimentTreatmentFromEmbedURL(4364);
   const experimentFromEmbedURL = obj.getExperimentFromEmbedURL(url);
-  let obj1 = experimentTreatmentFromEmbedURL(8271);
+  let obj1 = experimentTreatmentFromEmbedURL(4364);
   experimentTreatmentFromEmbedURL = obj1.getExperimentTreatmentFromEmbedURL(url);
   const tmp3 = getEmbedThemeColors(closure_2);
-  const legacyExperiments = experimentTreatmentFromEmbedURL(10433).getLegacyExperiments();
+  const legacyExperiments = experimentTreatmentFromEmbedURL(10681).getLegacyExperiments();
   ({ experiments, overridesInfo } = legacyExperiments);
-  const obj3 = experimentTreatmentFromEmbedURL(10433);
-  const apexExperiments = experimentTreatmentFromEmbedURL(10434).getApexExperiments();
+  const obj3 = experimentTreatmentFromEmbedURL(10681);
+  const apexExperiments = experimentTreatmentFromEmbedURL(10682).getApexExperiments();
   let tmp10 = null;
   if (null != experimentFromEmbedURL) {
     let tmp11 = experiments[experimentFromEmbedURL];
@@ -146,7 +146,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
       if (tmp12 == null) {
         tmp12 = null;
       }
-      let tmp4Result = tmp4(8271);
+      let tmp4Result = tmp4(4364);
       const experimentBuckets = tmp4Result.getExperimentBuckets(tmp10);
       const iter = experimentBuckets.find((value) => value.value === experimentTreatmentFromEmbedURL);
       if (null != iter) {
@@ -157,9 +157,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         EXPERIMENT = ExperimentEmbedType.EXPERIMENT;
       }
       id = id.getId();
-      tmp4Result = tmp4(11276);
+      tmp4Result = tmp4(10989);
       const experimentServerAssignment = tmp4Result.getExperimentServerAssignment(tmp10, id);
-      const experimentServerAssignmentLabel = tmp4(8271).getExperimentServerAssignmentLabel(tmp10, experimentServerAssignment);
+      const experimentServerAssignmentLabel = tmp4(4364).getExperimentServerAssignmentLabel(tmp10, experimentServerAssignment);
       if (EXPERIMENT === tmp13.EXPERIMENT_TREATMENT) {
         if (null != iter) {
           let label = iter.label;
@@ -174,7 +174,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         obj.titleColor = colors.titleColor;
         obj.subtitle = label;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = tmp4(8121).getAssetUriForEmbed(tmp(11277));
+        obj.thumbnailUrl = tmp4(8171).getAssetUriForEmbed(tmp(10990));
         obj.thumbnailBackgroundColor = colors.backgroundColor;
         obj.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -203,14 +203,14 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         }
         obj.subtitle = combined1;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = tmp4(8121).getAssetUriForEmbed(tmp(11277));
+        obj.thumbnailUrl = tmp4(8171).getAssetUriForEmbed(tmp(10990));
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj.acceptLabelText = "View Experiment Details";
         obj.embedCanBeTapped = true;
         obj.type = InviteTypes.GUILD;
         return obj;
       }
-      const tmp4Result1 = tmp4(8271);
+      const tmp4Result1 = tmp4(4364);
     }
   }
   obj1 = {};
@@ -226,11 +226,11 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
   obj1.subtitleColor = colors.subtitleColor;
   obj1.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj1.bodyTextColor = colors.bodyTextColor;
-  const obj4 = experimentTreatmentFromEmbedURL(10434);
+  const obj4 = experimentTreatmentFromEmbedURL(10682);
   if (tmp4Result4.isThemeDark(closure_2)) {
-    let tmpResult = tmp(11274);
+    let tmpResult = tmp(10987);
   } else {
-    tmpResult = tmp(11275);
+    tmpResult = tmp(10988);
   }
   obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

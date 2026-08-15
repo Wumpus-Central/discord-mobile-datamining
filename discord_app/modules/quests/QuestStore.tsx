@@ -432,13 +432,13 @@ const questStore = new QuestStore(require("dispatcher"), {
       let tmp13 = mapped;
       let tmp14 = dependencyMap;
       let tmp15 = dependencyMap;
-      let obj5 = mapped(7226);
+      let obj5 = mapped(7451);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5226).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(6719).QuestContent.QUEST_BAR)) {
         let tmp17 = tmp12;
         let tmp18 = tmp14;
-        let tmp13Result = tmp13(7234);
+        let tmp13Result = tmp13(7459);
         let obj1 = { location: null };
         let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
@@ -472,7 +472,7 @@ const questStore = new QuestStore(require("dispatcher"), {
         let tmp32 = mapped;
         let tmp33 = dependencyMap;
         let tmp34 = dependencyMap;
-        let obj10 = mapped(7226);
+        let obj10 = mapped(7451);
         let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
@@ -670,7 +670,7 @@ const questStore = new QuestStore(require("dispatcher"), {
           let tmp24 = map3;
           let tmp25 = tmp36;
           let tmp26 = tmp38;
-          let tmp37Result = tmp37(7226);
+          let tmp37Result = tmp37(7451);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }

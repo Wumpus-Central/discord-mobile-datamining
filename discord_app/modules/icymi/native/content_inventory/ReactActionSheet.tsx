@@ -107,7 +107,7 @@ function ReactActionSheetBase(content) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -124,13 +124,13 @@ function ReactActionSheetBase(content) {
             } else {
               let closure_0 = tmp4;
               outer1_5(true);
-              v0(8976).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
-              const obj5 = v0(8976);
+              v0(9057).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
+              const obj5 = v0(9057);
               const obj1 = { itemId: null, itemType: null, actionParameters: null };
               obj1[0] = outer1_0.id;
               obj1[1] = outer1_6;
               obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
-              v0(8976).feedItemActioned(obj1);
+              v0(9057).feedItemActioned(obj1);
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
@@ -149,7 +149,7 @@ function ReactActionSheetBase(content) {
             callback(false);
             callback2("");
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -173,7 +173,7 @@ function ReactActionSheetBase(content) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -214,7 +214,7 @@ function ReactActionSheetBase(content) {
             } else {
               outer1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp9) {
             c3 = tmp;

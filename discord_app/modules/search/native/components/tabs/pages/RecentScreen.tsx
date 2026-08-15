@@ -35,8 +35,8 @@ function ClearAllHistory(searchContext) {
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1236).intl;
   obj[2] = intl2.string(searchContext(1236).t.LFTAUp);
-  obj[4] = jsx(searchContext(4338).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(4909).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  obj[4] = jsx(searchContext(4734).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(5433).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
@@ -246,7 +246,7 @@ let closure_20 = importAllResult.memo((searchContext) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -288,7 +288,7 @@ let closure_20 = importAllResult.memo((searchContext) => {
             const result = obj.trackSuggestedSearchClicked(obj3);
             outer1_2(closure_0, closure_1);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c4 = tmp;

@@ -2,191 +2,191 @@
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7312);
+    return callback(7533);
   }
 };
 const items = [
   obj,
   {
     load() {
-      return callback(7313);
+      return callback(7534);
     }
   },
   {
     load() {
-      return callback(7314);
+      return callback(7535);
     }
   },
   {
     load() {
-      return callback(7315);
+      return callback(7536);
     }
   },
   {
     load() {
-      return callback(7316);
+      return callback(7537);
     }
   },
   {
     load() {
-      return callback(7317);
+      return callback(7538);
     }
   },
   {
     load() {
-      return callback(7318);
+      return callback(7539);
     }
   },
   {
     load() {
-      return callback(7319);
+      return callback(7540);
     }
   },
   {
     load() {
-      return callback(7320);
+      return callback(7541);
     }
   },
   {
     load() {
-      return callback(7321);
+      return callback(7542);
     }
   },
   {
     load() {
-      return callback(7322);
+      return callback(7543);
     }
   },
   {
     load() {
-      return callback(7323);
+      return callback(7544);
     }
   },
   {
     load() {
-      return callback(7324);
+      return callback(7545);
     }
   },
   {
     load() {
-      return callback(7325);
+      return callback(7546);
     }
   },
   {
     load() {
-      return callback(7326);
+      return callback(7547);
     }
   },
   {
     load() {
-      return callback(7327);
+      return callback(7548);
     }
   },
   {
     load() {
-      return callback(7328);
+      return callback(7549);
     }
   },
   {
     load() {
-      return callback(7329);
+      return callback(7550);
     }
   }
 ];
 obj = {
   load() {
-    return callback(7330);
+    return callback(7551);
   }
 };
 const items1 = [
   obj,
   {
     load() {
-      return callback(7331);
+      return callback(7552);
     }
   },
   {
     load() {
-      return callback(7332);
+      return callback(7553);
     }
   },
   {
     load() {
-      return callback(7333);
+      return callback(7554);
     }
   },
   {
     load() {
-      return callback(7334);
+      return callback(7555);
     }
   },
   {
     load() {
-      return callback(7335);
+      return callback(7556);
     }
   },
   {
     load() {
-      return callback(7336);
+      return callback(7557);
     }
   },
   {
     load() {
-      return callback(7337);
+      return callback(7558);
     }
   },
   {
     load() {
-      return callback(7338);
+      return callback(7559);
     }
   },
   {
     load() {
-      return callback(7339);
+      return callback(7560);
     }
   },
   {
     load() {
-      return callback(7340);
+      return callback(7561);
     }
   },
   {
     load() {
-      return callback(7341);
+      return callback(7562);
     }
   },
   {
     load() {
-      return callback(7342);
+      return callback(7563);
     }
   },
   {
     load() {
-      return callback(7343);
+      return callback(7564);
     }
   },
   {
     load() {
-      return callback(7344);
+      return callback(7565);
     }
   },
   {
     load() {
-      return callback(7345);
+      return callback(7566);
     }
   },
   {
     load() {
-      return callback(7346);
+      return callback(7567);
     }
   },
   {
     load() {
-      return callback(7347);
+      return callback(7568);
     }
   }
 ];
-closure_0 = require("module_7316")((arg0, arg1, arg2) => {
+closure_0 = require("module_7537")((arg0, arg1, arg2) => {
   let closure_0 = arg0;
   let closure_1 = arg1;
   let closure_2 = arg2;
@@ -205,7 +205,7 @@ closure_0 = require("module_7316")((arg0, arg1, arg2) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -263,7 +263,7 @@ closure_0 = require("module_7316")((arg0, arg1, arg2) => {
   iter.next();
   return iter;
 });
-const result = require("module_7313").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
+const result = require("module_7534").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
 export const getBurstAnimation = function() {
   const self = this;

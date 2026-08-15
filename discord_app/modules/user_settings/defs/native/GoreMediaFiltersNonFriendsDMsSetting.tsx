@@ -30,7 +30,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["Yh+HX1"]);
   },
-  parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
+  parent: require("MobileUserSettings").MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,
   onPress: onGoreContentNonFriendsDmOnPress,
   useSearchTerms() {
@@ -49,7 +49,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["Yh+HX1"]);
   },
-  parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
+  parent: require("MobileUserSettings").MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,
   onPress: onGoreContentNonFriendsDmOnPress,
   useSearchTerms() {

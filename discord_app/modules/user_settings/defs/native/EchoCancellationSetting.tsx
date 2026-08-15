@@ -10,7 +10,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.iWTwu6);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue: function useEchoCancellationSettingValue() {
     const items = [_detectH265HardwareDecode];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());

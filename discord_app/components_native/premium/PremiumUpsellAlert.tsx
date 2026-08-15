@@ -9,10 +9,10 @@ import { getIcons } from "items";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/08433_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08434_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08755_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08756_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08472_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08473_registerAsset.js";
+import { registerAsset } from "../../../_runtime/09359_registerAsset.js";
+import { registerAsset } from "../../../_runtime/09360_registerAsset.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { createCacheKey } from "../../design/components/Styles/native/createStyles.tsx";
 import { Text } from "../../design/components/Text/native/Text.tsx";
@@ -64,28 +64,28 @@ function GlobalEmojiUpsell(arg0) {
   ({ alertWidth, useTier0Description } = arg0);
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let sku_id;
+  let skuId;
   if (premiumTrialOffer != null) {
-    const subscription_trial = premiumTrialOffer.subscription_trial;
-    if (subscription_trial != null) {
-      sku_id = subscription_trial.sku_id;
+    const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+    if (subscriptionTrial != null) {
+      skuId = subscriptionTrial.skuId;
     }
   }
   const intl = tmp(1236).intl;
   const formatResult = intl.format(getSystemLocale.t["KEn+LY"], {});
-  if (null != sku_id) {
-    if (TIER_0.TIER_0 === sku_id) {
+  if (null != skuId) {
+    if (TIER_0.TIER_0 === skuId) {
       const intl3 = tmp(1236).intl;
       obj = { planName: null };
-      let tmpResult = tmp(4007);
+      let tmpResult = tmp(4039);
       obj[0] = tmpResult.getPremiumTypeDisplayName(closure_13.TIER_0);
       let formatResult1 = intl3.format(tmp(1236).t["1P7x8p"], obj);
     } else {
       formatResult1 = formatResult;
-      if (tmp8.TIER_2 === sku_id) {
+      if (tmp8.TIER_2 === skuId) {
         const intl5 = tmp(1236).intl;
         obj = { planName: null };
-        tmpResult = tmp(4007);
+        tmpResult = tmp(4039);
         obj[0] = tmpResult.getPremiumTypeDisplayName(closure_13.TIER_2);
         formatResult1 = intl5.format(tmp(1236).t["1P7x8p"], obj);
       }
@@ -95,9 +95,9 @@ function GlobalEmojiUpsell(arg0) {
     if (useTier0Description) {
       const intl2 = tmp(1236).intl;
       const obj1 = { planName: null };
-      obj1[0] = tmp(4007).getPremiumTypeDisplayName(closure_13.TIER_0);
+      obj1[0] = tmp(4039).getPremiumTypeDisplayName(closure_13.TIER_0);
       formatResult1 = intl2.format(tmp(1236).t.kWBwlJ, obj1);
-      const tmpResult1 = tmp(4007);
+      const tmpResult1 = tmp(4039);
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
@@ -136,9 +136,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8753);
+    let tmp4Result = tmp4(9357);
   } else {
-    tmp4Result = tmp4(8754);
+    tmp4Result = tmp4(9358);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -213,9 +213,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp7 = closure_14;
   const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8757);
+    let tmp4Result = tmp4(9361);
   } else {
-    tmp4Result = tmp4(8758);
+    tmp4Result = tmp4(9362);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -233,9 +233,9 @@ function GuildCapUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8759);
+    let tmp4Result = tmp4(9363);
   } else {
-    tmp4Result = tmp4(8760);
+    tmp4Result = tmp4(9364);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -266,7 +266,7 @@ function UploadUpsell(arg0) {
       obj = { dataSavingMode };
       const result = obj.updatedUnsyncedSettings(obj);
     };
-    tmp6Result = callback2(tmp(5829).TableSwitchRow, obj);
+    tmp6Result = callback2(tmp(7178).TableSwitchRow, obj);
   }
   children[1] = tmp6Result;
   return closure_15(closure_16, { children });

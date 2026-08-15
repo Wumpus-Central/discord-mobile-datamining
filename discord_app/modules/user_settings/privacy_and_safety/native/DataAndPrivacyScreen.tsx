@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx
 import noop from "noop";
 import hasConsented from "hasConsented";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import ME from "ME";
 import jsxProd from "jsxProd";
 
@@ -13,13 +13,13 @@ let metroImportAll;
 const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
 
 export default function DataAndPrivacySettings() {
-  let obj = stackNavigation(1499);
+  let obj = stackNavigation(1500);
   stackNavigation = obj.useStackNavigation();
   obj = { settings: items, subLabel: null };
-  items = [MobileSetting.USE_DATA_TO_IMPROVE_DISCORD];
+  items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   let intl = stackNavigation(1236).intl;
   obj = { helpdeskArticle: null };
   let obj3 = items1(1993);
@@ -27,7 +27,7 @@ export default function DataAndPrivacySettings() {
   obj[1] = intl.format(stackNavigation(1236).t["igTSG/"], obj);
   items1 = [obj, , , ];
   let obj1 = { settings: items2, subLabel: null };
-  items2 = [MobileSetting.USE_DATA_TO_CUSTOMIZE_DISCORD];
+  items2 = [MobileUserSettings.USE_DATA_TO_CUSTOMIZE_DISCORD];
   let intl2 = stackNavigation(1236).intl;
   let obj2 = { helpdeskArticle: null };
   let obj6 = items1(1993);
@@ -35,7 +35,7 @@ export default function DataAndPrivacySettings() {
   obj1[1] = intl2.format(stackNavigation(1236).t["eQL/Mr"], obj2);
   items1[1] = obj1;
   obj3 = { settings: items3, subLabel: null };
-  items3 = [MobileSetting.USE_DATA_FOR_QUESTS];
+  items3 = [MobileUserSettings.USE_DATA_FOR_QUESTS];
   let intl3 = stackNavigation(1236).intl;
   const obj4 = { helpdeskArticle: null };
   let obj9 = items1(1993);
@@ -43,7 +43,7 @@ export default function DataAndPrivacySettings() {
   obj3[1] = intl3.format(stackNavigation(1236).t.cf9mvV, obj4);
   items1[2] = obj3;
   const obj5 = { settings: items4, subLabel: null };
-  items4 = [MobileSetting.USE_DATA_FOR_QUESTS_3P];
+  items4 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P];
   let intl4 = stackNavigation(1236).intl;
   obj6 = { helpdeskArticle: null };
   let obj12 = items1(1993);
@@ -53,7 +53,7 @@ export default function DataAndPrivacySettings() {
   const obj7 = { label: null, settings: null, subLabel: null };
   const intl5 = stackNavigation(1236).intl;
   obj7[0] = intl5.string(stackNavigation(1236).t.BG7QsQ);
-  const items5 = [MobileSetting.REQUEST_YOUR_DATA];
+  const items5 = [MobileUserSettings.REQUEST_YOUR_DATA];
   obj7[1] = items5;
   const intl6 = stackNavigation(1236).intl;
   const obj8 = { helpdeskArticle: null };
@@ -61,7 +61,7 @@ export default function DataAndPrivacySettings() {
   obj7[2] = intl6.format(stackNavigation(1236).t.P3kNfr, obj8);
   items1.push(obj7);
   obj9 = { settings: items6, subLabel: null };
-  items6 = [MobileSetting.PROFILE_PRIVACY];
+  items6 = [MobileUserSettings.PROFILE_PRIVACY];
   const intl7 = stackNavigation(1236).intl;
   obj9[1] = intl7.format(stackNavigation(1236).t.N1P5gE, {
     onClick() {
@@ -69,14 +69,14 @@ export default function DataAndPrivacySettings() {
     }
   });
   items1.push(obj9);
-  const items7 = [MobileSetting.NOTIFY_FRIENDS_ON_PROFILE_UPDATE];
+  const items7 = [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE];
   items1.push({ settings: items7 });
   const effect = React.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14180).fetchConsents();
-      const obj = stackNavigation(14180);
+      const consents = stackNavigation(14212).fetchConsents();
+      const obj = stackNavigation(14212);
     }
-    const harvestStatus = stackNavigation(14183).fetchHarvestStatus();
+    const harvestStatus = stackNavigation(14215).fetchHarvestStatus();
   }, []);
   const items8 = [stackNavigation, items1];
   const obj11 = { children: null };
@@ -119,8 +119,8 @@ export default function DataAndPrivacySettings() {
     }
   };
   const obj16 = items1(1993);
-  obj12[0] = stackNavigation(14140).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [callback(items1(14140), obj12), callback(items1(13959), { node: memo })];
+  obj12[0] = stackNavigation(14172).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [callback(items1(14172), obj12), callback(items1(13991), { node: memo })];
   obj11[0] = items9;
   return callback2(closure_9, obj11);
 };

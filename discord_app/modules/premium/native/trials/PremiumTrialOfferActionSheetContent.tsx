@@ -30,9 +30,9 @@ const memoResult = require("noop").memo(function PremiumTrialOfferActionSheetCon
   let trialOffer;
   ({ trialOffer, intervalDuration } = onConfirm);
   const tmp = callback2();
-  let subscription_trial;
+  let subscriptionTrial;
   if (trialOffer != null) {
-    subscription_trial = trialOffer.subscription_trial;
+    subscriptionTrial = trialOffer.subscriptionTrial;
   }
   let obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };
   const intl = getSystemLocale.intl;
@@ -56,18 +56,18 @@ const memoResult = require("noop").memo(function PremiumTrialOfferActionSheetCon
   const items1 = [callback(View, { style: tmp.heroIllustrationContainer, children: callback(AccountAgeTier10LargeBadge.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) }), , , ];
   const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl7 = getSystemLocale.intl;
-  let sku_id;
-  if (subscription_trial != null) {
-    sku_id = subscription_trial.sku_id;
+  let skuId;
+  if (subscriptionTrial != null) {
+    skuId = subscriptionTrial.skuId;
   }
   let displayNameFromSku = null;
-  if (null != sku_id) {
-    let sku_id1;
-    if (subscription_trial != null) {
-      sku_id1 = subscription_trial.sku_id;
+  if (null != skuId) {
+    let skuId1;
+    if (subscriptionTrial != null) {
+      skuId1 = subscriptionTrial.skuId;
     }
-    displayNameFromSku = tmp3(4007).getDisplayNameFromSku(sku_id1);
-    const tmp3Result = tmp3(4007);
+    displayNameFromSku = tmp3(4039).getDisplayNameFromSku(skuId1);
+    const tmp3Result = tmp3(4039);
   }
   obj3[3] = intl7.formatToPlainString(getSystemLocale.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
   items1[1] = callback(Text.Text, obj3);

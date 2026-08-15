@@ -26,32 +26,37 @@ export const useHasFavoritesGuildSuggestions = function useHasFavoritesGuildSugg
 export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestions(suggestions) {
   state.setState({ suggestions });
 };
-export const useFavoritesGuildShouldShowSuggestions = function useFavoritesGuildShouldShowSuggestions() {
-  let hasAccess;
-  let isFreemium;
-  const favoritesAccess = useFavoritesAccess.useFavoritesAccess();
-  ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = useFavoritesAccess;
-  useSelectedDismissibleContent;
-  if (hasAccess) {
-    if (isFreemium) {
-      if (tmp4) {
-        const items = [tmp(1377).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
-      }
-      const tmp9 = callback(tmp6([]), 2);
-      require = tmp10;
-      const items1 = [tmp9[1]];
-      const layoutEffect = React.useLayoutEffect(() => {
-        outer1_8.setState({
-          dismiss() {
-            return callback(outer1_6.USER_DISMISS);
-          }
-        });
-      }, items1);
-      const layoutEffect1 = React.useLayoutEffect(() => () => state.setState({ dismiss: closure_5 }), []);
-      return tmp9[0] === tmp(1377).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
-    }
+export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
+  let obj = useFavoritesAccess;
+  const favoritesAccess = obj.useFavoritesAccess();
+  let isFreemium = favoritesAccess.hasAccess;
+  if (isFreemium) {
+    isFreemium = favoritesAccess.isFreemium;
   }
+  if (isFreemium) {
+    isFreemium = tmp4;
+  }
+  tmp4 = callback2((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
+  if (isFreemium) {
+    const items = [tmp(1377).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+    let items1 = items;
+  } else {
+    items1 = [];
+  }
+  const tmp5 = callback(useSelectedDismissibleContent.useSelectedDismissibleContent(items1), 2);
+  require = tmp6;
+  const items2 = [tmp5[1]];
+  const layoutEffect = React.useLayoutEffect(() => {
+    outer1_8.setState({
+      dismiss() {
+        callback(outer1_6.USER_DISMISS);
+        outer1_8.setState({ suggestions: outer1_7 });
+      }
+    });
+  }, items2);
+  const layoutEffect1 = React.useLayoutEffect(() => () => state.setState({ dismiss: closure_5 }), []);
+  obj = { isEligible: isFreemium, isSelected: tmp5[0] === tmp(1377).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS };
+  return obj;
 };
 export const useFavoritesGuildSuggestionsDismissal = function useFavoritesGuildSuggestionsDismissal() {
   return state((dismiss) => dismiss.dismiss);

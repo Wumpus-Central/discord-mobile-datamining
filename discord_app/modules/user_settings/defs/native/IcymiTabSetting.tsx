@@ -11,7 +11,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.D4clKq);
   },
-  parent: require("MobileSetting").MobileSetting.ADVANCED,
+  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
   useValue: function useICYMISettingValue() {
     return useLabFeature(apexExperiment.ICYMI_LAB_FEATURE);
   },
@@ -38,7 +38,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.D4clKq);
   },
-  parent: require("MobileSetting").MobileSetting.ADVANCED,
+  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
   useValue: function useICYMISettingValue() {
     return useLabFeature(apexExperiment.ICYMI_LAB_FEATURE);
   },

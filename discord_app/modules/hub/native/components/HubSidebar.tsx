@@ -29,8 +29,8 @@ function HubItem(arg0) {
   }
   let obj = { style: createCacheKey().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = createCacheKey();
-  obj[6] = callback(tmp5(11828).BaseChannelName, { name: label, mode: DEFAULT });
-  obj[7] = callback(tmp5(11828).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj[6] = callback(tmp5(11553).BaseChannelName, { name: label, mode: DEFAULT });
+  obj[7] = callback(tmp5(11553).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: null };
@@ -68,7 +68,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(15424);
+  guild(15474);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -79,33 +79,33 @@ export default function HubSidebar(guild) {
     obj[0] = row;
     obj = { guild: null };
     obj[0] = guild;
-    const items4 = [callback(stateFromStores(15425), obj), , , ];
+    const items4 = [callback(stateFromStores(15475), obj), , , ];
     obj1 = { active: null, IconComponent: null, label: null, handleItemClick: null, unreadCount: null };
     obj1[0] = stateFromStores1;
-    obj1[1] = tmp(13935).CompassIcon;
+    obj1[1] = tmp(13967).CompassIcon;
     const intl = tmp(1236).intl;
     obj1[2] = intl.string(tmp(1236).t.K50GHd);
     obj1[3] = function handleItemClick() {
-      guild(4353).transitionToChannel(stateFromStores.id);
+      guild(4768).transitionToChannel(stateFromStores.id);
     };
     obj1[4] = tmp7;
     items4[1] = callback(HubItem, obj1);
     obj2 = { IconComponent: null, label: null, handleItemClick: null };
-    obj2[0] = tmp(12189).PlusMediumIcon;
+    obj2[0] = tmp(11932).PlusMediumIcon;
     const intl2 = tmp(1236).intl;
     obj2[1] = intl2.string(tmp(1236).t.emRpdS);
     obj2[2] = function handleItemClick() {
-      let obj = stateFromStores(11755);
+      let obj = stateFromStores(11475);
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
       return obj.open(obj);
     };
     items4[2] = callback(HubItem, obj2);
     const obj3 = { IconComponent: null, label: null, handleItemClick: null };
-    obj3[0] = tmp(4280).UserPlusIcon;
+    obj3[0] = tmp(4312).UserPlusIcon;
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(9128).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, outer1_6.GUILD_HEADER);
+      const result = guild(8918).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, outer1_6.GUILD_HEADER);
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;

@@ -126,7 +126,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     obj = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1236).intl;
     obj[0] = intl2.string(tmp(1236).t.oJ1Muw);
-    obj[1] = tmp(9609).IdIcon;
+    obj[1] = tmp(9563).IdIcon;
     obj[2] = function onPress() {
       callback(outer1_2[14]).presentIdCopied();
       const obj = callback(outer1_2[14]);
@@ -147,7 +147,7 @@ export default function MarkupReactCommandRule(node) {
   let closure_1;
   let dependencyMap;
   ({ output, state, style } = node);
-  closure_1 = null != React.useContext(node(9611).AppLauncherContext);
+  closure_1 = null != React.useContext(node(9565).AppLauncherContext);
   dependencyMap = callback();
   let obj = {
     style,
@@ -178,8 +178,8 @@ export default function MarkupReactCommandRule(node) {
       obj[6] = function onSetCommand() {
         let commandId;
         let commandName;
-        callback(9614)();
-        callback(4310).hideActionSheet();
+        callback(9568)();
+        callback(4342).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
         }
@@ -187,7 +187,7 @@ export default function MarkupReactCommandRule(node) {
           const applicationCommandManager = obj2.getApplicationCommandManager();
           if (applicationCommandManager != null) {
             ({ commandId, commandName } = bestActiveInput);
-            applicationCommandManager.setPartialCommand(commandId, commandName, node(7052).ApplicationCommandTriggerLocations.MENTION);
+            applicationCommandManager.setPartialCommand(commandId, commandName, node(5248).ApplicationCommandTriggerLocations.MENTION);
           }
         }
       };
@@ -198,9 +198,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null
   };
-  const items = ["/", node(8262).smartOutput(node, output, state)];
+  const items = ["/", node(8308).smartOutput(node, output, state)];
   obj[4] = items;
-  return jsxs(node(4338).Text, {
+  return jsxs(node(4734).Text, {
     style,
     variant: "text-md/bold",
     onPress() {
@@ -229,8 +229,8 @@ export default function MarkupReactCommandRule(node) {
       obj[6] = function onSetCommand() {
         let commandId;
         let commandName;
-        callback(9614)();
-        callback(4310).hideActionSheet();
+        callback(9568)();
+        callback(4342).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
         }
@@ -238,7 +238,7 @@ export default function MarkupReactCommandRule(node) {
           const applicationCommandManager = obj2.getApplicationCommandManager();
           if (applicationCommandManager != null) {
             ({ commandId, commandName } = bestActiveInput);
-            applicationCommandManager.setPartialCommand(commandId, commandName, node(7052).ApplicationCommandTriggerLocations.MENTION);
+            applicationCommandManager.setPartialCommand(commandId, commandName, node(5248).ApplicationCommandTriggerLocations.MENTION);
           }
         }
       };

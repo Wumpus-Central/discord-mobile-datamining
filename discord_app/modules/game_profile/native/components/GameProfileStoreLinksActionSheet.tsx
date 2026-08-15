@@ -3,7 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { BottomSheetModal } from "../../../../../_runtime/05460_BottomSheetModal.js";
+import { BottomSheetModal } from "../../../../../_runtime/06952_BottomSheetModal.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

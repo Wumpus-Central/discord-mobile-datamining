@@ -3,7 +3,7 @@ import "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { BottomSheetModal } from "../../../../../../_runtime/05460_BottomSheetModal.js";
+import { BottomSheetModal } from "../../../../../../_runtime/06952_BottomSheetModal.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";

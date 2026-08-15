@@ -19,10 +19,10 @@ export const isApplicationCodedLinkMobileSupported = function isApplicationCoded
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
   if (CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-    if (tmp(4331).CodedLinkType.APP_OAUTH2_LINK !== type) {
-      if (tmp(4331).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-        if (tmp(4331).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = tmp(7218);
+    if (tmp(4363).CodedLinkType.APP_OAUTH2_LINK !== type) {
+      if (tmp(4363).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+        if (tmp(4363).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
+          let tmpResult = tmp(4379);
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -32,11 +32,11 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
             tmp5 = obj;
           }
           return tmp5;
-        } else if (tmp(4331).CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        } else if (tmp(4363).CodedLinkType.ACTIVITY_BOOKMARK === type) {
           obj = { type: null, applicationId: null, params: null };
           obj[0] = type;
           obj[1] = code;
-          tmpResult = tmp(7219);
+          tmpResult = tmp(7444);
           obj[2] = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

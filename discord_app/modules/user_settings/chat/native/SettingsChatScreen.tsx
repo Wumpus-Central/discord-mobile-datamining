@@ -3,11 +3,11 @@ import SettingLayout from "../../../settings/native/renderer/SettingLayout.tsx";
 import { View } from "dispatcher";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10023_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10228_registerAsset.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
@@ -54,10 +54,10 @@ function VideoUploadQualityNitroUpsell() {
       const obj = outer1_1(outer1_2[17]);
     };
     obj4[2] = intl2.format(tmp(1236).t.uW1zul, obj5);
-    items2[1] = tmp7(tmp(4338).Text, obj4);
+    items2[1] = tmp7(tmp(4734).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(5437).Card, obj1);
+    obj[1] = tmp7(tmp(6292).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;

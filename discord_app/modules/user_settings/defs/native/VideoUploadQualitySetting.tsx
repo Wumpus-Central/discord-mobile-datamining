@@ -13,7 +13,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.PXq9f1);
   },
-  parent: require("MobileSetting").MobileSetting.CHAT,
+  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
     const items = [CHANNEL_SIDEBAR_WIDTH];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);

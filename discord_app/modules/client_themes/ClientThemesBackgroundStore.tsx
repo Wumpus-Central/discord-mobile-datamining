@@ -71,7 +71,7 @@ function handleUserSettingsProtoStoreUpdate() {
     result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
   }
   if (!result) {
-    tmpResult = tmp(4190);
+    tmpResult = tmp(4222);
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -239,7 +239,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
               let c15 = true;
             }
           }
-          tmp6Result = tmp6(4187);
+          tmp6Result = tmp6(4219);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

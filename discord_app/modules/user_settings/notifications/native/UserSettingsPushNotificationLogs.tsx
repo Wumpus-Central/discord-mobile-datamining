@@ -56,7 +56,7 @@ export default function UserSettingsPushNotificationLogs() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -92,7 +92,7 @@ export default function UserSettingsPushNotificationLogs() {
               closure_0 = arg1;
               v0(closure_0);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -159,7 +159,7 @@ export default function UserSettingsPushNotificationLogs() {
   callback2 = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   obj = { style: tmp9.searchWrap, children: null };
-  let items1 = [callback3(first(6056).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
+  let items1 = [callback3(first(7337).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
   obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = first(1236).intl;
   obj[1] = intl.string(first(1236).t.leICvh);
@@ -175,7 +175,7 @@ export default function UserSettingsPushNotificationLogs() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -196,7 +196,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1(9927)();
+            obj1[0] = outer1_1(10133)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -209,12 +209,12 @@ export default function UserSettingsPushNotificationLogs() {
           return obj2;
         } else {
           closure_0 = arg1;
-          obj = outer1_0(8986);
+          obj = outer1_0(9067);
           const obj3 = { message: null };
-          obj3[0] = outer1_1(9929)(closure_0, false);
+          obj3[0] = outer1_1(10135)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -222,14 +222,14 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(12319).ShareIcon, {});
-  items1[1] = callback3(first(4909).PressableOpacity, obj);
+  obj[3] = callback3(first(12047).ShareIcon, {});
+  items1[1] = callback3(first(5433).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj), ];
   let obj1 = { contentContainerStyle: null, data: null, renderItem: null };
   let obj2 = {};
   const merged = Object.assign(tmp9.list);
-  obj2.paddingBottom = first1(1628)().bottom + first1(712).space.PX_16;
+  obj2.paddingBottom = first1(1629)().bottom + first1(712).space.PX_16;
   obj1[0] = obj2;
   obj1[1] = tmp6;
   obj1[2] = function renderItem(item) {
@@ -241,16 +241,16 @@ export default function UserSettingsPushNotificationLogs() {
     let obj = { style: tmp9.log, children: null };
     obj = { style: tmp9.code, variant: "text-xs/normal", children: null };
     obj[2] = new Date(item.receivedTimestamp).toISOString();
-    const items = [outer1_7(first(4338).Text, obj), ];
+    const items = [outer1_7(first(4734).Text, obj), ];
     obj = { style: tmp9.code, variant: "text-sm/normal", children: null };
     const items1 = [str, "[", item.type, "]", " "];
-    const items2 = [outer1_8(first(4338).Text, { style: tmp9.code, variant: "text-sm/normal", color: "text-brand", children: items1 }), item.title, " - ", item.content];
+    const items2 = [outer1_8(first(4734).Text, { style: tmp9.code, variant: "text-sm/normal", color: "text-brand", children: items1 }), item.title, " - ", item.content];
     obj[2] = items2;
-    items[1] = outer1_8(first(4338).Text, obj);
+    items[1] = outer1_8(first(4734).Text, obj);
     obj[1] = items;
     return outer1_8(outer1_6, obj, item.index);
   };
-  items2[1] = callback3(first(7811).FlashList, obj1);
+  items2[1] = callback3(first(8029).FlashList, obj1);
   obj[1] = items2;
   return callback4(View, obj);
 };

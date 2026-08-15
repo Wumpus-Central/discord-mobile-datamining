@@ -492,25 +492,6 @@ prototype["getMessage"] = function getMessage(join) {
   return "MarkupParserNodeTypeError: Unknown AST node type in \"" + join.join(", ") + "\" caused rendering failure";
 };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/markup/MarkupASTUtils.tsx");
-function walkAst(parseToASTResult, arg1) {
-  if (Array.isArray(parseToASTResult)) {
-    const tmp8 = parseToASTResult[Symbol.iterator]();
-    while (tmp8 !== undefined) {
-      let tmp12 = walkAst;
-      let tmp13 = walkAst(tmp10, arg1);
-      continue;
-    }
-  } else {
-    arg1(parseToASTResult, null);
-    const _Array = Array;
-    if (Array.isArray(parseToASTResult.content)) {
-      walkAst(parseToASTResult.content, arg1);
-    }
-    if ("list" === parseToASTResult.type) {
-      walkAst(parseToASTResult.items, arg1);
-    }
-  }
-}
 function flattenAst(isSlate, content, content) {
   let closure_0 = isSlate;
   let tmp3 = content;
@@ -583,7 +564,7 @@ function flattenAst(isSlate, content, content) {
       content.items = items1.map((arg0) => {
         let tmp = arg0;
         if (Array.isArray(arg0)) {
-          tmp = outer1_5(closure_0, arg0, null);
+          tmp = outer1_4(closure_0, arg0, null);
         }
         return tmp;
       });
@@ -626,7 +607,7 @@ function constrainAst(content, arg1) {
       }
       if ("list" === content.type) {
         const items = content.items;
-        content.items = items.map((arg0) => outer1_6(arg0, obj).ast);
+        content.items = items.map((arg0) => outer1_5(arg0, obj).ast);
       }
     }
   }
@@ -635,7 +616,6 @@ function constrainAst(content, arg1) {
 }
 
 export const NUM_MAX_AST_NODES = 200;
-export { walkAst };
 export const astToString = function astToString(applicationSubscriptionSystemMessageASTContent) {
   let items = [];
   if (Array.isArray(applicationSubscriptionSystemMessageASTContent)) {

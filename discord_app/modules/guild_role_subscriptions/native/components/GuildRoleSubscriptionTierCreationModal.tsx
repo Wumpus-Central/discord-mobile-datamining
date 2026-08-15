@@ -38,7 +38,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -82,7 +82,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
               callback();
             }
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp16) {
           v0 = tmp;
@@ -102,7 +102,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   let tmp = callback(React.useState(guildId.editStateId), 2);
   first = tmp[0];
   callback = tmp[1];
-  let obj = importAll(14541);
+  let obj = importAll(14573);
   const createOrUpdateListingFromEditState = obj.useCreateOrUpdateListingFromEditState();
   ({ handleCreateOrUpdateFromEditState: c6, error } = createOrUpdateListingFromEditState);
   let items = [error];
@@ -124,7 +124,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   }, []);
   obj = { guildId, editStateId: first, groupListingId, children: null };
   obj = { guildId, children: null };
-  obj[1] = jsx(groupListingId(16917), {
+  obj[1] = jsx(groupListingId(16963), {
     guildId,
     modalKey: closure_9,
     onDone: function handleCreate() {
@@ -139,6 +139,6 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     },
     steps: memo
   });
-  obj[3] = jsx(guildId(16899).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: null });
-  return jsx(guildId(16916).EditStateContextProvider, { guildId, children: null });
+  obj[3] = jsx(guildId(16945).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: null });
+  return jsx(guildId(16962).EditStateContextProvider, { guildId, children: null });
 };

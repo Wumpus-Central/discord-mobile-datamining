@@ -52,7 +52,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = tmp.channels;
       obj[1] = channels.map((id) => {
         const obj = { label: null, value: null };
-        obj[0] = callback(4535).computeChannelName(callback2(id), mergeGuildAvatar, closure_8);
+        obj[0] = callback(4984).computeChannelName(callback2(id), mergeGuildAvatar, closure_8);
         obj[1] = id.id;
         return obj;
       });
@@ -86,7 +86,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -130,7 +130,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
                   outer1_5.current = true;
                 }
                 v0 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp20) {
               v0 = tmp;

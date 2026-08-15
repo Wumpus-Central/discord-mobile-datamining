@@ -107,7 +107,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
               return obj;
             } else {
               let closure_1 = tmp4;
-              let obj3 = outer1_1(11309);
+              let obj3 = outer1_1(11022);
               dependencyMap = 1;
               c3 = 1;
               const obj1 = { value: null, done: false };
@@ -140,8 +140,8 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             return obj2;
           } else {
             const intl = outer1_0(1236).intl;
-            const obj8 = outer1_1(4062);
-            const name = outer1_1(4534).getName(closure_1, null, c0);
+            const obj8 = outer1_1(4094);
+            const name = outer1_1(4796).getName(closure_1, null, c0);
             c0 = name;
             if (name == null) {
               c0 = "";
@@ -150,11 +150,11 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj3 = { user: null };
             obj3[0] = c0;
             obj[1] = intl.formatToPlainString(outer1_0(1236).t.O9C3Nt, obj3);
-            obj[2] = outer1_1(9933);
+            obj[2] = outer1_1(8764);
             obj8.open(obj);
             dependencyMap();
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c3 = tmp;

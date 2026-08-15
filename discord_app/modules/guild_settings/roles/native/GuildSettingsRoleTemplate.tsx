@@ -8,8 +8,8 @@ import title from "title";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { _getRequireWildcardCache } from "../../../../../_runtime/08055__getRequireWildcardCache.js";
-import { Pagination } from "../../../../../_runtime/10107_Pagination.js";
+import { _getRequireWildcardCache } from "../../../../../_runtime/08105__getRequireWildcardCache.js";
+import { Pagination } from "../../../../../_runtime/10311_Pagination.js";
 import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import { useIsWindowLarge } from "../../../screen/native/useIsWindowLarge.tsx";
 import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
@@ -144,7 +144,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
       return obj;
     }
   }
-  obj = { interpolate: tmp11(4083).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4083).Extrapolation, inactiveOpacity: num };
+  obj = { interpolate: tmp11(4115).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4115).Extrapolation, inactiveOpacity: num };
   V.__closure = obj;
   V.__workletHash = 1786335394860;
   V.__initData = closure_18;

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ChannelsFollowedIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/16006_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/16056_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

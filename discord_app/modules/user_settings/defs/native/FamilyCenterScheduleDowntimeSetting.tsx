@@ -9,7 +9,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["w/ISB8"]);
   },
-  parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,
   screen: obj
 };

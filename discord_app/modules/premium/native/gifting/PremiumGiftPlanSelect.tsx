@@ -2,7 +2,7 @@
 import componentDidMount from "componentDidMount";
 import apexExperiment from "apexExperiment";
 import get_ActivityIndicator from "initialize";
-import map from "map";
+import initialize from "initialize";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { VerticalGradient } from "ME";
 import jsxProd from "PremiumGiftModal";
@@ -544,7 +544,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result3 = tmp4(tmp2[30]);
       }
     } else {
-      const obj34 = { style: null, guildId: "r", size: true, user: true };
+      const obj34 = { style: null, guildId: "r", size: "ct", user: null };
       obj34[0] = tmp13.avatar;
       const AvatarSizes = tmp(tmp2[26]).AvatarSizes;
       obj34[2] = tmp64Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;

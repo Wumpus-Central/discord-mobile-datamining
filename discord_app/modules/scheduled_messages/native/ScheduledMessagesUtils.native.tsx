@@ -1,7 +1,7 @@
 // discord_app/modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx
 import getSystemLocale from "getSystemLocale";
 import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS";
-import { t } from "../../../../_runtime/03943_t.js";
+import { t } from "../../../../_runtime/03975_t.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
 
@@ -34,7 +34,7 @@ function _scheduleMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

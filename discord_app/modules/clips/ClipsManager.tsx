@@ -90,10 +90,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
       const id = store.getId();
-      if (tmp(4441).MediaEngineContextTypes.DEFAULT === context) {
+      if (tmp(4569).MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
-      } else if (tmp(4441).MediaEngineContextTypes.STREAM === context) {
+      } else if (tmp(4569).MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
             const rTCConnection = store2.getRTCConnection(streamKey);
@@ -101,7 +101,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
               self.applyStreamRecording(id, rTCConnection);
             }
           }
-          tmpResult = tmp(4408);
+          tmpResult = tmp(4531);
         }
       }
     }
@@ -110,7 +110,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
 prototype["handleRTCUsersUpdate"] = function handleRTCUsersUpdate(userIds) {
   const self = this;
   userIds = userIds.userIds;
-  if (userIds.context === self(4441).MediaEngineContextTypes.DEFAULT) {
+  if (userIds.context === self(4569).MediaEngineContextTypes.DEFAULT) {
     const item = userIds.forEach((id) => {
       const result = self.applyUserVoiceRecording(id);
       const result1 = self.applyUserSoundboardRecording(id);
@@ -131,7 +131,7 @@ prototype["handleRTCConnectionFlags"] = function handleRTCConnectionFlags(arg0) 
   } else {
     CALL = StreamTypes.CALL;
   }
-  const rTCConnection = store2.getRTCConnection(importAll(4408).encodeStreamKey({ streamType: CALL, ownerId: userId, channelId, guildId }));
+  const rTCConnection = store2.getRTCConnection(importAll(4531).encodeStreamKey({ streamType: CALL, ownerId: userId, channelId, guildId }));
   if (null != rTCConnection) {
     self.applyStreamRecording(userId, rTCConnection);
   }
@@ -207,7 +207,7 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
   ({ context, channelId } = arg0);
   if (context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
     if (isClientClipsCapable(_detectH265HardwareDecode)) {
-      let obj = importAll(4408);
+      let obj = importAll(4531);
       if (null != guildId) {
         let CALL = StreamTypes.GUILD;
       } else {
@@ -240,7 +240,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -319,7 +319,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           obj4[1] = outer1_13;
           obj4[2] = gpuModels;
           const obj7 = outer1_1(698);
-          obj4[3] = outer1_0(4918).getClipsRuntime("classifyHardwareAndTrack");
+          obj4[3] = outer1_0(4833).getClipsRuntime("classifyHardwareAndTrack");
           obj7.track(outer1_15.CLIPS_HARDWARE_CLASSIFICATION, obj4);
           dependencyMap = 0;
           c5 = 3;

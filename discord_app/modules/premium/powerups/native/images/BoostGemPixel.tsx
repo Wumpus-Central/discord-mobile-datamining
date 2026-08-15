@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/images/BoostGemPixel.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../../_runtime/07901_inlineStyles.js";
+import { inlineStyles } from "../../../../../../_runtime/06571_inlineStyles.js";
 
 let c3;
 let c4;

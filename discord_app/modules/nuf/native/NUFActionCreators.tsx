@@ -33,7 +33,7 @@ function _startContactSyncForDiscoverability() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -55,14 +55,14 @@ function _startContactSyncForDiscoverability() {
                 phone = currentUser.phone;
               }
               const localAccount = outer1_8.getLocalAccount(outer1_11.CONTACTS);
-              callback(12116);
+              callback(11853);
               if (null == phone) {
                 const _Error = Error;
                 const error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
                 outer1_6(tmp31);
-                let obj4 = outer1_1(12120);
+                let obj4 = outer1_1(11857);
                 let obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
                 obj1[1] = tmp31;
@@ -83,7 +83,7 @@ function _startContactSyncForDiscoverability() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(12116);
+              obj1 = callback(11853);
               dependencyMap = 2;
               c3 = 1;
               obj4 = { value: null, done: false };
@@ -100,7 +100,7 @@ function _startContactSyncForDiscoverability() {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp25) {
           c3 = tmp;
@@ -160,8 +160,8 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
-        const result = callback(12182).setNewUserFlowCompleted();
-        const obj2 = callback(12182);
+        const result = callback(11925).setNewUserFlowCompleted();
+        const obj2 = callback(11925);
       } else {
         callback2(709).dispatch({ type: "ONBOARDING_STEP" });
         const obj = callback2(709);

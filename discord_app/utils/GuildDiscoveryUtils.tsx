@@ -36,7 +36,7 @@ function _startLurking() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -222,7 +222,7 @@ function _startLurking() {
                 throwTypeErrorResult = throwTypeErrorResult();
               }
               shouldNavigate = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (throwTypeErrorResult) {
             shouldNavigate = throwTypeErrorResult;
@@ -268,7 +268,7 @@ function _getDiscoverableGuild() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -369,7 +369,7 @@ function _fetchPublicDiscoveryGuild() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

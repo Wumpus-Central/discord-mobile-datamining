@@ -42,8 +42,8 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
           obj[2] = guild;
           obj[3] = channel.permissionOverwrites;
           obj[4] = unsafeMutableRoles.getUnsafeMutableRoles(guild.id);
-          canResult = importAll(3994).can(obj);
-          const obj4 = importAll(3994);
+          canResult = importAll(4026).can(obj);
+          const obj4 = importAll(4026);
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;

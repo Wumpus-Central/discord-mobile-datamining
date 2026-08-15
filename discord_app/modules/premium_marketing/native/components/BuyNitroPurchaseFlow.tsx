@@ -49,7 +49,7 @@ function BuyNitroPurchaseRunner(item) {
           if (outer1_11 != null) {
             const checkoutContextRecord = outer1_11.checkoutContextRecord;
             if (checkoutContextRecord != null) {
-              const obj4 = outer2_0(6939);
+              const obj4 = outer2_0(7378);
               const availablePlanForItems = checkoutContextRecord.getAvailablePlanForItems(obj4.getSubscriptionItemsForProduct(outer1_0.productId));
               if (availablePlanForItems != null) {
                 priceString = availablePlanForItems.getPriceString();
@@ -74,11 +74,11 @@ function BuyNitroPurchaseRunner(item) {
         }
         const obj7 = outer2_1(698);
         let obj2 = { from_step: null, to_step: null, subscription_plan_gateway_plan_id: null, sku_id: null };
-        obj2[0] = outer2_0(7440).PaymentFlowStep.PLAN_SELECT;
-        obj2[1] = outer2_0(7440).PaymentFlowStep.EXTERNAL_PAYMENT;
+        obj2[0] = outer2_0(7658).PaymentFlowStep.PLAN_SELECT;
+        obj2[1] = outer2_0(7658).PaymentFlowStep.EXTERNAL_PAYMENT;
         obj2[2] = outer1_0.productId;
         obj2[3] = outer1_0;
-        obj7.track(outer2_8.PAYMENT_FLOW_STEP, outer2_0(7440).getPaymentFlowStepAnalyticsFields(outer1_1, obj2));
+        obj7.track(outer2_8.PAYMENT_FLOW_STEP, outer2_0(7658).getPaymentFlowStepAnalyticsFields(outer1_1, obj2));
         let c4 = 1;
         const obj3 = { productId: null, analyticsLocation: null, analyticsLoadId: null, analyticsLocations: null, orderId: null };
         obj3[0] = outer1_0.productId;
@@ -92,10 +92,10 @@ function BuyNitroPurchaseRunner(item) {
         yield outer1_13(obj3);
         if (1 === tmp7) {
           c4 = 0;
-          if (sum instanceof outer2_1(7401)) {
-            obj1 = outer2_0(4686);
+          if (sum instanceof outer2_1(7619)) {
+            obj1 = outer2_0(4466);
             const subscriptions = obj1.fetchSubscriptions();
-            obj2 = outer2_1(4706);
+            obj2 = outer2_1(4656);
             const obj5 = { title: null, body: null, hideActionSheet: true };
             const intl = outer2_0(1236).intl;
             obj5[0] = intl.string(outer2_0(1236).t["U+H+kd"]);
@@ -227,7 +227,7 @@ export default function BuyNitroPurchaseFlow(item) {
   item = item.item;
   const onExit = item.onExit;
   ({ analyticsLocations, analyticsLoadId, hasEmittedPaymentFlowStartedRef, applicationId, expectedPriceString, onOrderPriceMismatch, onHostSheetClose, onPaymentSuccess, onPaymentDismiss } = item);
-  const NitroACOMSubscriptionExperiment = item(7478).NitroACOMSubscriptionExperiment;
+  const NitroACOMSubscriptionExperiment = item(7696).NitroACOMSubscriptionExperiment;
   const enabled = NitroACOMSubscriptionExperiment.useConfig({ location: "PremiumPlanSelectionActionSheetWithOrderCTX" }).enabled;
   let obj = item(500);
   if (obj.isIOS()) {
@@ -241,15 +241,15 @@ export default function BuyNitroPurchaseFlow(item) {
   } else {
     const GOOGLE = tmp3.GOOGLE;
     let tmpResult = tmp(500);
-    tmpResult = tmp(6979);
+    tmpResult = tmp(7418);
     const premiumTrialOffer = tmpResult.usePremiumTrialOffer();
     let tmp10;
     if (!tmp8) {
-      let trial_id;
+      let trialId;
       if (premiumTrialOffer != null) {
-        trial_id = premiumTrialOffer.trial_id;
+        trialId = premiumTrialOffer.trialId;
       }
-      tmp10 = trial_id;
+      tmp10 = trialId;
     }
     let tmp14;
     if (null != tmp10) {
@@ -264,8 +264,8 @@ export default function BuyNitroPurchaseFlow(item) {
       const subscriptionItemsForProduct = item(outer1_2[16]).getSubscriptionItemsForProduct(item.productId);
       return subscriptionItemsForProduct.map((planId) => {
         const obj = { subscriptionPlanId: planId.planId, skuId: null, quantity: null };
-        const obj2 = callback(4007);
-        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback2(4007).getSkuIdForPlan(planId.planId));
+        const obj2 = callback(4039);
+        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback2(4039).getSkuIdForPlan(planId.planId));
         obj[2] = planId.quantity;
         return obj;
       });

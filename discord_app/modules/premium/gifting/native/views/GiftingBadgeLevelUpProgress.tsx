@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
-import { getSingleRequirementThreshold as closure_4 } from "map";
+import { getSingleRequirementThreshold as closure_4 } from "initialize";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -24,7 +24,7 @@ createCacheKey[3] = { height: 6, borderRadius: require("Themes").radii.round, ba
 createCacheKey[4] = { flexDirection: "row", justifyContent: "flex-end" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const obj3 = { height: 6, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-const result = require("map").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx");
+const result = require("initialize").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx");
 
 export default function GiftingBadgeLevelUpProgress(style) {
   let currentTier;

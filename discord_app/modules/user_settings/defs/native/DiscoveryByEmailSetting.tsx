@@ -11,7 +11,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useDescription: function useDiscoveryByEmailSettingDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ilGsHE);
@@ -35,7 +35,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useDescription: function useDiscoveryByEmailSettingDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ilGsHE);

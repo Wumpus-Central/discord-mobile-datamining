@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/BurgerIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/13946_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/13978_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

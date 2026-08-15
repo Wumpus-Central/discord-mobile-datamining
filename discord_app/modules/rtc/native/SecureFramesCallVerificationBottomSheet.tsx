@@ -36,7 +36,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   const intl3 = channelId(1236).intl;
   obj = { helpArticle: null };
   const tmp3 = SecureFramesVerificationBottomSheet;
-  obj[0] = channelId(9273).getSecureFramesHelpdeskArticle();
+  obj[0] = channelId(9708).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1236).t.wKxADe, obj);
   obj[3] = stateFromStores;
   obj[4] = callback;

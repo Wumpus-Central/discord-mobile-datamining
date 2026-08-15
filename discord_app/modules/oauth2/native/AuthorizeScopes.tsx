@@ -37,11 +37,11 @@ function Scope(arg0) {
     obj = { style: null, color: null, size: "refresh_sm" };
     obj[0] = tmp.fakeScopeIcon;
     obj[1] = Themes.colors.TEXT_MUTED;
-    let tmp10Result = tmp10(tmp6(6060).CircleXIcon, obj);
+    let tmp10Result = tmp10(tmp6(7341).CircleXIcon, obj);
   } else {
     const obj1 = { color: null, size: "refresh_sm" };
     obj1[0] = Themes.colors.TEXT_MUTED;
-    tmp10Result = tmp10(tmp6(4303).CircleCheckIcon, obj1);
+    tmp10Result = tmp10(tmp6(4335).CircleCheckIcon, obj1);
   }
   obj[3] = tmp10Result;
   const items = [closure_4(View, obj), ];
@@ -50,12 +50,12 @@ function Scope(arg0) {
   if (isFake) {
     str3 = "text-muted";
   }
-  const items1 = [closure_4(tmp6(4338).Text, { variant: "text-md/normal", color: str3, children: text }), ];
+  const items1 = [closure_4(tmp6(4734).Text, { variant: "text-md/normal", color: str3, children: text }), ];
   tmp10Result = null;
   if (null != error) {
     const obj3 = { variant: "text-xs/normal", children: null };
     obj3[1] = error;
-    tmp10Result = tmp10(tmp6(4338).Text, obj3);
+    tmp10Result = tmp10(tmp6(4734).Text, obj3);
   }
   items1[1] = tmp10Result;
   obj2[1] = items1;
@@ -89,9 +89,9 @@ export default function AuthorizeScopes(accountScopes) {
     } else {
       tmp4 = tmp14;
     }
-    let hasItem = integrationType === tmp4(9604).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp4(8770).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp4(8965).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp4(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: null, children: null };
     obj[0] = tmp.scopesContainer;
@@ -100,7 +100,7 @@ export default function AuthorizeScopes(accountScopes) {
     obj = { application: null };
     obj[0] = application.name;
     obj[2] = intl.format(_1Hz_Sl, obj);
-    const items = [callback(tmp4(4338).Text, obj), ];
+    const items = [callback(tmp4(4734).Text, obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.scopes;
     const mapped = accountScopes.map((nextResult) => {

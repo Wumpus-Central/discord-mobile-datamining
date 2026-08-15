@@ -18,7 +18,7 @@ createToggle = {
     return intl.format(getSystemLocale.t["r91W/h"], { numberOfBlockedUsers });
   },
   IconComponent: require("DenyIcon").DenyIcon,
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: createToggle
 };
 createToggle = {

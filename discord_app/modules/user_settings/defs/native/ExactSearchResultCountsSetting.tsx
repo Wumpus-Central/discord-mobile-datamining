@@ -7,7 +7,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.aP91Ud);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   useValue: require("explicitContentFromProto").SearchResultExactCountEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").SearchResultExactCountEnabled.updateSetting,
   useDescription: function useSearchResultExactCountDescription() {
@@ -20,7 +20,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.aP91Ud);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   useValue: require("explicitContentFromProto").SearchResultExactCountEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").SearchResultExactCountEnabled.updateSetting,
   useDescription: function useSearchResultExactCountDescription() {

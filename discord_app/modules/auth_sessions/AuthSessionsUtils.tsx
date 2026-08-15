@@ -2,7 +2,7 @@
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import handleInit from "handleInit";
-import { t } from "../../../_runtime/03943_t.js";
+import { t } from "../../../_runtime/03975_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;

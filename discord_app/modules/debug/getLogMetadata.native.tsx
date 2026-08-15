@@ -9,7 +9,7 @@ export default function getLogMetadata() {
   let Manifest;
   let ReleaseChannel;
   let Version;
-  let obj = importAll(1625);
+  let obj = importAll(1626);
   const constants = obj.getConstants();
   obj = { logsUploaded: null, Identifier: null, Version: null, Manifest: null, ReleaseChannel: null, Build: null, JSBuildNumber: null, DeviceVendorID: null, DeviceInfo: null, systemVersion: null };
   ({ Identifier, Version, Manifest, ReleaseChannel, Build, DeviceVendorID } = constants);
@@ -20,9 +20,9 @@ export default function getLogMetadata() {
   obj[4] = ReleaseChannel;
   obj[5] = Build;
   const date = new Date();
-  obj[6] = importAll(1625).getBuildNumberLabel();
+  obj[6] = importAll(1626).getBuildNumberLabel();
   obj[7] = DeviceVendorID;
-  const obj4 = importAll(1625);
+  const obj4 = importAll(1626);
   obj[8] = DCDDeviceManager.getDeviceInfo();
   const obj5 = DCDDeviceManager;
   obj[9] = DCDDeviceManager.getSystemVersion();

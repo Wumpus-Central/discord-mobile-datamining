@@ -3,7 +3,7 @@ import importAllResult from "useSafeAreaInsets";
 import { Platform } from "useGradientBottom";
 import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes";
 import ME from "ME";
-import jsxProd from "module_4355";
+import jsxProd from "module_4770";
 import createCacheKey from "createCacheKey";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -23,7 +23,7 @@ let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "h
 let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 let closure_10 = importAllResult.memo(() => {
   const windowDimensions = importAllResult.useContext(dismissPanel).windowDimensions;
-  let obj = windowDimensions(4083);
+  let obj = windowDimensions(4115);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
   };
@@ -46,15 +46,15 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4297);
+    obj[1] = tmp(4329);
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11716), obj);
-    const tmpResult = tmp(11716);
+    let tmp5Result = tmp5(tmp(11435), obj);
+    const tmpResult = tmp(11435);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4297);
+    obj[1] = tmp(4329);
     obj[2] = callback;
     tmp5Result = tmp5(IconButton.IconButton, obj);
   }

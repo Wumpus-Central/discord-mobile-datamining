@@ -251,7 +251,7 @@ prototype["render"] = function render() {
     name = intl2.string(tmp4(1236).t.GSfOoo);
   }
   obj = { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }) };
-  const items = [closure_13(first(4338).Text, obj), , ];
+  const items = [closure_13(first(4734).Text, obj), , ];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -264,16 +264,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5435).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(5828).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(6291).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(6286).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4775).Stack, obj);
-  return closure_13(first(8033).Form, obj);
+  obj[1] = closure_14(first(4733).Stack, obj);
+  return closure_13(first(8083).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
@@ -284,7 +284,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const items = [ensureGuildLoaded];
   const channel = channelId(589).useStateFromStores(items, () => outer1_6.getChannel(channelId));
   const obj = channelId(589);
-  const navigation = channelId(1499).useNavigation();
+  const navigation = channelId(1500).useNavigation();
   00038__(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation });
 };

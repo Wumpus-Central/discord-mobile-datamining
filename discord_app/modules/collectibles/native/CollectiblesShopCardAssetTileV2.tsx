@@ -88,7 +88,7 @@ function ProductPreviewInner(arg0) {
   ({ product, cardWidth } = arg0);
   ({ disableBundleStaticBackground, muteBundleStaticBackground } = arg0);
   const tmp = callback3();
-  let obj = cardWidth(9438);
+  let obj = cardWidth(9205);
   const shopProductItems = obj.useShopProductItems(product);
   const items = [cardWidth];
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
@@ -121,9 +121,9 @@ function ProductPreviewInner(arg0) {
     if (ALL.has(product.skuId)) {
       const obj2 = { skuId: null, width: null, height: null };
       obj2[0] = product.skuId;
-      obj2[1] = tmp2(9480).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      obj2[2] = tmp2(9480).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      return callback2(tmp2(9480).FractionalNitroCoinIllustration, obj2);
+      obj2[1] = tmp2(9247).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      obj2[2] = tmp2(9247).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      return callback2(tmp2(9247).FractionalNitroCoinIllustration, obj2);
     } else {
       const first = callback(product.items, 1)[0];
       let type;
@@ -146,7 +146,7 @@ function ProductPreviewInner(arg0) {
         obj6[0] = tmp.profileFrameContainer;
         const obj7 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj7[0] = first;
-        obj7[1] = tmp2(9408).COLLECTIBLES_SHOP_CARD_WIDTH - Themes.space.PX_32;
+        obj7[1] = tmp2(9172).COLLECTIBLES_SHOP_CARD_WIDTH - Themes.space.PX_32;
         obj7[2] = closure_9;
         obj7[3] = Themes.colors.BACKGROUND_BASE_LOW;
         obj6[1] = callback2(filterLayer, obj7);

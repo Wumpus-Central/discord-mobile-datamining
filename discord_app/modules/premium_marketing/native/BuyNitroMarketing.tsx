@@ -54,7 +54,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: null, productId: "r" };
+    obj = { tier: null, productId: "a" };
     obj[0] = initialTier;
     tmp7 = obj;
   }
@@ -142,16 +142,16 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
     tmp19Result = "marketingPageBanner" === oneofKind;
   }
   if (tmp19Result) {
-    const obj5 = { bannerFields: null, componentId: null, analyticsPage: "Marketing Page Banner Tile", style: null, onPaymentSuccess: null, onPaymentDismiss: null };
+    const obj5 = { bannerFields: null, componentId: null, promotionId: null, analyticsPage: "Marketing Page Banner Tile", style: null, onPaymentSuccess: null, onPaymentDismiss: null };
     obj5[0] = promotionMarketingComponent.properties.properties.marketingPageBanner;
-    obj5[1] = promotionMarketingComponent.id;
+    ({ id: obj14[1], promotionId: obj14[2] } = promotionMarketingComponent);
     let disabled;
     if (isBuyNitroPurchaseBlocked) {
       disabled = tmp.disabled;
     }
-    obj5[3] = disabled;
-    obj5[4] = onPaymentSuccess;
-    obj5[5] = onPaymentDismiss;
+    obj5[4] = disabled;
+    obj5[5] = onPaymentSuccess;
+    obj5[6] = onPaymentDismiss;
     tmp19Result = tmp19(tmp11(tmp3[20]), obj5);
     const tmp11Result = tmp11(tmp3[20]);
   }

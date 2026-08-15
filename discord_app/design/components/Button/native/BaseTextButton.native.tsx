@@ -10,7 +10,7 @@ import IconSizes from "IconSizes";
 import createCacheKey from "createCacheKey";
 import { LARGE_BUTTON_HEIGHT } from "MINIMUM_HIT_AREA";
 import { LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA";
-import importDefaultResult from "module_4083";
+import importDefaultResult from "module_4115";
 import { styleProperties } from "ButtonHooks.native.tsx";
 
 let Platform;
@@ -156,20 +156,38 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
 });
 createCacheKey = { sm: null, md: null, lg: null };
 const bound = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound, left: "Array", right: "isArray", bottom: "a" };
-createCacheKey[3] = bound;
-createCacheKey[0] = createCacheKey;
+createCacheKey[0] = { top: bound, left: "Array", right: "text", bottom: bound };
 const bound1 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound1, left: "Array", right: "isArray", bottom: "a" };
-createCacheKey[3] = bound1;
-createCacheKey[1] = createCacheKey;
+createCacheKey[1] = { top: bound1, left: "Array", right: "text", bottom: bound1 };
 const bound2 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2, 0);
-let obj4 = { top: bound2, left: "Array", right: "isArray", bottom: "a" };
-obj4[3] = bound2;
-createCacheKey[2] = obj4;
+createCacheKey[2] = { top: bound2, left: "Array", right: "text", bottom: bound2 };
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }
+createCacheKey = {
+  Icon: function TextButtonIcon(source) {
+    let str = source.variant;
+    if (str === undefined) {
+      str = "icon";
+    }
+    let flag = source.disableColor;
+    if (flag === undefined) {
+      flag = true;
+    }
+    const context = importAllResult.useContext(closure_13);
+    let obj = styleProperties;
+    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
+    const tmp4 = callback(IconSizes, obj);
+    let tmp3Result = tmp4;
+    if ("entity" === str) {
+      obj = { style: null, children: null };
+      obj[0] = tmp2.entityWrapper;
+      obj[1] = tmp4;
+      tmp3Result = callback(closure_6, obj);
+    }
+    return tmp3Result;
+  }
+};
 let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMargin, ref) => {
   let accessibilityLabel;
   let accessibilityRole;
@@ -395,54 +413,7 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   obj4[8] = closure_8(redux.Provider, obj5);
   obj3.children = callback(onPressIn(onLayout[18]).ButtonPill, obj4);
   return callback(onPressIn(onLayout[16]).BaseButton, obj3);
-}), {
-  Icon: function TextButtonIcon(source) {
-    let str = source.variant;
-    if (str === undefined) {
-      str = "icon";
-    }
-    let flag = source.disableColor;
-    if (flag === undefined) {
-      flag = true;
-    }
-    const context = importAllResult.useContext(closure_13);
-    let obj = styleProperties;
-    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
-    const tmp4 = callback(IconSizes, obj);
-    let tmp3Result = tmp4;
-    if ("entity" === str) {
-      obj = { style: null, children: null };
-      obj[0] = tmp2.entityWrapper;
-      obj[1] = tmp4;
-      tmp3Result = callback(closure_6, obj);
-    }
-    return tmp3Result;
-  }
-});
-let obj5 = {
-  Icon: function TextButtonIcon(source) {
-    let str = source.variant;
-    if (str === undefined) {
-      str = "icon";
-    }
-    let flag = source.disableColor;
-    if (flag === undefined) {
-      flag = true;
-    }
-    const context = importAllResult.useContext(closure_13);
-    let obj = styleProperties;
-    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
-    const tmp4 = callback(IconSizes, obj);
-    let tmp3Result = tmp4;
-    if ("entity" === str) {
-      obj = { style: null, children: null };
-      obj[0] = tmp2.entityWrapper;
-      obj[1] = tmp4;
-      tmp3Result = callback(closure_6, obj);
-    }
-    return tmp3Result;
-  }
-};
+}), createCacheKey);
 let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
 
 export const BaseTextButton = merged;

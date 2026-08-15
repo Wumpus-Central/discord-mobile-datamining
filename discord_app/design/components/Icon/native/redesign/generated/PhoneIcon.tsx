@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PhoneIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/11396_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/11109_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

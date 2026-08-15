@@ -15,20 +15,20 @@ let result = require("createCacheKey").fileFinishedImporting("modules/collectibl
 export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePlaceholder(style) {
   let sharedValue;
   const tmp = createCacheKey();
-  sharedValue = sharedValue(4083).useSharedValue(0.3);
+  sharedValue = sharedValue(4115).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const obj = sharedValue(outer1_2[4]);
     const result = sharedValue.set(obj.withRepeat(sharedValue(outer1_2[5]).withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(4083);
+  let obj = sharedValue(4115);
   const fn = function h() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10107093534072;
   fn.__initData = closure_6;
-  const animatedStyle = sharedValue(4083).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4115).useAnimatedStyle(fn);
   style = [tmp.skeletonContainer, style.style, animatedStyle];
   return jsx(ReanimatedRexport.View, { style });
 };

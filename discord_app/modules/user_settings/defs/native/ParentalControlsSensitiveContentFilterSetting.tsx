@@ -9,7 +9,7 @@ obj = {
     return intl.string(getSystemLocale.t["Hj/But"]);
   },
   IconComponent: require("ImageWarningIcon").ImageWarningIcon,
-  parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   screen: obj,
   unsearchable: true
 };

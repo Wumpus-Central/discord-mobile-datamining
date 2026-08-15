@@ -22,7 +22,7 @@ import importDefaultResult10 from "extractColorStringsFromServerColors";
 import importDefaultResult11 from "extractColorStringsFromServerColors";
 import importDefaultResult12 from "combineMarkupRules";
 import importDefaultResult13 from "extractColorStringsFromServerColors";
-import { t } from "../../../_runtime/04060_t.js";
+import { t } from "../../../_runtime/04092_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
@@ -144,8 +144,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNickname.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4187).getName(str);
-        const tmp4Result = tmp4(4187);
+        nickname = tmp4(4219).getName(str);
+        const tmp4Result = tmp4(4219);
       }
       str = nickname;
       const obj2 = getNickname;
@@ -521,7 +521,7 @@ obj[19] = {
 obj[20] = require("getChannel").channelMention;
 obj[21] = require("getChannel").channelOrMessageUrl;
 obj[22] = require("getChannel").mediaPostLink;
-obj[23] = require("module_4810").attachmentLink;
+obj[23] = require("module_6819").attachmentLink;
 const obj10 = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["@"],
@@ -887,7 +887,7 @@ obj[33] = {
 };
 obj[34] = require("match");
 obj[35] = require("regExp");
-obj[36] = require("module_4825");
+obj[36] = require("module_6830");
 let items = [obj, ];
 const obj20 = {
   order: require("textRegexp").order,

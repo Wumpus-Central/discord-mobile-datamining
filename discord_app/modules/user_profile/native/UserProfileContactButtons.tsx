@@ -3,7 +3,7 @@ import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
 import markAllUserIdListsStale from "markAllUserIdListsStale";
 import { RelationshipTypes } from "ME";
-import jsxProd from "module_4355";
+import jsxProd from "module_4770";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
@@ -45,18 +45,18 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let markAllUserIdListsStale;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8851);
+  let obj = user(8934);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5789)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7139)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12425);
+  let tmp3Result = tmp3(12172);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
   const items = [markAllUserIdListsStale];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  markAllUserIdListsStale = trackUserProfileAction(4187).useName(user);
+  markAllUserIdListsStale = trackUserProfileAction(4219).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -65,9 +65,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12602).UserClockIcon;
+          let UserPlusIcon = tmp3(12353).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4280).UserPlusIcon;
+          UserPlusIcon = tmp3(4312).UserPlusIcon;
         }
         const intl = tmp3(1236).intl;
         const string = intl.string;
@@ -97,11 +97,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(12058).confirmCancelFriendRequest(obj);
-            const obj3 = user(12058);
+            const result = user(11791).confirmCancelFriendRequest(obj);
+            const obj3 = user(11791);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9307);
+            obj = trackUserProfileAction(9736);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

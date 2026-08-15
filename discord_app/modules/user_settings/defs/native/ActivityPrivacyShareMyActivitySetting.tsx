@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.UQ9RHJ);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: require("explicitContentFromProto").ShowCurrentGame.useSetting,
   onValueChange: require("explicitContentFromProto").ShowCurrentGame.updateSetting
 });
@@ -25,7 +25,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.UQ9RHJ);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: require("explicitContentFromProto").ShowCurrentGame.useSetting,
   onValueChange: require("explicitContentFromProto").ShowCurrentGame.updateSetting
 };

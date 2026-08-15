@@ -6,7 +6,7 @@ import closure_6 from "initialize";
 import set from "set";
 import ME from "ME";
 import { jsx } from "CONFIG_NEVER_ANIMATE_TIMING";
-import { Easing } from "module_4083";
+import { Easing } from "module_4115";
 import createCacheKey from "createCacheKey";
 import set from "get ActivityIndicator";
 import { BugReporterNotification } from "../../bug_reporter/native/BugReporterNotification.tsx";
@@ -79,7 +79,7 @@ function NotificationWrapper(notification) {
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: metroImportAll, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
-obj[1] = Easing.in(require("module_4083").Easing.ease);
+obj[1] = Easing.in(require("module_4115").Easing.ease);
 let closure_16 = createCacheKey.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let closure_18 = { code: "function InAppNotificationContainerTsx1(){const{runOnJS,setInitialized}=this.__closure;return runOnJS(setInitialized)(true);}" };
 let closure_19 = { code: "function InAppNotificationContainerTsx2(){const{runOnJS,setPanning}=this.__closure;runOnJS(setPanning)(false);}" };

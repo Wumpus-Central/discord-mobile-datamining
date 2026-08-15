@@ -4,7 +4,7 @@ import noop from "noop";
 import get_ActivityIndicator from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { useNavigationTheme } from "useNavigationTheme.native.tsx";
 
 let StyleSheet;
@@ -233,7 +233,7 @@ function WrappedNavigationStack(arg0) {
     return tmp2;
   }), 1)[0];
   let obj1 = useNavigationTheme;
-  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4278)());
+  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4310)());
   obj = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   obj[1] = navigationTheme;
   if (null == initialRouteState) {
@@ -273,7 +273,7 @@ export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDa
   return React.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(5845).useNavigatorShouldCrossfade();
+  navigatorShouldCrossfade = navigatorShouldCrossfade(6313).useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
   return React.useMemo(() => {
     let obj;

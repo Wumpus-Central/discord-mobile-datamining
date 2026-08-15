@@ -50,8 +50,8 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     obj = ModalActionCreators;
     const obj1 = { reason: null };
     obj1[0] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(8587, dependencyMap.paths), obj1, closure_5);
-    const tmp5 = asyncRequireImpl(8587, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(8626, dependencyMap.paths), obj1, closure_5);
+    const tmp5 = asyncRequireImpl(8626, dependencyMap.paths);
   }
 }, 200);
 apply = {
@@ -59,7 +59,7 @@ apply = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uHAJ5v);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useIsDisabled: function useAccountSMSBackupSettingIsDisabled() {
     const items = [mergeGuildAvatar];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

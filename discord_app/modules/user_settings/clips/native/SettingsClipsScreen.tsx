@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/clips/native/SettingsClipsScreen.tsx
 import noop from "noop";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import { jsx } from "jsxProd";
 import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 

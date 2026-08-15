@@ -27,7 +27,7 @@ const radio = createToggle.createRadio({
     const items = [intl.string(getSystemLocale.t["9BGJ1m"])];
     return items;
   },
-  parent: require("MobileSetting").MobileSetting.SWIPE_RIGHT_TO_LEFT,
+  parent: require("MobileUserSettings").MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
   useValue: useSwipeToReplySettingValue,
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
@@ -62,7 +62,7 @@ let obj = {
     const items = [intl.string(getSystemLocale.t["9BGJ1m"])];
     return items;
   },
-  parent: require("MobileSetting").MobileSetting.SWIPE_RIGHT_TO_LEFT,
+  parent: require("MobileUserSettings").MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
   useValue: useSwipeToReplySettingValue,
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);

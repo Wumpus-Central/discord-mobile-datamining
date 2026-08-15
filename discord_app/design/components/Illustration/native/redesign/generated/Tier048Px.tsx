@@ -12,13 +12,13 @@ export const getTier048PxSource = function getTier048PxSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(12863);
+      return callback(12940);
     },
     darker() {
-      return callback(12864);
+      return callback(12941);
     },
     light() {
-      return callback(12865);
+      return callback(12942);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useTier048PxSource = function useTier048PxSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12863);
+      return callback(12940);
     },
     darker() {
-      return callback(12864);
+      return callback(12941);
     },
     light() {
-      return callback(12865);
+      return callback(12942);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const Tier048Px = function Tier048Px(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12863);
+      return callback(12940);
     },
     darker() {
-      return callback(12864);
+      return callback(12941);
     },
     light() {
-      return callback(12865);
+      return callback(12942);
     }
   };
   obj = {};

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 
 const require = arg1;
 function ChatPanelNativeStackNavigator(arg0) {

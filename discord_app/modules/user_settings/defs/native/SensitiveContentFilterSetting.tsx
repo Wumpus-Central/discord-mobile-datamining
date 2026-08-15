@@ -9,7 +9,7 @@ obj = {
     return intl.string(getSystemLocale.t["Hj/But"]);
   },
   IconComponent: require("ImageWarningIcon").ImageWarningIcon,
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: obj,
   useSearchTerms() {
     const intl = getSystemLocale.intl;

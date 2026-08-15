@@ -11,5 +11,5 @@ export const setMediaModalFooterAction = function setMediaModalFooterAction(arg0
   _batchUpdates.batchUpdates(() => outer1_2.setState({ footerAction: closure_0 }));
 };
 export const clearMediaModalFooterAction = function clearMediaModalFooterAction() {
-  batchUpdates.batchUpdates(() => state.setState({ footerAction: "title" }));
+  batchUpdates.batchUpdates(() => state.setState({ footerAction: "r" }));
 };

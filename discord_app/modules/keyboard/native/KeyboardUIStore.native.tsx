@@ -49,7 +49,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   } else {
     num3 = 0;
     if (0 !== keyboardHeight2) {
-      tmp2Result = tmp2(1628);
+      tmp2Result = tmp2(1629);
       num3 = keyboardHeight2 - tmp2Result.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
     }
   }
@@ -82,7 +82,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
       if (num7 == null) {
         num7 = 253;
       }
-      if (type === tmp2(1626).KeyboardTypes.SYSTEM) {
+      if (type === tmp2(1627).KeyboardTypes.SYSTEM) {
         if (0 !== num2) {
           if (tmp2Result2.getIsAnyChatInputFocused()) {
             const _Math2 = Math;
@@ -91,8 +91,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
               const Storage4 = tmp2(595).Storage;
               const result1 = Storage4.set(tmp8, bound1);
             }
-            let diff = bound1 - tmp2(1628).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
-            const tmp2Result3 = tmp2(1628);
+            let diff = bound1 - tmp2(1629).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
+            const tmp2Result3 = tmp2(1629);
           }
           const keyboardType2 = keyboardDuration.keyboardType;
           let context;
@@ -114,14 +114,14 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
                 systemKeyboardOpen = tmp.systemKeyboardOpen;
               }
             }
-            if (tmp.keyboardContexts[tmp2(undefined, 1626).KeyboardTypes.SYSTEM].keyboardWillOpen) {
+            if (tmp.keyboardContexts[tmp2(undefined, 1627).KeyboardTypes.SYSTEM].keyboardWillOpen) {
               if (null != keyboardDuration.systemKeyboardOpen) {
                 obj = {};
                 const merged = Object.assign(tmp.keyboardContexts);
                 obj = {};
-                const merged1 = Object.assign(tmp.keyboardContexts[tmp2(undefined, 1626).KeyboardTypes.SYSTEM]);
+                const merged1 = Object.assign(tmp.keyboardContexts[tmp2(undefined, 1627).KeyboardTypes.SYSTEM]);
                 obj.keyboardWillOpen = false;
-                obj[tmp2(1626).KeyboardTypes.SYSTEM] = obj;
+                obj[tmp2(1627).KeyboardTypes.SYSTEM] = obj;
                 let tmp21 = obj;
               }
               const tmp30 = shallowEqual(tmp.keyboardContexts, tmp21);
@@ -162,12 +162,12 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
             tmp2Result4 = tmp2(500);
           }
           tmp19 = tmp17 !== context;
-          tmp2Result2 = tmp2(1627);
+          tmp2Result2 = tmp2(1628);
         }
       }
-      tmp2Result1 = tmp2(1627);
-      diff = num7 - tmp2(1628).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
-      const tmp2Result5 = tmp2(1628);
+      tmp2Result1 = tmp2(1628);
+      diff = num7 - tmp2(1629).getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
+      const tmp2Result5 = tmp2(1629);
     }
   }
   tmp12 = num4;
@@ -180,18 +180,18 @@ function createInitialEntryState(main) {
     num = 253;
   }
   let obj = { customKeyboardHeight: null, customKeyboardHeightExcludingSafeAreaInsets: null, keyboardContexts: null, keyboardDuration: 0, keyboardHeight: null, keyboardHeightExcludingSafeAreaInsets: null, systemKeyboardOpen: false, keyboardType: null, keyboardTypePrevious: null };
-  const SYSTEM2 = tmp(1626).KeyboardTypes.SYSTEM;
+  const SYSTEM2 = tmp(1627).KeyboardTypes.SYSTEM;
   obj[0] = num;
-  const SYSTEM3 = tmp(1626).KeyboardTypes.SYSTEM;
+  const SYSTEM3 = tmp(1627).KeyboardTypes.SYSTEM;
   const Storage2 = tmp(595).Storage;
   let num2 = Storage2.get(customKeyboardHeight, 253);
   if (num2 == null) {
     num2 = 253;
   }
-  const SYSTEM4 = tmp(1626).KeyboardTypes.SYSTEM;
-  let tmpResult = tmp(1628);
+  const SYSTEM4 = tmp(1627).KeyboardTypes.SYSTEM;
+  let tmpResult = tmp(1629);
   obj[1] = num2 - tmpResult.getSafeAreaInsets(main).bottom;
-  obj = { [tmp(1626).KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [tmp(1626).KeyboardTypes.EXPRESSION]: ExpressionPickerViewType.EMOJI, [tmp(1626).KeyboardTypes.MEDIA]: obj, [tmp(1626).KeyboardTypes.APP_LAUNCHER]: obj1 };
+  obj = { [tmp(1627).KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [tmp(1627).KeyboardTypes.EXPRESSION]: ExpressionPickerViewType.EMOJI, [tmp(1627).KeyboardTypes.MEDIA]: obj, [tmp(1627).KeyboardTypes.APP_LAUNCHER]: obj1 };
   obj = { target: MediaKeyboardTarget.CHAT };
   obj[2] = obj;
   tmpResult = tmp(500);
@@ -268,7 +268,7 @@ KeyboardEvents2.addListener(str2, () => {
   _dismissGlobalKeyboard.onKeyboardChanged(false);
   const item = set1.forEach((arg0) => arg0(false));
 });
-const subscription = require("module_1629").subscribe(() => {
+const subscription = require("module_1630").subscribe(() => {
   const _require = {};
   _batchUpdates.batchUpdates(() => outer1_11.setState((arg0) => {
     let tmp = closure_1;

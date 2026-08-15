@@ -20,14 +20,14 @@ export default function ModeratorStartStageView(channel) {
   const items = [createGuildRecordFromRust];
   const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(guild_id), items1);
-  let obj1 = guild_id(9101);
+  let obj1 = guild_id(8891);
   const first = callback(obj1.useGuildChannelScheduledEvents(channel.id), 1)[0];
-  let obj2 = guild_id(9049);
+  let obj2 = guild_id(8839);
   const canManageGuildEventResult = obj2.useManageResourcePermissions(channel).canManageGuildEvent(first);
   const tmp5 = importDefault;
-  let obj3 = guild_id(10751);
+  let obj3 = guild_id(12490);
   const isLive = obj3.useStageChannelStartEvent(channel.id).isLive;
-  let obj4 = guild_id(9005);
+  let obj4 = guild_id(8785);
   const nextRecurrenceIdInEvent = obj4.getNextRecurrenceIdInEvent(first);
   let tmp10Result2 = null;
   if (null != stateFromStores) {
@@ -46,7 +46,7 @@ export default function ModeratorStartStageView(channel) {
         obj[2] = isLive;
         obj[3] = stateFromStores;
         obj[4] = nextRecurrenceIdInEvent;
-        tmp10Result = tmp10(tmp(10770).StartEventPrompt, obj);
+        tmp10Result = tmp10(tmp(12504).StartEventPrompt, obj);
       }
     }
     const items2 = [tmp10Result, , , ];
@@ -55,7 +55,7 @@ export default function ModeratorStartStageView(channel) {
       obj1 = { channel: null, isLive: null };
       obj1[0] = channel;
       obj1[1] = isLive;
-      tmp10Result = tmp10(tmp(10771).StartStagePrompt, obj1);
+      tmp10Result = tmp10(tmp(12505).StartStagePrompt, obj1);
     }
     items2[1] = tmp10Result;
     let tmp10Result1 = null;
@@ -64,19 +64,19 @@ export default function ModeratorStartStageView(channel) {
       obj2[0] = channel;
       obj2[1] = isLive;
       obj2[2] = stateFromStores;
-      tmp10Result1 = tmp10(tmp(10770).ScheduleEventPrompt, obj2);
+      tmp10Result1 = tmp10(tmp(12504).ScheduleEventPrompt, obj2);
     }
     obj3 = { children: null };
     items2[2] = tmp10Result1;
     obj4 = { onContinue: null };
     obj4[0] = channel.onSkip;
-    items2[3] = closure_5(tmp(10771).ContinueToStagePrompt, obj4);
+    items2[3] = closure_5(tmp(12505).ContinueToStagePrompt, obj4);
     obj3[0] = items2;
     obj[2] = closure_7(closure_6, obj3);
-    tmp10Result2 = tmp10(tmp5(10752), obj);
+    tmp10Result2 = tmp10(tmp5(12491), obj);
     const tmp12 = closure_7;
     const tmp13 = closure_6;
-    const tmp5Result = tmp5(10752);
+    const tmp5Result = tmp5(12491);
   }
   return tmp10Result2;
 };

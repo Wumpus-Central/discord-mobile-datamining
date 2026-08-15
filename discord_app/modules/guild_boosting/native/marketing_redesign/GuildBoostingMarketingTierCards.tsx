@@ -4,7 +4,7 @@ import importAllResult from "BoostedGuildTiers";
 import { View } from "createCacheKey";
 import ME from "ME";
 import { BoostedGuildFeatures } from "GuildFeatures";
-import jsxProd from "module_4083";
+import jsxProd from "module_4115";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
@@ -809,7 +809,7 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   }
   obj = { style: tmp.cardWrapper, ref, children: null };
   obj = { angle: 45, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, style: null, useAngle: true, children: null };
-  let tmp2Result = tmp2(4788);
+  let tmp2Result = tmp2(4756);
   const items1 = [Themes.unsafe_rawColors.GUILD_BOOSTING_BLUE, Themes.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj[2] = items1;
   obj[3] = [0, 1];
@@ -818,13 +818,13 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   const obj2 = { onPress: onCardPress.onCardPress, style: tmp.cardContent, accessibilityRole: "button", accessibilityState: { expanded: isExpanded }, accessibilityLabel: stringResult, children: null };
   const obj3 = { style: tmp.cardHeading, children: null };
   const obj4 = { color: "text-overlay-light", style: tmp.cardTierName, variant: "heading-xxl/extrabold", children: null };
-  let tmp7Result = tmp7(4234);
+  let tmp7Result = tmp7(4266);
   obj4[3] = tmp7Result.getTierName(tier, { useLevels: false });
-  const items2 = [callback2(features(4338).Text, obj4), ];
+  const items2 = [callback2(features(4734).Text, obj4), ];
   const obj5 = { color: "text-overlay-light", style: tmp.cardTierBoostcount, variant: "text-md/medium", children: null };
   const intl2 = tmp7(1236).intl;
   obj5[3] = intl2.format(features(1236).t.gDsyB9, { numSubscriptions: table[tier] });
-  items2[1] = callback2(features(4338).Text, obj5);
+  items2[1] = callback2(features(4734).Text, obj5);
   obj3[1] = items2;
   const items3 = [callback3(View, obj3), , ];
   const obj7 = { style: tmp.cardFeaturesWrapper, children: null };
@@ -832,11 +832,11 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   obj7[1] = items4;
   items3[1] = callback3(View, obj7);
   const obj9 = { style: tmp.cardFooter, children: null };
-  const items5 = [callback2(features(4338).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
+  const items5 = [callback2(features(4734).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
   if (isExpanded) {
-    let ChevronLargeDownIcon = tmp7(12945).ChevronLargeUpIcon;
+    let ChevronLargeDownIcon = tmp7(13022).ChevronLargeUpIcon;
   } else {
-    ChevronLargeDownIcon = tmp7(12947).ChevronLargeDownIcon;
+    ChevronLargeDownIcon = tmp7(13024).ChevronLargeDownIcon;
   }
   const isThemeDarkResult = obj.isThemeDark(useTheme());
   const obj6 = { numSubscriptions: table[tier] };
@@ -845,7 +845,7 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   obj9[1] = items5;
   items3[2] = callback3(View, obj9);
   obj2[5] = items3;
-  obj1[1] = callback3(features(4909).PressableHighlight, obj2);
+  obj1[1] = callback3(features(5433).PressableHighlight, obj2);
   obj[6] = callback2(View, obj1);
   const items6 = [callback2(tmp2Result, obj), , ];
   let tmp16 = tmp15;
@@ -862,11 +862,11 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
     if (tmp11Result) {
       const obj11 = { children: null };
       const obj12 = { colors: null, start: null, end: null, locations: null, style: null };
-      tmp2Result = tmp2(4788);
-      tmp7Result = tmp7(4191);
-      const items7 = [tmp7Result.hexWithOpacity(tmp9, 0), tmp7(4191).hexWithOpacity(tmp9, 1), ];
-      const tmp7Result1 = tmp7(4191);
-      items7[2] = tmp7(4191).hexWithOpacity(tmp9, 0);
+      tmp2Result = tmp2(4756);
+      tmp7Result = tmp7(4223);
+      const items7 = [tmp7Result.hexWithOpacity(tmp9, 0), tmp7(4223).hexWithOpacity(tmp9, 1), ];
+      const tmp7Result1 = tmp7(4223);
+      items7[2] = tmp7(4223).hexWithOpacity(tmp9, 0);
       obj12[0] = items7;
       obj12[1] = { x: 0, y: 0 };
       obj12[2] = { x: 1, y: 0 };
@@ -876,13 +876,13 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
       obj12[4] = items8;
       const items9 = [tmp13(tmp2Result, obj12), , , , , ];
       const obj13 = { colors: null, start: null, end: null, locations: null, style: null };
-      const tmp7Result2 = tmp7(4191);
-      const tmp2Result1 = tmp2(4788);
-      const items10 = [tmp7(4191).hexWithOpacity(tmp9, 0), , ];
-      const tmp7Result3 = tmp7(4191);
-      items10[1] = tmp7(4191).hexWithOpacity(tmp9, 1);
-      const tmp7Result4 = tmp7(4191);
-      items10[2] = tmp7(4191).hexWithOpacity(tmp9, 0);
+      const tmp7Result2 = tmp7(4223);
+      const tmp2Result1 = tmp2(4756);
+      const items10 = [tmp7(4223).hexWithOpacity(tmp9, 0), , ];
+      const tmp7Result3 = tmp7(4223);
+      items10[1] = tmp7(4223).hexWithOpacity(tmp9, 1);
+      const tmp7Result4 = tmp7(4223);
+      items10[2] = tmp7(4223).hexWithOpacity(tmp9, 0);
       obj13[0] = items10;
       obj13[1] = { x: 0, y: 0 };
       obj13[2] = { x: 1, y: 0 };
@@ -892,32 +892,32 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
       obj13[4] = items11;
       items9[1] = tmp13(tmp2Result1, obj13);
       const obj14 = { source: null, style: null };
-      obj14[0] = tmp2(12949);
+      obj14[0] = tmp2(13026);
       const items12 = [, , ];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
       obj14[1] = items12;
       items9[2] = tmp13(tmp7(1297).Icon, obj14);
       const obj15 = { source: null, style: null };
-      obj15[0] = tmp2(12949);
+      obj15[0] = tmp2(13026);
       const items13 = [, , ];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
       obj15[1] = items13;
       items9[3] = tmp13(tmp7(1297).Icon, obj15);
       const obj16 = { source: null, style: null };
-      obj16[0] = tmp2(12949);
+      obj16[0] = tmp2(13026);
       const items14 = [, , ];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
       obj16[1] = items14;
       items9[4] = tmp13(tmp7(1297).Icon, obj16);
       const obj17 = { source: null, style: null };
-      obj17[0] = tmp2(12950);
+      obj17[0] = tmp2(13027);
       const items15 = [, , ];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
       obj17[1] = items15;
       items9[5] = tmp13(tmp7(1297).Icon, obj17);
       obj11[0] = items9;
       tmp11Result = tmp11(closure_11, obj11);
-      const tmp7Result5 = tmp7(4191);
+      const tmp7Result5 = tmp7(4223);
     }
     items6[2] = tmp11Result;
     obj[2] = items6;
@@ -939,10 +939,10 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
       string2Result = string2(_9NBo7c["9JbE3J"]);
     }
     obj19[3] = string2Result;
-    obj19 = tmp13(tmp7(4338).Text, obj19);
+    obj19 = tmp13(tmp7(4734).Text, obj19);
     obj18[6] = obj19;
-    tmp13(tmp2(4788), obj18);
-    const tmp2Result2 = tmp2(4788);
+    tmp13(tmp2(4756), obj18);
+    const tmp2Result2 = tmp2(4756);
   }
 });
 const obj40 = { position: "absolute", tintColor: require("result").DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };

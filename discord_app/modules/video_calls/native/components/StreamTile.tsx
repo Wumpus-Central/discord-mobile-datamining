@@ -9,7 +9,7 @@ import jsxProd from "LegacyBaseButton";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/10698_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12458_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -91,8 +91,8 @@ let closure_15 = importAllResult.memo((participant) => {
       obj[0] = stateFromStores;
       obj[1] = removeEmptyStateButton;
       obj[2] = removeEmptyStateImage;
-      let tmp4Result = tmp4(10676);
-      obj[3] = tmp(10676).VideoEmptyTypes.STREAM_FAILED;
+      let tmp4Result = tmp4(12441);
+      obj[3] = tmp(12441).VideoEmptyTypes.STREAM_FAILED;
       obj[4] = StyleSheet.absoluteFill;
       return callback(tmp4Result, obj);
     } else if (tmp6.ENDED === state) {
@@ -100,8 +100,8 @@ let closure_15 = importAllResult.memo((participant) => {
       obj[0] = stateFromStores;
       obj[1] = removeEmptyStateButton;
       obj[2] = removeEmptyStateImage;
-      tmp4Result = tmp4(10676);
-      obj[3] = tmp(10676).VideoEmptyTypes.STREAM_ENDED;
+      tmp4Result = tmp4(12441);
+      obj[3] = tmp(12441).VideoEmptyTypes.STREAM_ENDED;
       obj[4] = StyleSheet.absoluteFill;
       return callback(tmp4Result, obj);
     } else {
@@ -118,10 +118,10 @@ let closure_15 = importAllResult.memo((participant) => {
           obj2[0] = intl2.string(tmp(1236).t["5q17w5"]);
           const intl3 = tmp(1236).intl;
           const obj3 = { username: null };
-          obj3[0] = tmp4(4534).getName(stateFromStores.guildId, stateFromStores.channelId, user);
+          obj3[0] = tmp4(4796).getName(stateFromStores.guildId, stateFromStores.channelId, user);
           obj2[1] = intl3.formatToPlainString(tmp(1236).t.meVVlb, obj3);
           tmp9 = callback(StreamTextOverlay, obj2);
-          const tmp4Result1 = tmp4(4534);
+          const tmp4Result1 = tmp4(4796);
         }
       }
       if (null != tmp5) {
@@ -129,10 +129,10 @@ let closure_15 = importAllResult.memo((participant) => {
         obj4[0] = stateFromStores;
         obj4[1] = removeEmptyStateButton;
         obj4[2] = removeEmptyStateImage;
-        obj4[3] = tmp(10676).VideoEmptyTypes.STREAM_FAILED;
+        obj4[3] = tmp(12441).VideoEmptyTypes.STREAM_FAILED;
         obj4[4] = StyleSheet.absoluteFill;
         obj4[5] = tmp5;
-        return callback(tmp4(10676), obj4);
+        return callback(tmp4(12441), obj4);
       } else {
         id = id.getId();
         const obj5 = { resizeMode: null, streamId: null, gestureEnabled: null, renderTag: null, videoSpinnerContext: null, userId: null, paused: null };
@@ -143,15 +143,15 @@ let closure_15 = importAllResult.memo((participant) => {
           return outer1_10(lib(outer1_2[18]), { style: lib.liveTag, participant });
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(10686).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(12448).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(10686).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(12448).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj6 = { children: null };
         obj5[4] = REMOTE_STREAM;
         obj5[5] = user.id;
         obj5[6] = stateFromStores.state === tmp6.PAUSED;
-        const items1 = [callback(tmp4(10683), obj5), tmp9];
+        const items1 = [callback(tmp4(12445), obj5), tmp9];
         obj6[0] = items1;
         return closure_11(closure_12, obj6);
       }

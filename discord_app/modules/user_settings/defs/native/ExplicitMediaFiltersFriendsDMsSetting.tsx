@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/ExplicitMediaFiltersFriendsDMsSetting.tsx
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -13,7 +13,7 @@ const pressable = createToggle.createPressable({
     return intl.string(getSystemLocale.t["+uI23H"]);
   },
   parent() {
-    return MobileSetting.SENSITIVE_CONTENT_FILTERS;
+    return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
@@ -51,7 +51,7 @@ let obj = {
     return intl.string(getSystemLocale.t["+uI23H"]);
   },
   parent() {
-    return MobileSetting.SENSITIVE_CONTENT_FILTERS;
+    return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const obj = useExplicitContentSettingOrDefault;

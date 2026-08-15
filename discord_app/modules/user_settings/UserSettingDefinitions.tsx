@@ -8,7 +8,7 @@ const result = require("MAX_FAVORITES").fileFinishedImporting("modules/user_sett
 
 export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, set) {
   let getSetting = textAndImages;
-  let f74309 = activityRestrictedGuildIds;
+  let f74454 = activityRestrictedGuildIds;
   let closure_2 = explicitContentFromProto;
   let initialize = explicitContentToProto;
   let obj = set;
@@ -28,7 +28,7 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
   getSetting = function getSetting() {
     let tmp3;
     if (INFREQUENT_USER_ACTION.settings[getSetting] != null) {
-      tmp3 = tmp2[f74309];
+      tmp3 = tmp2[f74454];
     }
     return closure_2(tmp3);
   };
@@ -39,14 +39,14 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f74316(tmp2);
+      return f74461(tmp2);
     },
     useSetting() {
       const items = [INFREQUENT_USER_ACTION];
       return getSetting(explicitContentFromProto[4]).useStateFromStores(items, getSetting, undefined, fn);
     }
   };
-  f74309 = (favorites) => {
+  f74454 = (favorites) => {
     let closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, (arg0) => {
@@ -57,10 +57,10 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
 };
 export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animateEmoji) {
   let getSetting = defineProtoSetting;
-  let f74313 = text;
+  let f74458 = text;
   let closure_2 = animateEmoji;
   getSetting = function getSetting() {
-    const tmp = outer1_3.getState()[f74313];
+    const tmp = outer1_3.getState()[f74458];
     let setting;
     if (tmp != null) {
       setting = tmp.settings[closure_2];
@@ -70,18 +70,18 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     }
     return setting;
   };
-  f74313 = (arg0) => {
-    if (outer1_3.shouldSync(f74313)) {
+  f74458 = (arg0) => {
+    if (outer1_3.shouldSync(f74458)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
-      let obj = f74313(animateEmoji[5]);
+      let obj = f74458(animateEmoji[5]);
       obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
       obj = {};
       const obj1 = { settings: null };
       const obj2 = {};
       obj2[animateEmoji] = arg0;
       obj1[0] = obj2;
-      obj[f74313] = obj1;
+      obj[f74458] = obj1;
       obj[1] = obj;
       obj.dispatch(obj);
       updateSettingResult = Promise.resolve();
@@ -111,13 +111,13 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f74316(tmp2);
+      return f74461(tmp2);
     }
   };
 }
 export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, arg3) {
   let getSetting = defineProtoSetting;
-  let f74316 = animateEmoji;
+  let f74461 = animateEmoji;
   let closure_2 = arg2;
   let initialize = arg3;
   getSetting = function getSetting() {
@@ -127,9 +127,9 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
     }
     return setting;
   };
-  f74316 = (arg0) => {
-    const items = [f74316];
-    f74316(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
+  f74461 = (arg0) => {
+    const items = [f74461];
+    f74461(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
     return getSetting.updateSetting(arg0);
   };
   return {
@@ -147,7 +147,7 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f74316(tmp2);
+      return f74461(tmp2);
     }
   };
 }

@@ -12,7 +12,7 @@ function _getCurrentTask() {
     const obj2 = { event: null };
     obj2[0] = outer1_0(503).NetworkActionNames.USER_VERIFY;
     obj1[1] = obj2;
-    closure_0 = yield v0(4562).get(obj1);
+    closure_0 = yield v0(5227).get(obj1);
     let body = null;
     if (204 !== closure_0.status) {
       body = closure_0.body;
@@ -41,7 +41,7 @@ function _completeTask() {
       const obj2 = { event: null };
       obj2[0] = callback(503).NetworkActionNames.USER_VERIFY;
       obj1[2] = obj2;
-      yield v0(4562).post(obj1);
+      yield v0(5227).post(obj1);
       return body.body;
     })();
   });
@@ -73,7 +73,7 @@ function _resendVerificationCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -148,7 +148,7 @@ function _resendVerificationCode() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_4562").fileFinishedImporting("modules/safety_flows/SafetyFlowsActionCreators.tsx");
+const result = require("module_5227").fileFinishedImporting("modules/safety_flows/SafetyFlowsActionCreators.tsx");
 
 export const getCurrentTask = function getCurrentTask() {
   const self = this;

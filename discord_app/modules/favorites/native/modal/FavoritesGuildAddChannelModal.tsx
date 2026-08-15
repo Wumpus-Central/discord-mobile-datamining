@@ -24,7 +24,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   let dependencyMap;
   let height;
   const tmp = createCacheKey();
-  first(12219)(parentId.source);
+  first(11962)(parentId.source);
   const tmp4 = callback(React.useState([]), 2);
   first = tmp4[0];
   dependencyMap = tmp4[1];
@@ -44,7 +44,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -103,7 +103,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
       }
     }
   }), items);
-  height = first(1493)({ ignoreKeyboard: true }).height;
+  height = first(1494)({ ignoreKeyboard: true }).height;
   const items1 = [height];
   let obj = {
     style: React.useMemo(() => {
@@ -113,19 +113,19 @@ export default function FavoritesGuildAddChannelModal(parentId) {
     children: null
   };
   obj = { title: null, onClose: null };
-  const tmp2 = first(12218)();
+  const tmp2 = first(11961)();
   let intl = parentId(1236).intl;
-  obj[0] = intl.string(first(3047).Rp35U1);
-  obj[1] = parentId(12216).closeFavoritesGuildAddChannelModal;
-  const items2 = [callback2(first(11146), obj), ];
+  obj[0] = intl.string(first(3079).Rp35U1);
+  obj[1] = parentId(11959).closeFavoritesGuildAddChannelModal;
+  const items2 = [callback2(first(9090), obj), ];
   obj = { style: tmp.container, children: null };
-  const items3 = [callback2(first(4911), { absolute: true }), callback2(first(11147), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 }), ];
+  const items3 = [callback2(first(9091), { absolute: true }), callback2(first(9092), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 }), ];
   let obj2 = { isVisible: first.length > 0, floatingBackgroundColor: tmp.container.backgroundColor, text: null, onPress: null };
   let obj1 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 };
-  const tmp7 = first(11146);
-  obj2[2] = parentId(12220).getFavoritesAddButtonLabel(first.length);
+  const tmp7 = first(9090);
+  obj2[2] = parentId(11965).getFavoritesAddButtonLabel(first.length);
   obj2[3] = callback1;
-  items3[2] = callback2(parentId(11165).ModalFloatingAction, obj2);
+  items3[2] = callback2(parentId(11963).ModalFloatingAction, obj2);
   obj[1] = items3;
   items2[1] = callback3(View, obj);
   obj[1] = items2;

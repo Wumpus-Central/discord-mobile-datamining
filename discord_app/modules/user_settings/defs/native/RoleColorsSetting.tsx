@@ -36,13 +36,13 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uSOPWm);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: useRoleColorSettingOptions
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
 
 export default createToggle;
 export { useRoleColorSettingValue };

@@ -28,7 +28,7 @@ function _navigateToEvent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -105,7 +105,7 @@ function _navigateToEvent() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(7844);
+              obj1 = callback(8062);
               c4 = 3;
               store = 1;
               const obj4 = { value: null, done: false };
@@ -127,7 +127,7 @@ function _navigateToEvent() {
           c4 = 2;
           store = 1;
           obj5 = { value: null, done: false };
-          obj5[0] = callback3(7839).navigateToStage(channel, null);
+          obj5[0] = callback3(8057).navigateToStage(channel, null);
           return obj5;
         } catch (tmp47) {
           store = tmp;

@@ -9,7 +9,7 @@ import ME from "ME";
 import { StreamTypes } from "StreamIssueReportReasons";
 import { GuildScheduledEventEntityTypes as closure_16 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { MultiAccountSwitchLocation as closure_17 } from "MAX_ACCOUNTS";
-import { registerAsset } from "../../../../_runtime/08675_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10455_registerAsset.js";
 import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -66,7 +66,7 @@ function _waitForDataOrConnection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -161,7 +161,7 @@ function _waitForNavigationReady() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ function _waitForNavigationReady() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp11) {
         v0 = tmp;
         throw tmp11;
@@ -245,7 +245,7 @@ function _connectToStage2() {
       const dependencyMap = tmp3;
       yield outer1_20();
       let c5 = 1;
-      const obj2 = callback(7839);
+      const obj2 = callback(8057);
       yield obj2.connectOrLurkStage(callback, closure_1, true);
       if (2 === tmp7) {
         c5 = 0;
@@ -256,7 +256,7 @@ function _connectToStage2() {
         throw arg1;
       } else if (arg0 !== 2) {
         let closure_2 = arg1;
-        const obj = callback(7839);
+        const obj = callback(8057);
         obj.navigateToStage(closure_2, null);
         c5 = 0;
       }
@@ -291,7 +291,7 @@ function _handleStageNotification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -322,7 +322,7 @@ function _handleStageNotification() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp7) {
           c1 = tmp;
@@ -358,7 +358,7 @@ function _handleGuildEventNotification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -400,11 +400,11 @@ function _handleGuildEventNotification() {
                 channel_id = tmp43.channel_id;
                 if (null == channel_id) {
                   (function onVoiceConnectionError() {
-                    let obj = guild_scheduled_event_id(4062);
+                    let obj = guild_scheduled_event_id(4094);
                     obj = { key: "VOICE_CONNECTION_ERROR_GENERIC", content: null, icon: null };
                     const intl = channel_id(1236).intl;
                     obj[1] = intl.string(channel_id(1236).t.S69lJR);
-                    obj[2] = guild_scheduled_event_id(8675);
+                    obj[2] = guild_scheduled_event_id(10455);
                     obj.open(obj);
                   })();
                   c4 = 3;
@@ -421,7 +421,7 @@ function _handleGuildEventNotification() {
                 }
               } else if (tmp46.EXTERNAL === NumberResult) {
                 guild_scheduled_event_id = tmp43.guild_scheduled_event_id;
-                let obj6 = callback(6021);
+                let obj6 = callback(7302);
                 obj6.transitionToGuild(tmp43.guild_id);
                 dependencyMap = 1;
                 c4 = 1;
@@ -444,7 +444,7 @@ function _handleGuildEventNotification() {
             } else {
               id = guildScheduledEvent.getGuildScheduledEvent(guild_scheduled_event_id);
               if (null != id) {
-                obj3 = channel_id(9012);
+                obj3 = channel_id(8792);
                 const obj7 = { eventId: null, event: null };
                 obj7[0] = id.id;
                 obj7[1] = id;
@@ -460,11 +460,11 @@ function _handleGuildEventNotification() {
             c4 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = channel_id(4353);
+            obj = channel_id(4768);
             obj.transitionToChannel(channel_id);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp31) {
           c4 = tmp;
           throw tmp31;
@@ -499,7 +499,7 @@ function _handleRelationshipAddNotification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -538,9 +538,9 @@ function _handleRelationshipAddNotification() {
               callback = Number(lib.rel_type);
               if (callback === constants2.PENDING_INCOMING) {
                 user_id = lib.user_id;
-                lib(4197).navigateToRootTab({ screen: "notifications" });
-                const obj8 = lib(4197);
-                user_id(15622).setTab(lib(7169).NotificationCenterTabs.ForYou);
+                lib(4229).navigateToRootTab({ screen: "notifications" });
+                const obj8 = lib(4229);
+                user_id(15672).setTab(lib(4802).NotificationCenterTabs.ForYou);
                 dependencyMap = 2;
                 c4 = 1;
                 let obj3 = { value: null, done: false };
@@ -549,14 +549,14 @@ function _handleRelationshipAddNotification() {
               } else {
                 if (callback !== constants2.FRIEND) {
                   if (lib.notification_type === constants.REMINDER) {
-                    let obj5 = lib(4198);
+                    let obj5 = lib(4230);
                     const rootNavigationRef = obj5.getRootNavigationRef();
                     if (rootNavigationRef != null) {
                       rootNavigationRef.navigate("friends", { screen: "requests" });
                     }
                   }
                 } else {
-                  obj3 = callback(4355);
+                  obj3 = callback(4770);
                   const obj4 = { recipientIds: null };
                   obj4[0] = lib.user_id;
                   obj3.openPrivateChannel(obj4);
@@ -575,9 +575,9 @@ function _handleRelationshipAddNotification() {
           } else {
             obj = { userId: null, sourceAnalyticsLocations: null };
             obj[0] = user_id;
-            const items = [callback(5809).PUSH_NOTIFICATION];
+            const items = [callback(7159).PUSH_NOTIFICATION];
             obj[1] = items;
-            callback(8846)(obj);
+            callback(8929)(obj);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = undefined;
@@ -617,7 +617,7 @@ function _handleCallRingNotification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -652,7 +652,7 @@ function _handleCallRingNotification() {
             obj = lib(table[18]);
             obj.transitionToChannel(lib.channel_id);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp15) {
           c4 = tmp;
@@ -688,7 +688,7 @@ function _handleCallConnectNotification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -721,7 +721,7 @@ function _handleCallConnectNotification() {
               obj2[0] = arg1;
               return obj2;
             } else {
-              lib(4353).transitionToChannel(lib.channel_id);
+              lib(4768).transitionToChannel(lib.channel_id);
               dependencyMap = 2;
               c4 = 1;
               let obj3 = { value: null, done: false };
@@ -737,7 +737,7 @@ function _handleCallConnectNotification() {
             obj4[0] = arg1;
             return obj4;
           } else {
-            const tmp60 = callback(9306);
+            const tmp60 = callback(9735);
             const call = tmp60.call;
             const channel_id = lib.channel_id;
             if (typeof call === "unknown") {
@@ -747,10 +747,10 @@ function _handleCallConnectNotification() {
             }
             obj = callback(698);
             const obj5 = { location: null, guild_id: null, ringer_user_id: null };
-            obj5[0] = callback(5809).PUSH_NOTIFICATION;
+            obj5[0] = callback(7159).PUSH_NOTIFICATION;
             obj5[1] = lib.guild_id;
             obj5[2] = lib.user_id;
-            obj2 = lib(4549);
+            obj2 = lib(5042);
             const merged = Object.assign(obj2.collectChannelAnalyticsMetadataFromId(lib.channel_id));
             obj.track(constants.RING_CALL_ACCEPTED, obj5);
             obj3 = lib(500);
@@ -758,14 +758,14 @@ function _handleCallConnectNotification() {
               if (lib.is_fullscreen_call_ui) {
                 obj4 = callback(698);
                 let obj6 = { action_type: "join" };
-                obj6 = lib(4549);
+                obj6 = lib(5042);
                 const merged1 = Object.assign(obj6.collectChannelAnalyticsMetadataFromId(lib.channel_id));
                 obj4.track(constants.CALLKIT_CLICKED, obj6);
               }
-              callback(10962)(lib.channel_id);
+              callback(8734)(lib.channel_id);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp50) {
           c4 = tmp;
@@ -801,7 +801,7 @@ function _handleFriendSuggestionCreateNotification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -836,7 +836,7 @@ function _handleFriendSuggestionCreateNotification() {
               obj2[0] = arg1;
               return obj2;
             } else {
-              navigation = lib(4198).getRootNavigationRef();
+              navigation = lib(4230).getRootNavigationRef();
               if (null != navigation) {
                 const obj3 = { screen: "add-friends", params: null };
                 obj3[1] = { sourcePage: "Notifications" };
@@ -860,11 +860,11 @@ function _handleFriendSuggestionCreateNotification() {
           } else {
             obj = { userId: null, sourceAnalyticsLocations: null };
             obj[0] = user_id;
-            const items = [navigation(5809).PUSH_NOTIFICATION];
+            const items = [navigation(7159).PUSH_NOTIFICATION];
             obj[1] = items;
-            navigation(8846)(obj);
+            navigation(8929)(obj);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -900,7 +900,7 @@ function _maybeAckNotificationCenter() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -966,14 +966,14 @@ function _maybeAckNotificationCenter() {
               const obj8 = prop(11);
               const _HermesInternal = HermesInternal;
               const items = ["incoming_friend_requests_" + lib.user_id + "_" + closure_2];
-              const result = lib(15620).markNotificationCenterLocalItemsAcked(items);
-              const obj10 = lib(15620);
+              const result = lib(15670).markNotificationCenterLocalItemsAcked(items);
+              const obj10 = lib(15670);
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = lib(15620);
+            obj = lib(15670);
             const result1 = obj.markNotificationCenterRemoteItemAcked(prop);
           }
           c4 = 3;
@@ -1029,10 +1029,10 @@ function receiveNotification_(notif_type) {
               tracking_type = notif_type.type;
             }
             if (tmp8) {
-              let tmpResult = tmp(11078);
+              let tmpResult = tmp(10812);
               tmpResult.receivedNotification(payload.messageId, payload.channelId, tracking_type);
             }
-            let tmp56Result = tmp56(9806);
+            let tmp56Result = tmp56(9084);
             obj = { guildId: null, channelId: null, messageId: null, isPreload: true };
             ({ guildId: obj8[0], channelId: obj8[1], messageId: obj8[2] } = payload);
             const messages1 = tmp56Result.fetchMessages(obj);
@@ -1043,7 +1043,7 @@ function receiveNotification_(notif_type) {
             if (payload.type === tmp(691).LinkingTypes.ICYMI) {
               if (null != notif_type.channel_id) {
                 if (null != notif_type.message_id) {
-                  tmp56Result = tmp56(8976);
+                  tmp56Result = tmp56(9057);
                   const forNotification = tmp56Result.fetchForNotification(notif_type.channel_id, notif_type.message_id);
                   flag = false;
                   flag2 = false;
@@ -1068,17 +1068,17 @@ function receiveNotification_(notif_type) {
                   }
                   const obj1 = { id: null, type: null, score: 1000, data: null };
                   obj1[0] = notif_type.notification_center_id;
-                  obj1[1] = tmp(7371).ICYMIItemTypes.CUSTOM_STATUS;
+                  obj1[1] = tmp(7589).ICYMIItemTypes.CUSTOM_STATUS;
                   const obj2 = { user_id: null, text: null, emoji_id: null, emoji_name: null, emoji_animated: null };
                   ({ user_id: obj3[0], status_text: obj3[1] } = notif_type);
                   obj2[2] = status_emoji_id;
                   obj2[3] = notif_type.status_emoji_name;
                   obj2[4] = notif_type.status_emoji_animated;
                   obj1[3] = obj2;
-                  const forStatusNotification = tmp56(8976).fetchForStatusNotification(obj1);
+                  const forStatusNotification = tmp56(9057).fetchForStatusNotification(obj1);
                   flag = false;
                   flag2 = false;
-                  const tmp56Result1 = tmp56(8976);
+                  const tmp56Result1 = tmp56(9057);
                 }
               }
             }
@@ -1413,9 +1413,9 @@ function receiveNotification_(notif_type) {
     case "forEach":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          let tmp19Result = tmp19(4323);
+          let tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           let obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1428,9 +1428,9 @@ function receiveNotification_(notif_type) {
     case "get":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1443,9 +1443,9 @@ function receiveNotification_(notif_type) {
     case "getCurrentUser":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1458,9 +1458,9 @@ function receiveNotification_(notif_type) {
     case "guild":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1473,9 +1473,9 @@ function receiveNotification_(notif_type) {
     case "guild_id":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1488,9 +1488,9 @@ function receiveNotification_(notif_type) {
     case "hasDiversityParent":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1503,9 +1503,9 @@ function receiveNotification_(notif_type) {
     case "hd":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1518,9 +1518,9 @@ function receiveNotification_(notif_type) {
     case "height":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1533,9 +1533,9 @@ function receiveNotification_(notif_type) {
     case "icon":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1548,9 +1548,9 @@ function receiveNotification_(notif_type) {
     case "index":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1568,12 +1568,12 @@ function receiveNotification_(notif_type) {
         tmp19(709).dispatch(obj5);
         const tmp19Result1 = tmp19(709);
       }
-      tmp19(4572).popAll();
+      tmp19(5260).popAll();
       tmpResult = tmp(1222);
       const obj6 = { navigationReplace: true, openChannel: true, skipMessageFetch: null };
       obj6[2] = flag;
       tmpResult.transitionTo(closure_14.CHANNEL(notif_type.guild_id, notif_type.channel_id, notif_type.message_id), obj6);
-      const tmp19Result2 = tmp19(4572);
+      const tmp19Result2 = tmp19(5260);
     break;
     case "items":
     break;
@@ -1647,7 +1647,7 @@ function receiveNotification_(notif_type) {
       const obj7 = { streamType: null, ownerId: null, guildId: null, channelId: null };
       obj7[0] = StreamTypes.GUILD;
       ({ user_id: obj15[1], guild_id: obj15[2], channel_id: obj15[3] } = notif_type);
-      tmp19(4571)(obj7);
+      tmp19(9883)(obj7);
     break;
     case "left":
     break;
@@ -1682,9 +1682,9 @@ function receiveNotification_(notif_type) {
     case "map":
       if (null != notif_type.deeplink) {
         if ("" !== notif_type.deeplink) {
-          tmp19Result = tmp19(4323);
+          tmp19Result = tmp19(4355);
           type = tmp19Result(notif_type.deeplink);
-          tmp19Result = tmp19(13278);
+          tmp19Result = tmp19(4492);
           obj4 = { payload: null, waitForConnection: false, skipMessageFetch: null };
           obj4[0] = type.payload;
           obj4[2] = flag;
@@ -1870,23 +1870,19 @@ function receiveNotification_(notif_type) {
     break;
     case "ay":
     break;
-    case "getWindowOpen":
+    case "getWebViewProxy":
     break;
-    case "numEvents":
+    case "xyYt8A":
     break;
-    case "queueClass":
+    case "ACTIVITIES_INVITES_WRITE":
     break;
-    case "mapToObject":
+    case "INVITES":
     break;
-    case "ObjectData Preview File Format":
+    case "TEAL_NEW_60":
     break;
-    case "isExtensionAnimated":
+    case "useIsReferralReminderDCExperimentEnabled":
     break;
-    case "addMembersContainer":
-    break;
-    case "r_postlude$esjava$0":
-    break;
-    case "enforcedHeight":
+    case "dragOffsetFromRight":
     break;
     case "$ZodBoolean":
     break;
@@ -1899,8 +1895,6 @@ function receiveNotification_(notif_type) {
     case "an":
     break;
     case "n":
-    break;
-    case "useActionBarPrimaryButton":
     break;
     case "ActionBarPrimaryButton":
     break;
@@ -1924,7 +1918,7 @@ function receiveNotification_(notif_type) {
     break;
     case "te":
     break;
-    case "serializeEnd":
+    case "serializeDate":
     break;
     case "MarkupParserNodeTypeError":
     break;
@@ -1974,8 +1968,6 @@ function receiveNotification_(notif_type) {
     break;
     case "perGuildMaxCount":
     break;
-    case "hasSameRoleAsUsername":
-    break;
     case "getChannelIcon":
     break;
     case "getChannelIconComponent":
@@ -2004,7 +1996,7 @@ function receiveNotification_(notif_type) {
     break;
     case "loadIfNecessary":
     break;
-    case "USE_APP_COMMAND":
+    case "searchAllStickers":
     break;
     case "ANDROID_NOTIFICATION_LIGHTS":
     break;
@@ -2014,7 +2006,13 @@ function receiveNotification_(notif_type) {
     break;
     case "SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS":
     break;
-    case "REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE":
+    case "REQUIRE_TAG":
+    break;
+    case "AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING":
+    break;
+    case "STREAM":
+    break;
+    case "STREAMING":
     break;
     case "$ZodCheckMaxLength":
     break;
@@ -2066,6 +2064,8 @@ function receiveNotification_(notif_type) {
     break;
     case "be":
     break;
+    case "categoryType":
+    break;
     case "$ZodObject":
     break;
     case "$ZodObjectJIT":
@@ -2088,19 +2088,15 @@ function receiveNotification_(notif_type) {
     break;
     case "rect":
     break;
-    case "getClipsSentryDirSync":
+    case "CHANNEL_NOTICE_SHOW_DELAY":
     break;
-    case "POPULAR_APPLICATION_COMMAND_CLICKED":
+    case "DELAYED":
     break;
     case "PX_80":
     break;
     case "_":
     break;
-    case "firstMessages":
-    break;
-    case "spatialAudio":
-    break;
-    case "spatialAudioEnabled":
+    case "spanIsSampled":
     break;
     case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
     break;
@@ -2122,7 +2118,9 @@ function receiveNotification_(notif_type) {
     break;
     case "perUserFpsWindow":
     break;
-    case "woman_and_man_holding_hands_tone1_tone4":
+    case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
+    break;
+    case "r_has_min_length$esjava$0":
     break;
     case "PREMIUM_PLANS":
     break;
@@ -2158,6 +2156,24 @@ function receiveNotification_(notif_type) {
     break;
     case "BinaryReader":
     break;
+    case "APP_LANDING_VIEWED":
+    break;
+    case "LANDING":
+    break;
+    case "DCDDeviceThermalStateManager":
+    break;
+    case "ThermalState":
+    break;
+    case "leading":
+    break;
+    case "leadingFade":
+    break;
+    case "FadeIn":
+    break;
+    case "FadeInData":
+    break;
+    case "getButtonStyles":
+    break;
     case "$ZodSet":
     break;
     case "ZodSet":
@@ -2165,18 +2181,6 @@ function receiveNotification_(notif_type) {
     case "S":
     break;
     case "et":
-    break;
-    case "heavy_plus_sign":
-    break;
-    case "plus":
-    break;
-    case "always":
-    break;
-    case "alwaysBounceHorizontal":
-    break;
-    case "HorizontalScrollingDirection":
-    break;
-    case "onAgree":
     break;
     case "postformat":
     break;
@@ -2214,13 +2218,15 @@ function receiveNotification_(notif_type) {
     break;
     case "bol":
     break;
-    case "QUEST_BAR_V2":
+    case "QUEST_BAR_VIDEO_QUEST_PREVIEW":
     break;
-    case "resolutionHeight":
+    case "QUEST_PREVIEW_TOOL":
     break;
-    case "getRemoteSessionId":
+    case "QUEST_PREVIEW_TOOL_2":
     break;
-    case "generateSessionFromPid":
+    case "getMediaEngineExperiments":
+    break;
+    case "generateSessionId":
     break;
     case "ActionSheetHeaderPressableText":
     break;
@@ -2230,7 +2236,9 @@ function receiveNotification_(notif_type) {
     break;
     case "ext":
     break;
-    case "isModalSupported":
+    case "isMute":
+    break;
+    case "isMuteScheduledEventsEnabled":
     break;
     case "AccessibilityFocusView":
     break;
@@ -2370,6 +2378,8 @@ function receiveNotification_(notif_type) {
     break;
     case "ss":
     break;
+    case "setUnknownOneofValue":
+    break;
     case "_w":
     break;
     case "wo":
@@ -2385,6 +2395,20 @@ function receiveNotification_(notif_type) {
     case "Hash":
     break;
     case "sh":
+    break;
+    case "MOCK_PERKS":
+    break;
+    case "PERKS_PURCHASABLE":
+    break;
+    case "PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO":
+    break;
+    case "FORUM_CHANNEL_FOOTER":
+    break;
+    case "FOOTER_UPSELL":
+    break;
+    case "LuNsNf":
+    break;
+    case "Nfvo72":
     break;
     case "flag_de":
     break;
@@ -2402,6 +2426,8 @@ function receiveNotification_(notif_type) {
     break;
     case "redBoxV2Android":
     break;
+    case "ComponentRegistry":
+    break;
     case "dist":
     break;
     case "distance":
@@ -2412,13 +2438,15 @@ function receiveNotification_(notif_type) {
     break;
     case "tan":
     break;
-    case "nc":
-    break;
     case "ce":
     break;
     case "enableStallTracking":
     break;
-    case "getHasKnownStaleData":
+    case "getHasImportantUnread":
+    break;
+    case "readBytes":
+    break;
+    case "writeUInt8":
     break;
     case "access":
     break;
@@ -2440,33 +2468,13 @@ function receiveNotification_(notif_type) {
     break;
     case "bel":
     break;
-    case "joinability":
-    break;
-    case "PLATFORM_STEAM":
-    break;
-    case "STEAM":
-    break;
-    case "STEAM_GAME_COUNT":
-    break;
-    case "QUEST_BAR_VIDEO_QUEST_PREVIEW":
-    break;
-    case "QUEST_PREVIEW_TOOL":
-    break;
-    case "QUEST_PREVIEW_TOOL_2":
+    case "QUEST_BAR_V2":
     break;
     case "Role":
     break;
     case "RoleFlags":
     break;
-    case "scrollToQuestId":
-    break;
-    case "paymentGateway":
-    break;
-    case "paymentGatewayName":
-    break;
-    case "authorName":
-    break;
-    case "memoizedImageSource":
+    case "scrollToSectionId":
     break;
     case "accessibleDismiss":
     break;
@@ -2474,7 +2482,7 @@ function receiveNotification_(notif_type) {
     break;
     case "ble":
     break;
-    case "leg_tone4":
+    case "leg_tone5":
     break;
     case "FAB_BUTTON_SIZE":
     break;
@@ -2514,35 +2522,27 @@ function receiveNotification_(notif_type) {
     break;
     case "ms":
     break;
+    case "bysecond":
+    break;
+    case "second_place":
+    break;
+    case "second_place_medal":
+    break;
+    case "preferredPaymentMethods":
+    break;
+    case "paypalPreferred":
+    break;
+    case "venmoPreferred":
+    break;
     case "GuildEntityDao":
     break;
     case "EntityDao":
     break;
     case "Dao":
     break;
-    case "useSoundmojiEmojiPickerSectionExperiment":
+    case "handleStartCall":
     break;
-    case "app":
-    break;
-    case "application":
-    break;
-    case "applicationIdToGuildIds":
-    break;
-    case "pp":
-    break;
-    case "pl":
-    break;
-    case "ca":
-    break;
-    case "cat":
-    break;
-    case "tio":
-    break;
-    case "io":
-    break;
-    case "showGenericGuildProfileUpdateFailureToast":
-    break;
-    case "APP_DMS_QUICK_LAUNCHER_IMPRESSION":
+    case "_initialPropsMap":
     break;
   }
 }
@@ -2556,25 +2556,25 @@ export default function receiveNotification(getData) {
   if (null == getData.getData) {
     return false;
   } else {
-    data(7004).trackAppOpened("notification");
+    data(5066).trackAppOpened("notification");
     data = getData.getData();
-    const obj3 = data(7004);
+    const obj3 = data(5066);
     const tmp11 = importDefault;
     const _HermesInternal = HermesInternal;
     isTracing.mark("\u2757", "Receive notification " + data.type);
     if (null != data.receiving_user_id) {
       if (null != id.getId()) {
         if (data.receiving_user_id !== obj.getId()) {
-          tmp7(7005);
-          tmp7(5057);
-          tmp7(13065);
+          tmp7(5067);
+          tmp7(4495);
+          tmp7(13268);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp7(11861).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
+          receiving_user_id = tmp7(11589).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = outer1_1(outer1_3[40]).Emitter;
             Emitter.batched(() => outer1_34(closure_0));
           });
-          const tmp7Result2 = tmp7(11861);
+          const tmp7Result2 = tmp7(11589);
         }
       }
       obj = id;

@@ -9,7 +9,7 @@ import registerAsset from "../../../_runtime/02026_registerAsset.js";
 import { Store } from "initialize";
 import set from "mergeGuildAvatar";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03943_t.js";
+import { t } from "../../../_runtime/03975_t.js";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { perceptualToAmplitude } from "../../utils/PerceptualVolumeUtils.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";

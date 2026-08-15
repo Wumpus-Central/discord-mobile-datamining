@@ -20,7 +20,7 @@ createToggle = {
     obj = { numberOfIgnoredUsers: stateFromStoresArray.length };
     return intl.format(getSystemLocale.t.rXUeOl, obj);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: createToggle
 };
 createToggle = {

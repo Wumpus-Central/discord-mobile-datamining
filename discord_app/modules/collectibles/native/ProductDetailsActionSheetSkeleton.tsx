@@ -33,14 +33,14 @@ let result = require("jsxProd").fileFinishedImporting("modules/collectibles/nati
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = createCacheKey();
   let sharedValue;
-  let obj = sharedValue(4083);
+  let obj = sharedValue(4115);
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const obj = sharedValue(outer1_2[6]);
     const result = sharedValue.set(obj.withRepeat(sharedValue(outer1_2[7]).withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj1 = sharedValue(4083);
+  let obj1 = sharedValue(4115);
   const fn = function o() {
     return { opacity: sharedValue.get() };
   };

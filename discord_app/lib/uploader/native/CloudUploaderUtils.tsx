@@ -7,7 +7,7 @@ import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 function getUploadPayload(outer1_0) {
-  const obj = { filename: outer1_0.filename, file_size: outer1_0.currentSize, id: null, original_content_type: "a" };
+  const obj = { filename: outer1_0.filename, file_size: outer1_0.currentSize, id: null, original_content_type: "Array" };
   obj[2] = apply.uniqueId();
   return obj;
 }

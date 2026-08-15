@@ -8,7 +8,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["5b3FNI"]);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   unsearchable: true,
   screen: obj
 };

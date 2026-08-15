@@ -62,8 +62,8 @@ function injectItemsIntoList(arr, arr2) {
   return found;
 }
 function injectRecommendedGuildsRow() {
-  items1 = items1.filter((type) => type.type !== callback(7371).ICYMIItemTypes.RECOMMENDED_GUILDS);
-  items = items.filter((type) => type.type !== callback(7371).ICYMIItemTypes.RECOMMENDED_GUILDS);
+  items1 = items1.filter((type) => type.type !== callback(7589).ICYMIItemTypes.RECOMMENDED_GUILDS);
+  items = items.filter((type) => type.type !== callback(7589).ICYMIItemTypes.RECOMMENDED_GUILDS);
   if (0 !== length.length) {
     const guildsArray = store2.getGuildsArray();
     const tmp24 = guildsArray.filter((features) => {
@@ -434,9 +434,9 @@ function getNewUnreadItems(arr9, channelId) {
         let tmp7 = null == store3.getReadTimestamp(tmp2.id);
         if (tmp7) {
           let tmp8 = nextResult;
-          let tmp9 = tmp2.type !== tmp3(7371).ICYMIItemTypes.MESSAGE;
+          let tmp9 = tmp2.type !== tmp3(7589).ICYMIItemTypes.MESSAGE;
           if (!tmp9) {
-            let tmp3Result = tmp3(8975);
+            let tmp3Result = tmp3(9056);
             let tmp10 = nextResult;
             let result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
             if (result) {
@@ -569,7 +569,10 @@ function handleReaction(colors) {
     const tmp5 = store.getId() === tmp2;
     if ("MESSAGE_REACTION_ADD" === tmp) {
       const message2 = tmp3.message;
-      let addReactionResult = message2.addReaction(emoji, tmp5, colors.colors, reactionType);
+      const obj = { colors: null, reactionType: null };
+      obj[0] = colors.colors;
+      obj[1] = reactionType;
+      let addReactionResult = message2.addReaction(emoji, tmp5, obj);
     } else {
       const message = tmp3.message;
       addReactionResult = message.removeReaction(emoji, tmp5, reactionType);

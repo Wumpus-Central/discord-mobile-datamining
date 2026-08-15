@@ -24,7 +24,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/+OQEs"]);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
@@ -41,7 +41,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/+OQEs"]);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();

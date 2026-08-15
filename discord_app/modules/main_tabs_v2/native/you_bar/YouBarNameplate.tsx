@@ -14,14 +14,14 @@ const memoResult = require("noop").memo(function YouBarNameplate(isQuestRendered
   let token;
   let dependencyMap;
   ({ nameplate, barWidth } = isQuestRendered);
-  let obj = isQuestRendered(4065);
+  let obj = isQuestRendered(4097);
   token = obj.useToken(token(712).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(14503)(token);
+  const tmp4 = token(14535)(token);
   dependencyMap = tmp4;
   let obj1 = isQuestRendered(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj1.useStateFromStores(items, () => obj.animateYouBarNameplate);
-  let obj2 = isQuestRendered(4083);
+  let obj2 = isQuestRendered(4115);
   const fn = function p() {
     let obj = isQuestRendered(_undefined[9]);
     if (isQuestRendered) {
@@ -32,7 +32,7 @@ const memoResult = require("noop").memo(function YouBarNameplate(isQuestRendered
     obj = { borderTopRightRadius: obj.withSpring(value, outer1_4) };
     return obj;
   };
-  obj = { withSpring: isQuestRendered(4776).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
+  obj = { withSpring: isQuestRendered(4744).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 17156260157738;
   fn.__initData = closure_6;
@@ -53,8 +53,8 @@ const memoResult = require("noop").memo(function YouBarNameplate(isQuestRendered
     str = "always";
   }
   obj2[2] = str;
-  obj1[2] = jsx(token(9454), { nameplate, isFocused: true, animate: null });
-  return jsx(token(4083).View, { style: items1, pointerEvents: "none", children: null });
+  obj1[2] = jsx(token(9221), { nameplate, isFocused: true, animate: null });
+  return jsx(token(4115).View, { style: items1, pointerEvents: "none", children: null });
 });
 const result = require("CONNECTION_BANNER_HEIGHT").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");
 

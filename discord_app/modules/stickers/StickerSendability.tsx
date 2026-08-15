@@ -38,7 +38,7 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
               if (!obj2.can(obj)) {
                 const NONSENDABLE = obj.NONSENDABLE;
               }
-              obj2 = importAll(3994);
+              obj2 = importAll(4026);
             }
           } else {
             SENDABLE_WITH_BOOSTED_GUILD = obj.SENDABLE_WITH_BOOSTED_GUILD;

@@ -13,7 +13,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["sqUm+k"]);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     let vadAutoThreshold;
     let vadThreshold;
@@ -49,7 +49,7 @@ const createStaticResult = createToggle.createStatic({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["sqUm+k"]);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     let vadAutoThreshold;
     let vadThreshold;
@@ -80,6 +80,6 @@ const createStaticResult = createToggle.createStatic({
     return items;
   }
 });
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
 
 export default createStaticResult;

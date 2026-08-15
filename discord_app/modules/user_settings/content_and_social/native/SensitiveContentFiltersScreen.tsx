@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx
 import noop from "noop";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import jsxProd from "jsxProd";
 import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 import { items } from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
@@ -15,7 +15,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/c
 export default function UserSettingsSensitiveContentFilters() {
   let obj = { children: null };
   const memo = React.useMemo(() => {
-    let obj = callback(10421);
+    let obj = callback(10669);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;

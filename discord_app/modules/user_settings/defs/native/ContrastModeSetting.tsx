@@ -12,17 +12,17 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["TYyfO/"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     const obj = { size: null };
     obj[0] = Button.BetaSizes.SMALL;
     return jsx(Button.BetaTag, { size: null });
   },
   useProps: function useContrastSettingProps() {
-    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13781).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14626).CircleMinusIcon, {}), endIcon: callback2(callback(9590).CirclePlusIcon, {}) }), []);
+    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13813).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14658).CircleMinusIcon, {}), endIcon: callback2(callback(9545).CirclePlusIcon, {}) }), []);
   }
 };
 createToggle = createToggle.createSlider(createToggle);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
 
 export default createToggle;

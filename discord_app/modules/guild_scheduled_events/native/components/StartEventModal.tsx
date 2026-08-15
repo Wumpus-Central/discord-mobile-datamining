@@ -9,7 +9,7 @@ import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY";
 import jsxProd from "SafeAreaPaddingView";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08126_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08176_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
@@ -30,7 +30,7 @@ function NavigationBar(onClose) {
   obj = { source: null };
   obj[0] = registerAsset;
   obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(4909).PressableOpacity, obj);
+  obj[0] = callback(onClose(5433).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {
@@ -108,7 +108,7 @@ export default function StartEventModal(event) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -148,7 +148,7 @@ export default function StartEventModal(event) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp11) {
           c0 = tmp;
           throw tmp11;

@@ -22,14 +22,14 @@ export default {
     return initialize.useStateFromStores(items, () => (id) => {
       let result = callback2(id, arg1);
       if (result) {
-        let obj = callback(5942);
+        let obj = callback(7226);
         obj = { guild: null, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
         obj[0] = id;
-        obj[3] = callback(5943).isUserInCreatorMonetizationEligibleCountry();
-        const obj3 = callback(5943);
-        obj[4] = callback(3982).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
+        obj[3] = callback(7227).isUserInCreatorMonetizationEligibleCountry();
+        const obj3 = callback(7227);
+        obj[4] = callback(4014).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
         result = obj.canSeeGuildRoleSubscriptionSettings(obj);
-        const obj4 = callback(3982);
+        const obj4 = callback(4014);
       }
       return result;
     }, [], initialize.statesWillNeverBeEqual);

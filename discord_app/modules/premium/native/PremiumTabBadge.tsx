@@ -7,8 +7,8 @@ import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures";
 import { Gradients } from "items";
 import jsxProd from "DismissibleContent";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
-import { registerAsset } from "../../../../_runtime/14307_registerAsset.js";
+import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
+import { registerAsset } from "../../../../_runtime/14339_registerAsset.js";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { MarketingComponentType } from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
@@ -44,13 +44,14 @@ function OfferBadge(componentId) {
   let acked;
   let ackedBadgeCopy;
   let badgeCopy;
+  let promotionId;
   componentId = componentId.componentId;
-  ({ acked, badgeCopy, ackedBadgeCopy } = componentId);
+  ({ acked, badgeCopy, ackedBadgeCopy, promotionId } = componentId);
   const tmp = createCacheKey();
   let obj = { type: null, name: null, properties: null };
   obj[0] = encodeProperties.ImpressionTypes.VIEW;
   obj[1] = encodeProperties.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  obj = { component_type: MarketingComponentType.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
+  obj = { component_type: MarketingComponentType.MarketingComponentType.PREMIUM_TAB, component_id: componentId, promotion_id: promotionId };
   obj[2] = obj;
   obj = { disableTrack: null == componentId };
   trackImpression(obj, obj);
@@ -68,7 +69,7 @@ function OfferBadge(componentId) {
     ({ uppercase: arr2[0], text: arr2[1] } = tmp);
     obj3[2] = items1;
     obj3[3] = ackedBadgeCopy;
-    items[1] = callback2(tmp5(4338).Text, obj3);
+    items[1] = callback2(tmp5(4734).Text, obj3);
     obj1[1] = items;
     let tmp9 = callback3(View, obj1);
   } else {
@@ -124,25 +125,25 @@ export default function PremiumTabBadge() {
   if (stateFromStores != null) {
     trialId = stateFromStores.trialId;
   }
-  tmp2Result = tmp2(6086);
+  tmp2Result = tmp2(7366);
   if (trialId === closure_6) {
     if (!tmp7) {
       let items1 = [tmp2(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
     }
     [tmp14, r10051] = callback(tmp11(items1, undefined, true), 2);
-    tmp2(6086);
+    tmp2(7366);
     if (!tmp7) {
       if (hasTier2Premium) {
         let items2 = [tmp2(1377).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD];
       }
       let tmp12Result = tmp12(tmp16(items2, undefined, true), 2);
       [tmp18, r10063] = tmp12Result;
-      const isEligibleSenderForReferralProgram = tmp2(8228).useIsEligibleSenderForReferralProgram();
-      const tmp2Result2 = tmp2(8228);
-      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8227).useIsReferralProgramEntrypointBadgeAcknowledged();
-      const tmp2Result3 = tmp2(8227);
-      const promotionMarketingComponent = tmp2(7709).usePromotionMarketingComponent(tmp2(7713).MarketingComponentType.PREMIUM_TAB);
-      const tmp2Result5 = tmp2(6086);
+      const isEligibleSenderForReferralProgram = tmp2(8274).useIsEligibleSenderForReferralProgram();
+      const tmp2Result2 = tmp2(8274);
+      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8273).useIsReferralProgramEntrypointBadgeAcknowledged();
+      const tmp2Result3 = tmp2(8273);
+      const promotionMarketingComponent = tmp2(7927).usePromotionMarketingComponent(tmp2(7931).MarketingComponentType.PREMIUM_TAB);
+      const tmp2Result5 = tmp2(7366);
       let prop = null;
       if (null != promotionMarketingComponent) {
         prop = null;
@@ -160,11 +161,11 @@ export default function PremiumTabBadge() {
       tmp12Result = tmp12(tmp2Result5.useSelectedSnowflakeBoundDismissibleContent(prop, str2, undefined, true), 2);
       if (null != promotionMarketingComponent) {
         if ("premiumTab" === promotionMarketingComponent.properties.properties.oneofKind) {
-          obj = { acked: null, badgeCopy: null, ackedBadgeCopy: null, componentId: null };
+          obj = { acked: null, badgeCopy: null, ackedBadgeCopy: null, componentId: null, promotionId: null };
           obj[0] = tmp27 !== tmp2(1377).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
           obj[1] = promotionMarketingComponent.properties.properties.premiumTab.badgeLabel;
           obj[2] = promotionMarketingComponent.properties.properties.premiumTab.acknowledgedBadgeLabel;
-          obj[3] = promotionMarketingComponent.id;
+          ({ id: obj24[3], promotionId: obj24[4] } = promotionMarketingComponent);
           return callback2(OfferBadge, obj);
         }
       }
@@ -203,17 +204,17 @@ export default function PremiumTabBadge() {
         obj2[2] = items3;
         const intl8 = tmp2(1236).intl;
         obj2[3] = intl8.string(tmp2(1236).t.y2b7CA);
-        tmp = tmp50(tmp2(4338).Text, obj2);
+        tmp = tmp50(tmp2(4734).Text, obj2);
         obj1[4] = tmp;
         let tmp47Result = tmp50(tmp52, obj1);
         tmp2Result6 = tmp2(500);
       } else if (null != premiumTrialOffer) {
-        let expires_at;
+        let expiresAt;
         if (premiumTrialOffer != null) {
-          expires_at = premiumTrialOffer.expires_at;
+          expiresAt = premiumTrialOffer.expiresAt;
         }
         obj3 = { acked: null, badgeCopy: null, ackedBadgeCopy: null };
-        obj3[0] = null != expires_at;
+        obj3[0] = null != expiresAt;
         const intl6 = tmp2(1236).intl;
         obj3[1] = intl6.string(tmp2(1236).t.OS9KPu);
         const intl7 = tmp2(1236).intl;
@@ -239,7 +240,7 @@ export default function PremiumTabBadge() {
           obj6[2] = items6;
           const intl5 = tmp2(1236).intl;
           obj6[3] = intl5.string(tmp2(1236).t["/DTtr6"]);
-          items5[1] = callback2(tmp2(4338).Text, obj6);
+          items5[1] = callback2(tmp2(4734).Text, obj6);
           obj4[1] = items5;
           let tmp41 = callback3(View, obj4);
         } else {
@@ -254,7 +255,7 @@ export default function PremiumTabBadge() {
           obj8[2] = items7;
           const intl4 = tmp2(1236).intl;
           obj8[3] = intl4.string(tmp2(1236).t["/DTtr6"]);
-          obj7[4] = callback2(tmp2(4338).Text, obj8);
+          obj7[4] = callback2(tmp2(4734).Text, obj8);
           tmp41 = callback2(LinearGradient, obj7);
           const tmp40 = LinearGradient;
         }
@@ -276,12 +277,12 @@ export default function PremiumTabBadge() {
           items8[1] = text1;
           obj10[2] = items8;
           obj10[3] = stringResult;
-          obj9[4] = callback2(tmp2(4338).Text, obj10);
+          obj9[4] = callback2(tmp2(4734).Text, obj10);
           tmp47Result = tmp32(tmp34, obj9);
           tmp2Result7 = tmp2(500);
         }
       }
-      const tmp2Result4 = tmp2(7709);
+      const tmp2Result4 = tmp2(7927);
     }
     items2 = [];
     const tmp13 = callback(tmp11(items1, undefined, true), 2);

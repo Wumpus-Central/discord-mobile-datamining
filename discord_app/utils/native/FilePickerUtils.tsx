@@ -22,7 +22,7 @@ function _handleDocumentSelection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -128,19 +128,19 @@ function _handleDocumentSelection() {
           } else if (2 === tmp7) {
             c4 = 0;
             c4 = getSystemLocale;
-            obj3 = flag(10226);
+            obj3 = flag(10426);
             if (obj3.isErrorWithCode(c4)) {
-              if (c4.code === flag(10226).errorCodes.OPERATION_CANCELED) {
+              if (c4.code === flag(10426).errorCodes.OPERATION_CANCELED) {
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
-            obj4 = flag(4549);
+            obj4 = flag(5042);
             const obj5 = { error_message: null };
             const _JSON = JSON;
             obj5[0] = JSON.stringify(c4);
             obj4.trackWithMetadata(c4.MOBILE_FILE_PICKER_ERROR, obj5);
-            let obj6 = extensions(4706);
+            let obj6 = extensions(4656);
             obj6 = { title: null, body: null };
             const intl3 = flag(1236).intl;
             obj6[0] = intl3.string(flag(1236).t.rWHepR);
@@ -148,7 +148,7 @@ function _handleDocumentSelection() {
             obj6[1] = intl4.string(flag(1236).t.fZRH9P);
             obj6.show(obj6);
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
@@ -161,7 +161,7 @@ function _handleDocumentSelection() {
           } else {
             getSystemLocale = arg1;
             if (getSystemLocale.some((size) => 0 === size.size)) {
-              obj = extensions(4706);
+              obj = extensions(4656);
               obj8 = { title: null, body: null };
               const intl = flag(1236).intl;
               obj8[0] = intl.string(flag(1236).t.B3vFdU);

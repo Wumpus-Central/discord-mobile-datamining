@@ -292,7 +292,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(require("dispatcher"), {
     } else {
       return false;
     }
-    obj = channel(5985);
+    obj = channel(7272);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     let flag = false;

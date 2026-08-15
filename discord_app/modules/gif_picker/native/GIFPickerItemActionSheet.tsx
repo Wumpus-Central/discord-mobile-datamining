@@ -1,29 +1,21 @@
 // discord_app/modules/gif_picker/native/GIFPickerItemActionSheet.tsx
 import noop from "noop";
-import { View } from "get ActivityIndicator";
+import { View } from "ButtonGroup";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "jsxProd";
 
 let c5;
 let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: null };
-let num = 0;
-if (set.isAndroid()) {
-  num = require("Themes").space.PX_16;
-}
-createCacheKey = { contentWrapper: createCacheKey, gifContainer: null, gifImage: null, favoriteButtonContainer: null };
-createCacheKey[1] = num;
-createCacheKey[1] = { flexDirection: "column", alignItems: "center", marginTop: require("Themes").space.PX_8 };
-set = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[2] = set;
-let obj1 = { flexDirection: "column", alignItems: "center", marginTop: require("Themes").space.PX_8 };
-createCacheKey[3] = { flex: 1, flexDirection: "row", alignItems: "stretch", width: "100%", marginTop: require("Themes").space.PX_16 };
+createCacheKey = { contentWrapper: null, gifContainer: null, gifImage: null };
+createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { flexDirection: "column", alignItems: "center" };
+createCacheKey[2] = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
+let obj1 = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+const result = require("jsxProd").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
 
 export default function GIFPickerItemActionSheet(item) {
   item = item.item;
@@ -33,10 +25,10 @@ export default function GIFPickerItemActionSheet(item) {
   let callback;
   let callback1;
   const tmp = createCacheKey();
-  let obj = item(width[6]);
-  let obj1 = item(width[7]);
+  let obj = item(width[5]);
+  let obj1 = item(width[6]);
   isFavoriteGIF = obj.useIsFavoriteGIF(obj1.gifUrlKey(item.url));
-  const size = isFavoriteGIF(width[8])();
+  const size = isFavoriteGIF(width[7])();
   width = size.width;
   height = size.height;
   const items = [, , , ];
@@ -48,55 +40,68 @@ export default function GIFPickerItemActionSheet(item) {
     return { width: item.width * bound, height: item.height * bound };
   }, items);
   callback = height.useCallback(() => {
-    isFavoriteGIF(width[9]).hideActionSheet();
+    isFavoriteGIF(width[8]).hideActionSheet();
   }, []);
   const items1 = [callback, isFavoriteGIF, item];
   callback1 = height.useCallback(() => {
     callback();
-    let obj = item(width[7]);
+    let obj = item(width[6]);
     if (isFavoriteGIF) {
       obj.removeFavoriteGIF(item.url);
       obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
-      const intl2 = item(width[11]).intl;
-      obj[1] = intl2.string(item(width[11]).t.in1rga);
-      obj[2] = item(width[12]).GifIcon;
-      isFavoriteGIF(width[10]).open(obj);
-      const obj4 = isFavoriteGIF(width[10]);
+      const intl2 = item(width[10]).intl;
+      obj[1] = intl2.string(item(width[10]).t.in1rga);
+      obj[2] = item(width[11]).GifIcon;
+      isFavoriteGIF(width[9]).open(obj);
+      const obj4 = isFavoriteGIF(width[9]);
     } else {
       obj.addFavoriteGIF(item);
       obj = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
-      const intl = item(width[11]).intl;
-      obj[1] = intl.string(item(width[11]).t.okQonm);
-      obj[2] = item(width[12]).GifIcon;
-      isFavoriteGIF(width[10]).open(obj);
-      const obj2 = isFavoriteGIF(width[10]);
+      const intl = item(width[10]).intl;
+      obj[1] = intl.string(item(width[10]).t.okQonm);
+      obj[2] = item(width[11]).GifIcon;
+      isFavoriteGIF(width[9]).open(obj);
+      const obj2 = isFavoriteGIF(width[9]);
     }
   }, items1);
-  const items2 = [callback1, isFavoriteGIF];
+  const items2 = [callback, item.url];
+  const items3 = [callback1, isFavoriteGIF];
   const callback2 = height.useCallback(() => {
+    callback();
+    item(width[12]).copy(item.url, item(width[13]).presentLinkCopied);
+  }, items2);
+  const callback3 = height.useCallback(() => {
     let str = "primary";
     if (isFavoriteGIF) {
       str = "destructive";
     }
     const obj = { variant: str, onPress: callback1, text: null, grow: true };
-    const intl = tmp2(tmp3[11]).intl;
+    const intl = tmp2(tmp3[10]).intl;
     const string = intl.string;
-    const t = tmp2(tmp3[11]).t;
+    const t = tmp2(tmp3[10]).t;
     if (isFavoriteGIF) {
       let stringResult = string(t["5/NS74"]);
     } else {
       stringResult = string(t.nIH0v8);
     }
     obj[2] = stringResult;
-    return callback1(item(width[13]).Button, obj);
-  }, items2);
+    return callback1(item(width[14]).Button, obj);
+  }, items3);
   obj = { startExpanded: true, children: null };
   obj = { style: tmp.contentWrapper, children: null };
   obj1 = { style: tmp.gifContainer, children: null };
-  const items3 = [tmp.gifImage, memo];
-  const items4 = [callback1(isFavoriteGIF(width[15]), { style: items3, source: { uri: item.src } }), callback1(callback, { style: tmp.favoriteButtonContainer, children: callback2() })];
-  obj1[1] = items4;
+  const items4 = [tmp.gifImage, memo];
+  const items5 = [callback1(isFavoriteGIF(width[16]), { style: items4, source: { uri: item.src } }), ];
+  const obj3 = { children: null };
+  const items6 = [callback3(), ];
+  let obj4 = { variant: "secondary", onPress: callback2, text: null, grow: true };
+  let intl = item(width[10]).intl;
+  obj4[2] = intl.string(item(width[10]).t.WqhZss);
+  items6[1] = callback1(item(width[14]).Button, obj4);
+  obj3[0] = items6;
+  items5[1] = callback(item(width[17]).ButtonGroup, obj3);
+  obj1[1] = items5;
   obj[1] = callback(callback, obj1);
   obj[1] = callback1(callback, obj);
-  return callback1(item(width[14]).BottomSheet, obj);
+  return callback1(item(width[15]).BottomSheet, obj);
 };

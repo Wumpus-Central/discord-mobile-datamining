@@ -12,13 +12,13 @@ export const getBansEmptySource = function getBansEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16827);
+      return callback(16873);
     },
     darker() {
-      return callback(16828);
+      return callback(16874);
     },
     light() {
-      return callback(16829);
+      return callback(16875);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useBansEmptySource = function useBansEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16827);
+      return callback(16873);
     },
     darker() {
-      return callback(16828);
+      return callback(16874);
     },
     light() {
-      return callback(16829);
+      return callback(16875);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const BansEmpty = function BansEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16827);
+      return callback(16873);
     },
     darker() {
-      return callback(16828);
+      return callback(16874);
     },
     light() {
-      return callback(16829);
+      return callback(16875);
     }
   };
   obj = {};

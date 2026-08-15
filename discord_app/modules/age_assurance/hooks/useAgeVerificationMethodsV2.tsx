@@ -50,7 +50,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               outer1_2(true);
               outer1_3(false);
               let c4 = 2;
-              let obj2 = lib(7897);
+              let obj2 = lib(6567);
               c5 = 3;
               c6 = 1;
               obj2 = { value: null, done: false };
@@ -133,7 +133,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               outer1_2(false);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp54) {
           dispatcher = tmp54;

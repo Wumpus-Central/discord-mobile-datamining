@@ -5,8 +5,8 @@ import { UPLOAD_MEDIUM_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/16707_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16708_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16753_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16754_registerAsset.js";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
@@ -47,7 +47,7 @@ class AssetChooser extends PureComponent {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -99,7 +99,7 @@ class AssetChooser extends PureComponent {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           c3 = tmp;

@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jTNPHM);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue() {
     const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
@@ -32,7 +32,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jTNPHM);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue() {
     const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();

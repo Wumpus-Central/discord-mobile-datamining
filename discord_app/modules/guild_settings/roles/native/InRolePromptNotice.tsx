@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { RoleFlags } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09126_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08916_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
@@ -31,7 +31,7 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(16806);
+    const tmpResult = tmp(16852);
     let Icon = tmp(1297).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
@@ -45,7 +45,7 @@ export default function InRolePromptNotice(role) {
       string = intl2.string;
       stringResult = string(tmp(1236).t.YRbgXz);
       obj1[2] = stringResult;
-      Icon = tmp6(tmp(4338).Text, obj1);
+      Icon = tmp6(tmp(4734).Text, obj1);
       items[1] = Icon;
       obj[1] = items;
       let tmp4Result = tmp4(tmp5, obj);
@@ -58,10 +58,10 @@ export default function InRolePromptNotice(role) {
       obj3[0] = string.promptText;
       const intl = tmp(1236).intl;
       obj3[2] = intl.string(tmp(1236).t.mqeO2v);
-      items1[1] = tmp6(tmp(4338).Text, obj3);
+      items1[1] = tmp6(tmp(4734).Text, obj3);
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(16806).isRolePowerful(role);
+    isRolePowerfulResult = tmp(16852).isRolePowerful(role);
   }
 };

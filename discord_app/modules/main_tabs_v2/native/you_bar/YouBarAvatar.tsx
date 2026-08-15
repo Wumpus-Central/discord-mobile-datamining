@@ -195,7 +195,7 @@ function YouBarAvatarLarge(transitionState) {
     obj4[0] = obj5;
     obj2[2] = closure_22(sharedValue1, obj4);
     const items6 = [closure_22(tmp23Result, obj2), , , ];
-    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "URL_SKIPPED" };
+    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "Other" };
     obj6[0] = stateFromStores;
     obj6[2] = closure_11;
     if (OFFLINE === StatusTypes.UNKNOWN) {
@@ -326,7 +326,7 @@ function YouBarAvatar(transitionState) {
     obj1[2] = -result;
     const items3 = [obj1, animatedStyle];
     obj[0] = items3;
-    obj2 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration: null, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
+    obj2 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration: null, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==" };
     obj2[0] = stateFromStores;
     obj2[2] = closure_13;
     obj2[5] = avatarDecoration;
@@ -405,7 +405,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -441,7 +441,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
           arg1.openUserSettings();
           callback(false);
           paths = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         paths = tmp;

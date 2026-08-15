@@ -33,8 +33,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   } else {
     if (tmpResult.isAndroid()) {
       let obj2 = { url: null, style: null };
-      let tmp4Result = tmp4(8367);
-      obj2[0] = tmp4(14935);
+      let tmp4Result = tmp4(8406);
+      obj2[0] = tmp4(14975);
       const obj3 = { width: null, height: null };
       obj3[0] = c7;
       obj3[1] = c7;
@@ -45,8 +45,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     } else {
       const obj4 = { source: null, resizeMode: "contain", style: null };
       const obj5 = { uri: null };
-      tmp4Result = tmp4(5329);
-      obj5[0] = tmp4(14935);
+      tmp4Result = tmp4(5449);
+      obj5[0] = tmp4(14975);
       obj4[0] = obj5;
       const obj6 = { width: null, height: null };
       obj6[0] = c7;
@@ -65,20 +65,20 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   obj8[1] = tmp8(712).colors.WHITE;
   obj7[1] = tmp9(WindowLaunchIcon.WindowLaunchIcon, obj8);
   obj7[4] = function onPress() {
-    callback(4310).hideActionSheet();
-    const obj = callback(4310);
-    const obj2 = callback(4058);
+    callback(4342).hideActionSheet();
+    const obj = callback(4342);
+    const obj2 = callback(4090);
     obj2.openURL(callback(1993).getArticleURL(constants.IN_GAME_FEATURES));
   };
   const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = tmp(1236).intl;
-  obj9[0] = intl2.string(tmp8(2949).ublzTG);
+  obj9[0] = intl2.string(tmp8(2981).ublzTG);
   const intl3 = tmp(1236).intl;
-  obj9[1] = intl3.string(tmp8(2949).JgM2xu);
+  obj9[1] = intl3.string(tmp8(2981).JgM2xu);
   obj9[2] = tmp9(Button.Button, obj7);
   obj9[3] = tmp3Result;
   obj9[4] = function onDismiss() {
-    callback(4310).hideActionSheet();
+    callback(4342).hideActionSheet();
   };
   return tmp9(PromoSheet.PromoSheet, obj9);
 };

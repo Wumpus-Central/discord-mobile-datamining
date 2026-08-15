@@ -35,7 +35,7 @@ function _loadForumPostData() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -127,7 +127,7 @@ function _loadForumPostDataForChannelId() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -153,7 +153,7 @@ function _loadForumPostDataForChannelId() {
                 channel = 0;
                 outer1_10.finishRequesting(tmp55, nextBatch);
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 channel = channel.getChannel(tmp55);
                 guild_id = undefined;
@@ -164,7 +164,7 @@ function _loadForumPostDataForChannelId() {
                   channel = 0;
                   outer1_10.finishRequesting(tmp55, nextBatch);
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const HTTP = callback(outer1_2[9]).HTTP;
                   const obj1 = { url: null, body: null, rejectWithError: true };

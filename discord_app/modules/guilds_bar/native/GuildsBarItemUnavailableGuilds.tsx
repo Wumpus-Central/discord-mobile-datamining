@@ -4,7 +4,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/15553_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15603_registerAsset.js";
 
 let c3;
 let c4;

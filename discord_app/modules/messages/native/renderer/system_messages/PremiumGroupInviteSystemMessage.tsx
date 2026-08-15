@@ -2,7 +2,7 @@
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/07771_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07989_registerAsset.js";
 import { createPremiumGroupInviteEmbed } from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 
@@ -25,7 +25,7 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     const merged = Object.assign(createCommonMessage(message));
     obj.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = createCacheKey(theme);
-    obj.iconUrl = tmp3(8121).getAssetUriForEmbed(registerAsset);
+    obj.iconUrl = tmp3(8171).getAssetUriForEmbed(registerAsset);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }

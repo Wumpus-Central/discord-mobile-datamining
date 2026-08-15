@@ -9,7 +9,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["D+aE7g"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
     let obj = set;
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
@@ -35,7 +35,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["D+aE7g"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
     let obj = set;
     obj = { title: null, body: null, cancelText: null, onConfirm: null };

@@ -6,7 +6,7 @@ import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { isIterable } from "../../../../_runtime/03974_isIterable.js";
+import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 
 const require = arg1;
 function PreviewItem(dragRegion) {
@@ -135,7 +135,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: "call", children: "label" };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: false, children: false };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -352,7 +352,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "DELETE_PENDING_REPLY", scrollPosition: null, dragRegion: "M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z", windowSize: "primary", dropComplete: "md", listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "documentElement", scrollPosition: null, dragRegion: "es", windowSize: null, dropComplete: null, listInsets: null };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

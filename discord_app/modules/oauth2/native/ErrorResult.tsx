@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/10500_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/09777_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 
@@ -50,7 +50,7 @@ export default function ErrorResult(error) {
     obj2[2] = function onPress() {
       return callback(table[10]).pop();
     };
-    tmp6Result = tmp6(tmp3(4777).Button, obj2);
+    tmp6Result = tmp6(tmp3(4745).Button, obj2);
   }
   items1[1] = tmp6Result;
   obj[2] = items1;

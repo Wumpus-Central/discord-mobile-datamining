@@ -3,7 +3,7 @@ import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY";
 import { UserSettingsSections } from "ME";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
@@ -20,13 +20,13 @@ const result = require("NITRO_UPSELL_ALERT_KEY").fileFinishedImporting("modules/
 
 export default function DoubleTapNitroAlert(emojiName) {
   const callback = React.useCallback(() => {
-    let obj = callback(6080);
+    let obj = callback(7360);
     obj = { screen: constants.TEXT, params: obj };
     obj = { initialSetting: constants2.DOUBLE_TAP_EMOJI };
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(6080);
+    let obj = callback(7360);
     obj = { screen: constants.PREMIUM };
     obj.openUserSettings(obj, () => {
       callback(table[8]).dismissAlert(closure_4);

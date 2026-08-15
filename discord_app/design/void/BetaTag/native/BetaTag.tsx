@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
 import { keys } from "../../../../ConstantsIOS.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { Text } from "../../../components/Text/native/Text.tsx";

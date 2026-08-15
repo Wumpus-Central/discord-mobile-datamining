@@ -12,7 +12,7 @@ import GuildFeatures from "GuildFeatures";
 import { getPremiumGroupProductName as closure_47 } from "SubscriptionStatusTypes";
 import sum from "sum";
 import set from "createFromServer";
-import { t } from "../../_runtime/03943_t.js";
+import { t } from "../../_runtime/03975_t.js";
 import { 00038__ } from "../../_runtime/metro/00038__.js";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
@@ -179,8 +179,8 @@ function getPrice(id) {
         }
         obj5[2] = currency;
         obj3[1] = obj5;
-        const result = currency2(4022).captureBillingException(error, obj3);
-        const obj10 = currency2(4022);
+        const result = currency2(4054).captureBillingException(error, obj3);
+        const obj10 = currency2(4054);
       }
       throw error;
     } else {
@@ -191,7 +191,7 @@ function getPrice(id) {
     const _Error2 = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
-      obj2 = currency2(4022);
+      obj2 = currency2(4054);
       const obj6 = { planId: null, currency: null };
       obj6[0] = id;
       let str = currency;
@@ -666,7 +666,7 @@ function getPlanDescription(arg0) {
   const tmp4 = getPrice(dependencyMap3[planId].id, false, false, obj, true);
   const interval = tmp.interval;
   const tmp5 = planIdsForSkus;
-  let obj1 = planIdsForSkus(5917);
+  let obj1 = planIdsForSkus(5316);
   if (constants7.MONTH === interval) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.FPybU7);
@@ -904,10 +904,10 @@ function getPlanDescription(arg0) {
                 } else if (tmp17.PAST_DUE === CANCELED) {
                   const intl7 = tmp5(1236).intl;
                   const obj12 = { endDate: null, onClick: null };
-                  let tmp5Result = tmp5(4031);
+                  let tmp5Result = tmp5(4063);
                   obj12[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
                   obj12[1] = function onClick() {
-                    callback(4052)("https://support.discord.com/hc/articles/23082866222871");
+                    callback(4084)("https://support.discord.com/hc/articles/23082866222871");
                   };
                   return intl7.format(tmp5(1236).t["d+0vwo"], obj12);
                 } else if (!hasDiscountApplied) {
@@ -1042,10 +1042,10 @@ function getPlanDescription(arg0) {
             } else if (tmp17.PAST_DUE === CANCELED) {
               const intl15 = tmp5(1236).intl;
               const obj20 = { endDate: null, onClick: null };
-              tmp5Result = tmp5(4031);
+              tmp5Result = tmp5(4063);
               obj20[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
               obj20[1] = function onClick() {
-                callback(4052)("https://support.discord.com/hc/articles/23082866222871");
+                callback(4084)("https://support.discord.com/hc/articles/23082866222871");
               };
               return intl15.format(tmp5(1236).t["d+0vwo"], obj20);
             } else {
@@ -1120,9 +1120,9 @@ function getPlanDescription(arg0) {
         } else if (tmp17.PAST_DUE === CANCELED) {
           const intl22 = tmp5(1236).intl;
           const obj26 = { endDate: null, onClick: null };
-          obj26[0] = tmp5(4031).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
+          obj26[0] = tmp5(4063).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
           obj26[1] = function onClick() {
-            callback(4052)("https://support.discord.com/hc/articles/23082866222871");
+            callback(4084)("https://support.discord.com/hc/articles/23082866222871");
           };
           return intl22.format(tmp5(1236).t["d+0vwo"], obj26);
         } else {
@@ -1243,7 +1243,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       const tmp11 = importDefault;
       const tmp13 = t;
       obj2[0] = t(prop4).diff(subscription.currentPeriodStart, "days");
-      obj2[1] = tmp11(3943)(subscription.metadata.grace_period_expires_date);
+      obj2[1] = tmp11(3975)(subscription.metadata.grace_period_expires_date);
       return obj2;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? closure_19 : closure_30;
@@ -2607,8 +2607,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.SHOP_DISCOUNTS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13408);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13408).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13440);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13440).COLLECTIBLES, currentUser);
     }
     return isCrepeEnabled;
   },
@@ -2623,8 +2623,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1940).Perk.MORE_QUEST_ORBS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13408);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13408).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13440);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13440).QUEST_ORB_MULTIPLIER, perks);
     }
     return isCrepeEnabled;
   },
@@ -2852,14 +2852,14 @@ export { getIntervalString };
 export { getIntervalStringAsNoun };
 export { getPremiumType };
 export { getDisplayName };
-export const getDisplayNameFromSku = function getDisplayNameFromSku(sku_id1) {
-  if (closure_38.TIER_0 === sku_id1) {
+export const getDisplayNameFromSku = function getDisplayNameFromSku(skuId1) {
+  if (closure_38.TIER_0 === skuId1) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["t9uG/o"]);
-  } else if (tmp.TIER_1 === sku_id1) {
+  } else if (tmp.TIER_1 === skuId1) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.FSOz78);
-  } else if (tmp.TIER_2 === sku_id1) {
+  } else if (tmp.TIER_2 === skuId1) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.lG6a5x);
   } else {
@@ -2868,7 +2868,7 @@ export const getDisplayNameFromSku = function getDisplayNameFromSku(sku_id1) {
     let obj = _createGatewayCheckoutContext;
     obj = { tags: null };
     obj = { skuId: null };
-    obj[0] = sku_id1;
+    obj[0] = skuId1;
     obj[0] = obj;
     const result = obj.captureBillingException(error, obj);
     throw error;
@@ -3413,12 +3413,12 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
   }
 };
 export { formatTrialCtaIntervalDuration };
-export const formatTrialCtaIntervalDurationFromTrialOffer = function formatTrialCtaIntervalDurationFromTrialOffer(subscription_trial) {
-  if (null != subscription_trial) {
-    if (null != subscription_trial.subscription_trial) {
-      if (subscription_trial.subscription_trial.sku_id === arg1) {
+export const formatTrialCtaIntervalDurationFromTrialOffer = function formatTrialCtaIntervalDurationFromTrialOffer(subscriptionTrial) {
+  if (null != subscriptionTrial) {
+    if (null != subscriptionTrial.subscriptionTrial) {
+      if (subscriptionTrial.subscriptionTrial.skuId === arg1) {
         const obj = { intervalType: null, intervalCount: null };
-        ({ interval: obj[0], interval_count: obj[1] } = subscription_trial.subscription_trial);
+        ({ interval: obj[0], intervalCount: obj[1] } = subscriptionTrial.subscriptionTrial);
         return formatTrialCtaIntervalDuration(obj);
       }
     }
@@ -3689,24 +3689,24 @@ export const useHasTier2Premium = function useHasTier2Premium() {
   const obj = initialize;
   return isPremiumAtLeast.isPremiumExactly(stateFromStores, closure_39.TIER_2);
 };
-export const getOfferNoticeThreshold = function getOfferNoticeThreshold(trial_id) {
-  let tmp2 = null != trial_id;
+export const getOfferNoticeThreshold = function getOfferNoticeThreshold(trialId) {
+  let tmp2 = null != trialId;
   if (tmp2) {
-    tmp2 = "trial_id" in trial_id;
+    tmp2 = "trialId" in trialId;
   }
   if (tmp2) {
-    trial_id = trial_id.trial_id;
-    if (closure_35 === trial_id) {
+    trialId = trialId.trialId;
+    if (closure_35 === trialId) {
       return closure_45;
-    } else if (closure_36 === trial_id) {
+    } else if (closure_36 === trialId) {
       return closure_44;
     } else {
       return tmp;
     }
   } else {
-    let tmp3 = null != trial_id;
+    let tmp3 = null != trialId;
     if (tmp3) {
-      tmp3 = "discountId" in trial_id;
+      tmp3 = "discountId" in trialId;
     }
     return tmp;
   }
@@ -3714,7 +3714,7 @@ export const getOfferNoticeThreshold = function getOfferNoticeThreshold(trial_id
 export const isTrialOffer = function isTrialOffer(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    tmp = "trial_id" in arg0;
+    tmp = "trialId" in arg0;
   }
   return tmp;
 };

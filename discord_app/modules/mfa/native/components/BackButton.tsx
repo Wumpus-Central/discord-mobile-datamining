@@ -7,7 +7,7 @@ const result = require("MFAButton").fileFinishedImporting("modules/mfa/native/co
 export default function BackButton(props) {
   props = props.props;
   let importDefault;
-  let obj = props(1499);
+  let obj = props(1500);
   importDefault = obj.useNavigation();
   obj = { variant: "secondary", text: null, onPress: null };
   const intl = props(1236).intl;

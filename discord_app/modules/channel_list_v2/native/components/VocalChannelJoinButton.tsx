@@ -60,19 +60,19 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
     small = false;
   }
   let VJlc0S = dependencyMap;
-  const tmp = voiceStates(8463)();
+  const tmp = voiceStates(8502)();
   let obj = channel(1363);
-  let joinButtonText = callback(tmp, obj.isThemeLight(voiceStates(4278)()));
-  let obj1 = channel(9804);
+  let joinButtonText = callback(tmp, obj.isThemeLight(voiceStates(4310)()));
+  let obj1 = channel(8675);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(647);
   const items = [getUncachedChannelPermissions];
   const stateFromStores = obj2.useStateFromStores(items, () => !outer1_6.can(outer1_9.CONNECT, channel));
-  let obj3 = channel(5210);
-  const stageParticipantsCount = obj3.useStageParticipantsCount(channel.id, channel(5204).StageChannelParticipantNamedIndex.AUDIENCE);
+  let obj3 = channel(6708);
+  const stageParticipantsCount = obj3.useStageParticipantsCount(channel.id, channel(6703).StageChannelParticipantNamedIndex.AUDIENCE);
   const isGuildStageVoiceResult = channel.isGuildStageVoice();
-  const tmp2 = voiceStates(4278)();
-  const obj5 = channel(5197);
+  const tmp2 = voiceStates(4310)();
+  const obj5 = channel(4988);
   let tmp3Result = tmp3(647);
   const items1 = [updateVoiceState];
   const stateFromStores1 = tmp3Result.useStateFromStores(items1, () => outer1_7.hasVideo(channel.id));
@@ -89,10 +89,10 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   if (!stateFromStores1) {
     tmp12 = tmp8;
   }
-  tmp3Result = tmp3(11741);
+  tmp3Result = tmp3(11461);
   const connectedUserLimit = tmp3Result.useConnectedUserLimit({ channel, video: tmp12 });
-  tmp8 = channel(5197).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
-  let connectedUserLimitFormatted = channel(11741).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  tmp8 = channel(4988).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
+  let connectedUserLimitFormatted = channel(11461).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
       connectedUserLimitFormatted = intl2.string(VJlc0S);
     }
     obj1[4] = connectedUserLimitFormatted;
-    obj[1] = tmp17(tmp3(4338).Text, obj1);
+    obj[1] = tmp17(tmp3(4734).Text, obj1);
     obj[7] = tmp17(closure_4, obj);
     let tmp17Result = tmp17(closure_5, obj);
     const tmp26 = closure_5;
@@ -138,9 +138,9 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
         }
         const items3 = [joinButtonIconActive, { marginRight: 3, marginLeft: -1 }];
         if (isGuildStageVoiceResult) {
-          let VoiceNormalIcon = tmp3(4888).StageIcon;
+          let VoiceNormalIcon = tmp3(6892).StageIcon;
         } else {
-          VoiceNormalIcon = tmp3(4892).VoiceNormalIcon;
+          VoiceNormalIcon = tmp3(6896).VoiceNormalIcon;
         }
         obj3 = { size: "xs", style: null };
         obj3[1] = items3;

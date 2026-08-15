@@ -4,7 +4,7 @@ import { PRIMARY_DOMAIN } from "ME";
 import getConstants from "getConstants";
 import set from "set";
 import set from "getConstants";
-import { parse } from "../../../_runtime/04260_parse.js";
+import { parse } from "../../../_runtime/04292_parse.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
@@ -67,10 +67,10 @@ export const getBuildOverride = function getBuildOverride() {
     }
     const HTTP = sendRequest.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: false };
-    obj[0] = importAll(1488).format(safeParseWithQueryResult);
+    obj[0] = importAll(1489).format(safeParseWithQueryResult);
     const value = HTTP.get(obj);
     resolved = value.then((body) => body.body || null, () => null);
-    const obj3 = importAll(1488);
+    const obj3 = importAll(1489);
   }
   return resolved;
 };
@@ -113,7 +113,7 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       safeParseWithQueryResult.host = window.location.host;
       const HTTP = sendRequest.HTTP;
       let obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj2 = importAll(1488);
+      obj2 = importAll(1489);
       obj2[0] = obj2.format(safeParseWithQueryResult);
       const value = HTTP.get(obj2);
       resolved = value.then((body) => body.body || null, () => null);
@@ -184,7 +184,7 @@ export const validateURL = function validateURL(target) {
             }
             obj = { payload: null, url: null };
             obj[0] = url.query.s;
-            obj[1] = importAll(1488).format(url);
+            obj[1] = importAll(1489).format(url);
             return obj;
           }
         }

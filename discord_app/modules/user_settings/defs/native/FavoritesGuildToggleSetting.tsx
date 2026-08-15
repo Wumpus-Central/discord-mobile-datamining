@@ -10,7 +10,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.OT1NK5);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate() {
     return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
@@ -24,7 +24,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.OT1NK5);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate() {
     return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },

@@ -91,7 +91,7 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return callback(8275).Rule;
+            return callback(4368).Rule;
           }
     };
     items[16] = {

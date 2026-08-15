@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4083";
+import importDefaultResult from "module_4115";
 
 let c5;
 let closure_6;

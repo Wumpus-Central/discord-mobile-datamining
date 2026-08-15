@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
-import { registerAsset } from "../../../../../_runtime/08093_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08143_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 const result = require("Themes").fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");

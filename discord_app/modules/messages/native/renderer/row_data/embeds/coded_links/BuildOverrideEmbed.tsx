@@ -27,7 +27,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     if (override2 != null) {
       const targetBuildOverride = override2.targetBuildOverride;
       if (targetBuildOverride != null) {
-        const tmp9 = targetBuildOverride[require(undefined, 11253) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+        const tmp9 = targetBuildOverride[require(undefined, 10968) /* setBuildOverrideForBranch */.DEVICE_FIELD];
         if (tmp9 != null) {
           id = tmp9.id;
         }
@@ -38,15 +38,15 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       const overrides = currentBuildOverride.overrides;
       let id1;
       if (overrides != null) {
-        const tmp13 = overrides[require(undefined, 11253) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+        const tmp13 = overrides[require(undefined, 10968) /* setBuildOverrideForBranch */.DEVICE_FIELD];
         if (tmp13 != null) {
           id1 = tmp13.id;
         }
       }
       tmp10 = id === id1;
     }
-    let tmpResult = tmp(12694);
-    obj = importAll(1625);
+    let tmpResult = tmp(12772);
+    obj = importAll(1626);
     const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
     if (currentBuildOverride.state !== tmp6.Invalid) {
       if (buildOverride.state !== tmp6.Invalid) {
@@ -64,7 +64,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               if (override != null) {
                 const targetBuildOverride2 = override.targetBuildOverride;
                 if (targetBuildOverride2 != null) {
-                  const tmp30 = targetBuildOverride2[tmp28(undefined, 11253).DEVICE_FIELD];
+                  const tmp30 = targetBuildOverride2[tmp28(undefined, 10968).DEVICE_FIELD];
                   if (tmp30 != null) {
                     type = tmp30.type;
                   }
@@ -79,7 +79,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj.titleColor = colors.titleColor;
               obj.subtitle = id;
               obj.subtitleColor = colors.subtitleColor;
-              obj.thumbnailUrl = Image.resolveAssetSource(tmp(12692)).uri;
+              obj.thumbnailUrl = Image.resolveAssetSource(tmp(12770)).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -125,9 +125,9 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     obj1.subtitleColor = subtitleColor;
     const obj4 = processColorOrThrow;
     if (tmp20Result.isThemeDark(closure_2)) {
-      tmpResult = tmp(11274);
+      tmpResult = tmp(10987);
     } else {
-      tmpResult = tmp(11275);
+      tmpResult = tmp(10988);
     }
     obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

@@ -19,7 +19,7 @@ createToggle = {
     obj = { count: secureFramesVerifiedUserIds.length };
     return intl.formatToPlainString(getSystemLocale.t["6vrePS"], obj);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
     const items = [items];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

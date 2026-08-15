@@ -17,18 +17,18 @@ const memoResult = importAllResult.memo((visible) => {
   let importAllResult;
   let c5;
   let ref;
-  let tmp4 = callback(importAllResult.useState(visible(8931).PlayerState.UNREADY), 2);
+  let tmp4 = callback(importAllResult.useState(visible(9016).PlayerState.UNREADY), 2);
   first = tmp4[0];
   dependencyMap = tmp4[1];
   const tmp6 = callback(importAllResult.useState(undefined), 2);
   callback = tmp6[1];
-  const tmp8 = first(8916)(first);
+  const tmp8 = first(6701)(first);
   importAllResult = tmp8;
-  const tmp9 = first(8916)(visible);
+  const tmp9 = first(6701)(visible);
   c5 = tmp9;
   ref = importAllResult.useRef(null);
   const effect = importAllResult.useEffect(() => {
-    const MediaViewerAnalytics = visible(8910).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(8996).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
   const items = [ref, visible, tmp9, tmp8, first];
@@ -39,9 +39,9 @@ const memoResult = importAllResult.memo((visible) => {
     ({ type, value } = parsed);
     if ("onReady" === type) {
       if ("-1" === value) {
-        let READY = visible(8931).PlayerState.ERRORED;
+        let READY = visible(9016).PlayerState.ERRORED;
       } else {
-        READY = visible(8931).PlayerState.READY;
+        READY = visible(9016).PlayerState.READY;
       }
       dependencyMap(READY);
       const tmp17 = dependencyMap;
@@ -66,23 +66,23 @@ const memoResult = importAllResult.memo((visible) => {
           }
         }
       }
-      dependencyMap(visible(8931).PlayerState.ERRORED);
+      dependencyMap(visible(9016).PlayerState.ERRORED);
       callback(str6);
-      const MediaViewerAnalytics = visible(8910).MediaViewerAnalytics;
+      const MediaViewerAnalytics = visible(8996).MediaViewerAnalytics;
       let obj = { platform: "youtube", action: "errored", error: null };
       obj[2] = str6;
       const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted(obj);
     } else if ("onStateChange" === type) {
       obj = { "-1": null, 0: null, 1: null, 2: null, 3: null, 5: null };
-      obj[0] = visible(8931).PlayerState.UNSTARTED;
-      obj[0] = visible(8931).PlayerState.ENDED;
-      obj[1] = visible(8931).PlayerState.PLAYING;
-      obj[2] = visible(8931).PlayerState.PAUSED;
-      obj[3] = visible(8931).PlayerState.BUFFERING;
-      obj[5] = visible(8931).PlayerState.VIDEO_CUED;
+      obj[0] = visible(9016).PlayerState.UNSTARTED;
+      obj[0] = visible(9016).PlayerState.ENDED;
+      obj[1] = visible(9016).PlayerState.PLAYING;
+      obj[2] = visible(9016).PlayerState.PAUSED;
+      obj[3] = visible(9016).PlayerState.BUFFERING;
+      obj[5] = visible(9016).PlayerState.VIDEO_CUED;
       let tmp4 = null != tmp35;
       if (tmp4) {
-        tmp4 = tmp35 in visible(8931).PlayerState;
+        tmp4 = tmp35 in visible(9016).PlayerState;
       }
       if (tmp4) {
         dependencyMap(tmp35);
@@ -92,15 +92,15 @@ const memoResult = importAllResult.memo((visible) => {
   const effect1 = importAllResult.useEffect(() => {
     let tmp2 = null != ref.current;
     if (tmp2) {
-      tmp2 = first !== visible(8931).PlayerState.UNREADY;
+      tmp2 = first !== visible(9016).PlayerState.UNREADY;
     }
     if (tmp2) {
       let tmp7 = visible;
       if (visible) {
-        tmp7 = c4 === visible(8931).PlayerState.UNREADY;
+        tmp7 = c4 === visible(9016).PlayerState.UNREADY;
       }
       if (tmp7) {
-        tmp7 = first === visible(8931).PlayerState.READY;
+        tmp7 = first === visible(9016).PlayerState.READY;
       }
       if (tmp7) {
         const current = tmp.current;
@@ -124,20 +124,20 @@ const memoResult = importAllResult.memo((visible) => {
       }
     }
   }, items);
-  let obj = visible(8909);
+  let obj = visible(8994);
   let youtubeVideoIdFromURI = obj.getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    let tmp2Result = tmp2(8909);
+    let tmp2Result = tmp2(8994);
     youtubeVideoIdFromURI = tmp2Result.getYoutubeClipVideoIdFromURI(source.uri);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (first === tmp2(8931).PlayerState.ERRORED) {
+    if (first === tmp2(9016).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
         obj = { videoId: null };
         obj[0] = youtubeVideoIdFromURI.videoId;
-        return ref(tmp7(12340), obj);
+        return ref(tmp7(12070), obj);
       }
     }
     tmp2Result = tmp2(500);
@@ -171,7 +171,7 @@ const memoResult = importAllResult.memo((visible) => {
     obj[5] = callback;
     const merged1 = Object.assign(tmp15);
     const merged2 = Object.assign(merged);
-    return ref(tmp7(8931), obj, youtubeVideoIdFromURI.videoId);
+    return ref(tmp7(9016), obj, youtubeVideoIdFromURI.videoId);
   }
 });
 let result = require("ME").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutube.tsx");

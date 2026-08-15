@@ -14,7 +14,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.dEYpSt);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     const items = [mergeGuildAvatar];
     return initialize.useStateFromStores(items, () => {
@@ -30,7 +30,7 @@ createToggle = {
     let obj = ModalActionCreators;
     obj = { allowDeletePhone: true, reason: null };
     obj[1] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(8587, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(8626, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

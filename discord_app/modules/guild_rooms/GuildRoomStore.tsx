@@ -7,6 +7,35 @@ import { PersistedStore } from "initialize";
 import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 
 const require = arg1;
+function resolveCreatingNotes(roomId, objects) {
+  if (null != dependencyMap5[roomId]) {
+    if (0 !== arr.length) {
+      const value = objects.get(_require(set[4]).GuildRoomObjectTypes.NOTE);
+      if (null != value) {
+        if (0 !== value.length) {
+          _require = store.getId();
+          const _Set = Set;
+          const found = value.filter((createdBy) => createdBy.createdBy === closure_0);
+          set = new Set(found.map((position) => {
+            position = position.position;
+            return "" + position.x + "," + position.y;
+          }));
+          const found1 = arr.filter((position) => {
+            position = position.position;
+            return !set.has("" + position.x + "," + position.y);
+          });
+          if (found1.length !== arr.length) {
+            if (0 === found1.length) {
+              delete tmp[tmp2];
+            } else {
+              tmp3[roomId] = found1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 function handleSelectedChannelStoreChange() {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   if (null != voiceChannelId) {
@@ -18,9 +47,6 @@ function handleSelectedChannelStoreChange() {
     dependencyMap3[voiceChannelId] = flag;
     const tmp4 = dependencyMap3;
   }
-}
-function handleNoteCreateComplete(arg0) {
-  delete tmp[tmp2];
 }
 let closure_2 = ["users", "objects"];
 let closure_3 = ["users", "objects"];
@@ -39,6 +65,8 @@ let c19 = false;
 let c20 = false;
 let c21 = false;
 let closure_22 = {};
+let closure_23 = {};
+let closure_24 = [];
 class GuildRoomStore extends PersistedStore {
 }
 const prototype = GuildRoomStore.prototype;
@@ -108,6 +136,13 @@ prototype["getPendingNote"] = function getPendingNote(arg0) {
   }
   return tmp;
 };
+prototype["getCreatingNotes"] = function getCreatingNotes(arg0) {
+  let tmp = dependencyMap5[arg0];
+  if (tmp == null) {
+    tmp = closure_24;
+  }
+  return tmp;
+};
 prototype["getNotes"] = function getNotes(closure_1) {
   const roomObjects = this.getRoomObjects(closure_1);
   let value = roomObjects.get(GuildRoomObjectTypes.GuildRoomObjectTypes.NOTE);
@@ -126,18 +161,17 @@ GuildRoomStore.displayName = "GuildRoomStore";
 GuildRoomStore.persistKey = "GuildRoomStore";
 obj = {
   GUILD_ROOM_CONNECT: function handleConnect(room) {
-    let objects;
-    let users;
     room = room.room;
-    ({ users, objects } = room);
+    const objects = room.objects;
     closure_13[room.roomId] = callback(room, closure_2);
-    closure_14[room.roomId] = users;
+    closure_14[room.roomId] = room.users;
     closure_15[room.roomId] = objects;
-    let tmp = null != room.guildId;
-    if (tmp) {
-      tmp = null != c16;
+    resolveCreatingNotes(room.roomId, objects);
+    let tmp2 = null != room.guildId;
+    if (tmp2) {
+      tmp2 = null != c16;
     }
-    if (tmp) {
+    if (tmp2) {
       c16 = null;
     }
   },
@@ -174,6 +208,7 @@ obj = {
       }
       if (userId === store.getId()) {
         delete tmp[tmp2];
+        delete tmp[tmp2];
         if (!c20) {
           let c19 = false;
         }
@@ -181,20 +216,19 @@ obj = {
     }
   },
   GUILD_ROOM_UPDATE: function handleUpdate(room) {
-    let objects;
-    let users;
     room = room.room;
-    ({ users, objects } = room);
+    const objects = room.objects;
     closure_13[room.roomId] = callback(room, closure_3);
     closure_15[room.roomId] = objects;
+    resolveCreatingNotes(room.roomId, objects);
     const id = store.getId();
     let value;
     if (dependencyMap2[room.roomId] != null) {
       value = obj.get(id);
     }
-    dependencyMap2[room.roomId] = users;
+    dependencyMap2[room.roomId] = room.users;
     if (null != value) {
-      if (tmp2[room.roomId] != null) {
+      if (tmp3[room.roomId] != null) {
         const result = obj2.set(id, value);
       }
     }
@@ -307,8 +341,39 @@ obj = {
       tmp2[roomId] = obj;
     }
   },
-  GUILD_ROOM_PENDING_NOTE_DELETE: handleNoteCreateComplete,
-  GUILD_ROOM_NOTE_CREATE_COMPLETE: handleNoteCreateComplete,
+  GUILD_ROOM_PENDING_NOTE_DELETE: function handlePendingNoteDelete(arg0) {
+    delete tmp[tmp2];
+  },
+  GUILD_ROOM_NOTE_CREATE_START: function handleNoteCreateStart(roomId) {
+    let localId;
+    let position;
+    roomId = roomId.roomId;
+    let items = dependencyMap5[roomId];
+    ({ localId, position } = roomId);
+    if (items == null) {
+      items = [];
+    }
+    const items1 = [];
+    items1[HermesBuiltin.arraySpread(items, 0)] = { localId, position };
+    dependencyMap5[roomId] = items1;
+  },
+  GUILD_ROOM_NOTE_CREATE_FAILURE: function handleNoteCreateFailure(arg0) {
+    let require;
+    let roomId;
+    ({ roomId, localId: require } = arg0);
+    if (null == dependencyMap5[roomId]) {
+      return false;
+    } else {
+      const found = arr.filter((localId) => localId.localId !== closure_0);
+      if (found.length === arr.length) {
+        return false;
+      } else if (0 === found.length) {
+        delete tmp[tmp2];
+      } else {
+        tmp3[roomId] = found;
+      }
+    }
+  },
   GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function handleSetVideoOverlayVisibility(value) {
     value = value.value;
   },

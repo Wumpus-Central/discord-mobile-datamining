@@ -29,9 +29,9 @@ function FriendsEmptyComponent() {
   const items = [callback(Button.RefreshEmptyState, obj), ];
   obj = {
     onPress() {
-      let obj = callback2(4310);
+      let obj = callback2(4342);
       obj.hideActionSheet();
-      const rootNavigationRef = callback(4198).getRootNavigationRef();
+      const rootNavigationRef = callback(4230).getRootNavigationRef();
       if (null != rootNavigationRef) {
         obj = { screen: "add-friends", params: null };
         obj[1] = { sourcePage: "Instant Invite Empty State" };

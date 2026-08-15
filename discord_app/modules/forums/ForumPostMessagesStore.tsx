@@ -51,12 +51,15 @@ function handleReaction(colors) {
             return false;
           }
         }
-        const obj = {};
+        let obj = {};
         const merged = Object.assign(tmp5);
         dependencyMap[channelId] = obj;
         if ("MESSAGE_REACTION_ADD" === tmp) {
           const firstMessage2 = tmp5.firstMessage;
-          let addReactionResult = firstMessage2.addReaction(emoji, tmp6, colors.colors, reactionType);
+          obj = { colors: null, reactionType: null };
+          obj[0] = colors.colors;
+          obj[1] = reactionType;
+          let addReactionResult = firstMessage2.addReaction(emoji, tmp6, obj);
         } else {
           const firstMessage = tmp5.firstMessage;
           addReactionResult = firstMessage.removeReaction(emoji, tmp6, reactionType);

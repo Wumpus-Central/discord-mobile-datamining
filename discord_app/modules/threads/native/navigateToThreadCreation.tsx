@@ -7,7 +7,7 @@ export const navigateToThreadCreation = function navigateToThreadCreation(channe
   const obj = patchThread;
   const tmp3 = require;
   if (!obj2.navigateToCreateThread(channel.guild_id, channel.id)) {
-    tmp3(4353).transitionToChannel(channel.id);
-    const tmp3Result = tmp3(4353);
+    tmp3(4768).transitionToChannel(channel.id);
+    const tmp3Result = tmp3(4768);
   }
 };

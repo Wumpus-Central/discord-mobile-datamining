@@ -29,7 +29,7 @@ function _handleCreateJoinGuildPress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -121,9 +121,9 @@ let c4 = importAllResult;
 let closure_13 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
 const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("GuildsBarCreateJoinButton");
-  let obj = enabled(15508);
+  let obj = enabled(15558);
   const tmp4 = callback2();
-  const GameCommunityAddServerEntryExperiment = enabled(13058).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13261).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
   let obj1 = enabled(589);
   const items = [handleConnectionOpen];
@@ -152,7 +152,7 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       })();
     }
   }), items1);
-  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "relative", label: 1, expandedChildren: null, children: null };
+  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "userIdRange", label: null, expandedChildren: "League of Legends", children: null };
   let tmp12 = !tmp3;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp10 = View;
@@ -164,12 +164,12 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   obj[5] = memo;
   const intl = tmp5(1236).intl;
   obj[6] = intl.string(enabled(1236).t.l5WIbf);
-  obj[7] = jsx(enabled(15566).HomeDrawerAddServerRowExpandedChildren, {});
+  obj[7] = jsx(enabled(15616).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = tmp(712).colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(9590).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj[1] = jsx(UnreadIndicator, { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "relative", label: 1, expandedChildren: null, children: null });
-  return <tmp10 selected={stateFromStores} circle={null} unread={false} styles={null} overState="y" config="relative" label={1} expandedChildren={null}>{null}</tmp10>;
+  obj[8] = jsx(enabled(9545).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  obj[1] = jsx(UnreadIndicator, { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "userIdRange", label: null, expandedChildren: "League of Legends", children: null });
+  return <tmp10 selected={stateFromStores} circle={null} unread={false} styles={null} overState="y" config="userIdRange" label={null} expandedChildren="League of Legends">{null}</tmp10>;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 

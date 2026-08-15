@@ -9,7 +9,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.lfC1KR);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onTermsOfServicePress() {
     Linking.openURL(MarketingURLs.TERMS);
   },
@@ -20,12 +20,12 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.lfC1KR);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onTermsOfServicePress() {
     Linking.openURL(MarketingURLs.TERMS);
   },
   withArrow: true
 };
-const result = require("module_4058").fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
+const result = require("module_4090").fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
 
 export default pressable;

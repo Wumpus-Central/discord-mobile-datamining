@@ -33,7 +33,7 @@ export default function _default(onChange) {
   let tmp = width(null);
   dependencyMap = tmp;
   callback = width(false);
-  const size = onChange(1493)();
+  const size = onChange(1494)();
   width = size.width;
   height = size.height;
   closure_5 = width(null);

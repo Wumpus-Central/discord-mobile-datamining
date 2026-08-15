@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import items from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04788_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
 import { NameplateUser } from "../nameplates/native/NameplateProductPreview.tsx";
@@ -144,11 +144,11 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   } else if (tmp(1949).CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = tmp(679).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = callback(tmp(9620).FractionalNitroPreview, {});
+      let tmp5 = callback(tmp(9574).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = callback(tmp(9623).OrbBadgePreview, {});
+        tmp5 = callback(tmp(9577).OrbBadgePreview, {});
       }
     }
     return tmp5;

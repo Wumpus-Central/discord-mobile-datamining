@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/overview/native/SettingsOverviewScreen.tsx
 import noop from "noop";
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 
 export default function SettingsOverviewScreen() {
-  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4007).useHasPremiumSubscriptionToDisplay();
+  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4039).useHasPremiumSubscriptionToDisplay();
   let items = [hasPremiumSubscriptionToDisplay];
   const node = React.useMemo(() => {
     let obj = hasPremiumSubscriptionToDisplay(outer1_1[6]);
@@ -18,8 +18,8 @@ export default function SettingsOverviewScreen() {
     if (!hasPremiumSubscriptionToDisplay) {
       PREMIUM = outer1_3.PREMIUM;
     }
-    const items = [PREMIUM, , , , , , , , , ];
-    ({ ACCOUNT: arr[1], CONTENT_AND_SOCIAL: arr[2], DATA_AND_PRIVACY: arr[3], FAMILY_CENTER: arr[4], AUTHORIZED_APPS: arr[5], DEVICES: arr[6], CONNECTIONS: arr[7], CLIPS: arr[8], SCAN_QR_CODE: arr[9] } = outer1_3);
+    const items = [PREMIUM, , , , , , , , , , ];
+    ({ ACCOUNT: arr[1], CONTENT_AND_SOCIAL: arr[2], DATA_AND_PRIVACY: arr[3], SPONSORED_CONTENT_PREFERENCES: arr[4], FAMILY_CENTER: arr[5], AUTHORIZED_APPS: arr[6], DEVICES: arr[7], CONNECTIONS: arr[8], CLIPS: arr[9], SCAN_QR_CODE: arr[10] } = outer1_3);
     obj[1] = items.filter(hasPremiumSubscriptionToDisplay(outer1_1[4]).isNotNullish);
     const items1 = [obj, , , , , , , , , ];
     obj = { label: null, settings: null };
@@ -81,5 +81,5 @@ export default function SettingsOverviewScreen() {
     obj1[0] = items1;
     return obj.createList(obj1);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(13960).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(13992).SearchableSettingsList, { node });
 };

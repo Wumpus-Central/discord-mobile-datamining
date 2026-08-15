@@ -28,7 +28,7 @@ function handleUpdateActivity() {
       channel = channel.getChannel(voiceChannelId);
       tmp2 = null;
       if (null != channel) {
-        let obj1 = importAll(3994);
+        let obj1 = importAll(4026);
         tmp2 = null;
         if (obj1.canEveryone(constants2.VIEW_CHANNEL, channel)) {
           guild = guild.getGuild(channel.getGuildId());
@@ -50,7 +50,7 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = _null;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(5204).StageChannelParticipantNamedIndex.SPEAKER);
+              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6703).StageChannelParticipantNamedIndex.SPEAKER);
               const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
@@ -72,11 +72,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4535);
+                let tmp12Result = tmp12(4984);
                 topic = tmp12Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(5197);
+              tmp12Result = tmp12(4988);
               obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {

@@ -275,27 +275,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
         num = 0;
       }
       obj[1] = num;
-      let num2 = value.get(tmp2(7268).CodecTypes.H265);
+      let num2 = value.get(tmp2(7489).CodecTypes.H265);
       if (num2 == null) {
         num2 = 0;
       }
       obj[2] = num2;
-      let num3 = value.get(tmp2(7268).CodecTypes.VP8);
+      let num3 = value.get(tmp2(7489).CodecTypes.VP8);
       if (num3 == null) {
         num3 = 0;
       }
       obj[3] = num3;
-      let num4 = value.get(tmp2(7268).CodecTypes.VP9);
+      let num4 = value.get(tmp2(7489).CodecTypes.VP9);
       if (num4 == null) {
         num4 = 0;
       }
       obj[4] = num4;
-      let num5 = value.get(tmp2(7268).CodecTypes.AV1);
+      let num5 = value.get(tmp2(7489).CodecTypes.AV1);
       if (num5 == null) {
         num5 = 0;
       }
       obj[5] = num5;
-      let num6 = value.get(tmp2(7268).CodecTypes.UNKNOWN);
+      let num6 = value.get(tmp2(7489).CodecTypes.UNKNOWN);
       if (num6 == null) {
         num6 = 0;
       }
@@ -315,27 +315,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     num8 = 0;
   }
   obj[1] = num8;
-  let num9 = map.get(tmp7(7268).CodecTypes.H265);
+  let num9 = map.get(tmp7(7489).CodecTypes.H265);
   if (num9 == null) {
     num9 = 0;
   }
   obj[2] = num9;
-  let num10 = map.get(tmp7(7268).CodecTypes.VP8);
+  let num10 = map.get(tmp7(7489).CodecTypes.VP8);
   if (num10 == null) {
     num10 = 0;
   }
   obj[3] = num10;
-  let num11 = map.get(tmp7(7268).CodecTypes.VP9);
+  let num11 = map.get(tmp7(7489).CodecTypes.VP9);
   if (num11 == null) {
     num11 = 0;
   }
   obj[4] = num11;
-  let num12 = map.get(tmp7(7268).CodecTypes.AV1);
+  let num12 = map.get(tmp7(7489).CodecTypes.AV1);
   if (num12 == null) {
     num12 = 0;
   }
   obj[5] = num12;
-  let num13 = map.get(tmp7(7268).CodecTypes.UNKNOWN);
+  let num13 = map.get(tmp7(7489).CodecTypes.UNKNOWN);
   if (num13 == null) {
     num13 = 0;
   }
@@ -1203,91 +1203,91 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     const _Math44 = Math;
     obj[82] = Math.round(videoEffectDuration.totalDuration() / 1000);
     obj[83] = aggregationDuration.cryptorMaxAttempts;
-    const tmp47 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.FFMPEG];
+    const tmp47 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.FFMPEG];
     let num53 = 0;
     if (null != tmp47) {
       const _Math45 = Math;
       num53 = Math.round(tmp47);
     }
     obj[84] = num53;
-    const tmp48 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.DAV1D];
+    const tmp48 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.DAV1D];
     let num54 = 0;
     if (null != tmp48) {
       const _Math46 = Math;
       num54 = Math.round(tmp48);
     }
     obj[85] = num54;
-    const tmp49 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.VP8_LIBVPX];
+    const tmp49 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.VP8_LIBVPX];
     let num55 = 0;
     if (null != tmp49) {
       const _Math47 = Math;
       num55 = Math.round(tmp49);
     }
     obj[86] = num55;
-    const tmp50 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.ELECTRON];
+    const tmp50 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.ELECTRON];
     let num56 = 0;
     if (null != tmp50) {
       const _Math48 = Math;
       num56 = Math.round(tmp50);
     }
     obj[87] = num56;
-    const tmp51 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.VIDEOTOOLBOX];
+    const tmp51 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.VIDEOTOOLBOX];
     let num57 = 0;
     if (null != tmp51) {
       const _Math49 = Math;
       num57 = Math.round(tmp51);
     }
     obj[88] = num57;
-    const tmp52 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.UNCATEGORIZED];
+    const tmp52 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.UNCATEGORIZED];
     let num58 = 0;
     if (null != tmp52) {
       const _Math50 = Math;
       num58 = Math.round(tmp52);
     }
     obj[89] = num58;
-    const tmp53 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.UNKNOWN];
+    const tmp53 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.UNKNOWN];
     let num59 = 0;
     if (null != tmp53) {
       const _Math51 = Math;
       num59 = Math.round(tmp53);
     }
     obj[90] = num59;
-    const tmp54 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.EXYNOS];
+    const tmp54 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.EXYNOS];
     let num60 = 0;
     if (null != tmp54) {
       const _Math52 = Math;
       num60 = Math.round(tmp54);
     }
     obj[91] = num60;
-    const tmp55 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.WEBRTC];
+    const tmp55 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.WEBRTC];
     let num61 = 0;
     if (null != tmp55) {
       const _Math53 = Math;
       num61 = Math.round(tmp55);
     }
     obj[92] = num61;
-    const tmp56 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.QUALCOMM];
+    const tmp56 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.QUALCOMM];
     let num62 = 0;
     if (null != tmp56) {
       const _Math54 = Math;
       num62 = Math.round(tmp56);
     }
     obj[93] = num62;
-    const tmp57 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.MEDIATEK];
+    const tmp57 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.MEDIATEK];
     let num63 = 0;
     if (null != tmp57) {
       const _Math55 = Math;
       num63 = Math.round(tmp57);
     }
     obj[94] = num63;
-    const tmp58 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.D3D11VIDEODECODER];
+    const tmp58 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.D3D11VIDEODECODER];
     let num64 = 0;
     if (null != tmp58) {
       const _Math56 = Math;
       num64 = Math.round(tmp58);
     }
     obj[95] = num64;
-    const tmp59 = aggregationDuration.decoderBuckets[require(undefined, 7268) /* parseEncoder */.Decoders.ANDROID];
+    const tmp59 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.ANDROID];
     let num65 = 0;
     if (null != tmp59) {
       const _Math57 = Math;
@@ -1393,12 +1393,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set = new Set();
   const set1 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp7 = self.connection.context === tmp(4441).MediaEngineContextTypes.DEFAULT;
+  let tmp7 = self.connection.context === tmp(4569).MediaEngineContextTypes.DEFAULT;
   if (tmp7) {
     tmp7 = null != transport.camera;
   }
   self.cameraDuration.value = tmp7;
-  let tmp9 = self.connection.context === tmp(4441).MediaEngineContextTypes.DEFAULT;
+  let tmp9 = self.connection.context === tmp(4569).MediaEngineContextTypes.DEFAULT;
   if (tmp9) {
     tmp9 = null != transport.camera;
   }
@@ -1406,7 +1406,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp9 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp9;
-  let tmp11 = self.connection.context === tmp(4441).MediaEngineContextTypes.DEFAULT;
+  let tmp11 = self.connection.context === tmp(4569).MediaEngineContextTypes.DEFAULT;
   if (tmp11) {
     tmp11 = null != transport.camera;
   }

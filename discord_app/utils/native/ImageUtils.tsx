@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME";
-import { parse } from "../../../_runtime/01483_parse.js";
+import { parse } from "../../../_runtime/01484_parse.js";
 import { items } from "../../modules/image_upload/AttachmentImageLadder.tsx";
 import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
 import { getAvatarURL } from "../AvatarUtils.tsx";
@@ -46,33 +46,39 @@ function getSrcWithWidthAndHeight(animated) {
     targetHeight = tmp8;
   }
   if (targetWidth !== sourceWidth) {
-    if ((function isAttachmentLadderEnabled(arg0) {
+    const tmp9 = (function getAttachmentLadderConfig(arg0) {
       try {
         const obj = { location: null };
         obj[0] = "native/ImageUtils.getSrcWithWidthAndHeight";
-        return true === callback(table[3]).getAttachmentImageLadderConfig(obj).enabled;
+        const attachmentImageLadderConfig = callback(table[3]).getAttachmentImageLadderConfig(obj);
+        let tmp5 = null;
+        if (true === attachmentImageLadderConfig.enabled) {
+          tmp5 = attachmentImageLadderConfig;
+        }
+        return tmp5;
       } catch (err) {
-        return false;
+        return null;
       }
-    })("native/ImageUtils.getSrcWithWidthAndHeight")) {
+    })("native/ImageUtils.getSrcWithWidthAndHeight");
+    let size = { width: null, height: null };
+    size[0] = targetWidth;
+    size[1] = targetHeight;
+    if (null != tmp9) {
       obj = { targetWidth: null, targetHeight: null, sourceWidth: null, sourceHeight: null, maxUpscale: null };
       obj[0] = targetWidth;
       obj[1] = targetHeight;
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
-      obj[4] = items.ATTACHMENT_LADDER_MAX_UPSCALE;
-      let size = items.snapAttachmentDimensions(obj);
       const obj2 = items;
-    } else {
-      size = { width: null, height: null };
-      size[0] = targetWidth;
-      size[1] = targetHeight;
+      obj[4] = items.getSnapDownMaxUpscale(tmp9, tmp2(1896)());
+      size = obj2.snapAttachmentDimensions(obj);
+      const obj4 = items;
     }
-    if (!tmp10) {
+    if (!tmp12) {
       tmp6.width = size.width | 0;
       tmp6.height = size.height | 0;
     }
-    tmp10 = size.width === sourceWidth && size.height === sourceHeight;
+    tmp12 = size.width === sourceWidth && size.height === sourceHeight;
   }
   if (flag) {
     tmp6.animated = true;
@@ -80,8 +86,8 @@ function getSrcWithWidthAndHeight(animated) {
   let tmp2Result = tmp2(12);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1483);
-    text = `${tmp5}?${obj5.stringify(tmp6)}`;
+    tmp2Result = tmp2(1484);
+    text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
 }

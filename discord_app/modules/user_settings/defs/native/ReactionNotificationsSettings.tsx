@@ -15,7 +15,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Rq0NFs);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").ReactionNotifications.useSetting,
   onValueChange: onChange,
   useOptions() {
@@ -42,7 +42,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Rq0NFs);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").ReactionNotifications.useSetting,
   onValueChange: onChange,
   useOptions() {

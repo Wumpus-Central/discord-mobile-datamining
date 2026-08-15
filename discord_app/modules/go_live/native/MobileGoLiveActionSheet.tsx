@@ -328,5 +328,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   obj[0] = encodeProperties.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(asyncRequireImpl(10816, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(10932, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

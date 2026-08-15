@@ -19,7 +19,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["2gFUEw"]);
   },
-  parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange
 };

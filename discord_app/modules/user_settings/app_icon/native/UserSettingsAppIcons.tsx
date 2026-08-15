@@ -39,7 +39,7 @@ const memoResult = require("getSystemLocale").memo(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -61,7 +61,7 @@ const memoResult = require("getSystemLocale").memo(() => {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
-                          let obj4 = v0(8432);
+                          let obj4 = v0(8471);
                           const obj1 = { initialUpsellKey: null, imageSource: null };
                           obj1[0] = outer1_6.APP_ICONS;
                           obj1[1] = tmp28;
@@ -75,11 +75,11 @@ const memoResult = require("getSystemLocale").memo(() => {
                       dependencyMap = 1;
                       v0 = 1;
                       let obj2 = { value: null, done: false };
-                      obj2[0] = lib(7727).setAppIcon(id, premiumType);
+                      obj2[0] = lib(7945).setAppIcon(id, premiumType);
                       return obj2;
                     }
                   } else {
-                    obj2 = lib(7727);
+                    obj2 = lib(7945);
                     let premiumType1;
                     if (lib != null) {
                       premiumType1 = lib.premiumType;
@@ -87,7 +87,7 @@ const memoResult = require("getSystemLocale").memo(() => {
                     dependencyMap = 2;
                     v0 = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = obj2.setAppIcon(lib(7729).FreemiumAppIconIds.DEFAULT, premiumType1);
+                    obj3[0] = obj2.setAppIcon(lib(7947).FreemiumAppIconIds.DEFAULT, premiumType1);
                     return obj3;
                   }
                 }
@@ -113,7 +113,7 @@ const memoResult = require("getSystemLocale").memo(() => {
               return obj;
             }
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (tmp17) {
             v0 = tmp;
             throw tmp17;
@@ -133,7 +133,7 @@ const memoResult = require("getSystemLocale").memo(() => {
   let obj = stateFromStores(589);
   const items = [_onSelect];
   stateFromStores = obj.useStateFromStores(items, () => _onSelect.getCurrentUser());
-  let obj1 = stateFromStores(7727);
+  let obj1 = stateFromStores(7945);
   const importDefault = obj1.useCurrentAppIcon();
   let obj2 = stateFromStores(1945);
   const isPremiumResult = obj2.isPremium(stateFromStores);
@@ -156,7 +156,7 @@ const memoResult = require("getSystemLocale").memo(() => {
   };
   obj1[1] = callback(BackwardsCompatibleAppIconRows, obj2);
   obj[0] = callback(obj, obj1);
-  const children = [callback(stateFromStores(8033).Form, obj), ];
+  const children = [callback(stateFromStores(8083).Form, obj), ];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj3 = { style: null, children: null };

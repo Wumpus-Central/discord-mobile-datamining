@@ -1,6 +1,6 @@
 // discord_app/modules/client_themes/native/chat/formatSharedClientThemeData.tsx
 import { Image } from "get ActivityIndicator";
-import { registerAsset } from "../../../../../_runtime/07771_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07989_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../intl/ClientThemes.messages.js";
 

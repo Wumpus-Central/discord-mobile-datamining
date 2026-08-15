@@ -39,16 +39,7 @@ export const isWishlistableCollectiblesProduct = function isWishlistableCollecti
   const result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(selectedProduct);
   let tmp4 = !result;
   if (!result) {
-    let tmp5 = selectedProduct.type !== tmp(1949).CollectiblesItemType.EXTERNAL_SKU;
-    if (tmp5) {
-      let tmp6 = selectedProduct.type === tmp(1949).CollectiblesItemType.PROFILE_FRAME;
-      if (tmp6) {
-        tmp6 = !tmp(9415).getIsProfileFrameGiftingEnabled("isWishlistableCollectiblesProduct");
-        const tmpResult = tmp(9415);
-      }
-      tmp5 = !tmp6;
-    }
-    tmp4 = tmp5;
+    tmp4 = selectedProduct.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   return tmp4;
 };

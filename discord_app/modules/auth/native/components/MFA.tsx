@@ -20,9 +20,9 @@ export default function ConnectedMFA() {
   }
   ({ inContainer, isMultiAccount } = obj);
   let navigation;
-  navigation = isMultiAccount(1499).useNavigation();
+  navigation = isMultiAccount(1500).useNavigation();
   if (inContainer) {
-    inContainer = navigation(8543)();
+    inContainer = navigation(8582)();
   }
   let tmpResult = tmp(589);
   const items = [fetchFingerprint];
@@ -62,7 +62,7 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(15071).MFAModal, obj);
+    return jsx(tmp(15120).MFAModal, obj);
   } else {
     tmpResult = tmp(501);
     let space = tmp4(712).space;

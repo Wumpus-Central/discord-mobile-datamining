@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { n } from "../../../../../_runtime/00689_n.js";
-import { LinearGradient } from "../../../../../_runtime/04788_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
@@ -66,15 +66,15 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   let dependencyMap;
   let importAllResult;
   let closure_4;
-  let obj = onHeightChange(4162);
-  const gradientValue = obj.useGradientValue(onHeightChange(4162).GradientPercentage.END);
+  let obj = onHeightChange(4194);
+  const gradientValue = obj.useGradientValue(onHeightChange(4194).GradientPercentage.END);
   let hexResult = null;
   if (null != gradientValue) {
     let obj1 = n(gradientValue);
     hexResult = obj1.alpha(0.95).hex();
     let alphaResult = obj1.alpha(0.95);
   }
-  let tmpResult = tmp(4065);
+  let tmpResult = tmp(4097);
   const token = tmpResult.useToken(Themes.colors.CARD_BACKGROUND_DEFAULT);
   const obj5 = n(token);
   let hexResult1 = n(token).alpha(0.95).hex();
@@ -87,12 +87,12 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   const tmp9Result = closure_8(useSafeAreaInsets().bottom, hexResult1, hexResult, enabled);
   importDefault = tmp9Result;
   const tmp9 = closure_8;
-  tmpResult1 = onHeightChange(4065);
-  dependencyMap = onHeightChange(4065).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
-  const tmpResult2 = onHeightChange(4065);
-  importAllResult = onHeightChange(4065).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-  const tmpResult3 = onHeightChange(4065);
-  closure_4 = onHeightChange(4065).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
+  tmpResult1 = onHeightChange(4097);
+  dependencyMap = onHeightChange(4097).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
+  const tmpResult2 = onHeightChange(4097);
+  importAllResult = onHeightChange(4097).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
+  const tmpResult3 = onHeightChange(4097);
+  closure_4 = onHeightChange(4097).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
   let items = [tmp9Result.gradient.color];
   const memo = importAllResult.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
@@ -114,7 +114,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
     children: null
   };
   obj = { style: tmp9Result.gradient };
-  const tmpResult4 = onHeightChange(4065);
+  const tmpResult4 = onHeightChange(4097);
   const merged = Object.assign(memo);
   obj.pointerEvents = "none";
   const items2 = [callback(LinearGradient, obj), ];
@@ -137,9 +137,9 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
       }
       obj[2] = str;
       obj[3] = accessibilityLabel.text;
-      items[1] = outer1_6(onHeightChange(4338).Text, obj);
+      items[1] = outer1_6(onHeightChange(4734).Text, obj);
       obj[6] = items;
-      return outer1_7(onHeightChange(4909).PressableOpacity, obj, arg1);
+      return outer1_7(onHeightChange(5433).PressableOpacity, obj, arg1);
     })
   });
   items2[1] = callback(closure_5, obj1);

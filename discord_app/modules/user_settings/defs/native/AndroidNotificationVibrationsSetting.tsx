@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["lFg/O1"]);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: function useAndroidNotificationVibrationsSettingValue() {
     let flag = callback();
     if (flag == null) {
@@ -27,8 +27,8 @@ const toggle = createToggle.createToggle({
     const isIOSResult = set.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14750).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14750);
+      tmp5 = !tmp2(14790).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14790);
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -41,7 +41,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["lFg/O1"]);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useValue: function useAndroidNotificationVibrationsSettingValue() {
     let flag = callback();
     if (flag == null) {
@@ -56,8 +56,8 @@ const obj = {
     const isIOSResult = set.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14750).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14750);
+      tmp5 = !tmp2(14790).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14790);
     }
     if (tmp5) {
       tmp5 = null != tmp;

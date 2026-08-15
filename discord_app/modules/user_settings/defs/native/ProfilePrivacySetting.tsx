@@ -11,7 +11,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Qnf32C);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue() {
     const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
     return ProfileVisibility.useSetting();
@@ -24,14 +24,14 @@ const radio = createToggle.createRadio({
     ProfileVisibility2.updateSetting(NumberResult);
     let obj = apexExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14176).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = tmp2(14208).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({ direction: obj4[0], affectedGuildIds: obj4[1], settingName: obj4[2], mappedActivityValue: obj4[3] } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14177, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14209, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
         const obj3 = ACTION_SHEET_HEIGHT_HALF;
       }
-      const tmp2Result = tmp2(14176);
+      const tmp2Result = tmp2(14208);
     }
   },
   useOptions() {
@@ -67,7 +67,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Qnf32C);
   },
-  parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
+  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue() {
     const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
     return ProfileVisibility.useSetting();
@@ -80,14 +80,14 @@ let obj = {
     ProfileVisibility2.updateSetting(NumberResult);
     let obj = apexExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14176).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = tmp2(14208).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({ direction: obj4[0], affectedGuildIds: obj4[1], settingName: obj4[2], mappedActivityValue: obj4[3] } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14177, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14209, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
         const obj3 = ACTION_SHEET_HEIGHT_HALF;
       }
-      const tmp2Result = tmp2(14176);
+      const tmp2Result = tmp2(14208);
     }
   },
   useOptions() {

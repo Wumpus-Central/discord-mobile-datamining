@@ -48,7 +48,7 @@ export default function _default(feedBlock) {
   let obj1 = feedBlock(589);
   let items1 = [hasConsented];
   stateFromStores1 = obj1.useStateFromStores(items1, () => hasConsented.hasConsented(constants2.PERSONALIZATION));
-  let tmp6 = stateFromStores1(14394)();
+  let tmp6 = stateFromStores1(14426)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = React.useMemo(() => {
@@ -78,7 +78,7 @@ export default function _default(feedBlock) {
     return { feedProducts: _undefined(items1), isPersonalized: tmp6 };
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
-  let obj2 = feedBlock(14396);
+  let obj2 = feedBlock(14428);
   const filteredAndSortedProducts = obj2.useFilteredAndSortedProducts({ products: feedProducts, maxProducts: 36, screen });
   let obj3 = feedBlock(589);
   const items3 = [maybeApplyNoTextColorForLightCustomTheme];
@@ -91,11 +91,11 @@ export default function _default(feedBlock) {
   } else {
     stringResult = string(t.ivaAA7);
   }
-  obj = { value: stateFromStores1(5789)(stateFromStores1(5809).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations, children: null };
+  obj = { value: stateFromStores1(7139)(stateFromStores1(7159).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations, children: null };
   obj = { style: feedFooterOrbImage.feedContainer, children: null };
   obj1 = { style: feedFooterOrbImage.feedHeader, children: null };
   obj2 = { style: feedFooterOrbImage.feedTitle, children: null };
-  const items4 = [callback(feedBlock(4338).Heading, { variant: "heading-lg/semibold", children: stringResult }), ];
+  const items4 = [callback(feedBlock(4734).Heading, { variant: "heading-lg/semibold", children: stringResult }), ];
   if (isPersonalized) {
     obj3 = { onPress: null, hitSlop: 14, "aria-label": null, children: null };
     obj3[0] = function onPress() {
@@ -103,8 +103,8 @@ export default function _default(feedBlock) {
     };
     const intl2 = tmp(1236).intl;
     obj3[2] = intl2.string(tmp(1236).t.hvVgAZ);
-    obj3[3] = tmp12(tmp(4298).CircleInformationIcon, { size: "xs" });
-    isPersonalized = tmp12(tmp(4909).PressableOpacity, obj3);
+    obj3[3] = tmp12(tmp(4330).CircleInformationIcon, { size: "xs" });
+    isPersonalized = tmp12(tmp(5433).PressableOpacity, obj3);
   }
   function goToShopAll() {
     let obj = feedBlock(_undefined[15]);
@@ -124,25 +124,25 @@ export default function _default(feedBlock) {
     obj4[0] = goToShopAll;
     const intl3 = tmp(1236).intl;
     obj4[1] = intl3.string(tmp(1236).t.xFcotU);
-    tmp12Result = tmp12(tmp(4777).Button, obj4);
+    tmp12Result = tmp12(tmp(4745).Button, obj4);
   }
   items5[1] = tmp12Result;
   obj1[1] = items5;
-  const items6 = [closure_12(closure_5, obj1), callback(stateFromStores1(14926), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
+  const items6 = [closure_12(closure_5, obj1), callback(stateFromStores1(14966), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
   const obj5 = { style: feedFooterOrbImage.feedFooter, children: null };
   const obj6 = { variant: "heading-lg/bold", accessibilityRole: "header", children: null };
   const intl4 = tmp(1236).intl;
   obj6[2] = intl4.string(feedBlock(1236).t.Yr70c4);
-  const items7 = [callback(feedBlock(4338).Text, obj6), , ];
+  const items7 = [callback(feedBlock(4734).Text, obj6), , ];
   const obj7 = { onPress: goToShopAll, text: null, variant: "primary", size: "md" };
   const intl5 = tmp(1236).intl;
   obj7[1] = intl5.string(feedBlock(1236).t.AfrvRD);
-  items7[1] = callback(feedBlock(4777).Button, obj7);
+  items7[1] = callback(feedBlock(4745).Button, obj7);
   if (screen === constants.ORBS) {
     if (stateFromStores2) {
       const obj8 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
       const obj9 = { uri: null };
-      tmp5Result = tmp5(14934);
+      tmp5Result = tmp5(14974);
       obj9[0] = tmp5Result;
       obj8[0] = obj9;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -151,29 +151,29 @@ export default function _default(feedBlock) {
     } else {
       if (tmpResult.isAndroid()) {
         const obj10 = { url: null, autoplay: true, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-        tmp5Result = tmp5(8367);
-        obj10[0] = tmp5(14935);
+        tmp5Result = tmp5(8406);
+        obj10[0] = tmp5(14975);
         obj10[2] = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result = tmp12(tmp5Result, obj10);
       } else {
         const obj11 = { source: null, enableAnimation: true, resizeMode: "contain", style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
         const obj12 = { uri: null };
-        obj12[0] = tmp5(14935);
+        obj12[0] = tmp5(14975);
         obj11[0] = obj12;
         obj11[3] = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result = tmp12(tmp5(5329), obj11);
-        const tmp5Result1 = tmp5(5329);
+        tmp12Result = tmp12(tmp5(5449), obj11);
+        const tmp5Result1 = tmp5(5449);
       }
       tmpResult = tmp(500);
     }
   } else {
     const obj13 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     if (stateFromStores) {
-      obj13[0] = tmp(14936);
+      obj13[0] = tmp(14976);
       obj13[1] = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj13;
     } else {
-      obj13[0] = tmp(14937);
+      obj13[0] = tmp(14977);
       obj13[1] = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj13;
     }
@@ -182,6 +182,6 @@ export default function _default(feedBlock) {
     items6[2] = tmp13(tmp14, obj5);
     obj[1] = items6;
     obj[1] = tmp13(tmp14, obj);
-    return tmp12(tmp(5789).AnalyticsLocationProvider, obj);
+    return tmp12(tmp(7139).AnalyticsLocationProvider, obj);
   }
 };

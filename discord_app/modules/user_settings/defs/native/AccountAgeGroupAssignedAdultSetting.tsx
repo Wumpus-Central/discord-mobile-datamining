@@ -9,7 +9,7 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.piqs0o);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing() {
     const intl = getSystemLocale.intl;
     const intl2 = getSystemLocale.intl;

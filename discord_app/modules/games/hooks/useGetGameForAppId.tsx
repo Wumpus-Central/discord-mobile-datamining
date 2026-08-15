@@ -29,7 +29,7 @@ export default function useGetGameForAppId(applicationId) {
   return obj;
 };
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(5795)(stateFromStoresArray);
+  const tmp = memo(7145)(stateFromStoresArray);
   const require = tmp;
   const items = [tmp];
   memo = React.useMemo(() => {

@@ -38,7 +38,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       on1 = onDataBindingChange.on;
     }
-    const booleanBinding1 = tmp(4077).useBooleanBinding("on", instance, on, on1, playIfNeeded);
+    const booleanBinding1 = tmp(4109).useBooleanBinding("on", instance, on, on1, playIfNeeded);
     return null;
   }
 };

@@ -3,7 +3,7 @@ import _typeof from "_typeof";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
-import { _typeof } from "../../_runtime/metro/04693__typeof.js";
+import { _typeof } from "../../_runtime/metro/04473__typeof.js";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 let closure_6;
@@ -41,7 +41,7 @@ function _authenticatePaymentIntentForPaymentId() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

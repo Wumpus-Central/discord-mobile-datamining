@@ -17,7 +17,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.TUKMak);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
     const setting = ActivityRestrictedGuilds.useSetting();
@@ -45,7 +45,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.TUKMak);
   },
-  parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
+  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
     const setting = ActivityRestrictedGuilds.useSetting();

@@ -2,7 +2,7 @@
 import ME from "ME";
 import set from "Version";
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
-import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
+import { trimTrailingPunctuation } from "../coded_links/findCodedLinks.tsx";
 import { useIsUserProfileEmbedRenderingEnabled } from "../user_profile/experiments/UserProfileEmbedRenderingExperiment.tsx";
 
 let MessageEmbedTypes;
@@ -39947,10 +39947,37 @@ function isUserProfileEmbedLink(type) {
     tmp = null != type.target;
   }
   if (tmp) {
-    tmp = null != getPathsFromURL.parseUserProfileEmbedCode(type.target);
-    const obj = getPathsFromURL;
+    tmp = null != trimTrailingPunctuation.parseUserProfileEmbedCode(type.target);
+    const obj = trimTrailingPunctuation;
   }
   return tmp;
+}
+function reinsertConsumedListSeparators(content) {
+  const items = [];
+  const iter = content[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let tmp3 = "list" === nextResult.type;
+    if (tmp3) {
+      let tmp4 = nextResult;
+      tmp3 = true === tmp2.consumedLeadingNewline;
+    }
+    if (tmp3) {
+      let arr = items.push({ type: "text", content: "\n" });
+    }
+    let _Array = Array;
+    let tmp6 = nextResult;
+    if (Array.isArray(tmp2.content)) {
+      let tmp7 = nextResult;
+      let tmp8 = reinsertConsumedListSeparators;
+      tmp2.content = reinsertConsumedListSeparators(tmp2.content);
+    }
+    let tmp9 = nextResult;
+    arr = items.push(tmp2);
+    continue;
+  }
+  return items;
 }
 ({ MessageEmbedTypes, MessageTypes: c3 } = ME);
 let items = [, ];
@@ -39986,8 +40013,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4258).isBuildOverrideLink(type.target);
-      const obj = callback(4258);
+      tmp = !callback(4290).isBuildOverrideLink(type.target);
+      const obj = callback(4290);
     }
     return tmp;
   });
@@ -39996,8 +40023,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(8271).isExperimentEmbedURL(type.target);
-      const obj = callback(8271);
+      tmp = !callback(4364).isExperimentEmbedURL(type.target);
+      const obj = callback(4364);
     }
     return tmp;
   });
@@ -40053,6 +40080,7 @@ export const removeGameServerShareLinks = function removeGameServerShareLinks(ar
     return !("link" === target.type && tmp);
   });
 };
+export { reinsertConsumedListSeparators };
 export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
   const item = arr.forEach((type) => {
     let hasItem = closure_5.has(type.type);
@@ -40151,8 +40179,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
   let message;
   let messageContent;
   let toAST;
-  ({ ast, inline, message, contentMessage, messageContent, formatInline } = arg0);
-  ({ hasBailedAst, hideSimpleEmbedContent, toAST } = arg0);
+  ({ ast, inline, message, contentMessage, messageContent, formatInline, toAST } = arg0);
+  ({ hasBailedAst, hideSimpleEmbedContent } = arg0);
   let arr = ast;
   if (!Array.isArray(ast)) {
     const items = [ast];
@@ -40291,22 +40319,29 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4258).isBuildOverrideLink(type.target);
-        const obj = callback(4258);
+        tmp = !callback(4290).isBuildOverrideLink(type.target);
+        const obj = callback(4290);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(8271).isExperimentEmbedURL(type.target);
-        const obj = callback(8271);
+        tmp = !callback(4364).isExperimentEmbedURL(type.target);
+        const obj = callback(4364);
       }
       return tmp;
     });
   }
-  _require = found1.some((type) => "link" !== type.type);
-  ast = found1.filter((target) => {
+  if (toAST) {
+    toAST = !formatInline;
+  }
+  let arr9 = found1;
+  if (toAST) {
+    arr9 = reinsertConsumedListSeparators(found1);
+  }
+  _require = arr9.some((type) => "link" !== type.type);
+  ast = arr9.filter((target) => {
     let parseQuestsEmbedCodeResult = null;
     if (null != target.target) {
       parseQuestsEmbedCodeResult = callback(outer1_2[4]).parseQuestsEmbedCode(target.target);

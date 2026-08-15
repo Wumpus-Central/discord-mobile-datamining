@@ -24,11 +24,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8375)();
+  const tmp5 = first(8414)();
   const dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8376).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8415).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = _hexToRgba.hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
@@ -89,7 +89,7 @@ class VideoBackground {
     c1 = undefined;
     id = undefined;
     tmp2 = jsxs();
-    tmp3 = f43824(url);
+    tmp3 = f43862(url);
     tmp4 = useDominantRGBFromImage(url, tmp3);
     combined = "rgb(" + tmp4.r + ", " + tmp4.g + ", " + tmp4.b + ")";
     tmp6 = c1;

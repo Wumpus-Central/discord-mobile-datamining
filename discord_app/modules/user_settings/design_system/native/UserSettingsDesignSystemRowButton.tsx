@@ -2,7 +2,7 @@
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/06076_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07356_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { RowButtonWrapper } from "../../../../design/components/TableRow/native/RowButton.native.tsx";

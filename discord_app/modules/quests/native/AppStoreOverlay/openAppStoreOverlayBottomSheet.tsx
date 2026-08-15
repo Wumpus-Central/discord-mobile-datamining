@@ -10,7 +10,7 @@ let result = require("AppStoreOverlayFooter").fileFinishedImporting("modules/que
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId) {
   const _require = arg1;
   appId = appId.appId;
-  let obj = appId(4310);
+  let obj = appId(4342);
   obj = {
     metadata: appId,
     onOpen() {
@@ -30,5 +30,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     }
   };
-  obj.openLazy(_asyncRequireImpl(10568, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(_asyncRequireImpl(10696, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

@@ -15,7 +15,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.o8Bypv);
   },
-  parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
+  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["Vw/Xn8"]);

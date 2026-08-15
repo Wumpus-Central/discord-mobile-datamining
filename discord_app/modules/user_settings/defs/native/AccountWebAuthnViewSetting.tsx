@@ -14,7 +14,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.y7SXYX);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
     return React.useCallback(() => {
       currentUser = currentUser.getCurrentUser();
@@ -26,7 +26,7 @@ createToggle = {
         flag = false;
       }
       if (!flag) {
-        let obj = callback2(4705);
+        let obj = callback2(4827);
         obj = { title: null, body: null };
         const intl = callback(1236).intl;
         obj[0] = intl.string(callback(1236).t.v740sh);

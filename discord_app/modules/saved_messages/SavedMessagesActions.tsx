@@ -71,7 +71,7 @@ function _fetchAndUpdateSavedMessages() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ function _fetchAndUpdateSavedMessages() {
             return obj8;
           } else {
             isStale = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (arg0 === 1) {
           isStale = 3;
@@ -163,11 +163,11 @@ function _fetchAndUpdateSavedMessages() {
           callback = results.map((message) => {
             let messageRecord = null;
             if (null != message.message) {
-              let obj = callback(4586);
+              let obj = callback(4803);
               messageRecord = obj.createMessageRecord(message.message);
             }
             obj = { message: messageRecord, saveData: null };
-            obj[1] = callback(8450).savedMessageDataToClient(message.save_data);
+            obj[1] = callback(8489).savedMessageDataToClient(message.save_data);
             return obj;
           });
           obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };

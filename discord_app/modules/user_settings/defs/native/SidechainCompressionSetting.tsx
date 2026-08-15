@@ -12,7 +12,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/jwMtn"]);
   },
-  parent: require("MobileSetting").MobileSetting.VOICE,
+  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   usePredicate() {
     return _detectH265HardwareDecode.supports(Features.SIDECHAIN_COMPRESSION);
   },

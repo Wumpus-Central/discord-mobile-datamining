@@ -5,7 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { MessageFlags } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { allSettled } from "../../../_runtime/04605_allSettled.js";
+import { allSettled } from "../../../_runtime/04385_allSettled.js";
 
 const require = arg1;
 let obj = {
@@ -24,7 +24,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -51,7 +51,7 @@ let obj = {
                 prop = tmp74.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = outer1_0(7371).GAME_CONTENT_GUILD_ID;
+                let guild_id = outer1_0(7589).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -67,7 +67,7 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = outer1_1(7210).parse(channel, "");
+                const parsed = outer1_1(7436).parse(channel, "");
                 let obj1 = { guild_id: null, channel_id: null, message_id: null, type: null, forward_only: null };
                 obj1[0] = guild_id;
                 ({ channel_id: obj16[1], id: obj16[2] } = tmp72);
@@ -95,7 +95,7 @@ let obj = {
                 dependencyMap = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v0(outer1_1(7211)(withMessage), 2);
+                  const tmp39 = v0(outer1_1(7437)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     dependencyMap = tmp39[1];
@@ -105,7 +105,7 @@ let obj = {
                     const obj9 = outer1_0(1403);
                   }
                 }
-                const obj10 = outer1_1(6986);
+                const obj10 = outer1_1(7427);
                 let obj3 = { messageReference: null, location: null, eagerDispatch: false, flags: null };
                 obj3[0] = obj1;
                 obj3[1] = outer1_8.FORWARDING;
@@ -134,13 +134,13 @@ let obj = {
                   result = "" === dependencyMap;
                 }
                 if (!result) {
-                  obj1 = outer1_0(7372);
+                  obj1 = outer1_0(7590);
                   result = obj1.isRatelimitedInChannel(channel, outer1_6);
                 }
                 if (!result) {
-                  obj2 = outer1_1(6986);
+                  obj2 = outer1_1(7427);
                   const id = channel.id;
-                  obj3 = outer1_1(7210);
+                  obj3 = outer1_1(7436);
                   const obj6 = { location: null, flags: null };
                   obj6[0] = outer1_8.FORWARDING;
                   obj6[1] = c1;
@@ -161,7 +161,7 @@ let obj = {
               return obj;
             }
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp60) {
           v0 = tmp;

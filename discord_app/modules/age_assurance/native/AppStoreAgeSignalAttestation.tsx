@@ -86,7 +86,7 @@ function _getAgeSignalIntegrityToken() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -158,7 +158,7 @@ function _getAgeSignalIntegrityToken() {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp9) {
           v0 = tmp;
           throw tmp9;
@@ -178,7 +178,7 @@ function _getAgeSignalIntegrityToken() {
 const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalAttestation.tsx");
 
 export { buildRequestHashPayload };
-export const getAgeSignalIntegrityToken = function getAgeSignalIntegrityToken(outer1_0) {
+export const getAgeSignalIntegrityToken = function getAgeSignalIntegrityToken(closure_0) {
   const self = this;
   const apply = _getAgeSignalIntegrityToken.apply;
   if (typeof apply === "unknown") {

@@ -18,7 +18,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["6e1ir2"]);
   },
-  parent: require("MobileSetting").MobileSetting.APPEARANCE,
+  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useIsInDTesterExperimentVariant() {
     const items = [initialize, fetchFingerprint];
     return initialize.useStateFromStores(items, () => {
@@ -48,6 +48,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
+const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
 
 export default createToggle;

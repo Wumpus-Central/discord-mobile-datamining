@@ -63,8 +63,8 @@ export default function useMemberListAction(channel) {
   });
   let canResult = flag3.can(first.MANAGE_ROLES, channel);
   if (canResult) {
-    canResult = channel(9060).isPrivateGuildChannel(channel);
-    const tmp5Result = channel(9060);
+    canResult = channel(8850).isPrivateGuildChannel(channel);
+    const tmp5Result = channel(8850);
   }
   React = canResult;
   let tmp9 = null != channel && !flag;

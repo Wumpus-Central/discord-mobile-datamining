@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx
-import { MobileSetting } from "MobileSetting";
+import { MobileUserSettings } from "MobileUserSettings";
 import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useUserIsConsideredAdult } from "../../../parent_tools/hooks/useUserIsConsideredAdult.tsx";
@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
     return intl.string(getSystemLocale.t.qFsx5q);
   },
   parent() {
-    return MobileSetting.CONTENT_AND_SOCIAL;
+    return MobileUserSettings.CONTENT_AND_SOCIAL;
   },
   useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
   onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
@@ -40,7 +40,7 @@ let obj = {
     return intl.string(getSystemLocale.t.qFsx5q);
   },
   parent() {
-    return MobileSetting.CONTENT_AND_SOCIAL;
+    return MobileUserSettings.CONTENT_AND_SOCIAL;
   },
   useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
   onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,

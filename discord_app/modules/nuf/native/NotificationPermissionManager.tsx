@@ -11,7 +11,7 @@ import EventActionType from "EventActionType";
 import ME from "ME";
 import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus";
 import "initialize";
-import { t } from "../../../../_runtime/03943_t.js";
+import { t } from "../../../../_runtime/03975_t.js";
 import { getOrRefreshPushSyncToken } from "../../../actions/native/PushNotificationActionCreators.tsx";
 
 let closure_12;
@@ -152,7 +152,7 @@ function _logNotificationPermissionStatus2() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -188,8 +188,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(9818).allowInAppNotifications();
-          const obj5 = callback(9818);
+          callback2 = callback(10019).allowInAppNotifications();
+          const obj5 = callback(10019);
           const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;
@@ -202,7 +202,7 @@ function _logNotificationPermissionStatus2() {
           obj2[3] = tmp7;
           obj6.track(constants.NOTIFICATION_PERMISSION_STATUS, obj2);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c3 = tmp;
@@ -227,7 +227,7 @@ let c23 = null;
 class NotificationPermissionManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f114388 = applyArgumentsResult;
+    f114575 = applyArgumentsResult;
     applyArgumentsResult.previousAppState = null;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(message) {
@@ -250,7 +250,7 @@ class NotificationPermissionManager extends tmp4 {
             closure_0.handleAppStateUpdate(arg0);
           }
     };
-    f114388 = applyArgumentsResult;
+    f114575 = applyArgumentsResult;
     applyArgumentsResult.handleConnectionOpen = _logNotificationPermissionStatus2(function*() {
       if (c2 === 2) {
         c2 = 3;
@@ -263,7 +263,7 @@ class NotificationPermissionManager extends tmp4 {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -311,7 +311,7 @@ class NotificationPermissionManager extends tmp4 {
             return obj;
           } else {
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c2 = tmp;
@@ -319,7 +319,7 @@ class NotificationPermissionManager extends tmp4 {
         }
       }
     });
-    f114388 = _logNotificationPermissionStatus2((arg0) => {
+    f114575 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -339,7 +339,7 @@ class NotificationPermissionManager extends tmp4 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -436,7 +436,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f114388 = _logNotificationPermissionStatus2((arg0) => {
+    f114575 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -452,7 +452,7 @@ class NotificationPermissionManager extends tmp4 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -560,7 +560,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f114388 = _logNotificationPermissionStatus2((arg0) => {
+    f114575 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -576,7 +576,7 @@ class NotificationPermissionManager extends tmp4 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -654,7 +654,7 @@ class NotificationPermissionManager extends tmp4 {
                 outer1_24(outer1_10.FRIEND_REQUEST_SENT, outer1_12.FRIEND_REQUEST_SENT, 100);
               }
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp19) {
             c4 = tmp;
@@ -675,9 +675,9 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f114388 = undefined;
+    f114575 = undefined;
     closure_1 = applyArgumentsResult;
-    f114388 = _logNotificationPermissionStatus2((arg0) => {
+    f114575 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -693,7 +693,7 @@ class NotificationPermissionManager extends tmp4 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -765,7 +765,7 @@ class NotificationPermissionManager extends tmp4 {
                 }
                 previousAppState.previousAppState = callback;
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
               if (callback === callback(outer1_2[21]).AppStates.ACTIVE) {
                 c3 = 3;
@@ -806,7 +806,7 @@ class NotificationPermissionManager extends tmp4 {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -844,7 +844,7 @@ class NotificationPermissionManager extends tmp4 {
             obj = outer1_0(table[15]);
             const result = obj.updateNotificationAuthorizationStatus(closure_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           c3 = tmp;

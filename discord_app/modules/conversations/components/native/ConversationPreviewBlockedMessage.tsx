@@ -15,9 +15,9 @@ export default function ConversationPreviewBlockedMessage(reason) {
   let obj = { direction: "horizontal", spacing: null, align: "center", children: null };
   obj[1] = Themes.space.PX_8;
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(8649).DenyIcon;
+    let EyeSlashIcon = tmp2(10598).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(8566).EyeSlashIcon;
+    EyeSlashIcon = tmp2(8605).EyeSlashIcon;
   }
   obj = { size: "sm", color: Themes.colors.TEXT_MUTED };
   const items = [closure_3(EyeSlashIcon, obj), ];

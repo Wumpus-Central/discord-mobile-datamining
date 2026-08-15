@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityCard.tsx
 import importAllResult from "asyncRequireImpl";
-import { View } from "module_4572";
+import { View } from "module_5260";
 import items from "items";
 import { AnalyticEvents } from "ME";
 import jsxProd from "FamilyCenterUsernameHeader";
@@ -8,7 +8,7 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07701_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07919_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
@@ -48,7 +48,7 @@ function FamilyCenterActivityCardPrefaceText() {
   if (!tmp4) {
     obj1 = { color: null, source: null, style: null };
     obj1[0] = tmp.icon.color;
-    obj1[1] = tmp2(14215);
+    obj1[1] = tmp2(14247);
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1297).Icon, obj1);
   }
@@ -110,10 +110,10 @@ class FamilyCenterActivityCardHeader {
         tmp3 = jsx;
         tmp4 = View;
         obj = { children: null };
-        tmp5 = f59087;
+        tmp5 = f59167;
         obj1 = { user: null };
         obj1[0] = selectedTeenUser;
-        obj[0] = jsx(f59087, obj1);
+        obj[0] = jsx(f59167, obj1);
         tmp6 = jsx(View, obj);
         tmp9 = tmp6;
       } else {
@@ -150,11 +150,11 @@ class FamilyCenterActivityCardAccountSelect {
     selectTeenUser = obj3.useFamilyCenterActions(obj).selectTeenUser;
     items = [];
     items[0] = activeLinkUsers;
-    f93716 = f93716.useMemo(() => activeLinkUsers.map((id) => {
+    f93868 = f93868.useMemo(() => activeLinkUsers.map((id) => {
       const obj = { label: null, value: null };
-      const name = callback(4187).getName(id);
-      const obj2 = callback(4187);
-      obj[0] = "" + name + " (" + callback(4187).getUserTag(id) + ")";
+      const name = callback(4219).getName(id);
+      const obj2 = callback(4219);
+      obj[0] = "" + name + " (" + callback(4219).getUserTag(id) + ")";
       obj[1] = id.id;
       return obj;
     }), items);
@@ -195,12 +195,12 @@ class FamilyCenterActivityCardAccountSelect {
           const tmp5 = activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths);
         }
       };
-      tmp12 = f59087;
+      tmp12 = f59167;
       obj3 = { user: null, inSelector: true };
       obj3[0] = selectedTeenUser;
       tmp11 = require("render");
       items1 = [, ];
-      items1[0] = jsx(f59087, obj3);
+      items1[0] = jsx(f59167, obj3);
       obj4 = { style: null, size: null, source: null };
       obj4[0] = tmp.icon;
       obj4[1] = require("Button").Icon.Sizes.MEDIUM;
@@ -251,7 +251,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
-  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 424.906 };
+  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 403.5 };
   obj[5] = NORMAL;
   const items = [callback(View, obj), ];
   const items1 = [tmp.userHeader, ];
@@ -306,7 +306,7 @@ export default function FamilyCenterActivityCard() {
   if (undefined === selectedTeenUser) {
     return null;
   } else {
-    const sortedActivityTypeConfigs = tmp2(7122).getSortedActivityTypeConfigs();
+    const sortedActivityTypeConfigs = tmp2(5363).getSortedActivityTypeConfigs();
     obj = { style: null, children: null };
     obj[0] = tmp.card;
     obj = { style: null, children: null };

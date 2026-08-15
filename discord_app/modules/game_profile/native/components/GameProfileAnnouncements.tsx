@@ -21,7 +21,7 @@ function EmbedAnnouncementCard(message) {
   ({ onPress: importDefault, guildId, channelId } = message);
   const tmp = callback3();
   if (null == parser) {
-    let obj = importAll(4796);
+    let obj = importAll(4764);
     parser = obj.getParser();
   }
   const media = message.media;
@@ -39,7 +39,7 @@ function EmbedAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    let obj1 = message(9399);
+    let obj1 = message(9163);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -67,7 +67,7 @@ function EmbedAnnouncementCard(message) {
     if (tmp12Result) {
       const obj2 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: null };
       obj2[3] = embedSource.url;
-      tmp12Result = tmp12(message(4338).Text, obj2);
+      tmp12Result = tmp12(message(4734).Text, obj2);
     }
     const items = [tmp12Result, ];
     const obj3 = { style: null, children: null };
@@ -89,7 +89,7 @@ function EmbedAnnouncementCard(message) {
       const items2 = [tmp12Result, ];
       const obj7 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, children: null };
       obj7[3] = embedSource.authorName;
-      items2[1] = tmp12(message(4338).Text, obj7);
+      items2[1] = tmp12(message(4734).Text, obj7);
       obj4[1] = items2;
       tmp14Result = tmp14(tmp15, obj4);
     }
@@ -103,7 +103,7 @@ function EmbedAnnouncementCard(message) {
       obj9[1] = message.media.placeholder;
       obj9[2] = message.media.placeholderVersion;
       obj9[3] = tmp.mediaImage;
-      obj8[1] = tmp12(message(9401).ImageWithPlaceholder, obj9);
+      obj8[1] = tmp12(message(9165).ImageWithPlaceholder, obj9);
       tmp12Result1 = tmp12(tmp15, obj8);
     }
     items3[1] = tmp12Result1;
@@ -114,7 +114,7 @@ function EmbedAnnouncementCard(message) {
       obj11[0] = guildId;
       obj11[1] = channelId;
       obj10[3] = tmp4(message.title, true, obj11);
-      tmp12Result2 = tmp12(message(4338).Text, obj10);
+      tmp12Result2 = tmp12(message(4734).Text, obj10);
     }
     items3[2] = tmp12Result2;
     let tmp12Result3 = message.body.length > 0;
@@ -124,7 +124,7 @@ function EmbedAnnouncementCard(message) {
       obj13[0] = guildId;
       obj13[1] = channelId;
       obj12[3] = tmp4(message.body, true, obj13);
-      tmp12Result3 = tmp12(message(4338).Text, obj12);
+      tmp12Result3 = tmp12(message(4734).Text, obj12);
     }
     items3[3] = tmp12Result3;
     const obj14 = { style: null, children: null };
@@ -148,16 +148,16 @@ function EmbedAnnouncementCard(message) {
     const items5 = [str2, ];
     const _Date = Date;
     const date = new Date(message.timestamp);
-    items5[1] = message(4031).dateFormat(date, "LL");
+    items5[1] = message(4063).dateFormat(date, "LL");
     obj17[2] = items5;
-    items4[1] = closure_11(message(4338).Text, obj17);
+    items4[1] = closure_11(message(4734).Text, obj17);
     tmp14Result = message.reactionCount > 0;
     if (tmp14Result) {
       const obj18 = { style: null, children: null };
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
       obj19[1] = Themes.colors.TEXT_MUTED;
-      const items6 = [tmp12(tmp35(7721).ReactionIcon, obj19), ];
+      const items6 = [tmp12(tmp35(7939).ReactionIcon, obj19), ];
       let tmp46 = null != obj20;
       if (tmp46) {
         tmp46 = obj20.locale === tmp35(1236).intl.currentLocale;
@@ -172,7 +172,7 @@ function EmbedAnnouncementCard(message) {
       const obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const format = obj20.format;
       obj21[2] = format.format(message.reactionCount);
-      items6[1] = tmp12(tmp35(4338).Text, obj21);
+      items6[1] = tmp12(tmp35(4734).Text, obj21);
       obj18[1] = items6;
       tmp14Result = tmp14(tmp15, obj18);
     }
@@ -194,7 +194,7 @@ function MessageAnnouncementCard(message) {
   ({ onPress: importDefault, guildId, channelId } = message);
   const tmp = callback3();
   if (null == parser) {
-    let obj = importAll(4796);
+    let obj = importAll(4764);
     parser = obj.getParser();
   }
   const media = message.media;
@@ -212,7 +212,7 @@ function MessageAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    let obj1 = message(9399);
+    let obj1 = message(9163);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -239,7 +239,7 @@ function MessageAnnouncementCard(message) {
     obj1[1] = message.media.placeholder;
     obj1[2] = message.media.placeholderVersion;
     obj1[3] = tmp.mediaImage;
-    obj[1] = callback(message(9401).ImageWithPlaceholder, obj1);
+    obj[1] = callback(message(9165).ImageWithPlaceholder, obj1);
     tmp13 = callback(closure_7, obj);
   }
   const items = [tmp13, ];
@@ -251,7 +251,7 @@ function MessageAnnouncementCard(message) {
     obj4[0] = guildId;
     obj4[1] = channelId;
     obj3[3] = tmp4(message.title, true, obj4);
-    tmp19 = callback(message(4338).Text, obj3);
+    tmp19 = callback(message(4734).Text, obj3);
   }
   const items1 = [tmp19, , ];
   let tmp23 = message.body.length > 0;
@@ -261,21 +261,21 @@ function MessageAnnouncementCard(message) {
     obj6[0] = guildId;
     obj6[1] = channelId;
     obj5[3] = tmp4(message.body, true, obj6);
-    tmp23 = callback(message(4338).Text, obj5);
+    tmp23 = callback(message(4734).Text, obj5);
   }
   items1[1] = tmp23;
   const obj7 = { style: tmp.metadataRow, children: null };
   const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  let obj12 = message(4031);
+  let obj12 = message(4063);
   obj8[2] = obj12.dateFormat(new Date(message.timestamp), "LL");
-  const items2 = [callback(message(4338).Text, obj8), ];
+  const items2 = [callback(message(4734).Text, obj8), ];
   let tmp11Result = message.reactionCount > 0;
   if (tmp11Result) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
     obj10[1] = Themes.colors.TEXT_MUTED;
-    const items3 = [tmp27(tmp28(7721).ReactionIcon, obj10), ];
+    const items3 = [tmp27(tmp28(7939).ReactionIcon, obj10), ];
     let tmp34 = null != obj11;
     if (tmp34) {
       tmp34 = obj11.locale === tmp28(1236).intl.currentLocale;
@@ -290,7 +290,7 @@ function MessageAnnouncementCard(message) {
     obj12 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const format = obj11.format;
     obj12[2] = format.format(message.reactionCount);
-    items3[1] = tmp27(tmp28(4338).Text, obj12);
+    items3[1] = tmp27(tmp28(4734).Text, obj12);
     obj9[1] = items3;
     tmp11Result = tmp11(tmp18, obj9);
   }
@@ -325,7 +325,7 @@ function PollAnnouncementCard(message) {
     obj[0] = tmp.cardBody;
     const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = poll.question.text;
-    const items = [callback(message(4338).Text, obj1), , ];
+    const items = [callback(message(4734).Text, obj1), , ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.pollAnswers;
     const items1 = [
@@ -348,7 +348,7 @@ function PollAnnouncementCard(message) {
       const obj3 = { count: null };
       obj3[0] = diff;
       obj[3] = intl.format(tmp13(1236).t["mv/nIa"], obj3);
-      tmp9Result = tmp9(tmp13(4338).Text, obj);
+      tmp9Result = tmp9(tmp13(4734).Text, obj);
     }
     items1[1] = tmp9Result;
     obj2[1] = items1;
@@ -361,9 +361,9 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6[0] = date;
-    obj6[1] = message(9399).getPollExpiryLabel(poll);
+    obj6[1] = message(9163).getPollExpiryLabel(poll);
     obj5[2] = intl2.format(message(1236).t.t0FTsH, obj6);
-    obj4[1] = callback(message(4338).Text, obj5);
+    obj4[1] = callback(message(4734).Text, obj5);
     items[2] = callback(closure_7, obj4);
     obj[1] = items;
     obj[4] = closure_11(closure_7, obj);

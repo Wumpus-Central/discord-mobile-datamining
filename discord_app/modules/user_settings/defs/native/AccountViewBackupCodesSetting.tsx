@@ -14,7 +14,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.xZEzbu);
   },
-  parent: require("MobileSetting").MobileSetting.ACCOUNT,
+  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   usePredicate: require("useIs2FAEnabled").useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return React.useCallback((arg0) => {
@@ -65,7 +65,7 @@ createToggle = {
       let intl3 = callback(1236).intl;
       obj[5] = intl3.string(callback(1236).t.PDTjLN);
       obj[6] = callback(1297).ButtonColors.BRAND;
-      callback2(14121)(obj);
+      callback2(14153)(obj);
       return false;
     }, []);
   },

@@ -86,10 +86,10 @@ export const useGetSpoilerGatingChannelId = function useGetSpoilerGatingChannelI
   }, items1);
 };
 export { isChannelSpoilerGated };
-export const useIsChannelSpoilerGated = function useIsChannelSpoilerGated(stateFromStores) {
-  const _require = stateFromStores;
+export const useIsChannelSpoilerGated = function useIsChannelSpoilerGated(channel) {
+  const _require = channel;
   const items = [initialize, ensureGuildLoaded];
-  const items1 = [stateFromStores];
+  const items1 = [channel];
   return _initialize.useStateFromStores(items, () => outer1_4(closure_0, outer1_3, outer1_2), items1);
 };
 export const useShouldShowSpoilerGateForChannelId = function useShouldShowSpoilerGateForChannelId(arg0) {

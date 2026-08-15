@@ -26,7 +26,7 @@ obj.match = function match(str, allowList) {
       let match = null;
       if ("" !== str3) {
         match = null;
-        if (!regex3.test(str3)) {
+        if (!regex4.test(str3)) {
           match = regExp2.exec(str);
         }
       }
@@ -40,7 +40,7 @@ obj.match = function match(str, allowList) {
       let match2 = null;
       if (null != match1) {
         match2 = null;
-        if (!regex4.test(match1[0])) {
+        if (!regex5.test(match1[0])) {
           match2 = regExp1.exec(str);
         }
       }
@@ -59,7 +59,8 @@ obj.parse = function parse(arg0, arg1, arg2) {
     const _Math2 = Math;
     bound = Math.min(1000000000, Math.max(1, +arr));
   }
-  const str3 = arg0[0].replace(closure_8, "").replace(regExp1, "\n");
+  const isMatch = regex3.test(arg0[0]);
+  const str3 = arg0[0].replace(regex3, "").replace(regExp1, "\n");
   const match = regex2.exec(str3);
   let num2 = 0;
   if (null != match) {
@@ -75,7 +76,7 @@ obj.parse = function parse(arg0, arg1, arg2) {
   00038__(null != match1, "markup list items can not be parsed.");
   regex2 = false;
   let str = arg0[0];
-  const str2 = arg0[0].replace(closure_8, "");
+  const str2 = arg0[0].replace(regex3, "");
   return {
     ordered: arg0[2].length > 1,
     start: bound,
@@ -123,7 +124,8 @@ obj.parse = function parse(arg0, arg1, arg2) {
         }
         return type;
       });
-    })
+    }),
+    consumedLeadingNewline: isMatch
   };
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupListRule.tsx");

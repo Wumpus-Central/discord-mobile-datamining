@@ -4,9 +4,9 @@ import importAllResult from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "styles";
 import { PersistedStore } from "getClass";
 import fetchFingerprint from "fetchFingerprint";
-import { jsx } from "module_8597";
+import { jsx } from "module_8636";
 import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../../../_runtime/01500_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { databaseName } from "../../../../app_database/system/DatabaseManager.tsx";
@@ -18,9 +18,9 @@ function DevToolsPersistedStoresActionSheet(store) {
   let obj = { header: null, children: null };
   obj = { title: null };
   obj[0] = store.getName();
-  obj[0] = jsx(store(5457).BottomSheetTitleHeader, { title: null });
+  obj[0] = jsx(store(6949).BottomSheetTitleHeader, { title: null });
   obj = { hasIcons: false, children: null };
-  obj[1] = jsx(store(5827).ActionSheetRow, {
+  obj[1] = jsx(store(7177).ActionSheetRow, {
     variant: "danger",
     label: "Clear persisted store",
     subLabel: "App restart required to re-init the cleared store",
@@ -30,8 +30,8 @@ function DevToolsPersistedStoresActionSheet(store) {
       close();
     }
   });
-  obj[1] = jsx(store(5827).ActionSheetRow.Group, { hasIcons: false, children: null });
-  return jsx(store(5825).ActionSheet, { hasIcons: false, children: null });
+  obj[1] = jsx(store(7177).ActionSheetRow.Group, { hasIcons: false, children: null });
+  return jsx(store(7175).ActionSheet, { hasIcons: false, children: null });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -74,7 +74,7 @@ let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   onPress() {
     const result = callback(1971).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
     const obj = callback(1971);
-    callback(4062).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    callback(4094).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {

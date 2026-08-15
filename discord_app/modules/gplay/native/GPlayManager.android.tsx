@@ -72,7 +72,7 @@ function _handlePurchaseUpdated() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -103,7 +103,7 @@ function _handlePurchaseUpdated() {
                   let dispatchResult = obj4.dispatch(obj);
                   let tmp24 = lib;
                   let tmp25 = dependencyMap;
-                  let obj7 = lib(4686);
+                  let obj7 = lib(4466);
                   let c6 = 8;
                   let num4 = 1;
                   c7 = 1;
@@ -126,7 +126,7 @@ function _handlePurchaseUpdated() {
               } else {
                 let tmp15 = lib;
                 let tmp16 = dependencyMap;
-                obj1 = lib(4686);
+                obj1 = lib(4466);
                 c6 = 9;
                 let num2 = 1;
                 c7 = 1;
@@ -200,7 +200,7 @@ function _handleDowngradeCommand() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -266,7 +266,7 @@ function _handleDowngradeCommand() {
               return obj;
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp19) {
           c4 = tmp;
@@ -300,7 +300,7 @@ function _executePendingDowngrade() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -336,9 +336,9 @@ function _executePendingDowngrade() {
           if (2 === tmp8) {
             c3 = 1;
             lib = dependencyMap;
-            let obj5 = pendingDowngrade(4022);
+            let obj5 = pendingDowngrade(4054);
             const result = obj5.captureBillingException(lib);
-            let obj6 = lib(4706);
+            let obj6 = lib(4656);
             const obj2 = { title: null, body: null };
             const intl = pendingDowngrade(1236).intl;
             obj2[0] = intl.string(pendingDowngrade(1236).t["U+H+kd"]);
@@ -449,7 +449,7 @@ function _fetchAndAlertActiveSubscription() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -467,7 +467,7 @@ function _fetchAndAlertActiveSubscription() {
             let closure_1 = tmp5;
             let callback = tmp2;
             callback = undefined;
-            let obj1 = outer1_0(4686);
+            let obj1 = outer1_0(4466);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -504,7 +504,7 @@ function _fetchAndAlertActiveSubscription() {
               obj.openLazy(obj);
             });
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
       } catch (tmp24) {
@@ -551,7 +551,7 @@ function _handleAppStateUpdated() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

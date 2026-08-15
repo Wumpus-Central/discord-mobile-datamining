@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4083";
+import importDefaultResult from "module_4115";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let ScrollView;
@@ -17,7 +17,7 @@ function defaultCountFormatter(toLocaleString) {
 }
 ({ View: c4, ScrollView } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = require("module_4083").createAnimatedComponent(ScrollView);
+let closure_8 = require("module_4115").createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_11 = createCacheKey.createStyles((gap) => {

@@ -4,7 +4,7 @@ import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalSce
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/10551_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09801_registerAsset.js";
 import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 
 let c5;
@@ -15,14 +15,14 @@ let closure_8 = createCacheKey.createStyles({ image: { width: 234, height: 147 }
 const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
-  let obj = navigation(1499);
+  let obj = navigation(1500);
   navigation = obj.useNavigation();
   let items = [navigation];
   const memo = React.useMemo(() => {
     const obj = { label: null, icon: null };
     const intl = navigation(1236).intl;
     obj[0] = intl.string(navigation(1236).t["2TXHQd"]);
-    obj[1] = navigation(8918).PlayIcon;
+    obj[1] = navigation(9003).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -40,5 +40,5 @@ export default function CrunchyrollLinkLanding() {
   obj[5] = combined.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(10476).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: null, imgStyle: null, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9755).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: null, imgStyle: null, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

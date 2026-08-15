@@ -2,8 +2,9 @@
 import "toJS";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";
-import { PremiumSubscriptionSKUToPremiumType as closure_5 } from "GuildFeatures";
-import { t } from "../../_runtime/03943_t.js";
+import closure_5 from "createFromServer";
+import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures";
+import { t } from "../../_runtime/03975_t.js";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;
@@ -45,7 +46,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let fromServer = null;
   if (null != user.subscription_plan) {
-    fromServer = closure_4.createFromServer(user.subscription_plan);
+    fromServer = closure_5.createFromServer(user.subscription_plan);
   }
   let entitlement_branches = null;
   if (null != user.entitlement_branches) {
@@ -55,44 +56,40 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   if (null != user.flags) {
     num = user.flags;
   }
-  let tmp10 = null;
+  let fromServer1 = null;
   if (null != user.subscription_trial) {
-    const obj = { id: null, interval: null, intervalCount: null, skuId: null };
-    obj[0] = user.subscription_trial.id;
-    obj[1] = user.subscription_trial.interval;
-    obj[2] = user.subscription_trial.interval_count;
-    obj[3] = user.subscription_trial.sku_id;
-    tmp10 = obj;
+    fromServer1 = createFromServer.createFromServer(user.subscription_trial);
+    const tmp11 = createFromServer;
   }
   const promotion = user.promotion;
-  let fromServer1 = null;
+  let fromServer2 = null;
   if (null != promotion) {
-    fromServer1 = createFromServer.createFromServer(user.promotion);
-    const tmp11 = createFromServer;
+    fromServer2 = closure_4.createFromServer(user.promotion);
+    const tmp12 = closure_4;
   }
   if (typeof GiftCodeRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp13 = new GiftCodeRecord("Trying to call a non-function", tmp11, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches, num);
+  const tmp14 = new GiftCodeRecord("Trying to call a non-function", tmp11, tmp12, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
   // ThrowIfThisInitialized (0x7c)
-  tmp13.userId = id;
-  tmp13.code = code;
-  tmp13.skuId = sku_id;
-  tmp13.applicationId = application_id;
-  tmp13.uses = uses;
-  tmp13.maxUses = max_uses;
-  tmp13.expiresAt = tmp4;
-  tmp13.redeemed = redeemed;
-  tmp13.storeListingId = id1;
-  tmp13.subscriptionPlanId = subscription_plan_id;
-  tmp13.subscriptionPlan = fromServer;
-  tmp13.revoked = false;
-  tmp13.entitlementBranches = entitlement_branches;
-  tmp13.flags = num;
-  tmp13.subscriptionTrial = tmp10;
-  tmp13.promotion = fromServer1;
-  tmp13.giftStyle = user.gift_style;
-  return tmp13;
+  tmp14.userId = id;
+  tmp14.code = code;
+  tmp14.skuId = sku_id;
+  tmp14.applicationId = application_id;
+  tmp14.uses = uses;
+  tmp14.maxUses = max_uses;
+  tmp14.expiresAt = tmp4;
+  tmp14.redeemed = redeemed;
+  tmp14.storeListingId = id1;
+  tmp14.subscriptionPlanId = subscription_plan_id;
+  tmp14.subscriptionPlan = fromServer;
+  tmp14.revoked = false;
+  tmp14.entitlementBranches = entitlement_branches;
+  tmp14.flags = num;
+  tmp14.subscriptionTrial = fromServer1;
+  tmp14.promotion = fromServer2;
+  tmp14.giftStyle = user.gift_style;
+  return tmp14;
 };
 prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;

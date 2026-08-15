@@ -12,11 +12,11 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
   let tmp3 = null != premiumTrialOffer;
   const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
   if (tmp3) {
-    let expires_at;
+    let expiresAt;
     if (premiumTrialOffer != null) {
-      expires_at = premiumTrialOffer.expires_at;
+      expiresAt = premiumTrialOffer.expiresAt;
     }
-    tmp3 = null == expires_at;
+    tmp3 = null == expiresAt;
   }
   if (tmp3) {
     tmp3 = !result;
@@ -25,32 +25,32 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
 };
 export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPremiumType() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-  let sku_id;
+  let skuId;
   if (premiumTrialOffer != null) {
-    const subscription_trial = premiumTrialOffer.subscription_trial;
-    if (subscription_trial != null) {
-      sku_id = subscription_trial.sku_id;
+    const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+    if (subscriptionTrial != null) {
+      skuId = subscriptionTrial.skuId;
     }
   }
-  return table[sku_id];
+  return table[skuId];
 };
 export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let subscription_trial;
+  let subscriptionTrial;
   if (premiumTrialOffer != null) {
-    subscription_trial = premiumTrialOffer.subscription_trial;
+    subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
-  if (null == subscription_trial) {
+  if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(7394);
+    let tmpResult = tmp(7612);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
-      tmpResult = tmp(4007);
+      tmpResult = tmp(4039);
       obj = { intervalType: null, intervalCount: null };
-      ({ interval: obj3[0], interval_count: obj3[1] } = subscription_trial);
+      ({ interval: obj3[0], intervalCount: obj3[1] } = subscriptionTrial);
       const result = tmpResult.formatIntervalDuration(obj);
       const intl = tmp(1236).intl;
       const obj1 = { duration: null };

@@ -104,7 +104,7 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
   }, items4);
 };
 export const useThrottleDurationForChannel = function useThrottleDurationForChannel(id) {
-  stageParticipantsCount = stageParticipantsCount(5210).useStageParticipantsCount(id, stageParticipantsCount(5204).StageChannelParticipantNamedIndex.AUDIENCE);
+  stageParticipantsCount = stageParticipantsCount(6708).useStageParticipantsCount(id, stageParticipantsCount(6703).StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp2 = callback(React.useState(false), 2);
   const dependencyMap = tmp2[1];
   const items = [stageParticipantsCount];
@@ -222,7 +222,7 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   const obj2 = _initialize;
   [tmp5, tmp6] = flag(memo, 2);
   const tmp4 = flag(memo, 2);
-  let items5 = [memo[_require(undefined, 5204).StageChannelParticipantNamedIndex.AUDIENCE]];
+  let items5 = [memo[_require(undefined, 6703).StageChannelParticipantNamedIndex.AUDIENCE]];
   const obj3 = _throttleStateFn;
   [tmp8, tmp9] = flag(_throttleStateFn.useThrottledState(memo, throttleDurationForChannel, items5), 2);
   if (flag) {

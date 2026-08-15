@@ -7,10 +7,10 @@ import { u } from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_4083.makeMutable(obj);
+const mutable = module_4115.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_4083.makeMutable(obj);
+const mutable1 = module_4115.makeMutable(obj);
 require("subscribeToWindowDimensions")((arg0, arg1) => {
   u(mutable, arg0);
   u(mutable1, arg1);

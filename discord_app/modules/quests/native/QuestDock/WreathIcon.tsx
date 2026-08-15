@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/WreathIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/14424_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14456_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../../../design/components/Icon/native/BaseIconImage.tsx";
 

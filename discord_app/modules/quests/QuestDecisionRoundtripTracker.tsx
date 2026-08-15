@@ -105,90 +105,101 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
   if (adRequestId === undefined) {
     adRequestId = null;
   }
-  let currentQuestId = adRequestId.currentQuestId;
-  if (currentQuestId === undefined) {
-    currentQuestId = null;
+  let currentCreative = adRequestId.currentCreative;
+  if (currentCreative === undefined) {
+    currentCreative = null;
   }
   let currentFetchedAt = adRequestId.currentFetchedAt;
   if (currentFetchedAt === undefined) {
     currentFetchedAt = null;
   }
-  let self = this;
   const pendingRequests = this.pendingRequests;
-  let timestamp = pendingRequests.get(arg0);
+  const value = pendingRequests.get(arg0);
   let tmp5 = null;
-  if (null != timestamp) {
-    let tmp10 = null;
+  if (null != value) {
+    let tmp7 = null;
     if (null !== currentFetchedAt) {
-      let tmp6 = null;
-      if (tmp5 != currentQuestId) {
-        let obj = { type: null, questId: null };
-        obj[0] = AdCreativeType.AdCreativeType.QUEST;
-        obj[1] = currentQuestId;
-        tmp6 = obj;
-      }
-      obj = { creative: null, fetchedAt: null, ttlMillis: 0, adDecisionData: null };
-      obj[0] = tmp6;
+      let obj = { creative: null, fetchedAt: null, ttlMillis: 0, adDecisionData: null };
+      obj[0] = currentCreative;
       obj[1] = currentFetchedAt;
-      let tmp9;
+      let tmp6;
       if (tmp5 != adRequestId) {
         obj = { decision_id: null };
         obj[0] = adRequestId;
-        tmp9 = obj;
+        tmp6 = obj;
       }
-      obj[3] = tmp9;
-      tmp10 = obj;
+      obj[3] = tmp6;
+      tmp7 = obj;
     }
-    const previousAdDecision = timestamp.previousAdDecision;
-    let str = "null";
+    const previousAdDecision = value.previousAdDecision;
     let str2 = "null";
     if (tmp5 != previousAdDecision) {
-      let str3 = "quest";
-      if (tmp5 == obj4.getDeliveredQuestId(previousAdDecision.creative)) {
-        str3 = "no_serve";
+      let str3 = "no_serve";
+      if (tmp5 != previousAdDecision.creative) {
+        const type = previousAdDecision.creative.type;
+        let str4 = "quest";
+        if (AdCreativeType.AdCreativeType.QUEST !== type) {
+          str4 = "bounty";
+          if (tmp8(7469).AdCreativeType.BOUNTY !== type) {
+            if (tmp8(7469).AdCreativeType.QUEST_HOME_HERO === type) {
+              str4 = "quest_home_hero";
+            }
+          }
+        }
+        str3 = str4;
       }
       str2 = str3;
-      obj4 = result;
     }
-    if (tmp5 != tmp10) {
-      let str4 = "quest";
-      if (tmp5 == obj5.getDeliveredQuestId(tmp10.creative)) {
-        str4 = "no_serve";
+    let str5 = "null";
+    if (tmp5 != tmp7) {
+      let str6 = "no_serve";
+      if (tmp5 != tmp7.creative) {
+        const type2 = tmp7.creative.type;
+        let str7 = "quest";
+        if (AdCreativeType.AdCreativeType.QUEST !== type2) {
+          str7 = "bounty";
+          if (tmp10(7469).AdCreativeType.BOUNTY !== type2) {
+            if (tmp10(7469).AdCreativeType.QUEST_HOME_HERO === type2) {
+              str7 = "quest_home_hero";
+            }
+          }
+        }
+        str6 = str7;
       }
-      str = str4;
-      obj5 = result;
+      str5 = str6;
     }
-    if ("quest" !== str2) {
-      const _HermesInternal = HermesInternal;
-      let combined = "" + str2 + "_to_" + str;
-      const obj1 = {};
-      const merged = Object.assign(timestamp);
-      const _Date = Date;
-      timestamp = Date.now();
-      obj1.apiResponseTimestamp = timestamp;
-      obj1.wasSuccessful = adRequestId.wasSuccessful;
-      obj1.adRequestId = adRequestId;
-      tmp5 = trackRoundtrip(obj1, combined, currentFetchedAt);
-      const pendingRequests2 = self.pendingRequests;
-      self = pendingRequests2.delete(arg0);
+    if (str2 === str5) {
+      let creative;
+      if (previousAdDecision != tmp5) {
+        creative = previousAdDecision.creative;
+      }
+      const deliveredAdCreativeId = result.getDeliveredAdCreativeId(creative);
+      const obj3 = result;
+      const tmp14 = require;
+      let creative1;
+      if (tmp7 != tmp5) {
+        creative1 = tmp7.creative;
+      }
+      if (deliveredAdCreativeId === tmp14Result.getDeliveredAdCreativeId(creative1)) {
+        const _HermesInternal3 = HermesInternal;
+        let combined = "same_" + str2;
+      } else {
+        const _HermesInternal2 = HermesInternal;
+        combined = "different_" + str2;
+      }
+      tmp14Result = result;
     }
-    let creative;
-    if (previousAdDecision != tmp5) {
-      creative = previousAdDecision.creative;
-    }
-    const deliveredQuestId = result.getDeliveredQuestId(creative);
-    const obj6 = result;
-    const tmp17 = require;
-    let creative1;
-    if (tmp10 != tmp5) {
-      creative1 = tmp10.creative;
-    }
-    let str8 = "different_quest";
-    if (deliveredQuestId === tmp17Result.getDeliveredQuestId(creative1)) {
-      str8 = "same_quest";
-    }
-    combined = str8;
-    tmp17Result = result;
+    const _HermesInternal = HermesInternal;
+    obj = {};
+    const combined1 = "" + str2 + "_to_" + str5;
+    const merged = Object.assign(value);
+    const _Date = Date;
+    obj.apiResponseTimestamp = Date.now();
+    obj.wasSuccessful = adRequestId.wasSuccessful;
+    obj.adRequestId = adRequestId;
+    tmp5 = trackRoundtrip(obj, combined1, currentFetchedAt);
+    const pendingRequests2 = this.pendingRequests;
+    pendingRequests2.delete(arg0);
   }
 };
 let set = Object.create(QuestDecisionRoundtripTracker.prototype);

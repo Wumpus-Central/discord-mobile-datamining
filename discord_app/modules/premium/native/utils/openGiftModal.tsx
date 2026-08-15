@@ -5,5 +5,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/premiu
 
 export const openGiftModal = function openGiftModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.create(null));
-  ModalActionCreators.pushLazy(asyncRequireImpl(10091, dependencyMap.paths), merged, "gift_modal_key", navigationParams.navigationParams);
+  ModalActionCreators.pushLazy(asyncRequireImpl(10296, dependencyMap.paths), merged, "gift_modal_key", navigationParams.navigationParams);
 };

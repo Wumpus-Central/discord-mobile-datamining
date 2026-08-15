@@ -18,7 +18,7 @@ const result = require("ME").fileFinishedImporting("modules/user_settings/voice/
 
 export default function SoundboardVolume() {
   const tmp = callback3();
-  let obj = analyticsLocations(6023);
+  let obj = analyticsLocations(7304);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = context().analyticsLocations;
   obj = { title: null, hasIcons: false, children: null };
@@ -35,9 +35,9 @@ export default function SoundboardVolume() {
   const obj2 = { style: tmp.slider, children: callback(VolumeSlider, obj3) };
   obj5[0] = combined.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj4[2] = intl3.format(analyticsLocations(1236).t.BPbGq7, obj5);
-  items[1] = callback(analyticsLocations(4338).Text, obj4);
+  items[1] = callback(analyticsLocations(4734).Text, obj4);
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
-  obj[2] = callback(analyticsLocations(5435).TableRow, obj);
-  return callback(analyticsLocations(10836).UserSettingsTableRowGroup, obj);
+  obj[2] = callback(analyticsLocations(6291).TableRow, obj);
+  return callback(analyticsLocations(12547).UserSettingsTableRowGroup, obj);
 };

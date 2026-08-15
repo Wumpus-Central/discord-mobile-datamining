@@ -4,7 +4,7 @@ import importAllResult from "noop";
 import createFromOrder from "createFromOrder";
 import importDefaultResult from "_slicedToArray";
 import { identity } from "../../../../_runtime/00700_identity.js";
-import { isIterable } from "../../../../_runtime/03974_isIterable.js";
+import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 
 const require = arg1;
 let c4 = importAllResult;
@@ -74,7 +74,7 @@ export const createNativeStore = function createNativeStore(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -174,7 +174,7 @@ export const createNativeStore = function createNativeStore(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -315,7 +315,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -443,7 +443,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -522,7 +522,7 @@ export const createNativeStore = function createNativeStore(arg0) {
               v0 = 0;
               callback({ isCreateOrderLoading: false });
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp42) {
             isIterable = tmp42;

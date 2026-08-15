@@ -31,7 +31,7 @@ export default function useRequest(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -85,7 +85,7 @@ export default function useRequest(arg0) {
                 c4 = 0;
                 outer1_1(false);
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 if (lib instanceof outer1_1(outer1_2[4])) {
                   let tmp37 = lib;

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx
-import get_ActivityIndicator from "module_4706";
+import get_ActivityIndicator from "module_4656";
 import handleFormInit from "handleFormInit";
 import ME from "ME";
 import jsxProd from "initialize";
@@ -99,17 +99,17 @@ IntegrationItem.prototype["render"] = function render() {
   const props = this.props;
   const integration = props.integration;
   ({ onPress: importDefault, styles } = props);
-  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(16735).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
+  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(16781).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(16775).IntegrationTypes.YOUTUBE === type) {
+    if (tmp(16821).IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(16775).IntegrationTypes.TWITCH === type) {
+    } else if (tmp(16821).IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
@@ -148,7 +148,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [closure_11(tmp(5435).TableRow, obj), ];
+      const items = [closure_11(tmp(6291).TableRow, obj), ];
       const obj2 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj2[0] = Boolean(self.state.enabled);
@@ -156,9 +156,9 @@ IntegrationItem.prototype["render"] = function render() {
       obj2[2] = self.handleToggleEnabled;
       const intl = tmp(1236).intl;
       obj2[3] = intl.string(tmp(1236).t.vQC6vR);
-      items[1] = closure_11(tmp(5829).TableSwitchRow, obj2);
+      items[1] = closure_11(tmp(7178).TableSwitchRow, obj2);
       obj1[1] = items;
-      return closure_12(tmp(5828).TableRowGroup, obj1);
+      return closure_12(tmp(6286).TableRowGroup, obj1);
     } else {
       let tmpResult = tmp(1435);
       tmpResult = tmp(1363);
@@ -196,18 +196,18 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       obj.saveGuild(tmp.id, obj);
     }
   }
-  let obj = platformType(4065);
+  let obj = platformType(4097);
   const token = obj.useToken(closeGuildSettings(712).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = createCacheKey();
   dependencyMap = tmp5;
-  let obj1 = platformType(1499);
+  let obj1 = platformType(1500);
   navigation = obj1.useNavigation();
   let obj3 = platformType(589);
   const items = [guild];
   const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => ({ guild: guild.getGuild(), submitting: guild.isSubmitting(), hasChanges: guild.hasChanges() }));
   submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  closure_7 = closeGuildSettings(4278)();
+  closure_7 = closeGuildSettings(4310)();
   let obj4 = platformType(589);
   const items1 = [guild];
   const stateFromStores = obj4.useStateFromStores(items1, () => guild.getProps().integrations);
@@ -223,7 +223,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     }
     obj = { headerLeft: null, title: null, headerRight: null };
     obj[0] = fn;
-    let tmp3Result = tmp3(5063);
+    let tmp3Result = tmp3(5097);
     const value = tmp3Result.get(platformType);
     let name;
     if (value != null) {
@@ -294,10 +294,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const items2 = [mapped, ];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj6[2] = formatResult;
-    items2[1] = closure_11(tmp(4338).Text, obj6);
+    items2[1] = closure_11(tmp(4734).Text, obj6);
     obj3[2] = items2;
-    obj2[2] = closure_12(tmp(4775).Stack, obj3);
-    const items3 = [closure_11(tmp(8033).Form, obj2), closure_11(tmp(5775).NavScrim, {})];
+    obj2[2] = closure_12(tmp(4733).Stack, obj3);
+    const items3 = [closure_11(tmp(8083).Form, obj2), closure_11(tmp(6550).NavScrim, {})];
     obj5[0] = items3;
     return closure_12(closure_13, obj5);
   }

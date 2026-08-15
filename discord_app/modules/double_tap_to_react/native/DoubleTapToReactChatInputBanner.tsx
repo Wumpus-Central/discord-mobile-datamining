@@ -68,10 +68,10 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj6[2] = intl2.format(getSystemLocale.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children) {
-      return callback2(callback(4338).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
+      return callback2(callback(4734).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
     },
     tapHereHook(children) {
-      return callback2(callback(4338).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
+      return callback2(callback(4734).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
     }
   });
   items4[1] = closure_9(Text.Text, obj6);

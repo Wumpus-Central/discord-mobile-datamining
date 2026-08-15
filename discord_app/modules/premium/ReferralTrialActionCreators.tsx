@@ -1,13 +1,14 @@
 // discord_app/modules/premium/ReferralTrialActionCreators.tsx
-import dispatcher from "dispatcher";
+import sendRequest from "sendRequest";
+import createFromServer from "createFromServer";
 import createdAt from "createdAt";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
 
-let closure_6;
 let error;
+let metroImportAll;
 const require = arg1;
 function _fetchReferralEligibleUsers() {
   const self = this;
@@ -18,8 +19,8 @@ function _fetchReferralEligibleUsers() {
     let c6 = 0;
     let c7 = 0;
     return (function*(arg0, body) {
-      if (constants === 2) {
-        constants = 3;
+      if (c7 === 2) {
+        c7 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
@@ -29,17 +30,17 @@ function _fetchReferralEligibleUsers() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
-          constants = 2;
+          c7 = 2;
           if (0 === c6) {
             if (arg0 === 1) {
-              constants = 3;
+              c7 = 3;
               throw body;
             } else if (arg0 === 2) {
-              constants = 3;
+              c7 = 3;
               obj = { value: null, done: true };
               obj[0] = body;
               return obj;
@@ -56,15 +57,15 @@ function _fetchReferralEligibleUsers() {
               obj1[0] = json;
               obj1[1] = body;
               json = JSON.stringify(obj1);
-              if (outer1_9.has(json)) {
-                constants = 3;
+              if (outer1_10.has(json)) {
+                c7 = 3;
                 const obj2 = { value: null, done: true };
-                obj2[0] = outer1_9.get(json);
+                obj2[0] = outer1_10.get(json);
                 return obj2;
               } else {
-                const HTTP = callback(table[4]).HTTP;
+                const HTTP = callback(table[5]).HTTP;
                 const obj3 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-                obj3[0] = constants.GET_REFERRAL_ELIGIBLE_USERS;
+                obj3[0] = outer1_8.GET_REFERRAL_ELIGIBLE_USERS;
                 const obj4 = { index: null, limit: null, search_query: null };
                 obj4[0] = tmp28;
                 next_index = tmp30;
@@ -75,7 +76,7 @@ function _fetchReferralEligibleUsers() {
                 obj4[2] = tmp29;
                 obj3[1] = obj4;
                 c6 = 1;
-                constants = 1;
+                c7 = 1;
                 const obj5 = { value: null, done: false };
                 obj5[0] = HTTP.post(obj3);
                 return obj5;
@@ -84,10 +85,10 @@ function _fetchReferralEligibleUsers() {
               tmp29 = body;
             }
           } else if (arg0 === 1) {
-            constants = 3;
+            c7 = 3;
             throw body;
           } else if (arg0 === 2) {
-            constants = 3;
+            c7 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = body;
             return obj6;
@@ -96,16 +97,16 @@ function _fetchReferralEligibleUsers() {
             users = body.users;
             next_index = body.next_index;
             obj7 = { users: null, nextIndex: null };
-            obj7[0] = users.map((arg0) => new obj7(arg0));
+            obj7[0] = users.map((arg0) => new c5(arg0));
             obj7[1] = next_index;
-            const result = closure_9.set(json, obj7);
-            constants = 3;
+            const result = closure_10.set(json, obj7);
+            c7 = 3;
             obj = { value: null, done: true };
             obj[0] = obj7;
             return obj;
           }
         } catch (tmp12) {
-          constants = tmp;
+          c7 = tmp;
           throw tmp12;
         }
       }
@@ -124,152 +125,157 @@ function _createReferralTrials() {
   const self = this;
   const tmp = callback((arg0) => {
     let closure_0 = arg0;
-    let c8 = 0;
-    let c9 = 0;
     let c7 = 0;
-    return (function*(arg0, body) {
-      if (c9 === 2) {
-        c9 = 3;
+    let c8 = 0;
+    let c6 = 0;
+    return (function*(arg0) {
+      if (c8 === 2) {
+        c8 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
           let num = 2;
-          c9 = 2;
-          let tmp5 = constants;
-          if (0 === constants) {
+          c8 = 2;
+          let tmp5 = c7;
+          if (0 === c7) {
             if (arg0 === 1) {
               let num7 = 3;
-              c9 = 3;
-              throw body;
+              c8 = 3;
+              throw arg1;
             } else if (arg0 === 2) {
               let num6 = 3;
-              c9 = 3;
+              c8 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
-              let handleConnectionOpen = tmp;
-              let createdAt = tmp2;
-              let tmp56 = arr;
+              let fromServer = tmp;
+              let sendRequest = tmp2;
+              let tmp62 = arr;
               let store;
               let dependencyMap;
-              let dispatcher;
+              sendRequest = undefined;
+              fromServer = undefined;
               arr = [];
               let _Map = Map;
-              let tmp57 = new.target;
-              let tmp58 = new.target;
+              let tmp63 = new.target;
+              let tmp64 = new.target;
               let map = new Map();
-              let tmp60 = map;
+              let tmp66 = map;
               store = map;
               dependencyMap = arr;
-              let tmp61 = arr;
+              let tmp67 = arr;
               dependencyMap = arr;
               store = arr[Symbol.iterator]();
             }
           } else if (1 === tmp5) {
-            let tmp32 = closure_6;
-            let tmp33 = closure_6;
-            let c7 = 0;
-            let tmp34 = store;
+            let tmp36 = createdAt;
+            let tmp37 = createdAt;
+            let c6 = 0;
+            let tmp38 = store;
             store.return();
-            throw closure_6;
+            throw createdAt;
           } else {
             if (2 === tmp5) {
-              let tmp20 = createdAt;
-              let tmp21 = handleConnectionOpen;
-              let tmp22 = closure_6;
-              let tmp23 = closure_6;
-              c7 = 1;
-              createdAt = closure_6;
-              let tmp24 = store;
-              let tmp25 = dependencyMap;
-              let obj1 = store(1208);
+              let tmp24 = sendRequest;
+              let tmp25 = fromServer;
               let tmp26 = createdAt;
-              let captureExceptionResult = obj1.captureException(createdAt);
+              let tmp27 = createdAt;
+              c6 = 1;
               let tmp28 = store;
               let tmp29 = dependencyMap;
-              let tmp30 = constants;
+              let obj1 = store(1208);
+              let tmp30 = createdAt;
+              let captureExceptionResult = obj1.captureException(createdAt);
+              let tmp32 = store;
+              let tmp33 = dependencyMap;
+              let tmp34 = constants;
               let result = store.set(dependencyMap, constants.FAIL);
             } else if (arg0 === 1) {
               let num3 = 3;
-              c9 = 3;
-              throw body;
+              c8 = 3;
+              throw arg1;
             } else if (arg0 === 2) {
-              c7 = 0;
-              let tmp19 = store;
+              c6 = 0;
+              let tmp23 = store;
               store.return();
               let num2 = 3;
-              c9 = 3;
+              c8 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
-              body = body.body;
-              dispatcher = body;
-              if (body == null) {
-                dispatcher = null;
+              let tmp60 = sendRequest;
+              sendRequest = arg1;
+              let tmp61 = sendRequest;
+              fromServer = null;
+              if (null != sendRequest.body) {
+                let tmp6 = sendRequest;
+                let tmp7 = fromServer;
+                let tmp8 = fromServer;
+                let tmp9 = sendRequest;
+                fromServer = fromServer.createFromServer(sendRequest.body);
               }
-              let tmp6 = createdAt;
-              let tmp7 = dispatcher;
-              let tmp8 = dispatcher;
-              if (null != dispatcher) {
-                let tmp9 = createdAt;
-                let tmp10 = arr;
-                let tmp11 = dispatcher;
-                arr = arr.push(dispatcher);
+              let tmp11 = sendRequest;
+              let tmp12 = fromServer;
+              if (null != fromServer) {
+                let tmp13 = sendRequest;
+                let tmp14 = arr;
+                let tmp15 = fromServer;
+                arr = arr.push(fromServer);
               }
-              let tmp13 = createdAt;
-              let tmp14 = handleConnectionOpen;
-              let tmp15 = store;
-              let tmp16 = dependencyMap;
-              let tmp17 = constants;
+              let tmp17 = sendRequest;
+              let tmp18 = fromServer;
+              let tmp19 = store;
+              let tmp20 = dependencyMap;
+              let tmp21 = constants;
               let result1 = store.set(dependencyMap, constants.SUCCESS);
-              c7 = 1;
+              c6 = 1;
             }
-            c7 = 0;
+            c6 = 0;
           }
-          let tmp35 = dependencyMap;
-          let tmp36 = store;
+          let tmp39 = dependencyMap;
+          let tmp40 = store;
           if (store === undefined) {
-            let tmp44 = createdAt;
-            let tmp45 = handleConnectionOpen;
-            let tmp46 = store;
-            let tmp47 = dependencyMap;
+            let tmp48 = sendRequest;
+            let tmp49 = fromServer;
+            let tmp50 = store;
+            let tmp51 = dependencyMap;
             let obj4 = store(709);
             obj1 = { type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: null };
-            let tmp48 = arr;
+            let tmp52 = arr;
             obj1[1] = arr;
             let dispatchResult = obj4.dispatch(obj1);
             let num5 = 3;
-            c9 = 3;
+            c8 = 3;
             let obj2 = { value: null, done: true };
             obj2[0] = store;
             return obj2;
           } else {
-            let tmp38 = createdAt;
-            dependencyMap = tmp37;
-            let tmp39 = handleConnectionOpen;
-            c7 = 2;
-            let tmp40 = arr;
-            let tmp41 = dependencyMap;
+            let tmp42 = sendRequest;
+            dependencyMap = tmp41;
+            let tmp43 = fromServer;
+            c6 = 2;
+            let tmp44 = arr;
+            let tmp45 = dependencyMap;
             let HTTP = arr(530).HTTP;
             let obj3 = { url: null, oldFormErrors: true, rejectWithError: true };
-            let tmp42 = c7;
-            let tmp43 = dependencyMap;
-            obj3[0] = c7.CREATE_REFERRAL(dependencyMap);
-            constants = 3;
+            let tmp46 = c8;
+            let tmp47 = dependencyMap;
+            obj3[0] = c8.CREATE_REFERRAL(dependencyMap);
+            c7 = 3;
             let num4 = 1;
-            c9 = 1;
+            c8 = 1;
             obj4 = { value: null, done: false };
             obj4[0] = HTTP.post(obj3);
             return obj4;
@@ -291,41 +297,40 @@ function _createReferralTrial() {
   const self = this;
   const tmp = callback((arg0) => {
     let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
     let c5 = 0;
-    return (function*(arg0, body) {
-      let dispatcher = tmp3;
-      let currentlySelectedChannelId = 1;
-      const HTTP = callback(outer1_2[4]).HTTP;
+    let c6 = 0;
+    let c4 = 0;
+    return (function*(arg0) {
+      let dependencyMap = tmp3;
+      let c4 = 1;
+      const HTTP = lib(outer1_2[5]).HTTP;
       const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj1[0] = c7.CREATE_REFERRAL(callback);
+      obj1[0] = outer1_8.CREATE_REFERRAL(lib);
       yield HTTP.post(obj1);
-      currentlySelectedChannelId = 0;
-      let closure_2 = createdAt;
-      let obj5 = callback2(closure_2[5]);
+      c4 = 0;
+      let obj5 = fromServer(709);
       obj5.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
-      if (closure_2.body.code === constants.INVALID_MESSAGE_SEND_USER) {
-        callback2 = currentlySelectedChannelId.getCurrentlySelectedChannelId();
-        if (null != callback2) {
-          const obj6 = callback2(closure_2[7]);
-          obj6.sendClydeError(callback2, closure_2.body.code);
+      if (sendRequest.body.code === constants.INVALID_MESSAGE_SEND_USER) {
+        dependencyMap = currentlySelectedChannelId.getCurrentlySelectedChannelId();
+        if (null != dependencyMap) {
+          const obj6 = fromServer(7427);
+          obj6.sendClydeError(dependencyMap, sendRequest.body.code);
         }
       }
-      yield "HermesInternal";
-      body = body.body;
-      callback2 = body;
-      if (body == null) {
-        callback2 = null;
+      lib = yield "HermesInternal";
+      fromServer = null;
+      if (null != lib.body) {
+        fromServer = c4.createFromServer(lib.body);
       }
-      callback = callback2;
-      const obj = callback2(closure_2[5]);
-      const obj4 = { type: "BILLING_CREATE_REFERRAL_SUCCESS", userTrialOffer: null };
-      obj4[1] = callback;
-      obj.dispatch(obj4);
+      if (null != fromServer) {
+        const obj = fromServer(709);
+        const obj4 = { type: "BILLING_CREATE_REFERRAL_SUCCESS", userTrialOffer: null };
+        obj4[1] = fromServer;
+        obj.dispatch(obj4);
+      }
       obj5 = { userTrialOffer: null };
-      obj5[0] = callback;
-      currentlySelectedChannelId = 0;
+      obj5[0] = fromServer;
+      c4 = 0;
       return obj5;
     })();
   });
@@ -345,30 +350,33 @@ function _resolveReferralTrialOffer() {
     let c6 = 0;
     let c7 = 0;
     let c5 = 0;
-    return (function*(arg0, body) {
-      let dispatcher = tmp3;
+    return (function*(arg0) {
+      let sendRequest = tmp3;
       let c5 = 1;
-      const HTTP = callback(outer1_2[4]).HTTP;
+      const HTTP = callback(outer1_2[5]).HTTP;
       const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj1[0] = c7.REFERRAL_OFFER_ID_RESOLVE(callback);
+      obj1[0] = outer1_8.REFERRAL_OFFER_ID_RESOLVE(callback);
       yield HTTP.get(obj1);
       c5 = 0;
-      let obj5 = callback2(709);
+      let obj5 = lib(fromServer[6]);
       const obj3 = { type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: null };
       obj3[1] = callback;
       obj5.dispatch(obj3);
-      yield "HermesInternal";
-      body = body.body;
-      callback2 = body;
-      if (body == null) {
-        callback2 = null;
+      lib = yield "HermesInternal";
+      fromServer = null;
+      if (null != lib.body) {
+        fromServer = createFromServer.createFromServer(lib.body);
       }
-      const obj = callback2(709);
+      const obj = lib(fromServer[6]);
+      lib = fromServer;
+      if (fromServer == null) {
+        lib = undefined;
+      }
       obj5 = { type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: null };
-      obj5[1] = callback2;
+      obj5[1] = lib;
       obj.dispatch(obj5);
       const obj6 = { userTrialOffer: null };
-      obj6[0] = callback2;
+      obj6[0] = fromServer;
       c5 = 0;
       return obj6;
     })();
@@ -382,7 +390,7 @@ function _resolveReferralTrialOffer() {
   }
   return applyArgumentsResult;
 }
-({ AbortCodes: closure_6, Endpoints: error } = ME);
+({ AbortCodes: error, Endpoints: metroImportAll } = ME);
 let obj = { SUCCESS: 1, [1]: "SUCCESS", FAIL: 2, [2]: "FAIL" };
 class EligibleUserCache {
   constructor() {
@@ -418,7 +426,7 @@ obj = Object.create(EligibleUserCache.prototype);
 obj.cache = new Map();
 obj.expiration = Date.now() + 600000;
 let map = new Map();
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/premium/ReferralTrialActionCreators.tsx");
+let result = require("createdAt").fileFinishedImporting("modules/premium/ReferralTrialActionCreators.tsx");
 
 export const ReferralOfferStatus = { REDEEMED: 1, [1]: "REDEEMED", PENDING: 2, [2]: "PENDING", CONVERTED: 3, [3]: "CONVERTED" };
 export const CreateReferralStatus = obj;

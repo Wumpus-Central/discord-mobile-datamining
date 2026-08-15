@@ -12,7 +12,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.eY1X1e);
   },
-  parent: require("MobileSetting").MobileSetting.ADVANCED,
+  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
   useValue: require("explicitContentFromProto").ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
     const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
@@ -38,7 +38,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.eY1X1e);
   },
-  parent: require("MobileSetting").MobileSetting.ADVANCED,
+  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
   useValue: require("explicitContentFromProto").ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
     const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
