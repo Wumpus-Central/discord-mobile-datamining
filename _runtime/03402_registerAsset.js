@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/custom_typing_indicator/intl", scales: [1], hash: "b5a10b15ae98f860959bc35549f6ae16", name: "CustomTypingIndicator.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/vibegrations/intl", scales: [1], hash: "bc1453b1b01de38c461047311430d76c", name: "VibegrationsUntranslated.compiled.messages", type: "jsona" });

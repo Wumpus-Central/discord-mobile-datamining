@@ -1,11 +1,11 @@
 // _runtime/01772__isNativeReflectConstruct.js
-import FadeOutDown from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult1 from "_inherits";
 
+let BounceOutRight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,8 +25,8 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_5 = { code: "function pnpm_FadeTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config))},initialValues:{opacity:0,...initialValues},callback:callback};}" };
-class FadeIn {
+let closure_6 = { code: "function pnpm_BounceTs1(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.2,{duration:duration*0.55}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.1,{duration:duration*0.15}),withTiming(1,{duration:duration*0.15})))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}" };
+class BounceIn {
   constructor() {
     self = this;
     items = [...arguments];
@@ -47,103 +47,75 @@ class FadeIn {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)) };
-        obj[0] = obj;
-        obj = { opacity: 0 };
-        const merged = Object.assign(initialValues);
-        obj[1] = obj;
-        obj[2] = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 4187624806586;
-      fn.__initData = outer1_5;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-FadeOutDown = FadeIn;
-importDefaultResult1(FadeIn, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-let obj = {
-  key: "createInstance",
-  value: function createInstance() {
-    return FadeOutDown();
-  }
-};
-let items = [obj];
-const importDefaultResultResult = importDefaultResult(FadeIn, null, items);
-importDefaultResultResult.presetName = "FadeIn";
-let closure_6 = { code: "function pnpm_FadeTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateX:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateX:25}],...initialValues},callback:callback};}" };
-class FadeInRight {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { scale: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.55 * duration };
+        const withTimingResult = obj4.withTiming(1.2, { duration: 0.55 * duration });
+        const obj2 = { duration: 0.15 * duration };
+        const obj7 = delayFunction(delay[5]);
+        const withTimingResult1 = delayFunction(delay[5]).withTiming(0.9, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(1.1, obj3);
+        obj4 = { duration: 0.15 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(1, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateX: 25 }];
+        const items1 = [{ scale: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 5328703857616;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 6814288411244;
       fn.__initData = outer1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInRight;
-importDefaultResult1(FadeInRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+BounceOutRight = BounceIn;
+importDefaultResult1(BounceIn, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+let obj = {
+  key: "getDuration",
+  value: function getDuration() {
+    let num = this.durationV;
+    if (num == null) {
+      num = 600;
+    }
+    return num;
+  }
+};
+let items = [obj];
 obj = {
   key: "createInstance",
   value: function createInstance() {
-    return FadeOutDown();
+    return BounceOutRight();
   }
 };
-let items1 = [obj];
-const importDefaultResultResult1 = importDefaultResult(FadeInRight, null, items1);
-importDefaultResultResult1.presetName = "FadeInRight";
-let closure_7 = { code: "function pnpm_FadeTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateX:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateX:-25}],...initialValues},callback:callback};}" };
-class FadeInLeft {
+let items1 = [
+  obj,
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult = importDefaultResult(BounceIn, items, items1);
+importDefaultResultResult.presetName = "BounceIn";
+let closure_7 = { code: "function pnpm_BounceTs2(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:values.windowHeight}],...initialValues},callback:callback};}" };
+class BounceInDown {
   constructor() {
     self = this;
     items = [...arguments];
@@ -164,46 +136,75 @@ class FadeInLeft {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(translateY) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateY: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        let obj6 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.55 * duration };
+        const obj2 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(-20, { duration: 0.55 * duration });
+        const withTimingResult1 = obj6.withTiming(10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(-10, obj3);
+        obj4 = { duration: 0.15 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateX: -25 }];
+        obj6 = { translateY: translateY.windowHeight };
+        const items1 = [obj6];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 3876464806620;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 4551292686981;
       fn.__initData = outer1_7;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInLeft;
-importDefaultResult1(FadeInLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+BounceOutRight = BounceInDown;
+importDefaultResult1(BounceInDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 obj = {
-  key: "createInstance",
-  value: function createInstance() {
-    return FadeOutDown();
+  key: "getDuration",
+  value: function getDuration() {
+    let num = this.durationV;
+    if (num == null) {
+      num = 600;
+    }
+    return num;
   }
 };
 const items2 = [obj];
-const importDefaultResultResult2 = importDefaultResult(FadeInLeft, null, items2);
-importDefaultResultResult2.presetName = "FadeInLeft";
-let closure_8 = { code: "function pnpm_FadeTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateY:-25}],...initialValues},callback:callback};}" };
-class FadeInUp {
+const items3 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult1 = importDefaultResult(BounceInDown, items2, items3);
+importDefaultResultResult1.presetName = "BounceInDown";
+let closure_8 = { code: "function pnpm_BounceTs3(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:-values.windowHeight}],...initialValues},callback:callback};}" };
+class BounceInUp {
   constructor() {
     self = this;
     items = [...arguments];
@@ -224,47 +225,76 @@ class FadeInUp {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(translateY) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateY: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        let obj6 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.55 * duration };
+        const obj2 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(20, { duration: 0.55 * duration });
+        const withTimingResult1 = obj6.withTiming(-10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(10, obj3);
+        obj4 = { duration: 0.15 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateY: -25 }];
+        obj6 = { translateY: -translateY.windowHeight };
+        const items1 = [obj6];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 14652570092763;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 11333943352836;
       fn.__initData = outer1_8;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInUp;
-importDefaultResult1(FadeInUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items3 = [
+BounceOutRight = BounceInUp;
+importDefaultResult1(BounceInUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items4 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult3 = importDefaultResult(FadeInUp, null, items3);
-importDefaultResultResult3.presetName = "FadeInUp";
-let closure_9 = { code: "function pnpm_FadeTs5(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateY:25}],...initialValues},callback:callback};}" };
-class FadeInDown {
+const items5 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult2 = importDefaultResult(BounceInUp, items4, items5);
+importDefaultResultResult2.presetName = "BounceInUp";
+let closure_9 = { code: "function pnpm_BounceTs4(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:-values.windowWidth}],...initialValues},callback:callback};}" };
+class BounceInLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -285,47 +315,76 @@ class FadeInDown {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(translateX) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateX: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        let obj6 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.55 * duration };
+        const obj2 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(20, { duration: 0.55 * duration });
+        const withTimingResult1 = obj6.withTiming(-10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(10, obj3);
+        obj4 = { duration: 0.15 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateY: 25 }];
+        obj6 = { translateX: -translateX.windowWidth };
+        const items1 = [obj6];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 3370389664855;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 10162410157050;
       fn.__initData = outer1_9;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInDown;
-importDefaultResult1(FadeInDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items4 = [
+BounceOutRight = BounceInLeft;
+importDefaultResult1(BounceInLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items6 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult4 = importDefaultResult(FadeInDown, null, items4);
-importDefaultResultResult4.presetName = "FadeInDown";
-let closure_10 = { code: "function pnpm_FadeTs6(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config))},initialValues:{opacity:1,...initialValues},callback:callback};}" };
-class FadeOut {
+const items7 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult3 = importDefaultResult(BounceInLeft, items6, items7);
+importDefaultResultResult3.presetName = "BounceInLeft";
+let closure_10 = { code: "function pnpm_BounceTs5(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:values.windowWidth}],...initialValues},callback:callback};}" };
+class BounceInRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -346,44 +405,76 @@ class FadeOut {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(translateX) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateX: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        let obj6 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.55 * duration };
+        const obj2 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(-20, { duration: 0.55 * duration });
+        const withTimingResult1 = obj6.withTiming(10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(-10, obj3);
+        obj4 = { duration: 0.15 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
+        const items = [obj];
+        obj[0] = items;
         obj[0] = obj;
-        obj = { opacity: 1 };
+        obj6 = { translateX: translateX.windowWidth };
+        const items1 = [obj6];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 12496093665501;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 4134237895259;
       fn.__initData = outer1_10;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOut;
-importDefaultResult1(FadeOut, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items5 = [
+BounceOutRight = BounceInRight;
+importDefaultResult1(BounceInRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items8 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult5 = importDefaultResult(FadeOut, null, items5);
-importDefaultResultResult5.presetName = "FadeOut";
-let closure_11 = { code: "function pnpm_FadeTs7(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(25,config))}]},initialValues:{opacity:1,transform:[{translateX:0}],...initialValues},callback:callback};}" };
-class FadeOutRight {
+const items9 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult4 = importDefaultResult(BounceInRight, items8, items9);
+importDefaultResultResult4.presetName = "BounceInRight";
+let closure_11 = { code: "function pnpm_BounceTs6(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.1,{duration:duration*0.15}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.2,{duration:duration*0.15}),withTiming(0,{duration:duration*0.55})))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}" };
+class BounceOut {
   constructor() {
     self = this;
     items = [...arguments];
@@ -404,47 +495,75 @@ class FadeOutRight {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n() {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(25, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { scale: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(1.1, { duration: 0.15 * duration });
+        const obj2 = { duration: 0.15 * duration };
+        const obj7 = delayFunction(delay[5]);
+        const withTimingResult1 = delayFunction(delay[5]).withTiming(0.9, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(1.2, obj3);
+        obj4 = { duration: 0.55 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateX: 0 }];
+        const items1 = [{ scale: 1 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 8966511332149;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 15864962046507;
       fn.__initData = outer1_11;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOutRight;
-importDefaultResult1(FadeOutRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items6 = [
+BounceOutRight = BounceOut;
+importDefaultResult1(BounceOut, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items10 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult6 = importDefaultResult(FadeOutRight, null, items6);
-importDefaultResultResult6.presetName = "FadeOutRight";
-let closure_12 = { code: "function pnpm_FadeTs8(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(-25,config))}]},initialValues:{opacity:1,transform:[{translateX:0}],...initialValues},callback:callback};}" };
-class FadeOutLeft {
+const items11 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult5 = importDefaultResult(BounceOut, items10, items11);
+importDefaultResultResult5.presetName = "BounceOut";
+let closure_12 = { code: "function pnpm_BounceTs7(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}" };
+class BounceOutDown {
   constructor() {
     self = this;
     items = [...arguments];
@@ -465,47 +584,75 @@ class FadeOutLeft {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(windowHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateX: delayFunction(delay, first(-25, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateY: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(-10, { duration: 0.15 * duration });
+        const obj2 = { duration: 0.15 * duration };
+        const obj7 = delayFunction(delay[5]);
+        const withTimingResult1 = delayFunction(delay[5]).withTiming(10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(-20, obj3);
+        obj4 = { duration: 0.55 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(windowHeight.windowHeight, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateX: 0 }];
+        const items1 = [{ translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 7570822684087;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 4170057933312;
       fn.__initData = outer1_12;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOutLeft;
-importDefaultResult1(FadeOutLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items7 = [
+BounceOutRight = BounceOutDown;
+importDefaultResult1(BounceOutDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items12 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult7 = importDefaultResult(FadeOutLeft, null, items7);
-importDefaultResultResult7.presetName = "FadeOutLeft";
-let closure_13 = { code: "function pnpm_FadeTs9(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateY:delayFunction(delay,animation(-25,config))}]},initialValues:{opacity:1,transform:[{translateY:0}],...initialValues},callback:callback};}" };
-class FadeOutUp {
+const items13 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult6 = importDefaultResult(BounceOutDown, items12, items13);
+importDefaultResultResult6.presetName = "BounceOutDown";
+let closure_13 = { code: "function pnpm_BounceTs8(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}" };
+class BounceOutUp {
   constructor() {
     self = this;
     items = [...arguments];
@@ -526,47 +673,75 @@ class FadeOutUp {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(windowHeight) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(-25, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateY: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(10, { duration: 0.15 * duration });
+        const obj2 = { duration: 0.15 * duration };
+        const obj7 = delayFunction(delay[5]);
+        const withTimingResult1 = delayFunction(delay[5]).withTiming(-10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(20, obj3);
+        obj4 = { duration: 0.55 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(-windowHeight.windowHeight, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
         const items1 = [{ translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 7080775562358;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 8059944917039;
       fn.__initData = outer1_13;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOutUp;
-importDefaultResult1(FadeOutUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items8 = [
+BounceOutRight = BounceOutUp;
+importDefaultResult1(BounceOutUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items14 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult8 = importDefaultResult(FadeOutUp, null, items8);
-importDefaultResultResult8.presetName = "FadeOutUp";
-let closure_14 = { code: "function pnpm_FadeTs10(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateY:delayFunction(delay,animation(25,config))}]},initialValues:{opacity:1,transform:[{translateY:0}],...initialValues},callback:callback};}" };
-class FadeOutDown {
+const items15 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult7 = importDefaultResult(BounceOutUp, items14, items15);
+importDefaultResultResult7.presetName = "BounceOutUp";
+let closure_14 = { code: "function pnpm_BounceTs9(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}" };
+class BounceOutLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -587,52 +762,169 @@ class FadeOutDown {
     apply = tmp3Result;
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _undefined(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      let _possibleConstructorReturn = tmp4;
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
+      const fn = function n(windowWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
-        obj = { translateY: delayFunction(delay, first(25, _possibleConstructorReturn)) };
+        obj = { transform: null };
+        obj = { translateX: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(10, { duration: 0.15 * duration });
+        const obj2 = { duration: 0.15 * duration };
+        const obj7 = delayFunction(delay[5]);
+        const withTimingResult1 = delayFunction(delay[5]).withTiming(-10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(20, obj3);
+        obj4 = { duration: 0.55 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(-windowWidth.windowWidth, obj4)));
         const items = [obj];
-        obj[1] = items;
+        obj[0] = items;
         obj[0] = obj;
-        const items1 = [{ translateY: 0 }];
+        const items1 = [{ translateX: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[1] = { transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 4897427935171;
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 6930767645815;
       fn.__initData = outer1_14;
       return fn;
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(FadeOutDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-const items9 = [
+BounceOutRight = BounceOutLeft;
+importDefaultResult1(BounceOutLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items16 = [
   {
-    key: "createInstance",
-    value: function createInstance() {
-      return FadeOutDown();
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
     }
   }
 ];
-const importDefaultResultResult9 = importDefaultResult(FadeOutDown, null, items9);
-importDefaultResultResult9.presetName = "FadeOutDown";
+const items17 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult8 = importDefaultResult(BounceOutLeft, items16, items17);
+importDefaultResultResult8.presetName = "BounceOutLeft";
+let closure_15 = { code: "function pnpm_BounceTs10(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}" };
+class BounceOutRight {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    apply = undefined;
+    tmp = _isNativeReflectConstruct(this, apply);
+    items1 = [...items];
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(apply);
+    tmp3 = _isNativeReflectConstruct;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.build = () => {
+      delayFunction = delayFunction.getDelayFunction();
+      const delay = delayFunction.getDelay();
+      const duration = delayFunction.getDuration();
+      const callbackV = delayFunction.callbackV;
+      const initialValues = delayFunction.initialValues;
+      const fn = function n(windowWidth) {
+        let obj = { animations: null, initialValues: null, callback: null };
+        obj = { transform: null };
+        obj = { translateX: null };
+        let obj3 = delayFunction(delay[5]);
+        let obj4 = delayFunction(delay[5]);
+        const obj1 = { duration: 0.15 * duration };
+        const withTimingResult = obj4.withTiming(-10, { duration: 0.15 * duration });
+        const obj2 = { duration: 0.15 * duration };
+        const obj7 = delayFunction(delay[5]);
+        const withTimingResult1 = delayFunction(delay[5]).withTiming(10, { duration: 0.15 * duration });
+        obj3 = { duration: 0.15 * duration };
+        const obj9 = delayFunction(delay[5]);
+        const withTimingResult2 = delayFunction(delay[5]).withTiming(-20, obj3);
+        obj4 = { duration: 0.55 * duration };
+        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(windowWidth.windowWidth, obj4)));
+        const items = [obj];
+        obj[0] = items;
+        obj[0] = obj;
+        const items1 = [{ translateX: 0 }];
+        const merged = Object.assign(initialValues);
+        obj[1] = { transform: items1 };
+        obj[2] = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, withSequence: _undefined(outer1_1[5]).withSequence, withTiming: _undefined(outer1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__workletHash = 11465945086863;
+      fn.__initData = outer1_15;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+importDefaultResult1(BounceOutRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items18 = [
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 600;
+      }
+      return num;
+    }
+  }
+];
+const items19 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return BounceOutRight();
+    }
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 600;
+    }
+  }
+];
+const importDefaultResultResult9 = importDefaultResult(BounceOutRight, items18, items19);
+importDefaultResultResult9.presetName = "BounceOutRight";
 
-export const FadeIn = importDefaultResultResult;
-export const FadeInRight = importDefaultResultResult1;
-export const FadeInLeft = importDefaultResultResult2;
-export const FadeInUp = importDefaultResultResult3;
-export const FadeInDown = importDefaultResultResult4;
-export const FadeOut = importDefaultResultResult5;
-export const FadeOutRight = importDefaultResultResult6;
-export const FadeOutLeft = importDefaultResultResult7;
-export const FadeOutUp = importDefaultResultResult8;
-export const FadeOutDown = importDefaultResultResult9;
+export const BounceIn = importDefaultResultResult;
+export const BounceInDown = importDefaultResultResult1;
+export const BounceInUp = importDefaultResultResult2;
+export const BounceInLeft = importDefaultResultResult3;
+export const BounceInRight = importDefaultResultResult4;
+export const BounceOut = importDefaultResultResult5;
+export const BounceOutDown = importDefaultResultResult6;
+export const BounceOutUp = importDefaultResultResult7;
+export const BounceOutLeft = importDefaultResultResult8;
+export const BounceOutRight = importDefaultResultResult9;

@@ -156,7 +156,7 @@ arg5.timeToDisplayIntegration = () => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -293,7 +293,7 @@ arg5.timeToDisplayIntegration = () => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -400,7 +400,7 @@ arg5.timeToDisplayIntegration = () => {
                     }
                   }
                   c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } catch (tmp83) {
                 c3 = tmp;

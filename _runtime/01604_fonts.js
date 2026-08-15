@@ -1,5 +1,2 @@
 // _runtime/01604_fonts.js
-import { Platform } from "get ActivityIndicator";
-
-
-export const fonts = { regular: { fontFamily: "sans-serif", fontWeight: "normal" }, medium: { fontFamily: "sans-serif-medium", fontWeight: "normal" }, bold: { fontFamily: "sans-serif", fontWeight: "600" }, heavy: { fontFamily: "sans-serif", fontWeight: "700" } };
+arg5.DefaultTheme = { dark: false, colors: { primary: "rgb(0, 122, 255)", background: "rgb(242, 242, 242)", card: "rgb(255, 255, 255)", text: "rgb(28, 28, 30)", border: "rgb(216, 216, 216)", notification: "rgb(255, 59, 48)" }, fonts: require("fonts").fonts };

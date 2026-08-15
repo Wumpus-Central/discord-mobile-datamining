@@ -1,0 +1,30 @@
+// _runtime/01615_ServerContainer.js
+import importAllResult from "noop";
+import { jsx } from "jsxProd";
+
+const require = arg1;
+
+export const ServerContainer = importAllResult.forwardRef(function ServerContainer(arg0, fn) {
+  let _location;
+  let children;
+  let obj;
+  ({ children, location: _location } = arg0);
+  const effect = importAllResult.useEffect(() => {
+    console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
+  }, []);
+  obj = {};
+  if (fn) {
+    obj = { getCurrentOptions: null };
+    obj[0] = function getCurrentOptions() {
+      return obj.options;
+    };
+    if (typeof fn === "function") {
+      fn(obj);
+    } else {
+      fn.current = obj;
+    }
+  }
+  obj = { value: { location: _location }, children: null };
+  obj[1] = jsx(obj(1503).CurrentRenderContext.Provider, { value: obj, children });
+  return jsx(obj(1616).ServerContext.Provider, { value: { location: _location }, children: null });
+});

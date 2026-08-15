@@ -1,5 +1,5 @@
 // _runtime/01778__isNativeReflectConstruct.js
-import SlideOutDown from "_slicedToArray";
+import RotateOutUpRight from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -25,8 +25,8 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_5 = { code: "function pnpm_SlideTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX+values.windowWidth,...initialValues},callback:callback};}" };
-class SlideInRight {
+let closure_5 = { code: "function pnpm_RotateTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{rotate:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))},{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{rotate:'-90deg'},{translateX:values.targetWidth/2-values.targetHeight/2},{translateY:-(values.targetWidth/2-values.targetHeight/2)}],...initialValues},callback:callback};}" };
+class RotateInDownLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -53,37 +53,42 @@ class SlideInRight {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(targetOriginX) {
+      const fn = function n(targetWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(targetOriginX.targetOriginX, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("0deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originX: targetOriginX.targetOriginX + targetOriginX.windowWidth };
+        const items1 = [{ rotate: "-90deg" }, { translateX: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 0, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 10760418577189;
+      fn.__workletHash = 1900668823867;
       fn.__initData = outer1_5;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideInRight;
-importDefaultResult1(SlideInRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateInDownLeft;
+importDefaultResult1(RotateInDownLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 let obj = {
   key: "createInstance",
   value: function createInstance() {
-    return SlideOutDown();
+    return RotateOutUpRight();
   }
 };
 let items = [obj];
-const importDefaultResultResult = importDefaultResult(SlideInRight, null, items);
-importDefaultResultResult.presetName = "SlideInRight";
-let closure_6 = { code: "function pnpm_SlideTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX-values.windowWidth,...initialValues},callback:callback};}" };
-class SlideInLeft {
+const importDefaultResultResult = importDefaultResult(RotateInDownLeft, null, items);
+importDefaultResultResult.presetName = "RotateInDownLeft";
+let closure_6 = { code: "function pnpm_RotateTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{rotate:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))},{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{rotate:'90deg'},{translateX:-(values.targetWidth/2-values.targetHeight/2)},{translateY:-(values.targetWidth/2-values.targetHeight/2)}],...initialValues},callback:callback};}" };
+class RotateInDownRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -110,37 +115,42 @@ class SlideInLeft {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(targetOriginX) {
+      const fn = function n(targetWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(targetOriginX.targetOriginX, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("0deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originX: targetOriginX.targetOriginX - targetOriginX.windowWidth };
+        const items1 = [{ rotate: "90deg" }, { translateX: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 0, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 2180499422144;
+      fn.__workletHash = 1066189129817;
       fn.__initData = outer1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideInLeft;
-importDefaultResult1(SlideInLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateInDownRight;
+importDefaultResult1(RotateInDownRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 obj = {
   key: "createInstance",
   value: function createInstance() {
-    return SlideOutDown();
+    return RotateOutUpRight();
   }
 };
 let items1 = [obj];
-const importDefaultResultResult1 = importDefaultResult(SlideInLeft, null, items1);
-importDefaultResultResult1.presetName = "SlideInLeft";
-let closure_7 = { code: "function pnpm_SlideTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(Math.max(values.currentOriginX+values.windowWidth,values.windowWidth),config))},initialValues:{originX:values.currentOriginX,...initialValues},callback:callback};}" };
-class SlideOutRight {
+const importDefaultResultResult1 = importDefaultResult(RotateInDownRight, null, items1);
+importDefaultResultResult1.presetName = "RotateInDownRight";
+let closure_7 = { code: "function pnpm_RotateTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{rotate:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))},{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{rotate:'90deg'},{translateX:values.targetWidth/2-values.targetHeight/2},{translateY:values.targetWidth/2-values.targetHeight/2}],...initialValues},callback:callback};}" };
+class RotateInUpLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -167,37 +177,42 @@ class SlideOutRight {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(currentOriginX) {
+      const fn = function n(targetWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(Math.max(currentOriginX.currentOriginX + currentOriginX.windowWidth, currentOriginX.windowWidth), _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("0deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originX: currentOriginX.currentOriginX };
+        const items1 = [{ rotate: "90deg" }, { translateX: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 0, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 12812296890492;
+      fn.__workletHash = 11999620665656;
       fn.__initData = outer1_7;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideOutRight;
-importDefaultResult1(SlideOutRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateInUpLeft;
+importDefaultResult1(RotateInUpLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 obj = {
   key: "createInstance",
   value: function createInstance() {
-    return SlideOutDown();
+    return RotateOutUpRight();
   }
 };
 const items2 = [obj];
-const importDefaultResultResult2 = importDefaultResult(SlideOutRight, null, items2);
-importDefaultResultResult2.presetName = "SlideOutRight";
-let closure_8 = { code: "function pnpm_SlideTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth),config))},initialValues:{originX:values.currentOriginX,...initialValues},callback:callback};}" };
-class SlideOutLeft {
+const importDefaultResultResult2 = importDefaultResult(RotateInUpLeft, null, items2);
+importDefaultResultResult2.presetName = "RotateInUpLeft";
+let closure_8 = { code: "function pnpm_RotateTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{rotate:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))},{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{rotate:'-90deg'},{translateX:-(values.targetWidth/2-values.targetHeight/2)},{translateY:values.targetWidth/2-values.targetHeight/2}],...initialValues},callback:callback};}" };
+class RotateInUpRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -224,38 +239,43 @@ class SlideOutLeft {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(currentOriginX) {
+      const fn = function n(targetWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(Math.min(currentOriginX.currentOriginX - currentOriginX.windowWidth, -currentOriginX.windowWidth), _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(1, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("0deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(0, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originX: currentOriginX.currentOriginX };
+        const items1 = [{ rotate: "-90deg" }, { translateX: -targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }, { translateY: targetWidth.targetWidth / 2 - targetWidth.targetHeight / 2 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 0, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 6273927341006;
+      fn.__workletHash = 15143335307550;
       fn.__initData = outer1_8;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideOutLeft;
-importDefaultResult1(SlideOutLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateInUpRight;
+importDefaultResult1(RotateInUpRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items3 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return SlideOutDown();
+      return RotateOutUpRight();
     }
   }
 ];
-const importDefaultResultResult3 = importDefaultResult(SlideOutLeft, null, items3);
-importDefaultResultResult3.presetName = "SlideOutLeft";
-let closure_9 = { code: "function pnpm_SlideTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(values.targetOriginY,config))},initialValues:{originY:-values.windowHeight,...initialValues},callback:callback};}" };
-class SlideInUp {
+const importDefaultResultResult3 = importDefaultResult(RotateInUpRight, null, items3);
+importDefaultResultResult3.presetName = "RotateInUpRight";
+let closure_9 = { code: "function pnpm_RotateTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{rotate:delayFunction(delay,animation('90deg',config))},{translateX:delayFunction(delay,animation(values.currentWidth/2-values.currentHeight/2,config))},{translateY:delayFunction(delay,animation(values.currentWidth/2-values.currentHeight/2,config))}]},initialValues:{opacity:1,transform:[{rotate:'0deg'},{translateX:0},{translateY:0}],...initialValues},callback:callback};}" };
+class RotateOutDownLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -282,38 +302,43 @@ class SlideInUp {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(originY) {
+      const fn = function n(currentWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(originY.targetOriginY, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("90deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originY: -originY.windowHeight };
+        const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 1, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 9846507393044;
+      fn.__workletHash = 11712932777694;
       fn.__initData = outer1_9;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideInUp;
-importDefaultResult1(SlideInUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateOutDownLeft;
+importDefaultResult1(RotateOutDownLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items4 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return SlideOutDown();
+      return RotateOutUpRight();
     }
   }
 ];
-const importDefaultResultResult4 = importDefaultResult(SlideInUp, null, items4);
-importDefaultResultResult4.presetName = "SlideInUp";
-let closure_10 = { code: "function pnpm_SlideTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(values.targetOriginY,config))},initialValues:{originY:values.targetOriginY+values.windowHeight,...initialValues},callback:callback};}" };
-class SlideInDown {
+const importDefaultResultResult4 = importDefaultResult(RotateOutDownLeft, null, items4);
+importDefaultResultResult4.presetName = "RotateOutDownLeft";
+let closure_10 = { code: "function pnpm_RotateTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{rotate:delayFunction(delay,animation('-90deg',config))},{translateX:delayFunction(delay,animation(-(values.currentWidth/2-values.currentHeight/2),config))},{translateY:delayFunction(delay,animation(values.currentWidth/2-values.currentHeight/2,config))}]},initialValues:{opacity:1,transform:[{rotate:'0deg'},{translateX:0},{translateY:0}],...initialValues},callback:callback};}" };
+class RotateOutDownRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -340,38 +365,43 @@ class SlideInDown {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(targetOriginY) {
+      const fn = function n(currentWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(targetOriginY.targetOriginY, _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("-90deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originY: targetOriginY.targetOriginY + targetOriginY.windowHeight };
+        const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 1, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 9348728185019;
+      fn.__workletHash = 16449003298460;
       fn.__initData = outer1_10;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideInDown;
-importDefaultResult1(SlideInDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateOutDownRight;
+importDefaultResult1(RotateOutDownRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items5 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return SlideOutDown();
+      return RotateOutUpRight();
     }
   }
 ];
-const importDefaultResultResult5 = importDefaultResult(SlideInDown, null, items5);
-importDefaultResultResult5.presetName = "SlideInDown";
-let closure_11 = { code: "function pnpm_SlideTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(Math.min(values.currentOriginY-values.windowHeight,-values.windowHeight),config))},initialValues:{originY:values.currentOriginY,...initialValues},callback:callback};}" };
-class SlideOutUp {
+const importDefaultResultResult5 = importDefaultResult(RotateOutDownRight, null, items5);
+importDefaultResultResult5.presetName = "RotateOutDownRight";
+let closure_11 = { code: "function pnpm_RotateTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{rotate:delayFunction(delay,animation('-90deg',config))},{translateX:delayFunction(delay,animation(values.currentWidth/2-values.currentHeight/2,config))},{translateY:delayFunction(delay,animation(-(values.currentWidth/2-values.currentHeight/2),config))}]},initialValues:{opacity:1,transform:[{rotate:'0deg'},{translateX:0},{translateY:0}],...initialValues},callback:callback};}" };
+class RotateOutUpLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -398,38 +428,43 @@ class SlideOutUp {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(currentOriginY) {
+      const fn = function n(currentWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(Math.min(currentOriginY.currentOriginY - currentOriginY.windowHeight, -currentOriginY.windowHeight), _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("-90deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originY: currentOriginY.currentOriginY };
+        const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 1, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 14850009730573;
+      fn.__workletHash = 16777964503997;
       fn.__initData = outer1_11;
       return fn;
     };
     return tmp3Result;
   }
 }
-SlideOutDown = SlideOutUp;
-importDefaultResult1(SlideOutUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+RotateOutUpRight = RotateOutUpLeft;
+importDefaultResult1(RotateOutUpLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items6 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return SlideOutDown();
+      return RotateOutUpRight();
     }
   }
 ];
-const importDefaultResultResult6 = importDefaultResult(SlideOutUp, null, items6);
-importDefaultResultResult6.presetName = "SlideOutUp";
-let closure_12 = { code: "function pnpm_SlideTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(Math.max(values.currentOriginY+values.windowHeight,values.windowHeight),config))},initialValues:{originY:values.currentOriginY,...initialValues},callback:callback};}" };
-class SlideOutDown {
+const importDefaultResultResult6 = importDefaultResult(RotateOutUpLeft, null, items6);
+importDefaultResultResult6.presetName = "RotateOutUpLeft";
+let closure_12 = { code: "function pnpm_RotateTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{rotate:delayFunction(delay,animation('90deg',config))},{translateX:delayFunction(delay,animation(-(values.currentWidth/2-values.currentHeight/2),config))},{translateY:delayFunction(delay,animation(-(values.currentWidth/2-values.currentHeight/2),config))}]},initialValues:{opacity:1,transform:[{rotate:'0deg'},{translateX:0},{translateY:0}],...initialValues},callback:callback};}" };
+class RotateOutUpRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -456,41 +491,46 @@ class SlideOutDown {
       const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const fn = function e(currentOriginY) {
+      const fn = function n(currentWidth) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(Math.max(currentOriginY.currentOriginY + currentOriginY.windowHeight, currentOriginY.windowHeight), _possibleConstructorReturn)) };
+        obj = { opacity: delayFunction(delay, first(0, _possibleConstructorReturn)), transform: null };
+        obj = { rotate: delayFunction(delay, first("90deg", _possibleConstructorReturn)) };
+        const items = [obj, { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) }, ];
+        const obj1 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        items[2] = { translateY: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, _possibleConstructorReturn)) };
+        obj[1] = items;
         obj[0] = obj;
-        obj = { originY: currentOriginY.currentOriginY };
+        const items1 = [{ rotate: "0deg" }, { translateX: 0 }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[1] = { opacity: 1, transform: items1 };
         obj[2] = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 14065812257143;
+      fn.__workletHash = 14312403608563;
       fn.__initData = outer1_12;
       return fn;
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(SlideOutDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+importDefaultResult1(RotateOutUpRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items7 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return SlideOutDown();
+      return RotateOutUpRight();
     }
   }
 ];
-const importDefaultResultResult7 = importDefaultResult(SlideOutDown, null, items7);
-importDefaultResultResult7.presetName = "SlideOutDown";
+const importDefaultResultResult7 = importDefaultResult(RotateOutUpRight, null, items7);
+importDefaultResultResult7.presetName = "RotateOutUpRight";
 
-export const SlideInRight = importDefaultResultResult;
-export const SlideInLeft = importDefaultResultResult1;
-export const SlideOutRight = importDefaultResultResult2;
-export const SlideOutLeft = importDefaultResultResult3;
-export const SlideInUp = importDefaultResultResult4;
-export const SlideInDown = importDefaultResultResult5;
-export const SlideOutUp = importDefaultResultResult6;
-export const SlideOutDown = importDefaultResultResult7;
+export const RotateInDownLeft = importDefaultResultResult;
+export const RotateInDownRight = importDefaultResultResult1;
+export const RotateInUpLeft = importDefaultResultResult2;
+export const RotateInUpRight = importDefaultResultResult3;
+export const RotateOutDownLeft = importDefaultResultResult4;
+export const RotateOutDownRight = importDefaultResultResult5;
+export const RotateOutUpLeft = importDefaultResultResult6;
+export const RotateOutUpRight = importDefaultResultResult7;

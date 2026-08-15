@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/notifications", scales: [1], hash: "b70e98268405ea16e70fc017e4347de7", name: "NotificationSettings.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_flows", scales: [1], hash: "e0490d68956369fa2230b222b6c927ab", name: "SafetyFlows.compiled.messages", type: "jsona" });

@@ -1,0 +1,24 @@
+// _runtime/06956_DEFAULT_HANDLE_HEIGHT.js
+
+export const DEFAULT_HANDLE_HEIGHT = 24;
+export const DEFAULT_OVER_DRAG_RESISTANCE_FACTOR = 2.5;
+export const DEFAULT_ENABLE_CONTENT_PANNING_GESTURE = true;
+export const DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = true;
+export const DEFAULT_ENABLE_OVER_DRAG = true;
+export const DEFAULT_ENABLE_PAN_DOWN_TO_CLOSE = false;
+export const DEFAULT_DYNAMIC_SIZING = true;
+export const DEFAULT_ANIMATE_ON_MOUNT = true;
+export const DEFAULT_KEYBOARD_BEHAVIOR = require("GESTURE_SOURCE").KEYBOARD_BEHAVIOR.interactive;
+export const DEFAULT_KEYBOARD_BLUR_BEHAVIOR = require("GESTURE_SOURCE").KEYBOARD_BLUR_BEHAVIOR.none;
+export const DEFAULT_KEYBOARD_INPUT_MODE = require("GESTURE_SOURCE").KEYBOARD_INPUT_MODE.adjustPan;
+export const DEFAULT_ENABLE_BLUR_KEYBOARD_ON_GESTURE = false;
+export const DEFAULT_KEYBOARD_INCLUDE_BOTTOM_OFFSET = false;
+export const INITIAL_POSITION = require("GESTURE_SOURCE").SCREEN_HEIGHT;
+export const INITIAL_CONTAINER_HEIGHT = -999;
+export const INITIAL_CONTAINER_OFFSET = { top: 0, bottom: 0, left: 0, right: 0 };
+export const INITIAL_HANDLE_HEIGHT = -999;
+export const INITIAL_SNAP_POINT = -999;
+export const INITIAL_VALUE = Number.NEGATIVE_INFINITY;
+export const DEFAULT_ACCESSIBLE = true;
+export const DEFAULT_ACCESSIBILITY_LABEL = "Bottom Sheet";
+export const DEFAULT_ACCESSIBILITY_ROLE = "adjustable";

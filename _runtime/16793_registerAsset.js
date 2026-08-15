@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 660, height: 240, scales: [2, 3], hash: "914423837bb34bd9385887217de01b93", name: "illustration-dark-large", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 181, height: 141, scales: [2, 3], hash: "c7648e89b902e67df37080bfc90491c5", name: "empty_server_settings_emoji_light", type: "png" });

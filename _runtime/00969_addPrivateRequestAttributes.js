@@ -227,7 +227,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             obj[0] = arg1;
                             return obj;
                           } else {
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         } else {
                           try {
@@ -456,7 +456,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 }
                                 const obj2 = str(methodPath[4]);
                               }
-                              return str(methodPath[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F115179 */ function() { ... }, () => { ... });
+                              return str(methodPath[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F115360 */ function() { ... }, () => { ... });
                             });
                           }
                         }
@@ -481,7 +481,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                               let c6 = 0;
                               let c7 = 0;
                               let c5 = 0;
-                              return (/* F120317 */ function*() { ... })();
+                              return (/* F120500 */ function*() { ... })();
                             });
                             let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj, function(arg0) {
                               const self = this;
@@ -642,7 +642,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 if (BooleanResult) {
                                   if (!tmp12) {
                                     closure_0 = undefined;
-                                    closure_0 = _self(/* F119249 */ function() { ... });
+                                    closure_0 = _self(/* F119432 */ function() { ... });
                                     let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj, () => { ... });
                                     const tmp2Result3 = tmp2(startSpanManual[7]);
                                   }

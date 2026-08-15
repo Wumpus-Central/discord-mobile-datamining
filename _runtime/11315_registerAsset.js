@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 78, height: 15, scales: [2, 3], hash: "6686c0dca54e6176e93ab454fcbd7545", name: "img_transfer_arrow", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fb5649f1f88852917c191effae556b38", name: "BillIcon", type: "png" });

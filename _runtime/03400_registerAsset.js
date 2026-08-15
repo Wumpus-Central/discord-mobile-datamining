@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs", scales: [1], hash: "0f408635dabc789ed50861f441af77b1", name: "zh-CN.messages.0f408635dabc789ed50861f441af77b1.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/private_channels/clean_up_inactive_gdms", scales: [1], hash: "78ec722bd03a658266c730b055967dd0", name: "CleanUpInactiveGDMs.compiled.messages", type: "jsona" });

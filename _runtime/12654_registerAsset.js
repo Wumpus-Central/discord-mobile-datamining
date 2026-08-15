@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/saved_messages", width: 297, height: 238, scales: [1], hash: "ee27927c992063817a4891d6fea39469", name: "wumpus-bookmark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 38, height: 76, scales: [1], hash: "0874b569caae69893f5d6cd4e4046089", name: "star_green", type: "png" });

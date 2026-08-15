@@ -1,3 +1,3 @@
 // _runtime/01670_WorkletsModule.js
 
-export const WorkletsModule = require("jSWorkletsModule").WorkletsModule;
+export const WorkletsModule = require("WorkletsModule").WorkletsModule;

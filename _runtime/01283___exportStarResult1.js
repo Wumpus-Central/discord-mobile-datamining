@@ -53,8 +53,39 @@ const re4 = /(\*)(0+)|(#+)(0+)|(0+)/g;
 const re5 = /^(0+)$/;
 arg5.parseNumberSkeleton = function parseNumberSkeleton(arg0) {
   const obj = {};
+  let tmp2 = obj;
   if (0 < arg0.length) {
-    const stem = arg0[num].stem;
+    while (tmp10.options.length <= 1) {
+      let str = tmp10.options[0];
+      let tmp3 = closure_4;
+      let replaced = str.replace(closure_4, (arg0, arg1, arg2, arg3, arg4, arg5) => {
+        if (arg1) {
+          obj.minimumIntegerDigits = arg2.length;
+        } else {
+          if (arg3) {
+            if (arg4) {
+              const _Error2 = Error;
+              const error = new Error("We currently do not support maximum integer digits");
+              throw error;
+            }
+          }
+          if (arg5) {
+            const _Error = Error;
+            const error1 = new Error("We currently do not support exact integer digits");
+            throw error1;
+          }
+        }
+        return "";
+      });
+      let tmp5 = length;
+      do {
+        let tmp11 = tmp5;
+        tmp2 = tmp5;
+      } while (tmp + 1 >= arg0.length);
+    }
+    const _RangeError = RangeError;
+    const rangeError = new RangeError("integer-width stems only accept a single optional option");
+    throw rangeError;
   }
-  return obj;
+  return tmp2;
 };

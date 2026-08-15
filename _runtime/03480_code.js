@@ -1,16 +1,16 @@
 // _runtime/03480_code.js
-import futureSeconds from "futureSeconds";
+import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";
 import 03485__ from "metro/03485__.js";
 
-if (!futureSeconds) {
+if (!formatDistance) {
   let obj = { default: null };
-  obj[0] = futureSeconds;
+  obj[0] = formatDistance;
   let tmp3 = obj;
 } else {
-  tmp3 = futureSeconds;
+  tmp3 = formatDistance;
 }
 if (!buildFormatLongFn) {
   obj = { default: null };
@@ -41,5 +41,5 @@ if (!module_3485) {
   tmp11 = module_3485;
 }
 
-export default { code: "fi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default { code: "cs", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

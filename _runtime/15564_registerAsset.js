@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guilds_bar/native/images", width: 59, height: 55, scales: [3], hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788", name: "wumpus_wave", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 16, height: 16, scales: [1, 2, 3], hash: "afad90ca336c33493e9ad9e6d7ce6ec1", name: "ic-application-submitted", type: "png" });

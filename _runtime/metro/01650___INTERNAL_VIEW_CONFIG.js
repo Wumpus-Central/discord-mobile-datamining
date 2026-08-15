@@ -1,7 +1,8 @@
 // _runtime/metro/01650___INTERNAL_VIEW_CONFIG.js
+import { codegenNativeComponent } from "get ActivityIndicator";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
-const obj = { uiViewClassName: "KeyboardToolbarGroupView", validAttributes: {} };
+const obj = { uiViewClassName: "ClippingScrollViewDecoratorView", validAttributes: { contentInsetBottom: true, contentInsetTop: true, applyWorkaroundForContentInsetHitTestBug: true } };
 
-export default setRuntimeConfigProvider.get("KeyboardToolbarGroupView", () => obj);
+export default setRuntimeConfigProvider.get("ClippingScrollViewDecoratorView", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

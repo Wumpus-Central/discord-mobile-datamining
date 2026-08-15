@@ -142,7 +142,7 @@ let items = [
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             while (true) {
@@ -173,7 +173,7 @@ let items = [
                   if (_classCallCheck === undefined) {
                     let num5 = 3;
                     c9 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   } else {
                     let tmp15 = closure_5;
                     let c8 = 1;
@@ -259,7 +259,7 @@ let items = [
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             while (true) {
@@ -295,7 +295,7 @@ let items = [
                   if (_classCallCheck === undefined) {
                     let num5 = 3;
                     c10 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   } else {
                     let tmp29 = closure_5;
                     let tmp30 = closure_6;

@@ -1081,16 +1081,16 @@ class BigInteger {
         tmp8 = toJSNumberResult;
         if (toJSNumberResult >= length) {
           do {
-            tmp9 = f66073;
-            multiplyResult = multiplyResult.multiply(f66073);
+            tmp9 = f66187;
+            multiplyResult = multiplyResult.multiply(f66187);
             tmp10 = length;
             diff = diff - (length - 1);
             obj3 = multiplyResult;
             tmp8 = diff;
           } while (diff >= length);
         }
-        tmp11 = f66073;
-        return obj3.multiply(f66073[tmp8]);
+        tmp11 = f66187;
+        return obj3.multiply(f66187[tmp8]);
       }
     } else {
       _Error = Error;
@@ -1124,8 +1124,8 @@ class BigInteger {
           while (!obj4.isZero()) {
             if (!obj4.isNegative()) {
               tmp8 = divModAny;
-              tmp9 = f66073;
-              tmp10 = divModAny(obj4, f66073);
+              tmp9 = f66187;
+              tmp10 = divModAny(obj4, f66187);
               [obj3, obj2] = tmp10;
               if (obj2.isNegative()) {
                 prevResult = obj3.prev();
@@ -1144,8 +1144,8 @@ class BigInteger {
           }
         }
         tmp16 = divModAny;
-        tmp17 = f66073;
-        tmp18 = divModAny(tmp14, f66073[tmp15]);
+        tmp17 = f66187;
+        tmp18 = divModAny(tmp14, f66187[tmp15]);
         [obj6, obj5] = tmp18;
         if (obj5.isNegative()) {
           prevResult1 = obj6.prev();
@@ -4965,16 +4965,16 @@ while (true) {
           tmp8 = toJSNumberResult;
           if (toJSNumberResult >= length) {
             do {
-              tmp9 = f66073;
-              multiplyResult = multiplyResult.multiply(f66073);
+              tmp9 = f66187;
+              multiplyResult = multiplyResult.multiply(f66187);
               tmp10 = length;
               diff = diff - (length - 1);
               obj3 = multiplyResult;
               tmp8 = diff;
             } while (diff >= length);
           }
-          tmp11 = f66073;
-          return obj3.multiply(f66073[tmp8]);
+          tmp11 = f66187;
+          return obj3.multiply(f66187[tmp8]);
         }
       } else {
         _Error = Error;
@@ -5008,8 +5008,8 @@ while (true) {
             while (!obj4.isZero()) {
               if (!obj4.isNegative()) {
                 tmp8 = divModAny;
-                tmp9 = f66073;
-                tmp10 = divModAny(obj4, f66073);
+                tmp9 = f66187;
+                tmp10 = divModAny(obj4, f66187);
                 [obj3, obj2] = tmp10;
                 if (obj2.isNegative()) {
                   prevResult = obj3.prev();
@@ -5028,8 +5028,8 @@ while (true) {
             }
           }
           tmp16 = divModAny;
-          tmp17 = f66073;
-          tmp18 = divModAny(tmp14, f66073[tmp15]);
+          tmp17 = f66187;
+          tmp18 = divModAny(tmp14, f66187[tmp15]);
           [obj6, obj5] = tmp18;
           if (obj5.isNegative()) {
             prevResult1 = obj6.prev();

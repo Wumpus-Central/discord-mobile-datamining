@@ -170,7 +170,7 @@ let items = [
     key: "captureUserFeedback",
     value: function captureUserFeedback(arg0) {
       let obj = ReactNativeClient(1178);
-      obj = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "r" };
+      obj = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "Array" };
       this.sendEnvelope(obj.createUserFeedbackEnvelope(arg0, obj));
     }
   },

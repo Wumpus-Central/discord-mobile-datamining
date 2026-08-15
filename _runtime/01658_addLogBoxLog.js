@@ -1,17 +1,11 @@
 // _runtime/01658_addLogBoxLog.js
-import { LogBox } from "get ActivityIndicator";
-
-let fn;
-if (LogBox != null) {
-  const addLog = LogBox.addLog;
-  if (addLog != null) {
-    fn = addLog.bind(LogBox);
-  }
+for (const key10013 in require("addLogBoxLog")) {
+  let tmp2 = key10013;
+  arg5[key10013] = require("addLogBoxLog")[key10013];
+  continue;
 }
-if (fn == null) {
-  fn = () => {
-
-  };
+for (const key10017 in require("logToConsole")) {
+  let tmp3 = key10017;
+  arg5[key10017] = require("logToConsole")[key10017];
+  continue;
 }
-
-export const addLogBoxLog = fn;
